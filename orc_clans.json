@@ -647,7 +647,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "open_topped"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "open_topped", "armored"],
             "models": [
                 {
                     "name": "Truck",
@@ -934,7 +934,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}],
+            "rules": [{"id": "impact", "x": 3}, "armored"],
             "models": [
                 {
                     "name": "Jet Buggy",
@@ -981,7 +981,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "armored"],
             "models": [
                 {
                     "name": "Blaster Plane",
@@ -1009,7 +1009,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "armored"],
             "models": [
                 {
                     "name": "Flame Bomber",
@@ -1033,7 +1033,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "armored"],
             "models": [
                 {
                     "name": "Blitz Bomber",
@@ -1056,7 +1056,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "armored"],
             "models": [
                 {
                     "name": "Attack Plane",
@@ -1080,7 +1080,7 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["fear", {"id": "transport", "x": 6}],
+            "rules": ["fear", {"id": "transport", "x": 6}, "heavily_armored"],
             "models": [
                 {
                     "name": "Orc Heavy Walker",
