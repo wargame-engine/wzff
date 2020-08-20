@@ -1,4 +1,4 @@
-# wzff
+# Warzone Far Future
 Warzone far future game data files.
 
 ## What is this?
