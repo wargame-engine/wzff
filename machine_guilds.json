@@ -1,0 +1,255 @@
+{
+    "id": "machine_guilds",
+    "name": "Machine Guilds",
+    "background": "The Machine Guilds are a group of aspiring machinist and inventors of war machines. Their strange obsession with cybernetic augmentation has left them in a state of machine-worship. With some of the most high-tech weaponry available to mortals, the Machine Guilds make good use of it against their enemies.",
+    "units": {
+        "arch_priest": {
+            "name": "Machine Grand Master",
+            "description": "The smartest and most intelligent machine guild leader.",
+            "min": 1,
+            "max": 1,
+            "rules": [
+                "character",
+                {"id": "repair", "x": "3"}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Arch Master",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 7,
+                    "reflexes": 8,
+                    "wounds": 8,
+                    "weapons": [{"id": "axe_halberd", "count": 3}],
+                    "options": [],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "machine_master": {
+            "name": "Machine Master",
+            "description": "A master craftsman and leader of the machine guild.",
+            "min": 1,
+            "max": 1,
+            "rules": [
+                {"id": "regeneration", "x": "2"}
+            ],
+            "models": [
+                {
+                    "name": "Machine Master",
+                    "courage": 7,
+                    "movement": 5,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "wounds": 5,
+                    "weapons": [{"id": "axe_halberd", "count": 2}],
+                    "options": [
+                        { "addRule": [{"id": "repair", "x": "3", "name": "Master Machinist"}, {"id": "psychic", "x": "1", "name": "Machine Powers"} ]},
+                        {"addWeapon": ["eradiaction_beam", "combustion_blaster"], "limit": 1},
+                        {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "machine_apprentice": {
+            "name": "Machine Apprentice",
+            "description": "A master craftsman and leader of the machine guild.",
+            "min": 1,
+            "max": 1,
+            "rules": [],
+            "models": [
+                {
+                    "name": "Machine Apprentice",
+                    "courage": 7,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 4,
+                    "weapons": ["axe_halberd"],
+                    "options": [
+                        { "addRule": [{"id": "repair", "x": "2", "name": "Machinist"}, {"id": "psychic", "x": "1", "name": "Machine Powers"} ]},
+                        {"addWeapon": ["eradiaction_beam", "combustion_blaster"], "limit": 1},
+                        {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "vanguards": {
+            "name": "Vanguards",
+            "description": "Foot-mobile machine guild protection forces.",
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Vanguard Leader",
+                    "courage": 7,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["radiation_carbine", "ccw"],
+                    "options": [
+                        {"addRule": [{"id": "fearless", "name": "Data-Link"}]},
+                        {"replaceWeapon": "radiation_carbine", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
+                        {"replaceWeapon": "ccw", "withWeapon": [{ "id": "ccw", "count": 2 }, "energy_sword", "taser_sword", "emp_sword"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Vanguard",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["radiation_carbine", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "heavy_emp_rifle", "uranium_rifle"], "limit": 1}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "rangers": {
+            "name": "Rangers",
+            "description": "Foot-mobile machine guild long range recon and marksmen forces.",
+            "min": 1,
+            "max": 1,
+            "rules": ["strider"],
+            "models": [
+                {
+                    "name": "Ranger Leader",
+                    "courage": 7,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [
+                        {"addRule": [{"id": "fearless", "name": "Data-Link"}]},
+                        {"replaceWeapon": "rifle", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
+                        {"replaceWeapon": "ccw", "withWeapon": [{ "id": "ccw", "count": 2 }, "energy_sword", "taser_sword", "emp_sword"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Ranger",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "heavy_emp_rifle", "uranium_rifle"], "limit": 1}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "axe_halberd": {"name": "Axe-Halberd", "attacks": 2, "ap": 2, "damage": 1, "short": "Melee", "rules": []},
+        "taser_sword": {"name": "Taser Sword", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["taser"]},
+        "emp_sword": {"name": "EMP Sword", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["emp"]},
+        "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 20, "medium": 40, "ap": 4, "damage": 2, "rules": ["sniper"]},
+        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 10, "medium": 15, "rules": ["assault", "radiation"]},
+        "rifle": {"name": "Rifle", "attacks": 1, "short": 15, "medium": 30},
+        "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 10, "medium": 20, "rules": ["emp"]},
+        "heavy_emp_rifle": {"name": "Heavy EMP Rifle", "attacks": 1, "short": 10, "medium": 20, "damage": 3, "rules": ["emp"]},
+        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 3, "short": 10, "medium": 15, "ap": 2, "rules": ["assault"]},
+        "eradiaction_beam": {"name": "Eradication Beam", "attacks": 1, "short": 10, "medium": 15, "ap": 2, "rules": [{ "id": "blast", "x": 3}]},
+        "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 10, "medium": 20, "ap": 1},
+        "macro_pistol": {"name": "Macro Pistol", "attacks": 5, "short": 5, "medium": 10, "ap": 1, "rules": ["pistol"]},
+        "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "phosphor"]},
+        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "radiation"]},
+        "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "emp"]},
+        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 10, "medium": 15, "ap": 1, "rules": ["assault", "phosphor"]}
+    },
+    "rules": {
+        "canticles":{
+            "name": "Canticles",
+            "description": "When this character and containing unit activate, choose one of the following canticles to be active for the round.",
+            "effects": [
+                {
+                    "type": "alterWeapon",
+                    "statName": "ap",
+                    "value": 1,
+                    "frequency": 6
+                },
+                {
+                    "type": "alterWeapon",
+                    "statName": "attacks",
+                    "value": 1,
+                    "frequency": 6
+                },
+                {
+                    "type": "grantRule",
+                    "rule": "stealth",
+                    "frequency": 6
+                }
+            ]
+        },
+        "phosphor":{
+            "name": "Phosphor",
+            "description": "This weapon ignores cover."
+        },
+        "taser":{
+            "name": "Taser",
+            "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits.",
+            "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]
+        },
+        "emp": {
+            "name": "EMP",
+            "description": "Successful hit rolls of 3 or less gain +2 AP."
+        },
+        "radiation":{
+            "name": "Radiation",
+            "description": "On unmodified Resist rolls of 1 or 2, the defender takes +1 Damage.",
+            "effects": [
+                { "type": "alterWeapon", "statName": "damage", "value": 1, "frequency": 2 }
+            ]
+        },
+        "deflection_field": {
+            "name": "Deflection Field",
+            "description": "Each time this model loses a wound roll a D10, on a 4 or less that wound is not lost.",
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 4}}]
+        }
+    },
+    "relics": [{"rule": "deflection_field", "flavor": "A field of energy protecting the wearer that coud stop even the heaviest of weaponry."}],
+    "powers": {
+        "lock_on": {"name": "Lock-On", "description": "Target friendly unit within 10\" gets +1 AP next time it shoots.", "charge": 8},
+        "solar_beam": {"name": "Solar Beam", "description": "Target enemy model within 10\" takes 1 automatic hit with AP(2).", "charge": 8},
+        "steel_body": {"name": "Steel Body", "description": "Target friendly unit within 10\" may heal 1 wound or restore 1 model (with only 1 health left if it has multiple wounds).", "charge": 7},
+        "shrapnel": {"name": "Shrapnel", "description": "Target 2 enemy units within 6\" take 3 automatic hits with AP(2) each.", "charge": 7},
+        "corroded_metal": {"name": "Corroded Metal", "description": "Target enemy unit within 12” gets -2 Resist next time it takes hits.", "charge": 6},
+        "machine_terror": {"name": "Machine Terror", "description": "Target enemy unit within 10\" takes 8 automatic hits.", "charge": 6}
+    }
+}

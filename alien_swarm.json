@@ -1,0 +1,32 @@
+{
+    "id": "alien_swarm",
+    "name": "Alien Swarm",
+    "units": {
+        "hive_lord": {
+            "name": "Hive Lord",
+            "description": "A large and strong alien creature.",
+            "min": 5,
+            "max": 10,
+            "rules": ["character"],
+            "models": [
+                {
+                    "name": "Hive Lord",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": [{"id": "razor_claws", "count": 1}],
+                    "rules": [{"id": "psychic", "x": 2}],
+                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {"razor_claws": {"name": "Razor Claws", "attacks": 3, "short": "Melee", "ap": 3, "damage": 3, "rules": []}},
+    "rules": {}
+}

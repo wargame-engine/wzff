@@ -1,0 +1,287 @@
+{
+    "factions": {
+        "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "/data/alien_swarm.json", "color": "#3d3354"},
+        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "/data/traitor_marines.json", "color": "#231f20"},
+        "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "/data/undying_machines.json", "color": "#1e7331"},
+        "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "/data/elven_keepers.json", "color": "#7761ab"},
+        "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "/data/dark_elves.json", "color": "#0b474a"},
+        "tao_federation": {"name": "TAO Federation", "id": "tao_federation", "url": "/data/tao_federation.json", "color": "#008080"},
+        "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "/data/high_elves.json", "color": "#e8bb00"},
+        "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "/data/machine_guilds.json", "color": "#9a1115"},
+        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "/data/imperial_defense_force.json", "color": "#314821"},
+        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "/data/loyal_marines.json", "color": "#0d407f"},
+        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "/data/battle_sisters.json", "color": "#1b1e23"},
+        "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "/data/orc_clans.json", "color": "#50974A"}
+    },
+    "categories": {
+        "core": {"name": "Core"},
+        "command": {"name": "Command"},
+        "specialist": {"name": "Specialist"},
+        "strike": { "name": "Strike"},
+        "heavy": {"name": "Heavy"},
+        "transport": {"name": "Transport"}
+    },
+    "relics": [{"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."}],
+    "powers": {
+        "blast": {
+            "name": "Shock Wave",
+            "description": "Target enemy unit within 10\" takes 3 automatic hits with AP 1.",
+            "flavor": "This enemy is hit by a single blast of shock.",
+            "charge": 8
+        }
+    },
+    "strategies": {
+        "divine_intervention": {
+            "name": "Divine Intervention (Core)",
+            "flavor": "It seems luck has gone our way. Or maybe it's something more...",
+            "description": "Re-roll a single skill test die. It may not be re-rolled again.",
+            "cost": 1
+        },
+        "legendary_support": {
+            "name": "Legendary Support (Core)",
+            "flavor": "A battle involving several legends is a story to be told.",
+            "description": "You may include one additional legend in your roster.",
+            "cost": 1
+        },
+        "incredible_courage": {
+            "name": "Incredible Courage (Core)",
+            "flavor": "Even in the darkest of times, moments of great courage can occur.",
+            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit is treated as having Courage 9 until the end of the round.",
+            "cost": 2
+        },
+        "battlefield_reserves": {
+            "name": "Battlefield Reserves (Core)",
+            "flavor": "Sometimes assets are most useful in reserves, waiting for their moment to strike.",
+            "description": "Up to 3 units, one point for each may be placed in reserves instead of deployed on the field. At the beginning of any round, it may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 10\" from enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "cost": "1/2/3"
+        }
+    },
+    "weapons": {
+        "frags": {"name": "Frag Grenades", "attacks": 1, "short": 5, "rules": ["grenade", {"id": "blast", "x": 3}]},
+        "at_grenade": {
+            "name": "Grenades",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 5, "damage": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 5, "damage": 2, "rules": ["grenade"]}
+            ],
+            "rules": []
+        },
+        "railgun": {"name": "Railgun", "attacks": 2, "short": 20, "ap": 3, "medium": 40, "rules": []},
+        "ccw": {"name": "Unarmed (Melee)", "attacks": 1, "short": "Melee", "rules": []},
+        "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
+        "chainsword": {"name": "Chainsword", "attacks": 2, "short": "Melee", "rules": []},
+        "pistol": {"name": "Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol"]},
+        "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 10, "medium": 15, "long": 20, "rules": []},
+        "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 30, "rules": ["assault"]},
+        "storm_rifle": {"name": "Storm Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 30},
+        "energy_sword": {"name": "Energy Sword", "attacks": 2, "short": "Melee", "ap": 3},
+        "machinegun": {"name": "Machinegun", "attacks": 3, "short": 15, "medium": 30, "long": 45},
+        "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 15, "medium": 30, "ap": 1, "rules": []},
+        "minigun": {"name": "Minigun", "attacks": 4, "short": 10, "medium": 20, "ap": 1, "rules": []},
+        "missile_launcher": {
+            "name": "Missile Launcher",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 20, "medium": 35, "long": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 20, "medium": 35, "long": 40, "damage": 3, "ap": 3}
+            ],
+            "rules": []
+        },
+        "laser_cannon": {"name": "Laser Cannon", "ap": 4, "damage": 3, "attacks": 1, "short": 20, "medium": 40, "rules": []},
+        "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 4, "damage": 3, "attacks": 2, "short": 20, "medium": 40, "rules": []},
+        "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 10, "medium": 15, "rules": ["rending"]},
+        "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 3},
+        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 3},
+        "twin_heavy_machinegun": {"name": "Twin Heavy Machinegun", "attacks": 6, "short": 15, "medium": 30, "ap": 1, "rules": []},
+        "twin_minigun": {"name": "Twin Minigun", "attacks": 8, "short": 10, "medium": 20, "ap": 1, "rules": []},
+        "flamethrower": {"name": "Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": [{"id": "blast", "x": 1}]},
+        "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 6, "ap": 2, "short": 5, "medium": 10, "rules": ["flame"]},
+        "light_machinegun": {"name": "Light Machingun", "attacks": 3, "short": 15, "medium": 30},
+        "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
+        "shotgun": {"name": "Shotgun", "attacks": 2, "short": 5, "medium": 10, "ap": 0},
+        "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "plasma_pistol": {"name": "Plasma Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 3},
+        "twin_assault_rifle": {"name": "Twin Assault Rifle", "attacks": 2, "short": 10, "medium": 20},
+        "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 4},
+        "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 2, "damage": 3},
+        "combi_plasma": {"name": "Combi-plasma", "profiles": [{"name": "Plasma", "attacks": 1, "short": 10, "medium": 20, "ap": 3}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]},
+        "combi_flamer": {
+            "name": "Combi-flamer",
+            "profiles": [{"name": "Flamer", "attacks": 6, "short": 5, "medium": 10, "rules": [{"id": "blast", "x": 1}]}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]
+        },
+        "combi_fusion": {
+            "name": "Combi-fusion",
+            "profiles": [{"name": "Fusion", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]
+        },
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "damage": 6},
+        "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 20, "medium": 40, "ap": 3, "damage": 3},
+        "autocannon": {"name": "Autocannon", "attacks": 2, "short": 20, "medium": 40, "ap": 2, "damage": 2},
+        "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "damage": 2},
+        "battle_cannon": {
+            "name": "Battle Cannon",
+            "profiles": [
+                {"name": "HE", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
+            ]
+        },
+        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 10, "medium": 20},
+        "daemon_sword": {"name": "Daemon Sword", "attacks": 6, "short": "Melee", "ap": 3},
+        "daemon_axe": {"name": "Daemon Axe", "attacks": 5, "short": "Melee", "ap": 4},
+        "daemon_claws": {"name": "Daemon Claws", "attacks": 9, "short": "Melee"},
+        "reaper_cannon": {"name": "Reaper Autocannon", "attacks": 4, "short": 15, "medium": 30, "ap": 3},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 1, "rules": [{"id": "blast", "x": 1}]},
+        "mutated_claws": {"name": "Mutated Claws", "attacks": 2, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "mutated_guns": {"name": "Mutated Guns", "attacks": 2, "short": 10, "medium": 20, "ap": 3, "rules": ["rending"]},
+        "claws": {"name": "Mutated Claws", "attacks": 3, "short": "Melee", "ap": 2},
+        "havoc_missiles": {"name": "Havoc Missiles", "attacks": 1, "short": 20, "medium": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "demolition_cannon": {"name": "Demolition Cannon", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
+        "brute_fist": {"name": "Brute Fist", "attacks": 2, "short": "Melee", "ap": 4},
+        "brute_flail": {"name": "Brute Flail", "attacks": 4, "short": "Melee", "ap": 2},
+        "brute_hammer": {"name": "Brute Hammer", "attacks": 2, "short": "Melee", "ap": 4, "damage": 3},
+        "bane_flamethrower": {"name": "Bane Flamethrower", "attacks": 6, "short": 10, "medium": 15, "ap": 2},
+        "maul_cutter": {"name": "Maul Cutter", "attacks": 2, "short": "Melee", "ap": 4},
+        "chainsaw_glaive": {"name": "Chainsaw Glaive", "attacks": 6, "short": "Melee", "ap": 2},
+        "virus_injector": {"name": "Virus Injector", "attacks": 1, "short": "Melee", "ap": 4, "damage": 3},
+        "fiend_claws": {"name": "Fiend Claws", "attacks": 2, "short": "Melee", "ap": 3},
+        "steel_tails": {"name": "Steel Tails", "attacks": 4, "short": "Melee", "ap": 2},
+        "ecto_cannon": {"name": "Ecto Cannon", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
+        "forge_cannon": {"name": "Forge Cannon", "attacks": 4, "short": 15, "medium": 30, "ap": 4},
+        "excruciating_cannons": {"name": "Excruciating Cannons", "attacks": 2, "short": 15, "medium": 30, "ap": 3},
+        "claws_and_tendrils": {"name": "Claws and Tendrils", "attacks": 4, "short": "Melee", "ap": 3},
+        "stomp": {"name": "Stomp", "attacks": 2, "short": "Melee", "ap": 1},
+        "plasma_cannon": {"name": "Plasma Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "attacks": 2, "short": 15, "medium": 30, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 6},
+        "walker_fist": {"name": "Crab Claw", "attacks": 2, "short": "Melee", "ap": 4},
+        "crab_flail": {"name": "Crab Flail", "attacks": 4, "short": "Melee", "ap": 2},
+        "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 12, "short": 5, "medium": 10, "ap": 1},
+        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 6, "short": 10, "medium": 15, "ap": 2}
+    },
+    "rules": {
+        "legend_wounds": {
+            "name": "Tough as Nails",
+            "hidden": true,
+            "description_short": "Wounds +2",
+            "description": "This model gets +2 Wounds.",
+            "effects": [{"type": "alterStat", "statName": "wounds", "value": 2}]
+        },
+        "assault": {"name": "Assault", "description": "This weapon may be fired after running at -1 to hit."},
+        "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
+        "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
+        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses."},
+        "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
+        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 to hit."},
+        "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
+        "pistol": {"name": "Pistol", "description": "This weapon may be used while engaged in close combat."},
+        "impact": {
+            "name": "Impact",
+            "inputs": ["x"],
+            "description": "This unit scores X automatic hits on a successful charge.",
+            "effects": [{"type": "freeAttacks", "weapon": "impact", "attacks": "x"}]
+        },
+        "strider": {"name": "Strider", "description": "This model can cross difficult and dangerous terrain without penalty.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
+        "rending": {"name": "Rending", "description": "Hit rolls of 1 or 2 have +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 2}]},
+        "transport": {
+            "name": "Transport",
+            "description": "This model may carry X models inside of it on the battlefeild. Models with greater than 1 wound cost 2 transport spaces.",
+            "inputs": ["x"],
+            "effects": [{"type": "transport", "size": "x"}]
+        },
+        "sniper": {
+            "name": "Sniper",
+            "description": "This weapon may ignore cover and choose which model is hit."
+        },
+        "teleport": {
+            "name": "Teleport",
+            "description": "When this model activates, it may first teleport up to X inches in any directing ignoring models any terrain.",
+            "inputs": ["x"],
+            "effects": [{"type": "ignoreTerrain", "size": 5}, {"type": "alterStat", "statName": "movement", "value": "x", "frequency": 5}]
+        },
+        "jetpack": {
+            "name": "Jetpack",
+            "hidden": true,
+            "description_short": "Fly, Ambush, Movement 8\"",
+            "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
+            "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
+        },
+        "repair": {
+            "name": "Repair",
+            "inputs": ["x"],
+            "description": "Once per turn, if within 2” of a Vehicle, roll one die. On a 5 or less the vehicle may regain X wounds.",
+            "effects": [{"type": "heal", "frequency": 5, "value": "x"}]
+        },
+        "fearless": {"name": "Fearless", "description": "This unit gets +1 courage during break tests.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 5}]},
+        "open_topped": {"name": "Open-Topped", "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."},
+        "destroyer_armor": {
+            "name": "Destroyer Armor",
+            "hidden": true,
+            "description_short": "Ambush, Wounds +2, Resist 8, Movement -1\"",
+            "description": "Gives the model the ambush keyword. Gives the model 2 additional wounds. Gives the model resist 8.",
+            "effects": [
+                {"type": "grantRule", "rule": "ambush"},
+                {"type": "changeStat", "statName": "defense", "value": 8},
+                {"type": "alterStat", "statName": "wounds", "value": 2},
+                {"type": "alterStat", "statName": "movement", "value": -1}
+            ]
+        },
+        "fear": {"name": "Fear", "description": "Enemy units within 10\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 15, "target": "enemy"}]},
+        "fly": {"name": "Fly", "description": "This model may ignore terrain and other models without the Fly special rule when moving.", "effects": [{"type": "ignoreTerrain"}]},
+        "ambush": {
+            "name": "Ambush",
+            "description": "This unit may be set aside in reserves before the match begins if all models have ambush. At the beginning of any round after the first you may place the unit anywhere on the table over 9” away from enemy units. If both players have units with Ambush they must roll-off to see who deploys first, and then alternate in placing them.",
+            "effects": [{"type": "ambush"}]
+        },
+        "scout": {
+            "name": "Scout",
+            "description": "When this unit is deployed on the field, it may make a free 5\" move.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 5, "frequency": 2}]
+        },
+        "outflank": {
+            "name": "Outflank",
+            "description": "This unit may be set aside in reserves before the match begins if all models have outflank. At the beginning of any round after the first you may place the unit within 5\" of a table edge over 9” away from enemy units. If both players have units with Outflank they must roll-off to see who deploys first, and then alternate in placing them.",
+            "effects": [{"type": "ambush", "frequency": 5}]
+        },
+        "regeneration": {
+            "name": "Regeneration",
+            "inputs": ["x"],
+            "description": "Roll a die when this model loses a wound. On a value of X or less that wound is not lost.",
+            "effects": [{"type": "regeneration", "frequency": "x"}]
+        },
+        "furious": {
+            "name": "Furious",
+            "description": "When this model charges, it gets one bonus attack with any melee weapon.",
+            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 5, "weaponType": "fight"}]
+        },
+        "stealth": {
+            "name": "Stealth",
+            "description": "Models suffer -1 to hit when shooting at this unit at a range of more than 15\".",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"}]
+        },
+        "relentless": {
+            "name": "Relentless",
+            "description": "When this model shoots, each successful hit roll of 1 or 2 generates an additional shot with that weapon.",
+            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "shoot"}]
+        },
+        "fusion": {"name": "Fusion", "description": "This weapon gets +1 AP when attacking in its Short range band.", "effects": [{"type": "alterWeapon", "statName": "AP", "value": 1, "frequency": 5}]},
+        "heavy": {"name": "Heavy", "description": "This weapon suffers -1 to hit if the firer moved this turn."},
+        "poison": {"name": "Poison", "inputs": ["x"], "description": "Models taking saves from this weapon must take X saves instead of 1.", "effects": [{"type": "freeHits", "value": "x"}]},
+        "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
+        "armored": {"name": "Armored", "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc. This unit gets +1 Resist when hit at Long Range."},
+        "heavily_armored": {"name": "Heavily Armored", "description": "This unit loses 1 Resist when hit in its Rear arc. This unit gets +1 Resist when hit at Long Range."},
+        "fully_armored": {"name": "Fully Armored", "description": "This unit gets +1 Resist when hit at Long Range."},
+        "hard_turns": {"name": "Hard Turns", "description": "When moving this unit at double speed, it may not make any turns of more than 90 degrees."},
+        "Hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving."},
+        "Agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving."},
+        "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving."},
+        "psychic": {
+            "name": "Psychic",
+            "inputs": ["x"],
+            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 20\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power.",
+            "effects": [{"type": "psychic", "value": "x"}]
+        },
+        "aircraft": {
+            "name": "Aircraft",
+            "description": "Enemy units suffer -1 to hit this model. This model may ignore terrain and other models when moving. When activated, it must move in a straight line its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
+            "effects": [{"type": "ignoreTerrain"}]
+        }
+    }
+}

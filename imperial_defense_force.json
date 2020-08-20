@@ -1,0 +1,188 @@
+{
+    "id": "imperial_defense_force",
+    "name": "Imperial Defence Force",
+    "units": {
+        "constript_squad": {
+            "name": "Conscript Squad",
+            "description": "An inexperienced squad of infantry sent to the front with little training.",
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Conscripted Sergeant",
+                    "courage": 4,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "ccw", "withWeapon": [{"id": "energy_sword", "count": 1}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Conscripted Trooper",
+                    "courage": 3,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 4,
+                    "reflexes": 3,
+                    "wounds": 1,
+                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "rules": [],
+                    "min": 4,
+                    "max": 29
+                },
+                {
+                    "name": "Conscripted Weapon Team",
+                    "courage": 3,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 4,
+                    "reflexes": 3,
+                    "wounds": 2,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", "ccw"],
+                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "rules": [],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "infantry_squad": {
+            "name": "Infantry Squad",
+            "description": "The backbone of the human militia.",
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Sergeant",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "ccw", "withWeapon": [{"id": "energy_sword", "count": 1}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Trooper",
+                    "courage": 4,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                },
+                {
+                    "name": "Weapon Team",
+                    "courage": 4,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 2,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", "ccw"],
+                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "rules": [],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "veteran_squad": {
+            "name": "Veteran Infantry Squad",
+            "description": "A more experienced infantry squad.",
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Veteran Sergeant",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": ["laser_rifle"], "withWeapon": [["energy_sword", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Trooper",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": ["laser_rifle"], "withWeapon": [["ccw", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                },
+                {
+                    "name": "Veteran Weapon Team",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 2,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", "ccw"],
+                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "rules": [],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_tank": {
+            "name": "Battle Tank",
+            "description": "A main line battle tank.",
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Battle Tank",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "movement": 8,
+                    "reflexes": 4,
+                    "wounds": 9,
+                    "weapons": [{"id": "battle_cannon"}, {"id": "heavy_machinegun", "mount": ["Front"]}],
+                    "options": [{"addWeapon": [{"id": "machinegun", "count": 1, "mount": ["Front"]}, {"id": "storm_rifle", "count": 1, "mount": ["Front"]}], "limit": 1}],
+                    "rules": [{"id": "impact", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "battle_cannon": {
+            "name": "Battle Cannon",
+            "profiles": [
+                {"name": "HE", "attacks": 1, "short": 30, "medium": 60, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AP", "attacks": 1, "short": 30, "medium": 60, "ap": 4, "damage": 3}
+            ]
+        },
+        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 10, "medium": 20, "long": 30, "rules": ["assault"]}
+    },
+    "rules": {}
+}

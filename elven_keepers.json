@@ -1,0 +1,87 @@
+{
+    "id": "elven_keepers",
+    "name": "Elven Keepers",
+    "background": "Keepers of the Grand Library, these elves are clad in a unique Jester design. Their combat style revolves around a display of acrobatics and swift movement, one could attribute to a dance of blades.",
+    "units": {
+        "troupe_master": {
+            "name": "Troupe Master",
+            "description": "A master of the Elven Keepers. Highly swift and deadly on foot.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                "stealth"
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Troupe Master",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 5,
+                    "reflexes": 8,
+                    "wounds": 5,
+                    "weapons": ["shard_pistol", { "id": "jester_blade", "count": 3 }],
+                    "options": [
+                        { "replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
+                        { "replaceWeapon": { "id": "jester_blade", "count": 2 }, "withWeapon": [{ "id": "deathly_touch", "count": 2 }, { "id": "deathly_caress", "count": 2 }, { "id": "deathly_kiss", "count": 2 }, { "id": "deathly_embrace", "count": 2 }]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "troupe": {
+            "name": "Troupe",
+            "description": "A group of elven jesters on foot.",
+            "min": 1,
+            "max": 1,
+            "rules": [
+                "stealth"
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Jester",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["shard_pistol", { "id": "jester_blade", "count": 2 }],
+                    "options": [
+                        { "replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
+                        { "replaceWeapon": { "id": "jester_blade", "count": 2 }, "withWeapon": ["deathly_touch", "deathly_caress", "deathly_kiss", "deathly_embrace"]}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 20
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee"},
+        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "rending"]},
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", { "id": "poison", "x": 2 }]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6, "rules": ["pistol"]},
+        "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
+        "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"]},
+        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee","ap": 2},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 2, "short": "Melee", "damage": 3 }
+    },
+    "rules": {
+        "tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}
+    },
+    "relics": []
+}

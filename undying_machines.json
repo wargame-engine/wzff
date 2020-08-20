@@ -1,0 +1,229 @@
+{
+    "id": "undying_machines",
+    "name": "Undying Machines",
+    "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
+    "units": {
+        "tri_scorpion_lord": {
+            "name": "Tri-Scorpion Lord",
+            "description": "A lord of the undying machines equipped with high tech tri-legs and a tough carapace.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                "strider",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Tri-Scorpion Lord",
+                    "courage": 8,
+                    "movement": 4,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["annihiliation_gun", "metal_claws", "reaper_blade"],
+                    "options": [
+                        { "replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "machine_swarm": {
+            "name": "Machine Swarm",
+            "description": "A swarm of small machines with feeding teeth to eat away at flesh and metal.",
+            "min": 3,
+            "max": 6,
+            "category": "core",
+            "rules": [
+                "strider",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Machine Swarm",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 3,
+                    "reflexes": 3,
+                    "wounds": 3,
+                    "weapons": ["feeding_teeth"],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "warden": {
+            "name": "Warden",
+            "description": "A sworn guardian of the lords and one of the more elite machines.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "character",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Warden",
+                    "courage": 8,
+                    "movement": 4,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["heavy_reaper_rifle", "warden_blade"],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dimensional_shard": {
+            "name": "Dimensional Shard",
+            "description": "A dimensional being that can take many forms, often regarded as a god of the sky.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                "ambush",
+                "fly",
+                {"id": "psychic", "x": 1}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Dimensional Shard",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 6,
+                    "weapons": ["dimensional_strikes"],
+                    "options": [
+                        { "replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warriors": {
+            "name": "Warriors",
+            "description": "A group of machines, bent on reclaiming their land.",
+            "min": 1,
+            "max": 1,
+            "rules": [
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Warrior",
+                    "courage": 8,
+                    "movement": 4,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["gauss_rifle", "ccw"],
+                    "options": [
+                        { "replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 20
+                }
+            ]
+        },
+        "eternals": {
+            "name": "Eternals",
+            "description": "A group of veteran machines.",
+            "min": 1,
+            "max": 1,
+            "rules": [
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Eternal",
+                    "courage": 8,
+                    "movement": 4,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["tesla_rifle", "ccw"],
+                    "options": [
+                        { "replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "battle_cannon": {
+            "name": "Battle Cannon",
+            "profiles": [
+                {"name": "HE", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
+            ]
+        },
+        "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
+        "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 4},
+        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 6, "short": "Melee", "ap": 2, "damage": 2},
+        "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 10, "medium": 20, "rules": ["rending"]},
+        "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 1, "rules": ["tesla"]},
+        "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2 },
+        "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 2, "short": 10, "medium": 15, "ap": 1, "damage": 2, "rules": ["rending"]},
+        "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 5, "medium": 10, "ap": 2},
+        "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 1},
+        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 2}
+    },
+    "rules": {
+        "tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits.", "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]}
+    },
+    "relics": [],
+    "powers": {
+        "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 10\" gets -1 to hit in melee next time it fights.", "charge": 8},
+        "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 2 automatic hits with AP(2).", "charge": 8},
+        "fury": {"name": "Fury", "description": "Target friendly unit within 10\" may immediately move by up to 5\".", "charge": 7},
+        "lightning_bolts": {"name": "Lightning Bolts", "description": "Target enemy model within 10\" takes 4 automatic hits.", "charge": 7},
+        "dimensional_rift": {"name": "Dimensional Rift", "description": "Target enemy unit within 15\" gets -2 to hit next time it shoots.", "charge": 6},
+        "firestorm": {"name": "Firestorm", "description": "Target 2 enemy units within 5\" take 6 automatic hits with AP(1) each.", "charge": 6}
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "id": "tao_federation",
+    "name": "Tao Federation",
+    "background": "The Tao Federation are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
+    "units": {
+        "bs_comm": {
+            "name": "Battlesuit Commander",
+            "description": "An elite commander in an agile battlesuit.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "fly", "ambush"],
+            "models": [
+                {
+                    "name": "Commander",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["suit_fists"],
+                    "options": [
+                        {"limit": 4, "addWeapon": ["flak_launcher", "ion_triblaster", "flamethrower", "gatling_vulcan", "plasma_rifle", "fusion_blaster"]},
+                        {"addRule": ["cold_fusion_booster"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_squad": {
+            "name": "Warrior Team",
+            "description": "A squad of infantry who excell at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Team Leader",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}],
+                    "min": 0,
+                    "max": 1
+                },
+                {
+                    "name": "Warrior",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "options": [{"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}],
+                    "min": 5,
+                    "max": 12
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "short": 10, "medium": 20, "rules": [{"id": "indirect"}, {"id": "blast", "x": 4}]},
+        "gatling_vulcan": {"name": "Gatling Vulcan", "attacks": 3, "short": 10, "medium": 20, "ap": 1},
+        "ion_triblaster": {
+            "name": "Ion Tri-Blaster",
+            "profiles": [
+                {"name": "Standard", "attacks": 3, "short": 10, "medium": 20, "ap": 2},
+                {"name": "Overcharge", "attacks": 3, "short": 10, "medium": 20, "ap": 4, "damage": 2, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 10, "medium": 20, "ap": 5, "damage": 6, "rules": [{"id": "fusion"}]},
+        "missile_battery": {"name": "Missile Battery", "attacks": 2, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2},
+        "ion_rifle": {
+            "name": "Ion Rifle",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 15, "medium": 20, "long": 25, "ap": 2},
+                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 20, "long": 25, "ap": 2, "damage": 2, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "ion_cannon": {
+            "name": "Ion Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 3, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 2},
+                {"name": "Overcharge", "attacks": 3, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 4, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "ion_destroyer": {
+            "name": "Ion Destroyer",
+            "profiles": [
+                {"name": "Standard", "attacks": 4, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 2},
+                {"name": "Overcharge", "attacks": 4, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 4, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "vulcan_rifle": {"name": "Vulcan Rifle", "attacks": 1, "short": 15, "medium": 25, "long": 30, "ap": 1},
+        "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 10, "medium": 15, "ap": 1},
+        "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 5, "medium": 10, "long": 15, "ap": 3},
+        "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4, "damage": 3},
+        "portable_railgun": {"name": "Portable railgun", "attacks": 2, "short": 30, "medium": 45, "long": 60, "ap": 4, "damage": 4},
+        "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 15, "medium": 20, "long": 25, "ap": 1, "rules": [{"id": "sniper"}]},
+        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 5, "medium": 10, "ap": 1},
+        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 10, "medium": 20, "ap": 1},
+        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 2, "short": 15, "medium": 30, "ap": 1},
+        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 5, "rules": ["grenade", "stun"]},
+        "twin_assault_rifle": {"name": "Twin Assault Rifle", "attacks": 2, "short": 10, "medium": 20},
+        "suit_fists": {"name": "Suit Fists", "attacks": 4, "short": "Melee", "ap": 1}
+    },
+    "rules": {
+        "cold_fusion_booster": {
+            "name": "Cold Fusion Booster",
+            "hidden": "true",
+            "description": "This model gets +4\" Move.",
+            "description_short": "+4\" Move",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 4}]
+        },
+        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit receives -1 to hit with its next attack."},
+        "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 1 or 2."},
+        "indirect": {"name": "Indirect", "description": "Can be fired without line of sight."}
+    },
+    "powers": {
+        "patience": {"name": "Patience", "description": "Target friendly unit within 10\" gets -1 to be hit next time it is shot at.", "charge": 8},
+        "killing_blow": {"name": "Killing Blow", "description": "Target enemy model within 10\" takes 1 automatic hit with AP(2).", "charge": 8},
+        "boldness": {"name": "Boldness", "description": "Target friendly unit within 12\" may immediately move by up to 3”.", "charge": 7},
+        "devastating_strike": {"name": "Devastating Strike", "description": "Target enemy unit within 10\" takes 4 automatic hits with AP(1).", "charge": 7},
+        "pacification": {"name": "Pacification", "description": "Target enemy unit within 10\" gets -3 to melee rolls next time it fights.", "charge": 6},
+        "deadly_surge": {"name": "Deadly Surge", "description": "Target 2 enemy units within 10\" take 6 automatic hits each.", "charge": 6}
+    }
+}

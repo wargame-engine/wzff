@@ -1,0 +1,86 @@
+{
+    "id": "battle_sisters",
+    "name": "Battle Sisters",
+    "units": {
+        "battle_sisters": {
+            "name": "Battle Sisters",
+            "description": "A group of shooting assault sisters.",
+            "min": 5,
+            "max": 10,
+            "rules": [],
+            "models": [
+                {
+                    "name": "Sister Superior",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "agility": 7,
+                    "wounds": 1,
+                    "weapons": ["assault_rifle", {"id": "ccw", "count": 1}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Battle Sister",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "agility": 7,
+                    "wounds": 1,
+                    "weapons": ["assault_rifle", {"id": "ccw", "count": 1}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "assault_sisters": {
+            "name": "Assault Sisters",
+            "description": "A group of melee assault sisters.",
+            "min": 5,
+            "max": 10,
+            "rules": [],
+            "models": [
+                {
+                    "name": "Assault Sister Superior",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "agility": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", {"id": "chainsword", "count": 1}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assault Sister",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "agility": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", {"id": "chainsword", "count": 1}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        }
+    },
+    "weapons": {},
+    "rules": {}
+}

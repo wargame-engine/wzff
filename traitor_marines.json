@@ -1,0 +1,1215 @@
+{
+    "id": "traitor_marines",
+    "name": "Traitor Marines",
+    "subfactions": {"change_traitors": {"name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc"}},
+    "units": {
+        "havoc_lord": {
+            "name": "Traitor Lord",
+            "description": "A lord of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "relentless"],
+            "models": [
+                {
+                    "name": "Havoc Lord",
+                    "movement": 5,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["war_chant", "havoc_tactics"], "limit": 1}
+                    ],
+                    "rules": ["relentless"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "havoc_lord_on_bike": {
+            "name": "Traitor Lord on Bike",
+            "description": "A lord of the dark gods riding a bike.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "relentless"],
+            "models": [
+                {
+                    "name": "Traitor Lord",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}, "twin_assault_rifle"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["war_chant", "havoc_tactics"]}
+                    ],
+                    "rules": ["combat_bike", {"id": "impact", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dark_engineer": {
+            "name": "Dark Engineer",
+            "description": "A human dedicated to fixing the corrupted machines of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", {"id": "repair", "x": 2}],
+            "models": [
+                {
+                    "name": "Dark Engineer",
+                    "movement": 5,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["jetpack", "destroyer_armor"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dark_engineer_on_bike": {
+            "name": "Dark Engineer on Bike",
+            "description": "A human dedicated to fixing the corrupted machines of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", {"id": "repair", "x": 2}],
+            "models": [
+                {
+                    "name": "Dark Engineer",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}, "twin_assault_rifle"],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["destroyer_armor"]}
+                    ],
+                    "rules": ["combat_bike", {"id": "impact", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dark_psychic": {
+            "name": "Dark Psychic",
+            "description": "A powerful human whose mental powers have been twisted by the dark side.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character"],
+            "models": [
+                {
+                    "name": "Dark Psychic",
+                    "movement": 5,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["jetpack", "destroyer_armor", "war_chant", "havoc_tactics", "relentless", {"id": "psychic", "x": 2}]}
+                    ],
+                    "rules": [{"id": "psychic", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dark_psychic_on_bike": {
+            "name": "Dark Psychic on Bike",
+            "description": "A powerful human whose mental powers have been twisted by the dark side on a combat bike.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character"],
+            "models": [
+                {
+                    "name": "Dark Psychic",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"addRule": ["destroyer_armor", "war_chant", "havoc_tactics", "relentless", {"id": "psychic", "x": 2}]}
+                    ],
+                    "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "daemon_champion": {
+            "name": "Daemon Champion",
+            "description": "A twisted daemon whose powers have been boosted through service to the dark gods.",
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "fear"],
+            "models": [
+                {
+                    "name": "Daemon Champion",
+                    "movement": 5,
+                    "courage": 9,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 8,
+                    "reflexes": 8,
+                    "wounds": 6,
+                    "weapons": ["daemon_sword"],
+                    "options": [
+                        {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
+                        {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
+                        {"addRule": "wings"}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cultists": {
+            "name": "Cultists",
+            "description": "Humans who have sold their souls to the dark gods.",
+            "subfactions": ["none", "change_traitors"],
+            "min": 5,
+            "max": 30,
+            "models": [
+                {
+                    "name": "Cultist",
+                    "movement": 5,
+                    "courage": 3,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 3,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "options": [
+                        {"limit": 2, "replaceWeapon": "laser_rifle", "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
+                        {"replaceWeapon": "laser_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 30
+                }
+            ]
+        },
+        "havoc_brothers": {
+            "name": "Traitor Marines",
+            "description": "Battle brothers corrupted by the dark gods.",
+            "min": 5,
+            "max": 20,
+            "models": [
+                {
+                    "name": "Traitor Leader",
+                    "movement": 5,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Traitor Brother",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["assault_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "assault_rifle", "withWeapon": [[{"id": "ccw", "count": 2}, "pistol"]]},
+                        {
+                            "limit": 4,
+                            "replaceWeapon": "assault_rifle",
+                            "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon"]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 20
+                }
+            ]
+        },
+        "havoc_support": {
+            "name": "Traitor Devastators",
+            "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
+            "min": 5,
+            "max": 15,
+            "rules": ["relentless"],
+            "models": [
+                {
+                    "name": "Traitor Leader",
+                    "movement": 5,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [
+                                ["assault_rifle", "ccw"],
+                                {"id": "energy_claws", "count": 2},
+                                "combi_plasma",
+                                "combi_flamer",
+                                "combi_fusion",
+                                "shred_rifle",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "fusion_rifle",
+                                "heavy_machinegun",
+                                "autocannon",
+                                "missile_launcher",
+                                "laser_cannon",
+                                "reaper_cannon"
+                            ]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Traitor Devastator",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["assault_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "assault_rifle", "withWeapon": [[{"id": "ccw", "count": 2}, "pistol"]]},
+                        {
+                            "replaceWeapon": "assault_rifle",
+                            "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon", "reaper_cannon"]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 14
+                }
+            ]
+        },
+        "possessed_brothers": {
+            "name": "Possessed Brothers",
+            "description": "A squad of traitor marines that have been gifted with daemonic mutations to aid them in battle.",
+            "min": 5,
+            "max": 10,
+            "rules": ["mutations"],
+            "models": [
+                {
+                    "name": "Possessed Brother",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": [{"id": "ccw", "count": 2}],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "winged_possessed_brothers": {
+            "name": "Possessed Brothers",
+            "description": "A squad of traitor marines that have been gifted with wings to aid them in battle.",
+            "min": 5,
+            "max": 10,
+            "rules": ["mutations"],
+            "models": [
+                {
+                    "name": "Possessed Brother",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": [{"id": "ccw", "count": 2}],
+                    "rules": ["wings"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "greater_possessed_brothers": {
+            "name": "Greater Possessed Brothers",
+            "description": "A squad of traitor marines that have been gifted with significant daemonic mutations to aid them in battle.",
+            "min": 3,
+            "max": 9,
+            "rules": ["mutations"],
+            "models": [
+                {
+                    "name": "Possessed Brother",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": [{"id": "ccw", "count": 4}],
+                    "rules": [],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
+        "talon_raptors": {
+            "name": "Talon Raptors",
+            "description": "A squad of elite traitor marines intent on acheiving melee carnage.",
+            "min": 5,
+            "max": 20,
+            "rules": ["ambush", "furious", "fly"],
+            "models": [
+                {
+                    "name": "Talon Raptor Leader",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Talon Raptor",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["pistol", {"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 2}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "plasma_rifle", "flamethrower", "fusion_rifle"]}
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "Havoc_destoyers": {
+            "name": "Traitor Destroyers",
+            "description": "Destroyers that have been corrupted by the dark gods.",
+            "rules": ["ambush"],
+            "min": 5,
+            "max": 15,
+            "models": [
+                {
+                    "name": "Traitor Destroyer",
+                    "movement": 4,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["twin_assault_rifle", "energy_sword"],
+                    "options": [
+                        {"replaceWeapon": ["twin_assault_rifle", "energy_sword"], "withWeapon": [{"id": "energy_claws", "count": 2}]},
+                        {"replaceWeapon": "twin_assault_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "heavy_flamethrower", "reaper_cannon"]},
+                        {"replaceWeapon": "energy_sword", "withWeapon": ["energy_fist", "energy_hammer"]}
+                    ],
+                    "min": 5,
+                    "max": 15,
+                    "rules": []
+                }
+            ]
+        },
+        "Mutated_destoyers": {
+            "name": "Mutated Destroyers",
+            "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
+            "rules": ["ambush", "mutations"],
+            "min": 3,
+            "max": 9,
+            "models": [
+                {
+                    "name": "Mutated Destroyer",
+                    "movement": 3,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 6,
+                    "weapons": [{"id": "mutated_claws", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "mutated_claws", "count": 2}, "withWeapon": [{"id": "mutated_guns", "count": 2}]}],
+                    "min": 3,
+                    "max": 9,
+                    "rules": []
+                }
+            ]
+        },
+        "havoc_bikers": {
+            "name": "Traitor Bikers",
+            "description": "Traitor marines on combat bikes.",
+            "rules": ["combat_bike", {"id": "impact", "x": 1}],
+            "min": 3,
+            "max": 9,
+            "models": [
+                {
+                    "name": "Traitor Leader",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "withWeapon": [["assault_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
+                        },
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Traitor Biker",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["assault_rifle", "ccw"],
+                    "options": [
+                        {"addWeapon": ["twin_assault_rifle"]},
+                        {"replaceWeapon": ["assault_rifle", "ccw"], "withWeapon": ["pistol", {"id": "ccw", "count": 2}]},
+                        {"limit": 2, "replaceWeapon": "assault_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]}
+                    ],
+                    "min": 2,
+                    "max": 8
+                }
+            ]
+        },
+        "daemon_spawn": {
+            "name": "Daemon Spawn",
+            "description": "Horribly mutated beings that run rampant on the battlefield.",
+            "rules": ["mutations", "strider", "fear"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 5,
+            "models": [
+                {
+                    "name": "Daemon Spawn",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 6,
+                    "weapons": [{"id": "claws", "count": 2}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 5
+                }
+            ]
+        },
+        "havoc_apc": {
+            "name": "Traitor APC",
+            "description": "A durable transport for the followers of the dark gods.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Traitor APC",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 4,
+                    "wounds": 6,
+                    "weapons": ["twin_assault_rifle"],
+                    "options": [
+                        {"addWeapon": ["assault_rifle", "twin_assault_rifle", "havoc_missiles"]},
+                        {"replaceWeapon": "assault_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]},
+                        {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_tank": {
+            "name": "Traitor Battle Tank",
+            "description": "An armored tank helmed by havoc brothers.",
+            "rules": [{"id": "impact", "x": 6}],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Traitor Battle Tank",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 4,
+                    "wounds": 9,
+                    "weapons": ["heavy_autocannon"],
+                    "options": [
+                        {"addWeapon": ["assault_rifle", "twin_assault_rifle", "havoc_missiles", {"id": "heavy_machinegun", "count": 2}, {"id": "laser_cannon", "count": 2}]},
+                        {"replaceWeapon": "assault_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]},
+                        {"replaceWeapon": "heavy_autocannon", "withWeapon": ["demolition_cannon", "twin_laser_cannon"]},
+                        {"addRule": [{"id": "spiked_ram"}, {"id": "strider", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_battle_tank": {
+            "name": "Traitor Heavy Battle Tank",
+            "description": "A heavily armored tank sporting an arsenal of weapons touched by the dark gods.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Traitor Heavy Battle Tank",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 4,
+                    "wounds": 12,
+                    "weapons": ["heavy_machinegun", {"id": "laser_cannon", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["assault_rifle", "twin_assault_rifle", "havoc_missiles"]},
+                        {"replaceWeapon": "assault_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]},
+                        {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "infernal_brute": {
+            "name": "Infernal Brute",
+            "description": "A corrupted attack walker upgraded with infernal weapons.",
+            "rules": ["fear", "heavily_armored"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Infernal Brute",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "brute_fist", "count": 2}, "stomp"],
+                    "options": [
+                        {
+                            "replaceWeapon": "brute_fist",
+                            "withWeapon": [
+                                "brute_flail",
+                                "brute_hammer",
+                                ["brute_fist", "twin_assault_rifle"],
+                                ["brute_fist", "heavy_flamethrower"],
+                                "plasma_cannon",
+                                "missile_launcher",
+                                "heavy_fusion_rifle",
+                                "reaper_cannon",
+                                "twin_heavy_machinegun",
+                                "twin_laser_cannon"
+                            ]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "infernal_stalker": {
+            "name": "Infernal Stalker",
+            "description": "An infernal creation that crawls on the ground, stalking its prey.",
+            "rules": ["fear", "strider", "heavily_armored"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Infernal Stalker",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": ["bane_flamethrower", "maul_cutter", "claws", "chainsaw_glaive", "stomp"],
+                    "options": [{"replaceWeapon": "bane_flamethrower", "withWeapon": ["autocannon"]}, {"replaceWeapon": "maul_cutter", "withWeapon": ["virus_injector"]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "havoc_fiend": {
+            "name": "Traitor Fiend",
+            "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
+            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Traitor Fiend",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}, "stomp"],
+                    "options": [
+                        {"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 2}]},
+                        {"replaceWeapon": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}], "withWeapon": [{"id": "ecto_cannon", "count": 2}, {"id": "forge_cannon", "count": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spider_walker": {
+            "name": "Spider Walker",
+            "description": "An infernal machine built to mimic a venomous spider.",
+            "rules": ["fear", {"id": "regeneration", "x": 2}, "strider"],
+            "subfactions": ["none", "change_traitors", "armored"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Spider Walker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 9,
+                    "weapons": [{"id": "excruciating_cannons", "count": 2}, "claws_and_tendrils", "stomp"],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crab_walker": {
+            "name": "Crab Walker",
+            "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
+            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Crab Walker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": ["battle_cannon", {"id": "walker_fist", "count": 3}, "crab_flail", "stomp"],
+                    "options": [
+                        {"replaceWeapon": "crab_flail", "withWeapon": ["twin_heavy_flamethrower", "havoc_missiles"]},
+                        {"replaceWeapon": "walker_fist", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun", "twin_laser_cannon"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "havoc_dragon": {
+            "name": "Traitor Dragon",
+            "description": "A living metal airplane designed to drag other aircraft out of the air.",
+            "rules": ["flyer", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Traitor Dragon",
+                    "movement": 20,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 9,
+                    "weapons": ["forge_flamethrower"],
+                    "options": [{"replaceWeapon": "forge_flamethrower", "withWeapon": ["forge_cannon"]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "lord_of_change": {
+            "name": "Lord of Change",
+            "description": "A master of combat that leads the forces of change.",
+            "rules": ["character"],
+            "subfactions": ["change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Lord of Change",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["assault_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["assault_rifle", "ccw"], "withWeapon": ["pistol", {"id": "ccw", "count": 2}]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "assault_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
+                        {"limit": 1, "addRule": ["jetpack", "destroyer_armor"]},
+                        {"addRule": ["blessing_of_change"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sorceror_of_change": {
+            "name": "Sorceror of Change",
+            "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
+            "rules": ["character", {"id": "psychic", "x": 1}],
+            "subfactions": ["change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Sorceror of Change",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 4,
+                    "weapons": ["assault_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["assault_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_assault_rifle"]},
+                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "assault_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
+                        {"changeRule": {"id": "psychic", "x": 2}},
+                        {"addRule": "disk_of_change"}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "birdman_sorceror": {
+            "name": "Birdman Sorceror",
+            "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
+            "rules": ["character", {"id": "psychic", "x": 1}],
+            "subfactions": ["change_traitors"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Birdman Sorceror",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 6,
+                    "wounds": 4,
+                    "weapons": ["hexed_staff"],
+                    "options": [{"changeRule": {"id": "psychic", "x": 2}}, {"addRule": "disk_of_change"}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "change_brothers": {
+            "name": "Psychic Brothers",
+            "description": "Hexed traitor marines whose bodies have been turned to dust by a horrible curse, but fight on as mindless automatons in their remaining armor.",
+            "subfactions": ["change_traitors", "none"],
+            "min": 5,
+            "max": 20,
+            "models": [
+                {
+                    "name": "Psychic Marine Sorceror",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["hexed_rifle", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "hexed_rifle", "withWeapon": "flamethrower"},
+                        {"limit": 1, "replaceWeapon": "hexed_rifle", "withWeapon": "reaper_minigun"},
+                        {"replaceWeapon": ["hexed_rifle", "ccw"], "withWeapon": [["hexed_pistol", "energy_sword"], ["flamethrower_pistol", "energy_sword"]]}
+                    ],
+                    "rules": [{"id": "psychic", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Psychic Marine",
+                    "movement": 4,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["hexed_rifle", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "hexed_rifle", "withWeapon": "flamethrower"},
+                        {"limit": 1, "replaceWeapon": "hexed_rifle", "withWeapon": "reaper_minigun"},
+                        {"replaceWeapon": ["hexed_rifle", "ccw"], "withWeapon": [["hexed_pistol", "energy_sword"], ["flamethrower_pistol", "energy_sword"]]}
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "change_destroyers": {
+            "name": "Psychic Destroyers",
+            "description": "Change brothers in destroyer amror suffering from the same curse as their brothers, but still fight stolidly by their side.",
+            "rules": ["ambush"],
+            "subfactions": ["change_traitors"],
+            "min": 5,
+            "max": 15,
+            "models": [
+                {
+                    "name": "Psychic Destroyer Sorceror",
+                    "movement": 4,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["twin_assault_rifle", "energy_sword"],
+                    "options": [
+                        {"replaceWeapon": "twin_assault_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]},
+                        {"limit": 1, "addWeapon": ["missile_rack"]},
+                        {"limit": 1, "replaceWeapon": "twin_assault_rifle", "withWeapon": ["energy_sword"]}
+                    ],
+                    "rules": [{"id": "psychic", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Psychic Destroyer",
+                    "movement": 3,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["twin_assault_rifle", "energy_sword"],
+                    "options": [
+                        {"replaceWeapon": "twin_assault_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]},
+                        {"limit": 1, "addWeapon": ["missile_rack"]},
+                        {"limit": 1, "replaceWeapon": "twin_assault_rifle", "withWeapon": ["energy_sword"]}
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 14
+                }
+            ]
+        },
+        "birdmen": {
+            "name": "Birdmen",
+            "description": "Mutated half bird half man creatures that fight with the change brothers to acheive their goals.",
+            "rules": [],
+            "subfactions": ["change_traitors"],
+            "min": 10,
+            "max": 30,
+            "models": [
+                {
+                    "name": "Birdmen",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": ["pistol", {"id": "ccw", "count": 2}], "withWeapon": {"id": "ccw", "count": 4}}],
+                    "rules": [],
+                    "min": 10,
+                    "max": 30
+                }
+            ]
+        },
+        "birdmen_disc_riders": {
+            "name": "Birdmen Disk Riders",
+            "description": "Exhalted birdmen riding psychic disks.",
+            "rules": ["strider", {"id": "impact", "x": 1}],
+            "subfactions": ["change_traitors"],
+            "min": 3,
+            "max": 9,
+            "models": [
+                {
+                    "name": "Birdmen Disk Rider",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 2,
+                    "weapons": ["pistol", {"id": "ccw", "x": 1}],
+                    "options": [{"replaceWeapon": ["pistol", {"id": "ccw", "x": 1}], "withWeapon": [{"id": "ccw", "count": 4}, "hexed_spear", ["hexed_bow", "ccw"]]}],
+                    "rules": [],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 6, "short": 5},
+        "hexed_staff": {"name": "Hexed Staff", "attacks": 2, "short": "Melee", "ap": 2},
+        "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 2},
+        "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 2},
+        "reaper_minigun": {"name": "Reaper Minigun", "attacks": 4, "short": 10, "medium": 20, "ap": 2},
+        "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 10, "medium": 20, "ap": 4, "damage": 3},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 2},
+        "hexed_spear": {"name": "Hexed Spear", "attacks": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "hexed_bow": {"name": "Hexed Bow", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2},
+        "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2}
+    },
+    "rules": {
+        "blessing_of_change": {"name": "Blessing of Change", "description": "Enemy units have -1 to hit when shooting at this unit."},
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "Gives the unit strider and impact(1). Also increases the units movement to 8 inches.",
+            "effects": [{"type": "grantRule", "rule": "strider"}, {"type": "grantRule", "rule": {"id": "impact", "x": 1}}]
+        },
+        "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
+        "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
+        "war_chant": {"name": "War Chant", "description": "This model and models in his unit gain the furious keyword.", "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100}]},
+        "havoc_tactics": {
+            "name": "Traitor Tactics",
+            "description": "This model and models in his unit gain +3 inch max range when shooting and +3 inches to charges.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 3, "frequency": 50}, {"type": "alterWeapon", "statName": "medium", "value": 3, "frequency": 100}]
+        },
+        "wings": {
+            "name": "Daemon Wings",
+            "hidden": true,
+            "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
+            "description_short": "Fly, Ambush, 8\" Move",
+            "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
+        },
+        "mutations": {
+            "name": "Mutations",
+            "description": "When this unit fights in melee, roll one dice. On a roll of 1-3 the unit gains +1 AP to their attacks. On a roll of 4-6 the unit gains +1 attack per model. On a roll of 7-9 the unit is -1 to hit for the remainder fo the round. On a roll of 10, reroll until an ability is chosen.",
+            "effects": [
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 6},
+                {"type": "alterWeapon", "statName": "attacks", "value": 1, "frequency": 6},
+                {"type": "grantRule", "rule": "stealth", "frequency": 6}
+            ]
+        },
+        "spiked_ram": {
+            "name": "Spiked Ram",
+            "hidden": true,
+            "description": "This model gains +3 impact.",
+            "description_short": "Impact +3",
+            "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
+        }
+    },
+    "strategies": {
+        "daemonforge": {
+            "subfactions": ["none", "change_traitors"],
+            "name": "Daemonforge",
+            "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
+            "description": "Use before a Vehicle unit shoots. All hits have +1 AP.",
+            "cost": 1
+        },
+        "blood_ritual": {
+            "subfactions": ["none", "change_traitors"],
+            "name": "Blood Ritual",
+            "flavor": "With a simple sacrifice of flesh, comes a gift of life.",
+            "description": "Use when an Infantry unit is activated. Roll a D10 on a roll of 3 or less the unit regains 3 wounds (put on any models in the unit). On any other result it regains 2 wounds instead. If the unit has lost any models, they may be used to restore those models.",
+            "cost": 2
+        },
+        "psychic_channeling": {
+            "subfactions": ["change_traitors"],
+            "name": "Psychic Channeling",
+            "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
+            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1.",
+            "cost": 1
+        },
+        "hex_rounds": {
+            "subfactions": ["change_traitors"],
+            "name": "Hex Rounds",
+            "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
+            "description": "Use before an Infantry unit shoots. The attack has +5\" maximum range.",
+            "cost": 1
+        },
+        "psychic_fury": {
+            "subfactions": ["change_traitors"],
+            "name": "Psychic Fury",
+            "flavor": "The psyker explodes with energy, infused with additonal power.",
+            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
+            "cost": 2
+        }
+    },
+    "relics": [
+        {"weapon": "super_staff", "flavor": "The best staff.", "subfactions": ["change_traitors"]},
+        {"rule": "psychic_helmet", "flavor": "A helmet imbued with psychic energy.", "subfactions": ["change_traitors"]}
+    ],
+    "powers": {
+        "breath_of_change": {"name": "Breath of Change", "description": "Target friendly unit within 10\" may increase their charge by 3\".", "charge": 8, "subfactions": ["change_traitors"]},
+        "inferno": {"name": "Inferno", "description": "Target enemy unit within 10\" takes 2 automatic hits with AP(2).", "charge": 7, "subfactions": ["change_traitors"]},
+        "cursed_mutations": {"name": "Cursed Mutation", "description": "Target enemy unit within 15\" gets -1 to hit the next time it shoots.", "charge": 8, "subfactions": ["change_traitors"]},
+        "fire_storm": {"name": "Fire Storm", "description": "Target enemy unit within 12\" must take a dangerous terrain test.", "charge": 7, "subfactions": ["change_traitors"]},
+        "blessed_mutation": {
+            "name": "Blessed Mutation",
+            "description": "Target friendly units within 12\" gets Regeneration on rolls of 5- next time it takes wounds.",
+            "charge": 6,
+            "subfactions": ["change_traitors"]
+        },
+        "bolt_of_change": {"name": "Bolt of Change", "description": "Target enemy unit within 12\" takes 1 hit with AP(4) and 6 damage.", "charge": 6, "subfactions": ["change_traitors"]}
+    }
+}
