@@ -192,10 +192,6 @@
                     "reflexes": 7,
                     "wounds": 4,
                     "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]},
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ccw", "count": 2}, "prime_chainsword", "prime_energy_sword"]}
-                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -811,7 +807,7 @@
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "frequency": 100}]
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
         "spiked_ram": {
             "name": "Spiked Ram",

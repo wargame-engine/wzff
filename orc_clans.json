@@ -1209,7 +1209,7 @@
         "mad_doctor": {
             "name": "Mad Doctor",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "frequency": 100}]
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
         "wrecking_ball": {
             "name": "Wrecking Ball",

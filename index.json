@@ -17,18 +17,13 @@
         "core": {"name": "Core"},
         "command": {"name": "Command"},
         "specialist": {"name": "Specialist"},
-        "strike": { "name": "Strike"},
+        "strike": {"name": "Strike"},
         "heavy": {"name": "Heavy"},
         "transport": {"name": "Transport"}
     },
     "relics": [{"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."}],
     "powers": {
-        "blast": {
-            "name": "Shock Wave",
-            "description": "Target enemy unit within 10\" takes 3 automatic hits with AP 1.",
-            "flavor": "This enemy is hit by a single blast of shock.",
-            "charge": 8
-        }
+        "blast": {"name": "Shock Wave", "description": "Target enemy unit within 10\" takes 3 automatic hits with AP 1.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 8}
     },
     "strategies": {
         "divine_intervention": {
@@ -187,10 +182,7 @@
             "inputs": ["x"],
             "effects": [{"type": "transport", "size": "x"}]
         },
-        "sniper": {
-            "name": "Sniper",
-            "description": "This weapon may ignore cover and choose which model is hit."
-        },
+        "sniper": {"name": "Sniper", "description": "This weapon may ignore cover and choose which model is hit."},
         "teleport": {
             "name": "Teleport",
             "description": "When this model activates, it may first teleport up to X inches in any directing ignoring models any terrain.",
@@ -211,7 +203,10 @@
             "effects": [{"type": "heal", "frequency": 5, "value": "x"}]
         },
         "fearless": {"name": "Fearless", "description": "This unit gets +1 courage during break tests.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 5}]},
-        "open_topped": {"name": "Open-Topped", "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."},
+        "open_topped": {
+            "name": "Open-Topped",
+            "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."
+        },
         "destroyer_armor": {
             "name": "Destroyer Armor",
             "hidden": true,
@@ -262,17 +257,37 @@
             "description": "When this model shoots, each successful hit roll of 1 or 2 generates an additional shot with that weapon.",
             "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "shoot"}]
         },
-        "fusion": {"name": "Fusion", "description": "This weapon gets +1 AP when attacking in its Short range band.", "effects": [{"type": "alterWeapon", "statName": "AP", "value": 1, "frequency": 5}]},
+        "fusion": {
+            "name": "Fusion",
+            "description": "This weapon gets +1 AP when attacking in its Short range band.",
+            "effects": [{"type": "alterWeapon", "statName": "AP", "value": 1, "frequency": 5}]
+        },
         "heavy": {"name": "Heavy", "description": "This weapon suffers -1 to hit if the firer moved this turn."},
         "poison": {"name": "Poison", "inputs": ["x"], "description": "Models taking saves from this weapon must take X saves instead of 1.", "effects": [{"type": "freeHits", "value": "x"}]},
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
-        "armored": {"name": "Armored", "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc. This unit gets +1 Resist when hit at Long Range."},
-        "heavily_armored": {"name": "Heavily Armored", "description": "This unit loses 1 Resist when hit in its Rear arc. This unit gets +1 Resist when hit at Long Range."},
-        "fully_armored": {"name": "Fully Armored", "description": "This unit gets +1 Resist when hit at Long Range."},
+        "armored": {
+            "name": "Armored",
+            "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc. This unit gets +1 Resist when hit at Long Range.",
+            "effects": [
+                {"type": "alterStat", "value": -2, "frequency": 2.5, "statName": "defense"},
+                {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"},
+                {"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}
+            ]
+        },
+        "heavily_armored": {
+            "name": "Heavily Armored",
+            "description": "This unit loses 1 Resist when hit in its Rear arc. This unit gets +1 Resist when hit at Long Range.",
+            "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}, {"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+        },
+        "fully_armored": {
+            "name": "Fully Armored",
+            "description": "This unit gets +1 Resist when hit at Long Range.",
+            "effects": [{"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+        },
         "hard_turns": {"name": "Hard Turns", "description": "When moving this unit at double speed, it may not make any turns of more than 90 degrees."},
-        "Hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving."},
-        "Agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving."},
-        "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving."},
+        "Hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
+        "Agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
+        "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
