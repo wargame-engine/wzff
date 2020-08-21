@@ -165,7 +165,7 @@
             "description": "This model gets +2 Wounds.",
             "effects": [{"type": "alterStat", "statName": "wounds", "value": 2}]
         },
-        "assault": {"name": "Assault", "description": "This weapon may be fired after running at -1 to hit."},
+        "assault": {"name": "Assault", "description": "This weapon may be fired after taking two move actions at -1 to hit."},
         "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses."},
