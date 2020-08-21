@@ -16,7 +16,7 @@
                     "defense": 4,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [{"replaceWeapon": "ccw", "withWeapon": [{"id": "energy_sword", "count": 1}]}],
                     "rules": [],
                     "min": 1,
@@ -30,7 +30,7 @@
                     "defense": 4,
                     "reflexes": 3,
                     "wounds": 1,
-                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
                     "rules": [],
                     "min": 4,
                     "max": 29
@@ -44,7 +44,7 @@
                     "reflexes": 3,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "options": [{"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -65,7 +65,7 @@
                     "defense": 4,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": ["laser_rifle", "frags", "ccw"],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [{"replaceWeapon": "ccw", "withWeapon": [{"id": "energy_sword", "count": 1}]}],
                     "rules": [],
                     "min": 1,
@@ -79,7 +79,7 @@
                     "defense": 4,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -93,7 +93,9 @@
                     "reflexes": 4,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}
+                    ],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -114,8 +116,8 @@
                     "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["laser_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": ["laser_rifle"], "withWeapon": [["energy_sword", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": ["defense_rifle"], "withWeapon": [["energy_sword", "pistol"]]}, {"addRule": ["heavy_armor"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -128,8 +130,8 @@
                     "defense": 4,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["laser_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": ["laser_rifle"], "withWeapon": [["ccw", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}],
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}, {"addRule": ["heavy_armor"]}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -143,7 +145,10 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]},
+                        {"addRule": ["heavy_armor"]}
+                    ],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -155,6 +160,7 @@
             "description": "A main line battle tank.",
             "min": 1,
             "max": 1,
+            "rules": ["armored"],
             "models": [
                 {
                     "name": "Battle Tank",
@@ -165,8 +171,22 @@
                     "movement": 8,
                     "reflexes": 4,
                     "wounds": 9,
-                    "weapons": [{"id": "battle_cannon"}, {"id": "heavy_machinegun", "mount": ["Front"]}],
-                    "options": [{"addWeapon": [{"id": "machinegun", "count": 1, "mount": ["Front"]}, {"id": "storm_rifle", "count": 1, "mount": ["Front"]}], "limit": 1}],
+                    "weapons": ["battle_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
+                                [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}],
+                                [{"id": "heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}],
+                                [{"id": "plasma_cannon", "mount": ["Left", "Front"]}, {"id": "plasma_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        }
+                    ],
                     "rules": [{"id": "impact", "x": 3}],
                     "min": 1,
                     "max": 1
@@ -175,14 +195,28 @@
         }
     },
     "weapons": {
-        "battle_cannon": {
-            "name": "Battle Cannon",
+        "nova_cannon": {
+            "name": "Nova Cannon",
             "profiles": [
-                {"name": "HE", "attacks": 1, "short": 30, "medium": 60, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AP", "attacks": 1, "short": 30, "medium": 60, "ap": 4, "damage": 3}
+                {"name": "HE", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
+                {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
             ]
-        },
-        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 10, "medium": 20, "long": 30, "rules": ["assault"]}
+        }
     },
-    "rules": {}
+    "rules": {
+        "extra_armor": {
+            "name": "Extra Armor",
+            "hidden": true,
+            "description": "This model gets +1 Resist.",
+            "description_short": "Resist +1",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        },
+        "heavy_armor": {
+            "name": "Heavy Armor",
+            "hidden": true,
+            "description": "This model gets +1 Resist.",
+            "description_short": "Resist +1",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        }
+    }
 }

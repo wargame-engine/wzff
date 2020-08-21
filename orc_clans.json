@@ -700,7 +700,8 @@
         "battle_truck": {
             "name": "Battle Truck",
             "description": "A grand battle truck build out of various parts taken from other wrecked vehicles.",
-            "category": "strategic",
+            "category": "heavy",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "open_topped", "armored"],
@@ -719,7 +720,6 @@
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
                         {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank"]},
                         {"replaceRule": "open_topped", "withRule": "extra_armor"},
-                        {"addRule": ["extra_armor"]},
                         {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon"], "limit": 1},
                         {"addWeapon": ["heavy_mortar"]},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
@@ -1123,11 +1123,11 @@
         "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
         "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 4, "damage": 3},
         "mega_claw": {"name": "Mega-Claw", "attacks": 2, "short": "Melee", "ap": 4, "damage": 6},
-        "walker_saw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
+        "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 2, "damage": 2},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 20, "medium": 40, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 15, "medium": 30, "ap": 2, "rules": []},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 15, "medium": 30, "ap": 2, "rules": []},
-        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 10, "medium": 20, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 6}]},
+        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "rules": [{"id": "blast", "x": 6}]},
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 5, "ap": 3, "medium": 10, "rules": [{"id": "blast", "x": 3}]},
         "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 10, "ap": 2, "medium": 15, "rules": [{"id": "blast", "x": 3}, "rending"]},
@@ -1199,8 +1199,8 @@
             "description_short": "+1 Shoot",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1}]
         },
-        "energy_field": {"name": "Energy Field", "description": "This model and its unit get +1 Defense.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1, "frequency": 100}]},
-        "war!": {"name": "WAR!", "description": "This model and containing unit add +2\" to their Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "frequency": 100}]},
+        "energy_field": {"name": "Energy Field", "description": "This model and its unit get +2 Defense.", "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]},
+        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to their Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "frequency": 100}]},
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
@@ -1280,6 +1280,11 @@
             "name": "Never Surrender",
             "description": "Use after a Character has been killed. That unit may shoot or fight if it has not yet activated, after which it is removed.",
             "cost": 2
+        },
+        "force_field_projector": {
+            "name": "Force Field Projector",
+            "description": "Use at the start of the round. Choose a unit with the 'Force Field' rule. For the rest of the round, that force field applies to friendly units within 5\".",
+            "cost": 3
         }
     }
 }

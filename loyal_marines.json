@@ -56,8 +56,8 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword"]},
+                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
                     "rules": [],
@@ -84,8 +84,8 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword"]},
+                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"addRule": ["prime_combat_shield", "firing_drills"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
@@ -113,8 +113,8 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword"]},
+                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
                     "rules": [],
@@ -141,9 +141,10 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword"]},
-                        {"addRule": ["prime_combat_shield", "firing_drills", {"id": "fear", "name": "Ancient Banner"}]}
+                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
+                        {"addRule": ["prime_combat_shield"]},
+                        {"addRule": ["banner_of_justice", "banner_of_wrath", "banner_of_focus"], "limit": 1}
                     ],
                     "rules": [],
                     "min": 1,
@@ -205,7 +206,7 @@
             "max": 10,
             "subfactions": ["none", "wolf_marines"],
             "rules": ["fearless"],
-            "options": [{"replaceWeapon": ["assault_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
+            "options": [{"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
             "models": [
                 {
                     "name": "Marine Sergeant",
@@ -216,8 +217,8 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "assault_rifle"}, "at_grenade", "ccw", "pistol"],
-                    "options": [{"replaceWeapon": ["assault_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "ccw", "pistol"],
+                    "options": [{"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -231,9 +232,9 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "assault_rifle"}, "at_grenade", "ccw", "pistol"],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "ccw", "pistol"],
                     "options": [
-                        {"replaceWeapon": "assault_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]},
+                        {"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]},
                         {"improveStat": [[{"id": "shoot"}, {"id": "fight"}]], "name": "Veteran"}
                     ],
                     "rules": [],
@@ -275,7 +276,10 @@
                     "agility": 6,
                     "wounds": 2,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "pistol"],
-                    "options": [{"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"], "limit": "all"}],
+                    "options": [
+                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"], "limit": "all"},
+                        {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}
+                    ],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -338,7 +342,7 @@
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["assault_rifle"]},
+                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
                         {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "limit": 1}
                     ],
                     "min": 1,
@@ -355,7 +359,7 @@
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["assault_rifle"]},
+                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
                         {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
                     ],
                     "min": 4,
@@ -784,12 +788,12 @@
         "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 20, "ap": 1, "rules": []},
         "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 10, "medium": 20, "ap": 1, "rules": []},
         "grenade_launcher": {"name": "Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 10, "medium": 10, "rules": ["rending"]},
+        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 10, "medium": 15, "rules": ["rending"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 5, "medium": 10, "long": 20, "ap": 1, "rules": ["pistol"]},
-        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 3, "short": 10, "medium": 20, "rules": ["assault"]},
-        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2},
+        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 10, "medium": 20, "rules": ["assault"]},
+        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 20, "medium": 40, "ap": 2, "damage": 1},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 3, "ap": 1, "short": "Melee"},
-        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["assault"]},
+        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["assault", "fusion"]},
         "heavy_plasma_rifle": {"name": "Heavy Plasma Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "damage": 2},
         "plasma_carbine": {"name": "Plasma Carbine", "attacks": 1, "short": 10, "medium": 15, "ap": 2},
         "assault_carbine": {"name": "Assault Carbine", "attacks": 3, "short": 10, "medium": 15},
@@ -809,6 +813,21 @@
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
+        "banner_of_justice": {
+            "name": "Banner of Justice",
+            "description": "Enemy units within 10\" get -1 courage.",
+            "effects": [{"type": "grantRule", "rule": {"id": "fear", "x": 2}, "target": "enemy", "frequency": 100}]
+        },
+        "banner_of_wrath": {
+            "name": "Banner of Wrath",
+            "description": "This model and its unit gain the Furious special rule.",
+            "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "frequency": 100}]
+        },
+        "banner_of_focus": {
+            "name": "Banner of Focus",
+            "description": "This model and its unit gain the Furious special rule.",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
+        },
         "spiked_ram": {
             "name": "Spiked Ram",
             "hidden": true,
@@ -816,7 +835,7 @@
             "description_short": "Impact +3",
             "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
         },
-        "firing_drills": {"name": "Firing Drills", "description": "This model and its unit gain +1 to hit.", "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100}]},
+        "firing_drills": {"name": "Firing Drills", "description": "This model and its unit gain +1 to hit.", "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]},
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
         "prime_combat_shield": {
             "name": "Prime Combat Shield",

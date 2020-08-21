@@ -61,12 +61,28 @@
             ],
             "rules": []
         },
+        "grenade_launcher_attachment": {
+            "name": "Grenade Launcher Attachment",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 10, "medium": 20, "damage": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2, "rules": ["grenade"]}
+            ],
+            "rules": []
+        },
+        "grenade_launcher": {
+            "name": "Grenade Launcher",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 10, "medium": 20, "damage": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2}
+            ],
+            "rules": []
+        },
         "railgun": {"name": "Railgun", "attacks": 2, "short": 20, "ap": 3, "medium": 40, "rules": []},
         "ccw": {"name": "Unarmed (Melee)", "attacks": 1, "short": "Melee", "rules": []},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 2, "short": "Melee", "rules": []},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol"]},
-        "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 10, "medium": 20, "rules": []},
+        "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 10, "medium": 20, "rules": []},
         "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 30, "rules": ["assault"]},
         "storm_rifle": {"name": "Storm Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 30},
         "energy_sword": {"name": "Energy Sword", "attacks": 2, "short": "Melee", "ap": 3},
@@ -76,27 +92,29 @@
         "missile_launcher": {
             "name": "Missile Launcher",
             "profiles": [
-                {"name": "Frag", "attacks": 1, "short": 20, "medium": 35, "long": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 1, "short": 20, "medium": 35, "long": 40, "damage": 3, "ap": 3}
+                {"name": "Frag", "attacks": 1, "short": 20, "medium": 40, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 20, "medium": 40, "damage": 3, "ap": 3}
             ],
             "rules": []
         },
         "laser_cannon": {"name": "Laser Cannon", "ap": 4, "damage": 3, "attacks": 1, "short": 20, "medium": 40, "rules": []},
         "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 4, "damage": 3, "attacks": 2, "short": 20, "medium": 40, "rules": []},
         "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 10, "medium": 15, "rules": ["rending"]},
+        "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 5, "medium": 10, "rules": ["rending"]},
         "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 3},
         "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 3},
         "twin_heavy_machinegun": {"name": "Twin Heavy Machinegun", "attacks": 6, "short": 15, "medium": 30, "ap": 1, "rules": []},
         "twin_minigun": {"name": "Twin Minigun", "attacks": 8, "short": 10, "medium": 20, "ap": 1, "rules": []},
-        "flamethrower": {"name": "Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": [{"id": "blast", "x": 1}]},
+        "flamethrower": {"name": "Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": ["flame"]},
+        "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 3, "short": 5, "medium": 10, "rules": ["flame"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 6, "ap": 2, "short": 5, "medium": 10, "rules": ["flame"]},
         "light_machinegun": {"name": "Light Machingun", "attacks": 3, "short": 15, "medium": 30},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
         "shotgun": {"name": "Shotgun", "attacks": 2, "short": 5, "medium": 10, "ap": 0},
         "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "plasma_pistol": {"name": "Plasma Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 3},
-        "twin_assault_rifle": {"name": "Twin Assault Rifle", "attacks": 2, "short": 10, "medium": 20},
-        "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 4},
+        "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 10, "medium": 20},
+        "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 4, "damage": 2},
         "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 2, "damage": 3},
         "combi_plasma": {"name": "Combi-plasma", "profiles": [{"name": "Plasma", "attacks": 1, "short": 10, "medium": 20, "ap": 3}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]},
         "combi_flamer": {
@@ -105,11 +123,11 @@
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": "Fusion", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]
+            "profiles": [{"name": "Fusion", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6, "rules": ["fusion"]}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]
         },
-        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "damage": 6},
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["fusion"]},
         "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 20, "medium": 40, "ap": 3, "damage": 3},
-        "autocannon": {"name": "Autocannon", "attacks": 2, "short": 20, "medium": 40, "ap": 2, "damage": 2},
+        "autocannon": {"name": "Autocannon", "attacks": 1, "short": 20, "medium": 40, "ap": 2, "damage": 2},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "damage": 2},
         "battle_cannon": {
             "name": "Battle Cannon",
@@ -118,17 +136,17 @@
                 {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
             ]
         },
-        "laser_rifle": {"name": "Laser Rifle", "attacks": 1, "short": 10, "medium": 15},
+        "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 10, "medium": 15},
         "daemon_sword": {"name": "Daemon Sword", "attacks": 6, "short": "Melee", "ap": 3},
         "daemon_axe": {"name": "Daemon Axe", "attacks": 5, "short": "Melee", "ap": 4},
         "daemon_claws": {"name": "Daemon Claws", "attacks": 9, "short": "Melee"},
         "reaper_cannon": {"name": "Reaper Autocannon", "attacks": 4, "short": 15, "medium": 30, "ap": 3},
-        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 1, "rules": [{"id": "blast", "x": 1}]},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 1, "rules": ["flame"]},
         "mutated_claws": {"name": "Mutated Claws", "attacks": 2, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "mutated_guns": {"name": "Mutated Guns", "attacks": 2, "short": 10, "medium": 20, "ap": 3, "rules": ["rending"]},
         "claws": {"name": "Mutated Claws", "attacks": 3, "short": "Melee", "ap": 2},
         "havoc_missiles": {"name": "Havoc Missiles", "attacks": 1, "short": 20, "medium": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "demolition_cannon": {"name": "Demolition Cannon", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
+        "demolition_cannon": {"name": "Demolition Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
         "brute_fist": {"name": "Brute Fist", "attacks": 2, "short": "Melee", "ap": 4},
         "brute_flail": {"name": "Brute Flail", "attacks": 4, "short": "Melee", "ap": 2},
         "brute_hammer": {"name": "Brute Hammer", "attacks": 2, "short": "Melee", "ap": 4, "damage": 3},
@@ -146,10 +164,10 @@
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
         "plasma_cannon": {"name": "Plasma Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "attacks": 2, "short": 15, "medium": 30, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 6},
+        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["fusion"]},
         "walker_fist": {"name": "Crab Claw", "attacks": 2, "short": "Melee", "ap": 4},
         "crab_flail": {"name": "Crab Flail", "attacks": 4, "short": "Melee", "ap": 2},
-        "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 12, "short": 5, "medium": 10, "ap": 1},
+        "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 12, "short": 5, "medium": 10, "ap": 1, "rules": ["flame"]},
         "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 6, "short": 10, "medium": 15, "ap": 2}
     },
     "rules": {
@@ -163,7 +181,7 @@
         "assault": {"name": "Assault", "description": "This weapon may be fired after taking two move actions at -1 to hit."},
         "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
-        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses."},
+        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.","effects": [{"type": "alterStat", "statName": "defense", "value": 1, "frequency": 2.5, "target": "enemy"}, {"type": "alterStat", "statName": "defense", "value": 2, "frequency": 2.5, "target": "enemy"}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 to hit."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
@@ -202,7 +220,7 @@
             "description": "Once per turn, if within 2” of a Vehicle, roll one die. On a 5 or less the vehicle may regain X wounds.",
             "effects": [{"type": "heal", "frequency": 5, "value": "x"}]
         },
-        "fearless": {"name": "Fearless", "description": "This unit gets +1 courage during break tests.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 5}]},
+        "fearless": {"name": "Fearless", "description": "This unit requires an extra suppression to take break tests.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 5}]},
         "open_topped": {
             "name": "Open-Topped",
             "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."
@@ -260,7 +278,7 @@
         "fusion": {
             "name": "Fusion",
             "description": "This weapon gets +1 AP when attacking in its Short range band.",
-            "effects": [{"type": "alterWeapon", "statName": "AP", "value": 1, "frequency": 5}]
+            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]
         },
         "heavy": {"name": "Heavy", "description": "This weapon suffers -1 to hit if the firer moved this turn."},
         "poison": {"name": "Poison", "inputs": ["x"], "description": "Models taking saves from this weapon must take X saves instead of 1.", "effects": [{"type": "freeHits", "value": "x"}]},
