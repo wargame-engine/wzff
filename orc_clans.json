@@ -1091,7 +1091,7 @@
                     "reflexes": 6,
                     "wounds": 12,
                     "movement": 8,
-                    "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "mega_claw", {"id": "stomp", "count": 4}],
+                    "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "mega_claw", {"id": "heavy_stomp", "count": 4}],
                     "options": [
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 2, "mount": ["Front"]}], "limit": 1},
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2}, {"id": "rocket_launcher", "count": 2}], "limit": 1},
