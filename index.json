@@ -5,7 +5,7 @@
         "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331"},
         "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab"},
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a"},
-        "tao_federation": {"name": "TAO Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
+        "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00"},
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115"},
         "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821"},
