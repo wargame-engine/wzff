@@ -836,10 +836,10 @@
                     "defense": 10,
                     "reflexes": 5,
                     "wounds": 9,
-                    "weapons": ["battle_cannon", {"id": "walker_fist", "count": 3}, "crab_flail", "stomp"],
+                    "weapons": ["battle_cannon", {"id": "crab_claw", "count": 3}, "crab_flail", "stomp"],
                     "options": [
                         {"replaceWeapon": "crab_flail", "withWeapon": ["twin_heavy_flamethrower", "havoc_missiles"]},
-                        {"replaceWeapon": "walker_fist", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun", "twin_laser_cannon"]}
+                        {"replaceWeapon": "crab_claw", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun", "twin_laser_cannon"]}
                     ],
                     "rules": [],
                     "min": 1,

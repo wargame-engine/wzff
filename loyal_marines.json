@@ -703,7 +703,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
@@ -729,7 +729,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 9,
                     "weapons": ["heavy_autocannon"],
                     "options": [
@@ -765,7 +765,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 12,
                     "weapons": [
                         {"id": "twin_heavy_machinegun", "mount": ["Front"]},
@@ -807,7 +807,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
                     "options": [
@@ -841,7 +841,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 12,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "laser_talon", "light_machinegun"],
                     "options": [
@@ -870,15 +870,121 @@
                     "max": 1
                 }
             ]
+        },
+        "heavy_hover_tank": {
+            "name": "Heavy Hover Tank",
+            "description": "A heavy transport with hover technology and a large anti-tank weapon.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "heavily_armored", "hover"],
+            "subfactions": ["none", "wolf_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Hover Tank",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 12,
+                    "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "heavy_plasma_cannon", "heavy_gatling_gun"],
+                    "options": [
+                        {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_laser_cannon"},
+                        {
+                            "addWeapon": [
+                                {"id": "storm_rifle", "mount": ["Rear"]},
+                                {"id": "grenade_launcher", "mount": ["Rear"]},
+                                {"id": "aa_rocket_pod", "mount": ["Rear"]},
+                                {"id": "twin_aa_light_machinegun", "mount": ["Rear"]}
+                            ],
+                            "limit": 1
+                        },
+                        {
+                            "addWeapon": [
+                                [{"id": "storm_rifle", "count": 2}],
+                                [{"id": "grenade_launcher", "count": 2}]
+                            ]
+                        },
+                        {"addWeapon": {"id": "at_grenade_launcher", "count": 2}},
+                        {"addWeapon": ["light_machinegun"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "prime_light_walker": {
+            "name": "Prime Light Walker",
+            "description": "A lightly equipped recon walker.",
+            "rules": ["armored", "scout"],
+            "subfactions": ["none", "wolf_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Prime Light Walker",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "wounds": 6,
+                    "weapons": ["incendiary_cannon", {"id": "walker_fist", "count": 3}, {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "incendiary_cannon", "withWeapon": "twin_assault_light_machinegun"},
+                        {"addWeapon": [{"id": "heavy_machinegun", "count": 1}, "grenade_launcher", {"id": "light_machinegun", "count": 2} ]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "prime_assault_walker": {
+            "name": "Prime Assault Walker",
+            "description": "A heavily armed prime walker.",
+            "rules": ["armored"],
+            "subfactions": ["none", "wolf_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Prime Assault Walker",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 9,
+                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "stomp", "count": 2}, {"id": "twin_storm_rifle"}],
+                    "options": [
+                        {"replaceWeapon": "heavy_gatling_gun", "withWeapon": "heavy_plasma_cannon"},
+                        {"replaceWeapon": "twin_storm_rifle", "withWeapon": "twin_grenade_launcher"},
+                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"} ]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
+        "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 20, "medium": 40, "ap": 2},
+        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
+        "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 10, "ap": 1, "short": 5, "medium": 10, "rules": ["flame"]},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 10, "short": 15, "medium": 30, "ap": 1},
         "gatling_gun": {"name": "Gatling Gun", "attacks": 6, "short": 10, "medium": 20, "ap": 1},
+        "heavy_laser_cannon": {"name": "Heavy Laser Cannon", "ap": 4, "damage": 6, "attacks": 2, "short": 20, "medium": 40, "rules": []},
         "laser_talon": {"name": "Laser Talon", "ap": 4, "damage": 3, "attacks": 2, "short": 10, "medium": 20, "rules": []},
         "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 20, "ap": 1, "rules": []},
         "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 10, "medium": 20, "ap": 1, "rules": []},
         "grenade_launcher": {"name": "Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 2, "damage": 2},
         "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2, "rules": ["anti_air"]},
         "missile_array": {"name": "Missile Array", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
