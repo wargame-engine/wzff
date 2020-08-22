@@ -295,7 +295,7 @@
         },
         "heavily_armored": {
             "name": "Heavily Armored",
-            "description": "This unit loses 1 Resist when hit in its Rear arc. This unit gets +1 Resist when hit at Long Range.",
+            "description": "This unit loses 1 Resist when hit in its Rear arc.",
             "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}]
         },
         "fully_armored": {
