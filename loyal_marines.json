@@ -1,6 +1,7 @@
 {
-    "id": "loyal_marines",
     "name": "Loyal Marines",
+    "id": "loyal_marines",
+    "color": "#0d407f",
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
@@ -648,6 +649,35 @@
                 }
             ]
         },
+        "centurion_squad": {
+            "name": "Centurion Exosuit Squad",
+            "description": "Marines armed and armored like walking tanks.",
+            "min": 3,
+            "max": 6,
+            "subfactions": ["none", "wolf_marines"],
+            "rules": ["fearless"],
+            "models": [
+                {
+                    "min": 3,
+                    "max": 6,
+                    "name": "Centurion Exosuit",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 3,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "agility": 5,
+                    "wounds": 4,
+                    "weapons": [{"id": "assault_drill", "count": 1}, {"id": "fist_flamethrower", "count": 2}],
+                    "options": [
+                        {"addWeapon": [{"id": "fist_carbine", "count": 2}, {"id": "missile_launcher", "count": 2}], "limit": 2},
+                        {"replaceWeapon": {"id": "fist_flamethrower", "count": 2}, "withWeapon": {"id": "fusion_rifle", "count": 2}},
+                        {"replaceWeapon": {"id": "assault_drill"}, "withWeapon": [{"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "heavy_machinegun", "count": 2}]}
+                    ]
+                }
+            ]
+        },
         "prime_rider_squad": {
             "name": "Prime Rider Squad",
             "description": "Upgraded and highly trained bikers armed to the teeth.",
@@ -901,12 +931,7 @@
                             ],
                             "limit": 1
                         },
-                        {
-                            "addWeapon": [
-                                [{"id": "storm_rifle", "count": 2}],
-                                [{"id": "grenade_launcher", "count": 2}]
-                            ]
-                        },
+                        {"addWeapon": [[{"id": "storm_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]]},
                         {"addWeapon": {"id": "at_grenade_launcher", "count": 2}},
                         {"addWeapon": ["light_machinegun"], "limit": 1}
                     ],
@@ -936,7 +961,7 @@
                     "weapons": ["incendiary_cannon", {"id": "walker_fist", "count": 3}, {"id": "stomp", "count": 2}],
                     "options": [
                         {"replaceWeapon": "incendiary_cannon", "withWeapon": "twin_assault_light_machinegun"},
-                        {"addWeapon": [{"id": "heavy_machinegun", "count": 1}, "grenade_launcher", {"id": "light_machinegun", "count": 2} ]}
+                        {"addWeapon": [{"id": "heavy_machinegun", "count": 1}, "grenade_launcher", {"id": "light_machinegun", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -965,7 +990,7 @@
                     "options": [
                         {"replaceWeapon": "heavy_gatling_gun", "withWeapon": "heavy_plasma_cannon"},
                         {"replaceWeapon": "twin_storm_rifle", "withWeapon": "twin_grenade_launcher"},
-                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"} ]}
+                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1006,9 +1031,12 @@
         "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 10, "medium": 15, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": ["assault", "flame"]},
         "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 5, "medium": 10, "ap": 1, "rules": ["pistol"]},
-        "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 10, "medium": 20, "ap": 0}
+        "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 10, "medium": 20, "ap": 0},
+        "assault_drill": {"name": "Assault Drill", "attacks": 2, "ap": 4, "damage": 3, "short": "Melee"},
+        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 4, "short": 15, "medium": 30, "ap": 3, "damage": 1, "rules": ["gravity"]}
     },
     "rules": {
+        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 3}]},
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
@@ -1057,29 +1085,29 @@
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
         {"subfactions": ["none", "wolf_marines"], "weapon": "ancient_chainsword", "flavor": "A chainsword crafted to destroy even the toughest enemy infantry."}
     ],
-    "strategies": {
-        "tactical_flexibility": {
+    "strategies": [
+        {
             "subfactions": ["none", "wolf_marines"],
             "name": "Tactical Flexibility",
             "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
             "flavor": "Marines often split off into small tactical units in order to cover more ground.",
             "cost": 1
         },
-        "superior_creation": {
+        {
             "subfactions": ["none", "wolf_marines"],
             "name": "Genetically Engineered",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
-        "expert_marksmen": {
+        {
             "subfactions": ["none", "wolf_marines"],
             "name": "Expert Marksmen",
             "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
             "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
             "cost": 2
         }
-    },
+    ],
     "powers": {
         "blurred_sight": {"subfactions": ["none", "wolf_marines"], "name": "Blurred Sight", "description": "Target enemy unit within 10\" gets -1 to hit next time it shoots.", "charge": 8},
         "psychic_terror": {"subfactions": ["none", "wolf_marines"], "name": "Psychic Terror", "description": "Target enemy unit within 10\" takes 2 automatic hits with AP(2).", "charge": 8},
