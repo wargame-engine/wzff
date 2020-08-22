@@ -317,8 +317,12 @@
         },
         "aircraft": {
             "name": "Aircraft",
-            "description": "Enemy units suffer -1 to hit this model. This model may ignore terrain and other models when moving. When activated, it must move in a straight line its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
-            "effects": [{"type": "ignoreTerrain"}]
+            "description": "Enemy units suffer -1 to hit this model. This model may ignore terrain and other models when moving. When activated, it must first take a free move action its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
+            "effects": [
+                {"type": "ignoreTerrain"},
+                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"},
+                {"type": "alterStat", "statName": "movement", "frequency": 5, "value": 10}
+            ]
         }
     }
 }

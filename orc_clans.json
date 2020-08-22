@@ -981,7 +981,8 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft", "armored"],
+            "keywords": ["Vehicle", "Aircraft"],
+            "rules": ["aircraft"],
             "models": [
                 {
                     "name": "Blaster Plane",
@@ -1009,7 +1010,8 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft", "armored"],
+            "keywords": ["Vehicle", "Aircraft"],
+            "rules": ["aircraft"],
             "models": [
                 {
                     "name": "Flame Bomber",
@@ -1033,7 +1035,8 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft", "armored"],
+            "keywords": ["Vehicle", "Aircraft"],
+            "rules": ["aircraft"],
             "models": [
                 {
                     "name": "Blitz Bomber",
@@ -1056,7 +1059,8 @@
             "category": "strategic",
             "min": 1,
             "max": 1,
-            "rules": ["aircraft", "armored"],
+            "keywords": ["Vehicle", "Aircraft"],
+            "rules": ["aircraft"],
             "models": [
                 {
                     "name": "Attack Plane",
