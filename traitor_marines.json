@@ -235,16 +235,16 @@
                 {
                     "name": "Cultist",
                     "movement": 5,
-                    "courage": 3,
+                    "courage": 4,
                     "shoot": 3,
                     "fight": 3,
                     "defense": 3,
                     "reflexes": 4,
                     "wounds": 1,
-                    "weapons": [{"id": "laser_rifle", "count": 1}, "frags", "ccw"],
+                    "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
                     "options": [
-                        {"limit": 2, "replaceWeapon": "laser_rifle", "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
-                        {"replaceWeapon": "laser_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
+                        {"limit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
                     ],
                     "rules": [],
                     "min": 5,
