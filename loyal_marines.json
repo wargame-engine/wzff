@@ -57,7 +57,10 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        },
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
                     "rules": [],
@@ -85,7 +88,10 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        },
                         {"addRule": ["prime_combat_shield", "firing_drills"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
@@ -114,7 +120,10 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        },
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
                     "rules": [],
@@ -142,7 +151,10 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                        },
                         {"addRule": ["prime_combat_shield"]},
                         {"addRule": ["banner_of_justice", "banner_of_wrath", "banner_of_focus"], "limit": 1}
                     ],
@@ -206,7 +218,6 @@
             "max": 10,
             "subfactions": ["none", "wolf_marines"],
             "rules": ["fearless"],
-            "options": [{"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
             "models": [
                 {
                     "name": "Marine Sergeant",
@@ -233,10 +244,7 @@
                     "agility": 6,
                     "wounds": 1,
                     "weapons": [{"id": "marine_rifle"}, "at_grenade", "ccw", "pistol"],
-                    "options": [
-                        {"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]},
-                        {"improveStat": [[{"id": "shoot"}, {"id": "fight"}]], "name": "Veteran"}
-                    ],
+                    "options": [{"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -497,7 +505,7 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 2,
-                    "weapons": ["heavy_plasma_rifle", {"id": "ccw", "count": 2}, "at_grenade" ],
+                    "weapons": ["heavy_plasma_rifle", {"id": "ccw", "count": 2}, "at_grenade"],
                     "options": [{"replaceWeapon": "heavy_plasma_rifle", "withWeapon": ["plasma_auto_rifle", "plasma_assault_rifle"]}],
                     "min": 1,
                     "max": 1
@@ -690,7 +698,7 @@
             "models": [
                 {
                     "name": "APC",
-                    "movement": 8,
+                    "movement": 10,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -716,7 +724,7 @@
             "models": [
                 {
                     "name": "Battle Tank",
-                    "movement": 8,
+                    "movement": 10,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -752,7 +760,7 @@
             "models": [
                 {
                     "name": "Heavy Battle Tank",
-                    "movement": 8,
+                    "movement": 10,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -782,12 +790,99 @@
                     "max": 1
                 }
             ]
+        },
+        "hover_apc": {
+            "name": "Hover APC",
+            "description": "A durable transport with hover technology.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover"],
+            "subfactions": ["none", "wolf_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Hover APC",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 4,
+                    "wounds": 6,
+                    "weapons": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
+                            "withWeapon": [[{"id": "grenade_launcher", "mount": ["Left", "Front"]}, {"id": "grenade_launcher", "mount": ["Right", "Front"]}]]
+                        },
+                        {"addWeapon": ["light_machinegun"]},
+                        {"addRule": {"id": "regeneration", "x": 3, "name": "Shield Projector"}},
+                        {"addWeapon": ["twin_aa_light_machinegun", "artillery_relay", "missile_array"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_hover_apc": {
+            "name": "Heavy Hover APC",
+            "description": "A heavy transport with hover technology and loaded out with many weapons.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", "hover"],
+            "subfactions": ["none", "wolf_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Hover APC",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 4,
+                    "wounds": 12,
+                    "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "laser_talon", "light_machinegun"],
+                    "options": [
+                        {"replaceWeapon": "laser_talon", "withWeapon": "heavy_gatling_gun"},
+                        {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_laser_cannon", "mount": ["Front"]}},
+                        {
+                            "addWeapon": [
+                                {"id": "storm_rifle", "mount": ["Rear"]},
+                                {"id": "grenade_launcher", "mount": ["Rear"]},
+                                {"id": "aa_rocket_pod", "mount": ["Rear"]},
+                                {"id": "aa_light_machinegun", "mount": ["Rear"]}
+                            ],
+                            "limit": 1
+                        },
+                        {
+                            "addWeapon": [
+                                [{"id": "storm_rifle", "mount": ["Left"]}, {"id": "storm_rifle", "mount": ["Right"]}],
+                                [{"id": "grenade_launcher", "mount": ["Left"]}, {"id": "grenade_launcher", "mount": ["Right"]}]
+                            ],
+                            "limit": 1
+                        },
+                        {"addWeapon": {"id": "at_grenade_launcher", "count": 2}},
+                        {"addWeapon": ["light_machinegun", "gatling_gun"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
+        "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 10, "short": 15, "medium": 30, "ap": 1},
+        "gatling_gun": {"name": "Gatling Gun", "attacks": 6, "short": 10, "medium": 20, "ap": 1},
+        "laser_talon": {"name": "Laser Talon", "ap": 4, "damage": 3, "attacks": 2, "short": 10, "medium": 20, "rules": []},
         "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 20, "ap": 1, "rules": []},
         "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 10, "medium": 20, "ap": 1, "rules": []},
         "grenade_launcher": {"name": "Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 2, "damage": 2},
+        "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2, "rules": ["anti_air"]},
+        "missile_array": {"name": "Missile Array", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+        "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "short": 20, "medium": 40, "rules": [{"id": "blast", "x": 6}]},
         "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 10, "medium": 15, "rules": ["rending"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 5, "medium": 10, "long": 20, "ap": 1, "rules": ["pistol"]},
         "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 10, "medium": 20, "rules": ["assault"]},
@@ -835,7 +930,11 @@
             "description_short": "Impact +3",
             "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
         },
-        "firing_drills": {"name": "Firing Drills", "description": "This model and its unit gain +1 to hit.", "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]},
+        "firing_drills": {
+            "name": "Firing Drills",
+            "description": "This model and its unit gain +1 to hit.",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
+        },
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
         "prime_combat_shield": {
             "name": "Prime Combat Shield",

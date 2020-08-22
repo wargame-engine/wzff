@@ -267,7 +267,7 @@
                     "defense": 7,
                     "reflexes": 7,
                     "wounds": 1,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["pistol", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
                         {
                             "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
@@ -289,7 +289,7 @@
                     "defense": 7,
                     "reflexes": 7,
                     "wounds": 1,
-                    "weapons": ["marine_rifle", "frags", "ccw"],
+                    "weapons": ["marine_rifle", "at_grenade", "ccw", "pistol"],
                     "options": [
                         {"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "ccw", "count": 2}, "pistol"]]},
                         {

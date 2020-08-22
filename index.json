@@ -109,6 +109,8 @@
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 3, "short": 5, "medium": 10, "rules": ["flame"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 6, "ap": 2, "short": 5, "medium": 10, "rules": ["flame"]},
         "light_machinegun": {"name": "Light Machingun", "attacks": 3, "short": 15, "medium": 30},
+        "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 15, "medium": 30, "rules": ["anti_air"]},
+        "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 15, "medium": 30, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
         "shotgun": {"name": "Shotgun", "attacks": 2, "short": 5, "medium": 10, "ap": 0},
         "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2, "rules": ["rending"]},
@@ -125,7 +127,7 @@
             "name": "Combi-fusion",
             "profiles": [{"name": "Fusion", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6, "rules": ["fusion"]}, {"name": "Laser", "attacks": 2, "short": 10, "medium": 20}]
         },
-        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["fusion"]},
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6, "rules": ["fusion"]},
         "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 20, "medium": 40, "ap": 3, "damage": 3},
         "autocannon": {"name": "Autocannon", "attacks": 1, "short": 20, "medium": 40, "ap": 2, "damage": 2},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "damage": 2},
@@ -285,25 +287,24 @@
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "armored": {
             "name": "Armored",
-            "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc. This unit gets +1 Resist when hit at Long Range.",
+            "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc.",
             "effects": [
                 {"type": "alterStat", "value": -2, "frequency": 2.5, "statName": "defense"},
-                {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"},
-                {"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}
+                {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"}
             ]
         },
         "heavily_armored": {
             "name": "Heavily Armored",
             "description": "This unit loses 1 Resist when hit in its Rear arc. This unit gets +1 Resist when hit at Long Range.",
-            "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}, {"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+            "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}]
         },
         "fully_armored": {
             "name": "Fully Armored",
-            "description": "This unit gets +1 Resist when hit at Long Range.",
-            "effects": [{"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+            "description": "...",
+            "effects": []
         },
         "hard_turns": {"name": "Hard Turns", "description": "When moving this unit at double speed, it may not make any turns of more than 90 degrees."},
-        "Hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
+        "hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
         "Agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "psychic": {
