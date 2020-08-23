@@ -307,7 +307,7 @@
         },
         "hard_turns": {"name": "Hard Turns", "description": "When moving this unit at double speed, it may not make any turns of more than 90 degrees."},
         "hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
-        "Agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
+        "agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "psychic": {
             "name": "Psychic",
