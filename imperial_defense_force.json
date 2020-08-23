@@ -198,8 +198,8 @@
         "nova_cannon": {
             "name": "Nova Cannon",
             "profiles": [
-                {"name": "HE", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
+                {"name": "HE", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "AP", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 3}
             ]
         }
     },

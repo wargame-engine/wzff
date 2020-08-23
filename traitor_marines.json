@@ -12,7 +12,7 @@
             "models": [
                 {
                     "name": "Havoc Lord",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -77,7 +77,7 @@
             "models": [
                 {
                     "name": "Dark Engineer",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -141,7 +141,7 @@
             "models": [
                 {
                     "name": "Dark Psychic",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -206,7 +206,7 @@
             "models": [
                 {
                     "name": "Daemon Champion",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 9,
                     "shoot": 8,
                     "fight": 8,
@@ -234,7 +234,7 @@
             "models": [
                 {
                     "name": "Cultist",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 4,
                     "shoot": 3,
                     "fight": 3,
@@ -260,7 +260,7 @@
             "models": [
                 {
                     "name": "Traitor Leader",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -282,7 +282,7 @@
                 },
                 {
                     "name": "Traitor Marine",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -313,7 +313,7 @@
             "models": [
                 {
                     "name": "Traitor Leader",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -350,7 +350,7 @@
                 },
                 {
                     "name": "Traitor Devastator",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -600,7 +600,7 @@
             "models": [
                 {
                     "name": "Daemon Spawn",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 7,
                     "fight": 7,
@@ -712,7 +712,7 @@
             "models": [
                 {
                     "name": "Infernal Brute",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -752,7 +752,7 @@
             "models": [
                 {
                     "name": "Infernal Stalker",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -777,7 +777,7 @@
             "models": [
                 {
                     "name": "Traitor Fiend",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -805,7 +805,7 @@
             "models": [
                 {
                     "name": "Spider Walker",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -829,7 +829,7 @@
             "models": [
                 {
                     "name": "Crab Walker",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -882,7 +882,7 @@
             "models": [
                 {
                     "name": "Lord of Change",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -914,7 +914,7 @@
             "models": [
                 {
                     "name": "Sorceror of Change",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -946,7 +946,7 @@
             "models": [
                 {
                     "name": "Birdman Sorceror",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -970,7 +970,7 @@
             "models": [
                 {
                     "name": "Psychic Marine Sorceror",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -1066,7 +1066,7 @@
             "models": [
                 {
                     "name": "Birdmen",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,

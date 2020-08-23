@@ -500,7 +500,7 @@
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
-                    "movement": 5,
+                    "movement": 6,
                     "defense": 7,
                     "reflexes": 7,
                     "agility": 6,
@@ -513,7 +513,7 @@
                 {
                     "name": "Prime Blaster Marine",
                     "courage": 7,
-                    "movement": 5,
+                    "movement": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
@@ -645,6 +645,35 @@
                     ],
                     "min": 2,
                     "max": 5
+                }
+            ]
+        },
+        "centurion_squad": {
+            "name": "Centurion Exosuit Squad",
+            "description": "Marines armed and armored like walking tanks.",
+            "min": 3,
+            "max": 6,
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "rules": ["fearless"],
+            "models": [
+                {
+                    "min": 3,
+                    "max": 6,
+                    "name": "Centurion Exosuit",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 4,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "agility": 5,
+                    "wounds": 4,
+                    "weapons": [{"id": "assault_drill", "count": 1}, {"id": "fist_flamethrower", "count": 2}],
+                    "options": [
+                        {"addWeapon": [{"id": "fist_carbine", "count": 2}, {"id": "missile_launcher", "count": 2}], "limit": 2},
+                        {"replaceWeapon": {"id": "fist_flamethrower", "count": 2}, "withWeapon": {"id": "fusion_rifle", "count": 2}},
+                        {"replaceWeapon": {"id": "assault_drill"}, "withWeapon": [{"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "heavy_machinegun", "count": 2}]}
+                    ]
                 }
             ]
         },
@@ -974,41 +1003,53 @@
         }
     },
     "weapons": {
-        "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 20, "medium": 40, "ap": 2},
-        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
-        "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 10, "ap": 1, "short": 5, "medium": 10, "rules": ["flame"]},
-        "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 10, "short": 15, "medium": 30, "ap": 1},
-        "gatling_gun": {"name": "Gatling Gun", "attacks": 6, "short": 10, "medium": 20, "ap": 1},
-        "heavy_laser_cannon": {"name": "Heavy Laser Cannon", "ap": 4, "damage": 6, "attacks": 2, "short": 20, "medium": 40, "rules": []},
-        "laser_talon": {"name": "Laser Talon", "ap": 4, "damage": 3, "attacks": 2, "short": 10, "medium": 20, "rules": []},
-        "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 10, "medium": 20, "long": 20, "ap": 1, "rules": []},
-        "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 10, "medium": 20, "ap": 1, "rules": []},
-        "grenade_launcher": {"name": "Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 10, "medium": 15, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 10, "medium": 15, "ap": 2, "damage": 2},
-        "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2, "rules": ["anti_air"]},
-        "missile_array": {"name": "Missile Array", "attacks": 3, "short": 20, "medium": 40, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
-        "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "short": 20, "medium": 40, "rules": [{"id": "blast", "x": 6}]},
-        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 10, "medium": 15, "rules": ["rending"]},
-        "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 5, "medium": 10, "long": 20, "ap": 1, "rules": ["pistol"]},
-        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 10, "medium": 20, "rules": ["assault"]},
-        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 20, "medium": 40, "ap": 2, "damage": 1},
+        "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48, "ap": 2},
+        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
+        "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 10, "ap": 1, "short": 6, "medium": 12, "rules": ["flame"]},
+        "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 10, "short": 18, "medium": 36, "ap": 1},
+        "gatling_gun": {"name": "Gatling Gun", "attacks": 6, "short": 12, "medium": 24, "ap": 1},
+        "heavy_laser_cannon": {"name": "Heavy Laser Cannon", "ap": 4, "damage": 6, "attacks": 2, "short": 24, "medium": 48, "rules": []},
+        "laser_talon": {"name": "Laser Talon", "ap": 4, "damage": 3, "attacks": 2, "short": 12, "medium": 24, "rules": []},
+        "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": []},
+        "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": []},
+        "grenade_launcher": {"name": "Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "damage": 2},
+        "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "damage": 2, "rules": ["anti_air"]},
+        "missile_array": {"name": "Missile Array", "attacks": 3, "short": 24, "medium": 48, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+        "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
+        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["rending"]},
+        "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
+        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "damage": 1},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 3, "ap": 1, "short": "Melee"},
-        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 4, "damage": 6, "rules": ["assault", "fusion"]},
-        "heavy_plasma_rifle": {"name": "Heavy Plasma Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "damage": 2},
-        "plasma_carbine": {"name": "Plasma Carbine", "attacks": 1, "short": 10, "medium": 15, "ap": 2},
-        "assault_carbine": {"name": "Assault Carbine", "attacks": 3, "short": 10, "medium": 15},
-        "plasma_auto_rifle": {"name": "Plasma Auto-Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 3, "damage": 1},
-        "plasma_assault_rifle": {"name": "Assault Plasma Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 3, "damage": 1, "rules": ["assault"]},
+        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 3, "rules": ["assault", "fusion"]},
+        "heavy_plasma_rifle": {"name": "Heavy Plasma Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "damage": 2},
+        "plasma_carbine": {"name": "Plasma Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2},
+        "assault_carbine": {"name": "Assault Carbine", "attacks": 3, "short": 9, "medium": 18},
+        "plasma_auto_rifle": {"name": "Plasma Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 1},
+        "plasma_assault_rifle": {"name": "Assault Plasma Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 1, "rules": ["assault"]},
         "judge_blade": {"name": "Judge Blade", "attacks": 3, "damage": 3, "short": "Melee", "ap": 2},
         "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 3, "damage": 2, "short": "Melee", "ap": 3},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "damage": 2, "short": "Melee"},
+<<<<<<< Updated upstream
         "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 10, "medium": 15, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": ["assault", "flame"]},
         "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 5, "medium": 10, "ap": 1, "rules": ["pistol"]},
         "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 10, "medium": 20, "ap": 0}
     },
     "rules": {
+=======
+        "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
+        "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 6, "short": 6, "medium": 12, "rules": ["assault", "flame"]},
+        "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 12, "medium": 24, "ap": 0},
+        "assault_drill": {"name": "Assault Drill", "attacks": 2, "ap": 4, "damage": 3, "short": "Melee"},
+        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 3, "damage": 1, "rules": ["gravity"]}
+    },
+    "rules": {
+        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Resist 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 3}]},
+>>>>>>> Stashed changes
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
