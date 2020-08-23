@@ -98,8 +98,8 @@
             ],
             "rules": []
         },
-        "laser_cannon": {"name": "Laser Cannon", "ap": 4, "damage": 3, "attacks": 1, "short": 24, "medium": 48, "rules": []},
-        "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 4, "damage": 3, "attacks": 2, "short": 24, "medium": 48, "rules": []},
+        "laser_cannon": {"name": "Laser Cannon", "ap": 3, "damage": 3, "attacks": 1, "short": 24, "medium": 48, "rules": []},
+        "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 3, "damage": 3, "attacks": 2, "short": 24, "medium": 48, "rules": []},
         "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 12, "medium": 18, "rules": ["rending"]},
         "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
         "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
