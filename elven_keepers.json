@@ -101,7 +101,7 @@
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Troupe Sniper",
+                    "name": "Jester Assassin",
                     "courage": 7,
                     "movement": 8,
                     "shoot": 8,
