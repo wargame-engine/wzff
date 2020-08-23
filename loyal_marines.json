@@ -1,6 +1,7 @@
 {
-    "id": "loyal_marines",
     "name": "Loyal Marines",
+    "id": "loyal_marines",
+    "color": "#0d407f",
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
@@ -10,7 +11,8 @@
             "id": "wolf_marines",
             "color": "#547588",
             "background": "Loyal Marines focused on counter-attack tactics specialize in brutal counter-assaults in close combat."
-        }
+        },
+        "alien_hunters": {"name": "Alien Hunter Focus", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens."}
     },
     "units": {
         "grav_captin": {
@@ -19,7 +21,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Captain (Grav Armor)",
@@ -44,7 +46,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Captain",
@@ -56,7 +58,10 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": "prime_auto_rifle",
+                            "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
+                        },
                         {
                             "replaceWeapon": {"id": "ccw", "count": 2},
                             "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
@@ -75,7 +80,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless", {"id": "psychic", "x": 1}],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Psychic",
@@ -87,7 +92,10 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": "prime_auto_rifle",
+                            "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
+                        },
                         {
                             "replaceWeapon": {"id": "ccw", "count": 2},
                             "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
@@ -107,7 +115,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Lieutenant",
@@ -119,7 +127,10 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": "prime_auto_rifle",
+                            "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
+                        },
                         {
                             "replaceWeapon": {"id": "ccw", "count": 2},
                             "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
@@ -138,7 +149,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Ancient",
@@ -150,7 +161,10 @@
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": "prime_auto_rifle",
+                            "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "shred_pistol", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
+                        },
                         {
                             "replaceWeapon": {"id": "ccw", "count": 2},
                             "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
@@ -194,7 +208,7 @@
             "min": 5,
             "max": 10,
             "rules": ["character", "fearless", "medical_training"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Surgeon",
@@ -256,7 +270,7 @@
             "description": "Elite trained marines of a new breed.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
                 {
@@ -299,7 +313,7 @@
             "description": "Elite trained marines of a new breed specialized in deadly close assault.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
                 {
@@ -336,7 +350,7 @@
             "description": "Elite trained marines of a new breed specialized in fear and close fighting.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "fear"],
             "models": [
                 {
@@ -380,7 +394,7 @@
             "description": "Elite trained marines of a new breed specialized in infiltration and stealth tactics.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "scout"],
             "models": [
                 {
@@ -418,7 +432,7 @@
             "description": "Heavily armored elite trained marines of a new breed eqiupped with combat shields to protect them in close combat.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "prime_combat_shield"],
             "models": [
                 {
@@ -454,7 +468,7 @@
             "description": "Heavily armored marines with deadly anti-tank weaponry.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
                 {
@@ -492,7 +506,7 @@
             "description": "Heavily armored marines with deadly anti-tank weaponry.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
                 {
@@ -532,7 +546,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "ambush", "fly", {"id": "impact", "x": 1}],
             "models": [
                 {
@@ -572,7 +586,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "ambush", "fly"],
             "models": [
                 {
@@ -610,7 +624,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
                 {
@@ -683,7 +697,7 @@
             "min": 3,
             "max": 3,
             "keywords": ["Biker"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", {"id": "impact", "x": 1}],
             "models": [
                 {
@@ -720,7 +734,7 @@
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -746,7 +760,7 @@
             "name": "Battle Tank",
             "description": "An armored tank helmed by loyal marines.",
             "rules": [{"id": "impact", "x": 6}, "armored"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -782,7 +796,7 @@
             "name": "Heavy Battle Tank",
             "description": "A heavily armored tank sporting an arsenal of weapons built by the loyal marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -824,7 +838,7 @@
             "name": "Hover APC",
             "description": "A durable transport with hover technology.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -858,7 +872,7 @@
             "name": "Heavy Hover APC",
             "description": "A heavy transport with hover technology and loaded out with many weapons.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", "hover"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -904,7 +918,7 @@
             "name": "Heavy Hover Tank",
             "description": "A heavy transport with hover technology and a large anti-tank weapon.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "heavily_armored", "hover"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -930,12 +944,7 @@
                             ],
                             "limit": 1
                         },
-                        {
-                            "addWeapon": [
-                                [{"id": "storm_rifle", "count": 2}],
-                                [{"id": "grenade_launcher", "count": 2}]
-                            ]
-                        },
+                        {"addWeapon": [[{"id": "storm_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]]},
                         {"addWeapon": {"id": "at_grenade_launcher", "count": 2}},
                         {"addWeapon": ["light_machinegun"], "limit": 1}
                     ],
@@ -948,7 +957,7 @@
             "name": "Prime Light Walker",
             "description": "A lightly equipped recon walker.",
             "rules": ["armored", "scout"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -965,7 +974,7 @@
                     "weapons": ["incendiary_cannon", {"id": "walker_fist", "count": 3}, {"id": "stomp", "count": 2}],
                     "options": [
                         {"replaceWeapon": "incendiary_cannon", "withWeapon": "twin_assault_light_machinegun"},
-                        {"addWeapon": [{"id": "heavy_machinegun", "count": 1}, "grenade_launcher", {"id": "light_machinegun", "count": 2} ]}
+                        {"addWeapon": [{"id": "heavy_machinegun", "count": 1}, "grenade_launcher", {"id": "light_machinegun", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -976,7 +985,7 @@
             "name": "Prime Assault Walker",
             "description": "A heavily armed prime walker.",
             "rules": ["armored"],
-            "subfactions": ["none", "wolf_marines"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -994,7 +1003,7 @@
                     "options": [
                         {"replaceWeapon": "heavy_gatling_gun", "withWeapon": "heavy_plasma_cannon"},
                         {"replaceWeapon": "twin_storm_rifle", "withWeapon": "twin_grenade_launcher"},
-                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"} ]}
+                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1032,14 +1041,6 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 3, "damage": 3, "short": "Melee", "ap": 2},
         "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 3, "damage": 2, "short": "Melee", "ap": 3},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "damage": 2, "short": "Melee"},
-<<<<<<< Updated upstream
-        "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 10, "medium": 15, "rules": ["assault"]},
-        "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 6, "short": 5, "medium": 10, "rules": ["assault", "flame"]},
-        "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 5, "medium": 10, "ap": 1, "rules": ["pistol"]},
-        "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 10, "medium": 20, "ap": 0}
-    },
-    "rules": {
-=======
         "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 6, "short": 6, "medium": 12, "rules": ["assault", "flame"]},
         "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
@@ -1048,8 +1049,7 @@
         "gravity_cannon": {"name": "Gravity Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 3, "damage": 1, "rules": ["gravity"]}
     },
     "rules": {
-        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Resist 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 3}]},
->>>>>>> Stashed changes
+        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 3}]},
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
@@ -1098,35 +1098,81 @@
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
         {"subfactions": ["none", "wolf_marines"], "weapon": "ancient_chainsword", "flavor": "A chainsword crafted to destroy even the toughest enemy infantry."}
     ],
-    "strategies": {
-        "tactical_flexibility": {
-            "subfactions": ["none", "wolf_marines"],
+    "strategies": [
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Tactical Flexibility",
             "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
             "flavor": "Marines often split off into small tactical units in order to cover more ground.",
             "cost": 1
         },
-        "superior_creation": {
-            "subfactions": ["none", "wolf_marines"],
+        {
+            "subfactions": ["alien_hunters"],
+            "name": "Special Ammunition",
+            "description": "Use when shooting with an Infantry unit. Choose a weapon name to gain one of the following for this attack. That weapon ignores cover or that weapon gets +1 AP or that weapon gets +3\" of range.",
+            "flavor": "Equipped with special Alien Hunting armaments, they are trained to kill.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["alien_hunters"],
+            "name": "Vigilance",
+            "description": "Use when taking a Reflexes test. That unit is treated as having +1 Reflex for that test.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Genetically Engineered",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
-        "expert_marksmen": {
-            "subfactions": ["none", "wolf_marines"],
+        {
+            "subfactions": ["alien_hunters"],
+            "name": "Hunters",
+            "description": "Use when declaring a shoot or fight action. You may choose where hits are assigned.",
+            "flavor": "With deadly precision, the alien hunters attack and kill their target with precision.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Expert Marksmen",
             "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
             "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
             "cost": 2
         }
-    },
+    ],
     "powers": {
-        "blurred_sight": {"subfactions": ["none", "wolf_marines"], "name": "Blurred Sight", "description": "Target enemy unit within 10\" gets -1 to hit next time it shoots.", "charge": 8},
-        "psychic_terror": {"subfactions": ["none", "wolf_marines"], "name": "Psychic Terror", "description": "Target enemy unit within 10\" takes 2 automatic hits with AP(2).", "charge": 8},
-        "cursed_ground": {"subfactions": ["none", "wolf_marines"], "name": "Cursed Ground", "description": "Target enemy unit within 15\" moves -5\" next time it charges.", "charge": 7},
-        "cerebral_trauma": {"subfactions": ["none", "wolf_marines"], "name": "Cerebral Trauma", "description": "Target enemy model within 10\" takes 1 automatic hit with AP(3).", "charge": 7},
-        "time_passage": {"subfactions": ["none", "wolf_marines"], "name": "Time Passage", "description": "Target friendly unit within 10\" may immediately move by up to 6”.", "charge": 6},
-        "lightning_fog": {"subfactions": ["none", "wolf_marines"], "name": "Lightning Fog", "description": "Target 2 enemy units within 5\" take 8 automatic hits each.", "charge": 6}
+        "blurred_sight": {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "name": "Blurred Sight",
+            "description": "Target enemy unit within 10\" gets -1 to hit next time it shoots.",
+            "charge": 8
+        },
+        "psychic_terror": {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "name": "Psychic Terror",
+            "description": "Target enemy unit within 10\" takes 2 automatic hits with AP(2).",
+            "charge": 8
+        },
+        "cursed_ground": {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "name": "Cursed Ground",
+            "description": "Target enemy unit within 15\" moves -5\" next time it charges.",
+            "charge": 7
+        },
+        "cerebral_trauma": {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "name": "Cerebral Trauma",
+            "description": "Target enemy model within 10\" takes 1 automatic hit with AP(3).",
+            "charge": 7
+        },
+        "time_passage": {
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "name": "Time Passage",
+            "description": "Target friendly unit within 10\" may immediately move by up to 6”.",
+            "charge": 6
+        },
+        "lightning_fog": {"subfactions": ["none", "wolf_marines", "alien_hunters"], "name": "Lightning Fog", "description": "Target 2 enemy units within 5\" take 8 automatic hits each.", "charge": 6}
     }
 }
