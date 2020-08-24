@@ -40,7 +40,7 @@
             "description": "A solo wandering player who has perfected the dance of war and occasionally joins the main troupe to deadly effect.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "specialist",
             "rules": ["character", "stealth", "furious", {"id": "regeneration", "x": 3}, "agile"],
             "keywords": ["Infantry"],
             "models": [
@@ -121,6 +121,7 @@
             "description": "A group of elven jesters on foot.",
             "min": 1,
             "max": 1,
+            "category": "core",
             "rules": ["stealth", "furious", "agile"],
             "keywords": ["Infantry"],
             "models": [
@@ -151,6 +152,7 @@
             "description": "A group of newly indicted troupe mebers doing their best to prove themselves on and off of the battlefield.",
             "min": 1,
             "max": 1,
+            "category": "core",
             "rules": ["stealth", "furious", "agile"],
             "keywords": ["Infantry"],
             "models": [
@@ -175,6 +177,7 @@
             "description": "Fast-moving hover bikes outfitted with deadly weapons to choreograph the dance of war.",
             "min": 1,
             "max": 1,
+            "category": "strike",
             "rules": ["hover", {"id": "impact", "x": 1}, "stealth"],
             "keywords": ["Biker"],
             "models": [
@@ -198,11 +201,36 @@
                 }
             ]
         },
+        "hover_transport": {
+            "name": "Hover Transport",
+            "description": "A light transport outfitted to carry troupes.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": ["hover", {"id": "impact", "x": 3}, "stealth", {"id": "transport", "x": 6}, "open_topped"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "courage": 7,
+                    "movement": 12,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "wounds": 6,
+                    "weapons": [{"id": "shard_cannon", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "hover_tank": {
             "name": "Hover Tank",
             "description": "A light hover tank that can be outfitted to carry troupes or with heavier weponry to eliminate threats.",
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "rules": ["hover", {"id": "impact", "x": 3}, "stealth"],
             "keywords": ["Vehicle"],
             "models": [
@@ -216,7 +244,7 @@
                     "reflexes": 7,
                     "wounds": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}],
-                    "options": [{"limit": 1, "addWeapon": ["energy_glaive", "emp_cannon", "irridescent_cannon"]}, {"addRule": [[{"id": "transport", "x": 6}, "open_topped"]]}],
+                    "options": [{"limit": 1, "addWeapon": ["energy_glaive", "emp_cannon", "irridescent_cannon"]}],
                     "min": 1,
                     "max": 1
                 }

@@ -14,8 +14,8 @@
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A"}
     },
     "categories": {
-        "core": {"name": "Core"},
         "command": {"name": "Command"},
+        "core": {"name": "Core"},
         "specialist": {"name": "Specialist"},
         "strike": {"name": "Strike"},
         "heavy": {"name": "Heavy"},
@@ -92,15 +92,13 @@
         "minigun": {"name": "Minigun", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": []},
         "missile_launcher": {
             "name": "Missile Launcher",
-            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "damage": 3, "ap": 3}],
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "damage": 3, "ap": 2}],
             "rules": []
         },
         "laser_cannon": {"name": "Laser Cannon", "ap": 3, "damage": 3, "attacks": 1, "short": 24, "medium": 48, "rules": []},
         "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 3, "damage": 3, "attacks": 2, "short": 24, "medium": 48, "rules": []},
         "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 9, "medium": 18, "rules": ["rending"]},
         "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
-        "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
-        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
         "twin_heavy_machinegun": {"name": "Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 1, "rules": []},
         "twin_minigun": {"name": "Twin Minigun", "attacks": 8, "short": 12, "medium": 24, "ap": 1, "rules": []},
         "flamethrower": {"name": "Flamethrower", "attacks": 6, "short": 6, "medium": 12, "rules": ["flame"]},
@@ -110,24 +108,48 @@
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
-        "shotgun": {"name": "Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 0},
+        "shotgun": {"name": "Shotgun", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2, "rules": ["rending"]},
-        "plasma_pistol": {"name": "Plasma Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3},
+        "plasma_pistol": {"name": "Plasma Pistol", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 6, "medium": 12, "ap": 3},
+            {"name": "Overcharge", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+        ]},
+        "plasma_rifle": {"name": "Plasma Rifle", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
+            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+        ]},
+        "combi_plasma": {"name": "Combi-plasma", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
+            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]},
+            {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}
+        ]},
+        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "profiles": [
+            {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
+            {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+        ]},
+        "plasma_cannon": {"name": "Plasma Cannon", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+        ]},
+        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "profiles": [
+            {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+            {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+        ]},
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24},
         "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 4, "damage": 2},
         "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 2, "damage": 3},
-        "combi_plasma": {"name": "Combi-plasma", "profiles": [{"name": "Plasma", "attacks": 1, "short": 12, "medium": 24, "ap": 3}, {"name": "Laser", "attacks": 2, "short": 12, "medium": 24}]},
+        
         "combi_flamer": {
             "name": "Combi-flamer",
-            "profiles": [{"name": "Flamer", "attacks": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 1}]}, {"name": "Laser", "attacks": 2, "short": 12, "medium": 24}]
+            "profiles": [{"name": "Flamer", "attacks": 6, "short": 6, "medium": 12, "rules": ["flame"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}]
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 3, "rules": ["fusion"]}, {"name": "Laser", "attacks": 2, "short": 12, "medium": 24}]
+            "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 3, "rules": ["fusion"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}]
         },
         "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 3, "rules": ["fusion"]},
         "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 3},
-        "autocannon": {"name": "Autocannon", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "damage": 2},
+        "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 1, "damage": 2},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 24, "medium": 48, "ap": 2, "damage": 2},
         "battle_cannon": {
             "name": "Battle Cannon",
@@ -162,8 +184,6 @@
         "claws_and_tendrils": {"name": "Claws and Tendrils", "attacks": 4, "short": "Melee", "ap": 3},
         "stomp": {"name": "Stomp", "attacks": 1, "short": "Melee", "ap": 1},
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
-        "plasma_cannon": {"name": "Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 3, "rules": ["fusion"]},
         "crab_claw": {"name": "Crab Claw", "attacks": 2, "short": "Melee", "ap": 4},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 3},
@@ -179,7 +199,7 @@
             "description": "This model gets +2 Wounds.",
             "effects": [{"type": "alterStat", "statName": "wounds", "value": 2}]
         },
-        "assault": {"name": "Assault", "description": "This weapon may be fired after taking two move actions at -1 to hit."},
+        "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
         "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
         "flame": {
@@ -190,7 +210,7 @@
             ]
         },
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
-        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 to hit."},
+        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
         "pistol": {"name": "Pistol", "description": "This weapon may be used while engaged in close combat."},
         "impact": {
@@ -222,6 +242,9 @@
             "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
             "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
         },
+        "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 9 or 10.", "effects": [
+            {"type": "dangerous", "value": 1, "frequency": 2}
+        ]},
         "repair": {
             "name": "Repair",
             "inputs": ["x"],
@@ -279,7 +302,7 @@
         },
         "stealth": {
             "name": "Stealth",
-            "description": "Models suffer -1 to hit when shooting at this unit at a range of more than 12\".",
+            "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"}]
         },
         "relentless": {
@@ -318,7 +341,7 @@
         },
         "aircraft": {
             "name": "Aircraft",
-            "description": "Enemy units suffer -1 to hit this model. This model may ignore terrain and other models when moving. When activated, it must first take a free move action its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
+            "description": "Enemy units suffer -1 Accuracy when shooting at this model. This model may ignore terrain and other models when moving. When activated, it must first take a free move action its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
             "effects": [
                 {"type": "ignoreTerrain"},
                 {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"},
