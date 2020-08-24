@@ -186,8 +186,7 @@
             "name": "Flame",
             "description": "This weapon ignores cover bonuses.",
             "effects": [
-                {"type": "alterStat", "statName": "defense", "value": 1, "frequency": 2.5, "target": "enemy"},
-                {"type": "alterStat", "statName": "defense", "value": 2, "frequency": 2.5, "target": "enemy"}
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}
             ]
         },
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
@@ -280,7 +279,7 @@
         },
         "stealth": {
             "name": "Stealth",
-            "description": "Models suffer -1 to hit when shooting at this unit at a range of more than 15\".",
+            "description": "Models suffer -1 to hit when shooting at this unit at a range of more than 12\".",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"}]
         },
         "relentless": {

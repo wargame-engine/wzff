@@ -3,6 +3,32 @@
     "name": "Orc Clans",
     "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
     "units": {
+        "grand_warlord": {
+            "name": "Grand Warlord",
+            "description": "A massive clan leader in very heavy armor.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": ["character", "furious"],
+            "models": [
+                {
+                    "name": "Grand Warlord",
+                    "courage": 8,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 7,
+                    "reflexes": 8,
+                    "wounds": 8,
+                    "movement": 6,
+                    "weapons": ["super_carbine", "frags", "super_claw"],
+                    "options": [
+                        {"addRule": ["war!", "war_banner"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "warlord": {
             "name": "Warlord",
             "description": "The clan leader and toughest orc boss.",
@@ -78,6 +104,32 @@
                     "weapons": ["ccw"],
                     "rules": [{"id": "repair", "x": 1}],
                     "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "warbanner_boss": {
+            "name": "Warbanner Boss",
+            "description": "An orc carrying a war banner to inspire the orcs.",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "war_banner"],
+            "models": [
+                {
+                    "name": "Warbanner Boss",
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 4,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine"]},
+                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
                     "max": 1
                 }
             ]
@@ -164,7 +216,7 @@
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 3, "reflexes": 5, "wounds": 1, "weapons": ["pistol", "ccw"], "rules": [], "min": 5, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 3, "reflexes": 5, "wounds": 1, "weapons": ["pistol", "ccw"], "rules": [], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -576,7 +628,7 @@
                     "fight": 7,
                     "defense": 5,
                     "reflexes": 7,
-                    "wounds":3,
+                    "wounds": 3,
                     "movement": 8,
                     "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
                     "options": [
@@ -661,7 +713,43 @@
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": "heavy_machinegun", "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank"]}
+                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank"]},
+                        {"replaceRule": "open_topped", "withRule": "extra_armor"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "war_helicopter": {
+            "name": "War Helicopter",
+            "description": "A ramshackled helicopter held together only by sheer will.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": [{"id": "transport", "x": 11}, "open_topped", "fly"],
+            "models": [
+                {
+                    "name": "War Helicopter",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "movement": 10,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front", "Left", "Right"]}],
+                    "options": [
+                        {
+                            "addWeapon": {"id": "super_machinegun", "count": 2, "mount": ["Front"]},
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front", "Left", "Right"]},
+                            "withWeapon": [
+                                {"id": "plasma_cannon", "mount": ["Front", "Left", "Right"]},
+                                {"id": "rocket_launcher", "mount": ["Front", "Left", "Right"]},
+                                {"id": "heavy_flamethrower", "mount": ["Front", "Left", "Right"]}
+                            ]
+                        },
+                        {"replaceRule": "open_topped", "withRule": "extra_armor"}
                     ],
                     "min": 1,
                     "max": 1
@@ -759,9 +847,7 @@
             "category": "strategic",
             "min": 1,
             "max": 3,
-            "rules": [
-                "armored"
-            ],
+            "rules": ["armored"],
             "models": [
                 {
                     "name": "Goblin Walker",
@@ -824,10 +910,7 @@
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "heavy_flamethrower", "count": 1}],
-                    "options": [
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]},
-                        {"addRule": [{"id": "strider", "name": "Tracks"}]}
-                    ],
+                    "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": [{"id": "strider", "name": "Tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1144,6 +1227,8 @@
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 1, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "carbine": {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_carbine": {"name": "Twin Carbine", "attacks": 4, "short": 9, "medium": 18, "rules": ["assault"]},
+        "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 3, "damage": 3},
+        "super_carbine": {"name": "Super Carbine", "attacks": 8, "short": 12, "medium": 24, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 8, "short": 6, "medium": 12, "rules": ["assault"]},
         "combi_heavy_flamer": {
@@ -1203,8 +1288,12 @@
             "description_short": "+1 Shoot",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1}]
         },
-        "energy_field": {"name": "Energy Field", "description": "This model and its unit get +2 Defense.", "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]},
-        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to their Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "frequency": 100}]},
+        "energy_field": {
+            "name": "Energy Field",
+            "description": "This model and its unit get +2 Defense.",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]
+        },
+        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to their Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]},
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
@@ -1242,6 +1331,11 @@
             "hidden": true,
             "description": "This model gains +1 Resist.",
             "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        },
+        "war_banner": {
+            "name": "War Banner",
+            "description": "This model and its unit gain +1 Strength.",
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "frequency": 100, "target": "friendly"}]
         }
     },
     "powers": {

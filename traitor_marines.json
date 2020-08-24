@@ -1114,7 +1114,7 @@
         "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 2},
         "reaper_minigun": {"name": "Reaper Minigun", "attacks": 4, "short": 10, "medium": 20, "ap": 2},
         "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 10, "medium": 20, "ap": 4, "damage": 3},
-        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 2},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 5, "medium": 10, "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2},
         "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2}

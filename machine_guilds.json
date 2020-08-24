@@ -226,10 +226,6 @@
             "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits.",
             "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]
         },
-        "emp": {
-            "name": "EMP",
-            "description": "Successful hit rolls of 3 or less gain +2 AP."
-        },
         "radiation":{
             "name": "Radiation",
             "description": "On unmodified Resist rolls of 1 or 2, the defender takes +1 Damage.",

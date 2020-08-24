@@ -1067,7 +1067,7 @@
         },
         "banner_of_focus": {
             "name": "Banner of Focus",
-            "description": "This model and its unit gain the Furious special rule.",
+            "description": "This model and its unit gain +1 Accuracy.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
         },
         "spiked_ram": {
