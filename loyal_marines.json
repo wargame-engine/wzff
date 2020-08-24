@@ -20,6 +20,7 @@
             "description": "A fearless next-generation leader in heavy Grav armor.",
             "min": 5,
             "max": 10,
+            "category": "command",
             "rules": ["character", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -45,6 +46,7 @@
             "description": "A fearless next-generation leader.",
             "min": 5,
             "max": 10,
+            "category": "command",
             "rules": ["character", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -79,6 +81,7 @@
             "description": "A fearless next-generation psychic.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "rules": ["character", "fearless", {"id": "psychic", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -114,6 +117,7 @@
             "description": "A fearless next-generation leader subordinate.",
             "min": 5,
             "max": 10,
+            "category": "command",
             "rules": ["character", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -148,6 +152,7 @@
             "description": "A fearless next-generation banner carrier.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "rules": ["character", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -183,6 +188,7 @@
             "description": "A fearless next-generation melee leader.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "rules": ["character", "fearless"],
             "subfactions": ["none", "wolf_marines"],
             "models": [
@@ -207,6 +213,7 @@
             "description": "A fearless next-generation surgeon trained in saving lives.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "rules": ["character", "fearless", "medical_training"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
@@ -230,6 +237,7 @@
             "description": "Elite trained marines adept at fighting any enemies.",
             "min": 5,
             "max": 10,
+            "category": "core",
             "subfactions": ["none", "wolf_marines"],
             "rules": ["fearless"],
             "models": [
@@ -270,6 +278,7 @@
             "description": "Elite trained marines of a new breed.",
             "min": 5,
             "max": 10,
+            "category": "core",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -313,6 +322,7 @@
             "description": "Elite trained marines of a new breed specialized in deadly close assault.",
             "min": 5,
             "max": 10,
+            "category": "core",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -350,6 +360,7 @@
             "description": "Elite trained marines of a new breed specialized in fear and close fighting.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "fear"],
             "models": [
@@ -394,6 +405,7 @@
             "description": "Elite trained marines of a new breed specialized in infiltration and stealth tactics.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "scout"],
             "models": [
@@ -432,6 +444,7 @@
             "description": "Heavily armored elite trained marines of a new breed eqiupped with combat shields to protect them in close combat.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "prime_combat_shield"],
             "models": [
@@ -468,6 +481,7 @@
             "description": "Heavily armored marines with deadly anti-tank weaponry.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -506,6 +520,7 @@
             "description": "Heavily armored marines with deadly anti-tank weaponry.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -546,6 +561,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
+            "category": "strike",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "ambush", "fly", {"id": "impact", "x": 1}],
             "models": [
@@ -586,6 +602,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
+            "category": "strike",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", "ambush", "fly"],
             "models": [
@@ -624,6 +641,7 @@
             "description": "Heavily armored marines with carbines and jetpacks.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -667,6 +685,7 @@
             "description": "Marines armed and armored like walking tanks.",
             "min": 3,
             "max": 6,
+            "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
             "models": [
@@ -696,6 +715,7 @@
             "description": "Upgraded and highly trained bikers armed to the teeth.",
             "min": 3,
             "max": 3,
+            "category": "strike",
             "keywords": ["Biker"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless", {"id": "impact", "x": 1}],
@@ -735,6 +755,7 @@
             "description": "A durable transport built by the loyal marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -763,6 +784,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
+            "category": "heavy",
             "max": 1,
             "models": [
                 {
@@ -799,6 +821,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
+            "category": "heavy",
             "max": 1,
             "models": [
                 {
@@ -842,6 +865,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
+            "category": "transport",
             "models": [
                 {
                     "name": "Hover APC",
@@ -876,6 +900,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Heavy Hover APC",
@@ -922,6 +947,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Heavy Hover Tank",
@@ -961,6 +987,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
+            "category": "strike",
             "models": [
                 {
                     "name": "Prime Light Walker",
@@ -985,6 +1012,7 @@
             "name": "Prime Assault Walker",
             "description": "A heavily armed prime walker.",
             "rules": ["armored"],
+            "category": "heavy",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,

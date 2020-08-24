@@ -98,21 +98,20 @@
         "ion_destroyer": {
             "name": "Ion Destroyer",
             "profiles": [
-                {"name": "Standard", "attacks": 4, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 2},
-                {"name": "Overcharge", "attacks": 4, "short": 25, "medium": 35, "long": 45, "ap": 4, "damage": 4, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2},
+                {"name": "Overcharge", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 4, "rules": [{"id": "overheat"}]}
             ]
         },
-        "vulcan_rifle": {"name": "Vulcan Rifle", "attacks": 1, "short": 15, "medium": 25, "long": 30, "ap": 1},
-        "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 10, "medium": 15, "ap": 1},
-        "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 5, "medium": 10, "long": 15, "ap": 3},
+        "vulcan_rifle": {"name": "Vulcan Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1},
+        "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 9, "medium": 18, "ap": 1},
+        "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
         "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4, "damage": 3},
-        "portable_railgun": {"name": "Portable railgun", "attacks": 2, "short": 30, "medium": 45, "long": 60, "ap": 4, "damage": 4},
-        "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 15, "medium": 20, "long": 25, "ap": 1, "rules": [{"id": "sniper"}]},
-        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 5, "medium": 10, "ap": 1},
-        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 10, "medium": 20, "ap": 1},
-        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 2, "short": 15, "medium": 30, "ap": 1},
-        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 5, "rules": ["grenade", "stun"]},
-        "twin_assault_rifle": {"name": "Twin Assault Rifle", "attacks": 2, "short": 10, "medium": 20},
+        "portable_railgun": {"name": "Portable Railgun", "attacks": 2, "short": 24, "medium": 45, "long": 48, "ap": 4, "damage": 4},
+        "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 18, "long": 36, "ap": 1, "rules": [{"id": "sniper"}]},
+        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 1},
+        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1},
+        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
+        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
         "suit_fists": {"name": "Suit Fists", "attacks": 4, "short": "Melee", "ap": 1}
     },
     "rules": {

@@ -319,12 +319,12 @@
         "poison": {"name": "Poison", "inputs": ["x"], "description": "Models taking saves from this weapon must take X saves instead of 1.", "effects": [{"type": "freeHits", "value": "x"}]},
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "armored": {
-            "name": "Armored",
+            "name": "Vulnerable",
             "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc.",
             "effects": [{"type": "alterStat", "value": -2, "frequency": 2.5, "statName": "defense"}, {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"}]
         },
         "heavily_armored": {
-            "name": "Heavily Armored",
+            "name": "Vulnerable Rear",
             "description": "This unit loses 1 Resist when hit in its Rear arc.",
             "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}]
         },
@@ -341,7 +341,7 @@
         },
         "aircraft": {
             "name": "Aircraft",
-            "description": "Enemy units suffer -1 Accuracy when shooting at this model. This model may ignore terrain and other models when moving. When activated, it must first take a free move action its full movement distance and then may pivot up to 90 degrees. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
+            "description": "Enemy units suffer -1 Accuracy when shooting at this model. This model may ignore terrain and other models when moving. This model may only turn up to 90 degrees after completing a move. When activated, it must first take a free move action its full movement distance in a straight line. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
             "effects": [
                 {"type": "ignoreTerrain"},
                 {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"},
