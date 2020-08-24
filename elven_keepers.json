@@ -216,7 +216,7 @@
                     "reflexes": 7,
                     "wounds": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}],
-                    "options": [{"limit": 1, "addWeapon": ["energy_glaive", "focus_cannon", "emp_cannon", "lance_cannon"]}, {"addRule": [[{"id": "transport", "x": 6}, "open_topped"]]}],
+                    "options": [{"limit": 1, "addWeapon": ["energy_glaive", "emp_cannon", "irridescent_cannon"]}, {"addRule": [[{"id": "transport", "x": 6}, "open_topped"]]}],
                     "min": 1,
                     "max": 1
                 }
@@ -227,11 +227,11 @@
         "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee"},
         "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"]},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}]},
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 6, "rules": ["pistol"]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 3, "rules": ["pistol", "fusion"]},
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"]},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 2, "short": "Melee", "damage": 3},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee", "damage": 3},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "sniper_cannon": {"name": "Sniper Cannon", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}], "ap": 2, "damage": 2},
@@ -239,8 +239,14 @@
         "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
         "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}, "emp"]},
-        "focus_cannon": {"name": "Focus Cannon", "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
-        "lance_cannon": {"name": "Lance Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "deadly": 6},
+        "irridescent_cannon":{
+            "name": "Irridescent Cannon",
+            "profiles":[
+                {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "damage": 3},
+                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24}
+            ]
+        },
         "plasma_grenade": {"name": "Plasma Grenade", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": [{"id": "blast", "x": 3}]}
     },
     "rules": {
