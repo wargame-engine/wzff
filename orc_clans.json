@@ -267,7 +267,7 @@
                     "weapons": ["pistol", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": 3}
+                        {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": "1/10"}
                     ],
                     "min": 10,
                     "max": 30
