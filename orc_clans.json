@@ -231,6 +231,9 @@
             "max": 1,
             "category": "core",
             "rules": ["furious"],
+            "options": [
+                {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Orc Boss",
@@ -247,8 +250,7 @@
                         {
                             "replaceWeapon": {"id": "ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"addRule": ["heavy_armor"]}
+                        }
                     ],
                     "min": 0,
                     "max": 1
@@ -265,8 +267,7 @@
                     "weapons": ["pistol", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine"]},
-                        {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"},
-                        {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 1}
+                        {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": 3}
                     ],
                     "min": 10,
                     "max": 30
@@ -373,6 +374,9 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
+            "options": [
+                {"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"], "modelLimit": 2}
+            ],
             "models": [
                 {
                     "name": "Specialist Orc Boss",
@@ -399,8 +403,7 @@
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "ccw", "count": 2}, "frags"],
                     "options": [
-                        {"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"},
-                        {"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"], "modelLimit": 2}
+                        {"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"}
                     ],
                     "min": 5,
                     "max": 10
@@ -460,6 +463,13 @@
             "min": 1,
             "max": 1,
             "rules": ["furious"],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "ccw", "count": 3},
+                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                },
+                {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
+            ],
             "models": [
                 {
                     "name": "Orc Boss Leader",
@@ -471,13 +481,6 @@
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
-                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -492,13 +495,6 @@
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
-                    ],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -512,6 +508,11 @@
             "max": 1,
             "category": "specialist",
             "rules": ["furious"],
+            "options": [
+                {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
+                {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {"addRule": {"id": "ambush"}}
+            ],
             "models": [
                 {
                     "name": "Ultra Boss Leader",
@@ -523,11 +524,6 @@
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
-                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {"addRule": {"id": "ambush"}}
-                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -542,11 +538,6 @@
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
-                    "options": [
-                        {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
-                        {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {"addRule": {"id": "ambush"}, "modelLimit": "all"}
-                    ],
                     "rules": [],
                     "min": 2,
                     "max": 10
@@ -561,6 +552,9 @@
             "category": "strike",
             "keywords": ["Biker"],
             "rules": ["furious", {"id": "impact", "x": 1}],
+            "options": [
+                {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}
+            ],
             "models": [
                 {
                     "name": "Biker Boss",
@@ -577,8 +571,7 @@
                         {
                             "replaceWeapon": {"id": "ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}
+                        }
                     ],
                     "min": 0,
                     "max": 1
@@ -593,7 +586,6 @@
                     "wounds": 2,
                     "movement": 8,
                     "weapons": ["pistol", {"id": "ccw", "count": 2}],
-                    "options": [{"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}],
                     "min": 3,
                     "max": 12
                 }
@@ -606,6 +598,13 @@
             "max": 1,
             "category": "strike",
             "keywords": ["Biker"],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "ccw", "count": 3},
+                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                },
+                {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
+            ],
             "rules": ["furious", {"id": "impact", "x": 1}],
             "models": [
                 {
@@ -618,13 +617,6 @@
                     "wounds": 3,
                     "movement": 8,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
-                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -638,14 +630,6 @@
                     "wounds": 3,
                     "movement": 8,
                     "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        },
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}
-                    ],
                     "min": 2,
                     "max": 8
                 }

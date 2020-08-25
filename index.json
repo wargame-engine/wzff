@@ -23,7 +23,7 @@
     },
     "relics": [{"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."}],
     "powers": {
-        "blast": {"name": "Shock Wave", "description": "Target enemy unit within 10\" takes 3 automatic hits with AP 1.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 8}
+        "blast": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 automatic hits with AP 1.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 8}
     },
     "strategies": {
         "divine_intervention": {
@@ -231,7 +231,7 @@
         "sniper": {"name": "Sniper", "description": "This weapon may ignore cover and choose which model is hit."},
         "teleport": {
             "name": "Teleport",
-            "description": "When this model activates, it may first teleport up to X inches in any directing ignoring models any terrain.",
+            "description": "When this model activates, it may first teleport up to X inches in any direction ignoring models any terrain.",
             "inputs": ["x"],
             "effects": [{"type": "ignoreTerrain", "size": 5}, {"type": "alterStat", "statName": "movement", "value": "x", "frequency": 5}]
         },
@@ -336,7 +336,7 @@
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 20\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power.",
+            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power.",
             "effects": [{"type": "psychic", "value": "x"}]
         },
         "aircraft": {

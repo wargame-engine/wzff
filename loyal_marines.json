@@ -12,6 +12,7 @@
             "color": "#547588",
             "background": "Loyal Marines focused on counter-attack tactics specialize in brutal counter-assaults in close combat."
         },
+        "psychic_marines": {"name": "Psychic Focus", "id": "psychic_marines", "color": "#989898", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
         "alien_hunters": {"name": "Alien Hunter Focus", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens."}
     },
     "units": {
@@ -704,7 +705,10 @@
                     "weapons": [{"id": "heavy_fist", "count": 2}, {"id": "heavy_machinegun", "count": 2}],
                     "options": [
                         {"addWeapon": [{"id": "fist_carbine", "count": 2}, {"id": "missile_launcher", "count": 2}], "limit": 1},
-                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 2}, "withWeapon": [{"id": "fusion_rifle", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]},
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "count": 2},
+                            "withWeapon": [{"id": "fusion_rifle", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]
+                        },
                         {"replaceWeapon": {"id": "heavy_fist", "count": 2}, "withWeapon": {"id": "assault_drill", "count": 2}}
                     ]
                 }
@@ -1037,9 +1041,66 @@
                     "max": 1
                 }
             ]
+        },
+        "psychic_marine_squad": {
+            "name": "Psychic Marine Squad",
+            "description": "Marines trained to hunt demons and adept in psychic powers.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "subfactions": ["psychic_marines"],
+            "options": [
+                {"replaceWeapon": "psychic_sword", "withWeapon": ["psychic_staff", "psychic_halberd", {"id": "psychic_falchion", "count": 2}, "psychic_hammer"]},
+                {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}, {"id": "teleport", "x": 6, "name": "Interceptor"}], "modelLimit": "all", "limit": 1}
+            ],
+            "rules": ["fearless"],
+            "models": [
+                {
+                    "name": "Psychic Marine Sergeant",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_sword", "pistol"],
+                    "options": [
+                        {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
+                    ],
+                    "rules": ["ward"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Psychic Marine",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_sword", "pistol"],
+                    "options": [
+                        {"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
         }
     },
     "weapons": {
+        "psychic_sword": {"name": "Psychic Sword", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 2, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 2}]},
+        "psychic_halberd": {"name": "Psychic Halberd", "attacks": 2, "short": "Melee", "ap": 2},
+        "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "short": "Melee", "rules": ["rending"]},
+        "psychic_hammer": {"name": "Psychic Hammer", "attacks": 2, "ap": 4, "damage": 3, "short": "Melee"},
+        "incinerator": {"name": "Incinerator", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+        "psychic_silencer": {"name": "Psychic Silencer", "attacks": 6, "short": 12, "medium": 24, "rules": ["flame"]},
+        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "damage": 2, "rules": ["rending"]},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48, "ap": 2},
         "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 10, "ap": 1, "short": 6, "medium": 12, "rules": ["flame"]},
@@ -1084,6 +1145,7 @@
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
+        "ward": {"name": "Ward", "description": "This unit may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "banner_of_justice": {
             "name": "Banner of Justice",
             "description": "Enemy units within 10\" get -1 courage.",
@@ -1129,7 +1191,7 @@
     ],
     "strategies": [
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Tactical Flexibility",
             "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
             "flavor": "Marines often split off into small tactical units in order to cover more ground.",
@@ -1150,7 +1212,7 @@
             "cost": 1
         },
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Genetically Engineered",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
@@ -1164,7 +1226,7 @@
             "cost": 2
         },
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Expert Marksmen",
             "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
             "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
@@ -1172,6 +1234,12 @@
         }
     ],
     "powers": {
+        "banish": {"subfactions": ["psychic_marines"], "name": "Banish", "description": "Target enemy unit within 12” gets -1 to melee rolls next time it fights.", "charge": 8},
+        "cleanse": {"subfactions": ["psychic_marines"], "name": "Cleanse", "description": "Target enemy unit within 12” takes 2 automatic hits with AP(2).", "charge": 8},
+        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 10\" ignoring all models and terrain.", "charge": 7},
+        "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12” takes 1 automatic hit with AP(3).", "charge": 7},
+        "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12” may immediately shoot.", "charge": 6},
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 6” take 6 automatic hits with AP(1) each.", "charge": 6},
         "blurred_sight": {
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Blurred Sight",
