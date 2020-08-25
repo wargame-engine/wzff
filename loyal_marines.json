@@ -1501,9 +1501,16 @@
             "cost": 1
         },
         {
+            "subfactions": ["psychic_marines"],
+            "name": "Psychic Channeling",
+            "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
+            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +3\" of range.",
+            "cost": 1
+        },
+        {
             "subfactions": ["alien_hunters"],
             "name": "Vigilance",
-            "description": "Use when taking a Reflexes test. That unit is treated as having +1 Reflex for that test.",
+            "description": "Use when taking a Reflexes test. That unit is treated as having +2 Reflex for that test.",
             "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
             "cost": 1
         },
@@ -1512,6 +1519,13 @@
             "name": "Genetically Engineered",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["psychic_marines"],
+            "name": "Psychic Aim",
+            "flavor": "With psychic vision, some can even see their enemies through walls.",
+            "description": "Use before a unit shoots. That unit may target units out of line of sight for this attack.",
             "cost": 2
         },
         {
@@ -1526,6 +1540,13 @@
             "name": "Expert Marksmen",
             "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
             "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["psychic_marines"],
+            "name": "Psychic Fury",
+            "flavor": "The psyker explodes with energy, infused with additonal power.",
+            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
             "cost": 2
         }
     ],
