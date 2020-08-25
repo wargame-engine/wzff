@@ -235,11 +235,11 @@
                 {
                     "name": "Cultist",
                     "movement": 6,
-                    "courage": 4,
-                    "shoot": 3,
-                    "fight": 3,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
                     "defense": 3,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
                     "options": [

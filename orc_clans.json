@@ -17,9 +17,9 @@
                     "shoot": 5,
                     "fight": 8,
                     "defense": 7,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 8,
-                    "movement": 6,
+                    "movement": 4,
                     "weapons": ["super_carbine", "frags", "super_claw"],
                     "options": [
                         {"addRule": ["war!", "war_banner"]}
@@ -45,7 +45,7 @@
                     "defense": 5,
                     "reflexes": 8,
                     "wounds": 4,
-                    "movement": 6,
+                    "movement": 5,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -182,7 +182,7 @@
                     "defense": 4,
                     "reflexes": 7,
                     "wounds": 3,
-                    "movement": 6,
+                    "movement": 5,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -241,7 +241,7 @@
                     "shoot": 4,
                     "fight": 5,
                     "defense": 4,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
@@ -261,7 +261,7 @@
                     "shoot": 4,
                     "fight": 5,
                     "defense": 4,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["pistol", {"id": "ccw", "count": 2}],

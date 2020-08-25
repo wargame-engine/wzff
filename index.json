@@ -10,7 +10,6 @@
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115"},
         "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821"},
         "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f"},
-        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#1b1e23"},
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A"}
     },
     "categories": {
@@ -105,6 +104,7 @@
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 3, "short": 6, "medium": 12, "rules": ["flame"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]},
         "light_machinegun": {"name": "Light Machingun", "attacks": 3, "short": 18, "medium": 36},
+        "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36},
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
@@ -206,7 +206,9 @@
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 3},
         "crab_flail": {"name": "Crab Flail", "attacks": 4, "short": "Melee", "ap": 2},
         "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 12, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
-        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 6, "short": 12, "medium": 18, "ap": 2}
+        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 6, "short": 12, "medium": 18, "ap": 2},
+        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "damage": 1, "rules": ["gravity"]},
+        "heavy_gravity_cannon": {"name": "Heavy Gravity Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": ["gravity"]}
     },
     "rules": {
         "legend_wounds": {
@@ -216,6 +218,7 @@
             "description": "This model gets +2 Wounds.",
             "effects": [{"type": "alterStat", "statName": "wounds", "value": 2}]
         },
+        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 2.5}]},
         "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
         "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},

@@ -70,7 +70,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [],
+            "rules": ["character"],
             "models": [
                 {
                     "name": "Machine Manipulator",
@@ -98,7 +98,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [],
+            "rules": ["character"],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -395,6 +395,10 @@
             "max": 1,
             "category": "strike",
             "rules": ["scout", "agile", {"id": "impact", "x": 1}],
+            "options": [
+                {"addWeapon": ["phosphor_breath"], "modelLimit": "all"},
+                {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine", "limit": "all"}
+            ],
             "models": [
                 {
                     "name": "Raider Leader",
@@ -405,9 +409,10 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["taser_sword", "phosphor_pistol"],
+                    "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
                     "options": [
-                        {"addWeapon": ["phosphor_breath"]}
+                        {"replaceWeapon": {"id": "ccw", "count": 1}, "withWeapon": ["raider_sabre", "energy_sword"]},
+                        {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": ["revolver_pistol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -421,17 +426,133 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"addWeapon": ["phosphor_breath"], "modelLimit": "all"}
-                    ],
+                    "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
                     "min": 2,
                     "max": 8
+                }
+            ]
+        },
+        "breachers": {
+            "name": "Breachers",
+            "description": "Metallic cyborgs with tracks specialized in breaching defenses and fighting armored targets.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "options": [
+                {"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]},
+                {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}
+            ],
+            "models": [
+                {
+                    "name": "Breacher",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["emp_cannon", {"id": "claws", "count": 3}],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "destroyers": {
+            "name": "Destroyers",
+            "description": "Metallic cyborgs with tracks specialized in fighting armored targets at long range.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "options": [
+                {"addWeapon": ["phosphor_rifle", "flamethrower"]},
+                {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},
+                {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}
+            ],
+            "models": [
+                {
+                    "name": "Destroyers",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["mini_plasma_cannon", {"id": "claws", "count": 3}],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "landing_craft": {
+            "name": "Landing Craft",
+            "description": "A hovering landing craft for transporting troops.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover", "open_topped"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Landing Craft",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "light_machinegun", "count": 2}],
+                    "options": [{"addWeapon": ["twin_aa_light_machinegun"]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_craft": {
+            "name": "Assault Craft",
+            "description": "A hovering tank for supporting landing assaults.",
+            "rules": [{"id": "impact", "x": 6}, "armored", "hover"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Assault Craft",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": [{"id": "light_machinegun", "count": 2}, "disruption_missiles"],
+                    "options": [{"addWeapon": [["light_machinegun", "energy_cannon"], ["light_machinegun", "iron_cannon"]]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
     },
     "weapons": {
+        "mini_plasma_cannon": {
+            "name": "Mini Plasma Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+            ]
+        },
+        "energy_cannon": {"name": "Energy Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": [{ "id": "blast", "x": 3}, "indirect"]},
+        "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 3, "damage": 3},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "rules": ["emp"]},
+        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "rules": [{ "id": "blast", "x": 2}]},
+        "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 3},
+        "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 1, "short": 6, "medium": 12},
+        "raider_sabre": {"name": "Raider Sabre", "attacks": 2, "ap": 1, "short": "Melee"},
         "blaster_smg": {"name": "Blaster SMG", "attacks": 3, "short": 6, "medium": 12, "rules": ["assault"]},
         "phosphor_breath": {"name": "Phosphor Breath", "attacks": 6, "short": 6, "medium": 12, "rules": ["phosphor"]},
         "blaster_carbine": {"name": "Blaster Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
@@ -440,6 +561,7 @@
         "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "sonic_razor": {"name": "Sonic Razor", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
         "claws": {"name": "Claws", "attacks": 1,"short": "Melee", "rules": ["rending"]},
+        "iron_claws": {"name": "Iron Claws", "attacks": 1,"short": "Melee", "ap": 2},
         "taser_gauntlets": {"name": "Taser Gauntlets", "profiles": [
             {"name": "Strike", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["taser"]},
             {"name": "Zap", "attacks": 2, "damage": 1, "short": 6, "medium": 12, "rules": ["taser"]}
@@ -459,7 +581,8 @@
         "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "phosphor"]},
         "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "radiation"]},
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "emp"]},
-        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "phosphor"]}
+        "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "phosphor"]},
+        "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["phosphor"]}
     },
     "rules": {
         "canticles":{
@@ -495,9 +618,9 @@
         },
         "phosphor":{
             "name": "Phosphor",
-            "description": "This weapon ignores cover.",
+            "description": "This weapon ignores cover at Short range.",
             "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5}
             ]
         },
         "taser":{
