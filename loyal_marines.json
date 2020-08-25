@@ -758,7 +758,7 @@
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -781,11 +781,42 @@
                 }
             ]
         },
+        "marine_assault_apc": {
+            "name": "Assault APC",
+            "description": "A durable transport built by the loyal marines with upgraded weaponry.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "armored"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Assault APC",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["twin_heavy_machinegun"],
+                    "options": [
+                        {"addWeapon": ["storm_rifle", "hunter_missiles"]},
+                        {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]},
+                        {"replaceWeapon": "twin_heavy_machinegun", "withWeapon": ["twin_minigun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "marine_tank": {
             "name": "Battle Tank",
             "description": "An armored tank helmed by loyal marines.",
             "rules": [{"id": "impact", "x": 6}, "armored"],
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "keywords": ["Vehicle"],
             "min": 1,
             "category": "heavy",
@@ -1042,32 +1073,98 @@
                 }
             ]
         },
+        "psychic_grand_master": {
+            "name": "Psychic Grand Master",
+            "description": "A Master of psychic powers and martial combat.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": ["character", "fearless", "ward"],
+            "subfactions": ["psychic_marines"],
+            "models": [
+                {
+                    "name": "Psychic Grand Master",
+                    "courage": 9,
+                    "shoot": 8,
+                    "fight": 8,
+                    "movement": 5,
+                    "defense": 8,
+                    "reflexes": 8,
+                    "wounds": 3,
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "pistol"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "psychic_sword", "count": 4},
+                            "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 4}]
+                        },
+                        {"addRule": [{"id": "psychic", "x": 1}, "combat_master", "advanced_tactics"]},
+                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_brother": {
+            "name": "Psychic Brother",
+            "description": "A Psychic marine leader.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": ["character", "fearless", "ward"],
+            "subfactions": ["psychic_marines"],
+            "models": [
+                {
+                    "name": "Psychic Brother",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}, "pistol"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "psychic_sword", "count": 3},
+                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 3}]
+                        },
+                        {"addRule": [{"id": "psychic", "x": 1}, "combat_master", "advanced_tactics"]},
+                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "psychic_marine_squad": {
-            "name": "Psychic Marine Squad",
+            "name": "Psychic Squad",
             "description": "Marines trained to hunt demons and adept in psychic powers.",
             "min": 5,
             "max": 10,
             "category": "core",
             "subfactions": ["psychic_marines"],
             "options": [
-                {"replaceWeapon": "psychic_sword", "withWeapon": ["psychic_staff", "psychic_halberd", {"id": "psychic_falchion", "count": 2}, "psychic_hammer"]},
-                {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}, {"id": "teleport", "x": 6, "name": "Interceptor"}], "modelLimit": "all", "limit": 1}
+                {
+                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                },
+                {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
             ],
             "rules": ["fearless"],
             "models": [
                 {
-                    "name": "Psychic Marine Sergeant",
+                    "name": "Psychic Sergeant",
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 7,
-                    "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_sword", "pistol"],
-                    "options": [
-                        {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
-                    ],
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
                     "rules": ["ward"],
                     "min": 1,
                     "max": 1
@@ -1079,28 +1176,208 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 7,
-                    "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_sword", "pistol"],
-                    "options": [
-                        {"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}
-                    ],
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
                     "rules": [],
                     "min": 4,
                     "max": 9
                 }
             ]
+        },
+        "purge_squad": {
+            "name": "Purge Squad",
+            "description": "Marines trained to hunt demons with heavy psychic weapons.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "subfactions": ["psychic_marines"],
+            "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"]}],
+            "rules": ["fearless"],
+            "models": [
+                {
+                    "name": "Purge Sergeant",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
+                    "rules": ["ward"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Purge Marine",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "teleport_squad": {
+            "name": "Teleport Squad",
+            "description": "Marines trained to hunt demons and adept in psychic powers with teleporting backpack.",
+            "min": 5,
+            "max": 10,
+            "category": "strike",
+            "subfactions": ["psychic_marines"],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                }
+            ],
+            "rules": ["fearless", {"id": "teleport", "x": 6}],
+            "models": [
+                {
+                    "name": "Teleport Sergeant",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
+                    "rules": ["ward"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Teleport Marine",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "psychic_destroyers": {
+            "name": "Psychic Destroyers",
+            "description": "Marines in heavy armor trained to hunt demons and adept in psychic powers.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "subfactions": ["psychic_marines"],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                },
+                {"addRule": [{"id": "regeneration", "x": 3, "name": "Paladins"}], "modelLimit": "all"}
+            ],
+            "rules": ["fearless", "ambush"],
+            "models": [
+                {
+                    "name": "Psychic Destroyer Sergeant",
+                    "courage": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 5,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
+                    "rules": ["ward"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Psychic Destroyer",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "movement": 5,
+                    "reflexes": 7,
+                    "agility": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "rules": [],
+                    "min": 2,
+                    "max": 8
+                }
+            ]
+        },
+        "dread_walker": {
+            "name": "Dread Walker",
+            "description": "A large psychic walker with heavy weapons and extreme combat prowess.",
+            "rules": ["armored", "ward"],
+            "category": "heavy",
+            "subfactions": ["psychic_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Dread Walker",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 9,
+                    "weapons": [{"id": "dread_fist", "count": 2}, {"id": "heavy_stomp", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": {"id": "dread_fist", "count": 1}, "withWeapon": [{"id": "psychic_hammer", "count": 2}, "psychic_greatsword"], "limit": 1},
+                        {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}]},
+                        {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "regeneration", "x": 3, "name": "Shield"}]},
+                        {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
-        "psychic_sword": {"name": "Psychic Sword", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 2, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 2}]},
-        "psychic_halberd": {"name": "Psychic Halberd", "attacks": 2, "short": "Melee", "ap": 2},
+        "psychic_grenade": {
+            "name": "Psychic Grenades",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 6, "damage": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 2, "damage": 2, "rules": ["grenade"]},
+                {"name": "Psychic", "attacks": 1, "short": 6, "rules": ["psych_out", {"id": "blast", "x": 3}]}
+            ]
+        },
+        "dread_fist": {"name": "Dread Fist", "attacks": 2, "short": "Melee", "ap": 3},
+        "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 4, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 2}]},
+        "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 2},
         "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "short": "Melee", "rules": ["rending"]},
-        "psychic_hammer": {"name": "Psychic Hammer", "attacks": 2, "ap": 4, "damage": 3, "short": "Melee"},
+        "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 4, "damage": 3, "short": "Melee"},
         "incinerator": {"name": "Incinerator", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
-        "psychic_silencer": {"name": "Psychic Silencer", "attacks": 6, "short": 12, "medium": 24, "rules": ["flame"]},
+        "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 6, "short": 9, "medium": 18, "ap": 1, "rules": ["flame"]},
+        "psychic_silencer": {"name": "Psychic Silencer", "attacks": 6, "short": 12, "medium": 24},
+        "gatling_psychic_silencer": {"name": "Gatling Psychic Silencer", "attacks": 12, "short": 12, "medium": 24},
         "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "damage": 2, "rules": ["rending"]},
+        "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rending", {"id": "blast", "x": 6}]},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48, "ap": 2},
         "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 10, "ap": 1, "short": 6, "medium": 12, "rules": ["flame"]},
@@ -1139,17 +1416,36 @@
         "gravity_cannon": {"name": "Gravity Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "damage": 2, "rules": ["gravity"]}
     },
     "rules": {
+        "advanced_tactics": {
+            "name": "Advanced Tactics",
+            "description": "This model and models in his unit gain +3 inch max range when shooting and +3 inches to charges.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 3, "frequency": 50, "target": "friendly"}, {"type": "alterWeapon", "statName": "medium", "value": 3, "frequency": 100, "target": "friendly"}]
+        },
+        "combat_master": {
+            "name": "Combat Master",
+            "description": "When this unit fights in melee, choose one of the following bonuses: +1 to hit or +1 AP or Rending",
+            "effects": [
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 6},
+                {"type": "alterWeapon", "statName": "attacks", "value": 1, "frequency": 6},
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2}
+            ]
+        },
         "gravity": {"name": "Gravity", "description": "Does +1 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 1, "frequency": 3}]},
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
-        "ward": {"name": "Ward", "description": "This unit may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
+        "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "banner_of_justice": {
             "name": "Banner of Justice",
             "description": "Enemy units within 10\" get -1 courage.",
             "effects": [{"type": "grantRule", "rule": {"id": "fear", "x": 2}, "target": "enemy", "frequency": 100}]
+        },
+        "psych_out": {
+            "name": "Dangerous(Psychic)",
+            "description": "This weapon has +1 AP against units with the Psychic keyword.",
+            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2}]
         },
         "banner_of_wrath": {
             "name": "Banner of Wrath",
@@ -1234,12 +1530,12 @@
         }
     ],
     "powers": {
-        "banish": {"subfactions": ["psychic_marines"], "name": "Banish", "description": "Target enemy unit within 12” gets -1 to melee rolls next time it fights.", "charge": 8},
+        "banish": {"subfactions": ["psychic_marines"], "name": "Banish", "description": "Target enemy unit within 12\" gets -1 to melee rolls next time it fights.", "charge": 8},
         "cleanse": {"subfactions": ["psychic_marines"], "name": "Cleanse", "description": "Target enemy unit within 12” takes 2 automatic hits with AP(2).", "charge": 8},
-        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 10\" ignoring all models and terrain.", "charge": 7},
-        "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12” takes 1 automatic hit with AP(3).", "charge": 7},
-        "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12” may immediately shoot.", "charge": 6},
-        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 6” take 6 automatic hits with AP(1) each.", "charge": 6},
+        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 12\" ignoring all models and terrain.", "charge": 7},
+        "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 7},
+        "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12\" may immediately shoot.", "charge": 6},
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 6\" take 6 automatic hits with AP(1) each.", "charge": 6},
         "blurred_sight": {
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Blurred Sight",

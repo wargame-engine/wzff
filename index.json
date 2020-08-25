@@ -110,35 +110,52 @@
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
         "shotgun": {"name": "Shotgun", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2, "rules": ["rending"]},
-        "plasma_pistol": {"name": "Plasma Pistol", "profiles": [
-            {"name": "Standard", "attacks": 1, "short": 6, "medium": 12, "ap": 3},
-            {"name": "Overcharge", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
-        ]},
-        "plasma_rifle": {"name": "Plasma Rifle", "profiles": [
-            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
-            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
-        ]},
-        "combi_plasma": {"name": "Combi-plasma", "profiles": [
-            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
-            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]},
-            {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}
-        ]},
-        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "profiles": [
-            {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
-            {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
-        ]},
-        "plasma_cannon": {"name": "Plasma Cannon", "profiles": [
-            {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-            {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
-        ]},
-        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "profiles": [
-            {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-            {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
-        ]},
+        "plasma_pistol": {
+            "name": "Plasma Pistol",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 6, "medium": 12, "ap": 3},
+                {"name": "Overcharge", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "plasma_rifle": {
+            "name": "Plasma Rifle",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "combi_plasma": {
+            "name": "Combi-plasma",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]},
+                {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}
+            ]
+        },
+        "twin_plasma_rifle": {
+            "name": "Twin Plasma Rifle",
+            "profiles": [
+                {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
+                {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "overheat"}]}
+            ]
+        },
+        "plasma_cannon": {
+            "name": "Plasma Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+            ]
+        },
+        "twin_plasma_cannon": {
+            "name": "Twin Plasma Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+            ]
+        },
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24},
         "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 4, "damage": 2},
         "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 2, "damage": 3},
-        
         "combi_flamer": {
             "name": "Combi-flamer",
             "profiles": [{"name": "Flamer", "attacks": 6, "short": 6, "medium": 12, "rules": ["flame"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24}]
@@ -202,13 +219,7 @@
         "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
         "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
-        "flame": {
-            "name": "Flame",
-            "description": "This weapon ignores cover bonuses.",
-            "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}
-            ]
-        },
+        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
@@ -242,9 +253,7 @@
             "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
             "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
         },
-        "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 9 or 10.", "effects": [
-            {"type": "dangerous", "value": 1, "frequency": 2}
-        ]},
+        "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 9 or 10.", "effects": [{"type": "dangerous", "value": 1, "frequency": 2}]},
         "repair": {
             "name": "Repair",
             "inputs": ["x"],
@@ -316,7 +325,12 @@
             "effects": [{"type": "alterWeapon", "statName": "damage", "value": 1, "frequency": 5}]
         },
         "heavy": {"name": "Heavy", "description": "This weapon suffers -1 to hit if the firer moved this turn."},
-        "poison": {"name": "Poison", "inputs": ["x"], "description": "Models taking saves from this weapon must take X saves instead of 1.", "effects": [{"type": "freeHits", "value": "x"}]},
+        "poison": {
+            "name": "Poison",
+            "inputs": ["x"],
+            "description": "Successful hit rolls of 1 or 2 with this weapon cause X hits instead of 1.",
+            "effects": [{"type": "freeHits", "value": "x", "frequency": 2}]
+        },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "armored": {
             "name": "Vulnerable",
