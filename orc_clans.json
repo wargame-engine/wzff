@@ -1287,7 +1287,7 @@
             "description": "This model and its unit get +2 Defense.",
             "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]
         },
-        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to their Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]},
+        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to its Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]},
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",

@@ -103,7 +103,10 @@
         "flamethrower": {"name": "Flamethrower", "attacks": 6, "short": 6, "medium": 12, "rules": ["flame"]},
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 3, "short": 6, "medium": 12, "rules": ["flame"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]},
-        "light_machinegun": {"name": "Light Machingun", "attacks": 3, "short": 18, "medium": 36},
+        "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36},
+        "laser_machinegun": {"name": "Laser Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
+        "strike_missiles": {"name": "Strike Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 3},
+        "rocket_pod": {"name": "Rocket Pod", "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
         "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36},
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
@@ -176,6 +179,8 @@
             ]
         },
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 9, "medium": 18},
+        "heavy_defense_rifle": {"name": "Heavy Defense Rifle", "attacks": 1, "short": 9, "ap": 1, "medium": 18},
+        "heavy_pistol": {"name": "Heavy Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1},
         "daemon_sword": {"name": "Daemon Sword", "attacks": 6, "short": "Melee", "ap": 3},
         "daemon_axe": {"name": "Daemon Axe", "attacks": 5, "short": "Melee", "ap": 4},
         "daemon_claws": {"name": "Daemon Claws", "attacks": 9, "short": "Melee"},
@@ -364,6 +369,10 @@
                 {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"},
                 {"type": "alterStat", "statName": "movement", "frequency": 5, "value": 10}
             ]
+        },
+        "hover_mode": {
+            "name": "Hover Mode",
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, it loses its -1 to hit, but is not requried to make a move when activated."
         }
     }
 }

@@ -1140,7 +1140,7 @@
             ]
         },
         "psychic_marine_squad": {
-            "name": "Psychic Squad",
+            "name": "Psychic Marines",
             "description": "Marines trained to hunt demons and adept in psychic powers.",
             "min": 5,
             "max": 10,
@@ -1186,7 +1186,7 @@
             ]
         },
         "purge_squad": {
-            "name": "Purge Squad",
+            "name": "Purge Marines",
             "description": "Marines trained to hunt demons with heavy psychic weapons.",
             "min": 5,
             "max": 10,
@@ -1354,6 +1354,117 @@
                     "max": 1
                 }
             ]
+        },
+        "stormtrooper_commander": {
+            "name": "Stormtrooper Commander",
+            "description": "Foot infantry of the human inquisition.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "subfactions": ["psychic_marines"],
+            "rules": [
+                "commander_field_orders"
+            ],
+            "models": [
+                {
+                    "name": "Stormtrooper Commander",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "inquisition_stormtroopers": {
+            "name": "Inquisition Stormtroopers",
+            "description": "Foot infantry of the human inquisition.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "subfactions": ["psychic_marines"],
+            "options": [
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}}
+            ],
+            "models": [
+                {
+                    "name": "Stormtrooper Sergeant",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"addRule": ["ward"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Stormtrooper",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
+                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "shred_rifle", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "inquisition_light_gunship": {
+            "name": "Inquisition Light Gunship",
+            "description": "A light gunship with sliding doors for troop transport.",
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
+            "subfactions": ["psychic_marines"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Inquisition Light Gunship",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
+                        {"replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]}, "withWeapon": {"id": "rocket_pod", "count": 2, "mount": ["Front"]}},
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
@@ -1415,6 +1526,26 @@
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 4, "damage": 3, "short": "Melee"}
     },
     "rules": {
+        "field_radio": {
+            "name": "Field Radio",
+            "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Commander rule.",
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 5}]
+        },
+        "commander_field_orders": {
+            "name": "Field Orders (Commander)",
+            "description": "When this unit is activated, choose two of the following bonuses to apply to it and its unit: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20}]
+        },
+        "field_orders": {
+            "name": "Field Orders",
+            "description": "When this unit is activated, choose one of the following bonuses to apply to it and its unit: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "effects": [
+                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 33, "target": "friendly"},
+                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 33, "target": "friendly"},
+                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 33, "target": "friendly"},
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 33, "target": "friendly"}
+            ]
+        },
         "advanced_tactics": {
             "name": "Advanced Tactics",
             "description": "This model and models in his unit gain +3 inch max range when shooting and +3 inches to charges.",
