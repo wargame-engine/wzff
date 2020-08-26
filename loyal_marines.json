@@ -687,6 +687,7 @@
             "description": "Marines armed and armored like walking tanks.",
             "min": 3,
             "max": 6,
+            "keywords": ["Heavy Infantry"],
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
@@ -1478,9 +1479,9 @@
             ]
         },
         "dread_fist": {"name": "Dread Fist", "attacks": 2, "short": "Melee", "ap": 3},
-        "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 4, "short": "Melee", "ap": 2, "rules": ["rending"]},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 2}]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 3}]},
         "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 2},
         "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "short": "Melee", "rules": ["rending"]},
         "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 4, "damage": 3, "short": "Melee"},
@@ -1534,12 +1535,12 @@
         },
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two of the following bonuses to apply to it and its unit: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose two of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
             "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20}]
         },
         "field_orders": {
             "name": "Field Orders",
-            "description": "When this unit is activated, choose one of the following bonuses to apply to it and its unit: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose one of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
             "effects": [
                 {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 33, "target": "friendly"},
                 {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 33, "target": "friendly"},
@@ -1563,13 +1564,13 @@
         },
         "medical_training": {
             "name": "Medical Training",
-            "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
+            "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
         "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "banner_of_justice": {
             "name": "Banner of Justice",
-            "description": "Enemy units within 10\" get -1 courage.",
+            "description": "Enemy units within 6\" get -1 courage.",
             "effects": [{"type": "grantRule", "rule": {"id": "fear", "x": 2}, "target": "enemy", "frequency": 100}]
         },
         "psych_out": {
@@ -1579,12 +1580,12 @@
         },
         "banner_of_wrath": {
             "name": "Banner of Wrath",
-            "description": "This model and its unit gain the Furious special rule.",
+            "description": "This model and friendly Infantry units within 3\" the Furious special rule.",
             "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "frequency": 100}]
         },
         "banner_of_focus": {
             "name": "Banner of Focus",
-            "description": "This model and its unit gain +1 Accuracy.",
+            "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
         },
         "spiked_ram": {
@@ -1596,7 +1597,7 @@
         },
         "firing_drills": {
             "name": "Firing Drills",
-            "description": "This model and its unit gain +1 to hit.",
+            "description": "This model and friendly Infantry units within 3\" gain +1 to hit.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
         },
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
@@ -1714,7 +1715,7 @@
         "time_passage": {
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "name": "Time Passage",
-            "description": "Target friendly unit within 10\" may immediately move by up to 6”.",
+            "description": "Target friendly unit within 12\" may immediately move by up to 6”.",
             "charge": 6
         },
         "lightning_fog": {"subfactions": ["none", "wolf_marines", "alien_hunters"], "name": "Lightning Fog", "description": "Target 2 enemy units within 5\" take 8 automatic hits each.", "charge": 6}

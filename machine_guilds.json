@@ -561,10 +561,10 @@
                     "defense": 10,
                     "reflexes": 5,
                     "wounds": 9,
-                    "weapons": ["eradication_beam"],
+                    "weapons": ["twin_phosphor_cannon"],
                     "options": [
                         {"addWeapon": ["light_machinegun", "taser_arm"]},
-                        {"replaceWeapon": "eradication_beam", "withWeapon": ["twin_phosphor_cannon", "icarus_aa_system", ["neutron_laser", "light_machinegun"]]},
+                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", "icarus_aa_system", ["neutron_laser", "light_machinegun"]]},
                         {"addRule": [{"id": "regeneration", "x": 3, "name": "Repair Protocols"}, {"id": "data_link"}]}
                     ],
                     "rules": [],
@@ -612,8 +612,8 @@
         "heavy_emp_rifle": {"name": "Heavy EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "damage": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
         "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{ "id": "blast", "x": 6}]},
-        "neutron_laser": {"name": "Neutron Laster", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 3},
+        "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{ "id": "blast", "x": 6}]},
+        "neutron_laser": {"name": "Neutron Laster", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 6},
         "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{ "id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 1},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 5, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
@@ -623,7 +623,7 @@
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "phosphor"]},
         "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["phosphor"]},
         "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 6, "short": 18, "medium": 36, "ap": 1, "rules": ["phosphor"]},
-        "icarus_aa_system": {"name": "Icarus AA System", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "damage": 2, "rules": ["anti_air"]}
+        "icarus_aa_system": {"name": "Icarus AA System", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "damage": 2, "rules": ["anti_air"]}
     },
     "rules": {
         "canticles":{

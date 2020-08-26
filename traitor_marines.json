@@ -1128,10 +1128,10 @@
         },
         "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
         "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
-        "war_chant": {"name": "War Chant", "description": "This model and models in his unit gain the Furious keyword.", "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]},
+        "war_chant": {"name": "War Chant", "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.", "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]},
         "traitor_tactics": {
             "name": "Traitor Tactics",
-            "description": "This model and models in his unit gain +3 inch max range when shooting and +3 inches to charges.",
+            "description": "This model and friendly Infantry units within 3\" gain +3 inch max range when shooting and +3 inches to charges.",
             "effects": [{"type": "alterStat", "statName": "movement", "value": 3, "frequency": 50, "target": "friendly"}, {"type": "alterWeapon", "statName": "medium", "value": 3, "frequency": 100, "target": "friendly"}]
         },
         "wings": {

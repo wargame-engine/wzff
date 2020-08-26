@@ -771,7 +771,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
                         {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_armor", {"id": "transport", "x": 10, "name": "Extra Space"}]},
-                        {"addWeapon": "heavy_cannon"},
+                        {"addWeapon": ["heavy_cannon", "cannon", "lightning_cannon"], "limit": 1},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
                     ],
                     "min": 1,
@@ -1187,15 +1187,15 @@
         }
     },
     "weapons": {
-        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "damage": 3},
+        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "damage": 3},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 3},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 2, "damage": 3, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 6}, "rending"]},
         "cannon": {
             "name": "Cannon",
             "profiles": [
-                {"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "damage": 3}
+                {"name": "HE", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 2, "short": 18, "medium": 36, "ap": 2, "damage": 2}
             ]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 1},
@@ -1208,7 +1208,7 @@
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "rules": []},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 2, "rules": []},
-        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 6}]},
+        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 3, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 9, "ap": 2, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
@@ -1284,10 +1284,10 @@
         },
         "energy_field": {
             "name": "Energy Field",
-            "description": "This model and its unit get +2 Defense.",
+            "description": "This model and friendly Infantry units within 3\" get +2 Defense.",
             "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]
         },
-        "war!": {"name": "WAR!", "description": "This model and its unit get +2\" to its Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]},
+        "war!": {"name": "WAR!", "description": "This model and friendly Infantry units within 3\" get +2\" to its Movement.", "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]},
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
@@ -1295,7 +1295,7 @@
         },
         "mad_doctor": {
             "name": "Mad Doctor",
-            "description": "Whenever this model, or a model this unit is in loses a wound, roll a D10. On a 2 or less that wound is not lost.",
+            "description": "Whenever this model, or a friend Infatry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
         },
         "wrecking_ball": {
@@ -1328,7 +1328,7 @@
         },
         "war_banner": {
             "name": "War Banner",
-            "description": "This model and its unit gain +1 Strength.",
+            "description": "This model and friendly Infantry units within 3\" gain +1 Strength.",
             "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "frequency": 100, "target": "friendly"}]
         }
     },

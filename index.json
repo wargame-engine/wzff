@@ -224,7 +224,7 @@
         },
         "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 2.5}]},
         "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
-        "character": {"name": "Character", "description": "This unit may be deployed as part of another unit during deployment."},
+        "character": {"name": "Character", "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). Hits may be assigned to other friendly non-character units of the same type (Infantry, Monster, Vehicle, Biker etc.) within 3\"."},
         "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
@@ -246,7 +246,7 @@
             "inputs": ["x"],
             "effects": [{"type": "transport", "size": "x"}]
         },
-        "sniper": {"name": "Sniper", "description": "This weapon may ignore cover and choose which model is hit."},
+        "sniper": {"name": "Sniper", "description": "This weapon may ignore cover and choose which model is hit. Additionally, these hits may not be reassigned to other friendly units."},
         "teleport": {
             "name": "Teleport",
             "description": "When this model activates, it may first teleport up to X inches in any direction ignoring models any terrain.",
@@ -336,7 +336,7 @@
             "name": "Poison",
             "inputs": ["x"],
             "description": "Successful hit rolls of 1 or 2 with this weapon cause X hits instead of 1.",
-            "effects": [{"type": "freeHits", "value": "x", "frequency": 2}]
+            "effects": [{"type": "poison", "value": "x", "frequency": 2}]
         },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "armored": {

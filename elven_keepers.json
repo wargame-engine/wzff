@@ -280,7 +280,7 @@
     "rules": {
         "graceful_brutality": {
             "name": "Graceful Brutality",
-            "description": "This model and its unit may move up to 3\" after shooting.",
+            "description": "This model and friendly Infantry units within 3\" may move up to 3\" after shooting.",
             "effects": [{"type": "alterStat", "statName": "movement", "value": 3, "target": "friendly", "frequency": 40}]
         }
     },
