@@ -1398,7 +1398,7 @@
             "category": "core",
             "subfactions": ["psychic_marines"],
             "options": [
-                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}}
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}
             ],
             "models": [
                 {
