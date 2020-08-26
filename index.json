@@ -63,10 +63,9 @@
         "grenade_launcher_attachment": {
             "name": "Grenade Launcher Attachment",
             "profiles": [
-                {"name": "Frag", "attacks": 1, "short": 12, "medium": 24, "damage": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "damage": 2, "rules": ["grenade"]}
-            ],
-            "rules": []
+                {"name": "Frag", "attacks": 1, "short": 12, "medium": 24, "damage": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "damage": 2}
+            ]
         },
         "grenade_launcher": {
             "name": "Grenade Launcher",
@@ -271,7 +270,7 @@
         "fearless": {
             "name": "Fearless",
             "description": "This unit requires an extra suppression to take break tests.",
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 5}]
+            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 2.5}]
         },
         "open_topped": {
             "name": "Open-Topped",

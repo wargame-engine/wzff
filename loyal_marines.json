@@ -282,6 +282,9 @@
             "category": "core",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
+            "options": [
+                {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"], "limit": "all"}
+            ],
             "models": [
                 {
                     "name": "Prime Marine Sergeant",
@@ -293,7 +296,6 @@
                     "agility": 6,
                     "wounds": 2,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "pistol"],
-                    "options": [{"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -309,7 +311,6 @@
                     "wounds": 2,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "pistol"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle"], "limit": "all"},
                         {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}
                     ],
                     "rules": [],

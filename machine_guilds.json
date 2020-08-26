@@ -56,7 +56,7 @@
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
                         { "addRule": [{"id": "repair", "x": "3", "name": "Master Machinist"}, {"id": "psychic", "x": "1", "name": "Machine Powers"}, "canticles" ]},
-                        {"addWeapon": ["eradiaction_beam", "combustion_blaster"], "limit": 1},
+                        {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
                     "min": 1,
@@ -138,7 +138,7 @@
                     "wounds": 1,
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
-                        {"addRule": [{"id": "fearless", "name": "Data-Link"}, "heat_scanner"]},
+                        {"addRule": [{"id": "data_link"}, "heat_scanner"]},
                         {"replaceWeapon": "radiation_carbine", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
                         {"replaceWeapon": "ccw", "withWeapon": [{ "id": "ccw", "count": 2 }, "energy_sword", "taser_sword", "emp_sword"], "limit": 1}
                     ],
@@ -181,7 +181,7 @@
                     "wounds": 3,
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
-                        {"addRule": [{"id": "fearless", "name": "Data-Link"}, "canticles", "heat_scanner"]},
+                        {"addRule": [{"id": "data_link"}, "canticles", "heat_scanner"]},
                         {"replaceWeapon": "radiation_carbine", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
                         {"replaceWeapon": "ccw", "withWeapon": [{ "id": "ccw", "count": 2 }, "energy_sword", "taser_sword", "emp_sword"], "limit": 1}
                     ],
@@ -209,7 +209,7 @@
                     "wounds": 1,
                     "weapons": ["rifle", "ccw"],
                     "options": [
-                        {"addRule": [{"id": "fearless", "name": "Data-Link"}, "heat_scanner"]},
+                        {"addRule": [{"id": "data_link"}, "heat_scanner"]},
                         {"replaceWeapon": "rifle", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
                         {"replaceWeapon": "ccw", "withWeapon": [{ "id": "ccw", "count": 2 }, "energy_sword", "taser_sword", "emp_sword"], "limit": 1}
                     ],
@@ -504,7 +504,10 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_machinegun", "count": 2}],
-                    "options": [{"addWeapon": ["twin_aa_light_machinegun"]}],
+                    "options": [
+                        {"addWeapon": ["twin_aa_light_machinegun"]},
+                        {"addRule": {"id": "data_link"}}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -530,7 +533,40 @@
                     "reflexes": 5,
                     "wounds": 9,
                     "weapons": [{"id": "light_machinegun", "count": 2}, "disruption_missiles"],
-                    "options": [{"addWeapon": [["light_machinegun", "energy_cannon"], ["light_machinegun", "iron_cannon"]]}],
+                    "options": [
+                        {"addWeapon": [["light_machinegun", "energy_cannon"], ["light_machinegun", "iron_cannon"]]},
+                        {"addRule": {"id": "data_link"}}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "crawler_tank": {
+            "name": "Crawler Tank",
+            "description": "A tank walking on large robotic legs.",
+            "rules": [{"id": "impact", "x": 6}, "armored", "walker"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Crawler Tank",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": ["eradication_beam"],
+                    "options": [
+                        {"addWeapon": ["light_machinegun", "taser_arm"]},
+                        {"replaceWeapon": "eradication_beam", "withWeapon": ["twin_phosphor_cannon", "icarus_aa_system", ["neutron_laser", "light_machinegun"]]},
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Repair Protocols"}, {"id": "data_link"}]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -567,6 +603,7 @@
             {"name": "Zap", "attacks": 2, "damage": 1, "short": 6, "medium": 12, "rules": ["taser"]}
         ]},
         "taser_sword": {"name": "Taser Sword", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["taser"]},
+        "taser_arm": {"name": "Taser Arm", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["taser"]},
         "emp_sword": {"name": "EMP Sword", "attacks": 2, "damage": 1, "short": "Melee", "rules": ["emp"]},
         "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": ["sniper", "rending"]},
         "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "radiation"]},
@@ -575,14 +612,18 @@
         "heavy_emp_rifle": {"name": "Heavy EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "damage": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
         "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "eradiaction_beam": {"name": "Eradication Beam", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{ "id": "blast", "x": 3}]},
+        "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{ "id": "blast", "x": 6}]},
+        "neutron_laser": {"name": "Neutron Laster", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 3},
+        "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{ "id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 1},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 5, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "phosphor"]},
         "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "radiation"]},
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "emp"]},
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "phosphor"]},
-        "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["phosphor"]}
+        "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["phosphor"]},
+        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 6, "short": 18, "medium": 36, "ap": 1, "rules": ["phosphor"]},
+        "icarus_aa_system": {"name": "Icarus AA System", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "damage": 2, "rules": ["anti_air"]}
     },
     "rules": {
         "canticles":{
@@ -610,6 +651,12 @@
                     "target": "friendly"
                 }
             ]
+        },
+        "data_link": {
+            "name": "Data-Link",
+            "description": "This model gains +1 Courage.",
+            "description_short": "+1 Courage",
+            "effects": [{"type": "alterStat", "statName": "courage", "value": 1}]
         },
         "heat_scanner": {
             "name": "Heat Scanner",
