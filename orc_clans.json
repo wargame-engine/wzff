@@ -1188,7 +1188,7 @@
     },
     "weapons": {
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "damage": 3},
-        "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 6},
+        "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 3},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 2, "damage": 3, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 6}, "rending"]},
         "cannon": {
@@ -1203,7 +1203,7 @@
         "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
         "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 3, "damage": 3},
-        "mega_claw": {"name": "Mega-Claw", "attacks": 2, "short": "Melee", "ap": 4, "damage": 6},
+        "mega_claw": {"name": "Mega-Claw", "attacks": 2, "short": "Melee", "ap": 4, "damage": 4},
         "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 2, "damage": 2},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2, "rules": []},
