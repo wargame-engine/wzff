@@ -62,8 +62,8 @@
         "grenade_launcher_attachment": {
             "name": "Grenade Launcher Attachment",
             "profiles": [                
-                {"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": ["grenade", {"id": "blast", "x": 3}]},
-            {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2, "rules": ["grenade"]}
+                {"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+            {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}
         ]
         },
         "grenade_launcher": {
