@@ -59,15 +59,15 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {
                             "replaceWeapon": "prime_auto_rifle",
                             "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
                         },
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                            "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
                         },
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
@@ -93,15 +93,15 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {
                             "replaceWeapon": "prime_auto_rifle",
                             "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
                         },
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                            "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
                         },
                         {"addRule": ["prime_combat_shield", "firing_drills"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
@@ -128,15 +128,15 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {
                             "replaceWeapon": "prime_auto_rifle",
                             "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
                         },
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                            "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
                         },
                         {"addRule": ["prime_combat_shield", "firing_drills"]}
                     ],
@@ -162,15 +162,15 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "prime_pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {
                             "replaceWeapon": "prime_auto_rifle",
                             "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]
                         },
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 2},
-                            "withWeapon": [{"id": "ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                            "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
                         },
                         {"addRule": ["prime_combat_shield"]},
                         {"addRule": ["banner_of_justice", "banner_of_wrath", "banner_of_focus"], "limit": 1}
@@ -220,7 +220,7 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -244,8 +244,8 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "ccw", "pistol"],
-                    "options": [{"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "pistol"],
+                    "options": [{"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -258,7 +258,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "ccw", "pistol"],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "pistol"],
                     "options": [{"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]}],
                     "rules": [],
                     "min": 4,
@@ -286,7 +286,7 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 2,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "pistol"],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -299,7 +299,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "ccw", "count": 2}, "pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "pistol"],
                     "options": [
                         {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}
                     ],
@@ -339,7 +339,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["prime_chainsword", "at_grenade", "ccw", "prime_pistol"],
+                    "weapons": ["prime_chainsword", "at_grenade", "heavy_ccw", "prime_pistol"],
                     "min": 4,
                     "max": 9
                 }
@@ -362,9 +362,9 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 2,
-                    "weapons": ["prime_pistol", "at_grenade", {"id": "ccw", "count": 3}],
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
                         {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "limit": 1}
                     ],
                     "min": 1,
@@ -378,9 +378,9 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["prime_pistol", "at_grenade", {"id": "ccw", "count": 3}],
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
                         {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
                     ],
                     "min": 4,
@@ -405,7 +405,7 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 2,
-                    "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [],
                     "min": 1,
                     "max": 1
@@ -418,7 +418,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [],
                     "min": 4,
                     "max": 9
@@ -454,7 +454,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["prime_energy_sword", "at_grenade", "ccw", "prime_pistol"],
+                    "weapons": ["prime_energy_sword", "at_grenade", "heavy_ccw", "prime_pistol"],
                     "min": 2,
                     "max": 2
                 }
@@ -479,7 +479,7 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 3,
-                    "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -492,7 +492,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
                     "max": 2
                 }
@@ -517,7 +517,7 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 2,
-                    "weapons": ["heavy_plasma_rifle", {"id": "ccw", "count": 2}, "at_grenade"],
+                    "weapons": ["heavy_plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
                     "options": [{"replaceWeapon": "heavy_plasma_rifle", "withWeapon": ["plasma_rifle", "plasma_assault_rifle"]}],
                     "min": 1,
                     "max": 1
@@ -532,7 +532,7 @@
                     "reflexes": 6,
                     "agility": 6,
                     "wounds": 2,
-                    "weapons": ["heavy_plasma_rifle", {"id": "ccw", "count": 2}, "at_grenade"],
+                    "weapons": ["heavy_plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
                     "options": [{"replaceWeapon": "heavy_plasma_rifle", "withWeapon": ["plasma_auto_rifle", "plasma_assault_rifle"]}],
                     "min": 4,
                     "max": 9
@@ -558,7 +558,7 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 3,
-                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": {"id": "plasma_carbine", "count": 2}, "withWeapon": {"id": "assault_carbine", "count": 2}}],
                     "min": 1,
                     "max": 1
@@ -573,7 +573,7 @@
                     "reflexes": 6,
                     "agility": 6,
                     "wounds": 3,
-                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": {"id": "plasma_carbine", "count": 2}, "withWeapon": {"id": "assault_carbine", "count": 2}, "limit": "all"}],
                     "min": 2,
                     "max": 5
@@ -598,7 +598,7 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["autocannon", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["autocannon", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -611,7 +611,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["autocannon", "at_grenade", {"id": "ccw", "count": 2}],
+                    "weapons": ["autocannon", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
                     "max": 5
                 }
@@ -1343,11 +1343,11 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
                     "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
                         {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
                     ],
                     "rules": [],
@@ -1376,11 +1376,11 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
                     "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
                         {"addRule": ["ward"]}
                     ],
                     "min": 1,
@@ -1395,7 +1395,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "weapons": ["defense_rifle", "frags", "heavy_ccw"],
                     "options": [
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1},
                         {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
