@@ -806,7 +806,7 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    "wounds": 9,
                     "weapons": ["heavy_autocannon"],
                     "options": [
                         {"addRule": [{"id": "spiked_ram"}, {"id": "strider", "name": "Dozer Blade"}]},
@@ -826,7 +826,7 @@
             ]
         },
         "marine_heavy_tank": {
-            "name": "Heavy Asault APC",
+            "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
@@ -836,7 +836,7 @@
             "max": 1,
             "models": [
                 {
-                    "name": "Heavy Asault APC",
+                    "name": "Heavy Assault APC",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,

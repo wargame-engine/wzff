@@ -44,11 +44,11 @@
                     "reflexes": 7,
                     "wounds": 3,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
@@ -76,13 +76,13 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {
                             "replaceWeapon": "pistol",
                             "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "teleport_pistol", "plasma_rifle", "rocket_launcher", "shock_gun"]
                         },
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]},
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
                         {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
                         {"addRule": ["precision_monicle"]},
@@ -100,7 +100,7 @@
                     "defense": 3,
                     "reflexes": 3,
                     "wounds": 1,
-                    "weapons": ["ccw"],
+                    "weapons": ["heavy_ccw"],
                     "rules": [{"id": "repair", "x": 1}],
                     "min": 0,
                     "max": 1
@@ -123,10 +123,10 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine"]},
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -150,13 +150,13 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {
                             "replaceWeapon": "pistol",
                             "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]
                         },
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -181,11 +181,11 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
@@ -214,12 +214,12 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "rules": [],
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 3, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 3, "wounds": 1, "movement": 5, "weapons": ["pistol", "ccw"], "rules": [], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 5, "weapons": ["pistol", "heavy_ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -238,13 +238,13 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 2,
+                    "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
@@ -260,7 +260,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": "pistol", "withWeapon": ["carbine"]}, {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": "1/10"}],
                     "min": 10,
                     "max": 30
@@ -282,13 +282,13 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 2,
+                    "wounds": 1,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
@@ -304,7 +304,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}, "frags"],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine"]},
                         {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
@@ -331,11 +331,11 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
@@ -351,7 +351,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}, "frags"],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "shotgun"]},
                         {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
@@ -376,9 +376,9 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 2,
+                    "wounds": 1,
                     "movement": 5,
-                    "weapons": ["orc_flamethrower", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]}],
                     "min": 0,
                     "max": 1
@@ -392,7 +392,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["orc_flamethrower", {"id": "ccw", "count": 2}, "frags"],
+                    "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"}],
                     "min": 5,
                     "max": 10
@@ -416,10 +416,10 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["boarding_pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"}
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"}
                     ],
                     "rules": [],
                     "min": 0,
@@ -434,9 +434,9 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["boarding_pistol", {"id": "ccw", "count": 3}, "frags"],
+                    "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
                         {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
                     ],
                     "rules": [],
@@ -454,7 +454,7 @@
             "rules": ["furious"],
             "options": [
                 {
-                    "replaceWeapon": {"id": "ccw", "count": 3},
+                    "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                     "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
                 {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
@@ -469,7 +469,7 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -483,7 +483,7 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -552,11 +552,11 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "ccw", "count": 3},
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
@@ -572,7 +572,7 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 3,
                     "max": 12
                 }
@@ -587,7 +587,7 @@
             "keywords": ["Biker"],
             "options": [
                 {
-                    "replaceWeapon": {"id": "ccw", "count": 3},
+                    "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                     "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
                 {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
@@ -603,7 +603,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -616,7 +616,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "ccw", "count": 3}, "frags"],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 2,
                     "max": 8
                 }
@@ -664,7 +664,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 10,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"addWeapon": ["twin_plasma_rifle", "twin_rocket_launcher", "twin_heavy_machinegun"], "limit": 1},
                         {"addWeapon": [{"id": "ultra_saw", "count": 3}, "assault_bomb"], "limit": 1}
@@ -1032,7 +1032,7 @@
                     "reflexes": 4,
                     "wounds": 3,
                     "movement": 3,
-                    "weapons": [{"id": "lightning_cannon"}, {"id": "ccw", "count": 3}],
+                    "weapons": [{"id": "lightning_cannon"}, {"id": "heavy_ccw", "count": 3}],
                     "options": [{"replaceWeapon": {"id": "lightning_cannon"}, "withWeapon": ["smasher_cannon", "tractor_beam", "cannon", "plasma_cannon", "heavy_mortar", "bubble_cannon"]}],
                     "min": 1,
                     "max": 3
