@@ -73,7 +73,7 @@
             "name": "Grenade Launcher",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}]
         },
-        "railgun": {"name": "Railgun", "attacks": 2, "short": 24, "ap": 4, "medium": 48, "damage": 2},
+        "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "damage": 2, "rules": [{"id": "blast", "x": 2}]},
         "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
         "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
