@@ -9,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "furious"],
+            "rules": ["character"],
             "models": [
                 {
                     "name": "Grand Warlord",
@@ -33,7 +33,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "furious"],
+            "rules": ["character"],
             "models": [
                 {
                     "name": "Warlord",
@@ -44,9 +44,9 @@
                     "reflexes": 7,
                     "wounds": 3,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -57,7 +57,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "rules": [], "min": 0, "max": 1}
+                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
             ]
         },
         "mechanic": {
@@ -76,13 +76,16 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {
-                            "replaceWeapon": "pistol",
+                            "replaceWeapon": "heavy_pistol",
                             "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "teleport_pistol", "plasma_rifle", "rocket_launcher", "shock_gun"]
                         },
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]},
+                        {
+                            "replaceWeapon": "heavy_ccw",
+                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                        },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
                         {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
                         {"addRule": ["precision_monicle"]},
@@ -123,12 +126,14 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
+                        {
+                            "replaceWeapon": "heavy_ccw",
+                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                        }
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -150,15 +155,14 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
                         {
-                            "replaceWeapon": "pistol",
-                            "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]
-                        },
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]}
+                            "replaceWeapon": "heavy_ccw",
+                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                        }
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -170,7 +174,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "furious"],
+            "rules": ["character"],
             "models": [
                 {
                     "name": "Shaman",
@@ -181,9 +185,9 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -195,7 +199,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "rules": ["furious"], "min": 0, "max": 1}
+                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
             ]
         },
         "goblin_herd": {
@@ -214,12 +218,11 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-                    "rules": [],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 5, "weapons": ["pistol", "heavy_ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 5, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -228,7 +231,6 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["furious"],
             "options": [{"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}],
             "models": [
                 {
@@ -240,9 +242,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -260,8 +262,11 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["carbine"]}, {"replaceWeapon": "pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": "1/10"}],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": "1/10"}
+                    ],
                     "min": 10,
                     "max": 30
                 }
@@ -273,7 +278,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["furious", "fly", "ambush"],
+            "rules": ["fly", "ambush"],
             "models": [
                 {
                     "name": "Storm Orc Boss",
@@ -284,9 +289,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -304,10 +309,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
                     ],
                     "min": 5,
                     "max": 30
@@ -320,7 +325,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["furious", "stealth", "ambush"],
+            "rules": ["stealth", "ambush"],
             "models": [
                 {
                     "name": "Commando Orc Boss",
@@ -331,9 +336,9 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -351,10 +356,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "shotgun"]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "shotgun"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
                     ],
                     "min": 5,
                     "max": 15
@@ -421,7 +426,6 @@
                         {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"},
                         {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"}
                     ],
-                    "rules": [],
                     "min": 0,
                     "max": 1
                 },
@@ -439,7 +443,6 @@
                         {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
                         {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
                     ],
-                    "rules": [],
                     "min": 5,
                     "max": 10
                 }
@@ -451,13 +454,12 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": ["furious"],
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                     "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
-                {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
+                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
             "models": [
                 {
@@ -469,8 +471,7 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-                    "rules": [],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -483,8 +484,7 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
-                    "rules": [],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 4,
                     "max": 9
                 }
@@ -496,7 +496,6 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["furious"],
             "options": [
                 {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
                 {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -513,7 +512,6 @@
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 },
@@ -527,7 +525,6 @@
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
-                    "rules": [],
                     "min": 2,
                     "max": 10
                 }
@@ -540,7 +537,7 @@
             "max": 1,
             "category": "strike",
             "keywords": ["Biker"],
-            "rules": ["furious", {"id": "impact", "x": 1}],
+            "rules": [{"id": "impact", "x": 1}],
             "options": [{"addWeapon": ["twin_carbine", "twin_mini_mg"], "limit": 1}],
             "models": [
                 {
@@ -552,9 +549,9 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
@@ -572,7 +569,7 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 3,
                     "max": 12
                 }
@@ -590,9 +587,9 @@
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                     "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
-                {"replaceWeapon": "pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
+                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
-            "rules": ["furious", {"id": "impact", "x": 1}],
+            "rules": [{"id": "impact", "x": 1}],
             "models": [
                 {
                     "name": "Boss Biker Leader",
@@ -603,7 +600,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 8,
-                    "weapons": ["pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -616,7 +613,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 8,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 2,
                     "max": 8
                 }
@@ -629,7 +626,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": ["character", "furious", {"id": "impact", "x": 3}, "relentless"],
+            "rules": ["character", {"id": "impact", "x": 3}, "relentless"],
             "models": [
                 {
                     "name": "Boss Trike",
@@ -653,7 +650,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["furious", "fly", {"id": "impact", "x": 3}],
+            "rules": ["fly", {"id": "impact", "x": 3}],
             "models": [
                 {
                     "name": "Orc Minicopter",
@@ -664,7 +661,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "movement": 10,
-                    "weapons": ["pistol", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"addWeapon": ["twin_plasma_rifle", "twin_rocket_launcher", "twin_heavy_machinegun"], "limit": 1},
                         {"addWeapon": [{"id": "ultra_saw", "count": 3}, "assault_bomb"], "limit": 1}
@@ -1202,7 +1199,7 @@
         "twin_teleport_rifle": {"name": "Twin Teleport Rifle", "attacks": 2, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
         "boarding_pistol": {"name": "Boarding Pistol", "attacks": 3, "short": 6, "ap": 2, "medium": 12},
         "boarding_gun": {"name": "Boarding Gun", "attacks": 3, "short": 12, "ap": 4, "medium": 24},
-        "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap":6},
+        "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
         "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 5}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
@@ -1235,7 +1232,7 @@
         "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
         "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "damage": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
         "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
-        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "pistol"]},
+        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "heavy_pistol"]},
         "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "damage": 1, "short": 6, "medium": 12, "rules": ["flame", "assault"]},
         "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "damage": 4, "short": "Melee"},
         "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "damage": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
@@ -1330,10 +1327,7 @@
         "teleport": {"name": "Teleport", "description": "Target friendly unit within 10” may immediately move by up to 10\".", "charge": 6},
         "psychic_vomit": {"name": "Psychic Vomit", "description": "Target enemy unit within 12\" takes 4 automatic hits with AP 2.", "charge": 6}
     },
-    "relics": [
-        {"rule": "biggest_boss", "flavor": "The biggest boss man."},
-        {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."}
-    ],
+    "relics": [{"rule": "biggest_boss", "flavor": "The biggest boss man."}, {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."}],
     "strategies": {
         "war!": {"name": "WAR!", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
         "group_up": {
@@ -1354,7 +1348,7 @@
         },
         "goblin_shield": {
             "name": "Goblin Shield",
-            "description": "Use after an Infantry unit has been hit by a ranged weapon. Until the end of the round, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly Goblin Herd unit within 5\" of it, and the Goblin Herd unit is closer to the attacking model than the target unit. On an 8 or less one model of your choice in that Goblin Herd unit is slain and the hit is cancelled.",
+            "description": "Use after an Infantry unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 5\" of it, and the Goblin Herd unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
             "cost": 2
         },
         "never_surrender": {

@@ -22,7 +22,12 @@
     },
     "relics": [{"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."}],
     "powers": {
-        "blast": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 automatic hits with AP 1.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 8}
+        "blast": {
+            "name": "Shock Wave",
+            "description": "Target enemy unit within 24\" takes 3 hits with AP 3.",
+            "flavor": "This enemy is hit by a single blast of shock.",
+            "effects": [{"weapon": "power_blast"}]
+        }
     },
     "strategies": {
         "divine_intervention": {
@@ -51,6 +56,7 @@
         }
     },
     "weapons": {
+        "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenade": {
             "name": "Grenades",
@@ -61,21 +67,15 @@
         },
         "grenade_launcher_attachment": {
             "name": "Grenade Launcher Attachment",
-            "profiles": [                
-                {"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-            {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}
-        ]
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}]
         },
         "grenade_launcher": {
             "name": "Grenade Launcher",
-            "profiles": [
-                {"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-            {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}
-                ]
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "damage": 2}]
         },
         "railgun": {"name": "Railgun", "attacks": 2, "short": 24, "ap": 4, "medium": 48, "damage": 2},
-        "ccw": {"name": "Unarmed (Melee)", "attacks": 1, "short": "Melee"},
-        "heavy_ccw": {"name": "Improvised (Melee)", "attacks": 1, "ap": 1, "short": "Melee"},
+        "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
+        "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
@@ -173,9 +173,7 @@
         "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "damage": 2},
-        "battle_cannon": {
-            "name": "HE", "attacks": 1, "short": 30, "medium": 48, "ap": 6,"rules": [{"id": "blast", "x": 3}], "damage": 2
-        },
+        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "short": 30, "medium": 48, "long": 50, "rules": [{"id": "blast", "x": 6}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24},
         "heavy_defense_rifle": {"name": "Heavy Defense Rifle", "attacks": 1, "short": 12, "ap": 1, "medium": 24},
         "heavy_pistol": {"name": "Heavy Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1},
@@ -221,17 +219,17 @@
             ]
         },
         "dread_fist": {"name": "Dread Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
-        "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]},
+        "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 2, "short": "Melee"},
         "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 4, "short": "Melee", "ap": 6, "rules": ["rending"]},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "poison", "x": 3}]},
-        "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "resist", "x": 1}]},
+        "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3, "damage": 2},
         "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "ap": 2, "short": "Melee"},
         "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"},
         "incinerator": {"name": "Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
         "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "damage": 2, "rules": ["flame"]},
         "psychic_silencer": {"name": "Psychic Silencer", "attacks": 6, "short": 12, "medium": 24, "ap": 1, "damage": 2},
         "gatling_psychic_silencer": {"name": "Gatling Psychic Silencer", "attacks": 12, "short": 12, "medium": 24},
-        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}] },
+        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "damage": 2, "rules": [{"id": "blast", "x": 6}]},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48, "ap": 1},
         "heavy_plasma_cannon": {
@@ -264,27 +262,27 @@
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["pistol"]},
         "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 1},
-        "prime_chainsword": {"name": "Prime Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
+        "prime_chainsword": {"name": "Prime Chainsword", "attacks": 3, "ap": 1, "short": "Melee"},
         "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault", "fusion"]},
         "heavy_plasma_rifle": {
             "name": "Heavy Plasma Rifle",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 2, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 5},
+                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}]}
             ]
         },
         "plasma_assault_rifle": {
             "name": "Plasma Assault Rifle",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, {"id": "assault"}]}
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "assault"}]},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "assault"}]}
             ]
         },
         "plasma_carbine": {
             "name": "Plasma Carbine",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, {"id": "assault"}]}
+                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": [{"id": "assault"}]},
+                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "assault"}]}
             ]
         },
         "assault_carbine": {"name": "Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2},
@@ -299,7 +297,7 @@
     },
     "rules": {
         "legend_wounds": {
-            "name": "Tough as Nails",
+            "name": "Resilient",
             "hidden": true,
             "description_short": "Wounds +2",
             "description": "This model gets +2 Wounds.",
@@ -309,9 +307,18 @@
         "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
         "character": {
             "name": "Character",
-            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). Hits may be assigned to other friendly non-character units of the same type (Infantry, Monster, Vehicle, Biker etc.) within 3\"."
+            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). It may not be targeted while another friendly non-character unit of the same type (Infantry, Monster, Vehicle, Biker etc.) is within 3\". Friendly units within 3\" may use this model's Courage and Reflex value."
         },
-        "blast": {"name": "Blast", "inputs": ["x"], "description": "Multiply hits from this weapon by X."},
+        "blast": {
+            "name": "Blast",
+            "inputs": ["x"],
+            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6+ models or Accuracy +2 if the target has 11+ models.",
+            "effects": [
+                {"type": "blast", "value": "x"},
+                {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5},
+                {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}
+            ]
+        },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
@@ -332,7 +339,11 @@
             "inputs": ["x"],
             "effects": [{"type": "transport", "size": "x"}]
         },
-        "sniper": {"name": "Sniper", "description": "This weapon may ignore cover and choose which model is hit. Additionally, these hits may not be reassigned to other friendly units."},
+        "sniper": {
+            "name": "Sniper",
+            "description": "This weapon may ignore the Long Range penalty. You may choose which model is hit and these hits may not be reassigned to other friendly units.",
+            "effects": [{"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
+        },
         "teleport": {
             "name": "Teleport",
             "description": "When this model activates, it may first teleport up to X inches in any direction ignoring models any terrain.",
@@ -358,6 +369,12 @@
             "description": "This unit requires an extra suppression to take break tests.",
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 2.5}]
         },
+        "resist": {
+            "name": "Protect",
+            "inputs": ["x"],
+            "description": "This unit gets +X to its Resist rolls.",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": "x"}]
+        },
         "open_topped": {
             "name": "Open-Topped",
             "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."
@@ -374,7 +391,7 @@
                 {"type": "alterStat", "statName": "movement", "value": -1}
             ]
         },
-        "fear": {"name": "Fear", "description": "Enemy units within 10\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 15, "target": "enemy"}]},
+        "fear": {"name": "Fear", "description": "Enemy units within 12\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 15, "target": "enemy"}]},
         "fly": {"name": "Fly", "description": "This model may ignore terrain and other models without the Fly special rule when moving.", "effects": [{"type": "ignoreTerrain"}]},
         "ambush": {
             "name": "Ambush",
@@ -397,6 +414,7 @@
             "description": "Roll a die when this model loses a wound. On a value of X or less that wound is not lost.",
             "effects": [{"type": "regeneration", "frequency": "x"}]
         },
+        "invulnerable": {"name": "Invulnerable", "inputs": ["x"], "description": "This model may re-roll X Resist tests per attack.", "effects": [{"type": "invulnerable", "value": "x"}]},
         "furious": {
             "name": "Furious",
             "description": "When this model charges, it gets one bonus attack with any melee weapon.",
