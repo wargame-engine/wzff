@@ -13,9 +13,12 @@
             "background": "Loyal Marines focused on counter-attack tactics specialize in brutal counter-assaults in close combat.",
             "restricted": true
         },
-        "psychic_marines": {"name": "Psychic Focus", "id": "psychic_marines", "color": "#989898", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
+        "psychic_marines": {"name": "Psychic Focus", "id": "psychic_marines", "color": "#C0C0C0", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
         "alien_hunters": {"name": "Alien Hunter Focus", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true},
-        "siege_masters": {"name": "Siege Focus", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."}
+        "siege_masters": {"name": "Siege Focus", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
+        "fire_masters": {"name": "Flame Focus", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
+        "tactical_masters": {"name": "Tactical Focus", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
+        "mobility_masters": {"name": "Mobility Focus", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."}
     },
     "units": {
         "grav_captin": {
@@ -650,7 +653,7 @@
                     "movement": 4,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 4,
+                    "wounds": 3,
                     "weapons": [{"id": "heavy_fist", "count": 2}, {"id": "heavy_machinegun", "count": 2}],
                     "options": [
                         {"addWeapon": [{"id": "fist_carbine", "count": 2}, {"id": "missile_launcher", "count": 2}], "limit": 1},

@@ -21,7 +21,6 @@
                     "wounds": 6,
                     "movement": 4,
                     "weapons": ["super_carbine", "frags", "super_claw"],
-                    "options": [{"addRule": ["war!", "war_banner"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -51,8 +50,7 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
-                        {"addRule": ["war!"]}
+                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -411,21 +409,21 @@
             "max": 1,
             "category": "specialist",
             "rules": ["relentless"],
+            "options": [
+                {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
+                {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Pirate Orc Boss",
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 7,
                     "reflexes": 6,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"},
-                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"}
-                    ],
                     "min": 0,
                     "max": 1
                 },
@@ -434,15 +432,11 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 5,
+                    "defense": 7,
                     "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
-                        {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
-                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -1160,9 +1154,9 @@
                     "options": [
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 2, "mount": ["Front"]}], "limit": 1},
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2}, {"id": "rocket_launcher", "count": 2}], "limit": 1},
+                        {"replaceWeapon": {"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "deathstorm_minigun", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "plasma_rifle", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}, {"id": "relentless", "name": "Shoot Shoot Shoot!"}]},
-                        {"replaceWeapon": {"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "deathstorm_minigun", "mount": ["Front"]}]}
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}, {"id": "relentless", "name": "Shoot Shoot Shoot!"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1320,14 +1314,19 @@
         }
     },
     "powers": {
-        "warpath": {"name": "Warpath", "description": "Target friendly unit within 10\" gets Stealth next time it’s shot at.", "charge": 8},
-        "crackling_bolt": {"name": "Crackling Bolt", "description": "Target enemy unit within 5\" must take a dangerous terrain test.", "charge": 8},
-        "headbang": {"name": "Headbang", "description": "Target friendly unit within 10\" gets Rending in melee next time it fights.", "charge": 7},
-        "deathbolt": {"name": "Death Bolt", "description": "Target enemy unit within 10\" takes 1 hit with AP 4 and damage 3.", "charge": 7},
-        "teleport": {"name": "Teleport", "description": "Target friendly unit within 10” may immediately move by up to 10\".", "charge": 6},
+        "warpath": {"name": "Warpath", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 generate an additional attack.", "charge": 8},
+        "crackling_bolt": {"name": "Crackling Bolt", "description": "Target enemy unit within 6\" takes 4 hits with AP 1.", "charge": 8},
+        "headbang": {"name": "Headbang", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 gain +2 AP.", "charge": 7},
+        "deathbolt": {"name": "Death Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 4 and damage 3.", "charge": 7},
+        "teleport": {"name": "Jump Teleport", "description": "Target friendly unit within 12\" may immediately move up to 12\" ignoring models and terrain.", "charge": 6},
         "psychic_vomit": {"name": "Psychic Vomit", "description": "Target enemy unit within 12\" takes 4 automatic hits with AP 2.", "charge": 6}
     },
-    "relics": [{"rule": "biggest_boss", "flavor": "The biggest boss man."}, {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."}],
+    "relics": [
+        {"rule": "biggest_boss", "flavor": "The biggest boss man."},
+        {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."},
+        {"rule": "war!", "flavor": "A true warlord knows how to inspire and this war chant does this and more."},
+        {"rule" : "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had."}
+    ],
     "strategies": {
         "war!": {"name": "WAR!", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
         "group_up": {
