@@ -174,7 +174,7 @@
         "autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_aa_autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "damage": 2},
-        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "short": 30, "medium": 48, "long": 50, "rules": [{"id": "blast", "x": 6}]},
+        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "damage": 2, "rules": [{"id": "blast", "x": 6}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24},
         "heavy_defense_rifle": {"name": "Heavy Defense Rifle", "attacks": 1, "short": 12, "ap": 1, "medium": 24},
         "heavy_pistol": {"name": "Heavy Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1},
