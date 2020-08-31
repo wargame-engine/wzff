@@ -1232,7 +1232,7 @@
         "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
         "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "damage": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
         "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
-        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "heavy_pistol"]},
+        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "pistol"]},
         "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "damage": 1, "short": 6, "medium": 12, "rules": ["flame", "assault"]},
         "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "damage": 4, "short": "Melee"},
         "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "damage": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
