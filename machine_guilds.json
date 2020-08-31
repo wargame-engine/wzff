@@ -283,6 +283,7 @@
             "max": 1,
             "category": "specialist",
             "rules": ["agile"],
+            "options": [{"replaceWeapon": ["sonic_razor", {"id": "claws", "count": 2}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
                 {
                     "name": "Stalker Leader",
@@ -293,8 +294,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["sonic_razor", "claws"],
-                    "options": [{"replaceWeapon": ["sonic_razor", "claws"], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+                    "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -307,8 +307,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "wounds": 2,
-                    "weapons": ["sonic_razor", "claws"],
-                    "options": [{"replaceWeapon": ["sonic_razor", "claws"], "withWeapon": {"id": "sonic_blade", "count": 2}}],
+                    "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -321,6 +320,7 @@
             "max": 1,
             "category": "strike",
             "rules": ["ambush", "fly"],
+            "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Sky Stalker Leader",
@@ -332,7 +332,6 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["taser_sword", "phosphor_pistol"],
-                    "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
                     "min": 1,
                     "max": 1
                 },
@@ -346,7 +345,6 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "phosphor_carbine", "withWeapon": {"id": "blaster_carbine"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
                     "min": 4,
                     "max": 9
                 }
@@ -359,6 +357,7 @@
             "max": 1,
             "category": "specialist",
             "rules": ["agile", "scout", "stealth"],
+            "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
                 {
                     "name": "Infiltrator Leader",
@@ -370,7 +369,6 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["blaster_smg", "taser_sword"],
-                    "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
                     "min": 1,
                     "max": 1
                 },
@@ -384,7 +382,6 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["blaster_smg", "taser_sword"],
-                    "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
                     "min": 4,
                     "max": 9
                 }
@@ -687,7 +684,7 @@
         "raider_sabre": {"name": "Raider Sabre", "attacks": 2, "ap": 1, "short": "Melee"},
         "blaster_smg": {"name": "Blaster SMG", "attacks": 3, "short": 6, "medium": 12, "rules": ["pistol"]},
         "phosphor_breath": {"name": "Phosphor Breath", "attacks": 3, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
-        "blaster_carbine": {"name": "Blaster Carbine", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
+        "blaster_carbine": {"name": "Blaster Carbine", "attacks": 2, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
         "axe_halberd": {"name": "Axe-Halberd", "attacks": 2, "ap": 3, "damage": 2, "short": "Melee"},
         "staff": {"name": "Staff", "attacks": 3, "ap": 2, "short": "Melee"},
         "shock_staff": {"name": "Shock Staff", "attacks": 2, "ap": 3, "short": "Melee"},
