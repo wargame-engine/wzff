@@ -219,8 +219,8 @@
                     "reflexes": 7,
                     "agility": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "pistol"],
-                    "options": [{"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "pistol"]]}],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "marine_pistol"],
+                    "options": [{"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "marine_pistol"]]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -233,7 +233,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "pistol"],
+                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "marine_pistol"],
                     "options": [{"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]}],
                     "rules": [],
                     "min": 4,
@@ -259,7 +259,7 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 2,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -272,7 +272,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "pistol"],
+                    "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
                     "options": [{"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}],
                     "rules": [],
                     "min": 4,
@@ -1038,7 +1038,7 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "pistol"],
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "marine_pistol"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 4},
@@ -1071,7 +1071,7 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}, "pistol"],
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}, "marine_pistol"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
