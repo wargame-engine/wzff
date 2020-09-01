@@ -2,6 +2,9 @@
     "id": "orc_clans",
     "name": "Orc Clans",
     "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
+    "subfactions": {
+        "goblin_army": {"name": "Goblin Focus", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true}
+    },
     "units": {
         "grand_warlord": {
             "name": "Grand Warlord",
@@ -200,9 +203,100 @@
                 {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
             ]
         },
+        "goblin_leader": {
+            "name": "Goblin Leader",
+            "subfactions": ["goblin_army"],
+            "description": "A strange orc with psychic powers.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [{"id": "invulnerable", "x": 1}],
+            "models": [{"name": "Goblin Leader", "courage": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
+        },
+        "goblin_doctor": {
+            "name": "Goblin Doctor",
+            "description": "A Goblin with a knack for fixing up the wounded.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["goblin_army"],
+            "category": "specialist",
+            "rules": ["character", "mad_doctor"],
+            "models": [
+                {
+                    "name": "Goblin Doctor",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 5,
+                    "weapons": ["heavy_pistol", "ccw"],
+                    "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "goblin_mechanic": {
+            "name": "Goblin Mechanic",
+            "description": "A Goblin with a knack for scrapping and fixing things.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["goblin_army"],
+            "category": "specialist",
+            "rules": ["character"],
+            "models": [
+                {
+                    "name": "Goblin Mechanic",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 5,
+                    "weapons": ["heavy_pistol", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol", "teleport_pistol"]},
+                        {"addRule": ["heavy_armor"]},
+                        {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
+                        {"addRule": ["energy_field"]}
+                    ],
+                    "rules": [{"id": "repair", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "goblin_veterans": {
+            "name": "Goblin Veterans",
+            "subfactions": ["goblin_army"],
+            "description": "A herd of veteran goblin fighters.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Goblin Veteran",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "movement": 5,
+                    "weapons": ["heavy_pistol", "ccw"],
+                    "options": [{"addRule": ["heavy_armor"]}],
+                    "min": 10,
+                    "max": 20
+                }
+            ]
+        },
         "goblin_herd": {
             "name": "Goblin Herd",
-            "description": "A strange orc with psychic powers.",
+            "description": "A herd of lowly goblins.",
+            "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 1,
             "category": "core",
@@ -793,6 +887,7 @@
             "name": "Goblin Tanks",
             "description": "A small tank squadron built and crewed by goblins.",
             "category": "heavy",
+            "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 3,
             "rules": [{"id": "impact", "x": 3}, "armored"],
@@ -813,12 +908,13 @@
                 }
             ]
         },
-		"goblin_mega_tank": {
+        "goblin_mega_tank": {
             "name": "Goblin Mega Tank",
             "description": "A huge tank built and crewed by goblins.",
             "category": "heavy",
             "min": 1,
             "max": 1,
+            "subfactions": ["none", "goblin_army"],
             "rules": [{"id": "impact", "x": 6}, "armored"],
             "models": [
                 {
@@ -830,11 +926,18 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "movement": 8,
-                    "weapons": [{"count": 2, "id": "twin_heavy_machinegun"},{"count": 3, "id": "heavy_machinegun"}],
-                    "options": [{"replaceWeapon": {"id": "twin_heavy_machinegun"}, "withWeapon": [{"id":"heavy_flamethrower", "count":2}, {"id":"rocket_launcher", "count":2}, {"id":"goblin_bazooka", "count":2},{"id":"plasma_cannon", "count":2},"plasma_cannon"]},
-					{"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": [{"id":"heavy_flamethrower", "count":1}, {"id":"rocket_launcher", "count":1}, {"id":"goblin_bazooka", "count":1},{"id":"plasma_cannon", "count":1},"plasma_cannon"]},
-					{"addRule": ["wrecking_ball"]}
-					],
+                    "weapons": [{"count": 2, "id": "twin_heavy_machinegun"}, {"count": 3, "id": "heavy_machinegun"}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "twin_heavy_machinegun"},
+                            "withWeapon": [{"id": "heavy_flamethrower", "count": 2}, {"id": "rocket_launcher", "count": 2}, {"id": "goblin_bazooka", "count": 2}, {"id": "plasma_cannon", "count": 2}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun"},
+                            "withWeapon": [{"id": "heavy_flamethrower", "count": 1}, {"id": "rocket_launcher", "count": 1}, {"id": "goblin_bazooka", "count": 1}, {"id": "plasma_cannon", "count": 1}]
+                        },
+                        {"addRule": ["wrecking_ball"]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -844,6 +947,7 @@
             "name": "Goblin Walkers",
             "description": "A small walker group built and crewed by goblins.",
             "category": "heavy",
+            "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 3,
             "rules": ["armored"],
@@ -1038,6 +1142,7 @@
             "name": "Goblin Artillery",
             "description": "A battery of small artillery guns built by goblins.",
             "category": "heavy",
+            "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 3,
             "models": [
@@ -1050,7 +1155,7 @@
                     "reflexes": 4,
                     "wounds": 3,
                     "movement": 3,
-                    "weapons": [{"id": "lightning_cannon"}, {"id": "heavy_ccw", "count": 3}],
+                    "weapons": [{"id": "lightning_cannon"}, {"id": "ccw", "count": 3}],
                     "options": [{"replaceWeapon": {"id": "lightning_cannon"}, "withWeapon": ["smasher_cannon", "tractor_beam", "cannon", "plasma_cannon", "heavy_mortar", "bubble_cannon"]}],
                     "min": 1,
                     "max": 3
@@ -1352,22 +1457,25 @@
         {"rule": "biggest_boss", "flavor": "The biggest boss man."},
         {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."},
         {"rule": "war!", "flavor": "A true warlord knows how to inspire and this war chant does this and more."},
-        {"rule" : "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had."}
+        {"rule": "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had."}
     ],
     "strategies": {
         "war!": {"name": "WAR!", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
         "group_up": {
+            "subfactions": ["none", "goblin_army"],
             "name": "Group Up",
             "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
             "cost": 1
         },
         "full_speed": {"name": "Full Speed", "description": "Use when a Vehicle is declared to charge an enemy unit. That Vehicle gains +3 Impact.", "cost": 1},
         "scrap_armor": {
+            "subfactions": ["none", "goblin_army"],
             "name": "Scrap Armor",
             "description": "Use when activating an Infantry unit. If that unit ends its activation within 3\" of a destroyed vehicle it may choose not to shoot or fight but gain +1 Resist (to a maximum of 7) for the rest of the battle.",
             "cost": 1
         },
         "grab_on": {
+            "subfactions": ["none", "goblin_army"],
             "name": "Grab On",
             "description": "Use when a Vehicle with the Transport keyword is activated. One friendly infantry unit within 3\" may be picked up and moved within 3\" of the vehicle's final location.",
             "cost": 2
@@ -1378,6 +1486,7 @@
             "cost": 2
         },
         "never_surrender": {
+            "subfactions": ["none", "goblin_army"],
             "name": "Never Surrender",
             "description": "Use after a Character has been killed. That unit may shoot or fight if it has not yet activated, after which it is removed.",
             "cost": 2
@@ -1386,6 +1495,27 @@
             "name": "Force Field Projector",
             "description": "Use at the start of the round. Choose a unit with the 'Force Field' rule. For the rest of the round, that force field applies to friendly units within 5\".",
             "cost": 3
+        },
+        "spread_out": {
+            "subfactions": ["goblin_army"],
+            "name": "Spread Out",
+            "description": "Use before activating an Infantry unit. That unit may be split into two units of no less than 5 models.",
+            "flavor": "Goblins often split off into small raiding units in order to cover more ground.",
+            "cost": 1
+        },
+        "tune_up": {
+            "subfactions": ["goblin_army"],
+            "name": "Tune Up",
+            "description": "Use before shooting with a unit. It gains +3\" maximum range with all weapons.",
+            "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
+            "cost": 1
+        },
+        "deadly_in_numbers": {
+            "subfactions": ["goblin_army"],
+            "name": "Deadly In Numbers",
+            "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
+            "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
+            "cost": 2
         }
     }
 }
