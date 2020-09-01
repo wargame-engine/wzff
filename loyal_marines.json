@@ -1486,7 +1486,7 @@
         },
         "firing_drills": {
             "name": "Firing Drills",
-            "description": "This model and friendly Infantry units within 3\" gain +1 to hit.",
+            "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
