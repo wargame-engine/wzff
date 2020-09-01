@@ -813,6 +813,33 @@
                 }
             ]
         },
+		"goblin_mega_tank": {
+            "name": "Goblin Mega Tank",
+            "description": "A huge tank built and crewed by goblins.",
+            "category": "heavy",
+            "min": 1,
+            "max": 1,
+            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "models": [
+                {
+                    "name": "Goblin Mega Tank",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "movement": 8,
+                    "weapons": [{"count": 2, "id": "twin_heavy_machinegun"},{"count": 3, "id": "heavy_machinegun"}],
+                    "options": [{"replaceWeapon": {"id": "twin_heavy_machinegun"}, "withWeapon": [{"id":"heavy_flamethrower", "count":2}, {"id":"rocket_launcher", "count":2}, {"id":"goblin_bazooka", "count":2},{"id":"plasma_cannon", "count":2},"plasma_cannon"]},
+					{"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": [{"id":"heavy_flamethrower", "count":1}, {"id":"rocket_launcher", "count":1}, {"id":"goblin_bazooka", "count":1},{"id":"plasma_cannon", "count":1},"plasma_cannon"]},
+					{"addRule": ["wrecking_ball"]}
+					],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "goblin_walker": {
             "name": "Goblin Walkers",
             "description": "A small walker group built and crewed by goblins.",
