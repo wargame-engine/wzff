@@ -11,7 +11,7 @@
             "category": "command",
             "rules": [
                 "character",
-                "strider",
+                "walker",
                 {"id": "regeneration", "x": 3}
             ],
             "keywords": [
@@ -20,18 +20,118 @@
             "models": [
                 {
                     "name": "Tri-Scorpion Lord",
-                    "courage": 8,
-                    "movement": 4,
+                    "courage": 9,
+                    "movement": 5,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["annihiliation_gun", "metal_claws", "reaper_blade"],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "annihilator_overlord": {
+            "name": "Annihilator Overlord",
+            "description": "A high lord with an Annihilator body.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                "hover",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Annihilator Overlord",
+                    "courage": 9,
+                    "movement": 5,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["phase_sword"],
+                    "options": [
+                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "addWeapon": "wrist_arrow"},
+                        {"addRule":"regeneration_orb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "overlord": {
+            "name": "Overlord",
+            "description": "A high lord of the undying machines.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Overlord",
+                    "courage": 9,
+                    "movement": 5,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["phase_sword"],
+                    "options": [
+                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "addWeapon": "wrist_arrow"},
+                        {"addRule":"regeneration_orb"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "lord": {
+            "name": "Lord",
+            "description": "A lord of the undying machines.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Lord",
+                    "courage": 9,
+                    "movement": 5,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "weapons": ["annihiliation_gun", "metal_claws", "reaper_blade"],
+                    "defense": 9,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["phase_sword"],
                     "options": [
-                        { "replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}
+                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "addWeapon": "wrist_arrow"},
+                        {"addRule":"regeneration_orb"}
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -44,7 +144,7 @@
             "max": 6,
             "category": "core",
             "rules": [
-                "strider",
+                "hover",
                 {"id": "regeneration", "x": 3}
             ],
             "keywords": [
@@ -53,12 +153,12 @@
             "models": [
                 {
                     "name": "Machine Swarm",
-                    "courage": 6,
-                    "movement": 5,
+                    "courage": 8,
+                    "movement": 8,
                     "shoot": 3,
-                    "fight": 3,
-                    "defense": 3,
-                    "reflexes": 3,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["feeding_teeth"],
                     "min": 3,
@@ -82,15 +182,14 @@
             "models": [
                 {
                     "name": "Warden",
-                    "courage": 8,
-                    "movement": 4,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 7,
+                    "courage": 9,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
                     "weapons": ["heavy_reaper_rifle", "warden_blade"],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -101,10 +200,9 @@
             "description": "A dimensional being that can take many forms, often regarded as a god of the sky.",
             "min": 1,
             "max": 1,
-            "category": "command",
+            "category": "specialist",
             "rules": [
                 "character",
-                "ambush",
                 "fly",
                 {"id": "psychic", "x": 1}
             ],
@@ -114,11 +212,11 @@
             "models": [
                 {
                     "name": "Dimensional Shard",
-                    "courage": 8,
+                    "courage": 9,
                     "movement": 8,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 7,
+                    "defense": 10,
                     "reflexes": 7,
                     "wounds": 6,
                     "weapons": ["dimensional_strikes"],
@@ -136,6 +234,7 @@
             "description": "A group of machines, bent on reclaiming their land.",
             "min": 1,
             "max": 1,
+            "category": "core",
             "rules": [
                 {"id": "regeneration", "x": 3}
             ],
@@ -146,13 +245,13 @@
                 {
                     "name": "Warrior",
                     "courage": 8,
-                    "movement": 4,
+                    "movement": 5,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["gauss_rifle", "ccw"],
+                    "weapons": ["gauss_rifle", "heavy_ccw"],
                     "options": [
                         { "replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}
                     ],
@@ -167,6 +266,7 @@
             "description": "A group of veteran machines.",
             "min": 1,
             "max": 1,
+            "category": "core",
             "rules": [
                 {"id": "regeneration", "x": 3}
             ],
@@ -177,13 +277,13 @@
                 {
                     "name": "Eternal",
                     "courage": 8,
-                    "movement": 4,
+                    "movement": 5,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 7,
-                    "reflexes": 7,
+                    "defense": 8,
+                    "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["tesla_rifle", "ccw"],
+                    "weapons": ["tesla_rifle", "heavy_ccw"],
                     "options": [
                         { "replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}
                     ],
@@ -195,29 +295,31 @@
         }
     },
     "weapons": {
-        "battle_cannon": {
-            "name": "Battle Cannon",
-            "profiles": [
-                {"name": "HE", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 2, "rules": [{"id": "blast", "x": 5}]},
-                {"name": "AP", "attacks": 1, "short": 30, "medium": 40, "long": 50, "ap": 4, "damage": 3}
-            ]
-        },
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 4},
-        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 6, "short": "Melee", "ap": 2, "damage": 2},
-        "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 1, "short": "Melee", "rules": ["rending"]},
-        "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 10, "medium": 20, "rules": ["rending"]},
-        "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 1, "rules": ["tesla"]},
-        "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 10, "medium": 20, "ap": 2, "damage": 2 },
-        "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 2, "short": 10, "medium": 15, "ap": 1, "damage": 2, "rules": ["rending"]},
-        "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 5, "medium": 10, "ap": 2},
-        "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 1},
-        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 10, "medium": 20, "ap": 2}
+        "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 6, "damage": 2},
+        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5, "damage": 3},
+        "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 3, "short": "Melee"},
+        "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
+        "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
+        "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
+        "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+        "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["rending"]},
+        "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 2},
+        "phase_sword": {"name": "Phase Sword", "attacks": 3, "short": "Melee", "ap": 3},
+        "void_sword": {"name": "Void Sword", "attacks": 4, "short": "Melee", "ap": 2},
+        "void_scythe": {"name": "Void Scythe", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
+        "war_scythe": {"name": "War Scythe", "attacks": 3, "short": "Melee", "ap": 3, "damage": 2},
+        "staff": {"name": "Staff",  "profiles": [
+            {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 2},
+            {"name": "Shoot", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]}
+        ]},
+        "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
+        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2}
     },
     "rules": {
-        "tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits.", "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]}
+        "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]},
+        "regeneration_orb": {"name": "Regeneration Orb", "description": "This unit and friendly Infantry units within 3\" get Regeneration(+1).", "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]}
     },
-    "relics": [],
     "powers": {
         "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 10\" gets -1 to hit in melee next time it fights.", "charge": 8},
         "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 2 automatic hits with AP(2).", "charge": 8},

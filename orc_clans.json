@@ -245,7 +245,7 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": ["character"],
+            "rules": ["character", {"id": "repair", "x": 2}],
             "models": [
                 {
                     "name": "Goblin Mechanic",
@@ -263,7 +263,6 @@
                         {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
                         {"addRule": ["energy_field"]}
                     ],
-                    "rules": [{"id": "repair", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -765,6 +764,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
+            "keywords": ["Vehicle"],
             "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, "open_topped", "armored"],
             "models": [
                 {
@@ -792,6 +792,7 @@
             "description": "A ramshackled helicopter held together only by sheer will.",
             "min": 1,
             "max": 1,
+            "keywords": ["Vehicle", "Aircraft"],
             "category": "transport",
             "rules": [{"id": "transport", "x": 11}, "open_topped", "fly"],
             "models": [
@@ -1394,12 +1395,12 @@
         "energy_field": {
             "name": "Energy Field",
             "description": "This model and friendly Infantry units within 3\" get +2 Defense.",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "frequency": 100, "target": "friendly"}]
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "target": "friendly"}]
         },
         "war!": {
             "name": "WAR!",
-            "description": "This model and friendly Infantry units within 3\" get +2\" to its Movement.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "frequency": 100}]
+            "description": "This model and friendly Infantry units within 3\" get +2\" of Movement.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "biggest_boss": {
             "name": "The Biggest Boss",
@@ -1409,7 +1410,7 @@
         "mad_doctor": {
             "name": "Mad Doctor",
             "description": "Whenever this model, or a friend Infatry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "wrecking_ball": {
             "name": "Wrecking Ball",
@@ -1442,7 +1443,7 @@
         "war_banner": {
             "name": "War Banner",
             "description": "This model and friendly Infantry units within 3\" gain +1 Strength.",
-            "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "frequency": 100, "target": "friendly"}]
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         }
     },
     "powers": {
@@ -1454,10 +1455,10 @@
         "psychic_vomit": {"name": "Psychic Vomit", "description": "Target enemy unit within 12\" takes 4 automatic hits with AP 2.", "charge": 6}
     },
     "relics": [
-        {"rule": "biggest_boss", "flavor": "The biggest boss man."},
-        {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds."},
-        {"rule": "war!", "flavor": "A true warlord knows how to inspire and this war chant does this and more."},
-        {"rule": "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had."}
+        {"rule": "biggest_boss", "flavor": "The biggest boss man.", "filter": {"keywords": ["Infantry"]}},
+        {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds.", "filter": {"keywords": ["Infantry"]}},
+        {"rule": "war!", "flavor": "A true warlord knows how to inspire and this war chant does this and more.", "filter": {"keywords": ["Infantry"]}},
+        {"rule": "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had.", "filter": {"keywords": ["Infantry"]}}
     ],
     "strategies": {
         "war!": {"name": "WAR!", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},

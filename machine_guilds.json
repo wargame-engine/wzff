@@ -743,9 +743,9 @@
             "name": "Canticles",
             "description": "When activated, choose one of the following to apply to this unit and friendly units within 3\". +1 AP or -1 to be hit or hit rolls of 1 or 2 generate an additional attack.",
             "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 33, "target": "friendly"},
-                {"type": "alterWeapon", "statName": "attacks", "value": 1, "frequency": 33, "target": "friendly"},
-                {"type": "grantRule", "rule": "stealth", "frequency": 33, "target": "friendly"}
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
+                {"type": "grantRule", "rule": "relentless", "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
+                {"type": "grantRule", "rule": "stealth", "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
             ]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "effects": [{"type": "alterStat", "statName": "courage", "value": 1}]},

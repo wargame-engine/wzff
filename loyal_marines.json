@@ -1438,8 +1438,8 @@
             "name": "Advanced Tactics",
             "description": "This model and models in its unit gain +3 inch max range when shooting and +3 inches to charges.",
             "effects": [
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 50, "target": "friendly"},
-                {"type": "alterWeapon", "statName": "medium", "value": 3, "frequency": 100, "target": "friendly"}
+                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
+                {"type": "alterWeapon", "statName": "medium", "value": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
             ]
         },
         "combat_master": {
@@ -1454,7 +1454,7 @@
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "frequency": 100}]
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly"}]
         },
         "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "banner_of_justice": {
@@ -1470,12 +1470,12 @@
         "banner_of_wrath": {
             "name": "Banner of Wrath",
             "description": "This model and friendly Infantry units within 3\" the Furious special rule.",
-            "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "frequency": 100}]
+            "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "banner_of_focus": {
             "name": "Banner of Focus",
             "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "spiked_ram": {
             "name": "Spiked Ram",
@@ -1487,7 +1487,7 @@
         "firing_drills": {
             "name": "Firing Drills",
             "description": "This model and friendly Infantry units within 3\" gain +1 to hit.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 100, "target": "friendly"}]
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
         "prime_combat_shield": {
