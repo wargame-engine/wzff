@@ -58,9 +58,9 @@
                     "defense": 10,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["phase_sword"],
+                    "weapons": [{"id":"phase_sword", "count": 3}],
                     "options": [
-                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "replaceWeapon": {"id":"phase_sword", "count": 3}, "withWeapon": ["staff", {"id":"void_sword", "count": 2}, "void_scythe", {"id":"war_scythe", "count": 3}]},
                         { "addWeapon": "wrist_arrow"},
                         {"addRule":"regeneration_orb"}
                     ],
@@ -92,9 +92,9 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["phase_sword"],
+                    "weapons": [{"id":"phase_sword", "count": 3}],
                     "options": [
-                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "replaceWeapon": {"id":"phase_sword", "count": 3}, "withWeapon": ["staff", {"id":"void_sword", "count": 2}, "void_scythe", {"id":"war_scythe", "count": 3}]},
                         { "addWeapon": "wrist_arrow"},
                         {"addRule":"regeneration_orb"}
                     ],
@@ -126,14 +126,59 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["phase_sword"],
+                    "weapons": [{"id":"phase_sword", "count": 3}],
                     "options": [
-                        { "replaceWeapon": "phase_sword", "withWeapon": ["staff", "void_sword", "void_scythe", "war_scythe"]},
+                        { "replaceWeapon": {"id":"phase_sword", "count": 3}, "withWeapon": ["staff", {"id":"void_sword", "count": 2}, "void_scythe", {"id":"war_scythe", "count": 3}]},
                         { "addWeapon": "wrist_arrow"},
                         {"addRule":"regeneration_orb"}
                     ],
                     "min": 1,
                     "max": 1
+                }
+            ]
+        },
+        "technomancer": {
+            "name": "Technomancer",
+            "description": "A techno-wizard of the undying machines.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [
+                "character",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Technomancer",
+                    "courage": 9,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["staff"],
+                    "options": [
+                        {"addRule":["phase_field", "flight_cloak", "dark_prism"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Techno-thralls",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["techno_scythes", "techno_beam"],
+                    "min": 0,
+                    "max": 2
                 }
             ]
         },
@@ -273,6 +318,9 @@
             "keywords": [
                 "Infantry"
             ],
+            "options": [
+                { "replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}
+            ],
             "models": [
                 {
                     "name": "Eternal",
@@ -284,42 +332,503 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["tesla_rifle", "heavy_ccw"],
-                    "options": [
-                        { "replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}
-                    ],
-                    "rules": [],
                     "min": 5,
                     "max": 10
+                }
+            ]
+        },
+        "guardians": {
+            "name": "Guardians",
+            "description": "A group of machine guardians bound to defend their home.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "options": [
+                {"replaceWeapon": "rod", "withWeapon": [{"id":"war_scythe", "count": 2}, {"id":"phase_sword", "count": 2}, ["antimatter_pistol", "void_sword"]], "modelLimit": "all"},
+                {"addRule": "void_shield", "modelLimit": "all"},
+                {"addRule": "anti_gravity_generators", "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Guardian",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 2,
+                    "weapons": ["rod"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "flayers": {
+            "name": "Flayers",
+            "description": "A group of machines obsessed with the flayed flesh of their enemies.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "rules": [
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Flayer",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["flaying_claws"],
+                    "min": 5,
+                    "max": 20
+                }
+            ]
+        },
+        "assassins": {
+            "name": "Hunters",
+            "description": "A group of veteran machines adept at hunting and killing valuable targets.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "ambush",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Hunter",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 1,
+                    "weapons": ["gauss_sniper"],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "gyro_bikes": {
+            "name": "Gyro-Bikes",
+            "description": "A group of machines mounted on gyroscopic anti-gravity bikes.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "rules": [
+                "hover",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Biker"
+            ],
+            "options": [
+                {"replaceWeapon": {"id": "twin_tesla_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_heavy_gauss_rifle", "mount": ["Front"]}, {"id": "antimatter_rifle", "mount": ["Front"]}]},
+                {"addRule": "vision_scope", "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Biker",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 2,
+                    "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
+        "shifters": {
+            "name": "Shifters",
+            "description": "A group of snake-like robots that shift between dimensions.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "stealth",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Heavy Infantry"
+            ],
+            "options": [
+                {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
+                {"addWeapon": ["whip_coil"]}
+            ],
+            "models": [
+                {
+                    "name": "Shifter",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["metal_fangs"],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "tri_scorpion_annihilators": {
+            "name": "Tri-Scorpion Annihilators",
+            "description": "A melee-focused annihilator equipped with high tech tri-legs and a tough carapace.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "walker",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Heavy Infantry"
+            ],
+            "models": [
+                {
+                    "name": "Tri-Scorpion Annihilator",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "reaper_sword", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Tri-Scorpion Annihilator",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "reaper_blade", "count": 3}],
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "name": "Plasmacell",
+                    "courage": 8,
+                    "movement": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["plasma_spike"],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "annihilators": {
+            "name": "Annihilators",
+            "description": "A ranged-focused annihilator which hovers across all terrain.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "hover",
+                {"id": "regeneration", "x": 3}
+            ],
+            "keywords": [
+                "Heavy Infantry"
+            ],
+            "options": [
+                {"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}
+            ],
+            "models": [
+                {
+                    "name": "Annihilator",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["gauss_cannon"],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "transport_arc": {
+            "name": "Transport Arc",
+            "description": "A hovering transport craft with optional built-in repair-machines.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": [
+                "hover",
+                "flare_shielding",
+                "armored",
+                {"id": "impact", "x": 6},
+                {"id": "transport", "x": 11}
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Transport Arc",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id":"gauss_rifle_array", "mount": ["Left"]}, {"id":"gauss_rifle_array", "mount": ["Right"]}],
+                    "options": [
+                        {"addRule": ["extra_space", "regeneration_pods", {"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "doom_arc": {
+            "name": "Doom Arc",
+            "description": "A hovering deadly weapon carrier.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": [
+                "hover",
+                "flare_shielding",
+                "armored",
+                {"id": "impact", "x": 6}
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Doom Arc",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id":"doom_cannon", "mount": ["Front"]}, {"id":"gauss_rifle_array", "mount": ["Left"]}, {"id":"gauss_rifle_array", "mount": ["Right"]}],
+                    "options": [
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "transport_scythe": {
+            "name": "Scythe Transport",
+            "description": "A flying transport craft.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": [
+                "aircraft",
+                {"id": "transport", "x": 11}
+            ],
+            "keywords": [
+                "Vehicle", "Aircraft"
+            ],
+            "models": [
+                {
+                    "name": "Scythe Transport",
+                    "courage": 8,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id":"twin_tesla_cannon", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": ["extra_space", {"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "fighter_scythe": {
+            "name": "Scythe Fighter",
+            "description": "A flying fighter craft.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "rules": [
+                "aircraft"
+            ],
+            "keywords": [
+                "Vehicle", "Aircraft"
+            ],
+            "models": [
+                {
+                    "name": "Scythe Transport",
+                    "courage": 8,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id":"twin_tesla_cannon", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]},
+                        {"addWeapon": {"id":"doom_ray", "mount": ["Front"]}}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
     },
     "weapons": {
+        "doom_cannon": {"name": "Doom Cannon",  "profiles": [
+            {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 6},
+            {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
+        ]},
+        "doom_ray": {"name": "Doom Ray",  "attacks": 1, "short": 18, "medium": 36, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1, "damage": 1},
+        "metal_fangs": {"name": "Metal Fangs", "attacks": 3, "short": "Melee", "ap": 4, "damage": 2},
+        "techno_beam": {"name": "Techno-Beam", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol"]},
+        "techno_scythes": {"name": "Techno-Scythes", "attacks": 3, "short": "Melee", "ap": 2},
+        "whip_coil": {"name": "Whip Coil", "attacks": 1, "short": "Melee", "ap": 4, "damage": 2, "rules": ["snare"]},
+        "flaying_claws": {"name": "Flaying Claws", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 6, "damage": 2},
+        "reaper_sword": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 5, "damage": 1},
+        "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 5, "damage": 2},
         "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5, "damage": 3},
         "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 3, "short": "Melee"},
         "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
+        "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
+        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 2, "rules": ["rending"]},
+        "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 3},
+        "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
+        "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
+        "twin_tesla_cannon": {"name": "Twin Tesla Cannon", "attacks": 4, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
+        "twin_tesla_rifle": {"name": "Twin Tesla Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
+        "twin_heavy_gauss_rifle": {"name": "Twin Heavy Gauss Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
         "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["rending"]},
         "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 2},
-        "phase_sword": {"name": "Phase Sword", "attacks": 3, "short": "Melee", "ap": 3},
-        "void_sword": {"name": "Void Sword", "attacks": 4, "short": "Melee", "ap": 2},
+        "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
+        "void_sword": {"name": "Void Sword", "attacks": 2, "short": "Melee", "ap": 2},
         "void_scythe": {"name": "Void Scythe", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
-        "war_scythe": {"name": "War Scythe", "attacks": 3, "short": "Melee", "ap": 3, "damage": 2},
+        "war_scythe": {"name": "War Scythe", "attacks": 1, "short": "Melee", "ap": 3, "damage": 2},
+        "antimatter_pistol": {"name": "Antimatter Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
+        "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
+        "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "staff": {"name": "Staff",  "profiles": [
             {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 2},
             {"name": "Shoot", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]}
+        ]},
+        "rod": {"name": "Guardian Rod",  "profiles": [
+            {"name": "Melee", "attacks": 2, "short": "Melee", "ap": 3},
+            {"name": "Shoot", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]}
         ]},
         "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
         "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2}
     },
     "rules": {
+        "extra_space": {
+            "name": "Extra Space",
+            "description_short": "Transport +10",
+            "hidden": true,
+            "description": "This model gains +10 Transport space.",
+            "effects": [{"type": "alterRule", "ruleName": "transport", "value": 10}]
+        },
+        "flare_shielding": {
+            "name": "Flare Shields",
+            "description": "This model gains +1 Resist when hit at Long Range.",
+            "effects": [{"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+        },
+        "dark_prism": {"name": "Dark Prism", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]},
-        "regeneration_orb": {"name": "Regeneration Orb", "description": "This unit and friendly Infantry units within 3\" get Regeneration(+1).", "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]}
+        "regeneration_orb": {"name": "Regeneration Orb", "description": "This unit and friendly Infantry units within 3\" get Regeneration(+1).", "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]},
+        "regeneration_pods": {"name": "Regeneration Pods", "description": "Friendly Infantry units within 3\" get Regeneration(+1).", "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]},
+        "phase_field": {
+            "name": "Phase Field",
+            "description": "This model and friendly Infantry units within 3\" get +2 Defense.",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "target": "friendly"}]
+        },
+        "anti_gravity_generators": {
+            "name": "Anti-Grav Generators",
+            "hidden": true,
+            "description_short": "+3\" Move, Fly",
+            "description": "This model gains +3\" of Movement and the Fly special rule.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 3}, {"type": "grantRule", "rule": "fly"}]
+        },
+        "flight_cloak": {
+            "name": "Flight Cloak",
+            "hidden": true,
+            "description_short": "+3\" Move, Fly",
+            "description": "This model gains +3\" of Movement and the Fly special rule.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 3}, {"type": "grantRule", "rule": "fly"}]
+        },
+        "void_shield": {
+            "name": "Void Shield",
+            "hidden": true,
+            "description_short": "+1 Resist",
+            "description": "This model gains +1\" Resist.",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        },
+        "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5}]},
+        "snare": {"name": "Snare", "description": "A model may make one free attack with this weapon against units that fall back from combat with it.", "effects": [{"type": "freeAttacksWithWeapon", "value": 1, "frequency": 2.5}]}
     },
+    "strategies": [
+        {
+            "name": "Time Shift",
+            "description": "Use before an Infantry unit activates. That unit gets +2\" of Movement for this activation.",
+            "flavor": "Using enhanced otherworldly technology, time can be bent around this unit allowing it to seemingly warp from one place to another.",
+            "cost": 1
+        },
+        {
+            "name": "Enhanced Regeneration",
+            "description": "Use before an Infantry unit with Regeneration makes a Resist roll. That unit gets Regeneration(+1).",
+            "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
+            "cost": 2
+        },
+        {
+            "name": "Repair Overdrive",
+            "description": "Use when activating a Vehicle. Roll a D10 and on a 5 or less that unit may regain 2 wounds.",
+            "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
+            "cost": 2
+        }
+    ],
     "powers": {
         "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 10\" gets -1 to hit in melee next time it fights.", "charge": 8},
         "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 2 automatic hits with AP(2).", "charge": 8},
