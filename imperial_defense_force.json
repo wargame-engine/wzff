@@ -164,13 +164,13 @@
             "models": [
                 {
                     "name": "Battle Tank",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 11,
-                    "movement": 8,
-                    "reflexes": 4,
-                    "wounds": 9,
+                    "defense": 12,
+                    "movement": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
                     "weapons": ["battle_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
