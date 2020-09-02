@@ -187,7 +187,7 @@
                             "limit": 1
                         }
                     ],
-                    "rules": [{"id": "impact", "x": 3}],
+                    "rules": [{"id": "impact", "x": 6}],
                     "min": 1,
                     "max": 1
                 }
