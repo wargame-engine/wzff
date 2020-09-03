@@ -330,15 +330,5 @@
     },
     "relics": [],
     "powers": {
-        "psychic_fog": {"name": "Psychic Fog", "description": "Target enemy unit within 12\" gets -2 to its next Morale test.", "charge": 8},
-        "discord": {"name": "Discord", "description": "Target enemy unit within 12\" takes 2 hits at AP 2.", "charge": 8},
-        "shadow_dance": {"name": "Shadow Dance", "description": "Target friendly unit within 12\" gets Regeneration(3) next time it gets wounded.", "charge": 7},
-        "sorrow": {"name": "Sorrow", "description": "Target enemy model within 12\" takes 1 automatic hit with AP 3.", "charge": 7},
-        "veil_of_madness": {
-            "name": "Veil of Madness",
-            "description": "Target enemy unit within 12\" must take a Courage test. If failed it must immediately make a move towards the nearest unit (friendly or enemy). If these two units end within melee range of each other, the targeted unit must make a full melee attack as if it charged.",
-            "charge": 6
-        },
-        "light_shards": {"name": "Light Shards", "description": "Two targeted enemy units within 6\" take 8 automatic hits.", "charge": 6}
     }
 }
