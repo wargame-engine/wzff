@@ -131,8 +131,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]}, {"improveStat": [{"id": "defense"}], "name": "Heavy Armor"}, {"addRule": ["heavy_armor"]}],
-                    "rules": [],
+                    "options": [{"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]},  {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}],
                     "min": 9,
                     "max": 9
                 },

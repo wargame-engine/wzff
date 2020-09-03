@@ -1458,7 +1458,6 @@
             "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly"}]
         },
-        "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "banner_of_justice": {
             "name": "Banner of Justice",
             "description": "Enemy units within 6\" get -1 courage.",
