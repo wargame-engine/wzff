@@ -127,11 +127,5 @@
         "indirect": {"name": "Indirect", "description": "Can be fired without line of sight."}
     },
     "powers": {
-        "patience": {"name": "Patience", "description": "Target friendly unit within 10\" gets -1 to be hit next time it is shot at.", "charge": 8},
-        "killing_blow": {"name": "Killing Blow", "description": "Target enemy model within 10\" takes 1 automatic hit with AP(2).", "charge": 8},
-        "boldness": {"name": "Boldness", "description": "Target friendly unit within 12\" may immediately move by up to 3”.", "charge": 7},
-        "devastating_strike": {"name": "Devastating Strike", "description": "Target enemy unit within 10\" takes 4 automatic hits with AP(1).", "charge": 7},
-        "pacification": {"name": "Pacification", "description": "Target enemy unit within 10\" gets -3 to melee rolls next time it fights.", "charge": 6},
-        "deadly_surge": {"name": "Deadly Surge", "description": "Target 2 enemy units within 10\" take 6 automatic hits each.", "charge": 6}
     }
 }

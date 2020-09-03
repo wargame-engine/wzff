@@ -1200,16 +1200,5 @@
         {"rule": "psychic_helmet", "flavor": "A helmet imbued with psychic energy.", "subfactions": ["change_traitors"]}
     ],
     "powers": {
-        "breath_of_change": {"name": "Breath of Change", "description": "Target friendly unit within 10\" may increase their charge by 3\".", "charge": 8, "subfactions": ["change_traitors"]},
-        "inferno": {"name": "Inferno", "description": "Target enemy unit within 10\" takes 2 automatic hits with AP(2).", "charge": 7, "subfactions": ["change_traitors"]},
-        "cursed_mutations": {"name": "Cursed Mutation", "description": "Target enemy unit within 15\" gets -1 to hit the next time it shoots.", "charge": 8, "subfactions": ["change_traitors"]},
-        "fire_storm": {"name": "Fire Storm", "description": "Target enemy unit within 12\" must take a dangerous terrain test.", "charge": 7, "subfactions": ["change_traitors"]},
-        "blessed_mutation": {
-            "name": "Blessed Mutation",
-            "description": "Target friendly units within 12\" gets Regeneration on rolls of 5- next time it takes wounds.",
-            "charge": 6,
-            "subfactions": ["change_traitors"]
-        },
-        "bolt_of_change": {"name": "Bolt of Change", "description": "Target enemy unit within 12\" takes 1 hit with AP(4) and 6 damage.", "charge": 6, "subfactions": ["change_traitors"]}
     }
 }

@@ -1450,7 +1450,7 @@
         "warpath": {"name": "Warpath", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 generate an additional attack.", "charge": 8},
         "crackling_bolt": {"name": "Crackling Bolt", "description": "Target enemy unit within 6\" takes 4 hits with AP 1.", "charge": 8},
         "headbang": {"name": "Headbang", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 gain +2 AP.", "charge": 7},
-        "deathbolt": {"name": "Death Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 4 and damage 3.", "charge": 7},
+        "deathbolt": {"name": "Death", "description": "Target enemy unit within 12\" takes 1 hit with AP 4 and damage 3.", "charge": 7},
         "teleport": {"name": "Jump Teleport", "description": "Target friendly unit within 12\" may immediately move up to 12\" ignoring models and terrain.", "charge": 6},
         "psychic_vomit": {"name": "Psychic Vomit", "description": "Target enemy unit within 12\" takes 4 automatic hits with AP 2.", "charge": 6}
     },

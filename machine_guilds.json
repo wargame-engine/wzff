@@ -792,11 +792,5 @@
         }
     ],
     "powers": {
-        "lock_on": {"name": "Lock-On", "description": "Target friendly unit within 10\" gets +1 AP next time it shoots.", "charge": 8},
-        "solar_beam": {"name": "Solar Beam", "description": "Target enemy model within 10\" takes 1 automatic hit with AP(2).", "charge": 8},
-        "steel_body": {"name": "Steel Body", "description": "Target friendly unit within 10\" may heal 1 wound or restore 1 model (with only 1 health left if it has multiple wounds).", "charge": 7},
-        "shrapnel": {"name": "Shrapnel", "description": "Target 2 enemy units within 6\" take 3 automatic hits with AP(2) each.", "charge": 7},
-        "corroded_metal": {"name": "Corroded Metal", "description": "Target enemy unit within 12” gets -2 Resist next time it takes hits.", "charge": 6},
-        "machine_terror": {"name": "Machine Terror", "description": "Target enemy unit within 10\" takes 8 automatic hits.", "charge": 6}
     }
 }

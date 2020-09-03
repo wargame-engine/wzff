@@ -1597,42 +1597,6 @@
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 12\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 7},
         "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12\" may immediately shoot.", "charge": 6},
-        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]},
-        "blurred_sight": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Blurred Sight",
-            "description": "Target enemy unit within 10\" gets -1 to hit next time it shoots.",
-            "charge": 8
-        },
-        "psychic_terror": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Psychic Terror",
-            "description": "Target enemy unit within 12\" takes 2 automatic hits with AP(2).",
-            "effects": [{"weapon": "power_terror"}]
-        },
-        "cursed_ground": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Cursed Ground",
-            "description": "Target enemy unit within 15\" moves -5\" next time it charges.",
-            "charge": 7
-        },
-        "cerebral_trauma": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Cerebral Trauma",
-            "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).",
-            "effects": [{"weapon": "power_trauma"}]
-        },
-        "time_passage": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Time Passage",
-            "description": "Target friendly unit within 12\" may immediately move by up to 6\".",
-            "charge": 6
-        },
-        "lightning_storm": {
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "name": "Lightning Storm",
-            "description": "Target 2 enemy units within 9\" take 6 hits each.",
-            "effects": [{"weapon": "power_lightning_fog"}]
-        }
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]}
     }
 }
