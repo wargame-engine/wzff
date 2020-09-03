@@ -34,8 +34,8 @@
                     "reflexes": 7,
                     "wounds": 1,
                     "weapons": ["barb_rifle", { "id": "ccw", "count": 1 }],
-                    "min": 5,
-                    "max": 20
+                    "min": 4,
+                    "max": 19
                 }
             ]
         }

@@ -727,7 +727,7 @@
         "whip_coil": {"name": "Whip Coil", "attacks": 1, "short": "Melee", "ap": 4, "damage": 2, "rules": ["snare"]},
         "flaying_claws": {"name": "Flaying Claws", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_sword": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 5, "damage": 1},
+        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 5, "damage": 1},
         "reaper_blade": {"name": "Reaper Blade", "attacks": 1, "short": "Melee", "ap": 5, "damage": 2},
         "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5, "damage": 3},
         "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 3, "short": "Melee"},
