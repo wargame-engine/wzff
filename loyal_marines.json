@@ -1410,10 +1410,8 @@
     },
     "weapons": {
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "damage": 2, "short": "Melee"},
-        "power_terror": {"medium": 24, "attacks": 3, "ap": 4},
-        "power_purge": {"medium": 9, "attacks": 10, "ap": 1},
-        "power_trauma": {"medium": 18, "attacks": 2, "ap": 8},
-        "power_lightning_fog": {"medium": 9, "attacks": 12}
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
+        "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
         "field_radio": {
@@ -1496,7 +1494,16 @@
             "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
             "effects": [{"type": "regeneration", "frequency": 3}]
         },
-        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}}]}
+        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}}]},
+        "power_void": {
+            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "friendly", "range": 12}]
+        },
+        "power_fortify": {
+            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
+        },
+        "power_strength": {
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 2, "target": "friendly", "range": 12}]
+        }
     },
     "relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -1597,6 +1604,11 @@
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 12\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 7},
         "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12\" may immediately shoot.", "charge": 6},
-        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]}
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]},
+        "might": { "name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +2 Strength for its next attack.", "effects": [{"rule": "power_strength"}] },
+        "fortify": { "name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "effects": [{"rule": "power_fortify"}] },
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
+        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}] },
+        "bolt": { "name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}] }
     }
 }

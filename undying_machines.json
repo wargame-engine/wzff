@@ -15,7 +15,7 @@
                 {"id": "regeneration", "x": 3}
             ],
             "keywords": [
-                "Infantry"
+                "Heavy Infantry", "Character"
             ],
             "models": [
                 {
@@ -46,7 +46,7 @@
                 {"id": "regeneration", "x": 3}
             ],
             "keywords": [
-                "Infantry"
+                "Heavy Infantry", "Character"
             ],
             "models": [
                 {
@@ -162,6 +162,7 @@
                     "wounds": 3,
                     "weapons": ["staff"],
                     "options": [
+                        {"addWeapon": "tesla_field"},
                         {"addRule":["phase_field", "flight_cloak", "dark_prism"]}
                     ],
                     "min": 1,
@@ -193,7 +194,7 @@
                 {"id": "regeneration", "x": 3}
             ],
             "keywords": [
-                "Infantry"
+                "Swarm"
             ],
             "models": [
                 {
@@ -712,9 +713,152 @@
                     "max": 1
                 }
             ]
+        },
+        "stalker_tank": {
+            "name": "Machine Stalker",
+            "description": "A large walking vehicle with underslung mounted weapon and massive crushing legs.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": [
+                "walker",
+                "flare_shielding",
+                "armored"
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Machine Stalker",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id":"heat_ray", "mount": ["Front"]}, {"id":"heavy_stomp", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id":"heat_ray", "mount": ["Front"]}, "withWeapon": [{"id":"twin_heavy_gauss_cannon", "mount": ["Front"]}, {"id":"antimatter_cannon", "mount": ["Front"]}] },
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "spider_worker": {
+            "name": "Spider Worker",
+            "description": "A spider-like automation tasked with maintaing other machines.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [
+                "hover"
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Spider Worker",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id":"metal_fangs"}, {"id":"stomp", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["antimatter_rifle"]},
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}, "dark_prism"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "reanimator": {
+            "name": "Reanimator",
+            "description": "A tall walking machine tasked with reanimating fallen units.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": [
+                "walker",
+                "armored",
+                "flare_shielding",
+                "reanimation_beam"
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Reanimatior",
+                    "courage": 8,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id":"antimatter_rifle", "mount": ["Front"]}, {"id":"heavy_stomp", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "invasion_arc": {
+            "name": "Heavy Invasion Arc",
+            "description": "A large hovering fortress with optional portal.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": [
+                "hover",
+                "flare_shielding",
+                "heavily_armored"
+            ],
+            "keywords": [
+                "Vehicle"
+            ],
+            "models": [
+                {
+                    "name": "Heavy Invasion Arc",
+                    "courage": 8,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": [
+                        {"id":"heavy_antimatter_cannon"},
+                        {"id":"tesla_field", "mount": ["Left", "Front"]},
+                        {"id":"tesla_field", "mount": ["Right", "Front"]},
+                        {"id":"tesla_field", "mount": ["Right", "Rear"]},
+                        {"id":"tesla_field", "mount": ["Left", "Rear"]}
+                    ],
+                    "options": [
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}, {"id": "transport", "x": 20, "name": "Invasion Portal"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
+        "heat_ray": {"name": "Heat Ray",  "profiles": [
+            {"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["flame"]},
+            {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]}
+        ]},
         "doom_cannon": {"name": "Doom Cannon",  "profiles": [
             {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 6},
             {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
@@ -735,9 +879,11 @@
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 2, "rules": ["rending"]},
         "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 3},
+        "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
         "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
+        "tesla_field": {"name": "Tesla Field", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla"]},
         "twin_tesla_cannon": {"name": "Twin Tesla Cannon", "attacks": 4, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
         "twin_tesla_rifle": {"name": "Twin Tesla Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
@@ -752,6 +898,8 @@
         "antimatter_pistol": {"name": "Antimatter Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
         "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
+        "antimatter_cannon": {"name": "Antimatter Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
         "staff": {"name": "Staff",  "profiles": [
             {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 2},
             {"name": "Shoot", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]}
@@ -764,6 +912,11 @@
         "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2}
     },
     "rules": {
+        "reanimation_beam": {
+            "name": "Reanimation Beam",
+            "description": "Once during this unit's activation, if within 6\" if a friendly Infantry unit with killed models, roll 5D10. For each roll of a 5 or less, a wound is restored on a model. If there are left-over successes, you may spend a success to return a model to the unit with 1 wound remaining. Repeat until all successes are allocated. All models must be fully healed before returning fallen models to the unit.",
+            "effects": [{"type": "heal", "frequency": 5, "value": 5}]
+        },
         "extra_space": {
             "name": "Extra Space",
             "description_short": "Transport +10",

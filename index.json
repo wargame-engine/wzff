@@ -413,7 +413,7 @@
             "effects": [{"type": "ambush", "frequency": 5}]
         },
         "regeneration": {
-            "name": "Regeneration",
+            "name": "Tough",
             "inputs": ["x"],
             "description": "Roll a die when this model loses a wound. On a value of X or less that wound is not lost.",
             "effects": [{"type": "regeneration", "frequency": "x"}]
@@ -421,8 +421,8 @@
         "invulnerable": {"name": "Invulnerable", "inputs": ["x"], "description": "This model may re-roll X Resist tests per attack.", "effects": [{"type": "invulnerable", "value": "x"}]},
         "furious": {
             "name": "Furious",
-            "description": "When this model charges, it gets one bonus attack with any melee weapon.",
-            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 5, "weaponType": "fight"}]
+            "description": "When this model charges, hit rolls of 1 or 2 generate an additional attack.",
+            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "fight"}]
         },
         "stealth": {
             "name": "Stealth",
@@ -465,7 +465,7 @@
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power.",
+            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "effects": [{"type": "psychic", "value": "x"}]
         },
         "aircraft": {
