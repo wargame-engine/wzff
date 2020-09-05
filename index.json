@@ -328,6 +328,13 @@
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
         "pistol": {"name": "Pistol", "description": "This weapon may be used while engaged in close combat."},
+        "spiked_ram": {
+            "name": "Spiked Ram",
+            "hidden": true,
+            "description": "This model gains +3 impact.",
+            "description_short": "Impact +3",
+            "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
+        },
         "impact": {
             "name": "Impact",
             "inputs": ["x"],
@@ -339,7 +346,7 @@
         "emp": {"name": "EMP", "description": "Successful hit rolls of 3 or less gain +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 3}]},
         "transport": {
             "name": "Transport",
-            "description": "This model may carry X models inside of it on the battlefeild. Models with greater than 1 wound cost 2 transport spaces.",
+            "description": "This model may carry X Infantry models inside of it on the battlefeild. Models with greater than 1 wound take up 2 transport spaces.",
             "inputs": ["x"],
             "effects": [{"type": "transport", "size": "x"}]
         },
@@ -419,6 +426,26 @@
             "effects": [{"type": "regeneration", "frequency": "x"}]
         },
         "invulnerable": {"name": "Invulnerable", "inputs": ["x"], "description": "This model may re-roll X Resist tests per attack.", "effects": [{"type": "invulnerable", "value": "x"}]},
+        "field_radio": {
+            "name": "Field Radio",
+            "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Commander rule.",
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 5}]
+        },
+        "commander_field_orders": {
+            "name": "Field Orders (Commander)",
+            "description": "When this unit is activated, choose two of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20}]
+        },
+        "field_orders": {
+            "name": "Field Orders",
+            "description": "When this unit is activated, choose one of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "effects": [
+                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
+                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
+                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}}
+            ]
+        },
         "furious": {
             "name": "Furious",
             "description": "When this model charges, hit rolls of 1 or 2 generate an additional attack.",

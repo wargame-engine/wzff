@@ -29,6 +29,139 @@
                     "max": 1
                 }
             ]
+        },
+        "stormtrooper_commander": {
+            "name": "Stormtrooper Commander",
+            "description": "Foot infantry of the human inquisition.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
+            "rules": ["commander_field_orders"],
+            "models": [
+                {
+                    "name": "Stormtrooper Commander",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "inquisition_stormtroopers": {
+            "name": "Inquisition Stormtroopers",
+            "description": "Foot infantry of the human inquisition.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
+            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
+            "models": [
+                {
+                    "name": "Stormtrooper Sergeant",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
+                        {"addRule": ["ward"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Stormtrooper",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "heavy_ccw"],
+                    "options": [
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
+                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "inquisition_light_gunship": {
+            "name": "Inquisition Light Gunship",
+            "description": "A light gunship with sliding doors for troop transport.",
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
+            "category": "transport",
+            "keywords": ["Inquisitional Stormtroopers", "Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Inquisition Light Gunship",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
+                        {"replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]}, "withWeapon": {"id": "rocket_pod", "count": 2, "mount": ["Front"]}},
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_apc": {
+            "name": "APC",
+            "description": "A durable transport built for loyal marines and allies.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["storm_rifle"],
+                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
