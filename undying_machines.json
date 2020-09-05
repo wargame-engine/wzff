@@ -846,7 +846,7 @@
                         {"id":"tesla_field", "mount": ["Left", "Rear"]}
                     ],
                     "options": [
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}, {"id": "transport", "x": 20, "name": "Invasion Portal"}]}
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Self-Repair Protocols"}, {"id": "transport", "x": 20, "name": "Invasion Portal"}, {"id": "ambush", "name": "Orbital Drop"}]}
                     ],
                     "min": 1,
                     "max": 1

@@ -36,8 +36,8 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
-            "rules": ["commander_field_orders"],
+            "keywords": ["Stormtrooper", "Infantry"],
+            "rules": ["commander_field_orders_stormtrooper", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -67,7 +67,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
+            "keywords": ["Stormtrooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {
@@ -113,7 +113,7 @@
             "description": "A light gunship with sliding doors for troop transport.",
             "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
             "category": "transport",
-            "keywords": ["Inquisitional Stormtroopers", "Vehicle"],
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "models": [

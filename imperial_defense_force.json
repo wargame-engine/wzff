@@ -1,10 +1,103 @@
 {
     "id": "imperial_defense_force",
     "name": "Imperial Defence Force",
+    "subfactions": {
+        "combat_masters": {"name": "Close Combat Focus", "id": "combat_masters", "color": "#00401f", "background": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
+        "marksmanship_focus": {"name": "Marksmanship Focus", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."}
+    },
     "units": {
+        "commander": {
+            "name": "Company Commander",
+            "description": "Foot infantry commander of the imperial defense force.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["character", "commander_field_orders", {"id": "invulnerable", "x": 1}],
+            "models": [
+                {
+                    "name": "Company Commander",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id":"ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id":"ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "stormtrooper_commander": {
+            "name": "Stormtrooper Commander",
+            "description": "Foot infantry commaner of the elite storm troopers.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["character", "commander_field_orders_stormtrooper", {"id": "invulnerable", "x": 1}],
+            "models": [
+                {
+                    "name": "Stormtrooper Commander",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 6,
+                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "options": [
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "platoon_commander": {
+            "name": "Platoon Commander",
+            "description": "Foot infantry platoon leader of the imperial defense force.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["character", "field_orders"],
+            "models": [
+                {
+                    "name": "Platoon Commander",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id":"ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id":"ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "constript_squad": {
             "name": "Conscript Squad",
             "description": "An inexperienced squad of infantry sent to the front with little training.",
+            "category": "core",
             "min": 5,
             "max": 10,
             "models": [
@@ -31,6 +124,9 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1}
+                    ],
                     "rules": [],
                     "min": 9,
                     "max": 29
@@ -44,7 +140,9 @@
                     "reflexes": 4,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [{"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}
+                    ]}],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -54,6 +152,7 @@
         "infantry_squad": {
             "name": "Infantry Squad",
             "description": "The backbone of the human militia.",
+            "category": "core",
             "min": 5,
             "max": 10,
             "models": [
@@ -80,6 +179,9 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1}
+                    ],
                     "rules": [],
                     "min": 9,
                     "max": 9
@@ -105,6 +207,7 @@
         "veteran_squad": {
             "name": "Veteran Infantry Squad",
             "description": "A more experienced infantry squad.",
+            "category": "core",
             "min": 5,
             "max": 10,
             "models": [
@@ -131,7 +234,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]},  {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]},  {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"},
+                        {"addRule": "field_radio", "modelLimit": 1}
+                    ],
                     "min": 9,
                     "max": 9
                 },
@@ -159,6 +265,8 @@
             "description": "A main line battle tank.",
             "min": 1,
             "max": 1,
+            "category": "heavy",
+            "keywords": ["Vehicle"],
             "rules": ["armored"],
             "models": [
                 {
