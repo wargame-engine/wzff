@@ -1296,116 +1296,6 @@
                     "max": 1
                 }
             ]
-        },
-        "stormtrooper_commander": {
-            "name": "Stormtrooper Commander",
-            "description": "Foot infantry of the human inquisition.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
-            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
-            "subfactions": ["psychic_marines"],
-            "rules": ["commander_field_orders"],
-            "models": [
-                {
-                    "name": "Stormtrooper Commander",
-                    "courage": 7,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "wounds": 3,
-                    "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
-                    "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
-                    ],
-                    "rules": [],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "inquisition_stormtroopers": {
-            "name": "Inquisition Stormtroopers",
-            "description": "Foot infantry of the human inquisition.",
-            "min": 5,
-            "max": 10,
-            "category": "core",
-            "keywords": ["Inquisitional Stormtroopers", "Infantry"],
-            "subfactions": ["psychic_marines"],
-            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
-            "models": [
-                {
-                    "name": "Stormtrooper Sergeant",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
-                    "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": ["ward"]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Stormtrooper",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "heavy_ccw"],
-                    "options": [
-                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
-                    ],
-                    "min": 4,
-                    "max": 9
-                }
-            ]
-        },
-        "inquisition_light_gunship": {
-            "name": "Inquisition Light Gunship",
-            "description": "A light gunship with sliding doors for troop transport.",
-            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
-            "subfactions": ["psychic_marines"],
-            "category": "transport",
-            "keywords": ["Inquisitional Stormtroopers", "Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Inquisition Light Gunship",
-                    "movement": 10,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 11,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
-                    "options": [
-                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
-                        {"replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]}, "withWeapon": {"id": "rocket_pod", "count": 2, "mount": ["Front"]}},
-                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
         }
     },
     "weapons": {
@@ -1414,28 +1304,8 @@
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
-        "field_radio": {
-            "name": "Field Radio",
-            "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Commander rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 5}]
-        },
-        "commander_field_orders": {
-            "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20}]
-        },
-        "field_orders": {
-            "name": "Field Orders",
-            "description": "When this unit is activated, choose one of the following bonuses to apply to it and friendly Infantry units within 3\": +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
-            "effects": [
-                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}},
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5, "target": "friendly", "filter": {"keywords": ["Infantry", "Inquisitional Stormtroopers"]}}
-            ]
-        },
-        "advanced_tactics": {
-            "name": "Advanced Tactics",
+        "mobility_training": {
+            "name": "Mobility Training",
             "description": "This model and models in its unit gain +3 inch max range when shooting and +3 inches to charges.",
             "effects": [
                 {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
@@ -1476,15 +1346,8 @@
             "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
-        "spiked_ram": {
-            "name": "Spiked Ram",
-            "hidden": true,
-            "description": "This model gains +3 impact.",
-            "description_short": "Impact +3",
-            "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
-        },
-        "firing_drills": {
-            "name": "Firing Drills",
+        "expert_marksman": {
+            "name": "Expert Marksman",
             "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.",
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
@@ -1508,8 +1371,8 @@
     "relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
         {"subfactions": ["none", "wolf_marines"], "weapon": "ancient_chainsword", "flavor": "A chainsword crafted to destroy even the toughest enemy infantry."},
-        {"subfactions": ["none", "wolf_marines", "psychic_marines"], "rule": "firing_drills", "flavor": "A trained marksman can have a very deadly effect."},
-        {"subfactions": ["none", "wolf_marines", "psychic_marines"], "rule": "advanced_tactics", "flavor": "A well-trained tactician."},
+        {"subfactions": ["none", "wolf_marines", "psychic_marines"], "rule": "expert_marksman", "flavor": "A trained marksman can have a very deadly effect."},
+        {"subfactions": ["none", "wolf_marines", "psychic_marines"], "rule": "mobility_training", "flavor": "A well-trained tactician in mobility warfare."},
         {"subfactions": ["psychic_marines"], "rule": "combat_master", "flavor": "A trained fighter can dispatch even the toughest foes in deadly combat."}
     ],
     "strategies": [

@@ -753,7 +753,7 @@
         "heat_scanner": {
             "name": "Heat Scanner",
             "description": "This model and its unit gain +6 inch max range when shooting.",
-            "effects": [{"type": "alterWeapon", "statName": "medium", "value": 6, "frequency": 100, "target": "friendly"}]
+            "effects": [{"type": "alterWeapon", "statName": "medium", "value": 6, "target": "friendly"}]
         },
         "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5}]},
         "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "effects": [{"type": "freeHits", "value": 2, "frequency": 2}]},
