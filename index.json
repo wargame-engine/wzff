@@ -327,7 +327,7 @@
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
-        "pistol": {"name": "Pistol", "description": "This weapon may be used while engaged in close combat."},
+        "pistol": {"name": "Pistol", "description": "This weapon may be used instead of a model's other weapons even while engaged in close combat."},
         "spiked_ram": {
             "name": "Spiked Ram",
             "hidden": true,
