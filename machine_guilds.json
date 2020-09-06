@@ -496,7 +496,7 @@
                     "defense": 10,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": [{"id": "light_machinegun", "count": 2}],
+                    "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}],
                     "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": {"id": "data_link"}}],
                     "min": 1,
                     "max": 1
@@ -521,7 +521,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": [{"id": "light_machinegun", "count": 2}, "disruption_missiles"],
+                    "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}, "disruption_missiles"],
                     "options": [{"addWeapon": [["light_machinegun", "energy_cannon"], ["light_machinegun", "iron_cannon"]]}, {"addRule": {"id": "data_link"}}],
                     "min": 1,
                     "max": 1
