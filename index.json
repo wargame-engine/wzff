@@ -420,7 +420,7 @@
             "effects": [{"type": "ambush", "frequency": 5}]
         },
         "regeneration": {
-            "name": "Tough",
+            "name": "Resilient",
             "inputs": ["x"],
             "description": "Roll a die when this model loses a wound. On a value of X or less that wound is not lost.",
             "effects": [{"type": "regeneration", "frequency": "x"}]
