@@ -7,18 +7,13 @@
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"},
-        "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance":"imperial_alliance"},
-        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance":"imperial_alliance"},
-        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance":"imperial_alliance"},
+        "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance"},
+        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance"},
+        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance"},
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A"},
-        "imperial_inquisition": {"name": "Imperial Inquisition", "id": "imperial_inquisition", "url": "imperial_inquisition.json", "color": "#d4af37", "alliance":"imperial_alliance"}
+        "imperial_inquisition": {"name": "Imperial Inquisition", "id": "imperial_inquisition", "url": "imperial_inquisition.json", "color": "#d4af37", "alliance": "imperial_alliance"}
     },
-    "alliances": {
-        "alien_swarm": {"name": "Alien Swarm"},
-        "imperial_alliance": {"name": "Imperial Alliance"},
-        "elven_coaliation": {"name": "Elven Coalition"},
-        "traitors": {"name": "Traitor Pact"}
-    },
+    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},
@@ -324,10 +319,7 @@
             "name": "Blast",
             "inputs": ["x"],
             "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6+ models or is benefitting from Cover.",
-            "effects": [
-                {"type": "blast", "value": "x"},
-                {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}
-            ]
+            "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
         },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
@@ -386,12 +378,7 @@
             "description": "This unit requires an extra suppression to take break tests.",
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 2.5}]
         },
-        "resist": {
-            "name": "Protect",
-            "inputs": ["x"],
-            "description": "This unit gets +X to its Resist rolls.",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": "x"}]
-        },
+        "resist": {"name": "Protect", "inputs": ["x"], "description": "This unit gets +X to its Resist rolls.", "effects": [{"type": "alterStat", "statName": "defense", "value": "x"}]},
         "open_topped": {
             "name": "Open-Topped",
             "description": "Units may fire their weapons while embarked in this transport. They suffer the same restrictions as the carrying transport for firing (no +1 for aimed fire if it moves)."
@@ -435,23 +422,21 @@
         "field_radio": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{
-                "type": "grantRule", "rule": {"id": "field_orders"}, "range": 24, "target": "friendly",
-                "note": "This must be costed as an aura as it applies to the whole unit"
-            }]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{
-                "type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "range": 24, "target": "friendly",
-                "note": "This must be costed as an aura as it applies to the whole unit"
-            }]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
         },
+        "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20}]
+            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to activate immediately and receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "effects": [
+                {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
+                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
+            ]
         },
         "field_orders": {
             "name": "Field Orders",
@@ -466,7 +451,10 @@
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
             "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20}]
+            "effects": [
+                {"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20},
+                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
+            ]
         },
         "field_orders_stormtrooper": {
             "name": "Field Orders (Stormtroopers)",
