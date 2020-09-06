@@ -259,7 +259,7 @@
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap":3},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 1, "damage": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 2, "short": "Melee", "damage": 3},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 6, "short": "Melee", "damage": 3},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap":2},
         "sniper_cannon": {"name": "Sniper Cannon", "profiles":[
