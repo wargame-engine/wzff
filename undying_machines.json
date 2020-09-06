@@ -77,7 +77,8 @@
             "category": "command",
             "rules": [
                 "character",
-                {"id": "regeneration", "x": 3}
+                {"id": "regeneration", "x": 3},
+                {"id": "invulnerable", "x": 1}
             ],
             "keywords": [
                 "Infantry"
@@ -119,7 +120,7 @@
             "models": [
                 {
                     "name": "Lord",
-                    "courage": 9,
+                    "courage": 8,
                     "movement": 5,
                     "shoot": 6,
                     "fight": 6,
