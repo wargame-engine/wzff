@@ -1260,11 +1260,11 @@
         {"rule": "psychic_helmet", "flavor": "A helmet imbued with psychic energy.", "subfactions": ["change_traitors"]}
     ],
     "powers": {
-        "beam": { "name": "Invigorating Beam", "description": "Target friendly unit within 12\"may immediately make a 6\" move.", "effects": [{"rule": "invigorating_beam"}] },
-        "mutation": { "name": "Encroaching Mutations", "description": "Target enemy unit within 24\" gets -1 to hit the next time it shoots.", "effects": [{"rule": "encroaching_mutations"}] },
-        "inspire": { "name": "Inspiring Word", "description": "Target friendly unit within 6\". When that unit next takes hits, roll a dice for each wound that would be taken. On a roll of equal to or less than 3, that wound is not lost.", "effects": [{"rule": "inspiring_word"}] },
-        "storm": { "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 10 hits.", "effects": [{"weapon": "power_storm"}] },
-        "inferno": { "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 5 hit with AP 4.", "effects": [{"weapon": "psychic_inferno"}] },
-        "bolt": {"name": "Change Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 7 and Damage 3.", "effects":[{"weapon": "change_bolt"}]}
+        "beam": { "subfactions": ["change_traitors"], "name": "Invigorating Beam", "description": "Target friendly unit within 12\"may immediately make a 6\" move.", "effects": [{"rule": "invigorating_beam"}] },
+        "mutation": { "subfactions": ["change_traitors"], "name": "Encroaching Mutations", "description": "Target enemy unit within 24\" gets -1 to hit the next time it shoots.", "effects": [{"rule": "encroaching_mutations"}] },
+        "inspire": { "subfactions": ["change_traitors"], "name": "Inspiring Word", "description": "Target friendly unit within 6\". When that unit next takes hits, roll a dice for each wound that would be taken. On a roll of equal to or less than 3, that wound is not lost.", "effects": [{"rule": "inspiring_word"}] },
+        "storm": { "subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 10 hits.", "effects": [{"weapon": "power_storm"}] },
+        "inferno": { "subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 5 hit with AP 4.", "effects": [{"weapon": "psychic_inferno"}] },
+        "bolt": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 7 and Damage 3.", "effects":[{"weapon": "change_bolt"}]}
     }
 }
