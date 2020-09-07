@@ -742,7 +742,7 @@
     "rules": {
         "canticles": {
             "name": "Canticles",
-            "description": "When activated, choose one of the following to apply to this unit and friendly units within 3\". +1 AP or -1 to be hit or hit rolls of 1 or 2 generate an additional attack.",
+            "description": "When activated, choose one of the following to apply to this unit and friendly units within 3\". +1 AP or -1 to be hit or hit rolls of 1 or 2 when shooting generate an additional attack.",
             "effects": [
                 {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
                 {"type": "grantRule", "rule": "relentless", "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
@@ -771,7 +771,7 @@
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 12}]
         },
         "power_rust": {
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 18}]
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 18}]
         },
         "power_endurance": {
             "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "range": 12}]
