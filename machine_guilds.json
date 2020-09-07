@@ -774,10 +774,10 @@
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 18}]
         },
         "power_endurance": {
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}, "target": "friendly", "range": 12}]
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "range": 12}]
         },
         "power_speed": {
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 9, "target": "friendly", "range": 12, "frequency": 5}]
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 6, "target": "friendly", "range": 12, "frequency": 5}]
         }
     },
     "relics": [
@@ -806,8 +806,8 @@
     ],
     "powers": {
         "machine_aim": {"name": "Guidance", "description": "Target friendly unit within 12\" gets +1 Accuracy with its next attack.", "effects": [{"rule": "power_aim"}]},
-        "machine_endurance": {"name": "Endurance", "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 3 or less that wound is not lost.", "effects": [{"rule": "power_endurance"}]},
-        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 9\".", "effects": [{"rule": "power_speed"}]},
+        "machine_endurance": {"name": "Endurance", "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 2 or less that wound is not lost.", "effects": [{"rule": "power_endurance"}]},
+        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 6\".", "effects": [{"rule": "power_speed"}]},
         "solar_ray": {"name": "Solar Ray", "description": "Target enemy unit within 12\" takes 6 hits with AP 3.", "effects": [{"weapon": "power_beam"}]},
         "rust": {"name": "Rust", "description": "Target enemy unit within 18\" gets -1 Accuracy with its next attack.", "effects": [{"rule": "power_rust"}]}
     }
