@@ -1,13 +1,14 @@
 {
     "id": "traitor_marines",
     "name": "Traitor Marines",
-    "subfactions": {"change_traitors": {"name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc"}},
+    "subfactions": {"change_traitors": {"name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc", "restricted": true}},
     "units": {
         "traitor_lord": {
             "name": "Traitor Lord",
             "description": "A lord of the dark gods.",
             "min": 1,
             "max": 1,
+            "category": "command",
             "rules": ["character", "relentless", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -41,6 +42,7 @@
             "description": "A lord of the dark gods riding a bike.",
             "min": 1,
             "max": 1,
+            "category": "command",
             "rules": ["character", "relentless", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -73,6 +75,7 @@
             "description": "A human dedicated to fixing the corrupted machines of the dark gods.",
             "min": 1,
             "max": 1,
+            "category": "specialist",
             "rules": ["character", {"id": "repair", "x": 2}, {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -105,6 +108,7 @@
             "description": "A human dedicated to fixing the corrupted machines of the dark gods.",
             "min": 1,
             "max": 1,
+            "category": "specialist",
             "rules": ["character", {"id": "repair", "x": 2}, {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -138,6 +142,7 @@
             "description": "A powerful human whose mental powers have been twisted by the dark side.",
             "min": 1,
             "max": 1,
+            "category": "specialist",
             "rules": ["character", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -170,6 +175,7 @@
             "description": "A powerful human whose mental powers have been twisted by the dark side on a combat bike.",
             "min": 1,
             "max": 1,
+            "category": "specialist",
             "rules": ["character", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -203,6 +209,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "command",
             "rules": ["character", "fear", {"id": "invulnerable", "x": 1}],
             "models": [
                 {
@@ -232,6 +239,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 10,
             "max": 30,
+            "category": "core",
             "models": [
                 {
                     "name": "Cultist",
@@ -258,6 +266,7 @@
             "description": "Marines corrupted by the dark gods.",
             "min": 5,
             "max": 20,
+            "category": "core",
             "models": [
                 {
                     "name": "Traitor Leader",
@@ -310,10 +319,11 @@
             "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
             "min": 5,
             "max": 15,
+            "category": "specialist",
             "rules": ["relentless"],
             "models": [
                 {
-                    "name": "Traitor Leader",
+                    "name": "Traitor Devastator Leader",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 6,
@@ -377,6 +387,7 @@
             "description": "A squad of traitor marines that have been gifted with daemonic mutations to aid them in battle.",
             "min": 5,
             "max": 10,
+            "category": "specialist",
             "rules": ["mutations"],
             "models": [
                 {
@@ -400,6 +411,7 @@
             "description": "A squad of traitor marines that have been gifted with wings to aid them in battle.",
             "min": 5,
             "max": 10,
+            "category": "strike",
             "rules": ["mutations"],
             "models": [
                 {
@@ -423,6 +435,7 @@
             "description": "A squad of traitor marines that have been gifted with significant daemonic mutations to aid them in battle.",
             "min": 3,
             "max": 9,
+            "category": "specialist",
             "rules": ["mutations"],
             "models": [
                 {
@@ -446,6 +459,7 @@
             "description": "A squad of elite traitor marines intent on acheiving melee carnage.",
             "min": 5,
             "max": 20,
+            "category": "strike",
             "rules": ["ambush", "furious", "fly"],
             "models": [
                 {
@@ -490,16 +504,17 @@
                 }
             ]
         },
-        "Havoc_destoyers": {
+        "havoc_destoyers": {
             "name": "Traitor Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods.",
             "rules": ["ambush"],
             "min": 5,
             "max": 15,
+            "category": "specialist",
             "models": [
                 {
                     "name": "Traitor Destroyer",
-                    "movement": 4,
+                    "movement": 5,
                     "courage": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -548,6 +563,7 @@
             "rules": ["combat_bike", {"id": "impact", "x": 1}],
             "min": 3,
             "max": 9,
+            "category": "strike",
             "models": [
                 {
                     "name": "Traitor Leader",
@@ -598,6 +614,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 5,
+            "category": "strike",
             "models": [
                 {
                     "name": "Daemon Spawn",
@@ -622,6 +639,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "transport",
             "models": [
                 {
                     "name": "Traitor APC",
@@ -644,57 +662,70 @@
                 }
             ]
         },
-        "battle_tank": {
+        "traitor_tank": {
             "name": "Traitor Battle Tank",
-            "description": "An armored tank helmed by havoc brothers.",
-            "rules": [{"id": "impact", "x": 6}],
+            "description": "An armored tank helmed by the Traitor Marines.",
+            "rules": [{"id": "impact", "x": 6}, "armored"],
             "subfactions": ["none", "change_traitors"],
+            "keywords": ["Vehicle"],
             "min": 1,
+            "category": "heavy",
             "max": 1,
             "models": [
                 {
-                    "name": "Traitor Battle Tank",
+                    "name": "Battle Tank",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
-                    "fight": 3,
+                    "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
+                    "wounds": 9,
                     "weapons": ["heavy_autocannon"],
                     "options": [
-                        {"addWeapon": ["marine_rifle", "twin_marine_rifle", "havoc_missiles", {"id": "heavy_machinegun", "count": 2}, {"id": "laser_cannon", "count": 2}]},
-                        {"replaceWeapon": "marine_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]},
-                        {"replaceWeapon": "heavy_autocannon", "withWeapon": ["demolition_cannon", "twin_laser_cannon"]},
-                        {"addRule": [{"id": "spiked_ram"}, {"id": "strider", "name": "Dozer Blade"}]}
+                        {"addRule": [{"id": "spiked_ram"}, {"id": "strider", "name": "Dozer Blade"}]},
+                        {"addWeapon": ["storm_rifle", "havoc_missiles"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
+                                [{"id": "laser_cannon", "mount": ["Left", "Front"]}, {"id": "laser_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        },
+                        {"replaceWeapon": "heavy_autocannon", "withWeapon": ["demolition_cannon", "twin_laser_cannon"]}
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "heavy_battle_tank": {
-            "name": "Traitor Heavy Battle Tank",
-            "description": "A heavily armored tank sporting an arsenal of weapons touched by the dark gods.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}],
+        "marine_heavy_tank": {
+            "name": "Heavy Assault APC",
+            "description": "A heavily armored transport sporting an arsenal of weapons built by the Traitor Marines.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
             "subfactions": ["none", "change_traitors"],
+            "keywords": ["Vehicle"],
             "min": 1,
+            "category": "heavy",
             "max": 1,
             "models": [
                 {
-                    "name": "Traitor Heavy Battle Tank",
+                    "name": "Heavy Assault APC",
                     "movement": 10,
-                    "courage": 8,
+                    "courage": 6,
                     "shoot": 6,
-                    "fight": 3,
+                    "fight": 6,
                     "defense": 13,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 9,
-                    "weapons": ["heavy_machinegun", {"id": "laser_cannon", "count": 2}],
+                    "weapons": [
+                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
+                        {"id": "twin_laser_cannon", "mount": ["Left", "Front"]},
+                        {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}
+                    ],
                     "options": [
-                        {"addWeapon": ["marine_rifle", "twin_marine_rifle", "havoc_missiles"]},
-                        {"replaceWeapon": "marine_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]},
+                        {"addWeapon": ["storm_rifle", "havoc_missiles"]},
+                        {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_minigun", "mount": ["Front"]}},
                         {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}
                     ],
                     "rules": [],
@@ -710,6 +741,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Infernal Brute",
@@ -750,6 +782,7 @@
             "rules": ["fear", "strider", "heavily_armored"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Infernal Stalker",
@@ -775,6 +808,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Traitor Fiend",
@@ -785,7 +819,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}, "stomp"],
+                    "weapons": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 2}]},
                         {"replaceWeapon": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}], "withWeapon": [{"id": "ecto_cannon", "count": 2}, {"id": "forge_cannon", "count": 2}]}
@@ -799,10 +833,11 @@
         "spider_walker": {
             "name": "Spider Walker",
             "description": "An infernal machine built to mimic a venomous spider.",
-            "rules": ["fear", {"id": "regeneration", "x": 2}, "strider"],
+            "rules": [{"id": "regeneration", "x": 2}, "strider"],
             "subfactions": ["none", "change_traitors", "armored"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Spider Walker",
@@ -813,7 +848,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": [{"id": "excruciating_cannons", "count": 2}, "claws_and_tendrils", "stomp"],
+                    "weapons": [{"id": "excruciating_cannons", "count": 2}, "claws_and_tendrils", {"id": "stomp", "count": 2}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -823,10 +858,11 @@
         "crab_walker": {
             "name": "Crab Walker",
             "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
-            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "rules": [{"id": "regeneration", "x": 2}, "heavily_armored"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "heavy",
             "models": [
                 {
                     "name": "Crab Walker",
@@ -836,11 +872,11 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 9,
-                    "weapons": ["battle_cannon", {"id": "crab_claw", "count": 3}, "crab_flail", "stomp"],
+                    "wounds": 6,
+                    "weapons": ["battle_cannon", "crab_claw", "crab_flail", "reaper_cannon", "stomp"],
                     "options": [
                         {"replaceWeapon": "crab_flail", "withWeapon": ["twin_heavy_flamethrower", "havoc_missiles"]},
-                        {"replaceWeapon": "crab_claw", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun", "twin_laser_cannon"]}
+                        {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -855,6 +891,7 @@
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "strike",
             "models": [
                 {
                     "name": "Traitor Dragon",
@@ -881,6 +918,7 @@
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "command",
             "models": [
                 {
                     "name": "Lord of Change",
@@ -913,6 +951,7 @@
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
+            "category": "command",
             "models": [
                 {
                     "name": "Sorceror of Change",
@@ -944,6 +983,7 @@
             "rules": ["character", {"id": "psychic", "x": 1}, {"id": "invulnerable", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
+            "category": "specialist",
             "max": 1,
             "models": [
                 {
@@ -969,6 +1009,7 @@
             "subfactions": ["change_traitors", "none"],
             "min": 5,
             "max": 20,
+            "category": "core",
             "models": [
                 {
                     "name": "Psychic Marine Sorceror",
@@ -1017,10 +1058,11 @@
             "subfactions": ["change_traitors"],
             "min": 5,
             "max": 15,
+            "category": "specialist",
             "models": [
                 {
                     "name": "Psychic Destroyer Sorceror",
-                    "movement": 5,
+                    "movement": 4,
                     "courage": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -1065,6 +1107,7 @@
             "subfactions": ["change_traitors"],
             "min": 10,
             "max": 30,
+            "category": "core",
             "models": [
                 {
                     "name": "Birdmen",
@@ -1090,6 +1133,7 @@
             "subfactions": ["change_traitors"],
             "min": 3,
             "max": 9,
+            "category": "strike",
             "models": [
                 {
                     "name": "Birdmen Disk Rider",
