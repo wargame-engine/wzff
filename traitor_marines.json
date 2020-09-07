@@ -1164,7 +1164,11 @@
         "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 4, "medium": 8, "ap": 3, "rules": ["flame"]},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "damage": 1},
-        "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2}
+        "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
+        "power_storm": {"medium": 18, "attacks": 10},
+        "psychic_inferno":{"medium":12, "ap": 4, "attacks":5},
+        "change_bolt": {"medium": 18, "ap": 7, "attacks": 1, "damage":3}
     },
     "rules": {
         "blessing_of_change": {"name": "Blessing of Change", "description": "Enemy units have -1 to hit when shooting at this unit."},
@@ -1203,6 +1207,15 @@
             "description": "This model gains +3 impact.",
             "description_short": "Impact +3",
             "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
+        },
+        "invigorating_beam": {
+            "effects": [{"type":"alterStat", "statName":"movement", "value": 6, "frequency":5, "target": "friendly", "range": 12}]
+        },
+        "encroaching_mutations":{
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 24}]
+        },
+        "inspiring_word":{
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}, "target": "friendly", "range": 6}]
         }
     },
     "strategies": {
@@ -1247,5 +1260,11 @@
         {"rule": "psychic_helmet", "flavor": "A helmet imbued with psychic energy.", "subfactions": ["change_traitors"]}
     ],
     "powers": {
+        "beam": { "name": "Invigorating Beam", "description": "Target friendly unit within 12\"may immediately make a 6\" move.", "effects": [{"rule": "invigorating_beam"}] },
+        "mutation": { "name": "Encroaching Mutations", "description": "Target enemy unit within 24\" gets -1 to hit the next time it shoots.", "effects": [{"rule": "encroaching_mutations"}] },
+        "inspire": { "name": "Inspiring Word", "description": "Target friendly unit within 6\". When that unit next takes hits, roll a dice for each wound that would be taken. On a roll of equal to or less than 3, that wound is not lost.", "effects": [{"rule": "inspiring_word"}] },
+        "storm": { "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 10 hits.", "effects": [{"weapon": "power_storm"}] },
+        "inferno": { "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 5 hit with AP 4.", "effects": [{"weapon": "psychic_inferno"}] },
+        "bolt": {"name": "Change Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 7 and Damage 3.", "effects":[{"weapon": "change_bolt"}]}
     }
 }
