@@ -14,7 +14,7 @@
             "models": [
                 {
                     "name": "Troupe Master",
-                    "movement": 8,
+                    "movement": 7,
                     "courage": 8,
                     "shoot": 7,
                     "fight": 7,
@@ -47,7 +47,7 @@
                 {
                     "name": "Solitaire",
                     "courage": 8,
-                    "movement": 10,
+                    "movement": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
@@ -73,7 +73,7 @@
                 {
                     "name": "Elven Seer",
                     "courage": 8,
-                    "movement": 8,
+                    "movement": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
@@ -103,7 +103,7 @@
                 {
                     "name": "Jester Assassin",
                     "courage": 8,
-                    "movement": 8,
+                    "movement": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
@@ -128,7 +128,7 @@
                 {
                     "name": "Jester",
                     "courage": 7,
-                    "movement": 8,
+                    "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
@@ -159,7 +159,7 @@
                 {
                     "name": "Mimes",
                     "courage": 6,
-                    "movement": 8,
+                    "movement": 7,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 5,
@@ -184,7 +184,7 @@
                 {
                     "name": "Jetbikes",
                     "courage": 7,
-                    "movement": 10,
+                    "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
@@ -213,7 +213,7 @@
                 {
                     "name": "Hover Tank",
                     "courage": 7,
-                    "movement": 12,
+                    "movement": 10,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
@@ -237,7 +237,7 @@
                 {
                     "name": "Hover Tank",
                     "courage": 7,
-                    "movement": 12,
+                    "movement": 10,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
@@ -290,17 +290,17 @@
         },
         "blur_field": {
             "name": "Blur Field",
-            "description": "Models suffer -1 Accuracy when shooting at this unit.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 30, "target": "enemy"}]
+            "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "targetModels": 1, "target": "enemy"}, {"type": "alterStat", "statName": "fight", "value": 1, "targetModels": 1, "target": "enemy"}]
         },
         "power_void": {
-            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 18}]
+            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 12}]
         },
         "power_fortify": {
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
         },
         "power_strength": {
-            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "target": "friendly", "range": 18}]
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 2, "target": "friendly", "range": 18, "filter": {"keywords": ["Infantry"]}}]
         },
         "power_speed": {
             "effects": [{"type": "alterStat", "statName": "movement", "value": 6, "target": "friendly", "range": 12, "frequency": 5}]
@@ -352,9 +352,9 @@
     },
     "relics": [],
     "powers": {
-        "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 AP the next time it fights in melee.", "effects": [{"rule": "power_strength"}] },
+        "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "effects": [{"rule": "power_strength"}] },
         "fortify": { "name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "effects": [{"rule": "power_speed"}] },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
         "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}] },
         "death": { "name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}] }
     }

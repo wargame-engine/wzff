@@ -474,7 +474,7 @@
         "stealth": {
             "name": "Stealth",
             "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"}]
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "targetModels": 1, "frequency": 5, "target": "enemy"}]
         },
         "relentless": {
             "name": "Relentless",
