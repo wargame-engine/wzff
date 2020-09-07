@@ -1359,7 +1359,7 @@
         },
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}}]},
         "power_void": {
-            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "friendly", "range": 12}]
+            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 18}]
         },
         "power_fortify": {
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
@@ -1470,7 +1470,7 @@
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]},
         "might": { "name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +2 Strength for its next attack.", "effects": [{"rule": "power_strength"}] },
         "fortify": { "name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "effects": [{"rule": "power_fortify"}] },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
         "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}] },
         "bolt": { "name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}] }
     }

@@ -432,7 +432,7 @@
         "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to activate immediately and receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
@@ -450,7 +450,7 @@
         },
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
-            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
