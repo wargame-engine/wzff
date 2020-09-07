@@ -533,10 +533,11 @@
                 }
             ]
         },
-        "Mutated_destoyers": {
+        "mutated_destoyers": {
             "name": "Mutated Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
             "rules": ["ambush", "mutations"],
+            "category": "heavy",
             "min": 3,
             "max": 9,
             "models": [
