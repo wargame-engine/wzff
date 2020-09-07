@@ -599,6 +599,10 @@
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fearless"],
+            "options": [
+                {"addWeapon": "grenade_launcher", "modelLimit": "all"},
+                {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}, "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Prime Aggression Sergeant",
@@ -610,7 +614,6 @@
                     "reflexes": 7,
                     "wounds": 3,
                     "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
-                    "options": [{"addWeapon": "grenade_launcher"}, {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}}],
                     "min": 1,
                     "max": 1
                 },
@@ -624,10 +627,6 @@
                     "reflexes": 7,
                     "wounds": 3,
                     "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
-                    "options": [
-                        {"addWeapon": "grenade_launcher", "modelLimit": "all"},
-                        {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}, "modelLimit": "all"}
-                    ],
                     "min": 2,
                     "max": 5
                 }
