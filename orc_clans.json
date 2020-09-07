@@ -308,12 +308,12 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "movement": 5,
+                    "movement": 6,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 5, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 6, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
