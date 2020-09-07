@@ -765,7 +765,7 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, "open_topped", "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, {"id": "open_topped", "x": 11}, "armored"],
             "models": [
                 {
                     "name": "Truck",
@@ -779,8 +779,8 @@
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": "heavy_machinegun", "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank"]},
-                        {"replaceRule": "open_topped", "withRule": "extra_armor"}
+                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
+                        {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"}
                     ],
                     "min": 1,
                     "max": 1
@@ -794,7 +794,7 @@
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
             "category": "transport",
-            "rules": [{"id": "transport", "x": 11}, "open_topped", "fly"],
+            "rules": [{"id": "transport", "x": 11}, {"id": "open_topped", "x": 11}, "fly"],
             "models": [
                 {
                     "name": "War Helicopter",
@@ -816,7 +816,7 @@
                                 {"id": "heavy_flamethrower", "mount": ["Front", "Left", "Right"]}
                             ]
                         },
-                        {"replaceRule": "open_topped", "withRule": "extra_armor"}
+                        {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"}
                     ],
                     "min": 1,
                     "max": 1
@@ -859,7 +859,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "open_topped", "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", {"id": "open_topped", "x": 11}],
             "models": [
                 {
                     "name": "Battle Truck",
@@ -873,8 +873,8 @@
                     "weapons": [{"id": "heavy_machinegun"}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank"]},
-                        {"replaceRule": "open_topped", "withRule": "extra_armor"},
+                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
+                        {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"},
                         {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon"], "limit": 1},
                         {"addWeapon": ["heavy_mortar"]},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}

@@ -207,7 +207,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, "open_topped"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}],
             "keywords": ["Vehicle"],
             "models": [
                 {
