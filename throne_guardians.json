@@ -1,0 +1,187 @@
+{
+    "name": "Throne Guardians",
+    "id": "throne_guardians",
+    "color": "#D4AF37",
+    "units": {
+        "throne_captain": {
+            "name": "Throne Captain",
+            "description": "Highly trained and elite fighters.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "rules": ["fearless"],
+            "models": [
+                {
+                    "name": "Throne Captain",
+                    "courage": 7,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 4,
+                    "weapons": [{"id": "guardian_sword", "count": 2}, "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": {"id": "guardian_sword", "count": 2}, "withWeapon": [{"id": "guardian_spear", "count": 2}, ["guardian_rifle", {"id": "heavy_ccw", "count": 3}], {"id": "guardian_axe", "count": 2}]},
+                        {"addWeapon": {"id": "guardian_dagger", "count": 2}},
+                        {"addRule": "guardian_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "throne_guardians": {
+            "name": "Throne Guardians",
+            "description": "Highly trained and elite fighters.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "rules": ["fearless"],
+            "options": [
+                {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]},
+                {"addWeapon": "guardian_dagger"},
+                {"addRule": "guardian_shield"}
+            ],
+            "models": [
+                {
+                    "name": "Throne Guardian",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 2,
+                    "weapons": ["guardian_sword", "at_grenade"],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "throne_wardens": {
+            "name": "Throne Wardens",
+            "description": "Watch masters and veteran throne guardians.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "rules": ["fearless"],
+            "options": [
+                {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}], "guardian_axe"]},
+                {"addWeapon": "guardian_dagger"},
+                {"addRule": "guardian_shield"}
+            ],
+            "models": [
+                {
+                    "name": "Throne Guardian",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["guardian_sword", "at_grenade"],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "guardian_heavy_tank": {
+            "name": "Relic Heavy Assault APC",
+            "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", {"id": "regeneration", "x": 2}],
+            "models": [
+                {
+                    "name": "Relic Heavy Assault APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 9,
+                    "weapons": [
+                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
+                        {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}
+                    ],
+                    "options": [
+                        {"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
+                        {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "guardian_dagger": {
+            "name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 2
+        },
+        "guardian_spear": {
+            "name": "Guardian Spear",
+            "profiles": [
+                {"name": "Blade", "attacks": 3, "short": "Melee", "ap": 4},
+                {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "damage": 2}
+            ]
+        },
+        "guardian_axe": {
+            "name": "Guardian Axe",
+            "profiles": [
+                {"name": "Blade", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
+                {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "damage": 2}
+            ]
+        },
+        "guardian_rifle": {
+            "name": "Guardian Rifle",
+            "profiles": [
+                {"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 2},
+                {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "damage": 2}
+            ]
+        },
+        "guardian_sword": {
+            "name": "Guardian Sword",
+            "profiles": [
+                {"name": "Blade", "attacks": 3, "short": "Melee", "ap": 3},
+                {"name": "Pistol", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]}
+            ]
+        }
+    },
+    "rules": {
+        "guardian_shield": {
+            "name": "Guardian Shield",
+            "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
+            "effects": [{"type": "regeneration", "frequency": 3}]
+        }
+    },
+    "relics": [
+    ],
+    "strategies": [
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "name": "Tactical Flexibility",
+            "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
+            "flavor": "Marines often split off into small tactical units in order to cover more ground.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "name": "Genetically Engineered",
+            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
+            "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "name": "Expert Marksmen",
+            "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
+            "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
+            "cost": 2
+        }
+    ],
+    "powers": {
+    }
+}
