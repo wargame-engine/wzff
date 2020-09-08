@@ -174,7 +174,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", {"id": "chainsword", "count": 1}],
+                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
                         {"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "plasma_pistol", "count": 1}]}
                     ],
@@ -190,7 +190,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade"],
+                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
                         {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 1}
                     ],
