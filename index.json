@@ -153,15 +153,15 @@
         "plasma_cannon": {
             "name": "Plasma Cannon",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 2, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
             ]
         },
         "twin_plasma_cannon": {
             "name": "Twin Plasma Cannon",
             "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
+                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 2, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
             ]
         },
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
