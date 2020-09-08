@@ -24,11 +24,8 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", {"id":"ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id":"ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
-                    ],
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -83,11 +80,8 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", {"id":"ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id":"ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
-                    ],
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -124,9 +118,7 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": "field_radio", "modelLimit": 1}
-                    ],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
                     "rules": [],
                     "min": 9,
                     "max": 29
@@ -140,9 +132,7 @@
                     "reflexes": 4,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}
-                    ]}],
+                    "options": [{"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -179,9 +169,7 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": "field_radio", "modelLimit": 1}
-                    ],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
                     "rules": [],
                     "min": 9,
                     "max": 9
@@ -195,9 +183,7 @@
                     "reflexes": 4,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}
-                    ],
+                    "options": [{"replaceWeapon": {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "withWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]}],
                     "rules": [],
                     "min": 0,
                     "max": 1
@@ -235,7 +221,8 @@
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]},  {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"},
+                        {"replaceWeapon": ["defense_rifle"], "withWeapon": [["ccw", "pistol"]]},
+                        {"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"},
                         {"addRule": "field_radio", "modelLimit": 1}
                     ],
                     "min": 9,
@@ -266,7 +253,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "keywords": ["Vehicle"],
+            "keywords": ["Vehicle", "Battle Tank"],
             "rules": ["armored"],
             "models": [
                 {
@@ -278,9 +265,10 @@
                     "movement": 10,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": ["battle_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
+                    "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
+                        {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
@@ -302,13 +290,10 @@
         }
     },
     "weapons": {
-        "nova_cannon": {
-            "name": "Nova Cannon",
-            "profiles": [
-                {"name": "HE", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
-                {"name": "AP", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 3}
-            ]
-        }
+        "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
+        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 6},
+        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 20, "short": 12, "medium": 24, "ap": 2}
     },
     "rules": {
         "extra_armor": {

@@ -240,8 +240,8 @@
         "heavy_plasma_cannon": {
             "name": "Heavy Plasma Cannon",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 6, "medium": 12, "ap": 7, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
             ]
         },
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]},
