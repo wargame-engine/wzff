@@ -7,6 +7,7 @@
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"},
+        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "alliance": "imperial_alliance"},
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance"},
         "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance"},
         "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance"},
@@ -64,7 +65,7 @@
             "name": "Grenades",
             "profiles": [
                 {"name": "Frag", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 1, "short": 6, "ap": 3, "damage": 2, "rules": ["grenade"]}
+                {"name": "AT", "attacks": 1, "short": 6, "ap": 4, "damage": 2, "rules": ["grenade"]}
             ]
         },
         "grenade_launcher_attachment": {
@@ -80,6 +81,7 @@
         "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
+        "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 2, "ap": 4, "short": "Melee"},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
         "marine_pistol": {"name": "Marine Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
@@ -90,6 +92,7 @@
         "machinegun": {"name": "Machinegun", "attacks": 3, "short": 18, "medium": 36, "long": 45},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
         "minigun": {"name": "Minigun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
+        "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "missile_launcher": {
             "name": "Missile Launcher",
             "profiles": [
@@ -114,7 +117,8 @@
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
-        "shotgun": {"name": "Shotgun", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
+        "marine_shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["rending"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2},
         "plasma_pistol": {
             "name": "Plasma Pistol",
@@ -161,7 +165,8 @@
             ]
         },
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
-        "energy_axe": {"name": "Energy Axe", "attacks": 2, "short": "Melee", "ap": 4, "damage": 1},
+        "energy_axe": {"name": "Energy Axe", "attacks": 2, "short": "Melee", "ap": 3, "damage": 1},
+        "energy_mace": {"name": "Energy Mace", "attacks": 2, "short": "Melee", "ap": 4, "damage": 1},
         "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
         "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
         "combi_flamer": {
@@ -172,8 +177,9 @@
             "name": "Combi-fusion",
             "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
         },
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["pistol", "fusion"]},
         "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion"]},
-        "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
+        "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_autocannon": {"name": "Twin Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": ["anti_air"]},
@@ -442,7 +448,7 @@
         },
         "field_orders": {
             "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
             "effects": [
                 {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
                 {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},

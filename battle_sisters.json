@@ -2,40 +2,109 @@
     "id": "battle_sisters",
     "name": "Battle Sisters",
     "units": {
-        "battle_sisters": {
-            "name": "Battle Sisters",
-            "description": "A group of shooting assault sisters.",
+        "high_sister": {
+            "name": "High Sister",
+            "description": "A High sister of the Battle Sisters order.",
             "min": 5,
             "max": 10,
-            "rules": [],
+            "category": "command",
+            "rules": ["character", {"id": "invulnerable", "x": 1}],
+            "models": [
+                {
+                    "name": "High Sister",
+                    "courage": 8,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 7,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "battle_sisters": {
+            "name": "Battle Sisters",
+            "description": "A group of sisters with marine rifles to pack an extra punch.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
             "models": [
                 {
                     "name": "Sister Superior",
-                    "movement": 5,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 6,
+                    "movement": 6,
+                    "courage": 7, 
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
                     "reflexes": 6,
-                    "agility": 7,
                     "wounds": 1,
-                    "weapons": ["assault_rifle", {"id": "ccw", "count": 1}],
-                    "rules": [],
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Battle Sister",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 6,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 6,
-                    "reflexes": 7,
-                    "agility": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["assault_rifle", {"id": "ccw", "count": 1}],
-                    "rules": [],
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["heavy_machinegun", "heavy_flamethrower", "heavy_fusion_rifle", "flamethrower", "fusion_rifle", "storm_rifle"], "modelLimit": 1},
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "storm_rifle"], "modelLimit": 1}
+                    ],
+                    "min": 4,
+                    "max": 14
+                }
+            ]
+        },
+        "redemption_sisters": {
+            "name": "Redemption Sisters",
+            "description": "A group of sisters atoning for their sins with righteous fury.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "rules": [
+                {"id": "regeneration", "x": 4}
+            ],
+            "models": [
+                {
+                    "name": "Redemption Sister Superior",
+                    "movement": 6,
+                    "courage": 7, 
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "shock_whip", "count": 2}, "at_grenade"],
+                    "options": [
+                        {"addWeapon": "marine_pistol"}
+                    ],
+                    "min": 0,
+                    "max": 1
+                },
+                {
+                    "name": "Redemption Sister",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": [{"id": "heavy_chainsword", "count": 1}],
                     "min": 4,
                     "max": 9
                 }
@@ -43,44 +112,122 @@
         },
         "assault_sisters": {
             "name": "Assault Sisters",
-            "description": "A group of melee assault sisters.",
+            "description": "A group of sisters with a variety of close combat weapons.",
             "min": 5,
             "max": 10,
-            "rules": [],
+            "category": "core",
+            "options": [
+                {"replaceWeapon": {"id": "chainsword", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 1}]}
+            ],
             "models": [
                 {
                     "name": "Assault Sister Superior",
-                    "movement": 5,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 6,
-                    "reflexes": 7,
-                    "agility": 7,
+                    "movement": 6,
+                    "courage": 7, 
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["pistol", {"id": "chainsword", "count": 1}],
-                    "rules": [],
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol"]}
+                    ],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Assault Sister",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 6,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 6,
-                    "reflexes": 7,
-                    "agility": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["pistol", {"id": "chainsword", "count": 1}],
-                    "rules": [],
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 1}],
+                    "min": 4,
+                    "max": 14
+                }
+            ]
+        },
+        "winged_sisters": {
+            "name": "Winged Sisters",
+            "description": "A group of sisters with flying jetpacks.",
+            "min": 5,
+            "max": 10,
+            "category": "strike",
+            "rules": [
+                "ambush",
+                "fly"
+            ],
+            "options": [
+                {"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 1}, {"id": "chainsword", "count": 1}]}
+            ],
+            "models": [
+                {
+                    "name": "Winged Sister Superior",
+                    "movement": 8,
+                    "courage": 7, 
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", {"id": "chainsword", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "plasma_pistol", "count": 1}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Winged Sister",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 1}
+                    ],
                     "min": 4,
                     "max": 9
                 }
             ]
+        },
+        "apc": {
+            "name": "APC",
+            "description": "A durable transport with optional heavy weapons.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["storm_rifle"],
+                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
-    "weapons": {},
+    "weapons": {
+        "shock_whip": {"name": "Shock Whip", "attacks": 2, "ap": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]}
+    },
     "rules": {}
 }

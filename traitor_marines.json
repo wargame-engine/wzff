@@ -1095,7 +1095,6 @@
                         {"limit": 1, "addWeapon": ["missile_rack"]},
                         {"limit": 1, "replaceWeapon": "twin_marine_rifle", "withWeapon": ["energy_sword"]}
                     ],
-                    "rules": [],
                     "min": 4,
                     "max": 14
                 }
@@ -1119,9 +1118,8 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": ["pistol", {"id": "ccw", "count": 2}], "withWeapon": {"id": "ccw", "count": 4}}],
-                    "rules": [],
+                    "weapons": ["marine_pistol", "chainsword"],
+                    "options": [{"replaceWeapon": ["marine_pistol", "chainsword"], "withWeapon": "hexed_blades"}],
                     "min": 10,
                     "max": 30
                 }
@@ -1145,8 +1143,8 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["pistol", {"id": "ccw", "x": 1}],
-                    "options": [{"replaceWeapon": ["pistol", {"id": "ccw", "x": 1}], "withWeapon": [{"id": "ccw", "count": 4}, "hexed_spear", ["hexed_bow", "ccw"]]}],
+                    "weapons": ["marine_pistol", "chainsword"],
+                    "options": [{"replaceWeapon": ["marine_pistol", "chainsword"], "withWeapon": ["hexed_blades", "hexed_spear", ["hexed_bow", "ccw"]]}],
                     "rules": [],
                     "min": 3,
                     "max": 9
@@ -1162,8 +1160,9 @@
         "reaper_minigun": {"name": "Reaper Minigun", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 2},
         "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 4, "medium": 8, "ap": 3, "rules": ["flame"]},
+        "hexed_blades": {"name": "Hexed Blades", "attacks": 3, "short": "Melee", "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
-        "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "damage": 1},
+        "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
         "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
         "power_storm": {"medium": 18, "attacks": 10},

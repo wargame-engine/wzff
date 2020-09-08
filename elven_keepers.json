@@ -255,7 +255,6 @@
         "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"], "ap":1},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap":2, "damage":2},
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["pistol", "fusion"]},
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap":3},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 1, "damage": 2},
