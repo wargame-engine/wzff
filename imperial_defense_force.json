@@ -455,7 +455,7 @@
                 {
                     "name": "Stormtrooper Sergeant",
                     "courage": 6,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
@@ -474,7 +474,7 @@
                 {
                     "name": "Stormtrooper",
                     "courage": 5,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
