@@ -4,7 +4,7 @@
     "color": "#D4AF37",
     "units": {
         "throne_captain": {
-            "name": "Throne Captain",
+            "name": "Guardian Captain",
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
@@ -12,7 +12,7 @@
             "rules": ["fearless"],
             "models": [
                 {
-                    "name": "Throne Captain",
+                    "name": "Guardian Captain",
                     "courage": 7,
                     "shoot": 8,
                     "fight": 8,
@@ -31,7 +31,7 @@
             ]
         },
         "throne_guardians": {
-            "name": "Throne Guardians",
+            "name": "Guardians",
             "description": "Highly trained and elite fighters.",
             "min": 5,
             "max": 10,
@@ -44,7 +44,7 @@
             ],
             "models": [
                 {
-                    "name": "Throne Guardian",
+                    "name": "Guardian",
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
@@ -58,7 +58,7 @@
             ]
         },
         "throne_wardens": {
-            "name": "Throne Wardens",
+            "name": "Wardens",
             "description": "Watch masters and veteran throne guardians.",
             "min": 5,
             "max": 10,
@@ -71,7 +71,7 @@
             ],
             "models": [
                 {
-                    "name": "Throne Guardian",
+                    "name": "Warden",
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,

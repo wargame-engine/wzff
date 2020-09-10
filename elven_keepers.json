@@ -290,7 +290,7 @@
         "blur_field": {
             "name": "Blur Field",
             "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "targetModels": 1, "target": "enemy"}, {"type": "alterStat", "statName": "fight", "value": 1, "targetModels": 1, "target": "enemy"}]
+            "effects": [{"type": "stealth", "value": 1}]
         },
         "power_void": {
             "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 12}]

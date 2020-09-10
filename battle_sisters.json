@@ -30,12 +30,72 @@
                 }
             ]
         },
+        "herald_sister": {
+            "name": "Herald Sister",
+            "description": "A sister herald with banner.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "rules": ["character", "banner_of_focus"],
+            "models": [
+                {
+                    "name": "Herald Sister",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "ward", "name": "Faith Shield"}]},
+                        {"replaceRule": "banner_of_focus", "withRule": ["banner_of_justice", "banner_of_wrath"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "sister_nurse": {
+            "name": "Nurse Sister",
+            "description": "A sister herald with banner.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "rules": ["character", "medical_training"],
+            "models": [
+                {
+                    "name": "Nurse Sister",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "battle_sisters": {
             "name": "Battle Sisters",
             "description": "A group of sisters with marine rifles to pack an extra punch.",
             "min": 5,
             "max": 10,
             "category": "core",
+            "options": [
+                {"addRule": [{"id": "scout", "name": "Dominion"}, "celestial"], "limit": 1, "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Sister Superior",
@@ -199,10 +259,80 @@
                 }
             ]
         },
+        "devastator_sisters": {
+            "name": "Devastator Sisters",
+            "description": "A group of sisters packed with heavy weapons to deal high damage.",
+            "min": 5,
+            "max": 10,
+            "category": "heavy",
+            "options": [
+                {"addRule": "angel_assistant", "modelLimit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Devastator Sister Superior",
+                    "movement": 6,
+                    "courage": 7, 
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Devastator Sister",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["heavy_machinegun", "heavy_flamethrower", "heavy_fusion_rifle"], "modelLimit": 4}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "redemption_walker": {
+            "name": "Redemption Walker",
+            "description": "A walker atoning for its sins with righteous fury.",
+            "rules": [{"id": "impact", "x": 3}, "walker", "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Redemption Walker",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "heavy_flamethrower", "count": 2}, {"id": "walker_flail", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "count": 2}, "withWeapon": [{"id": "heavy_machinegun", "count": 2}]},
+                        {"replaceWeapon": {"id": "walker_flail", "count": 2}, "withWeapon": [{"id": "walker_saw", "count": 2}]},
+                        {"addRule": [{"id": "regeneration", "x": 4, "name": "Berzerk"}, "coffin_enclosure"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "apc": {
             "name": "APC",
             "description": "A durable transport with optional heavy weapons.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -224,10 +354,106 @@
                     "max": 1
                 }
             ]
+        },
+        "inferno_apc": {
+            "name": "Inferno APC",
+            "description": "A durable transport with attached heavy weapons.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 6}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Inferno APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "twin_heavy_flamethrower"],
+                    "options": [
+                        {"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]},
+                        {"replaceWeapon": "twin_heavy_flamethrower", "withWeapon": ["twin_heavy_machinegun", "twin_heavy_fusion_rifle"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "organ_tank": {
+            "name": "Organ Tank",
+            "description": "A light tank with a unique organ-shaped missile array.",
+            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Organ Tank",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "exorcision_missiles"],
+                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
-        "shock_whip": {"name": "Shock Whip", "attacks": 2, "ap": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]}
+        "walker_flail": {"name": "Walker Flail", "attacks": 2, "ap": 3, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
+        "walker_saw": {"name": "Walker Saw", "attacks": 2, "ap": 6, "damage": 2, "short": "Melee"},
+        "shock_whip": {"name": "Shock Whip", "attacks": 2, "ap": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
+        "organ_missiles": {"name": "Organ Missiles", "profiles": [
+            {"name": "HE", "attacks": 3, "ap": 3, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 2}, "indirect"]},
+            {"name": "AT", "attacks": 2, "ap": 7, "short": 24, "medium": 48, "damage": 3, "rules": ["indirect"]}
+        ]}
     },
-    "rules": {}
+    "rules": {
+        "banner_of_justice": {
+            "name": "Banner of Justice",
+            "description": "Enemy units within 6\" get -1 courage.",
+            "effects": [{"type": "grantRule", "rule": {"id": "fear", "x": 2}, "target": "enemy"}]
+        },
+        "banner_of_wrath": {
+            "name": "Banner of Wrath",
+            "description": "This model and friendly Infantry units within 3\" the Furious special rule.",
+            "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+        },
+        "banner_of_focus": {
+            "name": "Banner of Focus",
+            "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+        },
+        "celestial": {
+            "name": "Celestial",
+            "hidden": true,
+            "description": "This model gets +1 Resist.",
+            "description_short": "Resist +1",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        },
+        "coffin_enclosure": {
+            "name": "Coffin Enclosure",
+            "hidden": true,
+            "description": "This model gets +1 Resist.",
+            "description_short": "Resist +1",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+        },
+        "angel_assistant": {
+            "name": "Angel Assistant",
+            "hidden": true,
+            "description_short": "Relentless (All Models)",
+            "description": "This unit gains the Relentless special rule.",
+            "effects": [{"type": "grantRule", "rule": "relentless", "target": "friendly", "frequency": 20}]
+        }
+    }
 }

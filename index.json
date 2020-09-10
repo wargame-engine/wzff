@@ -8,7 +8,7 @@
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"},
-        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "alliance": "imperial_alliance"},
+        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "secondary_color": "#9a1115", "alliance": "imperial_alliance"},
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance"},
         "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance"},
         "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance"},
@@ -184,10 +184,11 @@
         "hunter_missiles": {"name": "Hunter Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_autocannon": {"name": "Twin Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2},
-        "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": ["anti_air"]},
+        "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24},
+        "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24},
         "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},
         "heavy_defense_rifle": {"name": "Heavy Defense Rifle", "attacks": 1, "short": 12, "ap": 1, "medium": 24},
         "heavy_pistol": {"name": "Heavy Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
@@ -217,6 +218,7 @@
         "stomp": {"name": "Stomp", "attacks": 1, "short": "Melee", "ap": 1},
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
         "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
+        "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
         "crab_claw": {"name": "Crab Claw", "attacks": 2, "short": "Melee", "ap": 7, "damage": 3},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 3},
         "crab_flail": {"name": "Crab Flail", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
@@ -256,6 +258,7 @@
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 12, "short": 18, "medium": 36, "ap": 2},
         "gatling_gun": {"name": "Gatling Gun", "attacks": 6, "short": 12, "medium": 24, "ap": 2},
+        "twin_gatling_gun": {"name": "Twin Gatling Gun", "attacks": 12, "short": 12, "medium": 24, "ap": 2},
         "heavy_laser_cannon": {"name": "Heavy Laser Cannon", "ap": 8, "damage": 5, "attacks": 2, "short": 24, "medium": 48},
         "laser_talon": {"name": "Laser Talon", "ap": 7, "damage": 3, "attacks": 2, "short": 12, "medium": 24},
         "prime_rifle": {"name": "Prime Rifle", "attacks": 2, "short": 15, "medium": 30, "ap": 1},
@@ -310,6 +313,11 @@
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"}
     },
     "rules": {
+        "medical_training": {
+            "name": "Medical Training",
+            "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
+            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly"}]
+        },
         "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
         "legend_wounds": {
             "name": "Resilient",
@@ -485,7 +493,7 @@
         "stealth": {
             "name": "Stealth",
             "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "targetModels": 1, "frequency": 5, "target": "enemy"}]
+            "effects": [{"type": "stealth", "value": 1, "frequency": 5}]
         },
         "relentless": {
             "name": "Relentless",
@@ -537,7 +545,7 @@
         },
         "hover_mode": {
             "name": "Hover Mode",
-            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, it loses its -1 to hit, but is not requried to make a move when activated."
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but is not requried to make a move action."
         }
     }
 }

@@ -333,6 +333,36 @@
                 }
             ]
         },
+        "command_squad": {
+            "name": "Command Squad",
+            "description": "A smaller infantry squad used to support a commanding officer.",
+            "category": "specialist",
+            "min": 4,
+            "max": 4,
+            "models": [
+                {
+                    "name": "Veteran Trooper",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["field_radio"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["medical_training"], "modelLimit": 1},
+                        {"addWeapon": ["artillery_barrage"], "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "heavy_flamethrower", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun", "flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]},
+                        {"addRule": ["heavy_armor"], "modelLimit": "all"}
+                    ],
+                    "min": 4,
+                    "max": 4
+                }
+            ]
+        },
         "heavy_weapon_squad": {
             "name": "Heavy Weapons Squad",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
@@ -499,13 +529,53 @@
                     "defense": 5,
                     "reflexes": 4,
                     "wounds": 2,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle"], "modelLimit": 4}
                     ],
                     "min": 4,
                     "max": 9
+                }
+            ]
+        },
+        "ogres": {
+            "name": "Ogres",
+            "description": "A squad of super-strong large human-like creatures.",
+            "category": "specialist",
+            "min": 5,
+            "max": 10,
+            "options": [
+                {"addRule": ["ogre_shields"]},
+                {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
+                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
+            ],
+            "models": [
+                {
+                    "name": "Ogre Leader",
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "wounds": 3,
+                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Ogre",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "movement": 6,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "wounds": 3,
+                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 2,
+                    "max": 8
                 }
             ]
         },
@@ -591,6 +661,245 @@
                     "max": 1
                 }
             ]
+        },
+        "light_apc": {
+            "name": "APC",
+            "description": "A light transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "armored_truck": {
+            "name": "Armored Truck",
+            "description": "An armored transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Truck",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "autocannon", "count": 2, "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "armored_stormtrooper_truck": {
+            "name": "Armored Stormtrooper Truck",
+            "description": "An armored transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Truck",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": ["light_battle_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
+                        {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_vehicle": {
+            "name": "Assault Vehicle",
+            "description": "A light assault vehicle with multiple roles.",
+            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Assault Vehicle",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "acid_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"replaceWeapon": "acid_cannon", "withWeapon": ["fusion_cannon", "flamestorm_cannon"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "support_vehicle": {
+            "name": "Support Vehicle",
+            "description": "A support vehicle with multiple roles from artillery to anti-air.",
+            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Support Vehicle",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_aa_autocannon", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": {"id": "twin_aa_autocannon", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_shard_mortar", "count": 2}, "eagle_rockets", "death_missile"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "light_walker": {
+            "name": "Light Walker",
+            "description": "A lightly equipped recon walker.",
+            "rules": ["armored"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Light Walker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["laser_machinegun", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "stealth", "name": "Camouflage Netting"}, "heavy_armor", "scout"]},
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"replaceWeapon": "laser_machinegun", "withWeapon": ["missile_launcher", "heavy_flamethrower", "laser_cannon", "autocannon"]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "light_gunship": {
+            "name": "Light Transport Gunship",
+            "description": "A light gunship with sliding doors for troop transport.",
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Light Transport Gunship",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
+                        {"addWeapon": [{"id": "strike_missiles", "mount": ["Front"]}, {"id": "rocket_pod", "count": 2, "mount": ["Front"]}]},
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_gunship": {
+            "name": "Heavy Gunship",
+            "description": "A heavy gunship with a variety of weapon options.",
+            "rules": ["aircraft", "hover_mode"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Gunship",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": [{"id": "laser_cannon", "mount": ["Front"]}, {"id": "heavy_machinegun", "mount": ["Front"]}]},
+                        {"replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]}, "withWeapon": [{"id": "rocket_pod", "count": 2, "mount": ["Front"]}, {"id": "twin_laser_cannon", "count": 2, "mount": ["Front"]}, {"id": "gatling_gun", "count": 2, "mount": ["Front"]}]},
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
@@ -599,9 +908,40 @@
         "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 6},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 20, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
-        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "damage": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]}
+        "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
+        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "damage": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "heavy_shotgun": {"name": "Heavy Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
+        "wrist_grenades": {"name": "Wrist Grenades", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "heavy_volley_gun": {"name": "Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
+        "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5, "damage": 2, "short": "Melee"},
+        "light_battle_cannon": {"name": "Light Battle Cannon", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
+        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
+        "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["flame"]},
+        "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 6}]},
+        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
+        "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},
+        "twin_shard_mortar": {"name": "Twin Shard Mortar", "attacks": 2, "ap": 2, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "missile_rack": {
+            "name": "Missile Rack",
+            "profiles": [
+                {"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "damage": 3, "ap": 6}
+            ]
+        },
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
+        "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
+        "ogre_shields": {
+            "name": "Ogre Shields",
+            "description_short": "+1 Resist",
+            "description": "This unit gets +1 Resist.",
+            "effects": [
+                {"type": "alterStat", "statName": "defense", "value": 1}
+            ]
+        },
         "no_retreat": {
             "name": "No Retreat",
             "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test.",
@@ -645,6 +985,54 @@
             "name": "Field Radio (Armored)",
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule.",
             "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 5}]
+        },
+        "banner": {
+            "name": "Inspiring Banner",
+            "description": "Friendly Infantry units within 6\" get +1 Courage.",
+            "effects": [{"type": "alterStat", "statName": "courage", "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}]
+        },
+        "power_fortify": {
+            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
+        },
+        "power_barrier": {
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1, "target": "friendly", "range": 12}]
+        },
+        "power_shroud": {
+            "effects": [{"type": "grantRule", "rule": "stealth", "frequency": 20, "target": "friendly", "range": 12}]
+        }
+    },
+    "powers": {
+        "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Resist the next time it is attacked.", "effects": [{"rule": "power_barrier"}]},
+        "shroud": {"name": "Shroud", "description": "Target friendly unit within 12\" gets -2 to be hit the next time it is attacked.", "effects": [{"rule": "power_shroud"}]},
+        "fortify": {"name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "effects": [{"rule": "power_fortify"}]},
+        "storm": {"name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}]},
+        "bolt": {"name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}]}
+    },
+    "strategies": {
+        "more_grenades": {
+            "name": "More Grenades",
+            "description": "Use when shooting with an Infantry unit. Two additional models may use Grenade weapons.",
+            "cost": 1
+        },
+        "regroup": {
+            "name": "Regroup",
+            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "cost": 1
+        },
+        "high_command": {
+            "name": "High Command",
+            "description": "Use after an Infantry unit with the Field Orders rule activates. One additional unit may activate and benefit from Field Orders.",
+            "cost": 2
+        },
+        "field_repairs": {
+            "name": "Field Repairs",
+            "description": "Use when activating a Vehicle unit. Roll a D10. On a 3 or less the unit regains 3 wounds, otherwise it regains 2 wounds.",
+            "cost": 2
+        },
+        "final_stand": {
+            "name": "Final Stand",
+            "description": "Use when a unit with a Field Radio is destroyed. All units within 3\" receive 3 hits with AP 2.",
+            "cost": 3
         }
     }
 }
