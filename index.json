@@ -29,6 +29,7 @@
     "organizations": {
         "skirmish": {
             "name": "Skirmish Force",
+            "cost": 1,
             "categories": {
                 "command": {
                     "max": 1
@@ -53,6 +54,7 @@
         },
         "engagement": {
             "name": "Engagement Force",
+            "cost": 2,
             "categories": {
                 "command": {
                     "min": 1,
@@ -78,6 +80,7 @@
         },
         "battle": {
             "name": "Battle Force",
+            "cost": 3,
             "categories": {
                 "command": {
                     "min": 2,
@@ -106,6 +109,7 @@
         },
         "strike": {
             "name": "Strike Force",
+            "cost": 2,
             "categories": {
                 "command": {
                     "max": 2
@@ -117,6 +121,7 @@
         },
         "specialist": {
             "name": "Specialist Force",
+            "cost": 2,
             "categories": {
                 "command": {
                     "max": 2
@@ -128,11 +133,9 @@
         },
         "heavy": {
             "name": "Heavy Force",
+            "cost": 2,
             "categories": {
                 "command": {
-                    "max": 2
-                },
-                "core": {
                     "max": 2
                 },
                 "heavy": {
@@ -142,6 +145,7 @@
         },
         "super_heavy": {
             "name": "Super Heavy Force",
+            "cost": 3,
             "categories": {
                 "super_heavy": {
                     "min": 1,
