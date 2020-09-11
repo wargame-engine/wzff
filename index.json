@@ -23,7 +23,132 @@
         "specialist": {"name": "Specialist"},
         "strike": {"name": "Strike"},
         "heavy": {"name": "Heavy"},
-        "transport": {"name": "Transport"}
+        "transport": {"name": "Transport"},
+        "super_heavy": {"name": "Super Heavy"}
+    },
+    "organizations": {
+        "skirmish": {
+            "name": "Skirmish Force",
+            "categories": {
+                "command": {
+                    "max": 1
+                },
+                "core": {
+                    "min": 1,
+                    "max": 3
+                },
+                "specialist": {
+                    "max": 1
+                },
+                "strike": {
+                    "max": 1
+                },
+                "heavy": {
+                    "max": 1
+                },
+                "transport": {
+                    "max": 3
+                }
+            }
+        },
+        "engagement": {
+            "name": "Engagement Force",
+            "categories": {
+                "command": {
+                    "min": 1,
+                    "max": 2
+                },
+                "core": {
+                    "min": 2,
+                    "max": 4
+                },
+                "specialist": {
+                    "max": 2
+                },
+                "strike": {
+                    "max": 2
+                },
+                "heavy": {
+                    "max": 2
+                },
+                "transport": {
+                    "max": 4
+                }
+            }
+        },
+        "battle": {
+            "name": "Battle Force",
+            "categories": {
+                "command": {
+                    "min": 2,
+                    "max": 3
+                },
+                "core": {
+                    "min": 3,
+                    "max": 5
+                },
+                "specialist": {
+                    "max": 3
+                },
+                "strike": {
+                    "max": 3
+                },
+                "heavy": {
+                    "max": 3
+                },
+                "transport": {
+                    "max": 5
+                },
+                "super_heavy": {
+                    "max": 1
+                }
+            }
+        },
+        "strike": {
+            "name": "Strike Force",
+            "categories": {
+                "command": {
+                    "max": 2
+                },
+                "strike": {
+                    "max": 3
+                }
+            }
+        },
+        "specialist": {
+            "name": "Specialist Force",
+            "categories": {
+                "command": {
+                    "max": 2
+                },
+                "specialist": {
+                    "max": 3
+                }
+            }
+        },
+        "heavy": {
+            "name": "Heavy Force",
+            "categories": {
+                "command": {
+                    "max": 2
+                },
+                "core": {
+                    "max": 2
+                },
+                "heavy": {
+                    "max": 3
+                }
+            }
+        },
+        "super_heavy": {
+            "name": "Super Heavy Force",
+            "categories": {
+                "super_heavy": {
+                    "min": 1,
+                    "max": 3
+                }
+            }
+        }
     },
     "relics": [{"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."}],
     "powers": {
@@ -330,7 +455,7 @@
         "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
         "character": {
             "name": "Character",
-            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). It may not be targeted while another friendly non-character unit of the same type (Infantry, Monster, Vehicle, Biker etc.) is within 3\". Friendly units within 3\" may use this model's Courage and Reflex value."
+            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). If it is an Infantry unit it may not be targeted while another friendly non-character Infantry unit is within 3\". Friendly units within 3\" may use this model's Courage value."
         },
         "blast": {
             "name": "Blast",
@@ -340,6 +465,7 @@
         },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
+        "titanic": {"name": "Titanic", "description": "When this unit is activated it may only perform one action and benefit from abilties which trigger when the unit is activated once. It may then be activated a second time to perform its second action."},
         "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
         "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
         "pistol": {"name": "Pistol", "description": "This weapon may be used instead of a model's other weapons even while engaged in close combat."},

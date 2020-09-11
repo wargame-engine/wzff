@@ -900,9 +900,50 @@
                     "max": 1
                 }
             ]
+        },
+        "super_heavy_battle_tank": {
+            "name": "Super Heavy Battle Tank",
+            "description": "A titanic battle tank with a variety of weapon options.",
+            "rules": ["heavily_armored", "titanic"],
+            "category": "super_heavy",
+            "keywords": ["Vehicle", "Battle Tank"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Super Heavy Battle Tank",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "wounds": 12,
+                    "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
+                        {"replaceWeapon": "hell_cannon", "withWeapon": ["super_heavy_battle_cannon"]},
+                        {"addWeapon": [{"id": "machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "twin_heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 2
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
+        "note1": "Super Heavy cannons ----------------------------------------------------------------------------------------------->",
+        "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 10}]},
+        "super_heavy_battle_cannon": {"name": "Super Heavy Battle Cannon", "attacks": 3, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
         "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
         "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 6},

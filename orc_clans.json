@@ -1289,7 +1289,38 @@
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2}, {"id": "rocket_launcher", "count": 2}], "limit": 1},
                         {"replaceWeapon": {"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "deathstorm_minigun", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "plasma_rifle", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}, {"id": "relentless", "name": "Shoot Shoot Shoot!"}]}
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "super_heavy_walker": {
+            "name": "Super Heavy Walker",
+            "description": "A masive walker with multiple heavy upgrades.",
+            "category": "super_heavy",
+            "min": 1,
+            "max": 1,
+            "keywords":["Super Heavy Vehicle"],
+            "rules": ["heavily_armored", "titanic"],
+            "models": [
+                {
+                    "name": "Super Heavy Walker",
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "wounds": 12,
+                    "movement": 8,
+                    "weapons": [{"id": "mega_claw", "count": 2}, {"id": "heavy_stomp", "count": 5}],
+                    "options": [
+                        {"replaceWeapon": {"id": "mega_claw", "count": 1}, "withWeapon": [{"id": "mega_saw", "mount": ["Front"]}, "heavy_tractor_cannon"]},
+                        {"replaceWeapon": {"id": "mega_claw", "count": 1}, "withWeapon": [[{"id": "super_gatling_gun", "mount": ["Front"]}, {"id": "death_cannon", "mount": ["Front"]}]]},
+                        {"addWeapon": [{"id": "super_rocket_launcher", "mount": ["Front"]}]},
+                        {"addWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}], "limit": 3},
+                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}, {"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1301,6 +1332,7 @@
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 3},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": ["anti_air"]},
+        "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "cannon": {
             "name": "Cannon",
@@ -1311,10 +1343,13 @@
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 18, "short": 18, "medium": 36, "ap": 3},
+        "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
+        "death_cannon": {"name": "Death Cannon", "attacks": 1, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 5, "damage": 2},
         "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
-        "mega_claw": {"name": "Mega-Claw", "attacks": 2, "short": "Melee", "ap": 6, "damage": 4},
+        "mega_claw": {"name": "Mega-Claw", "attacks": 2, "short": "Melee", "ap": 8, "damage": 4},
+        "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6, "damage": 3},
         "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6, "damage": 2},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 4},
@@ -1357,6 +1392,7 @@
         "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "damage": 3, "ap": 6, "short": "Melee"},
         "beast_bite": {"name": "Beast Bite", "attacks": 2, "damage": 1, "ap": 1, "short": "Melee"},
         "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
+        "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 3},
         "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "damage": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
         "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
         "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "pistol"]},
@@ -1371,6 +1407,11 @@
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2}
     },
     "rules": {
+        "orc_idol": {
+            "name": "Orc Idol",
+            "description": "This model and friendly Infantry units within 6\" gain +1 Courage.",
+            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}]
+        },
         "heavy_armor": {
             "name": "Heavy Armor",
             "hidden": "true",
