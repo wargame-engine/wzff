@@ -28,8 +28,9 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Skirmish Force",
+            "name": "Skirmish Force (Core)",
             "cost": 1,
+            "description": "A small skirmish force for a scouting or infiltration mission.",
             "categories": {
                 "command": {
                     "max": 1
@@ -53,7 +54,8 @@
             }
         },
         "engagement": {
-            "name": "Engagement Force",
+            "name": "Engagement Force (Core)",
+            "description": "A somewhat balanced force for a medium-sized engagement.",
             "cost": 2,
             "categories": {
                 "command": {
@@ -79,8 +81,9 @@
             }
         },
         "battle": {
-            "name": "Battle Force",
+            "name": "Battle Force (Core)",
             "cost": 3,
+            "description": "A large force force ready for open battle.",
             "categories": {
                 "command": {
                     "min": 2,
@@ -108,8 +111,9 @@
             }
         },
         "strike": {
-            "name": "Strike Force",
+            "name": "Strike Force (Core)",
             "cost": 2,
+            "description": "A strike force for outflanking or shock assaulting.",
             "categories": {
                 "command": {
                     "max": 2
@@ -120,8 +124,9 @@
             }
         },
         "specialist": {
-            "name": "Specialist Force",
+            "name": "Specialist Force (Core)",
             "cost": 2,
+            "description": "An elite force to deal with specific targets.",
             "categories": {
                 "command": {
                     "max": 2
@@ -132,8 +137,9 @@
             }
         },
         "heavy": {
-            "name": "Heavy Force",
+            "name": "Heavy Force (Core)",
             "cost": 2,
+            "description": "A heavy force to pack a punch on the field.",
             "categories": {
                 "command": {
                     "max": 2
@@ -144,8 +150,9 @@
             }
         },
         "super_heavy": {
-            "name": "Super Heavy Force",
+            "name": "Super Heavy Force (Core)",
             "cost": 3,
+            "description": "A fearsome force for controlling the battlefield.",
             "categories": {
                 "super_heavy": {
                     "min": 1,
