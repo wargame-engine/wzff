@@ -28,7 +28,7 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Battle Force (Core)",
+            "name": "Battle (Core)",
             "cost": 2,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
@@ -37,7 +37,7 @@
                 },
                 "core": {
                     "min": 2,
-                    "max": 5
+                    "max": 4
                 },
                 "specialist": {
                     "max": 2
@@ -46,7 +46,7 @@
                     "max": 2
                 },
                 "heavy": {
-                    "max": 1
+                    "max": 2
                 },
                 "transport": {
                     "max": 5
@@ -54,7 +54,7 @@
             }
         },
         "strike": {
-            "name": "Strike Force (Core)",
+            "name": "Strike (Core)",
             "cost": 2,
             "description": "A strike force for outflanking or shock assaulting.",
             "categories": {
@@ -72,7 +72,7 @@
                     "max": 4
                 },
                 "heavy": {
-                    "max": 1
+                    "max": 2
                 },
                 "transport": {
                     "max": 5
@@ -80,7 +80,7 @@
             }
         },
         "specialist": {
-            "name": "Specialist Force (Core)",
+            "name": "Specialist (Core)",
             "cost": 2,
             "description": "An elite force to deal with specific targets.",
             "categories": {
@@ -98,7 +98,7 @@
                     "max": 2
                 },
                 "heavy": {
-                    "max": 1
+                    "max": 2
                 },
                 "transport": {
                     "max": 5
@@ -106,7 +106,7 @@
             }
         },
         "heavy": {
-            "name": "Heavy Force (Core)",
+            "name": "Heavy (Core)",
             "cost": 2,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
@@ -114,7 +114,7 @@
                     "max": 2
                 },
                 "core": {
-                    "max": 3
+                    "max": 2
                 },
                 "specialist": {
                     "max": 2
@@ -123,8 +123,8 @@
                     "max": 2
                 },
                 "heavy": {
-                    "min": 1,
-                    "max": 2
+                    "min": 2,
+                    "max": 4
                 },
                 "transport": {
                     "max": 4
@@ -138,18 +138,7 @@
             "categories": {
                 "super_heavy": {
                     "min": 1,
-                    "max": 1
-                }
-            }
-        },
-        "super_heavy": {
-            "name": "Super Heavy Force (Core)",
-            "cost": 3,
-            "description": "A fearsome force for controlling the battlefield.",
-            "categories": {
-                "super_heavy": {
-                    "min": 1,
-                    "max": 3
+                    "max": 2
                 }
             }
         }
