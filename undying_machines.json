@@ -146,7 +146,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 7,
-                    "wounds": 2,
+                    "wounds": 1,
                     "weapons": ["techno_scythes", "techno_beam"],
                     "min": 0,
                     "max": 2
