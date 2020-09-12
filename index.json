@@ -28,85 +28,28 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Skirmish Force (Core)",
-            "cost": 1,
-            "description": "A small skirmish force for a scouting or infiltration mission.",
-            "categories": {
-                "command": {
-                    "max": 1
-                },
-                "core": {
-                    "min": 1,
-                    "max": 3
-                },
-                "specialist": {
-                    "max": 1
-                },
-                "strike": {
-                    "max": 1
-                },
-                "heavy": {
-                    "max": 1
-                },
-                "transport": {
-                    "max": 3
-                }
-            }
-        },
-        "engagement": {
-            "name": "Engagement Force (Core)",
-            "description": "A somewhat balanced force for a medium-sized engagement.",
-            "cost": 2,
-            "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "core": {
-                    "min": 2,
-                    "max": 4
-                },
-                "specialist": {
-                    "max": 2
-                },
-                "strike": {
-                    "max": 2
-                },
-                "heavy": {
-                    "max": 2
-                },
-                "transport": {
-                    "max": 4
-                }
-            }
-        },
-        "battle": {
             "name": "Battle Force (Core)",
-            "cost": 3,
-            "description": "A large force force ready for open battle.",
+            "cost": 2,
+            "description": "A well-rounded force for taking on any mission.",
             "categories": {
                 "command": {
-                    "min": 2,
-                    "max": 3
+                    "max": 2
                 },
                 "core": {
-                    "min": 3,
-                    "max": 5
+                    "min": 2,
+                    "max": 4
                 },
                 "specialist": {
-                    "max": 3
+                    "max": 2
                 },
                 "strike": {
-                    "max": 3
+                    "max": 2
                 },
                 "heavy": {
-                    "max": 3
+                    "max": 1
                 },
                 "transport": {
                     "max": 5
-                },
-                "super_heavy": {
-                    "max": 1
                 }
             }
         },
@@ -118,8 +61,21 @@
                 "command": {
                     "max": 2
                 },
+                "core": {
+                    "max": 2
+                },
+                "specialist": {
+                    "max": 2
+                },
                 "strike": {
-                    "max": 3
+                    "min": 2,
+                    "max": 4
+                },
+                "heavy": {
+                    "max": 1
+                },
+                "transport": {
+                    "max": 5
                 }
             }
         },
@@ -131,8 +87,21 @@
                 "command": {
                     "max": 2
                 },
+                "core": {
+                    "max": 2
+                },
                 "specialist": {
-                    "max": 3
+                    "min": 2,
+                    "max": 4
+                },
+                "strike": {
+                    "max": 2
+                },
+                "heavy": {
+                    "max": 1
+                },
+                "transport": {
+                    "max": 5
                 }
             }
         },
@@ -144,8 +113,32 @@
                 "command": {
                     "max": 2
                 },
+                "core": {
+                    "max": 2
+                },
+                "specialist": {
+                    "max": 2
+                },
+                "strike": {
+                    "max": 2
+                },
                 "heavy": {
-                    "max": 3
+                    "min": 1,
+                    "max": 2
+                },
+                "transport": {
+                    "max": 4
+                }
+            }
+        },
+        "super_heavy_support": {
+            "name": "Super Heavy Support (Core)",
+            "cost": 2,
+            "description": "A supporting super-heavy unit.",
+            "categories": {
+                "super_heavy": {
+                    "min": 1,
+                    "max": 1
                 }
             }
         },
