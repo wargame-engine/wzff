@@ -107,7 +107,7 @@
         },
         "heavy": {
             "name": "Heavy (Core)",
-            "cost": 2,
+            "cost": 3,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
                 "command": {
@@ -139,6 +139,17 @@
                 "super_heavy": {
                     "min": 1,
                     "max": 1
+                }
+            }
+        },
+        "super_heavy": {
+            "name": "Super Heavy (Core)",
+            "cost": 4,
+            "description": "A group of super-heavy units.",
+            "categories": {
+                "super_heavy": {
+                    "min": 2,
+                    "max": 4
                 }
             }
         }
