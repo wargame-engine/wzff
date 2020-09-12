@@ -261,6 +261,9 @@
             "category": "core",
             "rules": [{"id": "regeneration", "x": 2}],
             "keywords": ["Infantry"],
+            "options": [
+                {"addRule": "ambush", "modelLimit": "all"}
+            ],
             "models": [{"name": "Flayer", "courage": 6, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 5, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
         },
         "assassins": {
