@@ -584,7 +584,7 @@
         "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
@@ -592,17 +592,14 @@
         },
         "field_orders": {
             "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
             "effects": [
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
-                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
+                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
             ]
         },
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
-            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
@@ -610,12 +607,9 @@
         },
         "field_orders_stormtrooper": {
             "name": "Field Orders (Stormtroopers)",
-            "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
             "effects": [
-                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}},
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}},
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}},
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
+                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
             ]
         },
         "furious": {
