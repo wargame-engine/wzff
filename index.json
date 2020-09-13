@@ -467,7 +467,7 @@
         "blast": {
             "name": "Blast",
             "inputs": ["x"],
-            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
+            "description": "The target takes 1 hit per model up to a maximum of X hits. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
             "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
         },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
