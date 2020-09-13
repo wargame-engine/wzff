@@ -1,0 +1,329 @@
+{
+    "id": "knight_lords",
+    "name": "Knight Lords",
+    "background": "An army consisting of titanic machines and the chivilrous order of warriours that pilot and support them.",
+    "units": {
+        "mini_knight": {
+            "name": "Mini Knight",
+            "description": "The smallest of titans can still make an impact on the battlefield with its guns.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Mini Knight",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "wounds": 6,
+                    "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_autocannon", "count": 2}], "withWeapon": [["fusion_blaster", "mini_titan_sword"]]},
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "gallant_titan": {
+            "name": "Gallant Titan",
+            "description": "A knight lord fully outfitted for close combat.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Gallant Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "wounds": 12,
+                    "weapons": ["titan_fist", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "warden_titan": {
+            "name": "Warden Titan",
+            "description": "A knight lord adept at anti-horde fighting.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Warden Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": ["gatling_cannon", "heavy_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "preceptor_titan": {
+            "name": "Preceptor Titan",
+            "description": "A knight lord outfitted for decimating enemy tanks.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Preceptor Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": ["pulse_laser", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
+                        {"replaceWeapon": "titan_sword", "withWeapon": ["titan_fist"]},
+                        {"limit": 1, "addWeapon": ["machinegun", "laser_machinegun"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "errant_titan": {
+            "name": "Errant Titan",
+            "description": "A knight lord armed with a powerful thermal cannon for eliminating vehicles at close range.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Errant Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": ["fusion_cannon", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "castellan_titan": {
+            "name": "Castellan Titan",
+            "description": " A massive knight lord made to dominate the battlefeild with its powerful guns.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Castellan Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 14,
+                    "weapons": ["plasma_battle_cannon", "machinegun", "volcano_cannon", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
+                        {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
+                        {"limit": 1, "addWeapon": ["twin_siege_cannon", "twin_shield_missiles", {"id": "twin_siege_cannon", "count": 2}, {"id": "twin_shield_missiles", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "paladin_titan": {
+            "name": "Paladin Titan",
+            "description": "A knight lord outfited with a rapid fire cannon to mow down enemies.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Paladin Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": ["rapidfire_battle_cannon", "machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "valiant_titan": {
+            "name": "Valiant Titan",
+            "description": "A massive knight lord outfitted for devestating short-range combat.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Valiant Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 14,
+                    "weapons": ["harpoon_cannon", "triple_flamethrower_cannon", {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
+                        {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
+                        {"limit": 1, "addWeapon": ["twin_siege_cannon", "twin_shield_missiles", {"id": "twin_siege_cannon", "count": 2}, {"id": "twin_shield_missiles", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "crusader_titan": {
+            "name": "Crusader Titan",
+            "description": "A knight lord outfitted with 2 powerful guns.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": [],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Crusader Titan",
+                    "movement": 8,
+                    "courage": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "wounds": 12,
+                    "weapons": ["gatling_cannon", "rapidfire_battle_cannon", {"id": "machinegun", "count": 2}, {"id": "heavy_stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
+                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
+                        {"replaceWeapon": "gatling_cannon", "withWeapon": "fusion_cannon"}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        }
+    },
+    "weapons": {
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
+        "mini_titan_sword": {"name": "Mini Titan Sword", "attacks": 3, "short": "Melee", "ap": 8, "damage": 2},
+        "titan_fist": {"name": "Titan Fist", "attacks": 2, "short": "Melee", "ap": 9, "damage": 6},
+        "titan_sword": {"name": "Titan Sword", "attacks": 3, "short": "Melee", "ap": 8, "damage": 4},
+        "titan_rocket_pod": {"name": "Titan Rocket Pod", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "damage": 3},
+        "titan_missile_pod": {"name": "Titan Missile Pod", "attacks": 3, "short": 24, "medium": 48, "ap": 2, "damage": 2, "rule": ["indirect"]},
+        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 12, "short": 18, "medium": 36, "ap": 4},
+        "pulse_laser": {
+            "name": "Pulse Laser",
+            "profiles": [
+                {"name": "High Intensity", "attacks": 3, "short": 9, "medium": 18, "ap": 9, "damage": 3},
+                {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4, "damage": 2}
+            ]
+        },
+        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 7, "damage": 3, "rules": ["fusion"]},
+        "plasma_battle_cannon": {
+            "name": "Plasma Battle Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "Overcharge", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 6}]}
+            ]
+        },
+        "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": [{"id": "blast", "x": 2}]},
+        "twin_shield_missiles": {"name": "Twin Shield Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
+        "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10, "damage": 6},
+        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion"]},
+        "rapidfire_battle_cannon": {"name": "Rapid-fire Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
+        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": ["flame"]},
+        "harpoon_cannon": {
+            "notes": "This profile needs to be looked at. Seems really swingy- either it misses or it devestates.",
+            "name": "Harpoon Cannon",
+            "attacks": 1,
+            "short": 6,
+            "medium": 12,
+            "ap": 10,
+            "damage": 9
+        }
+    },
+    "rules": {
+        "power_sheilds": {"name": "Power Sheilds", "description": "This model gains Regeneration(3).", "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}}]},
+        "extra_armor": {"name": "Extra Armor", "description": "This model increases its Resistance by 1.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]}
+    },
+    "strategies": {},
+    "relics": {}
+}
