@@ -1006,7 +1006,7 @@
         },
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: +1 Accuracy, +1 AP or +3\" Movement or Impact(+3).",
+            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3).",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
@@ -1014,14 +1014,14 @@
         },
         "field_orders_battle_tank": {
             "name": "Battle Tank Orders",
-            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 Accuracy, +1 AP or +3\" Movement or Impact(+3).",
+            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3). A unit may only benefit from one Battle Tank Order.",
             "effects": [
-                {"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
             ]
         },
         "field_radio_battle_tank": {
             "name": "Field Radio (Armored)",
-            "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule.",
+            "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
             "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 5}]
         },
         "banner": {
