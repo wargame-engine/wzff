@@ -1007,7 +1007,7 @@
         },
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement.",
+            "description": "When this unit is activated, choose two other friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3).",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
@@ -1015,17 +1015,15 @@
         },
         "field_orders_battle_tank": {
             "name": "Battle Tank Orders",
-            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement.",
+            "description": "When this unit is activated, choose another friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3).",
             "effects": [
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 3.3, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}},
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 3.3, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}},
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 3.3, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
+                {"type": "alterWeapon", "statName": "ap", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
             ]
         },
         "field_radio_battle_tank": {
             "name": "Field Radio (Armored)",
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 5}]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}}]
         },
         "banner": {
             "name": "Inspiring Banner",
@@ -1067,7 +1065,7 @@
         },
         "field_repairs": {
             "name": "Field Repairs",
-            "description": "Use when activating a Vehicle unit. Roll a D10. On a 3 or less the unit regains 3 wounds, otherwise it regains 2 wounds.",
+            "description": "Use when activating a Vehicle unit. Roll a D10. On a 5 or less the unit regains 2 wounds, otherwise it regains 1 wound.",
             "cost": 2
         },
         "final_stand": {

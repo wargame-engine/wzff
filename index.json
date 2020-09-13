@@ -464,7 +464,7 @@
         "blast": {
             "name": "Blast",
             "inputs": ["x"],
-            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6+ models or is benefitting from Cover.",
+            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
             "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
         },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
@@ -544,7 +544,7 @@
                 {"type": "alterStat", "statName": "movement", "value": -1}
             ]
         },
-        "fear": {"name": "Fear", "description": "Enemy units within 12\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 15, "target": "enemy"}]},
+        "fear": {"name": "Fear", "description": "Enemy units within 12\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "range": 12, "frequency": 5, "target": "enemy"}]},
         "fly": {"name": "Fly", "description": "This model may ignore terrain and other models without the Fly special rule when moving.", "effects": [{"type": "ignoreTerrain"}]},
         "ambush": {
             "name": "Ambush",
@@ -581,7 +581,7 @@
         "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
+            "description": "When this unit is activated, choose two other friendly Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
@@ -589,7 +589,7 @@
         },
         "field_orders": {
             "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose another friendly Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
             "effects": [
                 {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
                 {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}},
@@ -599,7 +599,7 @@
         },
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
-            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
+            "description": "When this unit is activated, choose two other friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength. This unit may activate one additional friendly unit on activation.",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
@@ -607,7 +607,7 @@
         },
         "field_orders_stormtrooper": {
             "name": "Field Orders (Stormtroopers)",
-            "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
+            "description": "When this unit is activated, choose another friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: +1 Accuracy or +1 AP or +3\" Movement or +1 Strength.",
             "effects": [
                 {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}},
                 {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 2.5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}},
@@ -623,7 +623,7 @@
         "stealth": {
             "name": "Stealth",
             "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
-            "effects": [{"type": "stealth", "value": 1, "frequency": 5}]
+            "effects": [{"type": "stealth", "value": 1}]
         },
         "relentless": {
             "name": "Relentless",
