@@ -155,6 +155,7 @@
                     "reflexes": 7,
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
+                    "rules": ["banner_of_wrath"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
                         {
@@ -162,7 +163,7 @@
                             "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
                         },
                         {"addRule": ["prime_combat_shield"]},
-                        {"addRule": ["banner_of_justice", "banner_of_wrath", "banner_of_focus"], "limit": 1}
+                        {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1329,7 +1330,7 @@
         "banner_of_justice": {
             "name": "Banner of Justice",
             "description": "Enemy units within 6\" get -1 courage.",
-            "effects": [{"type": "grantRule", "rule": {"id": "fear", "x": 2}, "target": "enemy"}]
+            "effects": [{"type": "grantRule", "rule": "fear", "target": "enemy", "range": 6}]
         },
         "psych_out": {
             "name": "Dangerous(Psychic)",
@@ -1338,8 +1339,8 @@
         },
         "banner_of_wrath": {
             "name": "Banner of Wrath",
-            "description": "This model and friendly Infantry units within 3\" the Furious special rule.",
-            "effects": [{"type": "grantRule", "rule": "furious", "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+            "description": "This model and friendly Infantry units within 3\" gain +1 Strength.",
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
         },
         "banner_of_focus": {
             "name": "Banner of Focus",

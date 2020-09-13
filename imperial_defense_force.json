@@ -366,7 +366,7 @@
         "heavy_weapon_squad": {
             "name": "Heavy Weapons Squad",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
-            "category": "heavy",
+            "category": "specialist",
             "min": 3,
             "max": 6,
             "models": [
@@ -461,12 +461,11 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": ["ward"]}
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_fist"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -480,10 +479,10 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "heavy_ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
                     ],
                     "min": 4,
                     "max": 9
@@ -953,7 +952,7 @@
         "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "damage": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
         "heavy_shotgun": {"name": "Heavy Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "wrist_grenades": {"name": "Wrist Grenades", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
-        "heavy_volley_gun": {"name": "Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
+        "heavy_volley_gun": {"name": "Heavy Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5, "damage": 2, "short": "Melee"},
         "light_battle_cannon": {"name": "Light Battle Cannon", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
@@ -1007,7 +1006,7 @@
         },
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
-            "description": "When this unit is activated, choose two other friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3).",
+            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: +1 Accuracy, +1 AP or +3\" Movement or Impact(+3).",
             "effects": [
                 {"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 20},
                 {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
@@ -1015,15 +1014,15 @@
         },
         "field_orders_battle_tank": {
             "name": "Battle Tank Orders",
-            "description": "When this unit is activated, choose another friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 AP or +3\" Movement or Impact(+3).",
+            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: +1 Accuracy, +1 AP or +3\" Movement or Impact(+3).",
             "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
+                {"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
             ]
         },
         "field_radio_battle_tank": {
             "name": "Field Radio (Armored)",
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}}]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 5}]
         },
         "banner": {
             "name": "Inspiring Banner",
