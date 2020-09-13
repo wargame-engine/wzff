@@ -574,12 +574,12 @@
         "field_radio": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
+            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
         },
         "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
