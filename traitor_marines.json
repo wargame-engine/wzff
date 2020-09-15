@@ -1004,8 +1004,8 @@
                 }
             ]
         },
-        "change_brothers": {
-            "name": "Psychic Brothers",
+        "change_traitors": {
+            "name": "Psychic Traitor Marines",
             "description": "Hexed traitor marines whose bodies have been turned to dust by a horrible curse, but fight on as mindless automatons in their remaining armor.",
             "subfactions": ["change_traitors", "none"],
             "min": 5,

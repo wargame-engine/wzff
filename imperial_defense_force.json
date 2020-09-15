@@ -99,7 +99,7 @@
             "models": [
                 {
                     "name": "Commissar",
-                    "courage": 6,
+                    "courage": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
@@ -940,13 +940,13 @@
     },
     "weapons": {
         "note1": "Super Heavy cannons ----------------------------------------------------------------------------------------------->",
-        "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 10}]},
+        "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
         "super_heavy_battle_cannon": {"name": "Super Heavy Battle Cannon", "attacks": 3, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
-        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
+        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
         "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 6},
-        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 20, "short": 12, "medium": 24, "ap": 2},
+        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 10, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
         "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "damage": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
@@ -984,7 +984,7 @@
         },
         "no_retreat": {
             "name": "No Retreat",
-            "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test.",
+            "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
             "effects": [
                 {"type": "alterStat", "statName": "wounds", "value": -1, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
                 {"type": "changeStat", "statName": "courage", "value": 8, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
