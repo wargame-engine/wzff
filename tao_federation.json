@@ -8,23 +8,29 @@
             "description": "An elite commander in an agile battlesuit.",
             "min": 1,
             "max": 1,
-            "rules": ["character", "fly", "ambush"],
+            "keywords": [
+                "Battlesuit"
+            ],
+            "category": "command",
+            "rules": ["character", "fly"],
+            "options": [
+                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}
+            ],
             "models": [
                 {
                     "name": "Commander",
                     "movement": 8,
                     "courage": 8,
                     "shoot": 7,
-                    "fight": 5,
-                    "defense": 7,
+                    "fight": 6,
+                    "defense": 8,
                     "reflexes": 7,
                     "wounds": 3,
                     "weapons": ["suit_fists"],
                     "options": [
-                        {"limit": 4, "addWeapon": ["flak_launcher", "ion_triblaster", "flamethrower", "gatling_vulcan", "plasma_rifle", "fusion_blaster"]},
-                        {"addRule": ["cold_fusion_booster"]}
+                        {"limit": 4, "addWeapon": ["flak_launcher", "ion_triblaster", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"addRule": ["cold_fusion_booster", {"id": "ambush", "name": "Sky Strike"}, {"id": "regeneration", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -35,50 +41,171 @@
             "description": "A squad of infantry who excell at ranged shooting.",
             "min": 1,
             "max": 1,
+            "category": "core",
+            "options": [
+                {"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]},
+                {"addModel": "support_turret"},
+                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
+                {"addModel": "guardian_drone"}
+            ],
             "models": [
                 {
-                    "name": "Team Leader",
-                    "movement": 5,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 7,
-                    "wounds": 1,
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}],
-                    "min": 0,
-                    "max": 1
-                },
-                {
                     "name": "Warrior",
-                    "movement": 5,
+                    "movement": 6,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 4,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 7,
                     "wounds": 1,
                     "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
-                    "options": [{"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]}],
+                    "options": [
+                        {
+                            "replaceModel": "warrior_team_leader",
+                            "modelLimit": 1
+                        }
+                    ],
                     "min": 5,
                     "max": 12
                 }
             ]
+        },
+        "savages": {
+            "name": "Savage Warriors",
+            "description": "A squad of angry savages with rifles.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "options": [{"addRule": "scout", "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Savage Warrior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
+                    "min": 10,
+                    "max": 20
+                }
+            ]
+        }
+    },
+    "models": {
+        "warrior_team_leader": {
+            "name": "Team Leader",
+            "movement": 6,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 6,
+            "reflexes": 7,
+            "wounds": 1,
+            "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+            "options": [
+                {"addWeapon": "pulse_pistol"},
+                {"addRule": "spotting_laser"}
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "support_turret": {
+            "name": "Support Turret",
+            "movement": 0,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 6,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["deployable"],
+            "weapons": ["support_missile_pod"],
+            "options": [{"replaceWeapon": "support_missile_pod", "withWeapon": "smart_missiles"}],
+            "min": 0,
+            "max": 1
+        },
+        "spotter_drone": {
+            "name": "Spotter Drone",
+            "movement": 8,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["spotting_laser"],
+            "min": 0,
+            "max": 1
+        },
+        "gunner_drone": {
+            "name": "Gunner Drone",
+            "movement": 8,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "weapons": ["pulse_carbine"],
+            "min": 0,
+            "max": 1
+        },
+        "shield_drone": {
+            "name": "Shield Drone",
+            "movement": 8,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": [{"id":"regeneration", "x": 4}],
+            "min": 0,
+            "max": 1
+        },
+        "guardian_drone": {
+            "name": "Guardian Drone",
+            "movement": 8,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["guardian"],
+            "min": 0,
+            "max": 1
+        },
+        "accelerator_drone": {
+            "name": "Accelerator Drone",
+            "movement": 8,
+            "courage": 6,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["accelerator"],
+            "min": 0,
+            "max": 1
         }
     },
     "weapons": {
-        "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "short": 10, "medium": 20, "rules": [{"id": "indirect"}, {"id": "blast", "x": 4}]},
-        "gatling_vulcan": {"name": "Gatling Vulcan", "attacks": 3, "short": 10, "medium": 20, "ap": 1},
+        "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
+        "pulse_gatling": {"name": "Pulse Gatling", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "ion_triblaster": {
             "name": "Ion Tri-Blaster",
             "profiles": [
-                {"name": "Standard", "attacks": 3, "short": 10, "medium": 20, "ap": 2},
-                {"name": "Overcharge", "attacks": 3, "short": 10, "medium": 20, "ap": 4, "damage": 2, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]},
+                {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 10, "medium": 20, "ap": 5, "damage": 6, "rules": [{"id": "fusion"}]},
-        "missile_battery": {"name": "Missile Battery", "attacks": 2, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": [{"id": "fusion"}, "assault"]},
+        "missile_pod": {"name": "Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
+        "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2},
         "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2},
         "ion_rifle": {
@@ -107,14 +234,33 @@
         "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
         "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4, "damage": 3},
         "portable_railgun": {"name": "Portable Railgun", "attacks": 2, "short": 24, "medium": 45, "long": 48, "ap": 4, "damage": 4},
-        "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 18, "long": 36, "ap": 1, "rules": [{"id": "sniper"}]},
-        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 1},
-        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1},
-        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
+        "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect", "flame"]},
+        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2, "rules": ["rending", "assault"]},
+        "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+        "twin_pulse_carbine": {"name": "Twin Pulse Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+        "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]},
+        "pulse_pistol": {"name": "Pulse Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
         "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
-        "suit_fists": {"name": "Suit Fists", "attacks": 4, "short": "Melee", "ap": 1}
+        "suit_fists": {"name": "Suit Fists", "attacks": 4, "short": "Melee", "ap": 2},
+        "savage_rifle": {"name": "Savage Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1}
     },
     "rules": {
+        "spotting_laser": {
+            "name": "Spotting Laser",
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to get +1 to hit the target.",
+            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly"}]
+        },
+        "accelerator": {
+            "name": "Accelerator",
+            "description": "This model and models in its unit add +6\" maximum Range to all weapons.",
+            "effects": [{"type": "alterWeapon", "statName": "medium", "value": 6, "target": "friendly"}]
+        },
+        "threat_detector_suit": {
+            "name": "Threat Detector",
+            "description_short": "+1 Reflexes",
+            "description": "This model gets +1 Reflexes.",
+            "effects": [{"type": "alterStat", "statName": "reflexes", "value": 1}]
+        },
         "cold_fusion_booster": {
             "name": "Cold Fusion Booster",
             "hidden": "true",
@@ -122,10 +268,14 @@
             "description_short": "+4\" Move",
             "effects": [{"type": "alterStat", "statName": "movement", "value": 4}]
         },
-        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit receives -1 to hit with its next attack."},
+        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 1 or 2."},
-        "indirect": {"name": "Indirect", "description": "Can be fired without line of sight."}
+        "indirect": {"name": "Indirect", "description": "Can be fired without line of sight."},
+        "guardian": {
+            "name": "Guardian",
+            "description": "Models in this unit get +1 Defense.",
+            "effects": [{"type": "alterStat", "statName": "defense", "value": 1, "target": "friendly"}]
+        }
     },
-    "powers": {
-    }
+    "powers": {}
 }

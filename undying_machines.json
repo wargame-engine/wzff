@@ -589,6 +589,22 @@
             ]
         }
     },
+    "models": {
+        "machine_swarm_model": {
+            "name": "Machine Swarm",
+            "courage": 6,
+            "movement": 8,
+            "shoot": 3,
+            "fight": 5,
+            "defense": 4,
+            "reflexes": 5,
+            "wounds": 3,
+            "weapons": ["feeding_teeth"],
+            "min": 3,
+            "max": 6,
+            "rules": [{"id": "regeneration", "x": 4}, "hover"]
+        }
+    },
     "weapons": {
         "heat_ray": {
             "name": "Heat Ray",
@@ -662,20 +678,7 @@
                 {
                     "type": "spawnModel",
                     "frequency": 15,
-                    "model": {
-                        "name": "Machine Swarm",
-                        "courage": 6,
-                        "movement": 8,
-                        "shoot": 3,
-                        "fight": 5,
-                        "defense": 4,
-                        "reflexes": 5,
-                        "wounds": 3,
-                        "weapons": ["feeding_teeth"],
-                        "min": 3,
-                        "max": 6,
-                        "rules": [{"id": "regeneration", "x": 4}, "hover"]
-                    }
+                    "model": "machine_swarm_model"
                 }
             ]
         },
