@@ -90,11 +90,11 @@
                 },
                 {
                     "name": "Stormtrooper",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],

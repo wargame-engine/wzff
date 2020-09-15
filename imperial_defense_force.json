@@ -153,7 +153,7 @@
             "models": [
                 {
                     "name": "Conscripted Sergeant",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 5,
@@ -172,7 +172,7 @@
                     "shoot": 4,
                     "fight": 4,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
@@ -187,7 +187,7 @@
                     "shoot": 4,
                     "fight": 4,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -230,11 +230,11 @@
                 },
                 {
                     "name": "Trooper",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
@@ -247,11 +247,11 @@
                 },
                 {
                     "name": "Weapon Team",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -294,11 +294,11 @@
                 },
                 {
                     "name": "Veteran Trooper",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
@@ -312,11 +312,11 @@
                 },
                 {
                     "name": "Veteran Weapon Team",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -342,11 +342,11 @@
             "models": [
                 {
                     "name": "Veteran Trooper",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
@@ -472,11 +472,11 @@
                 },
                 {
                     "name": "Stormtrooper",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
@@ -521,7 +521,7 @@
                 },
                 {
                     "name": "Rider",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "movement": 8,
@@ -565,12 +565,12 @@
                 },
                 {
                     "name": "Ogre",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 5,
                     "fight": 6,
                     "movement": 6,
                     "defense": 7,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
