@@ -261,9 +261,7 @@
             "category": "core",
             "rules": [{"id": "regeneration", "x": 4}, "fear"],
             "keywords": ["Infantry"],
-            "options": [
-                {"addRule": "ambush", "modelLimit": "all"}
-            ],
+            "options": [{"addRule": "ambush", "modelLimit": "all"}],
             "models": [{"name": "Flayer", "courage": 6, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 5, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
         },
         "assassins": {
@@ -313,8 +311,12 @@
             "category": "specialist",
             "rules": ["stealth"],
             "keywords": ["Heavy Infantry"],
-            "options": [{"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1}, {"addWeapon": ["whip_coil"]}],
-            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 7, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}]
+            "options": [
+                {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
+                {"addWeapon": ["whip_coil"]},
+                {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
+            ],
+            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 7, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
         },
         "tri_scorpion_annihilators": {
             "name": "Tri-Scorpion Annihilators",
@@ -324,9 +326,7 @@
             "category": "specialist",
             "rules": ["walker"],
             "keywords": ["Heavy Infantry"],
-            "options": [
-                {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}
-            ],
+            "options": [{"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Tri-Scorpion Annihilator",
@@ -365,7 +365,7 @@
             "category": "specialist",
             "rules": ["hover"],
             "keywords": ["Heavy Infantry"],
-            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}],
+            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
         },
         "transport_arc": {
@@ -662,7 +662,20 @@
                 {
                     "type": "spawnModel",
                     "frequency": 15,
-                    "model": {"name": "Machine Swarm", "courage": 6, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 5, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6, "rules": [{"id": "regeneration", "x": 4}, "hover"]}
+                    "model": {
+                        "name": "Machine Swarm",
+                        "courage": 6,
+                        "movement": 8,
+                        "shoot": 3,
+                        "fight": 5,
+                        "defense": 4,
+                        "reflexes": 5,
+                        "wounds": 3,
+                        "weapons": ["feeding_teeth"],
+                        "min": 3,
+                        "max": 6,
+                        "rules": [{"id": "regeneration", "x": 4}, "hover"]
+                    }
                 }
             ]
         },
