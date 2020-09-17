@@ -1,0 +1,308 @@
+{
+    "id": "dimensional_horrors",
+    "name": "Dimensional Horrors",
+    "background": "Mutated servants of the dark gods able to materialize anywhere their influence is strong enough.",
+    "subfactions": {
+        "change": {
+            "name": "Magic Focus",
+            "id": "change",
+            "color": "#547588",
+            "background":"",
+            "restricted": true
+        },
+        "pestilence": {
+            "name": "Pestilence Focus",
+            "id": "pestilence",
+            "color": "#547588",
+            "background": "",
+            "restricted": true
+        },
+        "wrath": {
+            "name": "Wrath Focus",
+            "id": "wrath",
+            "color": "#547588",
+            "background": "",
+            "restricted": true
+        },
+        "excess": {
+            "name": "Excess Focus",
+            "id": "excess",
+            "color": "#547588",
+            "background": "",
+            "restricted": true
+        }
+    },
+    "units": {
+        "greater_daemon_of_change":{
+            "name": "Greater Daemon of Change",
+            "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
+            "subfactions": ["change"],
+            "rules": ["character", "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "invulnerable", "x": 2}],
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "keywords": ["monster"],
+            "models":[{
+                "name": "Greater Daemon of Change",
+                "courage": 9,
+                "movement": 10,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 10,
+                "reflexes": 8,
+                "wounds": 8,
+                "weapons": ["exhalted_staff_of_change"],
+                "options":[
+                    {"replaceWeapon": "exhalted_staff_of_change", "withWeapon": ["exhalted_power_hammer", "exhalted_power_spear"]},
+                    {"limit": 1, "addWeapon": ["exhalted_magic_beam", "exhalted_magic_bolt", "change_blast"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "daemon_champion":{
+            "name": "Daemon Champion",
+            "description": "A massive daemon gifted in the art of war.",
+            "subfactions": ["change", "pestilence", "excess", "wrath"],
+            "category": "command",
+            "rules": ["character", "fear", {"id": "invulnerable", "x": 1}],
+            "keywords": ["monster"],
+            "models": [
+                {
+                    "name": "Daemon Champion",
+                    "movement": 6,
+                    "courage": 9,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 8,
+                    "wounds": 4,
+                    "weapons": ["daemon_sword"],
+                    "options": [
+                        {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
+                        {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
+                        {"addRule": "wings"}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "champion_of_change":{
+            "name": "Champion of Change",
+            "description": "A frightening leader of the forces of change.",
+            "subfactions": ["change"],
+            "category": "command",
+            "rules": ["character", "stealth", {"id": "invulnerable", "x": 1}, {"id": "psychic", "x":1}],
+            "keywords": ["infantry"],
+            "models": [{
+                "name": "Champion of Change",
+                "movement": 6,
+                "courage": 7,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 2,
+                "weapons": ["power_staff"],
+                "options":[
+                    {"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"},
+                    {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]},
+                    {"addRule":["disk_of_change"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules": []
+            }]
+        },
+        "champion_of_change_on_chariot":{
+            "name": "Champion of Change on Chariot",
+            "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
+            "subfactions": ["change"],
+            "category": "command",
+            "rules": ["character", "stealth", {"id": "invulnerable", "x": 1}, {"id": "psychic", "x":1}, "strider"],
+            "keywords": ["infantry"],
+            "models": [{
+                "name": "Champion of Change on Chariot",
+                "movement": 10,
+                "courage": 7,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 8,
+                "reflexes": 6,
+                "wounds": 6,
+                "weapons": ["power_staff", {"id": "parasitic_bite", "count": 2}],
+                "options":[
+                    {"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"},
+                    {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules": []
+            }]
+        },
+        "blue_scholars":{
+            "name": "Blue Scholars",
+            "description": "Two enlightened blue daemons that travel the world collecting as m,uch new knowlege as they can.",
+            "subfactions": ["change"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "min": 1,
+            "max": 1,
+            "rules": ["character", "stealth", {"id": "psychic", "x":1}, {"id": "invulnerable", "x": 1}, "strider", "psychic_syphon"],
+            "models": [{
+                "name": "Blue Scholars",
+                "movement": 8,
+                "courage": 7,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 2,
+                "weapons": ["quills", "disk_blade"],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "the_shifter":{
+            "name": "The Shifter",
+            "description": "A mysterious being able to morph its form into any other being. It enjoys using this ability to trick both enemies and foes with complicated pranks.",
+            "subfactions": ["change"],
+            "keywords": ["infantry"],
+            "category": "command",
+            "min": 1,
+            "max": 1,
+            "rules": ["stealth", {"id": "invulnerable", "x": 2}, {"id": "psychic", "x":1}, "strider", "character"],
+            "models":[{
+                "name": "The Shifter",
+                "movement": 8,
+                "courage": 7,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 6,
+                "wounds": 2,
+                "weapons": ["tricksters_staff"],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        }
+    },
+    "weapons":{
+        "exhalted_staff_of_change":{
+            "name": "Exhalted Staff of Change",
+            "attacks": 5,
+            "short": "Melee",
+            "ap": 4,
+            "damage": 2
+        },
+        "exhalted_power_hammer":{
+            "name": "Exhalted Power Hammer",
+            "attacks": 4,
+            "short": "Melee",
+            "ap": 5,
+            "damage": 3
+        },
+        "exhalted_power_spear":{
+            "name": "Exhalted Power Spear",
+            "attacks": 3,
+            "short": "Melee",
+            "ap": 7,
+            "damage": 3
+        },
+        "exhalted_magic_beam":{
+            "name": "Exhalted Magic Beam",
+            "attacks": 6,
+            "short": 6,
+            "medium": 12,
+            "ap": 2
+        },
+        "exhalted_magic_bolt":{
+            "name": "Exhalted Magic Bolt",
+            "attacks": 3,
+            "short": 6,
+            "medium":12,
+            "ap": 5
+        },
+        "change_blast":{
+            "name": "Change Blast",
+            "attacks": 1,
+            "short": 9,
+            "medium": 18,
+            "ap": 7,
+            "damage": 3
+        },
+        "power_staff":{
+            "name": "Power Staff",
+            "attacks": 2,
+            "short": "Melee",
+            "ap": 2
+        },
+        "ritual_daggers":{
+            "name": "Ritual Daggers",
+            "attacks": 2,
+            "short": "Melee"
+        },
+        "magic_beam":{
+            "name": "Magic Beam",
+            "attacks": 2,
+            "short": 6,
+            "ap": 4
+        },
+        "magic_bolt":{
+            "name": "Magic Beam",
+            "attacks": 2,
+            "short": 6,
+            "medium":12,
+            "ap": 4
+        },
+        "parasitic_bite":{
+            "name": "Parasitic Bite",
+            "attacks": 6,
+            "short": "Melee",
+            "ap": 4,
+            "damage": 2
+        },
+        "quills":{
+            "name": "Quills",
+            "attacks": 2,
+            "short": "Melee"
+        },
+        "disk_blades":{
+            "name": "Disk Blades",
+            "attacks": 2,
+            "short": "Melee",
+            "ap": 1
+        },
+        "tricksters_staff":{
+            "name": "Trickster's Staff",
+            "profiles":[
+                {"name": "Staff Form", "attacks": 6, "short": "Melee"},
+                {"name": "Sword Form", "attacks": 4, "short": "Melee", "ap": 5},
+                {"name": "Hammer Form", "attacks": 2, "short": "Melee", "ap": 7}
+            ]
+        }
+    },
+    "rules":{
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "Gives the unit strider and impact(1). Also increases the units movement to 8 inches.",
+            "effects": [{"type": "grantRule", "rule": "strider"}, {"type": "grantRule", "rule": {"id": "impact", "x": 1}}]
+        },
+        "psychic_syphon":{
+            "name": "Psychic Syphon",
+            "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.",
+            "effects": [{"type": "grantRule", "rule":{"id": "psychic", "x":1}, "frequency": 1.67}]
+        }
+    },
+    "strategies":{
+
+    },
+    "powers":{
+
+    }
+}
