@@ -237,6 +237,7 @@
         "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
         "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
         "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
+        "impact2": {"name": "Impact", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
         "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 2, "ap": 4, "short": "Melee"},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
@@ -516,8 +517,14 @@
         "impact": {
             "name": "Impact",
             "inputs": ["x"],
-            "description": "This unit scores X automatic hits on a successful charge.",
+            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with no AP.",
             "effects": [{"type": "freeAttacks", "weapon": "impact", "attacks": "x"}]
+        },
+        "heavy_impact": {
+            "name": "Heavy Impact",
+            "inputs": ["x"],
+            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with AP 1.",
+            "effects": [{"type": "freeAttacks", "weapon": "impact2", "attacks": "x"}]
         },
         "strider": {"name": "Strider", "description": "This model can cross difficult and dangerous terrain without penalty.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
         "rending": {"name": "Rending", "description": "Hit rolls of 1 or 2 have +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 2}]},

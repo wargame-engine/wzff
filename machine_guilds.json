@@ -481,7 +481,7 @@
         "landing_craft": {
             "name": "Landing Craft",
             "description": "A hovering landing craft for transporting troops.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "armored", "hover", {"id": "open_topped", "x": 11}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "armored", "hover", {"id": "open_topped", "x": 11}],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,

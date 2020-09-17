@@ -707,7 +707,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -734,7 +734,7 @@
         "marine_assault_apc": {
             "name": "Assault APC",
             "description": "A durable transport built by the loyal marines with upgraded weaponry.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "armored"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
