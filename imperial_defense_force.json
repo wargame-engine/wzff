@@ -664,7 +664,7 @@
         "light_apc": {
             "name": "APC",
             "description": "A light transport of the imperial defense force.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "armored"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,

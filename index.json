@@ -469,7 +469,7 @@
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"}
     },
     "rules": {
-        "ammo": {"name": "Ammo", "inputs": ["x"], "description": "This weapon may only be fired X times per game."},
+        "ammo": {"name": "Ammo", "inputs": ["x"], "description": "This weapon may only be fired X times per game.", "effects": [{"type": "ammo", "value": "x"}]},
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
@@ -494,6 +494,11 @@
             "inputs": ["x"],
             "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
             "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
+        },
+        "homing": {
+            "name": "Homing",
+            "description": "This weapon hits at Accuracy +1.",
+            "effects": [{"type": "alterStatWithWeapon", "statName": "shoot", "value": 1}]
         },
         "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
