@@ -132,6 +132,31 @@
                 }
             }
         },
+        "support": {
+            "name": "Support (Core)",
+            "cost": 1,
+            "description": "A small supporting force.",
+            "categories": {
+                "command": {
+                    "max": 1
+                },
+                "core": {
+                    "max": 2
+                },
+                "specialist": {
+                    "max": 1
+                },
+                "strike": {
+                    "max": 1
+                },
+                "heavy": {
+                    "max": 1
+                },
+                "transport": {
+                    "max": 2
+                }
+            }
+        },
         "super_heavy_support": {
             "name": "Super Heavy Support (Core)",
             "cost": 2,
