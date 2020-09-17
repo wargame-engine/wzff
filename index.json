@@ -2,7 +2,8 @@
     "factions": {
         "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm"},
         "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"},
-        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors"},
+        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors"},        
+        "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horror.json", "color": "#90305d", "alliance": "traitors"},
         "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331"},
         "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab", "alliance": "elven_coaliation"},
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},

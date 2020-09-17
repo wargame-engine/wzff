@@ -190,6 +190,76 @@
                 "max": 1,
                 "rules":[]
             }]
+        },
+        "chromatic_horrors":{
+            "name": "Chromatic Horrors",
+            "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
+            "subfactions":["change"],
+            "keywords": ["infantry"],
+            "category": "core",
+            "min": 10,
+            "max": 30,
+            "rules": ["stealth"],
+            "models": [
+                {"name": "Pink Warriors",
+                "movement": 6,
+                "courage": 6,
+                "shoot": 5,
+                "fight": 5,
+                "defense": 6,
+                "reflexes": 5,
+                "wounds": 1,
+                "weapons": ["twisting_flames", "ccw"],
+                "options":[
+                    {"limit": 1, "addRule": ["banner_of_change", "instrument_of_change", "horrible_icon", {"id": "psychic", "x":1}]},
+                    {"replaceWeapon": ["ccw"], "withWeapon": ["magical_ccw", "heavy_ccw", {"id":"ccw", "count": 2}]}
+                ],
+                "min": 10,
+                "max": 30,
+                "rules": []
+            },
+            {
+            "name": "Blue Warriors",
+            "movement": 6,
+            "courage": 6,
+            "shoot": 4,
+            "fight": 4,
+            "defense": 5,
+            "reflexes": 5,
+            "wounds": 1,
+            "weapons": ["ccw"],
+            "min": 0,
+            "max": 30,
+            "rules": []
+            },
+            {
+            "name": "Flame Warriors",
+            "movement": 6,
+            "courage": 6,
+            "shoot": 3,
+            "fight": 3,
+            "defense": 4,
+            "wounds": 2,
+            "reflexes": 5,
+            "weapons": [{"id": "ccw", "count": 2}],
+            "min": 0,
+            "max": 30,
+            "rules":[]
+            }
+        ]
+        },
+        "exhalted_flame_daemon":{
+            "name": "Exhalted Flame Daemon",
+            "description": "A daemon made of twisting, living flame held together by pure magic that acts as a leader for minor flame daemons.",
+            "subfactions": ["change"],
+            "category": "specialist",
+           "min": 1,
+           "max": 1,
+           "rules":[],
+           "models": [{
+               "name": "Exhalted Flame Daemon"
+           }]
+            
         }
     },
     "weapons":{
@@ -285,6 +355,25 @@
                 {"name": "Sword Form", "attacks": 4, "short": "Melee", "ap": 5},
                 {"name": "Hammer Form", "attacks": 2, "short": "Melee", "ap": 7}
             ]
+        },
+        "magical_ccw":{
+            "name": "Magical CCW",
+            "attacks": 1,
+            "short": "Melee",
+            "ap": 4,
+            "rules": ["rending"]
+        },
+        "twisting_flames":{
+            "name": "Twisting Flames",
+            "attacks": 2,
+            "short": 9,
+            "medium": 18
+        },
+        "horrible_blast":{
+            "name": "Horrible Blast",
+            "attacks": 9,
+            "short": 9,
+            "ap": 2
         }
     },
     "rules":{
@@ -297,6 +386,20 @@
             "name": "Psychic Syphon",
             "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.",
             "effects": [{"type": "grantRule", "rule":{"id": "psychic", "x":1}, "frequency": 1.67}]
+        },
+        "banner_of_change":{
+            "name": "Banner of Change",
+            "description": "When a courage test is passed with a roll of 1, return D3 destroyed pink warriors to this unit."
+        },
+        "horrible_icon":{
+            "name": "Horrible Icon",
+            "description": "This banner allows the bearer to cast the following power once per round: Roll 9 dice. On each roll of  9 or 10 the closest enemy unit within 9\" takes one automatic hit with AP -2. This power may not be denied.",
+            "effects": [{ "addWeapon": ["horrible_blast"]}]
+        },
+        "instrument_of_change":{
+            "name": "Instrument of Change",
+            "description": "Add 1 to the units Movement characteristic.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 1}]
         }
     },
     "strategies":{
