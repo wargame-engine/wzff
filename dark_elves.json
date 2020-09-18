@@ -13,12 +13,12 @@
             "models": [
                 {
                     "name": "Warrior Leader",
-                    "courage": 7,
-                    "movement": 7,
+                    "courage": 6,
+                    "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 1,
                     "weapons": ["barb_rifle", { "id": "ccw", "count": 1 }],
                     "min": 1,
@@ -27,7 +27,7 @@
                 {
                     "name": "Warriors",
                     "courage": 6,
-                    "movement": 7,
+                    "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,

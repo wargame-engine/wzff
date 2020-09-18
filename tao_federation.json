@@ -24,7 +24,7 @@
                     "wounds": 3,
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_triblaster", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
                         {"addRule": ["cold_fusion_booster", {"id": "ambush", "name": "Sky Strike"}, {"id": "regeneration", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
                     "min": 1,
@@ -215,7 +215,7 @@
                     "wounds": 3,
                     "weapons": ["suit_fists"],
                     "options": [
-                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_triblaster", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
                         {"addRule": [{"id": "ambush", "name": "Sky Strike", "modelLimit": "all"}, {"id": "regeneration", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
                     "min": 3,
@@ -298,7 +298,7 @@
         },
         "hover_apc": {
             "name": "Hover APC",
-            "description": "A fast and light skimmer transport.",
+            "description": "A fast skimmer transport.",
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -328,7 +328,7 @@
         },
         "hover_tank": {
             "name": "Hover Tank",
-            "description": "A fast and light skimmer tank.",
+            "description": "A fast skimmer tank.",
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -354,6 +354,94 @@
                     ],
                     "min": 1,
                     "max": 1
+                }
+            ]
+        },
+        "scout_craft": {
+            "name": "Scout Craft",
+            "description": "A fast and light skimmer craft.",
+            "category": "strike",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "options": [{"addModel": "attached_gunner_drone", "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Scout Craft",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
+                    "rules": [{"id": "impact", "x": 3}, "armored", "hover"],
+                    "options": [
+                        {"replaceWeapon": {"id": "pulse_gatling", "mount": ["Front"]}, "withWeapon": {"id": "fusion_blaster", "mount": ["Front"]}},
+                        {"addWeapon": ["seeker_missiles"], "limit": 3}
+                    ],
+                    "min": 1,
+                    "max": 5
+                }
+            ]
+        },
+        "heavy_battle_suits": {
+            "name": "Heavy Battlesuits",
+            "description": "Warriors in heavy battlesuits armed with deadly weapons.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Battlesuits"],
+            "category": "heavy",
+            "options": [{"addModel": ["missile_drone", "spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Heavy Battlesuit",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "wounds": 3,
+                    "weapons": ["suit_fists", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"limit": 1, "addWeapon": ["heavy_rail_rifle", {"id": "heavy_missile_pod", "count": 2}]},
+                        {"limit": 1, "addWeapon": [{"id": "plasma_rifle", "count": 2}, {"id": "smart_missiles", "count": 2}]},
+                        {"addWeapon": ["seeker_missiles"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "heavy_stealth_suit": {
+            "name": "Heavy Stealth Suit",
+            "description": "A warriors in a heavy battlesuit equipped advanced cloaking technology.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Battlesuits"],
+            "category": "heavy",
+            "options": [{"addModel": ["stealth_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Heavy Stealth Suit",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "rules": ["fly", "stealth"],
+                    "wounds": 6,
+                    "weapons": ["suit_fists", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"id": "ambush", "name": "Stealth Infiltration"},
+                        {"limit": 1, "addWeapon": ["ion_gatling", {"id": "heavy_fusion_blaster"}]},
+                        {"limit": 1, "addWeapon": [{"id": "pulse_gatling", "count": 2}, {"id": "flamethrower", "count": 2}, {"id": "fusion_blaster", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 3
                 }
             ]
         }
@@ -484,6 +572,33 @@
             "min": 0,
             "max": 1
         },
+        "missile_drone": {
+            "name": "Missile Drone",
+            "movement": 8,
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["fly"],
+            "weapons": ["missile_pod"],
+            "min": 0,
+            "max": 1
+        },
+        "stealth_drone": {
+            "name": "Stealth Drone",
+            "movement": 8,
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 6,
+            "wounds": 1,
+            "rules": ["fly", "stealth"],
+            "min": 0,
+            "max": 1
+        },
         "gunner_drone": {
             "name": "Gunner Drone",
             "movement": 8,
@@ -527,18 +642,20 @@
         }
     },
     "weapons": {
-        "seeker_missiles": {"name": "Seeker Missiles", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "damage": 3, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
+        "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "damage": 3, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
         "pulse_gatling": {"name": "Pulse Gatling", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-        "ion_triblaster": {
-            "name": "Ion Tri-Blaster",
+        "ion_gatling": {
+            "name": "Ion Gatling",
             "profiles": [
                 {"name": "Standard", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]},
                 {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
         "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": [{"id": "fusion"}, "assault"]},
+        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": [{"id": "fusion"}]},
         "missile_pod": {"name": "Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
+        "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "damage": 1},
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2},
         "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2},
@@ -577,6 +694,7 @@
         "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
         "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4, "damage": 3},
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4, "damage": 2},
+        "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "damage": 3},
         "smart_missiles": {"name": "Smart missiles", "attacks": 4, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect", "flame"]},
         "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2, "rules": ["rending", "assault"]},
         "pulse_carbine": {"name": "Pulse Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
