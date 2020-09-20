@@ -141,7 +141,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["quills", "disk_blade"],
+                    "weapons": ["quills", "disk_blades"],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -494,11 +494,10 @@
                     "defense": 9,
                     "reflexes": 8,
                     "wounds": 9,
-                    "weapons": ["splitting_claws", "souleating_sword", "ritual_dagger"],
+                    "weapons": ["splitting_claws", "souleating_sword"],
                     "options": [{"addRule": ["ritual_dagger", "glittering_sheild", "menacing_hand"]}, {"addWeapon": ["living_whip"]}],
                     "min": 1,
-                    "max": 1,
-                    "rules": []
+                    "max": 1
                 }
             ]
         },
