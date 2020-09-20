@@ -393,6 +393,229 @@
                 "max": 1,
                 "rules": []
             }]
+        },
+        "soul_mirror":{
+            "name": "Soul Mirror",
+            "description": "A contorted, corrupted mirror able to show its enemies their greatest fears.",
+            "subfactions": ["excess"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": ["character", {"id": "psychic","x": 2}, {"id": "regeneration", "x":1}, "no_escape"],
+            "min": 1,
+            "max": 1,
+            "models":[{
+                "name": "Soul Mirror",
+                "movement": 10,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 6,
+                "wounds": 3,
+                "weapons": ["lashing_tentacles",{"id": "sweeping_claws", "count": 2}],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "excess_champion":{
+            "name": "Excess Champion",
+            "description": "A leader of the forces of excess.",
+            "subfactions": ["excess"],
+            "keywords": ["infantry"],
+            "category": "command",
+            "rules": ["character", {"id": "psychic","x": 1}, {"id": "regeneration", "x":1}],
+            "min": 1,
+            "max":1,
+            "models":[{
+                "name": "Excess Champion",
+                "movement": 7,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 2,
+                "weapons":["sweeping_claws"],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "excess_champion_on_exhalted_chariot":{
+            "name": "Excess Champion on Exhalted Chariot",
+            "decription": "A leader of the forces of excess on a contorted chariot.",
+            "subfactions": ["excess"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": ["character", {"id": "psychic","x": 1}, {"id": "regeneration", "x":1},{"id":"impact", "x": 2}],
+            "min": 1,
+            "max": 1,
+            "models": [{
+                "name": "Excess Champion on Exhalted Chariot",
+                "movement": 10,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 8,
+                "reflexes": 6,
+                "wounds": 6,
+                "weapons": ["lashing_tentacles", {"id": "sweeping_claws","count": 2}],
+                "options":[{"addWeapon": "tormenting_whips"}],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "excess_champion_reaper_chariot":{
+            "name": "Excess Champion on Reaper Chariot",
+            "description": "A leader of the forces of excess on a bladed chariot made to reap souls on the battlefeild.",
+            "subfactions": ["excess"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": ["character", {"id": "psychic","x": 1}, {"id": "regeneration", "x":1}],
+            "min": 1,
+            "max": 1,
+            "models":[{
+                "name": "Excess Champion on Reaper Chariot",
+                "movement": 10,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 8,
+                "reflexes": 6,
+                "wounds": 3,
+                "weapons":["lashing_tentacles", {"id": "sweeping_claws", "count": 2}, "reaper_axle"],
+                "options": [{"addWeapon": "tormenting_whips"}],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "excess_champion_on_chariot":{
+            "name": "Excess Champion on Chariot",
+            "decription": "A leader of the forces of excess on a contorted chariot.",
+            "subfactions": ["excess"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": ["character", {"id": "psychic","x": 1}, {"id": "regeneration", "x":1},{"id":"impact", "x": 2}],
+            "min": 1,
+            "max": 1,
+            "models": [{
+                "name": "Excess Champion on Chariot",
+                "movement": 10,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 8,
+                "reflexes": 6,
+                "wounds": 3,
+                "weapons": ["lashing_tentacles", {"id": "sweeping_claws","count": 2}],
+                "options":[{"addWeapon": "tormenting_whips"}],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "beguiling_harpist":{
+            "name": "Beguiling Harpist",
+            "description": "A horribly alluring commander of the forces of excess that plays enthralling melodies on a harp made from her enemies.",
+            "subfactions": ["excess"],
+            "keywords": ["infantry"],
+            "category": "command",
+            "rules": ["character", {"id": "regeneration", "x":1}, "psychic_syphon"],
+            "min": 1,
+            "max": 1,
+            "models":[{
+                "name": "Beguiling Harpist",
+                "movement": 7,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 2,
+                "weapons": ["enrapturing_lyre", "sweeping_claws"],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "greater_daemon_of_excess":{
+            "name": "Greater Daemon of Excess",
+            "description": "An enlightened daemon of excess equally capable of leading forces and devestating enemies.",
+            "subfactions": ["excess"],
+            "keywords": ["monster"],
+            "category": "command",
+            "rules": ["character", {"id": "regeneration", "x":2}, "stealth", {"id": "psychic", "x": 2}],
+            "min": 1,
+            "max": 1,
+            "models":[{
+                "name": "Greater Daemon of Excess",
+                "movement": 12,
+                "courage": 9,
+                "shoot": 8,
+                "fight": 8,
+                "defense": 9,
+                "reflexes": 8,
+                "wounds": 9,
+                "weapons": ["splitting_claws", "souleating_sword", "ritual_dagger"],
+                "options":[
+                    {"addRule": ["ritual_dagger", "glittering_sheild", "menacing_hand"]},
+                    {"addWeapon": ["living_whip"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
+        },
+        "deadly_duo":{
+            "name": "Deadly Duo",
+            "description": "Two excess daemons fused in horribly beautiful synchrony.",
+            "subfactions": ["excess"],
+            "keywords": ["monster"],
+            "category": "command",
+            "rules": ["character", {"id": "regeneration", "x":1}, {"id": "psychic", "x": 1}],
+            "min":1,
+            "max": 1,
+            "models": [{
+                "name": "Deadly Duo",
+                "movement": 8,
+                "courage": 8,
+                "shoot": 8,
+                "fight": 8,
+                "defense": 9,
+                "reflexes": 7,
+                "wounds": 4,
+                "weapons": ["daemon_axe", "tormenting_whip"],
+                "min": 1,
+                "max":1,
+                "rules":[]
+            }]
+        },
+        "mask_of_excess":{
+            "name": "Mask of Excess",
+            "description": "A phantasmic daemon summoned to the battlefield by the forces of excess.",
+            "subfactions": ["excess"],
+            "keywords": ["infantry"],
+            "category": "command",
+            "rules": ["character", {"id": "regeneration", "x":1}, "agile", "stealth"],
+            "min": 1,
+            "max": 1,
+            "models":[{
+                "name": "Mask of Excess",
+                "movement": 8,
+                "courage": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 5,
+                "reflexes": 6,
+                "wounds": 2,
+                "weapons": ["segmented_claws"],
+                "min": 1,
+                "max": 1,
+                "rules":[]
+            }]
         }
     },
     "weapons":{
@@ -566,6 +789,78 @@
             "short": "Melee",
             "ap": 6,
             "damage": 2
+        },
+        "lashing_tentacles":{
+            "name": "Lashing Tentacles",
+            "attacks": 2,
+            "short": "Melee",
+            "ap": 3,
+            "damage": 3
+        },
+        "sweeping_claws": {
+            "name": "Sweeping Claws",
+            "attacks": 4,
+            "short": "Melee",
+            "ap": 1,
+            "damage": 2,
+            "rules": ["rending"]
+        },
+        "tormenting_whips":{
+            "name": "Tormenting Whips",
+            "attacks": 3,
+            "short": 6,
+            "ap":1,
+            "rules": ["pistol"]
+        },
+        "reaper_axle":{
+            "name": "Reaper Axle",
+            "attacks": 5,
+            "short": "Melee",
+            "ap": 5,
+            "damage": 2
+        },
+        "enrapturing_lyre":{
+            "name": "Enrapturing Lyre",
+            "profiles":[
+                {"name": "Raucous Melody", "attacks": 6, "short": 9, "medium": 18, "ap":1},
+                {"name": "Melodious Blast", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3}
+            ]
+        },
+        "splitting_claws":{
+            "name": "Splitting Claws",
+            "attacks": 6,
+            "short":"Melee",
+            "ap": 4,
+            "damage": 3,
+            "rules": ["rending"]
+        },
+        "souleating_sword":{
+            "name": "Soul-eating Sword",
+            "attacks": 6,
+            "short": "Melee",
+            "ap": 6,
+            "damage": 3
+        },
+        "living_whip":{
+            "name": "Living Whip",
+            "attacks": 6,
+            "short": 6,
+            "ap": 4
+        },
+        "tormenting_whip":{
+            "name": "Tormenting Whip",
+            "profiles":[
+                {"name": "Melee", "attacks": 8, "short": "Melee", "ap": 1, "rules":["blast"]},
+                {"name": "Shooting", "attacks": 3, "short": 6, "ap": 2}
+            ]
+        },
+        "segmented_claws":{
+            "name": "Segmented Claws",
+            "attacks": 5,
+            "short": "Melee",
+            "ap": 2,
+            "damage": 2,
+            "rules": ["rending"]
         }
     },
     "rules":{
@@ -604,6 +899,24 @@
         "wild_mutations":{
             "name": "Wild Mutations",
             "description": "When you activate this unit, roll a D10. On a roll of 1-3 increase the Movement of the unit by 2. On a roll of 4-6 increase the unit's AP by 2. On a roll of 7-9 increase the model's Attacks characteristic by 2."
+        },
+        "no_escape":{
+            "name": "No Escape",
+            "description": "Enemy units attempting to fall back from this unit take their Reflexes test at -2.",
+            "effects": [{"type": "alterStat", "statName": "reflexes", "target": "enemy", "value": 2, "frequency":5}]
+        },
+        "ritual_dagger":{
+            "name": "Ritual Dagger",
+            "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."
+        },
+        "glittering_sheild":{
+            "name": "Glittering Sheild",
+            "description": "This model gains +1 regeneration.",
+            "effects": [{"type": "grantRule", "rule": "regeneration", "value":1}]
+        },
+        "menacing_hand":{
+            "name": "Menacing Hand",
+            "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."
         }
     },
     "strategies":{
