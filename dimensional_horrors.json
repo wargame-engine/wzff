@@ -335,7 +335,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 2}],
+                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -361,7 +361,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["sweeping_claws"],
+                    "weapons": [{"id":"sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -387,7 +387,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 6,
-                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 2}],
+                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
                     "max": 1,
@@ -414,7 +414,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 2}, "reaper_axle"],
+                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}, "reaper_axle"],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
                     "max": 1,
@@ -441,7 +441,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 3,
-                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 2}],
+                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
                     "max": 1,
@@ -468,7 +468,7 @@
                     "defense": 5,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["enrapturing_lyre", "sweeping_claws"],
+                    "weapons": ["enrapturing_lyre", {"id":"sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -552,6 +552,168 @@
                     "rules": []
                 }
             ]
+        },
+        "excess_warriors":{
+            "name": "Excess Warriors",
+            "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
+            "subfactions": ["excess"],
+            "keywords": ["infantry"],
+            "category": "core",
+            "rules": ["agile"],
+            "min": 10,
+            "max": 30,
+            "models":[{
+                "name": "Siren",
+                "movement": 7,
+                "courage": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 1,
+                "weapons": [{"id": "sweeping_claws", "count": 3}],
+                "options":[
+                    {"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules": []
+            },
+            {
+                "name": "Excess Warrior",
+                "movement": 7,
+                "courage": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 1,
+                "weapons": [{"id": "sweeping_claws", "count": 2}],
+                "min": 9,
+                "max": 29,
+                "rules": []
+            }
+        ]
+        },
+        "excess_steed":{
+            "name": "Excess Steed",
+            "description":"A seductively mutated beast able to ferry forces fo slaanesh into battle or fight on their own.",
+            "subfactions": ["excess"],
+            "keywords":["cavalry"],
+            "category": "specialist",
+            "rules": ["agile"],
+            "min": 1,
+            "max": 9,
+            "models":[{
+                "name": "Excess Steed",
+                "movement": 12,
+                "courage": 6,
+                "shoot": 4,
+                "fight": 6,
+                "defense": 6,
+                "reflexes": 5,
+                "wounds": 2,
+                "weapons": [{"id": "sweeping_claws","count": 4}, "barbed_tail"],
+                "options":[
+                    {"modelLimit": 1, "addWeapon": ["sweeping_claws"]}
+                ],
+                "min": 1,
+                "max": 9,
+                "rules": ["psychic_syphon"]
+            }]
+        },
+        "gargoyles":{
+            "name": "Gargoyles",
+            "description": "Horrible winged demons able to be summoned to assist any of the demon factions.",
+            "subfactions": ["none", "wrath","excess","pestilence","change"],
+            "keywords": ["infantry"],
+            "category": "strike",
+            "rules": ["fly", "fear"],
+            "min": 5,
+            "max": 20,
+            "models":[{
+                "name": "Gargoyle",
+                "movement": 10,
+                "courage": 5,
+                "shoot": 4,
+                "fight": 5,
+                "defense": 5,
+                "reflexes": 4,
+                "wounds": 1,
+                "weapons": [{"id": "ccw", "count": 2}],
+                "min": 5,
+                "max": 20,
+                "rules":[]
+            }]
+        },
+        "reaper_chariot": {
+            "name": "Reaper Chariot",
+            "description": "A bladed chariot made to reap souls on the battlefeild.",
+            "subfactions": ["excess"],
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": [],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Reaper Chariot",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}, "reaper_axle"],
+                    "options": [{"addWeapon": "tormenting_whips"}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
+        },
+        "excess_warriors_on_steeds":{
+            "name": "Excess Warriors on Steeds",
+            "description":"A seductively mutated beast able to ferring forces of slaanesh into battle.",
+            "subfactions": ["excess"],
+            "keywords":["cavalry"],
+            "category": "strike",
+            "rules": ["agile"],
+            "min": 5,
+            "max": 20,
+            "models":[{
+                "name": "Deathseeker",
+                "movement": 12,
+                "courage": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 2,
+                "weapons": [{"id": "sweeping_claws","count": 3}, "lashing_tentacles"],
+                "options":[
+                    {"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}
+                ],
+                "min": 1,
+                "max": 1,
+                "rules": []
+            },
+            {
+                "name": "Excess Steed",
+                "movement": 12,
+                "courage": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 5,
+                "reflexes": 5,
+                "wounds": 2,
+                "weapons": [{"id": "sweeping_claws","count": 3}, "lashing_tentacles"],
+                "min": 4,
+                "max": 19,
+                "rules": []
+            }
+        ]
         }
     },
     "models": {
@@ -617,7 +779,7 @@
         "phlegm_cannon": {"name": "Phlegm Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": [{"id": "blast", "x": 3}]},
         "daemon_claw": {"name": "Daemon Claw", "attacks": 10, "short": "Melee", "ap": 6, "damage": 2},
         "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 2, "short": "Melee", "ap": 3, "damage": 3},
-        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 4, "short": "Melee", "ap": 1, "damage": 2, "rules": ["rending"]},
+        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2, "rules": ["rending"]},
         "tormenting_whips": {"name": "Tormenting Whips", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
         "reaper_axle": {"name": "Reaper Axle", "attacks": 5, "short": "Melee", "ap": 5, "damage": 2},
         "enrapturing_lyre": {
@@ -631,7 +793,14 @@
             "name": "Tormenting Whip",
             "profiles": [{"name": "Melee", "attacks": 8, "short": "Melee", "ap": 1, "rules": ["blast"]}, {"name": "Shooting", "attacks": 3, "short": 6, "ap": 2}]
         },
-        "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2, "damage": 2, "rules": ["rending"]}
+        "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2, "damage": 2, "rules": ["rending"]},
+        "barbed_tail":{
+            "name": "Barbed Tail",
+            "attacks": 1,
+            "short":"Melee",
+            "ap": 2,
+            "damage": 2
+        }
     },
     "rules": {
         "disk_of_change": {
@@ -673,8 +842,61 @@
         },
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
         "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains +1 regeneration.", "effects": [{"type": "grantRule", "rule": "regeneration", "value": 1}]},
-        "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."}
+        "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
+        "instrument_of_excess":{
+            "name": "Instrument of Excess",
+            "description": "Add 1 to this unit's movement characteristic.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 8}]
+        },
+        "banner_of_excess":{
+            "name": "Banner of Excess",
+            "description": "Add 1 to this unit's fight characteristic.",
+            "effects": [{"type": "alterStat", "statName": "fight", "value": 8}]
+        },
+        "wings": {
+            "name": "Daemon Wings",
+            "hidden": true,
+            "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
+            "description_short": "Fly, Ambush, 8\" Move",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
+        }
     },
     "strategies": {},
-    "powers": {}
+    "powers": {
+        "daemonforge": {
+            "subfactions": ["none", "change"],
+            "name": "Daemonforge",
+            "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
+            "description": "Use before a Vehicle unit shoots. All hits have +1 AP.",
+            "cost": 1
+        },
+        "blood_ritual": {
+            "subfactions": ["none", "change"],
+            "name": "Blood Ritual",
+            "flavor": "With a simple sacrifice of flesh, comes a gift of life.",
+            "description": "Use when an Infantry unit is activated. Roll a D10 on a roll of 3 or less the unit regains 3 wounds (put on any models in the unit). On any other result it regains 2 wounds instead. If the unit has lost any models, they may be used to restore those models.",
+            "cost": 2
+        },
+        "psychic_channeling": {
+            "subfactions": ["change_traitors"],
+            "name": "Psychic Channeling",
+            "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
+            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +3\" of range.",
+            "cost": 1
+        },
+        "hex_rounds": {
+            "subfactions": ["change"],
+            "name": "Hex Rounds",
+            "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
+            "description": "Use before an Infantry unit shoots. The attack has +6\" maximum range.",
+            "cost": 1
+        },
+        "psychic_fury": {
+            "subfactions": ["change"],
+            "name": "Psychic Fury",
+            "flavor": "The psyker explodes with energy, infused with additonal power.",
+            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
+            "cost": 2
+        }
+    }
 }
