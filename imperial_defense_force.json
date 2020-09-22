@@ -978,56 +978,48 @@
             "name": "Ogre Shields",
             "description_short": "+1 Resist",
             "description": "This unit gets +1 Resist.",
-            "effects": [
-                {"type": "alterStat", "statName": "defense", "value": 1}
+            "points": [
+                "model.wounds", {"multiply": 2}
             ]
         },
         "no_retreat": {
             "name": "No Retreat",
             "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
-            "effects": [
-                {"type": "alterStat", "statName": "wounds", "value": -1, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
-                {"type": "changeStat", "statName": "courage", "value": 8, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
-            ]
+            "points": 5
         },
         "extra_armor": {
             "name": "Extra Armor",
             "hidden": true,
             "description": "This model gets +1 Resist.",
             "description_short": "Resist +1",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+            "points": ["model.wounds", {"multiply": 2}]
         },
         "heavy_armor": {
             "name": "Heavy Armor",
             "hidden": true,
             "description": "This model gets +1 Resist.",
             "description_short": "Resist +1",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+            "points": ["model.wounds", {"multiply": 2}]
         },
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
             "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
-            "effects": [
-                {"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 20},
-                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
-            ]
+            "points": 20
         },
         "field_orders_battle_tank": {
             "name": "Battle Tank Orders",
             "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3). A unit may only benefit from one Battle Tank Order.",
-            "effects": [
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Battle Tank"]}}
-            ]
+            "points": 15
         },
         "field_radio_battle_tank": {
             "name": "Field Radio (Armored)",
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_battle_tank"}, "frequency": 5}]
+            "points": 10
         },
         "banner": {
             "name": "Inspiring Banner",
             "description": "Friendly Infantry units within 6\" get +1 Courage.",
-            "effects": [{"type": "alterStat", "statName": "courage", "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}]
+            "points": 10
         },
         "power_fortify": {
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]

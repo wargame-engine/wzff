@@ -237,8 +237,6 @@
         "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "damage": 2, "rules": [{"id": "blast", "x": 2}]},
         "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
         "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
-        "impact": {"name": "Impact", "attacks": 1, "short": "Melee"},
-        "impact2": {"name": "Impact", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
         "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 2, "ap": 4, "short": "Melee"},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
@@ -471,82 +469,46 @@
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"}
     },
     "rules": {
-        "ammo": {"name": "Ammo", "inputs": ["x"], "description": "This weapon may only be fired X times per game.", "effects": [{"type": "ammo", "value": "x"}]},
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly"}]
+            "points": ["model.wounds", {"multiply": 2}]
         },
-        "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
+        "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "points": 8},
         "legend_wounds": {
             "name": "Resilient",
             "hidden": true,
             "description_short": "Wounds +2",
             "description": "This model gets +2 Wounds.",
-            "effects": [{"type": "alterStat", "statName": "wounds", "value": 2}]
+            "points": ["model.defense", {"subtract": "constants.baseStats.defense"}, {"multiply": 2}]
         },
-        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "effects": [{"type": "alterWeapon", "statName": "damage", "value": 2, "frequency": 2.5}]},
-        "assault": {"name": "Assault", "description": "Models with this weapon may make a free shoot action after moving at -1 Accuracy. They may not shoot again this round."},
+        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "points": ["weapon.attacks", {"multiply": 2}]},
         "character": {
             "name": "Character",
             "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). If it is an Infantry unit it may not be targeted while another friendly non-character Infantry unit is within 3\". Friendly units within 3\" may use this model's Courage value."
         },
-        "blast": {
-            "name": "Blast",
-            "inputs": ["x"],
-            "description": "Multiply hits from this weapon by X. This weapon hits at Accuracy +1 if the target unit has 6 or more models.",
-            "effects": [{"type": "blast", "value": "x"}, {"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
-        },
         "homing": {
             "name": "Homing",
             "description": "This weapon hits at Accuracy +1.",
-            "effects": [{"type": "alterStatWithWeapon", "statName": "shoot", "value": 1}]
+            "points": ["weapon.attacks"]
         },
-        "flame": {"name": "Flame", "description": "This weapon ignores cover bonuses.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "titanic": {"name": "Titanic", "description": "When this unit is activated it may only perform one action and benefit from abilties which trigger when the unit is activated once. It may then be activated a second time to perform its second action."},
-        "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy."},
-        "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Flyer special rule."},
         "pistol": {"name": "Pistol", "description": "This weapon may be used instead of a model's other weapons even while engaged in close combat."},
         "spiked_ram": {
             "name": "Spiked Ram",
             "hidden": true,
             "description": "This model gains +3 impact.",
             "description_short": "Impact +3",
-            "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
-        },
-        "impact": {
-            "name": "Impact",
-            "inputs": ["x"],
-            "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with no AP.",
-            "effects": [{"type": "freeAttacks", "weapon": "impact", "attacks": "x"}]
+            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
         },
         "heavy_impact": {
             "name": "Heavy Impact",
             "inputs": ["x"],
             "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with AP 1.",
-            "effects": [{"type": "freeAttacks", "weapon": "impact2", "attacks": "x"}]
+            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"add": 1}, {"multiply": "rule.x"}]
         },
-        "strider": {"name": "Strider", "description": "This model can cross difficult and dangerous terrain without penalty.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
-        "rending": {"name": "Rending", "description": "Hit rolls of 1 or 2 have +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 2}]},
-        "emp": {"name": "EMP", "description": "Successful hit rolls of 3 or less gain +2 AP.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 2, "frequency": 3}]},
-        "transport": {
-            "name": "Transport",
-            "description": "This model may carry X Infantry models inside of it on the battlefeild. Models with greater than 1 wound take up 2 transport spaces.",
-            "inputs": ["x"],
-            "effects": [{"type": "transport", "size": "x"}]
-        },
-        "sniper": {
-            "name": "Sniper",
-            "description": "This weapon may ignore the Long Range penalty. You may choose which model is hit and these hits may not be reassigned to other friendly units.",
-            "effects": [{"type": "alterStatWithWeapon", "statName": "shoot", "value": 1, "frequency": 5}]
-        },
-        "teleport": {
-            "name": "Teleport",
-            "description": "When this model activates, it may first teleport up to X inches in any direction ignoring models any terrain.",
-            "inputs": ["x"],
-            "effects": [{"type": "ignoreTerrain", "size": 5}, {"type": "alterStat", "statName": "movement", "value": "x", "frequency": 5}]
-        },
+        "emp": {"name": "EMP", "description": "Successful hit rolls of 4 or less gain +2 AP.", "points": ["weapon.attacks", {"multiply": 4}, {"multiply": 0.4}]},
         "jetpack": {
             "name": "Jetpack",
             "hidden": true,
@@ -555,24 +517,6 @@
             "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
         },
         "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 9 or 10.", "effects": [{"type": "dangerous", "value": 1, "frequency": 2}]},
-        "repair": {
-            "name": "Repair",
-            "inputs": ["x"],
-            "description": "Once per turn, if within 2” of a Vehicle, roll one die. On a 5 or less the vehicle may regain X wounds.",
-            "effects": [{"type": "heal", "frequency": 5, "value": "x"}]
-        },
-        "fearless": {
-            "name": "Fearless",
-            "description": "This unit requires an extra suppression to take break tests.",
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "frequency": 2.5}]
-        },
-        "resist": {"name": "Protect", "inputs": ["x"], "description": "This unit gets +X to its Resist rolls.", "effects": [{"type": "alterStat", "statName": "defense", "value": "x"}]},
-        "open_topped": {
-            "name": "Open-Topped",
-            "inputs": ["x"],
-            "description": "Units inside this transport may take a single fire action when activated. Up to X models total may fire their weapons.",
-            "effects": [{"type": "open_topped", "value": "x"}]
-        },
         "destroyer_armor": {
             "name": "Destroyer Armor",
             "hidden": true,
@@ -585,132 +529,63 @@
                 {"type": "alterStat", "statName": "movement", "value": -1}
             ]
         },
-        "fear": {"name": "Fear", "description": "Enemy units within 6\" get -1 courage.", "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "targetModels": 1, "range": 12, "frequency": 5, "target": "enemy"}]},
-        "fly": {"name": "Fly", "description": "This model may ignore terrain and other models without the Fly special rule when moving.", "effects": [{"type": "ignoreTerrain"}]},
-        "deployable": {
-            "name": "Deployable",
-            "description": "This model can be set up at any time during its containing units activation. If its containing unit moves out of coherency the model is destroyed."
-        },
-        "ambush": {
-            "name": "Ambush",
-            "description": "This unit may be set aside in reserves before the match begins if all models have ambush. At the beginning of any round after the first you may place the unit anywhere on the table over 9” away from enemy units. If both players have units with Ambush they must roll-off to see who deploys first, and then alternate in placing them.",
-            "effects": [{"type": "ambush"}]
-        },
-        "scout": {
-            "name": "Scout",
-            "description": "When this unit is deployed on the field, it may make a free 5\" move.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 5, "frequency": 2}]
-        },
-        "outflank": {
-            "name": "Outflank",
-            "description": "This unit may be set aside in reserves before the match begins if all models have outflank. At the beginning of any round after the first you may place the unit within 5\" of a table edge over 9” away from enemy units. If both players have units with Outflank they must roll-off to see who deploys first, and then alternate in placing them.",
-            "effects": [{"type": "ambush", "frequency": 5}]
-        },
-        "regeneration": {
-            "name": "Resilient",
-            "inputs": ["x"],
-            "description": "Roll a die when this model loses a wound. On a value of X or less that wound is not lost.",
-            "effects": [{"type": "regeneration", "frequency": "x"}]
-        },
-        "invulnerable": {"name": "Invulnerable", "inputs": ["x"], "description": "This model may re-roll X Resist tests per attack.", "effects": [{"type": "invulnerable", "value": "x"}]},
         "field_radio": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders"}, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
+            "points": 5
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
             "description": "This unit may be targeted by the Field Orders special rule if it is within 24\" of another unit with a Field Radio that is in range of the Field Orders rule.",
-            "effects": [{"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "target": "friendly", "filter": {"keywords": ["Infantry"]}, "note": "This must be costed as an aura as it applies to the whole unit"}]
+            "points": 5
         },
-        "activation": {"hidden": true, "name": "activation", "inputs": ["x"], "effects": [{"type": "activateUnit", "value": "x"}]},
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
             "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "grantRule", "rule": {"id": "field_orders"}, "frequency": 20},
-                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
-            ]
+            "points": 15
         },
         "field_orders": {
             "name": "Field Orders",
             "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry"]}}
-            ]
+            "points": 10
         },
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
             "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "grantRule", "rule": {"id": "field_orders_stormtrooper"}, "frequency": 20},
-                {"type": "grantRule", "rule": {"id": "activation", "x": 1}, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
-            ]
+            "points": 15
         },
         "field_orders_stormtrooper": {
             "name": "Field Orders (Stormtroopers)",
             "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
-            "effects": [
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly", "range": 6, "filter": {"keywords": ["Infantry", "Stormtrooper"]}}
-            ]
-        },
-        "furious": {
-            "name": "Furious",
-            "description": "When this model charges, hit rolls of 1 or 2 generate an additional attack.",
-            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "fight"}]
-        },
-        "stealth": {
-            "name": "Stealth",
-            "description": "Models suffer -1 Accuracy when shooting at this unit at a range of more than 12\".",
-            "effects": [{"type": "stealth", "value": 1}]
-        },
-        "relentless": {
-            "name": "Relentless",
-            "description": "When this model shoots, each successful hit roll of 1 or 2 generates an additional shot with that weapon.",
-            "effects": [{"type": "bonusAttack", "value": 1, "frequency": 2, "weaponType": "shoot"}]
+            "points": 10
         },
         "fusion": {
             "name": "Fusion",
             "description": "This weapon gets +1 AP when attacking in its Short range band.",
-            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5}]
-        },
-        "heavy": {"name": "Heavy", "description": "This weapon suffers -1 to hit if the firer moved this turn."},
-        "poison": {
-            "name": "Poison",
-            "inputs": ["x"],
-            "description": "Successful hit rolls of 1 or 2 with this weapon cause X hits instead of 1.",
-            "effects": [{"type": "poison", "value": "x", "frequency": 2}]
+            "effects": ["weapon.attacks"]
         },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "armored": {
             "name": "Vulnerable",
             "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc.",
-            "effects": [{"type": "alterStat", "value": -2, "frequency": 2.5, "statName": "defense"}, {"type": "alterStat", "value": -1, "frequency": 5, "statName": "defense"}]
+            "points": [2, {"multiply": "model.wounds"}, {"multiply": -0.5}]
         },
         "heavily_armored": {
             "name": "Vulnerable Rear",
             "description": "This unit loses 1 Resist when hit in its Rear arc.",
-            "effects": [{"type": "alterStat", "value": -1, "frequency": 2.5, "statName": "defense"}]
+            "points": [2, {"multiply": "model.wounds"}, {"multiply": -0.25}]
         },
         "fully_armored": {"name": "Fully Armored", "description": "...", "effects": []},
-        "hard_turns": {"name": "Hard Turns", "description": "When moving this unit at double speed, it may not make any turns of more than 90 degrees."},
-        "hover": {"name": "Hover", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 7.5}]},
-        "agile": {"name": "Agile", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
-        "walker": {"name": "Walker", "description": "This unit may ignore low obstacles when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 2.5}]},
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
             "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
-            "effects": [{"type": "psychic", "value": "x"}]
+            "points": [15, {"multiply": "rule.x"}]
         },
         "aircraft": {
             "name": "Aircraft",
             "description": "Enemy units suffer -1 Accuracy when shooting at this model. This model may ignore terrain and other models when moving. This model may only turn up to 90 degrees after completing a move. When activated, it must first take a free move action its full movement distance in a straight line. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
-            "effects": [
-                {"type": "ignoreTerrain"},
-                {"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 20, "target": "enemy"},
-                {"type": "alterStat", "statName": "movement", "frequency": 5, "value": 10}
-            ]
+            "points": 20
         },
         "hover_mode": {
             "name": "Hover Mode",

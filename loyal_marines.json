@@ -1241,6 +1241,7 @@
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
+                    "movement": 5,
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
@@ -1256,6 +1257,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
+                    "movement": 5,
                     "reflexes": 7,
                     "wounds": 3,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
@@ -1308,66 +1310,44 @@
         "mobility_training": {
             "name": "Mobility Training",
             "description": "This model and models in its unit gain +3 inch max range when shooting and +3 inches to charges.",
-            "effects": [
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
-                {"type": "alterWeapon", "statName": "medium", "value": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
-            ]
+            "points": 5
         },
         "combat_master": {
             "name": "Combat Master",
             "description": "When this unit fights in melee, choose one of the following bonuses: +1 to hit or +1 AP or +1 Damage on hits rolls of 1 or 2.",
-            "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 6},
-                {"type": "alterStat", "statName": "fight", "value": 1, "frequency": 6},
-                {"type": "alterWeapon", "statName": "damage", "value": 1, "frequency": 2}
-            ]
-        },
-        "medical_training": {
-            "name": "Medical Training",
-            "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly"}]
+            "points": 10
         },
         "banner_of_justice": {
             "name": "Banner of Justice",
             "description": "Enemy units within 6\" get -1 courage.",
-            "effects": [{"type": "grantRule", "rule": "fear", "target": "enemy", "range": 6}]
+            "points": 10
         },
         "psych_out": {
             "name": "Dangerous(Psychic)",
-            "description": "This weapon has +1 AP against units with the Psychic keyword.",
-            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2}]
+            "description": "This weapon has +1 AP against units with the Psychic keyword."
         },
         "banner_of_wrath": {
             "name": "Banner of Wrath",
             "description": "This model and friendly Infantry units within 3\" gain +1 Strength.",
-            "effects": [{"type": "alterStat", "statName": "fight", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+            "points": 10
         },
         "banner_of_focus": {
             "name": "Banner of Focus",
             "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+            "points": 10
         },
         "expert_marksman": {
             "name": "Expert Marksman",
             "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+            "points": 10
         },
-        "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "effects": [{"type": "ignoreTerrain", "frequency": 5}]},
+        "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "points": ["model.wounds"]},
         "prime_combat_shield": {
             "name": "Prime Combat Shield",
             "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
-            "effects": [{"type": "regeneration", "frequency": 3}]
+            "points": ["model.wounds", {"multiply": 3}]
         },
-        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}}]},
-        "power_void": {
-            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 18}]
-        },
-        "power_fortify": {
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
-        },
-        "power_strength": {
-            "effects": [{"type": "alterStat", "statName": "fight", "value": 2, "target": "friendly", "range": 12}]
-        }
+        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "points": ["model.defense"]}
     },
     "relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -1468,11 +1448,11 @@
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 12\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 7},
         "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12\" may immediately shoot.", "charge": 6},
-        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each.", "effects": [{"weapon": "power_purge"}]},
-        "might": { "name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +2 Strength for its next attack.", "effects": [{"rule": "power_strength"}] },
-        "fortify": { "name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "effects": [{"rule": "power_fortify"}] },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
-        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}] },
-        "bolt": { "name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}] }
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each."},
+        "might": { "name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength for its next attack.", "charge": 7},
+        "fortify": { "name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Resist test.", "charge": 6},
+        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "charge": 6},
+        "bolt": { "name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 5}
     }
 }
