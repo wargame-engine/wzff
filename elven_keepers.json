@@ -9,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "blur_field", "furious", "agile", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "blur_field", "furious", "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -41,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "blur_field", "furious", {"id": "regeneration", "x": 3}, "agile", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "blur_field", "furious", {"id": "regeneration", "x": 3}, "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -67,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "blur_field", "furious", {"id": "psychic", "x": 1}, "agile", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "blur_field", "furious", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -97,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "blur_field", "agile", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "blur_field", "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -293,7 +293,7 @@
             "effects": [{"type": "stealth", "value": 1}]
         },
         "power_void": {
-            "effects": [{"type": "grantRule", "rule": {"id": "invulnerable", "x": 1}, "target": "enemy", "targetModels": 1, "range": 12}]
+            "effects": [{"type": "grantRule", "rule": {"id": "lucky", "x": 1}, "target": "enemy", "targetModels": 1, "range": 12}]
         },
         "power_fortify": {
             "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]

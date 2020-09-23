@@ -9,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "relentless", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "relentless", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -43,7 +43,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "relentless", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "relentless", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -76,7 +76,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "repair", "x": 2}, {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -109,7 +109,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "repair", "x": 2}, {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -143,7 +143,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -176,7 +176,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -210,7 +210,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "fear", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "fear", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Daemon Champion",
@@ -915,7 +915,7 @@
             "notes": "not updated",
             "name": "Lord of Change",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["character",{"id": "invulnerable", "x": 1}],
+            "rules": ["character",{"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -948,7 +948,7 @@
         "sorceror_of_change": {
             "name": "Sorceror of Change",
             "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -981,7 +981,7 @@
         "birdman_sorceror": {
             "name": "Birdman Sorceror",
             "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",

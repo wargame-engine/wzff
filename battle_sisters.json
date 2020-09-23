@@ -8,7 +8,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "High Sister",

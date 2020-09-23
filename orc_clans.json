@@ -210,7 +210,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "invulnerable", "x": 1}],
+            "rules": [{"id": "lucky", "x": 1}],
             "models": [{"name": "Goblin Leader", "courage": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {

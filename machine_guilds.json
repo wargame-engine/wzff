@@ -12,7 +12,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "repair", "x": "3"}, {"id": "invulnerable", "x": "2"}],
+            "rules": ["character", {"id": "repair", "x": "3"}, {"id": "lucky", "x": "2"}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -41,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "invulnerable", "x": "1"}],
+            "rules": [{"id": "lucky", "x": "1"}],
             "models": [
                 {
                     "name": "Machine Master",

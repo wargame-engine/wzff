@@ -13,7 +13,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["character", "commander_field_orders", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "commander_field_orders", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -39,7 +39,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["character", "commander_field_orders_stormtrooper", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "commander_field_orders_stormtrooper", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",

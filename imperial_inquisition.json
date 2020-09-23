@@ -9,7 +9,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", "ward", {"id": "invulnerable", "x": 1}],
+            "rules": ["character", "ward", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -37,7 +37,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Stormtrooper", "Infantry"],
-            "rules": ["commander_field_orders_stormtrooper", {"id": "invulnerable", "x": 1}],
+            "rules": ["commander_field_orders_stormtrooper", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
