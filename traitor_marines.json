@@ -1167,7 +1167,8 @@
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
         "power_storm": {"medium": 18, "attacks": 10},
         "psychic_inferno":{"medium":12, "ap": 4, "attacks":5},
-        "change_bolt": {"medium": 18, "ap": 7, "attacks": 1, "damage":3}
+        "change_bolt": {"medium": 18, "ap": 7, "attacks": 1, "damage":3},
+        "claws": {"name": "Mutated Claws", "attacks": 3, "short": "Melee", "ap": 3}
     },
     "rules": {
         "blessing_of_change": {"name": "Blessing of Change", "description": "Enemy units have -1 to hit when shooting at this unit."},
