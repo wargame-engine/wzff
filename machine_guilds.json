@@ -679,7 +679,7 @@
         "energy_cannon": {"name": "Energy Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 3}, "indirect"]},
         "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "damage": 3},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["emp"]},
-        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 3, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
+        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 3, "short": 18, "medium": 36, "ap": 5, "damage": 2},
         "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3},
         "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
         "raider_sabre": {"name": "Raider Sabre", "attacks": 2, "ap": 1, "short": "Melee"},
