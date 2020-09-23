@@ -188,8 +188,8 @@
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
                         {"addRule": [{"id": "data_link"}, "heat_scanner"]},
-                        {"replaceWeapon": "radiation_carbine", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]], "limit": 1},
-                        {"replaceWeapon": "pistol", "withWeapon": ["phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
+                        {"replaceWeapon": "radiation_carbine", "withWeapon": [["radiation_pistol", {"id": "ccw", "count": 2}]], "limit": 1},
+                        {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "taser_sword", "taser_maul"], "limit": 1}
                     ],
                     "min": 1,
@@ -231,8 +231,9 @@
                     "weapons": ["rifle", "ccw"],
                     "options": [
                         {"addRule": [{"id": "data_link"}, "heat_scanner"]},
-                        {"replaceWeapon": "rifle", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ccw", "count": 2}, "energy_sword", "taser_sword", "taser_maul"], "limit": 1}
+                        {"replaceWeapon": "rifle", "withWeapon": [["radiation_pistol", {"id": "ccw", "count": 2}]], "limit": 1},
+                        {"replaceWeapon": "radiation_pistol", "withWeapon": ["phosphor_pistol", "emp_pistol"], "limit": 1},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "taser_sword", "taser_maul"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
