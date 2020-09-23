@@ -188,8 +188,9 @@
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
                         {"addRule": [{"id": "data_link"}, "heat_scanner"]},
-                        {"replaceWeapon": "radiation_carbine", "withWeapon": ["pistol", "phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
-                        {"replaceWeapon": "ccw", "withWeapon": [{"id": "ccw", "count": 2}, "energy_sword", "taser_sword", "taser_maul"], "limit": 1}
+                        {"replaceWeapon": "radiation_carbine", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]], "limit": 1},
+                        {"replaceWeapon": "pistol", "withWeapon": ["phosphor_pistol", "radiation_pistol", "emp_pistol"], "limit": 1},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "taser_sword", "taser_maul"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -736,52 +737,29 @@
                 {"name": "Hunter", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "damage": 3, "rules": ["anti_air"]},
                 {"name": "Gatling", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]}
             ]
-        },
-        "power_beam": {"attacks": 6, "short": 12, "ap": 3}
+        }
     },
     "rules": {
         "canticles": {
             "name": "Canticles",
             "description": "When activated, choose one of the following to apply to this unit and friendly units within 3\". +1 AP or -1 to be hit or hit rolls of 1 or 2 when shooting generate an additional attack.",
-            "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
-                {"type": "grantRule", "rule": "relentless", "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}},
-                {"type": "grantRule", "rule": "stealth", "frequency": 3, "target": "friendly", "filter": {"keywords": ["Infantry"]}}
-            ]
+            "points": 10
         },
-        "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "effects": [{"type": "alterStat", "statName": "courage", "value": 1}]},
+        "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": ["model.wounds", {"multiply": "constants.courageCost"}]},
         "heat_scanner": {
             "name": "Heat Scanner",
             "description": "This model and its unit gain +6 inch max range when shooting.",
-            "effects": [{"type": "alterWeapon", "statName": "medium", "value": 6, "target": "friendly"}]
+            "points": 5
         },
-        "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5}]},
-        "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "effects": [{"type": "freeHits", "value": 2, "frequency": 2}]},
+        "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
+        "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]},
         "radiation": {
             "name": "Radiation",
             "description": "On failed Resist rolls of 9 or 10, the defender takes +1 Damage.",
-            "effects": [{"type": "alterWeapon", "statName": "damage", "value": 1, "frequency": 2}]
-        },
-        "deflection_field": {
-            "name": "Deflection Field",
-            "description": "Each time this model loses a wound roll a D10, on a 4 or less that wound is not lost.",
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 4}}]
-        },
-        "power_aim": {
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "friendly", "range": 12}]
-        },
-        "power_rust": {
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 18}]
-        },
-        "power_endurance": {
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 2}, "target": "friendly", "range": 12}]
-        },
-        "power_speed": {
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 6, "target": "friendly", "range": 12, "frequency": 5}]
+            "points": ["weapon.attacks"]
         }
     },
     "relics": [
-        {"rule": "deflection_field", "flavor": "A field of energy protecting the wearer that coud stop even the heaviest of weaponry."},
         {"rule": "canticles", "flavor": "Some members of the Machine Guild have ascended far enough to perform machine miracles."}
     ],
     "strategies": [
@@ -805,10 +783,10 @@
         }
     ],
     "powers": {
-        "machine_aim": {"name": "Guidance", "description": "Target friendly unit within 12\" gets +1 Accuracy with its next attack.", "effects": [{"rule": "power_aim"}]},
-        "machine_endurance": {"name": "Endurance", "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 2 or less that wound is not lost.", "effects": [{"rule": "power_endurance"}]},
-        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 6\".", "effects": [{"rule": "power_speed"}]},
-        "solar_ray": {"name": "Solar Ray", "description": "Target enemy unit within 12\" takes 6 hits with AP 3.", "effects": [{"weapon": "power_beam"}]},
-        "rust": {"name": "Rust", "description": "Target enemy unit within 18\" gets -1 Accuracy with its next attack.", "effects": [{"rule": "power_rust"}]}
+        "machine_aim": {"name": "Guidance", "description": "Target friendly unit within 12\" gets +1 Accuracy with its next attack.", "charge": 6},
+        "machine_endurance": {"name": "Endurance", "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 2 or less that wound is not lost.", "charge": 5},
+        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 6\".", "charge": 7},
+        "solar_ray": {"name": "Solar Ray", "description": "Target enemy unit within 12\" takes 6 hits with AP 3.", "charge": 4},
+        "rust": {"name": "Rust", "description": "Target enemy unit within 18\" gets -1 Accuracy with its next attack.", "charge": 5}
     }
 }
