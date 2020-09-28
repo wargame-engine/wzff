@@ -707,7 +707,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -734,7 +734,7 @@
         "marine_assault_apc": {
             "name": "Assault APC",
             "description": "A durable transport built by the loyal marines with upgraded weaponry.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -762,10 +762,10 @@
                 }
             ]
         },
-        "marine_tank": {
+        "marine_battle_tank": {
             "name": "Battle Tank",
             "description": "An armored tank helmed by loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -802,7 +802,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -845,7 +845,7 @@
         "hover_apc": {
             "name": "Hover APC",
             "description": "A durable transport with hover technology.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -880,7 +880,7 @@
         "heavy_hover_apc": {
             "name": "Heavy Hover APC",
             "description": "A heavy transport with hover technology and loaded out with many weapons.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", "hover"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -927,7 +927,7 @@
         "heavy_hover_tank": {
             "name": "Heavy Hover Tank",
             "description": "A heavy transport with hover technology and a large anti-tank weapon.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "heavily_armored", "hover"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "heavily_armored", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -967,7 +967,7 @@
         "prime_light_walker": {
             "name": "Prime Light Walker",
             "description": "A lightly equipped recon walker.",
-            "rules": ["armored", "scout"],
+            "rules": ["armored", "scout", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -996,7 +996,7 @@
         "prime_assault_walker": {
             "name": "Prime Assault Walker",
             "description": "A heavily armed prime walker.",
-            "rules": ["armored"],
+            "rules": ["armored", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
@@ -1011,7 +1011,7 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "wounds": 6,
+                    "wounds": 12,
                     "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "stomp", "count": 2}, {"id": "twin_storm_rifle"}],
                     "options": [
                         {"replaceWeapon": "heavy_gatling_gun", "withWeapon": "heavy_plasma_cannon"},
@@ -1271,7 +1271,7 @@
         "dread_walker": {
             "name": "Dread Walker",
             "description": "A large psychic walker with heavy weapons and extreme combat prowess.",
-            "rules": ["armored", "ward"],
+            "rules": ["armored", "ward", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["psychic_marines"],
             "keywords": ["Vehicle"],
