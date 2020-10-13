@@ -765,7 +765,7 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, {"id": "open_topped", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, {"id": "open_topped", "x": 11}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Truck",
@@ -794,7 +794,7 @@
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
             "category": "transport",
-            "rules": [{"id": "transport", "x": 11}, {"id": "open_topped", "x": 11}, "fly"],
+            "rules": [{"id": "transport", "x": 11}, {"id": "open_topped", "x": 11}, "fly", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "War Helicopter",
@@ -829,7 +829,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Looted Tank",
@@ -859,7 +859,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", {"id": "open_topped", "x": 11}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", {"id": "open_topped", "x": 11}, "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Battle Truck",
@@ -891,7 +891,7 @@
             "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 3,
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Goblin Tank",
@@ -916,7 +916,7 @@
             "min": 1,
             "max": 1,
             "subfactions": ["none", "goblin_army"],
-            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Goblin Mega Tank",
@@ -951,7 +951,7 @@
             "subfactions": ["none", "goblin_army"],
             "min": 1,
             "max": 3,
-            "rules": ["armored"],
+            "rules": ["armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Goblin Walker",
@@ -975,7 +975,7 @@
             "category": "heavy",
             "min": 1,
             "max": 1,
-            "rules": ["fear", "armored"],
+            "rules": ["fear", "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Orc Walker",
@@ -1002,7 +1002,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Attack Buggy",
@@ -1026,7 +1026,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, {"id": "teleport", "x": 5}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "teleport", "x": 5}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Dragster Buggy",
@@ -1050,7 +1050,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Beast Buggy",
@@ -1074,7 +1074,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Blaster Buggy",
@@ -1098,7 +1098,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "strider", "armored"],
+            "rules": [{"id": "impact", "x": 3}, "strider", "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Snazz Buggy",
@@ -1121,7 +1121,7 @@
             "category": "strike",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Jet Buggy",
@@ -1170,7 +1170,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "damage_table_aircraft"],
             "models": [
                 {
                     "name": "Blaster Plane",
@@ -1199,7 +1199,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "damage_table_aircraft"],
             "models": [
                 {
                     "name": "Flame Bomber",
@@ -1224,7 +1224,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "damage_table_aircraft"],
             "models": [
                 {
                     "name": "Blitz Bomber",
@@ -1248,7 +1248,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Vehicle", "Aircraft"],
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "damage_table_aircraft"],
             "models": [
                 {
                     "name": "Attack Plane",
@@ -1272,7 +1272,7 @@
             "category": "heavy",
             "min": 1,
             "max": 1,
-            "rules": ["fear", {"id": "transport", "x": 6}, "heavily_armored"],
+            "rules": ["fear", {"id": "transport", "x": 6}, "heavily_armored", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Orc Heavy Walker",
@@ -1303,7 +1303,7 @@
             "min": 1,
             "max": 1,
             "keywords":["Super Heavy Vehicle"],
-            "rules": ["heavily_armored", "titanic"],
+            "rules": ["heavily_armored", "titanic", "damage_table_vehicle", {"id": "tough", "x": 2}],
             "models": [
                 {
                     "name": "Super Heavy Walker",

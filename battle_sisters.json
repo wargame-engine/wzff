@@ -303,7 +303,7 @@
         "redemption_walker": {
             "name": "Redemption Walker",
             "description": "A walker atoning for its sins with righteous fury.",
-            "rules": [{"id": "impact", "x": 3}, "walker", "armored"],
+            "rules": [{"id": "impact", "x": 3}, "walker", "armored", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -332,7 +332,7 @@
         "apc": {
             "name": "APC",
             "description": "A durable transport with optional heavy weapons.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -349,7 +349,7 @@
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
-                    "rules": [],
+                    "rules": ["damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }
@@ -358,7 +358,7 @@
         "inferno_apc": {
             "name": "Inferno APC",
             "description": "A durable transport with attached heavy weapons.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 6}, "armored", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -386,7 +386,7 @@
         "organ_tank": {
             "name": "Organ Tank",
             "description": "A light tank with a unique organ-shaped missile array.",
-            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
