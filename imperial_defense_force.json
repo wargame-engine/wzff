@@ -585,7 +585,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["armored", "field_orders_battle_tank"],
+            "rules": ["vulnerable_side_rear", "field_orders_battle_tank", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Battle Tank",
@@ -627,7 +627,7 @@
             "max": 1,
             "category": "heavy",
             "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["armored"],
+            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Battle Tank",
@@ -664,7 +664,7 @@
         "light_apc": {
             "name": "APC",
             "description": "A light transport of the imperial defense force.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -696,7 +696,7 @@
         "armored_truck": {
             "name": "Armored Truck",
             "description": "An armored transport of the imperial defense force.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -725,7 +725,7 @@
         "armored_stormtrooper_truck": {
             "name": "Armored Stormtrooper Truck",
             "description": "An armored transport of the imperial defense force.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -755,7 +755,7 @@
         "assault_vehicle": {
             "name": "Assault Vehicle",
             "description": "A light assault vehicle with multiple roles.",
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -786,7 +786,7 @@
         "support_vehicle": {
             "name": "Support Vehicle",
             "description": "A support vehicle with multiple roles from artillery to anti-air.",
-            "rules": [{"id": "impact", "x": 3}, "armored"],
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -816,7 +816,7 @@
         "light_walker": {
             "name": "Light Walker",
             "description": "A lightly equipped recon walker.",
-            "rules": ["armored"],
+            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -845,7 +845,7 @@
         "light_gunship": {
             "name": "Light Transport Gunship",
             "description": "A light gunship with sliding doors for troop transport.",
-            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -874,7 +874,7 @@
         "heavy_gunship": {
             "name": "Heavy Gunship",
             "description": "A heavy gunship with a variety of weapon options.",
-            "rules": ["aircraft", "hover_mode"],
+            "rules": ["aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -903,7 +903,7 @@
         "super_heavy_battle_tank": {
             "name": "Super Heavy Battle Tank",
             "description": "A titanic battle tank with a variety of weapon options.",
-            "rules": ["heavily_armored", "titanic"],
+            "rules": ["vulnerable_rear", "titanic", "damage_table_vehicle"],
             "category": "super_heavy",
             "keywords": ["Vehicle", "Battle Tank"],
             "min": 1,
