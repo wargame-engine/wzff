@@ -1,6 +1,7 @@
 {
     "id": "undying_machines",
     "name": "Undying Machines",
+    "version": 0.1,
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
     "units": {
         "tri_scorpion_lord": {
