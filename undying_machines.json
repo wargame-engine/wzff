@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "walker", {"id": "regeneration", "x": 4}],
+            "rules": ["character", "walker", {"id": "regeneration", "x": 3}],
             "keywords": ["Heavy Infantry", "Character"],
             "models": [
                 {
@@ -35,7 +35,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "hover", {"id": "regeneration", "x": 4}],
+            "rules": ["character", "hover", {"id": "regeneration", "x": 3}],
             "keywords": ["Heavy Infantry", "Character"],
             "models": [
                 {
@@ -64,7 +64,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 4}, {"id": "lucky", "x": 1}],
+            "rules": ["character", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -93,7 +93,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 4}],
+            "rules": ["character", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -122,7 +122,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 4}],
+            "rules": ["character", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -160,7 +160,7 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "regeneration", "x": 4}],
+            "rules": ["hover", {"id": "regeneration", "x": 3}],
             "keywords": ["Swarm"],
             "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 5, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
@@ -170,7 +170,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "regeneration", "x": 4}],
+            "rules": ["character", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 8, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 7, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -208,7 +208,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 4}],
+            "rules": [{"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -234,7 +234,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 4}],
+            "rules": [{"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
             "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 1, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
@@ -245,7 +245,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "regeneration", "x": 4}],
+            "rules": [{"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rod", "withWeapon": [{"id": "war_scythe", "count": 2}, {"id": "phase_sword", "count": 2}, ["antimatter_pistol", "void_sword"]], "modelLimit": "all"},
@@ -260,7 +260,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 4}, "fear"],
+            "rules": [{"id": "regeneration", "x": 3}, "fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
             "models": [{"name": "Flayer", "courage": 6, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 5, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
@@ -271,7 +271,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["ambush", {"id": "regeneration", "x": 4}],
+            "rules": ["ambush", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 7, "wounds": 1, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
         },
@@ -603,7 +603,7 @@
             "weapons": ["feeding_teeth"],
             "min": 3,
             "max": 6,
-            "rules": [{"id": "regeneration", "x": 4}, "hover"]
+            "rules": [{"id": "regeneration", "x": 3}, "hover"]
         }
     },
     "weapons": {
