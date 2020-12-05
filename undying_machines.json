@@ -374,7 +374,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}, {"id": "transport", "x": 11}],
+            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -399,7 +399,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}],
+            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -424,7 +424,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["aircraft", {"id": "transport", "x": 11}],
+            "rules": ["aircraft", {"id": "transport", "x": 11}, "damage_table_vehicle"],
             "keywords": ["Vehicle", "Aircraft"],
             "models": [
                 {
@@ -449,7 +449,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["aircraft"],
+            "rules": ["aircraft", "damage_table_aircraft"],
             "keywords": ["Vehicle", "Aircraft"],
             "models": [
                 {
@@ -474,7 +474,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["walker", "flare_shielding", "armored"],
+            "rules": ["walker", "flare_shielding", "armored", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -530,7 +530,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["walker", "armored", "flare_shielding", "reanimation_beam"],
+            "rules": ["walker", "armored", "flare_shielding", "reanimation_beam", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -555,7 +555,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", "flare_shielding", "heavily_armored"],
+            "rules": ["hover", "flare_shielding", "heavily_armored", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
