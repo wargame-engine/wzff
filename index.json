@@ -18,6 +18,7 @@
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A"},
         "imperial_inquisition": {"name": "Imperial Inquisition", "id": "imperial_inquisition", "url": "imperial_inquisition.json", "color": "#d4af37", "alliance": "imperial_alliance"}
     },
+    "phases": {"pre_game": {"name": "Pre-Game"}, "bidding": {"name": "Bidding"}, "activation": {"name": "Activation"}},
     "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
     "categories": {
         "command": {"name": "Command"},
@@ -191,29 +192,40 @@
         }
     },
     "strategies": {
-        "divine_intervention": {
-            "name": "Divine Intervention (Core)",
+        "lucky": {
+            "phase": "activation",
+            "name": "Lucky (Core)",
             "flavor": "It seems luck has gone our way. Or maybe it's something more...",
             "description": "Re-roll a single skill test die. It may not be re-rolled again.",
             "cost": 1
         },
         "legendary_support": {
+            "phase": "pre_game",
             "name": "Legendary Support (Core)",
             "flavor": "A battle involving several legends is a story to be told.",
             "description": "You may include one additional legend in your roster.",
             "cost": 1
         },
         "incredible_courage": {
+            "phase": "activation",
             "name": "Incredible Courage (Core)",
             "flavor": "Even in the darkest of times, moments of great courage can occur.",
-            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit is treated as having Courage 9 until the end of the round.",
+            "description": "Once per battle, choose a unit that is about to take a Courage test. That unit gains +2 Courage until the end of its activation.",
             "cost": 2
         },
         "battlefield_reserves": {
-            "name": "Battlefield Reserves (Core)",
-            "flavor": "Sometimes assets are most useful in reserves, waiting for their moment to strike.",
-            "description": "Up to 3 units, one point for each may be placed in reserves instead of deployed on the field. At the beginning of any round, it may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 10\" from enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
-            "cost": "1/2/3"
+            "phase": "pre_game",
+            "name": "Outflanking Reserves (Core)",
+            "flavor": "Sometimes assets are most useful finding an alternate route around the enemy.",
+            "description": "Up to half of any force's units, one point for each may be placed in outflanking reserves instead of deployed on the field. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "cost": "1/per"
+        },
+        "hidden_deployment": {
+            "phase": "pre_game",
+            "name": "Hidden Deployment (Core)",
+            "flavor": "Staying hidden and waiting for the right moment to strike can have a devastating effect.",
+            "description": "Any number of Infantry, Artillery or Fortification units, one point per pair may be placed in hidden deployment instead of deployed on the field. See the section for hidden units in the core rules for details on how hidden units work.",
+            "cost": "1/pair"
         }
     },
     "weapons": {
@@ -325,7 +337,7 @@
         "energy_axe": {"name": "Energy Axe", "attacks": 2, "short": "Melee", "ap": 3, "damage": 1},
         "energy_mace": {"name": "Energy Mace", "attacks": 2, "short": "Melee", "ap": 4, "damage": 1},
         "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
-        "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
+        "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3, "rules": [{"id": "deadly", "x": 1}]},
         "combi_flamer": {
             "name": "Combi-flamer",
             "profiles": [{"name": "Flamer", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
