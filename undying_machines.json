@@ -670,95 +670,92 @@
         "reanimation_beam": {
             "name": "Reanimation Beam",
             "description": "Once during this unit's activation, if within 6\" if a friendly Infantry unit with killed models, roll 5D10. For each roll of a 5 or less, a wound is restored on a model. If there are left-over successes, you may spend a success to return a model to the unit with 1 wound remaining. Repeat until all successes are allocated. All models must be fully healed before returning fallen models to the unit.",
-            "effects": [{"type": "heal", "frequency": 5, "value": 5}]
+            "points": 30
         },
         "swarm_fabricator": {
             "name": "Swarm Fabricator",
             "description": "Once during this unit's activation, roll 3D10. For each roll of 5 or less, one Machine Swarm model equipped with (Feeding Teeth) and specials (Resilient(2), Hover) is created within 3\" of this unit. They may be added to a friendly Machine Swarm unit within 3\" or a new unit may be created.",
-            "effects": [
-                {
-                    "type": "spawnModel",
-                    "frequency": 15,
-                    "model": "machine_swarm_model"
-                }
-            ]
+            "points": 50
         },
         "extra_space": {
             "name": "Extra Space",
             "description_short": "Transport +10",
             "hidden": true,
             "description": "This model gains +10 Transport space.",
-            "effects": [{"type": "alterRule", "ruleName": "transport", "value": 10}]
+            "points": 10
         },
         "flare_shielding": {
             "name": "Flare Shields",
             "description": "This model gains +1 Resist when hit at Long Range.",
-            "effects": [{"type": "alterStat", "value": 1, "frequency": 5, "statName": "defense"}]
+            "points": ["model.defense", {"subtract": "constants.baseStats.defense"}, {"multiply": 5}]
         },
-        "dark_prism": {"name": "Dark Prism", "description": "This model may deny psychic powers as if it had Psychic.", "effects": [{"type": "psychic", "frequency": 2.5}]},
-        "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "effects": [{"type": "freeHits", "value": 3, "frequency": 2}]},
+        "dark_prism": {"name": "Dark Prism", "description": "This model may deny psychic powers as if it had Psychic.", "points": 5},
+        "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "points": ["weapon.attacks", {"multiply": 3}]},
         "regeneration_orb": {
             "name": "Regeneration Orb",
             "description": "This unit and friendly Infantry units within 3\" get Regeneration(+1).",
-            "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]
+            "points": 20
         },
         "regeneration_pods": {
             "name": "Regeneration Pods",
             "description": "Friendly Infantry units within 3\" get Regeneration(+1).",
-            "effects": [{"type": "alterRule", "target": "friendly", "range": 3, "ruleName": "regeneration", "value": 1, "filter": {"keywords": ["Infantry"]}}]
+            "points": 20
         },
         "phase_field": {
             "name": "Phase Field",
             "description": "This model and friendly Infantry units within 3\" get +2 Defense.",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 2, "target": "friendly"}]
+            "points": 20
         },
         "anti_gravity_generators": {
             "name": "Anti-Grav Generators",
             "hidden": true,
             "description_short": "+3\" Move, Fly",
             "description": "This model gains +3\" of Movement and the Fly special rule.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 3}, {"type": "grantRule", "rule": "fly"}]
+            "points": 5
         },
         "flight_cloak": {
             "name": "Flight Cloak",
             "hidden": true,
             "description_short": "+3\" Move, Fly",
             "description": "This model gains +3\" of Movement and the Fly special rule.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 3}, {"type": "grantRule", "rule": "fly"}]
+            "points": 5
         },
         "void_shield": {
             "name": "Void Shield",
             "hidden": true,
             "description_short": "+1 Resist",
             "description": "This model gains +1\" Resist.",
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
+            "points": 2
         },
         "vision_scope": {
             "name": "Vision Scope",
             "description": "This unit's weapons ignore cover at Short range.",
-            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 2.5}]
+            "points": 5
         },
         "snare": {
             "name": "Snare",
             "description": "A model may make one free attack with this weapon against units that fall back from combat with it.",
-            "effects": [{"type": "freeAttacksWithWeapon", "value": 1, "frequency": 2.5}]
+            "points": 2
         }
     },
     "strategies": [
         {
             "name": "Time Shift",
+            "phase": "activation",
             "description": "Use before an Infantry unit activates. That unit gets +2\" of Movement for this activation.",
             "flavor": "Using enhanced otherworldly technology, time can be bent around this unit allowing it to seemingly warp from one place to another.",
             "cost": 1
         },
         {
             "name": "Enhanced Regeneration",
+            "phase": "activation",
             "description": "Use before an Infantry unit with Regeneration makes a Resist roll. That unit gets Regeneration(+1).",
             "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
             "cost": 2
         },
         {
             "name": "Repair Overdrive",
+            "phase": "activation",
             "description": "Use when activating a Vehicle unit. Roll a D10. On a 5 or less the unit regains 2 wounds, otherwise it regains 1 wound.",
             "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
             "cost": 2
