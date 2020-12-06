@@ -12,11 +12,11 @@
                 {
                     "name": "Hive Lord",
                     "movement": 5,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
                     "weapons": [ { "id": "t", "count": 1 } ],
                     "rules": [ { "id": "a", "x": 2 }],

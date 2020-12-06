@@ -11,12 +11,12 @@
             "models": [
                 {
                     "name": "Warrior",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["testWep"],
                     "rules": ["testRule"],

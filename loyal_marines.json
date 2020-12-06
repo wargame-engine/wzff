@@ -32,12 +32,12 @@
             "models": [
                 {
                     "name": "Prime Captain (Grav Armor)",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 8,
                     "fight": 8,
                     "defense": 9,
                     "movement": 4,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_energy_sword"}, "at_grenade", {"id": "energy_fist", "count": 2}, "fist_pistol"],
                     "min": 1,
@@ -56,11 +56,11 @@
             "models": [
                 {
                     "name": "Prime Captain",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 8,
                     "fight": 8,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
@@ -87,12 +87,12 @@
             "models": [
                 {
                     "name": "Prime Psychic",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
@@ -120,12 +120,12 @@
             "models": [
                 {
                     "name": "Prime Lieutenant",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
@@ -151,12 +151,12 @@
             "models": [
                 {
                     "name": "Prime Ancient",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "rules": ["banner_of_wrath"],
@@ -183,7 +183,7 @@
             "rules": ["leader", "fearless"],
             "subfactions": ["none", "wolf_marines"],
             "models": [
-                {"name": "Prime Judge", "courage": 8, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 7, "wounds": 4, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
+                {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "wounds": 4, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
             ]
         },
         "prime_surgeon": {
@@ -197,12 +197,12 @@
             "models": [
                 {
                     "name": "Prime Surgeon",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
@@ -221,11 +221,11 @@
             "models": [
                 {
                     "name": "Marine Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "agility": 6,
                     "wounds": 1,
@@ -237,11 +237,11 @@
                 },
                 {
                     "name": "Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 1,
                     "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "marine_pistol"],
@@ -264,11 +264,11 @@
             "models": [
                 {
                     "name": "Prime Marine Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 2,
                     "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
@@ -278,11 +278,11 @@
                 },
                 {
                     "name": "Prime Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 2,
                     "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
@@ -304,12 +304,12 @@
             "models": [
                 {
                     "name": "Prime Assault Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", "prime_chainsword"],
                     "options": [{"replaceWeapon": ["prime_pistol"], "withWeapon": ["plasma_pistol"]}],
@@ -318,12 +318,12 @@
                 },
                 {
                     "name": "Prime Assault Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", "prime_chainsword"],
                     "min": 4,
@@ -342,12 +342,12 @@
             "models": [
                 {
                     "name": "Prime Reaper Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -359,11 +359,11 @@
                 },
                 {
                     "name": "Prime Reaper Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
@@ -387,11 +387,11 @@
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "movement": 6,
                     "wounds": 2,
                     "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
@@ -401,12 +401,12 @@
                 },
                 {
                     "name": "Prime Infiltration Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [],
@@ -426,12 +426,12 @@
             "models": [
                 {
                     "name": "Blade Guardian Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["prime_energy_sword", "prime_pistol", "at_grenade"],
                     "min": 1,
@@ -439,12 +439,12 @@
                 },
                 {
                     "name": "Blade Guardian",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "movement": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["prime_energy_sword", "prime_pistol", "at_grenade"],
                     "min": 2,
@@ -463,12 +463,12 @@
             "models": [
                 {
                     "name": "Prime Eradication Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 4,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "agility": 6,
                     "wounds": 3,
                     "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "heavy_ccw", "count": 2}],
@@ -477,12 +477,12 @@
                 },
                 {
                     "name": "Prime Eradication Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 4,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["prime_fusion_rifle", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
@@ -501,12 +501,12 @@
             "models": [
                 {
                     "name": "Prime Blaster Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "agility": 6,
                     "wounds": 2,
                     "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
@@ -516,12 +516,12 @@
                 },
                 {
                     "name": "Prime Blaster Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "agility": 6,
                     "wounds": 2,
                     "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
@@ -542,12 +542,12 @@
             "models": [
                 {
                     "name": "Prime Interception Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 8,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "agility": 6,
                     "wounds": 3,
                     "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
@@ -557,12 +557,12 @@
                 },
                 {
                     "name": "Prime Interception Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "agility": 6,
                     "wounds": 3,
                     "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
@@ -583,12 +583,12 @@
             "models": [
                 {
                     "name": "Prime Suppression Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 8,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["autocannon", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
@@ -596,12 +596,12 @@
                 },
                 {
                     "name": "Prime Suppression Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["autocannon", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
@@ -624,12 +624,12 @@
             "models": [
                 {
                     "name": "Prime Aggression Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 4,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
                     "min": 1,
@@ -637,12 +637,12 @@
                 },
                 {
                     "name": "Prime Aggression Marine",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 4,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
                     "min": 2,
@@ -664,12 +664,12 @@
                     "min": 3,
                     "max": 6,
                     "name": "Centurion Exosuit",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 4,
                     "defense": 10,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "heavy_fist", "count": 2}, {"id": "heavy_machinegun", "count": 2}],
                     "options": [
@@ -695,12 +695,12 @@
             "models": [
                 {
                     "name": "Prime Rider Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 8,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "twin_prime_rifle", "count": 1, "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 1}, {"id": "prime_pistol", "count": 1}],
                     "min": 1,
@@ -708,12 +708,12 @@
                 },
                 {
                     "name": "Prime Rider Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "twin_prime_rifle", "count": 1, "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 1}, {"id": "prime_pistol", "count": 1}],
                     "min": 2,
@@ -734,11 +734,11 @@
                 {
                     "name": "APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
@@ -761,11 +761,11 @@
                 {
                     "name": "Assault APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": ["twin_heavy_machinegun"],
                     "options": [
@@ -792,11 +792,11 @@
                 {
                     "name": "Battle Tank",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 9,
                     "weapons": ["heavy_autocannon"],
                     "options": [
@@ -829,11 +829,11 @@
                 {
                     "name": "Heavy Assault APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 9,
                     "weapons": [
                         {"id": "twin_heavy_machinegun", "mount": ["Front"]},
@@ -872,11 +872,11 @@
                 {
                     "name": "Hover APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
                     "options": [
@@ -907,11 +907,11 @@
                 {
                     "name": "Heavy Hover APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 9,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "laser_talon", "light_machinegun"],
                     "options": [
@@ -954,11 +954,11 @@
                 {
                     "name": "Heavy Hover Tank",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 9,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "heavy_plasma_cannon", "heavy_gatling_gun"],
                     "options": [
@@ -994,11 +994,11 @@
                 {
                     "name": "Prime Light Walker",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 10,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["incendiary_cannon", {"id": "walker_fist", "count": 3}, {"id": "stomp", "count": 2}],
                     "options": [
@@ -1023,11 +1023,11 @@
                 {
                     "name": "Prime Assault Walker",
                     "movement": 8,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 12,
                     "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "stomp", "count": 2}, {"id": "twin_storm_rifle"}],
                     "options": [
@@ -1051,12 +1051,12 @@
             "models": [
                 {
                     "name": "Psychic Grand Master",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 8,
                     "fight": 8,
                     "movement": 5,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "marine_pistol"],
                     "options": [
@@ -1084,12 +1084,12 @@
             "models": [
                 {
                     "name": "Psychic Brother",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "movement": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}, "marine_pistol"],
                     "options": [
@@ -1124,11 +1124,11 @@
             "models": [
                 {
                     "name": "Psychic Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
@@ -1138,11 +1138,11 @@
                 },
                 {
                     "name": "Psychic Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
@@ -1164,11 +1164,11 @@
             "models": [
                 {
                     "name": "Purge Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
@@ -1178,11 +1178,11 @@
                 },
                 {
                     "name": "Purge Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
@@ -1209,11 +1209,11 @@
             "models": [
                 {
                     "name": "Teleport Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
@@ -1223,11 +1223,11 @@
                 },
                 {
                     "name": "Teleport Marine",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
@@ -1255,12 +1255,12 @@
             "models": [
                 {
                     "name": "Psychic Destroyer Sergeant",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "movement": 5,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
@@ -1270,12 +1270,12 @@
                 },
                 {
                     "name": "Psychic Destroyer",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
                     "movement": 5,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
@@ -1298,11 +1298,11 @@
                 {
                     "name": "Dread Walker",
                     "movement": 8,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "dread_fist", "count": 2}, {"id": "heavy_stomp", "count": 3}],
                     "options": [
@@ -1364,7 +1364,7 @@
             "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
             "points": ["model.wounds", {"multiply": 3}]
         },
-        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Resist roll.", "points": ["model.defense"]}
+        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]}
     },
     "relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -1426,7 +1426,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Genetically Engineered",
             "phase": "activation",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
+            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
@@ -1434,7 +1434,7 @@
             "subfactions": ["siege_masters"],
             "name": "Destroy",
             "phase": "activation",
-            "description": "Use before shooting at a target with Resistance 6 or greater. This attack gains +1 AP and +1 Damage.",
+            "description": "Use before shooting at a target with Saveance 6 or greater. This attack gains +1 AP and +1 Damage.",
             "flavor": "Even the toughest armor has its weaknesses.",
             "cost": 2
         },
@@ -1480,7 +1480,7 @@
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each."},
         "might": { "name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength for its next attack.", "charge": 7},
         "fortify": { "name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Resist test.", "charge": 6},
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Save test.", "charge": 6},
         "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "charge": 6},
         "bolt": { "name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 5}
     }

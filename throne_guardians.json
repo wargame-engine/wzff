@@ -13,11 +13,11 @@
             "models": [
                 {
                     "name": "Guardian Captain",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 8,
                     "fight": 8,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": [{"id": "guardian_sword", "count": 2}, "at_grenade"],
                     "options": [
@@ -45,11 +45,11 @@
             "models": [
                 {
                     "name": "Guardian",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["guardian_sword", "at_grenade"],
                     "min": 3,
@@ -72,11 +72,11 @@
             "models": [
                 {
                     "name": "Warden",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["guardian_sword", "at_grenade"],
                     "min": 3,
@@ -96,11 +96,11 @@
                 {
                     "name": "Relic Heavy Assault APC",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 13,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 9,
                     "weapons": [
                         {"id": "twin_heavy_machinegun", "mount": ["Front"]},
@@ -170,7 +170,7 @@
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Genetically Engineered",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
+            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },

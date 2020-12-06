@@ -13,11 +13,11 @@
             "models": [
                 {
                     "name": "Inquisitor",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "heavy_pistol"}, "at_grenade", {"id": "chainsword", "count": 2}],
                     "options": [
@@ -41,11 +41,11 @@
             "models": [
                 {
                     "name": "Stormtrooper Commander",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
@@ -72,11 +72,11 @@
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
@@ -90,11 +90,11 @@
                 },
                 {
                     "name": "Stormtrooper",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
@@ -119,11 +119,11 @@
                 {
                     "name": "Inquisition Light Gunship",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
                     "options": [
@@ -148,11 +148,11 @@
                 {
                     "name": "APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],

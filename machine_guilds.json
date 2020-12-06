@@ -17,12 +17,12 @@
             "models": [
                 {
                     "name": "Arch Master",
-                    "courage": 8,
+                    "courage": 7,
                     "movement": 6,
                     "shoot": 8,
                     "fight": 8,
                     "defense": 11,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 4,
                     "weapons": [{"id": "axe_halberd", "count": 3}],
                     "options": [
@@ -45,12 +45,12 @@
             "models": [
                 {
                     "name": "Machine Master",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 7,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
@@ -73,12 +73,12 @@
             "models": [
                 {
                     "name": "Machine Manipulator",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": ["staff"],
                     "options": [
@@ -100,12 +100,12 @@
             "models": [
                 {
                     "name": "Machine Apprentice",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 4,
                     "weapons": ["axe_halberd"],
                     "options": [
@@ -128,12 +128,12 @@
             "models": [
                 {
                     "name": "Data Specialist",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["energy_fist", "wave_pistol"],
                     "rules": [{"id": "repair", "x": "2", "name": "Machinist"}],
@@ -151,12 +151,12 @@
             "models": [
                 {
                     "name": "Vanguard Commander",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
@@ -178,12 +178,12 @@
             "models": [
                 {
                     "name": "Vanguard Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [
@@ -197,12 +197,12 @@
                 },
                 {
                     "name": "Vanguard",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["radiation_carbine", "ccw"],
                     "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "limit": 1}],
@@ -221,12 +221,12 @@
             "models": [
                 {
                     "name": "Ranger Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "ccw"],
                     "options": [
@@ -240,12 +240,12 @@
                 },
                 {
                     "name": "Ranger",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["rifle", "ccw"],
                     "options": [{"replaceWeapon": "rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "limit": 1}],
@@ -264,12 +264,12 @@
             "models": [
                 {
                     "name": "Shock Priest",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 4,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["shock_staff"],
                     "options": [{"replaceWeapon": "shock_staff", "withWeapon": "taser_gauntlets"}],
@@ -289,12 +289,12 @@
             "models": [
                 {
                     "name": "Stalker Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 1,
@@ -302,12 +302,12 @@
                 },
                 {
                     "name": "Stalker",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 4,
@@ -326,12 +326,12 @@
             "models": [
                 {
                     "name": "Sky Stalker Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["taser_sword", "phosphor_pistol"],
                     "min": 1,
@@ -339,12 +339,12 @@
                 },
                 {
                     "name": "Sky Stalker",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
                     "min": 4,
@@ -363,12 +363,12 @@
             "models": [
                 {
                     "name": "Infiltrator Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["blaster_smg", "taser_sword"],
                     "min": 1,
@@ -376,12 +376,12 @@
                 },
                 {
                     "name": "Infiltrator",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["blaster_smg", "taser_sword"],
                     "min": 4,
@@ -400,12 +400,12 @@
             "models": [
                 {
                     "name": "Raider Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
                     "options": [
@@ -417,12 +417,12 @@
                 },
                 {
                     "name": "Raider",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "phosphor_pistol", "count": 2}, {"id": "ccw", "count": 1}],
                     "min": 2,
@@ -440,12 +440,12 @@
             "models": [
                 {
                     "name": "Breacher",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["emp_cannon", {"id": "claws", "count": 3}],
                     "min": 3,
@@ -467,12 +467,12 @@
             "models": [
                 {
                     "name": "Destroyers",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 8,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["mini_plasma_cannon", {"id": "claws", "count": 3}],
                     "min": 3,
@@ -492,11 +492,11 @@
                 {
                     "name": "Landing Craft",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 3,
                     "defense": 10,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}],
                     "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": {"id": "data_link"}}],
@@ -517,11 +517,11 @@
                 {
                     "name": "Assault Craft",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 3,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}, "disruption_missiles"],
                     "options": [{"addWeapon": [["light_machinegun", "energy_cannon"], ["light_machinegun", "iron_cannon"]]}, {"addRule": {"id": "data_link"}}],
@@ -542,11 +542,11 @@
                 {
                     "name": "Crawler Tank",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["twin_phosphor_cannon"],
                     "options": [
@@ -571,11 +571,11 @@
                 {
                     "name": "Combat Robot",
                     "movement": 8,
-                    "courage": 9,
+                    "courage": 7,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 3,
                     "weapons": [{"id": "robot_fist", "count": 2}, {"id": "heavy_stomp", "count": 1}, "heavy_flamethrower"],
                     "options": [
@@ -600,11 +600,11 @@
                 {
                     "name": "Dragoon Walker",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["taser_lance", {"id": "heavy_stomp", "count": 1}],
                     "options": [{"addWeapon": ["radiation_carbine"]}, {"replaceWeapon": "taser_lance", "withWeapon": ["radiation_sniper"]}],
@@ -625,11 +625,11 @@
                 {
                     "name": "Dragoon Walker",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "twin_autocannon"}, {"id": "heavy_stomp", "count": 1}],
                     "options": [{"replaceWeapon": "twin_autocannon", "withWeapon": ["twin_laser_cannon"]}],
@@ -650,11 +650,11 @@
                 {
                     "name": "Gunship",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 4,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "twin_light_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -756,7 +756,7 @@
         "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]},
         "radiation": {
             "name": "Radiation",
-            "description": "On failed Resist rolls of 9 or 10, the defender takes +1 Damage.",
+            "description": "On failed Save rolls of 9 or 10, the defender takes +1 Damage.",
             "points": ["weapon.attacks"]
         }
     },
@@ -772,13 +772,13 @@
         },
         {
             "name": "Cybernetic Enhancements",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Resist.",
+            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
             "cost": 2
         },
         {
             "name": "Radiation Supercharge",
-            "description": "Use before a unit shoots with a Radiation weapons. Those weapons get +1 AP for this attack. Failed hit rolls of 9 or 10 cause the firer to make one Resist roll.",
+            "description": "Use before a unit shoots with a Radiation weapons. Those weapons get +1 AP for this attack. Failed hit rolls of 9 or 10 cause the firer to make one Save roll.",
             "flavor": "While very harmful to the firer, sometimes it is benefitial to supercharge radiation weapons to deal with a foe more swiftly.",
             "cost": 2
         }

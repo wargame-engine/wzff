@@ -16,12 +16,12 @@
             "models": [
                 {
                     "name": "Jester",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 5,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "weapons": ["shard_pistol", { "id": "ccw", "count": 2 }],
                     "options": [

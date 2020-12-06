@@ -9,17 +9,17 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "furious", "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Troupe Master",
                     "movement": 7,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}, "plasma_grenade"],
                     "options": [
@@ -46,12 +46,12 @@
             "models": [
                 {
                     "name": "Solitaire",
-                    "courage": 8,
+                    "courage": 7,
                     "movement": 8,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 7,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["deadly_arts"],
                     "options": [{"addRule": ["graceful_brutality", "ambush"]}],
@@ -67,17 +67,17 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "furious", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Elven Seer",
-                    "courage": 8,
+                    "courage": 7,
                     "movement": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}],
                     "options": [
@@ -102,12 +102,12 @@
             "models": [
                 {
                     "name": "Jester Assassin",
-                    "courage": 8,
+                    "courage": 7,
                     "movement": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["sniper_cannon", {"id": "jester_blade", "count": 4}],
                     "rules": [],
@@ -122,17 +122,17 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["blur_field", "furious", "agile"],
+            "rules": ["blur_field", "agile"],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Jester",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}, "plasma_grenade"],
                     "options": [
@@ -158,12 +158,12 @@
             "models": [
                 {
                     "name": "Mimes",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 7,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 1,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
                     "rules": [],
@@ -183,12 +183,12 @@
             "models": [
                 {
                     "name": "Jetbikes",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
                     "options": [
@@ -212,12 +212,12 @@
             "models": [
                 {
                     "name": "Hover Tank",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}],
                     "min": 1,
@@ -236,12 +236,12 @@
             "models": [
                 {
                     "name": "Hover Tank",
-                    "courage": 7,
+                    "courage": 6,
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}],
                     "options": [{"limit": 1, "addWeapon": ["energy_glaive", "emp_cannon", "irridescent_cannon"]}],
@@ -341,7 +341,7 @@
     "powers": {
         "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "charge": 7 },
         "fortify": { "name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "charge": 8 },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "charge": 6 },
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6 },
         "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "charge": 6 },
         "death": { "name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7. Add 1 to damage rolls on Damage Table(X) units.", "charge": 6 }
     }

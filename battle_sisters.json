@@ -12,11 +12,11 @@
             "models": [
                 {
                     "name": "High Sister",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 8,
                     "fight": 8,
                     "defense": 7,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
@@ -40,11 +40,11 @@
             "models": [
                 {
                     "name": "Herald Sister",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
@@ -69,11 +69,11 @@
             "models": [
                 {
                     "name": "Nurse Sister",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
@@ -100,11 +100,11 @@
                 {
                     "name": "Sister Superior",
                     "movement": 6,
-                    "courage": 7, 
+                    "courage": 6, 
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
@@ -113,11 +113,11 @@
                 {
                     "name": "Battle Sister",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
                     "options": [
@@ -142,11 +142,11 @@
                 {
                     "name": "Redemption Sister Superior",
                     "movement": 6,
-                    "courage": 7, 
+                    "courage": 6, 
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "shock_whip", "count": 2}, "at_grenade"],
                     "options": [
@@ -158,11 +158,11 @@
                 {
                     "name": "Redemption Sister",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "heavy_chainsword", "count": 1}],
                     "min": 4,
@@ -183,11 +183,11 @@
                 {
                     "name": "Assault Sister Superior",
                     "movement": 6,
-                    "courage": 7, 
+                    "courage": 6, 
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 1}],
                     "options": [
@@ -199,11 +199,11 @@
                 {
                     "name": "Assault Sister",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 1}],
                     "min": 4,
@@ -228,11 +228,11 @@
                 {
                     "name": "Winged Sister Superior",
                     "movement": 8,
-                    "courage": 7, 
+                    "courage": 6, 
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
@@ -244,11 +244,11 @@
                 {
                     "name": "Winged Sister",
                     "movement": 8,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
@@ -272,11 +272,11 @@
                 {
                     "name": "Devastator Sister Superior",
                     "movement": 6,
-                    "courage": 7, 
+                    "courage": 6, 
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
@@ -285,11 +285,11 @@
                 {
                     "name": "Devastator Sister",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
                     "options": [
@@ -312,11 +312,11 @@
                 {
                     "name": "Redemption Walker",
                     "movement": 8,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 8,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "heavy_flamethrower", "count": 2}, {"id": "walker_flail", "count": 2}],
                     "options": [
@@ -341,11 +341,11 @@
                 {
                     "name": "APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
@@ -367,11 +367,11 @@
                 {
                     "name": "Inferno APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "twin_heavy_flamethrower"],
                     "options": [
@@ -395,11 +395,11 @@
                 {
                     "name": "Organ Tank",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "organ_missiles"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
@@ -437,15 +437,15 @@
         "celestial": {
             "name": "Celestial",
             "hidden": true,
-            "description": "This model gets +1 Resist.",
-            "description_short": "Resist +1",
+            "description": "This model gets +1 Save.",
+            "description_short": "Save +1",
             "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
         },
         "coffin_enclosure": {
             "name": "Coffin Enclosure",
             "hidden": true,
-            "description": "This model gets +1 Resist.",
-            "description_short": "Resist +1",
+            "description": "This model gets +1 Save.",
+            "description_short": "Save +1",
             "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]
         },
         "angel_assistant": {

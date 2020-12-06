@@ -17,11 +17,11 @@
             "models": [
                 {
                     "name": "Grand Warlord",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 8,
                     "defense": 12,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 6,
                     "movement": 4,
                     "weapons": ["super_carbine", "frags", "super_claw"],
@@ -40,11 +40,11 @@
             "models": [
                 {
                     "name": "Warlord",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 7,
                     "defense": 8,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -59,7 +59,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
+                {"name": "Attack Beast", "courage": 5, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
             ]
         },
         "mechanic": {
@@ -72,11 +72,11 @@
             "models": [
                 {
                     "name": "Mechanic",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -99,11 +99,11 @@
                 },
                 {
                     "name": "Goblin Assistant",
-                    "courage": 3,
+                    "courage": 2,
                     "shoot": 3,
                     "fight": 3,
                     "defense": 3,
-                    "reflexes": 3,
+                    "reflexes": 2,
                     "wounds": 1,
                     "weapons": ["heavy_ccw"],
                     "rules": [{"id": "repair", "x": 1}],
@@ -126,7 +126,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -155,7 +155,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -184,7 +184,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -201,7 +201,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Attack Beast", "courage": 6, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
+                {"name": "Attack Beast", "courage": 5, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
             ]
         },
         "goblin_leader": {
@@ -212,7 +212,7 @@
             "max": 1,
             "category": "command",
             "rules": [{"id": "lucky", "x": 1}],
-            "models": [{"name": "Goblin Leader", "courage": 6, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 6, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
+            "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {
             "name": "Goblin Doctor",
@@ -225,11 +225,11 @@
             "models": [
                 {
                     "name": "Goblin Doctor",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "ccw"],
@@ -250,11 +250,11 @@
             "models": [
                 {
                     "name": "Goblin Mechanic",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "ccw"],
@@ -279,11 +279,11 @@
             "models": [
                 {
                     "name": "Goblin Veteran",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "ccw"],
@@ -303,18 +303,18 @@
             "models": [
                 {
                     "name": "Goblin Herder",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 5, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 6, "wounds": 1, "movement": 6, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 6, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -327,11 +327,11 @@
             "models": [
                 {
                     "name": "Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
@@ -347,11 +347,11 @@
                 },
                 {
                     "name": "Orc",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
@@ -374,11 +374,11 @@
             "models": [
                 {
                     "name": "Storm Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -394,11 +394,11 @@
                 },
                 {
                     "name": "Storm Orc",
-                    "courage": 6,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
@@ -421,11 +421,11 @@
             "models": [
                 {
                     "name": "Commando Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -441,11 +441,11 @@
                 },
                 {
                     "name": "Commando Orc",
-                    "courage": 6,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
@@ -468,11 +468,11 @@
             "models": [
                 {
                     "name": "Specialist Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 2}],
@@ -482,11 +482,11 @@
                 },
                 {
                     "name": "Specialist Orc",
-                    "courage": 6,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
@@ -510,11 +510,11 @@
             "models": [
                 {
                     "name": "Pirate Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -523,11 +523,11 @@
                 },
                 {
                     "name": "Pirate Orc",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
@@ -552,11 +552,11 @@
             "models": [
                 {
                     "name": "Orc Boss Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -565,11 +565,11 @@
                 },
                 {
                     "name": "Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
@@ -592,11 +592,11 @@
             "models": [
                 {
                     "name": "Ultra Boss Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
@@ -605,11 +605,11 @@
                 },
                 {
                     "name": "Ultra Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
@@ -630,11 +630,11 @@
             "models": [
                 {
                     "name": "Biker Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -650,11 +650,11 @@
                 },
                 {
                     "name": "Orc Biker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 2,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
@@ -681,11 +681,11 @@
             "models": [
                 {
                     "name": "Boss Biker Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -694,11 +694,11 @@
                 },
                 {
                     "name": "Boss Biker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
@@ -718,11 +718,11 @@
             "models": [
                 {
                     "name": "Boss Trike",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 4,
                     "fight": 7,
                     "defense": 9,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 6,
                     "movement": 8,
                     "weapons": ["double_shotgun", "frags", {"id": "ultra_claw", "count": 3}],
@@ -742,11 +742,11 @@
             "models": [
                 {
                     "name": "Orc Minicopter",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 10,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
@@ -770,11 +770,11 @@
             "models": [
                 {
                     "name": "Truck",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
@@ -799,11 +799,11 @@
             "models": [
                 {
                     "name": "War Helicopter",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 8,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front", "Left", "Right"]}],
@@ -834,11 +834,11 @@
             "models": [
                 {
                     "name": "Looted Tank",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 9,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
@@ -864,11 +864,11 @@
             "models": [
                 {
                     "name": "Battle Truck",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 10,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 9,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun"}],
@@ -896,11 +896,11 @@
             "models": [
                 {
                     "name": "Goblin Tank",
-                    "courage": 4,
+                    "courage": 3,
                     "shoot": 5,
                     "fight": 3,
                     "defense": 8,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 3,
                     "movement": 10,
                     "weapons": [{"id": "plasma_rifle"}],
@@ -921,11 +921,11 @@
             "models": [
                 {
                     "name": "Goblin Mega Tank",
-                    "courage": 4,
+                    "courage": 3,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"count": 2, "id": "twin_heavy_machinegun"}, {"count": 3, "id": "heavy_machinegun"}],
@@ -956,11 +956,11 @@
             "models": [
                 {
                     "name": "Goblin Walker",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 6,
                     "weapons": [{"id": "plasma_rifle"}, "stomp", "mini_claw"],
@@ -980,11 +980,11 @@
             "models": [
                 {
                     "name": "Orc Walker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "movement": 6,
                     "weapons": [{"id": "plasma_rifle", "count": 2}, {"id": "stomp", "count": 2}, {"id": "walker_claw", "count": 2}],
@@ -1007,11 +1007,11 @@
             "models": [
                 {
                     "name": "Attack Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 10,
                     "weapons": [{"id": "heavy_flamethrower", "count": 1}],
@@ -1031,11 +1031,11 @@
             "models": [
                 {
                     "name": "Dragster Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "shock_rifle", "count": 1, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 1, "mount": ["Front"]}],
@@ -1055,11 +1055,11 @@
             "models": [
                 {
                     "name": "Beast Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "beast_cannon", "count": 1, "mount": ["Front"]}, {"id": "beast_launcher", "count": 1}],
@@ -1079,11 +1079,11 @@
             "models": [
                 {
                     "name": "Blaster Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "rivet_cannon", "count": 1}, {"id": "frags", "count": 1}],
@@ -1103,11 +1103,11 @@
             "models": [
                 {
                     "name": "Snazz Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "combi_gun", "count": 1}, {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}],
@@ -1126,11 +1126,11 @@
             "models": [
                 {
                     "name": "Jet Buggy",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_rocket_launcher", "count": 1, "mount": ["Front"]}, {"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}],
@@ -1150,11 +1150,11 @@
             "models": [
                 {
                     "name": "Goblin Artillery",
-                    "courage": 4,
+                    "courage": 3,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 7,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 3,
                     "movement": 3,
                     "weapons": ["cannon", {"id": "ccw", "count": 3}],
@@ -1175,11 +1175,11 @@
             "models": [
                 {
                     "name": "Blaster Plane",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "smasher_cannon", "count": 1, "mount": ["Front"]}, {"id": "twin_teleport_rifle", "count": 2, "mount": ["Front"]}],
@@ -1204,11 +1204,11 @@
             "models": [
                 {
                     "name": "Flame Bomber",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_heavy_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "flame_bombs"}],
@@ -1229,11 +1229,11 @@
             "models": [
                 {
                     "name": "Blitz Bomber",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "heavy_bombs"}],
@@ -1253,11 +1253,11 @@
             "models": [
                 {
                     "name": "Attack Plane",
-                    "courage": 5,
+                    "courage": 4,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun", "count": 2, "mount": ["Front"]}],
@@ -1277,11 +1277,11 @@
             "models": [
                 {
                     "name": "Orc Heavy Walker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 9,
                     "movement": 8,
                     "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "mega_claw", {"id": "heavy_stomp", "count": 4}],
@@ -1308,11 +1308,11 @@
             "models": [
                 {
                     "name": "Super Heavy Walker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 12,
                     "movement": 8,
                     "weapons": [{"id": "mega_claw", "count": 2}, {"id": "heavy_stomp", "count": 5}],
@@ -1416,15 +1416,15 @@
         "heavy_armor": {
             "name": "Heavy Armor",
             "hidden": "true",
-            "description": "This model gets +1 Resist.",
-            "description_short": "+1 Resist",
+            "description": "This model gets +1 Save.",
+            "description_short": "+1 Save",
             "points": ["model.wounds", {"multiply": "constants.defenseCost"}]
         },
         "ultra_armor": {
             "name": "Ultra Armor",
             "hidden": "true",
-            "description": "This model gets +2 Resist and -2\" of movement.",
-            "description_short": "+2 Resist, -1\" Movement",
+            "description": "This model gets +2 Save and -2\" of movement.",
+            "description_short": "+2 Save, -1\" Movement",
             "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": "model.wounds"}, {"multiply": 2}]}]
         },
         "precision_monicle": {
@@ -1477,9 +1477,9 @@
         },
         "extra_armor": {
             "name": "Extra Armor",
-            "description_short": "Resist +1",
+            "description_short": "Save +1",
             "hidden": true,
-            "description": "This model gains +1 Resist.",
+            "description": "This model gains +1 Save.",
             "points": ["model.wounds", {"multiply": "constants.defenseCost"}]
         },
         "war_banner": {
@@ -1514,7 +1514,7 @@
         "scrap_armor": {
             "subfactions": ["none", "goblin_army"],
             "name": "Scrap Armor",
-            "description": "Use when activating an Infantry unit. If that unit ends its activation within 3\" of a destroyed vehicle it may choose not to shoot or fight but gain +1 Resist (to a maximum of 7) for the rest of the battle.",
+            "description": "Use when activating an Infantry unit. If that unit ends its activation within 3\" of a destroyed vehicle it may choose not to shoot or fight but gain +1 Save (to a maximum of 7) for the rest of the battle.",
             "cost": 1
         },
         "grab_on": {

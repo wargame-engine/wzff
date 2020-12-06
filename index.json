@@ -12,7 +12,7 @@
         "knight_lords": {"name": "Knight Lords", "id": "knight_lords", "url": "knight_lords.json", "color": "#396e9e", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
         "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "secondary_color": "#9a1115", "alliance": "imperial_alliance"},
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance"},
-        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance"},
+        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance", "version": "0.1"},
         "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance", "version": "0.1"},
         "throne_guardians": {"name": "Throne Guardians", "id": "throne_guardians", "url": "throne_guardians.json", "color": "#D4AF37", "alliance": "imperial_alliance"},
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A", "version": "0.1"},
@@ -258,7 +258,6 @@
         "storm_rifle": {"name": "Storm Rifle", "attacks": 2, "short": 12, "ap": 1, "medium": 24},
         "twin_storm_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24},
         "energy_sword": {"name": "Energy Sword", "attacks": 2, "short": "Melee", "ap": 2},
-        "machinegun": {"name": "Machinegun", "attacks": 3, "short": 18, "medium": 36, "long": 45},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
         "minigun": {"name": "Minigun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
@@ -278,13 +277,13 @@
         "flamethrower": {"name": "Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame", "assault"]},
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["flame", "pistol"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 2, "ap": 4, "short": 6, "medium": 12, "rules": ["flame"]},
-        "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36},
+        "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 1},
         "laser_machinegun": {"name": "Laser Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "strike_missiles": {"name": "Strike Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
         "rocket_pod": {"name": "Rocket Pod", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
-        "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36},
-        "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
-        "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
+        "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36, "ap": 1},
+        "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["anti_air"]},
+        "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "ap": 1, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
         "marine_shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["rending"]},
@@ -404,7 +403,7 @@
         "dread_fist": {"name": "Dread Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
         "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 2, "short": "Melee"},
         "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 4, "short": "Melee", "ap": 6, "rules": ["rending"]},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "resist", "x": 1}]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "Save", "x": 1}]},
         "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3, "damage": 2},
         "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "ap": 2, "short": "Melee"},
         "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"},
@@ -482,8 +481,8 @@
     "rules": {
         "medical_training": {
             "name": "Medical Training",
-            "description": "Whenever this model, or a friendly Infantry model within 3\" loses a wound, roll a D10. On a 2 or less that wound is not lost.",
-            "points": ["model.wounds", {"multiply": 2}]
+            "description": "Whenever this model, or a friendly Infantry model within 6\" loses a wound, roll a D10. On a 3 or less that wound is not lost.",
+            "points": 15
         },
         "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "points": 8},
         "legend_wounds": {
@@ -527,8 +526,8 @@
         "destroyer_armor": {
             "name": "Destroyer Armor",
             "hidden": true,
-            "description_short": "Ambush, Resist 8, Movement -1\"",
-            "description": "Gives the model the ambush keyword. Gives the model 2 additional wounds. Gives the model resist 8.",
+            "description_short": "Ambush, Save 8, Movement -1\"",
+            "description": "Gives the model the ambush keyword. Gives the model 2 additional wounds. Gives the model Save 8.",
             "effects": [
                 {"type": "grantRule", "rule": "ambush"},
                 {"type": "changeStat", "statName": "defense", "value": 8},

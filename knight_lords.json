@@ -15,16 +15,16 @@
                 {
                     "name": "Mini Knight",
                     "movement": 10,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}],
                     "options": [
                         {"replaceWeapon": [{"id": "heavy_autocannon", "count": 2}], "withWeapon": [["fusion_blaster", "mini_titan_sword"]]},
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]}
                     ],
                     "rules": [],
@@ -45,15 +45,15 @@
                 {
                     "name": "Gallant Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "wounds": 12,
                     "weapons": ["titan_fist", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
@@ -75,15 +75,15 @@
                 {
                     "name": "Warden Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
                     "weapons": ["gatling_cannon", "heavy_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
@@ -105,19 +105,19 @@
                 {
                     "name": "Preceptor Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
                     "weapons": ["pulse_laser", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"replaceWeapon": "titan_sword", "withWeapon": ["titan_fist"]},
-                        {"limit": 1, "addWeapon": ["machinegun", "laser_machinegun"]}
+                        {"limit": 1, "addWeapon": ["light_machinegun", "laser_machinegun"]}
                     ],
                     "min": 1,
                     "max": 1,
@@ -137,15 +137,15 @@
                 {
                     "name": "Errant Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
                     "weapons": ["fusion_cannon", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
@@ -167,15 +167,15 @@
                 {
                     "name": "Castellan Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 14,
-                    "weapons": ["plasma_battle_cannon", "machinegun", "volcano_cannon", {"id": "heavy_stomp", "count": 2}],
+                    "weapons": ["plasma_battle_cannon", "light_machinegun", "volcano_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
@@ -199,15 +199,15 @@
                 {
                     "name": "Paladin Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
-                    "weapons": ["rapidfire_battle_cannon", "machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
+                    "weapons": ["rapidfire_battle_cannon", "light_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
@@ -229,15 +229,15 @@
                 {
                     "name": "Valiant Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 14,
                     "weapons": ["harpoon_cannon", "triple_flamethrower_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
@@ -261,15 +261,15 @@
                 {
                     "name": "Crusader Titan",
                     "movement": 8,
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 12,
-                    "weapons": ["gatling_cannon", "rapidfire_battle_cannon", {"id": "machinegun", "count": 2}, {"id": "heavy_stomp", "count": 2}],
+                    "weapons": ["gatling_cannon", "rapidfire_battle_cannon", {"id": "light_machinegun", "count": 2}, {"id": "heavy_stomp", "count": 2}],
                     "options": [
-                        {"limit": 1, "addWeapon": ["machinegun", "fusion_rifle"]},
+                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
                         {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"replaceWeapon": "gatling_cannon", "withWeapon": "fusion_cannon"}
@@ -322,7 +322,7 @@
     },
     "rules": {
         "power_sheilds": {"name": "Power Sheilds", "description": "This model gains Regeneration(3).", "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}}]},
-        "extra_armor": {"name": "Extra Armor", "description": "This model increases its Resistance by 1.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]}
+        "extra_armor": {"name": "Extra Armor", "description": "This model increases its Saveance by 1.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]}
     },
     "strategies": {},
     "relics": {}
