@@ -734,11 +734,11 @@
                 {
                     "name": "APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
@@ -761,11 +761,11 @@
                 {
                     "name": "Assault APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["twin_heavy_machinegun"],
                     "options": [
@@ -792,11 +792,11 @@
                 {
                     "name": "Battle Tank",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 9,
                     "weapons": ["heavy_autocannon"],
                     "options": [
@@ -829,11 +829,11 @@
                 {
                     "name": "Heavy Assault APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 9,
                     "weapons": [
                         {"id": "twin_heavy_machinegun", "mount": ["Front"]},
@@ -872,11 +872,11 @@
                 {
                     "name": "Hover APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
                     "options": [
@@ -907,11 +907,11 @@
                 {
                     "name": "Heavy Hover APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 9,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "laser_talon", "light_machinegun"],
                     "options": [
@@ -954,11 +954,11 @@
                 {
                     "name": "Heavy Hover Tank",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "wounds": 9,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "heavy_plasma_cannon", "heavy_gatling_gun"],
                     "options": [
@@ -998,7 +998,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 10,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["incendiary_cannon", {"id": "walker_fist", "count": 3}, {"id": "stomp", "count": 2}],
                     "options": [
@@ -1027,7 +1027,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 12,
                     "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "stomp", "count": 2}, {"id": "twin_storm_rifle"}],
                     "options": [

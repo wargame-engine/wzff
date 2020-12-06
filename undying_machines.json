@@ -161,7 +161,7 @@
             "category": "core",
             "rules": ["hover", {"id": "regeneration", "x": 3}],
             "keywords": ["Swarm"],
-            "models": [{"name": "Machine Swarm", "courage": 4, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
+            "models": [{"name": "Machine Swarm", "courage": 6, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
         "warden": {
             "name": "Warden",
@@ -212,7 +212,7 @@
             "models": [
                 {
                     "name": "Warrior",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 5,
                     "shoot": 6,
                     "fight": 6,
@@ -236,7 +236,7 @@
             "rules": [{"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
-            "models": [{"name": "Eternal", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "wounds": 1, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
+            "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "wounds": 1, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
         },
         "guardians": {
             "name": "Guardians",
@@ -251,7 +251,7 @@
                 {"addRule": "void_shield", "modelLimit": "all"},
                 {"addRule": "anti_gravity_generators", "modelLimit": "all"}
             ],
-            "models": [{"name": "Guardian", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 2, "weapons": ["rod"], "min": 5, "max": 10}]
+            "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 2, "weapons": ["rod"], "min": 5, "max": 10}]
         },
         "flayers": {
             "name": "Flayers",
@@ -262,7 +262,7 @@
             "rules": [{"id": "regeneration", "x": 3}, "fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 4, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
+            "models": [{"name": "Flayer", "courage": 6, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 4, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
         },
         "assassins": {
             "name": "Hunters",
@@ -272,7 +272,7 @@
             "category": "specialist",
             "rules": ["ambush", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
-            "models": [{"name": "Hunter", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 1, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
+            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 1, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
         },
         "gyro_bikes": {
             "name": "Gyro-Bikes",
@@ -290,7 +290,7 @@
             "models": [
                 {
                     "name": "Biker",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -316,7 +316,7 @@
                 {"addWeapon": ["whip_coil"]},
                 {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
             ],
-            "models": [{"name": "Shifter", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
+            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
         },
         "tri_scorpion_annihilators": {
             "name": "Tri-Scorpion Annihilators",
@@ -330,7 +330,7 @@
             "models": [
                 {
                     "name": "Tri-Scorpion Annihilator",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 5,
                     "shoot": 6,
                     "fight": 6,
@@ -343,7 +343,7 @@
                 },
                 {
                     "name": "Tri-Scorpion Annihilator",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 5,
                     "shoot": 6,
                     "fight": 6,
@@ -366,7 +366,7 @@
             "rules": ["hover"],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
-            "models": [{"name": "Annihilator", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
+            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
         },
         "transport_arc": {
             "name": "Transport Arc",
@@ -379,7 +379,7 @@
             "models": [
                 {
                     "name": "Transport Arc",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -404,7 +404,7 @@
             "models": [
                 {
                     "name": "Doom Arc",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -429,7 +429,7 @@
             "models": [
                 {
                     "name": "Scythe Transport",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
@@ -454,7 +454,7 @@
             "models": [
                 {
                     "name": "Scythe Transport",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
@@ -479,7 +479,7 @@
             "models": [
                 {
                     "name": "Machine Stalker",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -510,7 +510,7 @@
             "models": [
                 {
                     "name": "Spider Worker",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 5,
                     "fight": 5,
@@ -535,7 +535,7 @@
             "models": [
                 {
                     "name": "Reanimatior",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
@@ -560,7 +560,7 @@
             "models": [
                 {
                     "name": "Heavy Invasion Arc",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
