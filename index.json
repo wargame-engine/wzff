@@ -493,11 +493,7 @@
             "description": "This model gets +2 Wounds.",
             "points": ["model.defense", {"subtract": "constants.baseStats.defense"}, {"multiply": 2}]
         },
-        "gravity": {"name": "Gravity", "description": "Does +2 damage against targets with Def 7 or higher.", "points": ["weapon.attacks", {"multiply": 2}]},
-        "character": {
-            "name": "Character",
-            "description": "When this unit is activated, it may immediately activate another unit within 6\" (including another Character). If it is an Infantry unit it may not be targeted while another friendly non-character Infantry unit is within 3\". Friendly units within 3\" may use this model's Courage value."
-        },
+        "gravity": {"name": "Gravity", "description": "Add 2 to Damage Table(x) rolls against targets with Save 7 or higher.", "points": ["weapon.attacks", {"multiply": 2}]},
         "homing": {
             "name": "Homing",
             "description": "This weapon hits at Accuracy +1.",
@@ -531,7 +527,7 @@
         "destroyer_armor": {
             "name": "Destroyer Armor",
             "hidden": true,
-            "description_short": "Ambush, Wounds +2, Resist 8, Movement -1\"",
+            "description_short": "Ambush, Resist 8, Movement -1\"",
             "description": "Gives the model the ambush keyword. Gives the model 2 additional wounds. Gives the model resist 8.",
             "effects": [
                 {"type": "grantRule", "rule": "ambush"},
@@ -576,27 +572,11 @@
             "effects": ["weapon.attacks"]
         },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
-        "armored": {
-            "name": "Vulnerable",
-            "description": "This unit loses 1 Resist when hit in its side arc or 2 Resist when hit in the Rear arc.",
-            "points": [2, {"multiply": "model.wounds"}, {"multiply": -0.5}]
-        },
-        "heavily_armored": {
-            "name": "Vulnerable Rear",
-            "description": "This unit loses 1 Resist when hit in its Rear arc.",
-            "points": [2, {"multiply": "model.wounds"}, {"multiply": -0.25}]
-        },
-        "fully_armored": {"name": "Fully Armored", "description": "...", "effects": []},
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
             "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "points": [15, {"multiply": "rule.x"}]
-        },
-        "aircraft": {
-            "name": "Aircraft",
-            "description": "Enemy units suffer -1 Accuracy when shooting at this model. This model may ignore terrain and other models when moving. This model may only turn up to 90 degrees after completing a move. When activated, it must first take a free move action its full movement distance in a straight line. If it ends its move off the table, place it back on any table edge. Its activation then ends.",
-            "points": 20
         },
         "hover_mode": {
             "name": "Hover Mode",

@@ -27,7 +27,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", "fearless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "siege_masters"],
             "models": [
                 {
@@ -51,7 +51,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", "fearless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -82,7 +82,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["character", "fearless", {"id": "psychic", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "psychic", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -115,7 +115,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", "fearless"],
+            "rules": ["leader", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -146,7 +146,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["character", "fearless"],
+            "rules": ["leader", "fearless"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -180,7 +180,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["character", "fearless"],
+            "rules": ["leader", "fearless"],
             "subfactions": ["none", "wolf_marines"],
             "models": [
                 {"name": "Prime Judge", "courage": 8, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 7, "wounds": 4, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
@@ -192,7 +192,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["character", "fearless", "medical_training"],
+            "rules": ["leader", "fearless", "medical_training"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -724,7 +724,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -751,7 +751,7 @@
         "marine_assault_apc": {
             "name": "Assault APC",
             "description": "A durable transport built by the loyal marines with upgraded weaponry.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -782,7 +782,7 @@
         "marine_battle_tank": {
             "name": "Battle Tank",
             "description": "An armored tank helmed by loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -819,7 +819,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -862,7 +862,7 @@
         "hover_apc": {
             "name": "Hover APC",
             "description": "A durable transport with hover technology.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -897,7 +897,7 @@
         "heavy_hover_apc": {
             "name": "Heavy Hover APC",
             "description": "A heavy transport with hover technology and loaded out with many weapons.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -944,7 +944,7 @@
         "heavy_hover_tank": {
             "name": "Heavy Hover Tank",
             "description": "A heavy transport with hover technology and a large anti-tank weapon.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "heavily_armored", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -984,7 +984,7 @@
         "prime_light_walker": {
             "name": "Prime Light Walker",
             "description": "A lightly equipped recon walker.",
-            "rules": ["armored", "scout", "damage_table_vehicle"],
+            "rules": ["vulnerable_side_rear", "scout", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -1013,7 +1013,7 @@
         "prime_assault_walker": {
             "name": "Prime Assault Walker",
             "description": "A heavily armed prime walker.",
-            "rules": ["armored", "damage_table_vehicle"],
+            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
@@ -1046,7 +1046,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "fearless", "ward", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", "ward", {"id": "lucky", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1079,7 +1079,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "fearless", "ward", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", "ward", {"id": "lucky", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1288,7 +1288,7 @@
         "dread_walker": {
             "name": "Dread Walker",
             "description": "A large psychic walker with heavy weapons and extreme combat prowess.",
-            "rules": ["armored", "ward", "damage_table_vehicle"],
+            "rules": ["vulnerable_side_rear", "ward", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["psychic_marines"],
             "keywords": ["Vehicle"],

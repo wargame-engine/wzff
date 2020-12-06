@@ -10,7 +10,7 @@
             "max": 1,
             "keywords": ["Battlesuit"],
             "category": "command",
-            "rules": ["character", "fly", {"id":"tough", "x":2}],
+            "rules": ["leader", "fly", {"id":"tough", "x":2}],
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -315,7 +315,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
-                    "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "armored", "hover", "damage_table_vehicle"],
+                    "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
                         {"addWeapon": [[{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}]]},
                         {"addWeapon": ["seeker_missiles"], "limit": 3},
@@ -345,7 +345,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "railgun", "mount": ["Front"]}],
-                    "rules": [{"id": "impact", "x": 6}, "armored", "hover", "damage_table_vehicle"],
+                    "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
                         {"replaceWeapon": {"id": "railgun", "mount": ["Front"]}, "withWeapon": "ion_cannon"},
                         {"addWeapon": [[{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}], [{"id": "pulse_gatling", "mount": ["Left, Front"]}, {"id": "pulse_gatling", "mount": ["Right, Front"]}]]},
@@ -376,7 +376,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
-                    "rules": [{"id": "impact", "x": 3}, "armored", "hover", "damage_table_vehicle"],
+                    "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
                         {"replaceWeapon": {"id": "pulse_gatling", "mount": ["Front"]}, "withWeapon": {"id": "fusion_blaster", "mount": ["Front"]}},
                         {"addWeapon": ["seeker_missiles"], "limit": 3}

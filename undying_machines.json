@@ -1,7 +1,6 @@
 {
     "id": "undying_machines",
     "name": "Undying Machines",
-    "version": 0.1,
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
     "units": {
         "tri_scorpion_lord": {
@@ -10,8 +9,8 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "walker", {"id": "regeneration", "x": 3}],
-            "keywords": ["Heavy Infantry", "Character"],
+            "rules": ["leader", "walker", {"id": "regeneration", "x": 3}],
+            "keywords": ["Heavy Infantry", "leader"],
             "models": [
                 {
                     "name": "Tri-Scorpion Lord",
@@ -35,8 +34,8 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "hover", {"id": "regeneration", "x": 3}],
-            "keywords": ["Heavy Infantry", "Character"],
+            "rules": ["leader", "hover", {"id": "regeneration", "x": 3}],
+            "keywords": ["Heavy Infantry", "leader"],
             "models": [
                 {
                     "name": "Annihilator Overlord",
@@ -64,7 +63,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -93,7 +92,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -122,7 +121,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -170,7 +169,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 8, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 7, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -182,7 +181,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "fly", {"id": "psychic", "x": 1}],
+            "rules": ["leader", "fly", {"id": "psychic", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -375,7 +374,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
+            "rules": ["hover", "flare_shielding", "vulnerable_side_rear", {"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -400,7 +399,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", "flare_shielding", "armored", {"id": "impact", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", "flare_shielding", "vulnerable_side_rear", {"id": "impact", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -475,7 +474,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["walker", "flare_shielding", "armored", "damage_table_vehicle"],
+            "rules": ["walker", "flare_shielding", "vulnerable_side_rear", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -531,7 +530,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["walker", "armored", "flare_shielding", "reanimation_beam", "damage_table_vehicle"],
+            "rules": ["walker", "vulnerable_side_rear", "flare_shielding", "reanimation_beam", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -556,7 +555,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", "flare_shielding", "heavily_armored", "damage_table_vehicle"],
+            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {

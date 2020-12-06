@@ -91,7 +91,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "heavily_armored", {"id": "regeneration", "x": 2}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "regeneration", "x": 2}],
             "models": [
                 {
                     "name": "Relic Heavy Assault APC",

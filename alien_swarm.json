@@ -7,7 +7,7 @@
             "description": "A large and strong alien creature.",
             "min": 5,
             "max": 10,
-            "rules": ["character"],
+            "rules": ["leader"],
             "models": [
                 {
                     "name": "Hive Lord",

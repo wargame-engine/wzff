@@ -13,7 +13,7 @@
             "name": "Greater Daemon of Change",
             "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
             "subfactions": ["change"],
-            "rules": ["character", "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "lucky", "x": 2}],
+            "rules": ["leader", "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "lucky", "x": 2}],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -44,7 +44,7 @@
             "description": "A massive daemon gifted in the art of war.",
             "subfactions": ["change", "pestilence", "excess", "wrath"],
             "category": "command",
-            "rules": ["character", "fear", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fear", {"id": "lucky", "x": 1}],
             "keywords": ["monster"],
             "models": [
                 {
@@ -73,7 +73,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["change"],
             "category": "command",
-            "rules": ["character", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": ["leader", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -102,7 +102,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["change"],
             "category": "command",
-            "rules": ["character", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}, "strider"],
+            "rules": ["leader", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}, "strider"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -130,7 +130,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["character", "stealth", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}, "strider", "psychic_syphon"],
+            "rules": ["leader", "stealth", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}, "strider", "psychic_syphon"],
             "models": [
                 {
                     "name": "Blue Scholars",
@@ -156,7 +156,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["stealth", {"id": "lucky", "x": 2}, {"id": "psychic", "x": 1}, "strider", "character"],
+            "rules": ["stealth", {"id": "lucky", "x": 2}, {"id": "psychic", "x": 1}, "strider", "leader"],
             "models": [
                 {"name": "The Shifter", "movement": 8, "courage": 7, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "wounds": 2, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}
             ]
@@ -322,7 +322,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["character", {"id": "psychic", "x": 2}, {"id": "regeneration", "x": 1}, "no_escape"],
+            "rules": ["leader", {"id": "psychic", "x": 2}, {"id": "regeneration", "x": 1}, "no_escape"],
             "min": 1,
             "max": 1,
             "models": [
@@ -348,7 +348,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -374,7 +374,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -401,7 +401,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -428,7 +428,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -455,7 +455,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 1}, "psychic_syphon"],
+            "rules": ["leader", {"id": "regeneration", "x": 1}, "psychic_syphon"],
             "min": 1,
             "max": 1,
             "models": [
@@ -481,7 +481,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 2}, "stealth", {"id": "psychic", "x": 2}],
+            "rules": ["leader", {"id": "regeneration", "x": 2}, "stealth", {"id": "psychic", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -507,7 +507,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": ["leader", {"id": "regeneration", "x": 1}, {"id": "psychic", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -533,7 +533,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["character", {"id": "regeneration", "x": 1}, "agile", "stealth"],
+            "rules": ["leader", {"id": "regeneration", "x": 1}, "agile", "stealth"],
             "min": 1,
             "max": 1,
             "models": [

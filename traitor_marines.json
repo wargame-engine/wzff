@@ -18,7 +18,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "relentless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "relentless", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -52,7 +52,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "relentless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "relentless", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -85,7 +85,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -118,7 +118,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -152,7 +152,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -185,7 +185,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -219,7 +219,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "fear", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fear", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Daemon Champion",
@@ -728,7 +728,7 @@
         "traitor_tank": {
             "name": "Traitor Battle Tank",
             "description": "An armored tank helmed by the Traitor Marines.",
-            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -765,7 +765,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the Traitor Marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -800,7 +800,7 @@
         "infernal_brute": {
             "name": "Infernal Brute",
             "description": "A corrupted attack walker upgraded with infernal weapons.",
-            "rules": ["fear", "heavily_armored", "damage_table_monster"],
+            "rules": ["fear", "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -842,7 +842,7 @@
         "infernal_stalker": {
             "name": "Infernal Stalker",
             "description": "An infernal creation that crawls on the ground, stalking its prey.",
-            "rules": ["fear", "strider", "heavily_armored", "damage_table_monster"],
+            "rules": ["fear", "strider", "vulnerable_rear", "damage_table_monster"],
             "min": 1,
             "max": 1,
             "category": "heavy",
@@ -867,7 +867,7 @@
         "havoc_fiend": {
             "name": "Traitor Fiend",
             "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
-            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
+            "rules": ["fear", {"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -897,7 +897,7 @@
             "name": "Spider Walker",
             "description": "An infernal machine built to mimic a venomous spider.",
             "rules": [{"id": "regeneration", "x": 2}, "strider", "damage_table_monster"],
-            "subfactions": ["none", "change_traitors", "armored"],
+            "subfactions": ["none", "change_traitors", "vulnerable_side_rear"],
             "min": 1,
             "max": 1,
             "category": "heavy",
@@ -921,7 +921,7 @@
         "crab_walker": {
             "name": "Crab Walker",
             "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
-            "rules": [{"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
+            "rules": [{"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -950,7 +950,7 @@
         "havoc_dragon": {
             "name": "Traitor Dragon",
             "description": "A living metal airplane designed to drag other aircraft out of the air.",
-            "rules": ["flyer", {"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
+            "rules": ["flyer", {"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -977,7 +977,7 @@
             "notes": "not updated",
             "name": "Lord of Change",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["character",{"id": "lucky", "x": 1}],
+            "rules": ["leader",{"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1010,7 +1010,7 @@
         "sorceror_of_change": {
             "name": "Sorceror of Change",
             "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1043,7 +1043,7 @@
         "birdman_sorceror": {
             "name": "Birdman Sorceror",
             "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
-            "rules": ["character", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",

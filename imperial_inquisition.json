@@ -9,7 +9,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["character", "ward", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "ward", {"id": "lucky", "x": 1}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -139,7 +139,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built for loyal marines and allies.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,

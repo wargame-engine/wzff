@@ -1,7 +1,6 @@
 {
     "id": "elven_keepers",
     "name": "Elven Keepers",
-    "version": 0.1,
     "background": "Keepers of the Grand Library, these elves are clad in a unique Jester design. Their combat style revolves around a display of acrobatics and swift movement, one could attribute to a dance of blades.",
     "units": {
         "troupe_master": {
@@ -10,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "blur_field", "furious", "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "furious", "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "blur_field", "furious", {"id": "regeneration", "x": 3}, "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "furious", {"id": "regeneration", "x": 3}, "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -68,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["character", "blur_field", "furious", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "furious", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -98,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["character", "blur_field", "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "lucky", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -208,7 +207,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -232,7 +231,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -274,7 +273,7 @@
             "name": "Irridescent Cannon",
             "profiles":[
                 {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3},
+                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "deadly", "x": 1}]},
                 {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap":2}
             ]
         },
