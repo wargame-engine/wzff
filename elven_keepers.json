@@ -207,7 +207,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -231,7 +231,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -285,65 +285,53 @@
         "graceful_brutality": {
             "name": "Graceful Brutality",
             "description": "This model and friendly Infantry units within 3\" may move up to 3\" after shooting.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 3, "target": "friendly", "frequency": 40}]
+            "points": 5
         },
         "blur_field": {
             "name": "Blur Field",
             "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.",
-            "effects": [{"type": "stealth", "value": 1}]
-        },
-        "power_void": {
-            "effects": [{"type": "grantRule", "rule": {"id": "lucky", "x": 1}, "target": "enemy", "targetModels": 1, "range": 12}]
-        },
-        "power_fortify": {
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
-        },
-        "power_strength": {
-            "effects": [{"type": "alterStat", "statName": "fight", "value": 2, "target": "friendly", "range": 18, "filter": {"keywords": ["Infantry"]}}]
-        },
-        "power_speed": {
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 6, "target": "friendly", "range": 12, "frequency": 5}]
+            "points": 2
         }
     },
     "strategies": {
-        "dirge_of_sadness": {
-            "name": "Dirge of Sadness",
-            "flavor": "This dance of war evokes frantic greif. The sporadic movements of the dancers render them particluarly difficult to hit.",
-            "description": "Selected unit increases its Resistance value by 2",
-            "cost": 2
-        },
         "irridescent_blur": {
             "name": "Irridescent Blur",
+            "phase": "activation",
             "flavor": "The lightning fast movements of the elven keepers blind and confuse their enemies.",
-            "description": "Selected unit that has sprinted this round increases its Resistance value by 2.",
+            "description": "Selected unit that has sprinted this round increases its Save value by 2.",
             "cost": 1
         },
         "speedy_defense": {
             "name": "Speedy Defense",
+            "phase": "activation",
             "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dogde even the best gunman's bullets.",
             "description": "Use this strategy when an elven keeper unit is targeted by a ranged or melee weapon. Subtract 1 from all hit rolls made from that weapon.",
             "cost": 2
         },
         "dance_of_war": {
             "name": "Dance of War",
+            "phase": "activation",
             "flavor": "The mesmerizing dance of the elven keepers allows them to overwhelm and overpower their enemies.",
             "description": "Use this strategy when one of your units is given a Fight action. This unit may immediately make a 3\" move.",
             "cost": 1
         },
         "expedient_retreat": {
             "name": "Expedient Retreat",
+            "phase": "activation",
             "flavor": "The elven keepers are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
             "description": "Use after one of your units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
             "cost": 2
         },
         "bloody_entrance": {
             "name": "Bloody Entrance",
+            "phase": "activation",
             "flavor": "The elven keepers delight in the performances of their dances of war. One of their favorite ones begins with a explosion of violence nearly before the enemy has perceived that they are in combat.",
             "description": "Target a friendly elven keepers unit that has Charged. This unit gains +1 Damage for their melee weapons.",
             "cost": 2
         },
         "dancers_in_the_dark": {
             "name": "Dancers in the Dark",
+            "phase": "activation",
             "flavor": "The elven keepers are adept at controlling their enmies perception and are able to hide in shadows and re-emerge in places where their foes least expect.",
             "description": "Use this strategem before activating one elven keepers Infantry unit that is not in melee range of any enemy units. Remove this unit from the battlefield and redeploy anywhere outside of 9\" of any enemy units. This unit may not take a move or sprint action this round.",
             "cost": 2
@@ -351,10 +339,10 @@
     },
     "relics": [],
     "powers": {
-        "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "effects": [{"rule": "power_strength"}] },
-        "fortify": { "name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "effects": [{"rule": "power_speed"}] },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "effects": [{"rule": "power_void"}] },
-        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "effects": [{"weapon": "power_storm"}] },
-        "death": { "name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}] }
+        "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "charge": 7 },
+        "fortify": { "name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "charge": 8 },
+        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Resist test.", "charge": 6 },
+        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "charge": 6 },
+        "death": { "name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7. Add 1 to damage rolls on Damage Table(X) units.", "charge": 6 }
     }
 }
