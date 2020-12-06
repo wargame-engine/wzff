@@ -274,7 +274,7 @@
         "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
         "twin_heavy_machinegun": {"name": "Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 2},
         "twin_minigun": {"name": "Twin Minigun", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
-        "flamethrower": {"name": "Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame", "assault"]},
+        "flamethrower": {"name": "Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["flame", "pistol"]},
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 2, "ap": 4, "short": 6, "medium": 12, "rules": ["flame"]},
         "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 1},
@@ -568,7 +568,7 @@
         "fusion": {
             "name": "Fusion",
             "description": "Enemy units with Damage Table(X) add 1 to rolls when hit by this weapon at Short range.",
-            "effects": ["weapon.attacks"]
+            "effects": ["weapon.attacks", {"multiply": 2}]
         },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "psychic": {
