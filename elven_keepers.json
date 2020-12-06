@@ -1,6 +1,7 @@
 {
     "id": "elven_keepers",
     "name": "Elven Keepers",
+    "version": 0.1,
     "background": "Keepers of the Grand Library, these elves are clad in a unique Jester design. Their combat style revolves around a display of acrobatics and swift movement, one could attribute to a dance of blades.",
     "units": {
         "troupe_master": {
