@@ -1,7 +1,16 @@
 {
     "id": "traitor_marines",
     "name": "Traitor Marines",
-    "subfactions": {"change_traitors": {"name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc", "restricted": true}},
+    "subfactions": {
+        "change_traitors": {
+            "name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc", "restricted": true,
+            "background": "Traitor marines focused on using powerful magic to defeat their foes."
+        },
+        "rage_focus": {
+            "name": "Rage Focus", "id": "rage_focus", "color": "#6a0001",
+            "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."
+        }
+    },
     "units": {
         "traitor_lord": {
             "name": "Traitor Lord",
@@ -20,14 +29,14 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
                     ],
@@ -54,14 +63,14 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}, "twin_marine_rifle"],
+                    "weapons": ["marine_pistol", "frags", "chainsword", "twin_marine_rifle"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["war_chant", "traitor_tactics"]}
                     ],
                     "rules": ["combat_bike", {"id": "impact", "x": 1}],
@@ -87,14 +96,14 @@
                     "defense": 10,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor"]}
                     ],
                     "rules": [],
@@ -120,14 +129,14 @@
                     "defense": 10,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}, "twin_marine_rifle"],
+                    "weapons": ["marine_pistol", "frags", "chainsword", "twin_marine_rifle"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["destroyer_armor"]}
                     ],
                     "rules": ["combat_bike", {"id": "impact", "x": 1}],
@@ -154,14 +163,14 @@
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [{"id": "psychic", "x": 1}],
@@ -187,14 +196,14 @@
                     "defense": 9,
                     "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}],
@@ -253,7 +262,7 @@
                     "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
                     "options": [
                         {"limit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": [["marine_pistol", "chainsword"]]}
                     ],
                     "rules": [],
                     "min": 10,
@@ -277,14 +286,14 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["marine_rifle", "pistol", "ccw", "at_grenade"],
+                    "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
                     "options": [
                         {
                             "replaceWeapon": "marine_rifle",
-                            "withWeapon": [{"id":"ccw", "count": 2}, {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "energy_sword", "energy_fist", "energy_hammer"],
+                            "withWeapon": ["chainsword", {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "energy_sword", "energy_fist", "energy_hammer"],
                             "limit": 1
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -299,13 +308,66 @@
                     "defense": 8,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["marine_rifle", "pistol", "ccw", "at_grenade"],
+                    "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
                     "options": [
-                        {"replaceWeapon": "marine_rifle", "withWeapon": [{"id": "ccw", "count": 2}]},
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["chainsword"]},
                         {
                             "modelLimit": 4,
                             "replaceWeapon": "marine_rifle",
                             "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon"]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 4,
+                    "max": 20
+                }
+            ]
+        },
+        "traitor_berzerkers": {
+            "name": "Traitor Berzerkers",
+            "description": "Marines corrupted by the dark gods filled with rage.",
+            "subfactions": ["rage_focus"],
+            "min": 5,
+            "max": 20,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Berzerker Leader",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["marine_rifle", "marine_pistol", "ccw", "at_grenade"],
+                    "options": [
+                        {
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["chainsword", {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "energy_sword", "energy_fist", "energy_hammer"],
+                            "limit": 1
+                        },
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Berzerker Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["marine_pistol", "chainsword", "at_grenade"],
+                    "options": [
+                        {
+                            "modelLimit": 2,
+                            "replaceWeapon": "marine_pistol",
+                            "withWeapon": ["plasma_pistol"]
                         }
                     ],
                     "rules": [],
@@ -331,10 +393,10 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [
                                 ["marine_rifle", "ccw"],
                                 {"id": "energy_claws", "count": 2},
@@ -352,8 +414,8 @@
                                 "reaper_cannon"
                             ]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -370,7 +432,7 @@
                     "wounds": 1,
                     "weapons": ["marine_rifle", "frags", "ccw"],
                     "options": [
-                        {"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "ccw", "count": 2}, "pistol"]]},
+                        {"replaceWeapon": "marine_rifle", "withWeapon": [["chainsword", "marine_pistol"]]},
                         {
                             "replaceWeapon": "marine_rifle",
                             "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon", "reaper_cannon"]
@@ -399,7 +461,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": [{"id": "ccw", "count": 2}],
+                    "weapons": ["chainsword"],
                     "rules": [],
                     "min": 5,
                     "max": 10
@@ -423,7 +485,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": [{"id": "ccw", "count": 2}],
+                    "weapons": ["chainsword"],
                     "rules": ["wings"],
                     "min": 5,
                     "max": 10
@@ -471,14 +533,14 @@
                     "defense": 8,
                     "reflexes": 6,
                     "wounds": 1,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -493,10 +555,10 @@
                     "defense": 8,
                     "reflexes": 5,
                     "wounds": 1,
-                    "weapons": ["pistol", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "chainsword"],
                     "options": [
-                        {"replaceWeapon": ["pistol", {"id": "ccw", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 2}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "plasma_rifle", "flamethrower", "fusion_rifle"]}
+                        {"replaceWeapon": ["marine_pistol", "chainsword"], "withWeapon": [{"id": "energy_claws", "count": 2}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "plasma_rifle", "flamethrower", "fusion_rifle"]}
                     ],
                     "rules": [],
                     "min": 4,
@@ -575,14 +637,14 @@
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 2,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["marine_pistol", "frags", "chainsword"],
                     "options": [
                         {
-                            "replaceWeapon": ["pistol", {"id": "ccw", "count": 2}],
+                            "replaceWeapon": ["marine_pistol", "chainsword"],
                             "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]
                         },
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
-                        {"replaceWeapon": [{"id": "ccw", "count": 2}], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -600,7 +662,7 @@
                     "weapons": ["marine_rifle", "ccw"],
                     "options": [
                         {"addWeapon": ["twin_marine_rifle"]},
-                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": ["pistol", {"id": "ccw", "count": 2}]},
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": ["marine_pistol", "chainsword"]},
                         {"limit": 2, "replaceWeapon": "marine_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]}
                     ],
                     "min": 2,
@@ -636,7 +698,7 @@
         "havoc_apc": {
             "name": "Traitor APC",
             "description": "A durable transport for the followers of the dark gods.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -666,7 +728,7 @@
         "traitor_tank": {
             "name": "Traitor Battle Tank",
             "description": "An armored tank helmed by the Traitor Marines.",
-            "rules": [{"id": "impact", "x": 6}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -703,7 +765,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the Traitor Marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "armored", "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -738,7 +800,7 @@
         "infernal_brute": {
             "name": "Infernal Brute",
             "description": "A corrupted attack walker upgraded with infernal weapons.",
-            "rules": ["fear", "heavily_armored"],
+            "rules": ["fear", "heavily_armored", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -780,7 +842,7 @@
         "infernal_stalker": {
             "name": "Infernal Stalker",
             "description": "An infernal creation that crawls on the ground, stalking its prey.",
-            "rules": ["fear", "strider", "heavily_armored"],
+            "rules": ["fear", "strider", "heavily_armored", "damage_table_monster"],
             "min": 1,
             "max": 1,
             "category": "heavy",
@@ -805,7 +867,7 @@
         "havoc_fiend": {
             "name": "Traitor Fiend",
             "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
-            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "rules": ["fear", {"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -834,7 +896,7 @@
         "spider_walker": {
             "name": "Spider Walker",
             "description": "An infernal machine built to mimic a venomous spider.",
-            "rules": [{"id": "regeneration", "x": 2}, "strider"],
+            "rules": [{"id": "regeneration", "x": 2}, "strider", "damage_table_monster"],
             "subfactions": ["none", "change_traitors", "armored"],
             "min": 1,
             "max": 1,
@@ -859,7 +921,7 @@
         "crab_walker": {
             "name": "Crab Walker",
             "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
-            "rules": [{"id": "regeneration", "x": 2}, "heavily_armored"],
+            "rules": [{"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -888,7 +950,7 @@
         "havoc_dragon": {
             "name": "Traitor Dragon",
             "description": "A living metal airplane designed to drag other aircraft out of the air.",
-            "rules": ["flyer", {"id": "regeneration", "x": 2}, "heavily_armored"],
+            "rules": ["flyer", {"id": "regeneration", "x": 2}, "heavily_armored", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -932,8 +994,8 @@
                     "wounds": 3,
                     "weapons": ["marine_rifle", "frags", "ccw"],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": ["pistol", {"id": "ccw", "count": 2}]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": ["marine_pistol", "chainsword"]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"limit": 1, "addRule": ["jetpack", "destroyer_armor"]},
@@ -965,8 +1027,8 @@
                     "wounds": 3,
                     "weapons": ["marine_rifle", "frags", "ccw"],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [["marine_pistol", "chainsword"]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["flamethrower_pistol", "plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": "ccw", "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"changeRule": {"id": "psychic", "x": 2}},
