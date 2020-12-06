@@ -206,7 +206,7 @@
                 {
                     "name": "Battlesuit",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 9,
@@ -234,7 +234,7 @@
                 {
                     "name": "Tactical Drone",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 7,
@@ -258,7 +258,7 @@
                 {
                     "name": "Heavy Gun Drone",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 7,
@@ -283,7 +283,7 @@
                 {
                     "name": "Sniper Drone",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 7,
@@ -312,7 +312,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
@@ -342,7 +342,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "railgun", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
@@ -373,7 +373,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 8,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 3,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
@@ -398,7 +398,7 @@
                 {
                     "name": "Heavy Battlesuit",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 10,
@@ -428,7 +428,7 @@
                 {
                     "name": "Heavy Stealth Suit",
                     "movement": 8,
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 10,
@@ -451,7 +451,7 @@
         "attached_gunner_drone": {
             "name": "Attached Gunner Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": 5,
             "shoot": 5,
             "fight": 4,
             "defense": 7,
@@ -521,7 +521,7 @@
         "support_turret": {
             "name": "Support Turret",
             "movement": 0,
-            "courage": 4,
+            "courage": 5,
             "shoot": 5,
             "fight": 4,
             "defense": 6,
@@ -653,8 +653,8 @@
                 {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": [{"id": "fusion"}, "assault"]},
-        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": [{"id": "fusion"}]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}, "assault"]},
+        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}]},
         "missile_pod": {"name": "Missile Pod", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
         "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 1},
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2},
@@ -663,7 +663,7 @@
         "railgun": {
             "name": "Railgun",
             "profiles": [
-                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 6},
+                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "deadly", "x": 2}]},
                 {"name": "Blast", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
@@ -714,51 +714,49 @@
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space."},
         "spotting_laser": {
             "name": "Spotting Laser",
-            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to get +1 to hit the target. Only one spotting marker may be used per attack.",
-            "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "frequency": 5, "target": "friendly"}]
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to re-roll hit rolls of 1 or 2 against that target or 2 spotting markers to re-roll all hit rolls.",
+            "points": 5
         },
         "homing_beacon": {
             "name": "Homing Beacon",
             "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model.",
-            "effects": [{"type": "grantRule", "rule": "ambush", "target": "friendly"}]
+            "points": 5
         },
         "inhibitor": {
             "name": "Inhibitor",
             "description": "Enemy units suffer -2\" of movement with any Charge moves targetting friendly units within 3\".",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 2, "frequency": 5, "target": "friendly"}]
+            "points": 5
         },
         "tactical_drone": {
             "name": "Tactical Drone",
             "description": "When this unit is activated, choose one ability: One enemy unit within 12\" may not benefit from cover this round. Choose a unit within 2\" and roll one die for each drone. On any results of 5 or less the unit may heal 1 wound. No more than 3 wounds may be healed in one activation.",
-            "effects": [{"type": "grantRule", "rule": {"id": "repair", "x": 1}}]
+            "points": 5
         },
         "recon_drone": {
             "name": "Recon Scope",
             "description": "Friendly units within 3\" may ignores cover bonuses.",
-            "effects": [{"type": "alterWeapon", "statName": "ap", "value": 1, "frequency": 5, "target": "friendly", "filter": {"keywords": ["Infantry"]}}]
+            "points": 10
         },
         "accelerator": {
             "name": "Accelerator",
             "description": "This model and models in its unit add +6\" maximum Range to all weapons.",
-            "effects": [{"type": "alterWeapon", "statName": "medium", "value": 6, "target": "friendly"}]
+            "points": 5
         },
         "threat_detector_suit": {
             "name": "Threat Detector",
             "description_short": "+1 Reflexes",
             "description": "This model gets +1 Reflexes.",
-            "effects": [{"type": "alterStat", "statName": "reflexes", "value": 1}]
+            "points": 5
         },
         "cold_fusion_booster": {
             "name": "Cold Fusion Booster",
             "hidden": "true",
             "description": "This model gets +4\" Move.",
             "description_short": "+4\" Move",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 4}]
+            "points": 4
         },
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
-        "overheat": {"name": "Overheat", "description": "The firer loses 1 wound on any natural hit rolls of 1 or 2."},
-        "indirect": {"name": "Indirect", "description": "Can be fired without line of sight."},
-        "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Defense.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1, "target": "friendly"}]}
+        "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Defense.", "points": 20}
     },
     "strategies": {
         "covering_fire": {

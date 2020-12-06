@@ -7,7 +7,7 @@
         "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.1"},
         "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab", "alliance": "elven_coaliation", "version": "0.1"},
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
-        "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080"},
+        "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080", "version": "0.1"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"},
         "knight_lords": {"name": "Knight Lords", "id": "knight_lords", "url": "knight_lords.json", "color": "#396e9e", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
         "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "secondary_color": "#9a1115", "alliance": "imperial_alliance"},
