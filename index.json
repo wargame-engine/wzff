@@ -4,7 +4,7 @@
         "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"},
         "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1"},        
         "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horrors.json", "color": "#90305d", "alliance": "traitors"},
-        "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.1"},
+        "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.2"},
         "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab", "alliance": "elven_coaliation", "version": "0.1"},
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080", "version": "0.1"},

@@ -9,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "walker", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", "walker", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Heavy Infantry", "leader"],
             "models": [
                 {
@@ -34,7 +34,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "hover", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", "hover", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Heavy Infantry", "leader"],
             "models": [
                 {
@@ -63,7 +63,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -92,7 +92,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -121,7 +121,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -169,7 +169,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "regeneration", "x": 3}],
+            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -181,7 +181,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "fly", {"id": "psychic", "x": 1}],
+            "rules": ["leader", "fly", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
