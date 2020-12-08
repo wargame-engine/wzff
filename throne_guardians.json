@@ -9,13 +9,14 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 3} ],
             "models": [
                 {
                     "name": "Guardian Captain",
                     "courage": 7,
                     "shoot": 8,
                     "fight": 8,
+                    "movement": 6,
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 4,
@@ -36,7 +37,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]},
                 {"addWeapon": "guardian_dagger"},
@@ -48,6 +49,7 @@
                     "courage": 6,
                     "shoot": 7,
                     "fight": 7,
+                    "movement": 6,
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 3,
@@ -63,7 +65,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "regeneration", "x": 2}],
+            "rules": ["fearless", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}], "guardian_axe"]},
                 {"addWeapon": "guardian_dagger"},
@@ -76,6 +78,7 @@
                     "shoot": 7,
                     "fight": 7,
                     "defense": 9,
+                    "movement": 6,
                     "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["guardian_sword", "at_grenade"],
@@ -91,7 +94,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "regeneration", "x": 2}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "regeneration", "x": 2}, "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Relic Heavy Assault APC",
