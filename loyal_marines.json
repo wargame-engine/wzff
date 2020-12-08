@@ -66,7 +66,7 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
-                        {"replaceWeapon": ["prime_auto_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["prime_pistol", "prime_chainsword"]]},
+                        {"replaceWeapon": ["prime_auto_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": ["prime_chainsword"]},
                         {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
                         {"replaceWeapon": "prime_chainsword", "withWeapon": ["prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"addRule": ["prime_combat_shield"]}
@@ -130,7 +130,7 @@
                     "weapons": [{"id": "prime_auto_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
                     "options": [
                         {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
-                        {"replaceWeapon": ["prime_auto_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["prime_pistol", "prime_chainsword"]]},
+                        {"replaceWeapon": ["prime_auto_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": ["prime_chainsword"]},
                         {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
                         {"replaceWeapon": "prime_chainsword", "withWeapon": ["prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"addRule": ["prime_combat_shield"]}
@@ -259,7 +259,7 @@
             "max": 10,
             "category": "core",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "limit": "all"}],
             "models": [
                 {
@@ -300,7 +300,7 @@
             "max": 10,
             "category": "core",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Assault Sergeant",
@@ -338,7 +338,11 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "fear"],
+            "rules": ["fearless", "fear", {"id": "wounds", "x": 2}],
+            "options": [
+                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["prime_heavy_carbine"]},
+                {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
+            ],
             "models": [
                 {
                     "name": "Prime Reaper Sergeant",
@@ -350,10 +354,6 @@
                     "reflexes": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
-                        {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "limit": 1}
-                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -367,10 +367,6 @@
                     "movement": 6,
                     "wounds": 2,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["marine_rifle"]},
-                        {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
-                    ],
                     "min": 4,
                     "max": 9
                 }
@@ -383,7 +379,7 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "scout"],
+            "rules": ["fearless", "scout", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -422,7 +418,7 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "prime_combat_shield"],
+            "rules": ["fearless", "prime_combat_shield", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Blade Guardian Sergeant",
@@ -459,7 +455,7 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Eradication Sergeant",
@@ -497,7 +493,8 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
             "models": [
                 {
                     "name": "Prime Blaster Sergeant",
@@ -510,7 +507,7 @@
                     "agility": 6,
                     "wounds": 2,
                     "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
-                    "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
+                    
                     "min": 1,
                     "max": 1
                 },
@@ -525,7 +522,6 @@
                     "agility": 6,
                     "wounds": 2,
                     "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
-                    "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
                     "min": 4,
                     "max": 9
                 }
@@ -538,7 +534,7 @@
             "max": 10,
             "category": "strike",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "ambush", "fly", {"id": "impact", "x": 1}],
+            "rules": ["fearless", "ambush", "fly", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Interception Sergeant",
@@ -579,7 +575,7 @@
             "max": 10,
             "category": "strike",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "ambush", "fly"],
+            "rules": ["fearless", "ambush", "fly", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Suppression Sergeant",
@@ -616,7 +612,7 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": "grenade_launcher", "modelLimit": "all"},
                 {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}, "modelLimit": "all"}
@@ -658,7 +654,7 @@
             "keywords": ["Heavy Infantry"],
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "min": 3,
@@ -691,7 +687,7 @@
             "category": "strike",
             "keywords": ["Biker"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", {"id": "impact", "x": 1}],
+            "rules": ["fearless", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Rider Sergeant",
