@@ -27,14 +27,14 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "siege_masters"],
             "models": [
                 {
                     "name": "Prime Captain (Grav Armor)",
                     "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
+                    "shoot": 7,
+                    "fight": 7,
                     "defense": 9,
                     "movement": 4,
                     "reflexes": 6,
@@ -51,14 +51,14 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "lucky", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
                     "name": "Prime Captain",
                     "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
+                    "shoot": 7,
+                    "fight": 7,
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 6,
@@ -82,7 +82,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "fearless", {"id": "psychic", "x": 1}],
+            "rules": ["leader", "fearless", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -115,7 +115,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "fearless"],
+            "rules": ["leader", "fearless", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -146,7 +146,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "fearless"],
+            "rules": ["leader", "fearless", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -180,7 +180,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "fearless"],
+            "rules": ["leader", "fearless", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines"],
             "models": [
                 {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "wounds": 4, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
@@ -192,7 +192,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "fearless", "medical_training"],
+            "rules": ["leader", "fearless", "medical_training", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
