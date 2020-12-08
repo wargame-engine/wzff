@@ -13,7 +13,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 4}],
             "models": [
                 {
                     "name": "Grand Warlord",
@@ -36,7 +36,9 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader"],
+            "options": [
+                {"addModel": "attack_beast"}
+            ],
             "models": [
                 {
                     "name": "Warlord",
@@ -47,6 +49,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 5,
+                    "rules": ["leader", {"id": "wounds", "x": 3}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -54,12 +57,11 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]}
+                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]}
                     ],
                     "min": 1,
                     "max": 1
-                },
-                {"name": "Attack Beast", "courage": 5, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
+                }
             ]
         },
         "mechanic": {
@@ -68,7 +70,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mechanic",
@@ -88,7 +90,7 @@
                             "replaceWeapon": "heavy_ccw",
                             "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
+                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]},
                         {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
                         {"addRule": ["precision_monicle"]},
                         {"addRule": ["energy_field"]}
@@ -118,7 +120,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "war_banner"],
+            "rules": ["leader", "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Warbanner Boss",
@@ -147,7 +149,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "mad_doctor"],
+            "rules": ["leader", "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mad Doctor",
@@ -176,7 +178,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Shaman",
@@ -194,14 +196,13 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "regeneration", "x": 3, "name": "Cyborg Body"}]},
+                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "rules": [{"id": "psychic", "x": 1}],
                     "min": 1,
                     "max": 1
-                },
-                {"name": "Attack Beast", "courage": 5, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
+                }
             ]
         },
         "goblin_leader": {
@@ -211,7 +212,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "lucky", "x": 1}],
+            "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {
@@ -221,7 +222,7 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": ["leader", "mad_doctor"],
+            "rules": ["leader", "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Goblin Doctor",
@@ -246,7 +247,7 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": ["leader", {"id": "repair", "x": 2}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Goblin Mechanic",
@@ -334,6 +335,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
+                    "rules": [{"id": "wounds", "x": 2}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -381,6 +383,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 8,
+                    "rules": [{"id": "wounds", "x": 2}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -428,6 +431,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
+                    "rules": [{"id": "wounds", "x": 2}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -475,6 +479,7 @@
                     "reflexes": 5,
                     "wounds": 1,
                     "movement": 5,
+                    "rules": [{"id": "wounds", "x": 2}],
                     "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]}],
                     "min": 0,
@@ -502,7 +507,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["relentless"],
+            "rules": ["relentless", {"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
                 {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
@@ -542,6 +547,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
@@ -584,6 +590,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
                 {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -677,7 +684,7 @@
                 },
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
-            "rules": [{"id": "impact", "x": 1}],
+            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Boss Biker Leader",
@@ -714,7 +721,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": ["leader", {"id": "impact", "x": 3}, "relentless"],
+            "rules": ["leader", {"id": "impact", "x": 3}, "relentless", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Boss Trike",
@@ -738,7 +745,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["fly", {"id": "impact", "x": 3}],
+            "rules": ["fly", {"id": "impact", "x": 3}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Orc Minicopter",
@@ -766,7 +773,7 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "regeneration", "x": 3}, {"id": "open_topped", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "resilient", "x": 3}, {"id": "open_topped", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Truck",
@@ -1186,7 +1193,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "twin_teleport_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_plasma_cannon", "mount": ["Front"]}]},
                         {"addWeapon": {"id": "twin_super_machinegun", "mount": ["Front"]}},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}]}
+                        {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1290,7 +1297,7 @@
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2}, {"id": "rocket_launcher", "count": 2}], "limit": 1},
                         {"replaceWeapon": {"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "deathstorm_minigun", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "plasma_rifle", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}]}
+                        {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1321,13 +1328,16 @@
                         {"replaceWeapon": {"id": "mega_claw", "count": 1}, "withWeapon": [[{"id": "super_gatling_gun", "mount": ["Front"]}, {"id": "death_cannon", "mount": ["Front"]}]]},
                         {"addWeapon": [{"id": "super_rocket_launcher", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}], "limit": 3},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Force Field"}, {"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
+                        {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}, {"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
                     ],
                     "min": 1,
                     "max": 1
                 }
             ]
         }
+    },
+    "models": {
+        "attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
     },
     "weapons": {
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
@@ -1503,44 +1513,51 @@
         {"rule": "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had.", "filter": {"keywords": ["Infantry"]}}
     ],
     "strategies": {
-        "war!": {"name": "WAR!", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
+        "war!": {"name": "WAR!", "phase": "activation", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
         "group_up": {
             "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
             "name": "Group Up",
             "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
             "cost": 1
         },
-        "full_speed": {"name": "Full Speed", "description": "Use when a Vehicle is declared to charge an enemy unit. That Vehicle gains +3 Impact.", "cost": 1},
+        "full_speed": {"name": "Full Speed", "phase": "activation", "description": "Use when a Vehicle is declared to charge an enemy unit. That Vehicle gains +3 Impact.", "cost": 1},
         "scrap_armor": {
             "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
             "name": "Scrap Armor",
             "description": "Use when activating an Infantry unit. If that unit ends its activation within 3\" of a destroyed vehicle it may choose not to shoot or fight but gain +1 Save (to a maximum of 7) for the rest of the battle.",
             "cost": 1
         },
         "grab_on": {
             "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
             "name": "Grab On",
             "description": "Use when a Vehicle with the Transport keyword is activated. One friendly infantry unit within 3\" may be picked up and moved within 3\" of the vehicle's final location.",
             "cost": 2
         },
         "goblin_shield": {
             "name": "Goblin Shield",
+            "phase": "activation",
             "description": "Use after an Infantry unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 5\" of it, and the Goblin Herd unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
             "cost": 2
         },
         "never_surrender": {
             "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
             "name": "Never Surrender",
             "description": "Use after a Character has been killed. That unit may shoot or fight if it has not yet activated, after which it is removed.",
             "cost": 2
         },
         "force_field_projector": {
             "name": "Force Field Projector",
+            "phase": "activation",
             "description": "Use at the start of the round. Choose a unit with the 'Force Field' rule. For the rest of the round, that force field applies to friendly units within 5\".",
             "cost": 3
         },
         "spread_out": {
             "subfactions": ["goblin_army"],
+            "phase": "activation",
             "name": "Spread Out",
             "description": "Use before activating an Infantry unit. That unit may be split into two units of no less than 5 models.",
             "flavor": "Goblins often split off into small raiding units in order to cover more ground.",
@@ -1548,6 +1565,7 @@
         },
         "tune_up": {
             "subfactions": ["goblin_army"],
+            "phase": "activation",
             "name": "Tune Up",
             "description": "Use before shooting with a unit. It gains +3\" maximum range with all weapons.",
             "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
@@ -1555,6 +1573,7 @@
         },
         "deadly_in_numbers": {
             "subfactions": ["goblin_army"],
+            "phase": "activation",
             "name": "Deadly In Numbers",
             "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
             "flavor": "With enough Goblins trained on a target, even they can do significant damage.",

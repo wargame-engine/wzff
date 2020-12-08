@@ -9,8 +9,8 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "walker", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
-            "keywords": ["Heavy Infantry", "leader"],
+            "rules": ["leader", "walker", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "keywords": ["Heavy Infantry"],
             "models": [
                 {
                     "name": "Tri-Scorpion Lord",
@@ -34,8 +34,8 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "hover", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
-            "keywords": ["Heavy Infantry", "leader"],
+            "rules": ["leader", "hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "keywords": ["Heavy Infantry"],
             "models": [
                 {
                     "name": "Annihilator Overlord",
@@ -63,7 +63,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "lucky", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -92,7 +92,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -121,7 +121,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -159,9 +159,9 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "regeneration", "x": 3}],
+            "rules": ["hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Swarm"],
-            "models": [{"name": "Machine Swarm", "courage": 6, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
+            "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
         "warden": {
             "name": "Warden",
@@ -169,7 +169,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -207,15 +207,15 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 3}],
+            "rules": [{"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Warrior",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 5,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 7,
                     "reflexes": 4,
                     "wounds": 1,
@@ -233,7 +233,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 3}],
+            "rules": [{"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
             "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "wounds": 1, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
@@ -244,7 +244,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "regeneration", "x": 3}],
+            "rules": [{"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rod", "withWeapon": [{"id": "war_scythe", "count": 2}, {"id": "phase_sword", "count": 2}, ["antimatter_pistol", "void_sword"]], "modelLimit": "all"},
@@ -259,18 +259,18 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 3}, "fear"],
+            "rules": [{"id": "resilient", "x": 3}, "fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 6, "movement": 5, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 4, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
+            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
         },
-        "assassins": {
+        "hunters": {
             "name": "Hunters",
             "description": "A group of veteran machines adept at hunting and killing valuable targets.",
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["ambush", {"id": "regeneration", "x": 3}],
+            "rules": ["ambush", {"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 1, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
         },
@@ -285,7 +285,7 @@
             "options": [
                 {"replaceWeapon": {"id": "twin_tesla_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_heavy_gauss_rifle", "mount": ["Front"]}, {"id": "antimatter_rifle", "mount": ["Front"]}]},
                 {"addRule": "vision_scope", "modelLimit": "all"},
-                {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}
+                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}
             ],
             "models": [
                 {
@@ -309,12 +309,12 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth"],
+            "rules": ["stealth", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [
                 {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
                 {"addWeapon": ["whip_coil"]},
-                {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
+                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
             ],
             "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
         },
@@ -324,9 +324,9 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["walker"],
+            "rules": ["walker", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [{"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
+            "options": [{"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Tri-Scorpion Annihilator",
@@ -363,9 +363,9 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["hover"],
+            "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
         },
         "heavy_annihilators": {
@@ -374,10 +374,15 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["hover", {"id": "wounds", "x": 2}],
+            "rules": ["hover", {"id": "wounds", "x": 3}],
             "keywords": ["Heavy Infantry"],
-            "options": [{"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]}, {"addRule": {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
-            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}]
+            "options": [
+                {"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]},
+                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
+            ],
+            "models": [
+                {"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}
+            ]
         },
         "transport_arc": {
             "name": "Transport Arc",
@@ -398,7 +403,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "options": [{"addRule": ["extra_space", "regeneration_pods", {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": ["extra_space", "regeneration_pods", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -423,7 +428,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "options": [{"addRule": [{"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -448,7 +453,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addRule": ["extra_space", {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": ["extra_space", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -473,7 +478,7 @@
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addRule": [{"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}, {"addWeapon": {"id": "doom_ray", "mount": ["Front"]}}],
+                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}, {"addWeapon": {"id": "heavy_doom_ray", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -503,7 +508,7 @@
                             "replaceWeapon": {"id": "heat_ray", "mount": ["Front"]},
                             "withWeapon": [{"id": "twin_heavy_gauss_cannon", "mount": ["Front"]}, {"id": "antimatter_cannon", "mount": ["Front"]}]
                         },
-                        {"addRule": [{"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}
+                        {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -529,7 +534,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "metal_fangs"}, {"id": "stomp", "count": 2}],
-                    "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": [{"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}, "dark_prism", "swarm_fabricator"]}],
+                    "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "dark_prism", "swarm_fabricator"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -554,7 +559,7 @@
                     "reflexes": 5,
                     "wounds": 3,
                     "weapons": [{"id": "antimatter_rifle", "mount": ["Front"]}, {"id": "heavy_stomp", "count": 2}],
-                    "options": [{"addRule": [{"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -580,17 +585,34 @@
                     "wounds": 9,
                     "weapons": [
                         {"id": "heavy_antimatter_cannon"},
-                        {"id": "tesla_field", "mount": ["Left", "Front"]},
-                        {"id": "tesla_field", "mount": ["Right", "Front"]},
-                        {"id": "tesla_field", "mount": ["Right", "Rear"]},
-                        {"id": "tesla_field", "mount": ["Left", "Rear"]}
+                        {"id": "doom_ray", "mount": ["Left", "Front"]},
+                        {"id": "doom_ray", "mount": ["Right", "Front"]},
+                        {"id": "doom_ray", "mount": ["Right", "Rear"]},
+                        {"id": "doom_ray", "mount": ["Left", "Rear"]},
+                        "gravity_pulse"
                     ],
                     "options": [
                         {
                             "addRule": [
-                                {"id": "regeneration", "x": 4, "name": "Self-Repair Protocols"},
+                                {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"},
                                 {"id": "transport", "x": 20, "name": "Invasion Portal"},
-                                {"id": "ambush", "name": "Orbital Drop"}
+                                {"id": "ambush_large", "name": "Orbital Drop"}
+                            ]
+                        },
+                        {
+                            "replaceWeapon": [
+                                {"id": "doom_ray", "mount": ["Left", "Front"]},
+                                {"id": "doom_ray", "mount": ["Right", "Front"]},
+                                {"id": "doom_ray", "mount": ["Right", "Rear"]},
+                                {"id": "doom_ray", "mount": ["Left", "Rear"]}
+                            ],
+                            "withWeapon": [
+                                [
+                                    {"id": "tesla_field", "mount": ["Left", "Front"]},
+                                    {"id": "tesla_field", "mount": ["Right", "Front"]},
+                                    {"id": "tesla_field", "mount": ["Right", "Rear"]},
+                                    {"id": "tesla_field", "mount": ["Left", "Rear"]}
+                                ]
                             ]
                         }
                     ],
@@ -613,7 +635,7 @@
             "weapons": ["feeding_teeth"],
             "min": 3,
             "max": 6,
-            "rules": [{"id": "regeneration", "x": 3}, "hover"]
+            "rules": [{"id": "resilient", "x": 3}, "hover", {"id": "wounds", "x": 3}]
         }
     },
     "weapons": {
@@ -627,11 +649,12 @@
         "doom_cannon": {
             "name": "Doom Cannon",
             "profiles": [
-                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 6},
+                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "deadly", "x": 2}]},
                 {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
-        "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
+        "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 2},
         "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1, "damage": 1},
         "metal_fangs": {"name": "Metal Fangs", "attacks": 3, "short": "Melee", "ap": 4, "damage": 2},
         "techno_beam": {"name": "Techno-Beam", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol"]},
@@ -650,7 +673,7 @@
         "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": [{"id": "deadly", "x": 1}]},
         "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "deadly", "x": 1}]},
         "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "deadly", "x": 1}]},
-        "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "sniper"]},
+        "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
         "tesla_field": {"name": "Tesla Field", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla"]},
@@ -676,7 +699,8 @@
             "profiles": [{"name": "Melee", "attacks": 2, "short": "Melee", "ap": 3}, {"name": "Shoot", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]}]
         },
         "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
-        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2}
+        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2},
+        "gravity_pulse": {"name": "Gravity Pulse", "attacks": 6, "short": "Melee", "ap": 2}
     },
     "rules": {
         "reanimation_beam": {
@@ -689,13 +713,7 @@
             "description": "Once during this unit's activation, roll 3D10. For each roll of 5 or less, one Machine Swarm model equipped with (Feeding Teeth) and specials (Resilient(2), Hover) is created within 3\" of this unit. They may be added to a friendly Machine Swarm unit within 3\" or a new unit may be created.",
             "points": 50
         },
-        "extra_space": {
-            "name": "Extra Space",
-            "description_short": "Transport +10",
-            "hidden": true,
-            "description": "This model gains +10 Transport space.",
-            "points": 10
-        },
+        "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},
         "flare_shielding": {
             "name": "Flare Shields",
             "description": "This model gains +1 Save when hit at Long Range.",
@@ -703,21 +721,9 @@
         },
         "dark_prism": {"name": "Dark Prism", "description": "This model may deny psychic powers as if it had Psychic.", "points": 5},
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "points": ["weapon.attacks", {"multiply": 3}]},
-        "regeneration_orb": {
-            "name": "Regeneration Orb",
-            "description": "This unit and friendly Infantry units within 3\" get Regeneration(+1).",
-            "points": 20
-        },
-        "regeneration_pods": {
-            "name": "Regeneration Pods",
-            "description": "Friendly Infantry units within 3\" get Regeneration(+1).",
-            "points": 20
-        },
-        "phase_field": {
-            "name": "Phase Field",
-            "description": "This model and friendly Infantry units within 3\" get +2 Defense.",
-            "points": 20
-        },
+        "regeneration_orb": {"name": "Regeneration Orb", "description": "This unit and friendly Infantry units within 6\" get Resilient(+1).", "points": 20},
+        "regeneration_pods": {"name": "Regeneration Pods", "description": "Friendly Infantry units within 6\" get Resilient(+1).", "points": 20},
+        "phase_field": {"name": "Phase Field", "description": "This model and friendly Infantry units within 6\" get +1 Save.", "points": 20},
         "anti_gravity_generators": {
             "name": "Anti-Grav Generators",
             "hidden": true,
@@ -725,30 +731,10 @@
             "description": "This model gains +3\" of Movement and the Fly special rule.",
             "points": 5
         },
-        "flight_cloak": {
-            "name": "Flight Cloak",
-            "hidden": true,
-            "description_short": "+3\" Move, Fly",
-            "description": "This model gains +3\" of Movement and the Fly special rule.",
-            "points": 5
-        },
-        "void_shield": {
-            "name": "Void Shield",
-            "hidden": true,
-            "description_short": "+1 Save",
-            "description": "This model gains +1\" Save.",
-            "points": 2
-        },
-        "vision_scope": {
-            "name": "Vision Scope",
-            "description": "This unit's weapons ignore cover at Short range.",
-            "points": 5
-        },
-        "snare": {
-            "name": "Snare",
-            "description": "A model may make one free attack with this weapon against units that fall back from combat with it.",
-            "points": 2
-        }
+        "flight_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
+        "void_shield": {"name": "Void Shield", "hidden": true, "description_short": "+1 Save", "description": "This model gains +1\" Save.", "points": 2},
+        "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "points": 5},
+        "snare": {"name": "Snare", "description": "A model may make one free attack with this weapon against units that fall back from combat with it.", "points": 2}
     },
     "strategies": [
         {

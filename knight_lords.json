@@ -321,7 +321,7 @@
         }
     },
     "rules": {
-        "power_sheilds": {"name": "Power Sheilds", "description": "This model gains Regeneration(3).", "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}}]},
+        "power_sheilds": {"name": "Power Sheilds", "description": "This model gains Regeneration(3).", "effects": [{"type": "grantRule", "rule": {"id": "resilient", "x": 3}}]},
         "extra_armor": {"name": "Extra Armor", "description": "This model increases its Saveance by 1.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]}
     },
     "strategies": {},

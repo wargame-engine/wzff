@@ -18,7 +18,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "relentless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -52,7 +52,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "relentless", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -85,7 +85,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -118,7 +118,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -152,7 +152,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -185,7 +185,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -219,7 +219,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "fear", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fear", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Daemon Champion",
@@ -570,7 +570,7 @@
         "havoc_destoyers": {
             "name": "Traitor Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods.",
-            "rules": ["ambush"],
+            "rules": ["ambush", {"id": "wounds", "x": 2}],
             "min": 5,
             "max": 15,
             "category": "specialist",
@@ -599,7 +599,7 @@
         "mutated_destoyers": {
             "name": "Mutated Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
-            "rules": ["ambush", "mutations"],
+            "rules": ["ambush", "mutations", {"id": "wounds", "x": 2}],
             "category": "heavy",
             "min": 3,
             "max": 9,
@@ -624,7 +624,7 @@
         "havoc_bikers": {
             "name": "Traitor Bikers",
             "description": "Traitor marines on combat bikes.",
-            "rules": ["combat_bike", {"id": "impact", "x": 1}],
+            "rules": ["combat_bike", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "min": 3,
             "max": 9,
             "category": "strike",
@@ -674,7 +674,7 @@
         "daemon_spawn": {
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
-            "rules": ["mutations", "strider", "fear"],
+            "rules": ["mutations", "strider", "fear", {"id": "wounds", "x": 2}],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 5,
@@ -868,7 +868,7 @@
         "havoc_fiend": {
             "name": "Traitor Fiend",
             "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
-            "rules": ["fear", {"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
+            "rules": ["fear", {"id": "resilient", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -897,7 +897,7 @@
         "spider_walker": {
             "name": "Spider Walker",
             "description": "An infernal machine built to mimic a venomous spider.",
-            "rules": [{"id": "regeneration", "x": 2}, "strider", "damage_table_monster"],
+            "rules": [{"id": "resilient", "x": 2}, "strider", "damage_table_monster"],
             "subfactions": ["none", "change_traitors", "vulnerable_side_rear"],
             "min": 1,
             "max": 1,
@@ -922,7 +922,7 @@
         "crab_walker": {
             "name": "Crab Walker",
             "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
-            "rules": [{"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
+            "rules": [{"id": "resilient", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -951,7 +951,7 @@
         "havoc_dragon": {
             "name": "Traitor Dragon",
             "description": "A living metal airplane designed to drag other aircraft out of the air.",
-            "rules": ["flyer", {"id": "regeneration", "x": 2}, "vulnerable_rear", "damage_table_monster"],
+            "rules": ["flyer", {"id": "resilient", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -978,7 +978,7 @@
             "notes": "not updated",
             "name": "Lord of Change",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["leader",{"id": "lucky", "x": 1}],
+            "rules": ["leader",{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1011,7 +1011,7 @@
         "sorceror_of_change": {
             "name": "Sorceror of Change",
             "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1044,7 +1044,7 @@
         "birdman_sorceror": {
             "name": "Birdman Sorceror",
             "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",
@@ -1118,7 +1118,7 @@
         "change_destroyers": {
             "name": "Psychic Destroyers",
             "description": "Change brothers in destroyer amror suffering from the same curse as their brothers, but still fight stolidly by their side.",
-            "rules": ["ambush"],
+            "rules": ["ambush", {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 5,
             "max": 15,
@@ -1191,7 +1191,7 @@
         "birdmen_disc_riders": {
             "name": "Birdmen Disk Riders",
             "description": "Exhalted birdmen riding psychic disks.",
-            "rules": ["strider", {"id": "impact", "x": 1}, {"id": "regeneration", "x": 3}],
+            "rules": ["strider", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 3,
             "max": 9,
@@ -1261,7 +1261,7 @@
             "effects": [
                 {"type": "alterWeapon", "statName": "ap", "value": 3, "frequency": 3},
                 {"type": "alterWeapon", "statName": "attacks", "value": 2, "frequency": 3},
-                {"type": "grantRule", "rule": {"id":"regeneration","x":3}, "frequency": 3}
+                {"type": "grantRule", "rule": {"id":"resilient","x":3}, "frequency": 3}
             ]
         },
         "spiked_ram": {
@@ -1278,7 +1278,7 @@
             "effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 24}]
         },
         "inspiring_word":{
-            "effects": [{"type": "grantRule", "rule": {"id": "regeneration", "x": 3}, "target": "friendly", "range": 6}]
+            "effects": [{"type": "grantRule", "rule": {"id": "resilient", "x": 3}, "target": "friendly", "range": 6}]
         }
     },
     "strategies": {

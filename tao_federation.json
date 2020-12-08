@@ -25,7 +25,7 @@
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": ["cold_fusion_booster", {"id": "ambush", "name": "Sky Strike"}, {"id": "regeneration", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                        {"addRule": ["cold_fusion_booster", {"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -216,7 +216,7 @@
                     "weapons": ["suit_fists"],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": [{"id": "ambush", "name": "Sky Strike", "modelLimit": "all"}, {"id": "regeneration", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                        {"addRule": [{"id": "ambush", "name": "Sky Strike", "modelLimit": "all"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
                     "min": 3,
                     "max": 9
@@ -623,7 +623,7 @@
             "defense": 7,
             "reflexes": 5,
             "wounds": 1,
-            "rules": ["fly", {"id": "regeneration", "x": 4}],
+            "rules": ["fly", {"id": "resilient", "x": 4}],
             "min": 0,
             "max": 1
         },
@@ -744,8 +744,8 @@
         },
         "threat_detector_suit": {
             "name": "Threat Detector",
-            "description_short": "+1 Reflexes",
-            "description": "This model gets +1 Reflexes.",
+            "description_short": "+1 Initiative",
+            "description": "This model gets +1 Initiative.",
             "points": 5
         },
         "cold_fusion_booster": {
@@ -756,13 +756,13 @@
             "points": 4
         },
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
-        "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Defense.", "points": 20}
+        "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Save.", "points": 20}
     },
     "strategies": {
         "covering_fire": {
             "name": "Covering Fire",
             "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
-            "description": "Use when a friendly Infantry unit is Charged. One friendly Infantry unit within 6\" may attempt take a Reflexes test and attempt to react to the charging unit.",
+            "description": "Use when a friendly Infantry unit is Charged. One friendly Infantry unit within 6\" may attempt take a Initiative test and attempt to react to the charging unit.",
             "cost": 1
         },
         "preservation_protocols": {

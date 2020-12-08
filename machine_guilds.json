@@ -6,13 +6,13 @@
         "stealth_masters": {"name": "Stealth Focus", "id": "stealth_masters", "color": "#231f20", "background": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."}
     },
     "units": {
-        "arch_priest": {
+        "machine_grand_master": {
             "name": "Machine Grand Master",
             "description": "The smartest and most intelligent machine guild leader.",
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "repair", "x": "3"}, {"id": "lucky", "x": "2"}],
+            "rules": ["leader", {"id": "repair", "x": 3}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -26,7 +26,7 @@
                     "wounds": 4,
                     "weapons": [{"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"addRule": [{"id": "psychic", "x": "1", "name": "Machine Powers"}, {"id": "psychic", "x": "2", "name": "Master Machine Powers"}]},
+                        {"addRule": [{"id": "psychic", "x": 1, "name": "Machine Powers"}, {"id": "psychic", "x": "2", "name": "Master Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -41,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "lucky", "x": "1"}],
+            "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -54,7 +54,7 @@
                     "wounds": 3,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": "3", "name": "Master Machinist"}, {"id": "psychic", "x": "1", "name": "Machine Powers"}]},
+                        {"addRule": [{"id": "repair", "x": 3, "name": "Master Machinist"}, {"id": "psychic", "x": 1, "name": "Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -69,7 +69,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Machine Manipulator",
@@ -82,7 +82,7 @@
                     "wounds": 4,
                     "weapons": ["staff"],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": "2", "name": "Machinist"}]},
+                        {"addRule": [{"id": "repair", "x": 2, "name": "Machinist"}]},
                         {"addWeapon": ["magnetic_lancer", "sonic_cannon"], "limit": 1}
                     ],
                     "min": 1,
@@ -96,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -109,7 +109,7 @@
                     "wounds": 4,
                     "weapons": ["axe_halberd"],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": "2", "name": "Machinist"}, {"id": "psychic", "x": "1", "name": "Machine Powers"}]},
+                        {"addRule": [{"id": "repair", "x": 2, "name": "Machinist"}, {"id": "psychic", "x": 1, "name": "Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -124,7 +124,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Data Specialist",
@@ -136,7 +136,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["energy_fist", "wave_pistol"],
-                    "rules": [{"id": "repair", "x": "2", "name": "Machinist"}],
+                    "rules": [{"id": "repair", "x": 2, "name": "Machinist"}],
                     "min": 1,
                     "max": 1
                 }
@@ -148,6 +148,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Vanguard Commander",
@@ -260,7 +261,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "regeneration", "x": 4}, {"id": "impact", "x": 1}],
+            "rules": [{"id": "resilient", "x": 4}, {"id": "impact", "x": 1}],
             "models": [
                 {
                     "name": "Shock Priest",
@@ -284,7 +285,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile"],
+            "rules": ["agile", {"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": ["sonic_razor", {"id": "claws", "count": 2}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
                 {
@@ -321,7 +322,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["ambush", "fly"],
+            "rules": ["ambush", "fly", {"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
                 {
@@ -358,7 +359,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", "scout", "stealth"],
+            "rules": ["agile", "scout", "stealth", {"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
                 {
@@ -395,7 +396,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["scout", "agile", {"id": "impact", "x": 1}],
+            "rules": ["scout", "agile", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "options": [{"addWeapon": ["phosphor_breath"], "modelLimit": "all"}, {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine", "limit": "all"}],
             "models": [
                 {
@@ -436,6 +437,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
             "models": [
                 {
@@ -459,6 +461,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": ["phosphor_rifle", "flamethrower"]},
                 {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},
@@ -483,7 +486,7 @@
         "landing_craft": {
             "name": "Landing Craft",
             "description": "A hovering landing craft for transporting troops.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", {"id": "open_topped", "x": 11}],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", {"id": "open_topped", "x": 11}, "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -508,7 +511,7 @@
         "assault_craft": {
             "name": "Assault Craft",
             "description": "A hovering tank for supporting landing assaults.",
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover"],
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -533,7 +536,7 @@
         "crawler_tank": {
             "name": "Crawler Tank",
             "description": "A tank walking on large robotic legs.",
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "walker"],
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "walker", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -552,7 +555,7 @@
                     "options": [
                         {"addWeapon": ["light_machinegun", "taser_arm"]},
                         {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "twin_aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Repair Protocols"}, {"id": "data_link"}]}
+                        {"addRule": [{"id": "resilient", "x": 3, "name": "Repair Protocols"}, {"id": "data_link"}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -562,7 +565,7 @@
         "combat_robot": {
             "name": "Combat Robot",
             "description": "A robot built to smash with its fists or blast with deadly phosphor blasters.",
-            "rules": ["vulnerable_side_rear", "walker"],
+            "rules": ["vulnerable_side_rear", "walker", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -581,7 +584,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "robot_fist", "count": 2}, "withWeapon": [{"id": "phosphor_cannon", "count": 2}]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["phosphor_cannon"]},
-                        {"addRule": [{"id": "regeneration", "x": 3, "name": "Repair Protocols"}], "modelLimit": "all"}
+                        {"addRule": [{"id": "resilient", "x": 3, "name": "Repair Protocols"}], "modelLimit": "all"}
                     ],
                     "min": 1,
                     "max": 3
@@ -591,7 +594,7 @@
         "dragoon_walker": {
             "name": "Dragoon Walker",
             "description": "A light walker with a long taser lance.",
-            "rules": ["vulnerable_side_rear", "walker"],
+            "rules": ["vulnerable_side_rear", "walker", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -616,7 +619,7 @@
         "iron_walker": {
             "name": "Iron Walker",
             "description": "A light walker equipped with longer-range fire support weapons.",
-            "rules": ["vulnerable_side_rear", "walker"],
+            "rules": ["vulnerable_side_rear", "walker", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -641,7 +644,7 @@
         "gunship": {
             "name": "Gunship",
             "description": "A multi-role gunship.",
-            "rules": ["aircraft", "hover_mode"],
+            "rules": ["aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "heavy",
             "keywords": ["Vehicle", "Aircraft"],
             "min": 1,
@@ -766,18 +769,21 @@
     "strategies": [
         {
             "name": "Mechanically Adept",
+            "phase": "activation",
             "description": "Use before making a repair roll. That unit gets +2 to Repair rolls.",
             "flavor": "The Machine Guilds are masters of building and maintaining machines, rarely failing to find the root of the problem.",
             "cost": 1
         },
         {
             "name": "Cybernetic Enhancements",
+            "phase": "activation",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
             "cost": 2
         },
         {
             "name": "Radiation Supercharge",
+            "phase": "activation",
             "description": "Use before a unit shoots with a Radiation weapons. Those weapons get +1 AP for this attack. Failed hit rolls of 9 or 10 cause the firer to make one Save roll.",
             "flavor": "While very harmful to the firer, sometimes it is benefitial to supercharge radiation weapons to deal with a foe more swiftly.",
             "cost": 2

@@ -9,7 +9,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -41,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "furious", {"id": "regeneration", "x": 3}, "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "furious", {"id": "resilient", "x": 3}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -67,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -97,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "agile", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -178,7 +178,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["hover", {"id": "impact", "x": 1}, "blur_field"],
+            "rules": ["hover", {"id": "impact", "x": 1}, "blur_field", {"id": "wounds", "x": 2}],
             "keywords": ["Biker"],
             "models": [
                 {
@@ -207,7 +207,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -231,7 +231,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle", "vulnerable_side_rear"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {

@@ -9,7 +9,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "ward", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "ward", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -37,7 +37,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Stormtrooper", "Infantry"],
-            "rules": ["commander_field_orders_stormtrooper", {"id": "lucky", "x": 1}],
+            "rules": ["commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -110,7 +110,7 @@
         "inquisition_light_gunship": {
             "name": "Inquisition Light Gunship",
             "description": "A light gunship with sliding doors for troop transport.",
-            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode"],
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -139,7 +139,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built for loyal marines and allies.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,

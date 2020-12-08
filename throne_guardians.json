@@ -65,7 +65,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "regeneration", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["fearless", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}], "guardian_axe"]},
                 {"addWeapon": "guardian_dagger"},
@@ -94,7 +94,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "regeneration", "x": 2}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "resilient", "x": 2}, "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Relic Heavy Assault APC",
@@ -157,7 +157,7 @@
         "guardian_shield": {
             "name": "Guardian Shield",
             "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
-            "effects": [{"type": "regeneration", "frequency": 3}]
+            "effects": [{"type": "resilient", "frequency": 3}]
         }
     },
     "relics": [

@@ -3,17 +3,17 @@
     "name": "Dimensional Horrors",
     "background": "Mutated servants of the dark gods able to materialize anywhere their influence is strong enough.",
     "subfactions": {
-        "change": {"name": "Magic Focus", "id": "change", "color": "#90305d", "background": "", "restricted": true},
-        "pestilence": {"name": "Pestilence Focus", "id": "pestilence", "color": "#547588", "background": "", "restricted": true},
-        "wrath": {"name": "Wrath Focus", "id": "wrath", "color": "#547588", "background": "", "restricted": true},
-        "excess": {"name": "Excess Focus", "id": "excess", "color": "#547588", "background": "", "restricted": true}
+        "change": {"name": "Magic Focus", "id": "change", "color": "#90305d", "background": ""},
+        "pestilence": {"name": "Pestilence Focus", "id": "pestilence", "color": "#547588", "background": ""},
+        "wrath": {"name": "Wrath Focus", "id": "wrath", "color": "#547588", "background": ""},
+        "excess": {"name": "Excess Focus", "id": "excess", "color": "#547588", "background": ""}
     },
     "units": {
         "greater_daemon_of_change": {
             "name": "Greater Daemon of Change",
             "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
             "subfactions": ["change"],
-            "rules": ["leader", "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "lucky", "x": 2}],
+            "rules": ["leader", "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "tough", "x": 2}],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -42,9 +42,8 @@
         "daemon_champion": {
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
-            "subfactions": ["change", "pestilence", "excess", "wrath"],
             "category": "command",
-            "rules": ["leader", "fear", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "fear", {"id": "tough", "x": 1}],
             "keywords": ["monster"],
             "models": [
                 {
@@ -73,7 +72,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["change"],
             "category": "command",
-            "rules": ["leader", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": ["leader", "stealth", {"id": "tough", "x": 1}, {"id": "psychic", "x": 1}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -102,7 +101,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["change"],
             "category": "command",
-            "rules": ["leader", "stealth", {"id": "lucky", "x": 1}, {"id": "psychic", "x": 1}, "strider"],
+            "rules": ["leader", "stealth", {"id": "tough", "x": 1}, {"id": "psychic", "x": 1}, "strider"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -130,7 +129,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["leader", "stealth", {"id": "psychic", "x": 1}, {"id": "lucky", "x": 1}, "strider", "psychic_syphon"],
+            "rules": ["leader", "stealth", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, "strider", "psychic_syphon"],
             "models": [
                 {
                     "name": "Blue Scholars",
@@ -156,7 +155,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["stealth", {"id": "lucky", "x": 2}, {"id": "psychic", "x": 1}, "strider", "leader"],
+            "rules": ["stealth", {"id": "tough", "x": 2}, {"id": "psychic", "x": 1}, "strider", "leader"],
             "models": [
                 {"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "wounds": 2, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}
             ]
@@ -164,26 +163,35 @@
         "chromatic_horrors": {
             "name": "Chromatic Horrors",
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
-            "subfactions": ["change"],
             "keywords": ["infantry"],
             "category": "core",
             "min": 10,
             "max": 30,
             "models": [
-                {"name": "Flame Warriors", "rules": ["stealth"], "movement": 6, "courage": 5, "shoot": 3, "fight": 3, "defense": 4, "wounds": 2, "reflexes": 4, "weapons": [{"id": "ccw", "count": 2}], 
-                "options":[
-                    {"replaceModel": ["blue_warriors", "pink_warriors"]}
-                ], "min": 10, "max": 30}
+                {
+                    "name": "Flame Warriors",
+                    "rules": ["stealth"],
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 4,
+                    "wounds": 2,
+                    "reflexes": 4,
+                    "weapons": [{"id": "ccw", "count": 2}],
+                    "options": [{"replaceModel": ["blue_warriors", "pink_warriors"]}],
+                    "min": 10,
+                    "max": 30
+                }
             ]
         },
         "exhalted_flame_daemon": {
             "name": "Exhalted Flame Daemon",
             "description": "A daemon made of twisting, living flame held together by pure magic that acts as a leader for minor flame daemons.",
-            "subfactions": ["change"],
             "category": "specialist",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "lucky", "x": 1}, "strider", "stealth"],
+            "rules": [{"id": "tough", "x": 1}, "strider", "stealth"],
             "models": [
                 {
                     "name": "Exhalted Flame Daemon",
@@ -204,7 +212,6 @@
         "flame_daemon": {
             "name": "Flame Daemon",
             "description": "A shifting daemon of living flames.",
-            "subfactions": ["change"],
             "category": "specialist",
             "min": 3,
             "max": 9,
@@ -229,7 +236,6 @@
         "manta_daemons": {
             "name": "Manta Daemons",
             "description": "Fast-flying manta-like daemons capable of close-range carnage.",
-            "subfactions": ["change"],
             "category": "strike",
             "min": 3,
             "max": 9,
@@ -239,7 +245,6 @@
         "flame_chariot": {
             "name": "Flame Chariot",
             "description": "An intimidating construction of flame and manta daemons summoned to provide heavy support on the battlefeild.",
-            "subfactions": ["change"],
             "keywords": ["cavalry"],
             "category": "heavy",
             "min": 1,
@@ -266,10 +271,9 @@
         "giant_daemon_spawn": {
             "name": "Giant Daemon Spawn",
             "description": "A giant mutated creature able to wreak havoc on the battlefeild.",
-            "subfactions": ["none", "change", "excess", "pestilence", "wrath"],
             "keywords": ["monster"],
             "category": "heavy",
-            "rules": ["strider", {"id": "regeneration", "x": 3}],
+            "rules": ["strider", {"id": "resilient", "x": 3}],
             "min": 1,
             "max": 1,
             "models": [
@@ -292,7 +296,6 @@
         "daemon_machine": {
             "name": "Daemon Machine",
             "decription": "An unholy melding of daemon and machine into a horrifying weapon.",
-            "subfactions": ["none", "change", "pestilence", "excess", "wrath"],
             "keywords": ["vehicle", "monster"],
             "category": "heavy",
             "rules": ["fear", "strider"],
@@ -322,7 +325,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["leader", {"id": "psychic", "x": 2}, {"id": "regeneration", "x": 1}, "no_escape"],
+            "rules": ["leader", {"id": "psychic", "x": 2}, {"id": "resilient", "x": 1}, "no_escape"],
             "min": 1,
             "max": 1,
             "models": [
@@ -348,7 +351,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -361,7 +364,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 2,
-                    "weapons": [{"id":"sweeping_claws", "count": 3}],
+                    "weapons": [{"id": "sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -374,7 +377,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -401,7 +404,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -428,7 +431,7 @@
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "regeneration", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -455,7 +458,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 1}, "psychic_syphon"],
+            "rules": ["leader", {"id": "resilient", "x": 1}, "psychic_syphon"],
             "min": 1,
             "max": 1,
             "models": [
@@ -468,7 +471,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "wounds": 2,
-                    "weapons": ["enrapturing_lyre", {"id":"sweeping_claws", "count": 3}],
+                    "weapons": ["enrapturing_lyre", {"id": "sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -481,7 +484,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 2}, "stealth", {"id": "psychic", "x": 2}],
+            "rules": ["leader", {"id": "resilient", "x": 2}, "stealth", {"id": "psychic", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -507,7 +510,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": ["leader", {"id": "resilient", "x": 1}, {"id": "psychic", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -533,7 +536,7 @@
             "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": ["leader", {"id": "regeneration", "x": 1}, "agile", "stealth"],
+            "rules": ["leader", {"id": "resilient", "x": 1}, "agile", "stealth"],
             "min": 1,
             "max": 1,
             "models": [
@@ -553,103 +556,100 @@
                 }
             ]
         },
-        "excess_warriors":{
+        "excess_warriors": {
             "name": "Excess Warriors",
             "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
-            "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "core",
             "rules": ["agile"],
             "min": 10,
             "max": 30,
-            "models":[{
-                "name": "Siren",
-                "movement": 7,
-                "courage": 5,
-                "shoot": 6,
-                "fight": 6,
-                "defense": 5,
-                "reflexes": 4,
-                "wounds": 1,
-                "weapons": [{"id": "sweeping_claws", "count": 3}],
-                "options":[
-                    {"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}
-                ],
-                "min": 1,
-                "max": 1,
-                "rules": []
-            },
-            {
-                "name": "Excess Warrior",
-                "movement": 7,
-                "courage": 5,
-                "shoot": 6,
-                "fight": 6,
-                "defense": 5,
-                "reflexes": 4,
-                "wounds": 1,
-                "weapons": [{"id": "sweeping_claws", "count": 2}],
-                "min": 9,
-                "max": 29,
-                "rules": []
-            }
-        ]
+            "models": [
+                {
+                    "name": "Siren",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": [{"id": "sweeping_claws", "count": 3}],
+                    "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                },
+                {
+                    "name": "Excess Warrior",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": [{"id": "sweeping_claws", "count": 2}],
+                    "min": 9,
+                    "max": 29,
+                    "rules": []
+                }
+            ]
         },
-        "excess_steed":{
+        "excess_steed": {
             "name": "Excess Steed",
-            "description":"A seductively mutated beast able to ferry forces fo slaanesh into battle or fight on their own.",
-            "subfactions": ["excess"],
-            "keywords":["cavalry"],
+            "description": "A seductively mutated beast able to ferry forces fo slaanesh into battle or fight on their own.",
+            "keywords": ["cavalry"],
             "category": "specialist",
             "rules": ["agile"],
             "min": 1,
             "max": 9,
-            "models":[{
-                "name": "Excess Steed",
-                "movement": 12,
-                "courage": 5,
-                "shoot": 4,
-                "fight": 6,
-                "defense": 6,
-                "reflexes": 4,
-                "wounds": 2,
-                "weapons": [{"id": "sweeping_claws","count": 4}, "barbed_tail"],
-                "options":[
-                    {"modelLimit": 1, "addWeapon": ["sweeping_claws"]}
-                ],
-                "min": 1,
-                "max": 9,
-                "rules": ["psychic_syphon"]
-            }]
+            "models": [
+                {
+                    "name": "Excess Steed",
+                    "movement": 12,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 4,
+                    "wounds": 2,
+                    "weapons": [{"id": "sweeping_claws", "count": 4}, "barbed_tail"],
+                    "options": [{"modelLimit": 1, "addWeapon": ["sweeping_claws"]}],
+                    "min": 1,
+                    "max": 9,
+                    "rules": ["psychic_syphon"]
+                }
+            ]
         },
-        "gargoyles":{
+        "gargoyles": {
             "name": "Gargoyles",
             "description": "Horrible winged demons able to be summoned to assist any of the demon factions.",
-            "subfactions": ["none", "wrath","excess","pestilence","change"],
             "keywords": ["infantry"],
             "category": "strike",
             "rules": ["fly", "fear"],
             "min": 5,
             "max": 20,
-            "models":[{
-                "name": "Gargoyle",
-                "movement": 10,
-                "courage": 4,
-                "shoot": 4,
-                "fight": 5,
-                "defense": 5,
-                "reflexes": 3,
-                "wounds": 1,
-                "weapons": [{"id": "ccw", "count": 2}],
-                "min": 5,
-                "max": 20,
-                "rules":[]
-            }]
+            "models": [
+                {
+                    "name": "Gargoyle",
+                    "movement": 10,
+                    "courage": 4,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 3,
+                    "wounds": 1,
+                    "weapons": [{"id": "ccw", "count": 2}],
+                    "min": 5,
+                    "max": 20,
+                    "rules": []
+                }
+            ]
         },
         "reaper_chariot": {
             "name": "Reaper Chariot",
             "description": "A bladed chariot made to reap souls on the battlefeild.",
-            "subfactions": ["excess"],
             "keywords": ["cavalry"],
             "category": "command",
             "rules": [],
@@ -673,47 +673,45 @@
                 }
             ]
         },
-        "excess_warriors_on_steeds":{
+        "excess_warriors_on_steeds": {
             "name": "Excess Warriors on Steeds",
-            "description":"A seductively mutated beast able to ferring forces of slaanesh into battle.",
-            "subfactions": ["excess"],
-            "keywords":["cavalry"],
+            "description": "A seductively mutated beast able to ferring forces of slaanesh into battle.",
+            "keywords": ["cavalry"],
             "category": "strike",
             "rules": ["agile"],
             "min": 5,
             "max": 20,
-            "models":[{
-                "name": "Deathseeker",
-                "movement": 12,
-                "courage": 5,
-                "shoot": 6,
-                "fight": 6,
-                "defense": 5,
-                "reflexes": 4,
-                "wounds": 2,
-                "weapons": [{"id": "sweeping_claws","count": 3}, "lashing_tentacles"],
-                "options":[
-                    {"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}
-                ],
-                "min": 1,
-                "max": 1,
-                "rules": []
-            },
-            {
-                "name": "Excess Steed",
-                "movement": 12,
-                "courage": 5,
-                "shoot": 6,
-                "fight": 6,
-                "defense": 5,
-                "reflexes": 4,
-                "wounds": 2,
-                "weapons": [{"id": "sweeping_claws","count": 3}, "lashing_tentacles"],
-                "min": 4,
-                "max": 19,
-                "rules": []
-            }
-        ]
+            "models": [
+                {
+                    "name": "Deathseeker",
+                    "movement": 12,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 2,
+                    "weapons": [{"id": "sweeping_claws", "count": 3}, "lashing_tentacles"],
+                    "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                },
+                {
+                    "name": "Excess Steed",
+                    "movement": 12,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "wounds": 2,
+                    "weapons": [{"id": "sweeping_claws", "count": 3}, "lashing_tentacles"],
+                    "min": 4,
+                    "max": 19,
+                    "rules": []
+                }
+            ]
         }
     },
     "models": {
@@ -763,7 +761,6 @@
         },
         "magical_ccw": {"name": "Magical CCW", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "twisting_flames": {"name": "Twisting Flames", "attacks": 2, "short": 9, "medium": 18},
-        "horrible_blast": {"name": "Horrible Blast", "attacks": 9, "short": 9, "ap": 2},
         "changing_flames": {
             "name": "Changing Flames",
             "profiles": [
@@ -794,13 +791,7 @@
             "profiles": [{"name": "Melee", "attacks": 8, "short": "Melee", "ap": 1, "rules": ["blast"]}, {"name": "Shooting", "attacks": 3, "short": 6, "ap": 2}]
         },
         "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2, "damage": 2, "rules": ["rending"]},
-        "barbed_tail":{
-            "name": "Barbed Tail",
-            "attacks": 1,
-            "short":"Melee",
-            "ap": 2,
-            "damage": 2
-        }
+        "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2, "damage": 2}
     },
     "rules": {
         "disk_of_change": {
@@ -813,19 +804,17 @@
             "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.",
             "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 1.67}]
         },
-        "banner_of_change": {
-            "name": "Banner of Change",
-            "hidden": true,
-            "description_short": "+1 Courage",
-            "description": "+1 Courage.",
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1}]
-        },
+        "banner_of_change": {"name": "Banner of Change", "hidden": true, "description_short": "+1 Courage", "description": "+1 Courage.", "points": 20},
         "horrible_icon": {
             "name": "Horrible Icon",
-            "description": "This banner allows the bearer to cast the following power once per round: Roll 9 dice. On each roll of 1 or 2 the closest enemy unit within 9\" takes one automatic hit with AP -2. This power may not be denied.",
-            "effects": [{"type": "freeAttacks", "weapon": "horrible_blast", "shoot": 2}]
+            "description": "At any point during this unit's activation, roll 9 dice. For each roll of 1 or 2 the closest enemy unit within 9\" takes one automatic hit with AP -2.",
+            "points": 20
         },
-        "instrument_of_change": {"name": "Instrument of Change", "description": "Add 1 to the units Movement characteristic.", "effects": [{"type": "alterStat", "statName": "movement", "value": 1, "target": "friendly"}]},
+        "instrument_of_change": {
+            "name": "Instrument of Change",
+            "description": "Add 1 to the units Movement characteristic.",
+            "effects": [{"type": "alterStat", "statName": "movement", "value": 1, "target": "friendly"}]
+        },
         "chanting_warriors": {
             "name": "Chanting Warriors",
             "description": "Enemy units must subtract one from psychic tests within 9\" of this model.",
@@ -837,22 +826,14 @@
         },
         "no_escape": {
             "name": "No Escape",
-            "description": "Enemy units attempting to fall back from this unit take their Reflexes test at -2.",
+            "description": "Enemy units attempting to fall back from this unit take their Initiative test at -2.",
             "effects": [{"type": "alterStat", "statName": "reflexes", "target": "enemy", "value": 2, "frequency": 5}]
         },
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
-        "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains +1 regeneration.", "effects": [{"type": "grantRule", "rule": "regeneration", "value": 1}]},
+        "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Resilient(+1).", "points": 2},
         "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
-        "instrument_of_excess":{
-            "name": "Instrument of Excess",
-            "description": "Add 1 to this unit's movement characteristic.",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 8}]
-        },
-        "banner_of_excess":{
-            "name": "Banner of Excess",
-            "description": "Add 1 to this unit's fight characteristic.",
-            "effects": [{"type": "alterStat", "statName": "fight", "value": 8}]
-        },
+        "instrument_of_excess": {"name": "Instrument of Excess", "description": "Add 1 to this unit's movement characteristic.", "points": 10},
+        "banner_of_excess": {"name": "Banner of Excess", "description": "This unit may re-roll failed Strength rolls of 1 or 2.", "points": 20},
         "wings": {
             "name": "Daemon Wings",
             "hidden": true,

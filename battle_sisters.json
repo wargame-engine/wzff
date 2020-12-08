@@ -8,7 +8,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", {"id": "lucky", "x": 1}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "High Sister",
@@ -36,7 +36,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "banner_of_focus"],
+            "rules": ["leader", "banner_of_focus", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Herald Sister",
@@ -65,7 +65,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "medical_training"],
+            "rules": ["leader", "medical_training", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Nurse Sister",
@@ -136,7 +136,7 @@
             "max": 10,
             "category": "specialist",
             "rules": [
-                {"id": "regeneration", "x": 4}
+                {"id": "resilient", "x": 4}
             ],
             "models": [
                 {
@@ -322,7 +322,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "heavy_flamethrower", "count": 2}, "withWeapon": [{"id": "heavy_machinegun", "count": 2}]},
                         {"replaceWeapon": {"id": "walker_flail", "count": 2}, "withWeapon": [{"id": "walker_saw", "count": 2}]},
-                        {"addRule": [{"id": "regeneration", "x": 4, "name": "Berzerk"}, "coffin_enclosure"]}
+                        {"addRule": [{"id": "resilient", "x": 4, "name": "Berzerk"}, "coffin_enclosure"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -349,7 +349,6 @@
                     "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
-                    "rules": ["damage_table_vehicle"],
                     "min": 1,
                     "max": 1
                 }

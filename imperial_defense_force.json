@@ -13,7 +13,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "commander_field_orders", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -39,7 +39,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "lucky", "x": 1}],
+            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -69,7 +69,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "field_orders"],
+            "rules": ["leader", "field_orders", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Platoon Commander",
@@ -95,7 +95,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "no_retreat"],
+            "rules": ["leader", "no_retreat", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Commissar",
@@ -121,7 +121,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "psychic", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Psychic",
