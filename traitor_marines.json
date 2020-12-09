@@ -624,7 +624,7 @@
         "havoc_bikers": {
             "name": "Traitor Bikers",
             "description": "Traitor marines on combat bikes.",
-            "rules": ["combat_bike", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "min": 3,
             "max": 9,
             "category": "strike",
