@@ -356,7 +356,7 @@
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 3},
         "crab_flail": {"name": "Crab Flail", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
         "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
-        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 3, "short": 12, "medium": 18, "ap": 4, "damage": 2},
+        "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},
         "gravity_cannon": {"name": "Gravity Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "damage": 1, "rules": ["gravity"]},
         "heavy_gravity_cannon": {"name": "Heavy Gravity Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": ["gravity"]},
         "psychic_grenade": {
@@ -474,9 +474,9 @@
         "spiked_ram": {
             "name": "Spiked Ram",
             "hidden": true,
-            "description": "This model gains +3 impact.",
+            "description": "This model gains Impact(+3).",
             "description_short": "Impact +3",
-            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
+            "points": 6
         },
         "heavy_impact": {
             "name": "Heavy Impact",
