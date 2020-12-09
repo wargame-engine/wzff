@@ -261,8 +261,8 @@
                     "wounds": 1,
                     "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
                     "options": [
-                        {"limit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": [["marine_pistol", "chainsword"]]}
+                        {"limit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", "chainsword"]]}
                     ],
                     "rules": [],
                     "min": 10,
@@ -314,7 +314,7 @@
                         {
                             "modelLimit": 4,
                             "replaceWeapon": "marine_rifle",
-                            "withWeapon": ["shred_rifle", "plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon"]
+                            "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle", "heavy_machinegun", "autocannon", "missile_launcher", "laser_cannon", "minigun"]
                         }
                     ],
                     "rules": [],
@@ -821,10 +821,10 @@
                         {
                             "replaceWeapon": "brute_fist",
                             "withWeapon": [
-                                "brute_flail",
-                                "brute_hammer",
                                 ["brute_fist", "twin_marine_rifle"],
                                 ["brute_fist", "heavy_flamethrower"],
+                                "brute_flail",
+                                "brute_hammer",
                                 "plasma_cannon",
                                 "missile_launcher",
                                 "heavy_fusion_rifle",
@@ -865,8 +865,8 @@
                 }
             ]
         },
-        "havoc_fiend": {
-            "name": "Traitor Fiend",
+        "havoc_mauler": {
+            "name": "Traitor Mauler",
             "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
             "rules": ["fear", {"id": "resilient", "x": 2}, "vulnerable_rear", "damage_table_monster"],
             "subfactions": ["none", "change_traitors"],
@@ -885,8 +885,36 @@
                     "wounds": 6,
                     "weapons": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 2}]},
-                        {"replaceWeapon": [{"id": "fiend_claws", "count": 2}, {"id": "maul_cutter", "count": 2}], "withWeapon": [{"id": "ecto_cannon", "count": 2}, {"id": "forge_cannon", "count": 2}]}
+                        {"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "havoc_fiend": {
+            "name": "Traitor Fiend",
+            "description": "A viscious beast of twisted metal and flesh made to dominate the battlefeild.",
+            "rules": ["fear", {"id": "resilient", "x": 2}, "vulnerable_rear", "damage_table_monster"],
+            "subfactions": ["none", "change_traitors"],
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Traitor Fiend",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 4,
+                    "wounds": 6,
+                    "weapons": ["fiend_jaws", {"id": "ecto_cannon", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "ecto_cannon", "count": 2}, "withWeapon": {"id": "forge_cannon", "count": 2}},
+                        {"replaceWeapon": "fiend_jaws", "withWeapon": "ecto_cannon"}
                     ],
                     "rules": [],
                     "min": 1,
