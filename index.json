@@ -9,7 +9,7 @@
         "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
         "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance", "version": "0.1"},
-        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance", "version": "0.1.2"},
+        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance", "version": "0.1.3"},
         "throne_guardians": {"name": "Throne Guardians", "id": "throne_guardians", "url": "throne_guardians.json", "color": "#D4AF37", "alliance": "imperial_alliance", "version": "0.1"},
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A", "version": "0.1"},
         "imperial_inquisition": {"name": "Imperial Inquisition", "id": "imperial_inquisition", "url": "imperial_inquisition.json", "color": "#d4af37", "alliance": "imperial_alliance", "version": "0.1"}
