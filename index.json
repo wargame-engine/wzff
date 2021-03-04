@@ -300,10 +300,10 @@
             ]
         },
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
-        "energy_axe": {"name": "Energy Axe", "attacks": 2, "short": "Melee", "ap": 3, "damage": 1},
-        "energy_mace": {"name": "Energy Mace", "attacks": 2, "short": "Melee", "ap": 4, "damage": 1},
-        "energy_fist": {"name": "Energy Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
-        "energy_hammer": {"name": "Energy Hammer", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3, "rules": [{"id": "deadly", "x": 1}]},
+        "energy_axe": {"name": "Energy Axe", "attacks": 1, "short": "Melee", "ap": 3, "damage": 1},
+        "energy_mace": {"name": "Energy Mace", "attacks": 1, "short": "Melee", "ap": 4, "damage": 1},
+        "energy_fist": {"name": "Energy Fist", "attacks": 1, "short": "Melee", "ap": 6, "damage": 2},
+        "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "damage": 3, "rules": [{"id": "deadly", "x": 1}]},
         "combi_flamer": {
             "name": "Combi-flamer",
             "profiles": [{"name": "Flamer", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
@@ -438,7 +438,7 @@
         },
         "assault_carbine": {"name": "Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2},
         "judge_blade": {"name": "Judge Blade", "attacks": 3, "damage": 2, "short": "Melee", "ap": 5},
-        "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 3, "damage": 2, "short": "Melee", "ap": 3},
+        "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 1, "damage": 2, "short": "Melee", "ap": 3},
         "fist_carbine": {"name": "Fist Carbine", "attacks": 3, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "flame"]},
         "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
