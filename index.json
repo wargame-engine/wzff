@@ -518,22 +518,22 @@
         },
         "commander_field_orders": {
             "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose two friendly Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. \n\n\n This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
             "points": 15
         },
         "field_orders": {
             "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose a friendly Infantry unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ or +1 AP \n * +3\" Movement or Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
             "points": 10
         },
         "commander_field_orders_stormtrooper": {
             "name": "Field Orders (Stormtrooper Commander)",
-            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose two friendly Stormtrooper Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP \n * +3\" Movement or Re-roll failed Strength tests of 9+. \n\n\n This unit may activate one additional friendly unit on activation. A unit may only benefit from one Field Order.",
             "points": 15
         },
         "field_orders_stormtrooper": {
             "name": "Field Orders (Stormtroopers)",
-            "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. A unit may only benefit from one Field Order.",
+            "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP or +3\" Movement or Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
             "points": 10
         },
         "fusion": {
