@@ -778,14 +778,14 @@
             "phase": "activation",
             "flavor": "Some units equipped with spotting lasers are connected to a laser-uplink which boosts the signal of nearby spotting lasers.",
             "description": "Use after a unit successfully marks a unit with a spotting laser. You may place one additional spotting marker on the target.",
-            "cost": 2
+            "cost": 1
         },
         "for_the_fedeartion": {
             "name": "For the Federation!",
             "phase": "activation",
             "flavor": "In the confusion of battle, sometimes it is necessary for a Battlesuit commander to rally the troops to fight on.",
-            "description": "Use when activating a Battlesuit Character unit. All units within 12\" may immediately remove one fatigue.",
-            "cost": 2
+            "description": "Use when activating a Battlesuit Character unit. All units within 12\" may immediately remove one Strain.",
+            "cost": 1
         }
     },
     "powers": {}
