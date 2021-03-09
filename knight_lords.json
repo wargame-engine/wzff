@@ -1,6 +1,7 @@
 {
     "id": "knight_lords",
     "name": "Knight Lords",
+    "author": "Caliallie#6369",
     "background": "An army consisting of titanic machines and the chivilrous order of warriours that pilot and support them.",
     "units": {
         "mini_knight": {

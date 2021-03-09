@@ -2,6 +2,7 @@
     "name": "Grim Darkness (Beta)",
     "id": "grim_darkness",
     "factions": {
+        "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm"},
         "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1.1"},        
         "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horrors.json", "color": "#90305d", "alliance": "traitors", "version": "0.1"},
         "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.2"},
@@ -18,7 +19,6 @@
     },
     "unfinished_factions": {
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
-        "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm"},
         "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"}
     },
@@ -316,16 +316,16 @@
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
+            "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 2}]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
         },
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["pistol", "fusion", {"id": "deadly", "x": 1}]},
-        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}]},
-        "hunter_missiles": {"name": "Hunter Missile", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["pistol", "fusion", {"id": "deadly", "x": 2}]},
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 2}]},
+        "hunter_missiles": {"name": "Hunter Missile", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3, "rules": [{"id": "ammo", "x": 1}, {"id": "deadly", "x": 2}]},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_autocannon": {"name": "Twin Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "damage": 2},
         "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "damage": 2},
-        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
+        "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}, {"id": "deadly", "x": 1}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24},
         "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24},
         "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},
@@ -377,7 +377,7 @@
         "dread_fist": {"name": "Dread Fist", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
         "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 2, "short": "Melee"},
         "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 4, "short": "Melee", "ap": 6, "rules": ["rending"]},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "Save", "x": 1}]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "defensive", "x": 1}]},
         "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3, "damage": 2},
         "psychic_falchion": {"name": "Psychic Falchion", "attacks": 2, "ap": 2, "short": "Melee"},
         "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 6, "damage": 3, "short": "Melee"},

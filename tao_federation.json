@@ -1,6 +1,7 @@
 {
     "id": "tao_federation",
     "name": "Tao Federation",
+    "author": "guitarninja#5707",
     "background": "The Tao Federation are a group of cooperating aliens, and explorers expanding their influence throughout the stars. Their primary fighting style involves a combined arms assault of mechanized infantry, flying battlesuits and high-tech infantry.",
     "units": {
         "bs_comm": {
@@ -121,6 +122,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 2, "weapons": ["hound_fangs"], "min": 4, "max": 12}]
         },
         "savage_beast_riders": {
@@ -129,6 +131,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
+            "rules": [{"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Savage Beast Rider",
@@ -175,7 +178,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth", "fly"],
+            "rules": ["stealth", "fly", {"id": "wounds", "x": 2}],
             "options": [{"addRule": ["homing_beacon"], "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -202,6 +205,7 @@
             "keywords": ["Battlesuits"],
             "category": "specialist",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+            "rules": [{"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Battlesuit",
@@ -393,6 +397,7 @@
             "max": 1,
             "keywords": ["Battlesuits"],
             "category": "heavy",
+            "rules": [{"id": "wounds", "x": 3}],
             "options": [{"addModel": ["missile_drone", "spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -405,7 +410,6 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "weapons": ["suit_fists", {"id": "stomp", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["heavy_rail_rifle", {"id": "heavy_missile_pod", "count": 2}]},
                         {"limit": 1, "addWeapon": [{"id": "plasma_rifle", "count": 2}, {"id": "smart_missiles", "count": 2}]},

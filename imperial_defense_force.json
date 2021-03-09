@@ -1,6 +1,7 @@
 {
     "id": "imperial_defense_force",
     "name": "Imperial Defence Force",
+    "author": "guitarninja#5707",
     "subfactions": {
         "combat_masters": {"name": "Close Combat Focus", "id": "combat_masters", "color": "#00401f", "background": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
         "marksmanship_focus": {"name": "Marksmanship Focus", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."}
@@ -814,11 +815,11 @@
                     "defense": 10,
                     "reflexes": 4,
                     "wounds": 6,
-                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_aa_autocannon", "count": 2}],
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
-                        {"replaceWeapon": {"id": "twin_aa_autocannon", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_shard_mortar", "count": 2}, "eagle_rockets", "death_missile"]},
+                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
                     ],
                     "min": 1,
@@ -954,12 +955,12 @@
     "weapons": {
         "note1": "Super Heavy cannons ----------------------------------------------------------------------------------------------->",
         "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
-        "super_heavy_battle_cannon": {"name": "Super Heavy Battle Cannon", "attacks": 3, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "super_heavy_battle_cannon": {"name": "Super Heavy Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
         "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
         "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "deadly", "x": 2}]},
-        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 12, "short": 12, "medium": 24, "ap": 2},
+        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
         "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "damage": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
@@ -971,7 +972,7 @@
         "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
         "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["flame"]},
-        "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 6}]},
+        "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 42, "medium": 84, "rules": [{"id": "blast", "x": 6}]},
         "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},

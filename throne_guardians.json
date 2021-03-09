@@ -1,6 +1,7 @@
 {
     "name": "Throne Guardians",
     "id": "throne_guardians",
+    "author": "guitarninja#5707",
     "color": "#D4AF37",
     "units": {
         "throne_captain": {

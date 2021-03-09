@@ -1,6 +1,7 @@
 {
     "id": "dark_elves",
     "name": "Dark Elf Pact",
+    "author": "guitarninja#5707",
     "units": {
         "warriors": {
             "name": "Warriors",

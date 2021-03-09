@@ -1,6 +1,7 @@
 {
     "id": "traitor_marines",
     "name": "Traitor Marines",
+    "author": "Caliallie#6369",
     "subfactions": {
         "change_traitors": {
             "name": "Psychic Focus", "id": "change_traitors", "color": "#18abcc", "restricted": true,

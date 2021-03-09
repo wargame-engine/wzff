@@ -1,6 +1,7 @@
 {
     "id": "battle_sisters",
     "name": "Battle Sisters",
+    "author": "guitarninja#5707",
     "units": {
         "high_sister": {
             "name": "High Sister",

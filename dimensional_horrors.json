@@ -1,6 +1,7 @@
 {
     "id": "dimensional_horrors",
     "name": "Dimensional Horrors",
+    "author": "Caliallie#6369",
     "background": "Mutated servants of the dark gods able to materialize anywhere their influence is strong enough.",
     "subfactions": {
         "change": {"name": "Magic Focus", "id": "change", "color": "#90305d", "background": ""},

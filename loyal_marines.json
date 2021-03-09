@@ -1,6 +1,7 @@
 {
     "name": "Loyal Marines",
     "id": "loyal_marines",
+    "author": "guitarninja#5707",
     "color": "#0d407f",
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
@@ -1361,7 +1362,7 @@
         },
         "psych_out": {
             "name": "Dangerous(Psychic)",
-            "description": "This weapon has +1 AP against units with the Psychic keyword."
+            "description": "This weapon has +1 AP against units with the Psychic special rule."
         },
         "banner_of_wrath": {
             "name": "Banner of Wrath",
