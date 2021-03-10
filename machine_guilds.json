@@ -13,7 +13,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "repair", "x": 3}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "repair", "x": 3}, {"id": "tough", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "tough", "x": 1}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -70,7 +70,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader"],
             "models": [
                 {
                     "name": "Machine Manipulator",
@@ -97,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader"],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -125,7 +125,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader"],
             "models": [
                 {
                     "name": "Data Specialist",
@@ -149,7 +149,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": [],
             "models": [
                 {
                     "name": "Vanguard Commander",
@@ -286,7 +286,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", {"id": "wounds", "x": 2}],
+            "rules": ["agile"],
             "options": [{"replaceWeapon": ["sonic_razor", {"id": "claws", "count": 2}], "withWeapon": {"id": "sonic_blade", "count": 2}}],
             "models": [
                 {
@@ -323,7 +323,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["ambush", "fly", {"id": "wounds", "x": 2}],
+            "rules": ["ambush", "fly"],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
                 {
@@ -360,7 +360,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", "scout", "stealth", {"id": "wounds", "x": 2}],
+            "rules": ["agile", "scout", "stealth"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
                 {
@@ -397,7 +397,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["scout", "agile", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["scout", "agile", {"id": "impact", "x": 1}],
             "options": [{"addWeapon": ["phosphor_breath"], "modelLimit": "all"}, {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine", "limit": "all"}],
             "models": [
                 {
@@ -438,7 +438,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": [],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
             "models": [
                 {
@@ -462,7 +462,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": [],
             "options": [
                 {"addWeapon": ["phosphor_rifle", "flamethrower"]},
                 {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},

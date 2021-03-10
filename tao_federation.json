@@ -122,7 +122,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": [],
             "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 2, "weapons": ["hound_fangs"], "min": 4, "max": 12}]
         },
         "savage_beast_riders": {
@@ -131,7 +131,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": [{"id": "wounds", "x": 3}],
+            "rules": [],
             "models": [
                 {
                     "name": "Savage Beast Rider",
@@ -178,7 +178,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth", "fly", {"id": "wounds", "x": 2}],
+            "rules": ["stealth", "fly"],
             "options": [{"addRule": ["homing_beacon"], "modelLimit": 1}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -205,7 +205,7 @@
             "keywords": ["Battlesuits"],
             "category": "specialist",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "rules": [{"id": "wounds", "x": 3}],
+            "rules": [],
             "models": [
                 {
                     "name": "Battlesuit",
@@ -397,7 +397,7 @@
             "max": 1,
             "keywords": ["Battlesuits"],
             "category": "heavy",
-            "rules": [{"id": "wounds", "x": 3}],
+            "rules": [],
             "options": [{"addModel": ["missile_drone", "spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -657,8 +657,8 @@
                 {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}, "assault"]},
-        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion", {"id": "deadly", "x": 1}]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": ["fusion", "assault"]},
+        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
         "missile_pod": {"name": "Missile Pod", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
         "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 1},
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2},
@@ -667,7 +667,7 @@
         "railgun": {
             "name": "Railgun",
             "profiles": [
-                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "deadly", "x": 2}]},
+                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": []},
                 {"name": "Blast", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": [{"id": "blast", "x": 3}]}
             ]
         },

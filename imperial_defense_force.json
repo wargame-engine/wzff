@@ -14,7 +14,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "commander_field_orders", {"id": "tough", "x": 1}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -40,7 +40,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -70,7 +70,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "field_orders", {"id": "wounds", "x": 2}],
+            "rules": ["leader", "field_orders"],
             "models": [
                 {
                     "name": "Platoon Commander",
@@ -96,7 +96,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "no_retreat", {"id": "wounds", "x": 2}],
+            "rules": ["leader", "no_retreat"],
             "models": [
                 {
                     "name": "Commissar",
@@ -122,7 +122,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}],
             "models": [
                 {
                     "name": "Psychic",
@@ -959,7 +959,7 @@
         "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
-        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "deadly", "x": 2}]},
+        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": []},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},

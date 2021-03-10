@@ -55,7 +55,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader", {"id": "wounds", "x": 3}, "outflank"],
+            "rules": ["hive_mind", "leader", "outflank"],
             "models": [
                 {
                     "name": "Snatcher Lord",
@@ -78,18 +78,18 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["agile", "outflank"],
+            "rules": ["agile"],
             "models": [
                 {
                     "name": "Soul Snatcher",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 7,
+                    "reflexes": 6,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": [{"id": "piercing_claws", "count": 3}],
+                    "weapons": [{"id": "piercing_claws", "count": 2}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
                     "min": 5,
                     "max": 20
@@ -102,7 +102,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader", {"id": "wounds", "x": 3}],
+            "rules": ["hive_mind", "leader"],
             "models": [
                 {
                     "name": "Hive Warrior Prime",
@@ -131,7 +131,7 @@
             "name": "Hive Warriors",
             "description": "Large bugs which can extend the hive mind",
             "category": "core",
-            "rules": [{"id": "wounds", "x": 3}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Hive Warrior Champion",
@@ -229,7 +229,7 @@
             "name": "Hive Swarm",
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
-            "rules": ["ambush", {"id": "wounds", "x": 3}],
+            "rules": ["ambush"],
             "models": [
                 {
                     "name": "Hive Swarm",
@@ -250,7 +250,7 @@
     "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}},
     "weapons": {
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
-        "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending", {"id": "deadly", "x": 1}]},
+        "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 3, "medium": 6, "ap": 1, "rules": ["assault"]},
@@ -260,14 +260,14 @@
         "acidspitter": {"name": "Acidspitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
         "spiked_strangler": {"name": "Spiked Strangler", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
-        "acid_cannon": {"name": "Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "deadly", "x": 1}]},
-        "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": [{"id": "deadly", "x": 2}]},
-        "grabbing_tail": {"name": "Grabbing Tail", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "deadly", "x": 1}]},
-        "large_boneswords": {"name": "Large Boneswords", "attacks": 1, "short": "Melee", "ap": 4, "rules": [{"id": "deadly", "x": 2}]},
+        "acid_cannon": {"name": "Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
+        "grabbing_tail": {"name": "Grabbing Tail", "attacks": 1, "short": "Melee", "ap": 3, "rules": []},
+        "large_boneswords": {"name": "Large Boneswords", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
         "maggot_spitter": {"name": "Maggot Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
         "brain_consumer": {"name": "Brain Consumer", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
-        "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}, {"id": "deadly", "x": 2}]},
-        "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}, {"id": "deadly", "x": 1}]},
+        "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}]},
+        "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {

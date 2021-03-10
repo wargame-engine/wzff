@@ -40,7 +40,7 @@
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
                     ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -72,7 +72,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["war_chant", "traitor_tactics"]}
                     ],
-                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", "relentless", {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -104,7 +104,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor"]}
                     ],
-                    "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -136,7 +136,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["destroyer_armor"]}
                     ],
-                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -169,7 +169,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, "leader", {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -201,7 +201,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -230,7 +230,7 @@
                         {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
                         {"addRule": "wings"}
                     ],
-                    "rules": ["leader", "fear", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+                    "rules": ["leader", "fear", {"id": "tough", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -256,7 +256,7 @@
                         {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", "chainsword"]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}
                     ],
-                    "rules": ["leader", {"id": "wounds", "x": 3}],
+                    "rules": ["leader"],
                     "min": 1,
                     "max": 1
                 }
@@ -590,7 +590,7 @@
         "havoc_destoyers": {
             "name": "Traitor Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods.",
-            "rules": ["ambush", {"id": "wounds", "x": 2}],
+            "rules": ["ambush"],
             "min": 5,
             "max": 15,
             "category": "specialist",
@@ -619,7 +619,7 @@
         "mutated_destoyers": {
             "name": "Mutated Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
-            "rules": ["ambush", "mutations", {"id": "wounds", "x": 2}],
+            "rules": ["ambush", "mutations"],
             "category": "heavy",
             "min": 3,
             "max": 9,
@@ -644,7 +644,7 @@
         "havoc_bikers": {
             "name": "Traitor Bikers",
             "description": "Traitor marines on combat bikes.",
-            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "impact", "x": 1}],
             "min": 3,
             "max": 9,
             "category": "strike",
@@ -694,7 +694,7 @@
         "daemon_spawn": {
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
-            "rules": ["mutations", "strider", "fear", {"id": "wounds", "x": 2}],
+            "rules": ["mutations", "strider", "fear"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 5,
@@ -1026,7 +1026,7 @@
             "notes": "not updated",
             "name": "Lord of Change",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["leader",{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader",{"id": "tough", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1059,7 +1059,7 @@
         "sorceror_of_change": {
             "name": "Sorceror of Change",
             "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1092,7 +1092,7 @@
         "birdman_sorceror": {
             "name": "Birdman Sorceror",
             "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",
@@ -1166,7 +1166,7 @@
         "change_destroyers": {
             "name": "Psychic Destroyers",
             "description": "Change brothers in destroyer amror suffering from the same curse as their brothers, but still fight stolidly by their side.",
-            "rules": ["ambush", {"id": "wounds", "x": 2}],
+            "rules": ["ambush"],
             "subfactions": ["change_traitors"],
             "min": 5,
             "max": 15,
@@ -1239,7 +1239,7 @@
         "birdmen_disc_riders": {
             "name": "Birdmen Disk Riders",
             "description": "Exhalted birdmen riding psychic disks.",
-            "rules": ["strider", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["strider", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}],
             "subfactions": ["change_traitors"],
             "min": 3,
             "max": 9,

@@ -10,7 +10,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["fearless", {"id": "wounds", "x": 3} ],
+            "rules": ["fearless" ],
             "models": [
                 {
                     "name": "Guardian Captain",
@@ -38,7 +38,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "rules": ["fearless"],
             "options": [
                 {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]},
                 {"addWeapon": "guardian_dagger"},
@@ -66,7 +66,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["fearless", {"id": "resilient", "x": 3}],
             "options": [
                 {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}], "guardian_axe"]},
                 {"addWeapon": "guardian_dagger"},

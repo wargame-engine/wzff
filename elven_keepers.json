@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "furious", {"id": "resilient", "x": 3}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "blur_field", "furious", {"id": "resilient", "x": 3}, "agile", {"id": "tough", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -68,7 +68,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -98,7 +98,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -179,7 +179,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["hover", {"id": "impact", "x": 1}, "blur_field", {"id": "wounds", "x": 2}],
+            "rules": ["hover", {"id": "impact", "x": 1}, "blur_field"],
             "keywords": ["Biker"],
             "models": [
                 {
@@ -274,7 +274,7 @@
             "name": "Irridescent Cannon",
             "profiles":[
                 {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "deadly", "x": 1}]},
+                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": []},
                 {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap":2}
             ]
         },

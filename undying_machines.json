@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "walker", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "walker", {"id": "resilient", "x": 3}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -35,7 +35,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "hover", {"id": "resilient", "x": 3}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -64,7 +64,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "tough", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -93,7 +93,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -122,7 +122,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -160,7 +160,7 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["hover", {"id": "resilient", "x": 3}],
             "keywords": ["Swarm"],
             "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
@@ -170,7 +170,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -182,7 +182,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "fly", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "fly", {"id": "psychic", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -310,7 +310,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth", {"id": "wounds", "x": 2}],
+            "rules": ["stealth"],
             "keywords": ["Heavy Infantry"],
             "options": [
                 {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
@@ -325,7 +325,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["walker", {"id": "wounds", "x": 2}],
+            "rules": ["walker"],
             "keywords": ["Heavy Infantry"],
             "options": [{"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [
@@ -364,7 +364,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["hover", {"id": "wounds", "x": 2}],
+            "rules": ["hover"],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
@@ -375,7 +375,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["hover", {"id": "wounds", "x": 3}],
+            "rules": ["hover"],
             "keywords": ["Heavy Infantry"],
             "options": [
                 {"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]},
@@ -636,7 +636,7 @@
             "weapons": ["feeding_teeth"],
             "min": 3,
             "max": 6,
-            "rules": [{"id": "resilient", "x": 3}, "hover", {"id": "wounds", "x": 3}]
+            "rules": [{"id": "resilient", "x": 3}, "hover"]
         }
     },
     "weapons": {
@@ -650,7 +650,7 @@
         "doom_cannon": {
             "name": "Doom Cannon",
             "profiles": [
-                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "deadly", "x": 2}]},
+                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": []},
                 {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
@@ -671,9 +671,9 @@
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 2, "rules": ["rending"]},
         "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": [{"id": "deadly", "x": 1}]},
-        "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "deadly", "x": 1}]},
-        "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "deadly", "x": 1}]},
+        "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": []},
+        "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": []},
+        "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": []},
         "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},

@@ -10,7 +10,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", "ward", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", "ward", {"id": "tough", "x": 1}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -38,7 +38,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Stormtrooper", "Infantry"],
-            "rules": ["commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["commander_field_orders_stormtrooper", {"id": "tough", "x": 1}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
