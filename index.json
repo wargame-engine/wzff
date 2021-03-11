@@ -241,7 +241,7 @@
                 {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "damage": 3, "ap": 6}
             ]
         },
-        "laser_cannon": {"name": "Laser Cannon", "ap": 7, "damage": 3, "attacks": 1, "short": 24, "medium": 48, "rules": []},
+        "laser_cannon": {"name": "Laser Cannon", "ap": 7, "damage": 3, "attacks": 1, "short": 24, "medium": 48},
         "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 7, "damage": 3, "attacks": 2, "short": 24, "medium": 48, "rules": []},
         "shred_rifle": {"name": "Shred Rifle", "attacks": 2, "short": 9, "medium": 18, "rules": ["rending"]},
         "shred_pistol": {"name": "Shred Pistol", "attacks": 2, "short": 6, "medium": 12, "rules": ["rending"]},
@@ -544,7 +544,7 @@
         },
         "fusion": {
             "name": "Fusion",
-            "description": "Enemy units with Damage Table(X) add 1 to rolls when hit by this weapon at Short range.",
+            "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.",
             "effects": ["weapon.attacks", {"multiply": 2}]
         },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},

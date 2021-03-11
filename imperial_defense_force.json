@@ -14,7 +14,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders", {"id": "tough", "x": 1}],
+            "rules": ["leader", "commander_field_orders", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -40,7 +40,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}],
+            "rules": ["leader", "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -48,7 +48,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 3,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
@@ -70,7 +70,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "field_orders"],
+            "rules": ["leader", "field_orders", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Platoon Commander",
@@ -122,7 +122,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "psychic", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Psychic",
@@ -194,6 +194,7 @@
                     "reflexes": 5,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
                             {"id": "missile_launcher", "mount": ["Front"]},
@@ -229,7 +230,6 @@
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_axe", "energy_mace", "energy_fist"]},
                         {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]}
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 },
@@ -261,6 +261,7 @@
                     "movement": 6,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
                             {"id": "missile_launcher", "mount": ["Front"]},
@@ -329,6 +330,7 @@
                     "movement": 6,
                     "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
                             {"id": "missile_launcher", "mount": ["Front"]},
@@ -380,6 +382,7 @@
             "category": "specialist",
             "min": 3,
             "max": 6,
+            "rules": [{"id": "crew", "x": 2}],
             "models": [
                 {
                     "name": "Weapon Team",
@@ -510,7 +513,8 @@
             "min": 5,
             "max": 10,
             "rules": [
-                {"id": "impact", "x": 1}
+                {"id": "impact", "x": 1},
+                {"id": "wounds", "x": 2}
             ],
             "options": [
                 {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}
@@ -518,12 +522,12 @@
             "models": [
                 {
                     "name": "Rider Sergeant",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "movement": 8,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -535,12 +539,12 @@
                 },
                 {
                     "name": "Rider",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "movement": 8,
                     "defense": 5,
-                    "reflexes": 3,
+                    "reflexes": 5,
                     "wounds": 2,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -559,10 +563,11 @@
             "min": 5,
             "max": 10,
             "options": [
-                {"addRule": ["ogre_shields"]},
+                {"addRule": ["ogre_shield"]},
                 {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
                 {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
             ],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Ogre Leader",
@@ -608,7 +613,7 @@
                     "fight": 6,
                     "defense": 12,
                     "movement": 10,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "wounds": 6,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
@@ -650,7 +655,7 @@
                     "fight": 5,
                     "defense": 12,
                     "movement": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
@@ -691,7 +696,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
@@ -723,7 +728,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [],
                     "options": [
@@ -752,7 +757,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": ["light_battle_cannon"],
                     "options": [
@@ -782,7 +787,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "acid_cannon"],
                     "options": [
@@ -813,7 +818,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 10,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
                     "options": [
@@ -872,7 +877,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -901,7 +906,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
                     "options": [
@@ -930,7 +935,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 13,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 12,
                     "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -988,10 +993,10 @@
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
-        "ogre_shields": {
-            "name": "Ogre Shields",
+        "ogre_shield": {
+            "name": "Ogre Shield",
             "description_short": "+1 Save",
-            "description": "This unit gets +1 Save.",
+            "description": "This model gets +1 Save.",
             "points": 2
         },
         "no_retreat": {

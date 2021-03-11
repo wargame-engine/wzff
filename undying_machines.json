@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "walker", {"id": "resilient", "x": 3}],
+            "rules": ["leader", "walker", {"id": "wounds", "x": 3}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -35,7 +35,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "hover", {"id": "resilient", "x": 3}],
+            "rules": ["leader", "hover", {"id": "wounds", "x": 3}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -64,7 +64,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "tough", "x": 1}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -93,7 +93,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -122,7 +122,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "resilient", "x": 3}],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -160,7 +160,7 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "resilient", "x": 3}],
+            "rules": ["hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Swarm"],
             "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
@@ -170,7 +170,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "resilient", "x": 3}],
+            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
@@ -182,7 +182,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "fly", {"id": "psychic", "x": 1}],
+            "rules": ["leader", "fly", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 5}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -310,7 +310,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth"],
+            "rules": ["stealth", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [
                 {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
@@ -325,7 +325,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["walker"],
+            "rules": ["walker", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [
@@ -363,8 +363,8 @@
             "description": "A ranged-focused annihilator which hovers across all terrain.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
-            "rules": ["hover"],
+            "category": "heavy",
+            "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
@@ -374,8 +374,8 @@
             "description": "A ranged-focused heavy annihilator which hovers across all terrain.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
-            "rules": ["hover"],
+            "category": "heavy",
+            "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [
                 {"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]},
@@ -522,7 +522,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["hover"],
+            "rules": ["hover", {"id": "wounds", "x": 3}],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -546,7 +546,7 @@
             "description": "A tall walking machine tasked with reanimating fallen units.",
             "min": 1,
             "max": 1,
-            "category": "heavy",
+            "category": "specialist",
             "rules": ["walker", "vulnerable_side_rear", "flare_shielding", "reanimation_beam", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
@@ -554,12 +554,12 @@
                     "name": "Reanimatior",
                     "courage": 6,
                     "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
+                    "shoot": 5,
+                    "fight": 5,
                     "defense": 9,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": [{"id": "antimatter_rifle", "mount": ["Front"]}, {"id": "heavy_stomp", "count": 2}],
+                    "weapons": [{"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
@@ -707,7 +707,7 @@
         "reanimation_beam": {
             "name": "Reanimation Beam",
             "description": "Once during this unit's activation, if within 6\" if a friendly Infantry unit with killed models, roll 5D10. For each roll of a 5 or less, a wound is restored on a model. If there are left-over successes, you may spend a success to return a model to the unit with 1 wound remaining. Repeat until all successes are allocated. All models must be fully healed before returning fallen models to the unit.",
-            "points": 30
+            "points": 20
         },
         "swarm_fabricator": {
             "name": "Swarm Fabricator",
@@ -755,9 +755,9 @@
         {
             "name": "Repair Overdrive",
             "phase": "activation",
-            "description": "Use when activating a Vehicle unit. Roll a D10. On a 5 or less the unit regains 2 wounds, otherwise it regains 1 wound.",
+            "description": "Use when activating a Vehicle unit. It may immediately fix a critical damage it has sustained.",
             "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
-            "cost": 2
+            "cost": 1
         }
     ],
     "powers": {

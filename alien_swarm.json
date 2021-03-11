@@ -1,6 +1,8 @@
 {
     "name": "Alien Swarm",
     "id": "alien_swarm",
+    "color": "#3d3354",
+    "alliance": "alien_swarm",
     "version": 0.1,
     "author": "Solpine#1305",
     "background": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind.",
@@ -55,7 +57,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader", "outflank"],
+            "rules": ["hive_mind", "leader", "outflank", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Snatcher Lord",
@@ -102,7 +104,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader"],
+            "rules": ["hive_mind", "leader", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Hive Warrior Prime",
@@ -182,9 +184,8 @@
         "grunts": {
             "name": "Grunts",
             "description": "Basic bugs with biological weapons",
-            "min": 1,
-            "max": 1,
             "category": "core",
+            "rules": [],
             "models": [
                 {
                     "name": "Grunt",
@@ -194,7 +195,7 @@
                     "defense": 4,
                     "reflexes": 4,
                     "wounds": 1,
-                    "movement": 6,
+                    "movement": 8,
                     "weapons": ["meat_borer", "ccw"],
                     "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}],
                     "min": 10,
@@ -216,7 +217,7 @@
                     "shoot": 0,
                     "fight": 6,
                     "defense": 4,
-                    "reflexes": 3,
+                    "reflexes": 4,
                     "wounds": 1,
                     "movement": 8,
                     "weapons": [{"id": "razor_talons", "count": 2}],
@@ -229,7 +230,7 @@
             "name": "Hive Swarm",
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
-            "rules": ["ambush"],
+            "rules": ["ambush", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Hive Swarm",
@@ -245,19 +246,86 @@
                     "max": 9
                 }
             ]
+        },
+        "transport_spore": {
+            "name": "Transport Spore",
+            "description": "A floating spore which can hover across the battlefield or be launched from hive ships",
+            "category": "transport",
+            "rules": ["hover", "ambush", "damage_table_monster"],
+            "models": [
+                {
+                    "name": "Transport Spore",
+                    "courage": 5,
+                    "reflexes": 4,
+                    "fight": 4,
+                    "shoot": 4,
+                    "defense": 9,
+                    "movement": 6,
+                    "weapons": [{"id": "acid_spitter", "count": 5}, {"id": "heavy_ccw", "count": 4}],
+                    "options": [{"replaceWeapon": {"id": "acid_spitter", "count": 5}, "withWeapon": [{"id": "spiked_strangler", "count": 5}, {"id": "acid_cannon", "count": 5}]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "consumption_beast": {
+            "name": "Consumption Beast",
+            "description": "A monster with huge tentacled jaws meant to rapidly consume biomass",
+            "category": "specialist",
+            "rules": ["damage_table_monster"],
+            "models": [
+                {
+                    "name": "Consumption Beast",
+                    "courage": 4,
+                    "reflexes": 4,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 12,
+                    "movement": 7,
+                    "weapons": [{"id": "grabbing_tongue", "count": 1}, {"id": "ravenous_jaws", "count": 4}, {"id": "pincer_claws", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hive_guard": {
+            "name": "Hive Guard",
+            "description": "Armed with homing cannons, these guard the flanks of the hive's attacks",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Hive Guard",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 6,
+                    "defense": 8,
+                    "movement": 5,
+                    "weapons": ["impaler_lance", "ccw"],
+                    "options": [{"replaceWeapon": "impaler_lance", "withWeapon": ["shock_cannon"]}],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
         }
     },
-    "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}},
+    "models": {},
     "weapons": {
+        "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
+        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect", "flame"]},
+        "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
+        "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
+        "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 3, "medium": 6, "ap": 1, "rules": ["assault"]},
-        "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
-        "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "consumer": {"name": "Consumer", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
         "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
-        "acidspitter": {"name": "Acidspitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+        "acid_spitter": {"name": "Acidspitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
         "spiked_strangler": {"name": "Spiked Strangler", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
         "acid_cannon": {"name": "Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
