@@ -44,7 +44,7 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": ["leader", "fear", {"id": "tough", "x": 1}],
+            "rules": ["leader", "fear", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["monster"],
             "models": [
                 {
@@ -55,7 +55,7 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 7,
-                    "wounds": 4,
+                    "wounds": 3,
                     "weapons": ["daemon_sword"],
                     "options": [
                         {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
