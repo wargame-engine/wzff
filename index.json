@@ -477,7 +477,6 @@
         },
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
         "titanic": {"name": "Titanic", "description": "When this unit is activated it may only perform one action and benefit from abilties which trigger when the unit is activated once. It may then be activated a second time to perform its second action."},
-        "pistol": {"name": "Pistol", "description": "This weapon may be used instead of a model's other weapons even while engaged in close combat."},
         "spiked_ram": {
             "name": "Spiked Ram",
             "hidden": true,
