@@ -33,6 +33,33 @@
                 }
             ]
         },
+        "celestial": {
+            "name": "Celestial",
+            "description": "A high ranking Federation member.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "models": [
+                {
+                    "name": "Celestial",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "weapons": ["energy_sword"],
+                    "options": [
+                        {"addRule": "hover_drone"},
+                        {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "warrior_squad": {
             "name": "Warrior Team",
             "description": "A squad of infantry who excell at ranged shooting.",
@@ -93,6 +120,30 @@
                 }
             ]
         },
+        "savage_leader": {
+            "name": "Savage Leader",
+            "description": "An intelligent savage commander with a rifle.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "options": [{"addRule": "scout"}],
+            "models": [
+                {
+                    "name": "Savage Leader",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "rules": ["leader", {"id": "wounds", "x": 2}],
+                    "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "savages": {
             "name": "Savage Warriors",
             "description": "A squad of angry savages with rifles.",
@@ -103,7 +154,7 @@
             "models": [
                 {
                     "name": "Savage Warrior",
-                    "movement": 6,
+                    "movement": 7,
                     "courage": 4,
                     "shoot": 5,
                     "fight": 6,
@@ -131,7 +182,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": [],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Savage Beast Rider",
@@ -202,10 +253,9 @@
             "description": "Warriors in agile battlesuits.",
             "min": 1,
             "max": 1,
-            "keywords": ["Battlesuits"],
+            "keywords": ["Heavvy Infantry"],
             "category": "specialist",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
-            "rules": [],
             "models": [
                 {
                     "name": "Battlesuit",
@@ -215,7 +265,7 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 6,
-                    "rules": ["fly"],
+                    "rules": ["fly", {"id": "wounds", "x": 2}],
                     "wounds": 3,
                     "weapons": ["suit_fists"],
                     "options": [
@@ -319,7 +369,7 @@
                     "reflexes": 6,
                     "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
-                    "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
+                    "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
                         {"addWeapon": [[{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}]]},
                         {"addWeapon": ["seeker_missiles"], "limit": 3},
@@ -667,7 +717,7 @@
         "railgun": {
             "name": "Railgun",
             "profiles": [
-                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": []},
+                {"name": "Beam", "attacks": 1, "short": 24, "medium": 48, "ap": 8},
                 {"name": "Blast", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
@@ -716,9 +766,10 @@
     },
     "rules": {
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space."},
+        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "spotting_laser": {
             "name": "Spotting Laser",
-            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to re-roll hit rolls of 1 or 2 against that target or 2 spotting markers to re-roll all hit rolls.",
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to re-roll hit rolls of 9+ against that target or 2 spotting markers to get +1 to hit.",
             "points": 5
         },
         "homing_beacon": {
@@ -752,6 +803,13 @@
             "description": "This model gets +1 Initiative.",
             "points": 5
         },
+        "hover_drone": {
+            "name": "Hover Drone",
+            "hidden": "true",
+            "description": "This model gets +2\" Move and Fly.",
+            "description_short": "+4\" Move, Fly",
+            "points": 5
+        },
         "cold_fusion_booster": {
             "name": "Cold Fusion Booster",
             "hidden": "true",
@@ -759,7 +817,6 @@
             "description_short": "+4\" Move",
             "points": 4
         },
-        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Save.", "points": 20}
     },
     "strategies": {
