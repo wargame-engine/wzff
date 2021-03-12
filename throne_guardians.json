@@ -10,7 +10,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["fearless" ],
+            "rules": ["fearless", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Guardian Captain",
@@ -19,12 +19,19 @@
                     "fight": 8,
                     "movement": 6,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 7,
                     "wounds": 4,
-                    "weapons": [{"id": "guardian_sword", "count": 2}, "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol", "at_grenade"],
                     "options": [
-                        {"replaceWeapon": {"id": "guardian_sword", "count": 2}, "withWeapon": [{"id": "guardian_spear", "count": 2}, ["guardian_rifle", {"id": "heavy_ccw", "count": 3}], {"id": "guardian_axe", "count": 2}]},
-                        {"addWeapon": {"id": "guardian_dagger", "count": 2}},
+                        {
+                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+                            "withWeapon": [
+                                [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                                ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
+                                [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"]
+                            ]
+                        },
+                        {"addWeapon": {"id": "guardian_dagger"}},
                         {"addRule": "guardian_shield"}
                     ],
                     "min": 1,
@@ -38,23 +45,31 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless"],
+            "rules": ["fearless", {"id": "wounds", "x": 2}],
             "options": [
-                {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]]},
+                {
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+                    "withWeapon": [
+                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
+                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                        [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"]
+                    ]
+                },
                 {"addWeapon": "guardian_dagger"},
                 {"addRule": "guardian_shield"}
             ],
             "models": [
                 {
                     "name": "Guardian",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "movement": 6,
                     "defense": 9,
-                    "reflexes": 6,
+                    "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["guardian_sword", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -66,23 +81,31 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "resilient", "x": 3}],
+            "rules": ["fearless", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
-                {"replaceWeapon": "guardian_sword", "withWeapon": ["guardian_spear", ["guardian_rifle", {"id": "heavy_ccw", "count": 2}], "guardian_axe"]},
+                {
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+                    "withWeapon": [
+                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
+                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
+                        [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"]
+                    ]
+                },
                 {"addWeapon": "guardian_dagger"},
                 {"addRule": "guardian_shield"}
             ],
             "models": [
                 {
                     "name": "Warden",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 9,
                     "movement": 6,
-                    "reflexes": 6,
+                    "reflexes": 7,
                     "wounds": 3,
-                    "weapons": ["guardian_sword", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -100,20 +123,14 @@
                 {
                     "name": "Relic Heavy Assault APC",
                     "movement": 10,
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 13,
-                    "reflexes": 4,
+                    "reflexes": 7,
                     "wounds": 9,
-                    "weapons": [
-                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
-                        {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}
-                    ],
-                    "options": [
-                        {"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
-                        {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}
-                    ],
+                    "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
+                    "options": [{"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -122,47 +139,31 @@
         }
     },
     "weapons": {
-        "guardian_dagger": {
-            "name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 2
-        },
-        "guardian_spear": {
-            "name": "Guardian Spear",
-            "profiles": [
-                {"name": "Blade", "attacks": 3, "short": "Melee", "ap": 4},
-                {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "damage": 2}
-            ]
-        },
-        "guardian_axe": {
-            "name": "Guardian Axe",
-            "profiles": [
-                {"name": "Blade", "attacks": 2, "short": "Melee", "ap": 6, "damage": 2},
-                {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "damage": 2}
-            ]
-        },
+        "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 3},
+        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 6},
+        "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
+        "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
+        "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
         "guardian_rifle": {
             "name": "Guardian Rifle",
-            "profiles": [
-                {"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 2},
-                {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "damage": 2}
-            ]
+            "profiles": [{"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 2}, {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "damage": 2}]
         },
-        "guardian_sword": {
-            "name": "Guardian Sword",
-            "profiles": [
-                {"name": "Blade", "attacks": 3, "short": "Melee", "ap": 3},
-                {"name": "Pistol", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]}
-            ]
-        }
+        "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 3},
+        "eagle_lance": {"name": "Eagle Lance", "attacks": 1, "short": "Melee", "ap": 3, "rule": "+1 ap on charge"},
+        "laser_spear": {
+            "name": "Laser Spear",
+            "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
+        },
+        "scorching_spear": {
+            "name": "Scorching Spear",
+            "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Flame", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]}]
+        },
+        "guardian_carbine": {"name": "Guardian Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
+        "twin_guardian_carbine": {"name": "Twin Guardian Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}
     },
-    "rules": {
-        "guardian_shield": {
-            "name": "Guardian Shield",
-            "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
-            "effects": [{"type": "resilient", "frequency": 3}]
-        }
-    },
-    "relics": [
-    ],
+    "rules": {"guardian_shield": {"name": "Guardian Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5}},
+    "relics": [],
     "strategies": [
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
@@ -186,6 +187,5 @@
             "cost": 2
         }
     ],
-    "powers": {
-    }
+    "powers": {}
 }
