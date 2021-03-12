@@ -1312,7 +1312,7 @@
             "min": 1,
             "max": 1,
             "keywords":["Super Heavy Vehicle"],
-            "rules": ["vulnerable_rear", "titanic", "damage_table_vehicle", {"id": "wounds", "x": 2}],
+            "rules": ["vulnerable_rear", "titanic", "damage_table_titan"],
             "models": [
                 {
                     "name": "Super Heavy Walker",

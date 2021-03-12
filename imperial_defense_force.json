@@ -922,7 +922,7 @@
         "super_heavy_battle_tank": {
             "name": "Super Heavy Battle Tank",
             "description": "A titanic battle tank with a variety of weapon options.",
-            "rules": ["vulnerable_rear", "titanic", "damage_table_vehicle"],
+            "rules": ["vulnerable_rear", "damage_table_titan"],
             "category": "super_heavy",
             "keywords": ["Vehicle", "Battle Tank"],
             "min": 1,
