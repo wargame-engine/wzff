@@ -14,7 +14,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 4}],
+            "rules": ["leader", "damage_table_monster"],
             "models": [
                 {
                     "name": "Grand Warlord",
@@ -50,7 +50,7 @@
                     "reflexes": 6,
                     "wounds": 3,
                     "movement": 5,
-                    "rules": ["leader"],
+                    "rules": ["leader", {"id": "wounds", "x": 3}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -71,7 +71,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mechanic",
@@ -150,7 +150,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", "mad_doctor"],
+            "rules": ["leader", "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mad Doctor",
@@ -179,7 +179,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Shaman",
@@ -213,7 +213,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "tough", "x": 1}],
+            "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {
@@ -223,7 +223,7 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": ["leader", "mad_doctor"],
+            "rules": ["leader", "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Goblin Doctor",
@@ -248,7 +248,7 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": ["leader", {"id": "repair", "x": 2}],
+            "rules": ["leader", {"id": "repair", "x": 2}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Goblin Mechanic",
@@ -288,7 +288,7 @@
                     "reflexes": 4,
                     "wounds": 1,
                     "movement": 5,
-                    "weapons": ["heavy_pistol", "ccw"],
+                    "weapons": ["goblin_rifle", "ccw"],
                     "options": [{"addRule": ["heavy_armor"]}],
                     "min": 10,
                     "max": 20
@@ -316,7 +316,7 @@
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 6, "weapons": ["pistol", "ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 6, "weapons": ["goblin_rifle", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -548,7 +548,7 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": [],
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
@@ -591,7 +591,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
                 {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -685,7 +685,7 @@
                 },
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
-            "rules": [{"id": "impact", "x": 1}],
+            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Boss Biker Leader",
@@ -722,7 +722,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": ["leader", {"id": "impact", "x": 3}, "relentless"],
+            "rules": ["leader", {"id": "impact", "x": 3}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Boss Trike",
@@ -746,7 +746,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["fly", {"id": "impact", "x": 3}],
+            "rules": ["fly", {"id": "impact", "x": 3}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Orc Minicopter",
@@ -1341,6 +1341,7 @@
         "attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
     },
     "weapons": {
+        "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24},
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 3},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": ["anti_air"]},
