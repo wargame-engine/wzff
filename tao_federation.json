@@ -33,6 +33,64 @@
                 }
             ]
         },
+        "bs_comm_coldfusion": {
+            "name": "Coldfusion Battlesuit Commander",
+            "description": "An elite commander in an agile battlesuit.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Battlesuit"],
+            "category": "command",
+            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Coldfusion Battlesuit Commander",
+                    "movement": 12,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "rules": ["leader", "fly", {"id":"wounds", "x":2}],
+                    "weapons": [{"id": "suit_fists", "count": 2}],
+                    "options": [
+                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "bs_comm_armor": {
+            "name": "Armored Battlesuit Commander",
+            "description": "An elite armored commander in an agile battlesuit.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Battlesuit"],
+            "category": "command",
+            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Armored Battlesuit Commander",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "wounds": 3,
+                    "rules": ["leader", "fly", {"id":"wounds", "x": 3}],
+                    "weapons": [{"id": "suit_fists", "count": 2}],
+                    "options": [
+                        {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
+                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "celestial": {
             "name": "Celestial",
             "description": "A high ranking Federation member.",
