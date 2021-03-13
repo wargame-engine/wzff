@@ -11,7 +11,6 @@
             "max": 1,
             "keywords": ["Battlesuit"],
             "category": "command",
-            "rules": ["leader", "fly", {"id":"wounds", "x":2}],
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
@@ -23,6 +22,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "wounds": 3,
+                    "rules": ["leader", "fly", {"id":"wounds", "x":2}],
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
