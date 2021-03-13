@@ -515,7 +515,7 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 3,
-                    "defense": 11,
+                    "defense": 9,
                     "reflexes": 5,
                     "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}, "quad_ion_rifle", {"id": "seeker_missiles", "count": 2}],
@@ -527,9 +527,50 @@
                     "max": 1
                 }
             ]
+        },
+        "light_bomber": {
+            "name": "Light Bomber",
+            "description": "A light bomber aircraft.",
+            "category": "transport",
+            "keywords": ["Vehicle", "Aircraft"],
+            "min": 1,
+            "max": 1,
+            "options": [
+                {"addModel": "attached_interceptor_drone", "modelLimit": 2}                    
+            ],
+            "models": [
+                {
+                    "name": "Light Bomber",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 3,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "wounds": 6,
+                    "rules": ["aircraft", "damage_table_aircraft", "spotting_laser"],
+                    "weapons": ["missile_pod", {"id": "seeker_missiles", "count": 2}, "ion_bombs"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "models": {
+        "attached_interceptor_drone": {
+            "name": "Attached Interceptor Drone",
+            "movement": 8,
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "wounds": 1,
+            "rules": ["fly", "attached"],
+            "weapons": [{"id": "ion_rifle", "count": 2}],
+            "min": 0,
+            "max": 1
+        },
         "attached_gunner_drone": {
             "name": "Attached Gunner Drone",
             "movement": 8,
@@ -725,6 +766,7 @@
         }
     },
     "weapons": {
+        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "damage": 3, "rules": ["bomb", {"id": "blast", "x": 3}]},
         "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "damage": 3, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
         "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
@@ -737,7 +779,7 @@
         },
         "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "damage": 3, "rules": ["fusion", "assault"]},
         "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
-        "missile_pod": {"name": "Missile Pod", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
+        "missile_pod": {"name": "Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["assault"]},
         "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 1},
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2},
         "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
@@ -761,6 +803,13 @@
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
                 {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+            ]
+        },
+        "ion_rifle": {
+            "name": "Ion Rifle",
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
+                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}]}
             ]
         },
         "quad_ion_rifle": {
