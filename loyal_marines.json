@@ -500,7 +500,11 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "ambush", "fly", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [ "fly", {"id": "wounds", "x": 2}],
+            "options": [
+                {"replaceWeapon": "twin_assault_carbine", "withWeapon": "twin_plasma_carbine", "limit": "all"},
+                {"addRule": [{"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Prime Interception Sergeant",
@@ -511,8 +515,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "agility": 6,
-                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "plasma_carbine", "count": 2}, "withWeapon": {"id": "assault_carbine", "count": 2}}],
+                    "weapons": ["twin_assault_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -525,8 +528,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "agility": 6,
-                    "weapons": [{"id": "plasma_carbine", "count": 2}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "plasma_carbine", "count": 2}, "withWeapon": {"id": "assault_carbine", "count": 2}, "limit": "all"}],
+                    "weapons": ["twin_assault_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
                     "max": 5
                 }
@@ -1276,7 +1278,7 @@
         "banner_of_wrath": {"name": "Banner of Wrath", "description": "This model and friendly Infantry units within 3\" gain +1 Strength.", "points": 10},
         "banner_of_focus": {"name": "Banner of Focus", "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.", "points": 10},
         "expert_marksman": {"name": "Expert Marksman", "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.", "points": 10},
-        "grappling_hooks": {"name": "Grappling Hooks", "description": "This unit may ignore vertical movement distances when moving.", "points": ["model.wounds"]},
+        "grappling_hooks": {"name": "Grappling Hooks", "description": "This model may ignore vertical movement distances when moving.", "points": ["model.movement", {"multiply": 0.25}]},
         "prime_combat_shield": {"name": "Prime Combat Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]}
     },
