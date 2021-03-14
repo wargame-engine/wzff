@@ -29,7 +29,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless", {"id": "tough", "x": 1}],
+            "rules": ["leader",  {"id": "tough", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "siege_masters"],
             "models": [
                 {
@@ -53,7 +53,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless", {"id": "tough", "x": 1}],
+            "rules": ["leader",  {"id": "tough", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -84,7 +84,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless", {"id": "psychic", "x": 1}],
+            "rules": ["leader",  {"id": "psychic", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -123,7 +123,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless"],
+            "rules": ["leader"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -154,7 +154,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless"],
+            "rules": ["leader"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -188,7 +188,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless"],
+            "rules": ["leader"],
             "subfactions": ["none", "wolf_marines"],
             "models": [
                 {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
@@ -201,7 +201,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", "fearless", "medical_training"],
+            "rules": ["leader",  "medical_training"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -226,7 +226,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines"],
-            "rules": ["fearless"],
+            "rules": [],
             "models": [
                 {
                     "name": "Marine Sergeant",
@@ -267,7 +267,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": [],
             "options": [
                 {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"},
                 {"replaceWeapon": ["prime_rifle", "heavy_ccw"], "withWeapon": [["prime_pistol", "prime_chainsword"]], "modelLimit": "all"}
@@ -281,7 +281,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 1}, "marine_pistol"],
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -294,7 +294,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 1}, "marine_pistol"],
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "marine_pistol"],
                     "options": [{"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}],
                     "rules": [],
                     "min": 4,
@@ -310,7 +310,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "fear"],
+            "rules": [ "fear"],
             "options": [
                 {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 2}], "withWeapon": ["prime_heavy_carbine"]},
                 {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
@@ -350,7 +350,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "scout"],
+            "rules": [ "scout"],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -388,7 +388,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "prime_combat_shield", {"id": "wounds", "x": 2}],
+            "rules": [ "prime_combat_shield", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Blade Guardian Sergeant",
@@ -424,7 +424,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "rules": [ {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Eradication Sergeant",
@@ -461,7 +461,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless"],
+            "rules": [],
             "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
             "models": [
                 {
@@ -500,7 +500,7 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "ambush", "fly", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [ "ambush", "fly", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Interception Sergeant",
@@ -540,7 +540,7 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", "ambush", "fly", {"id": "wounds", "x": 2}],
+            "rules": [ "ambush", "fly", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Suppression Sergeant",
@@ -576,7 +576,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "rules": [ {"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": "grenade_launcher", "modelLimit": "all"},
                 {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}, "modelLimit": "all"}
@@ -616,7 +616,7 @@
             "keywords": ["Heavy Infantry"],
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "rules": [ {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "min": 3,
@@ -648,7 +648,7 @@
             "category": "strike",
             "keywords": ["Biker"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": ["fearless", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [ {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Rider Sergeant",
@@ -992,7 +992,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "fearless", "ward", {"id": "tough", "x": 1}],
+            "rules": ["leader",  "ward", {"id": "tough", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1024,7 +1024,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "fearless", "ward", {"id": "tough", "x": 1}],
+            "rules": ["leader",  "ward", {"id": "tough", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1064,7 +1064,7 @@
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
             ],
-            "rules": ["fearless"],
+            "rules": [],
             "models": [
                 {
                     "name": "Psychic Sergeant",
@@ -1104,7 +1104,7 @@
             "category": "specialist",
             "subfactions": ["psychic_marines"],
             "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"]}],
-            "rules": ["fearless"],
+            "rules": [],
             "models": [
                 {
                     "name": "Purge Sergeant",
@@ -1149,7 +1149,7 @@
                     "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
-            "rules": ["fearless", {"id": "teleport", "x": 6}],
+            "rules": [ {"id": "teleport", "x": 6}],
             "models": [
                 {
                     "name": "Teleport Sergeant",
@@ -1195,7 +1195,7 @@
                 },
                 {"addRule": [{"id": "resilient", "x": 3, "name": "Paladins"}], "modelLimit": "all"}
             ],
-            "rules": ["fearless", "ambush"],
+            "rules": [ "ambush"],
             "models": [
                 {
                     "name": "Psychic Destroyer Sergeant",
