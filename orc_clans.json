@@ -16,19 +16,7 @@
             "category": "command",
             "rules": ["leader", "damage_table_monster"],
             "models": [
-                {
-                    "name": "Grand Warlord",
-                    "courage": 6,
-                    "shoot": 4,
-                    "fight": 8,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "wounds": 6,
-                    "movement": 4,
-                    "weapons": ["super_carbine", "frags", "super_claw"],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
             ]
         },
         "warlord": {
@@ -37,9 +25,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "options": [
-                {"addModel": "attack_beast"}
-            ],
+            "options": [{"addModel": "attack_beast"}],
             "models": [
                 {
                     "name": "Warlord",
@@ -48,7 +34,6 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 6,
-                    "wounds": 3,
                     "movement": 5,
                     "rules": ["leader", {"id": "wounds", "x": 3}],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -80,7 +65,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {
@@ -100,19 +84,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Goblin Assistant",
-                    "courage": 2,
-                    "shoot": 3,
-                    "fight": 3,
-                    "defense": 3,
-                    "reflexes": 2,
-                    "wounds": 1,
-                    "weapons": ["heavy_ccw"],
-                    "rules": [{"id": "repair", "x": 1}],
-                    "min": 0,
-                    "max": 1
-                }
+                {"name": "Goblin Assistant", "courage": 2, "shoot": 3, "fight": 3, "defense": 3, "reflexes": 2, "weapons": ["heavy_ccw"], "rules": [{"id": "repair", "x": 1}], "min": 0, "max": 1}
             ]
         },
         "warbanner_boss": {
@@ -130,7 +102,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 4,
-                    "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
@@ -159,7 +130,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 3,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
@@ -188,7 +158,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -214,7 +183,7 @@
             "max": 1,
             "category": "command",
             "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
-            "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "wounds": 3, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
+            "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {
             "name": "Goblin Doctor",
@@ -232,7 +201,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "ccw"],
                     "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol"]}],
@@ -257,7 +225,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "ccw"],
                     "options": [
@@ -286,7 +253,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 5,
                     "weapons": ["goblin_rifle", "ccw"],
                     "options": [{"addRule": ["heavy_armor"]}],
@@ -310,13 +276,12 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "wounds": 1, "movement": 6, "weapons": ["goblin_rifle", "ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["goblin_rifle", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -334,7 +299,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "rules": [],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
@@ -355,7 +319,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
@@ -382,7 +345,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 8,
                     "rules": [],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -403,7 +365,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
@@ -430,7 +391,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "rules": [],
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -451,7 +411,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
@@ -478,7 +437,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "rules": [],
                     "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 2}],
@@ -493,7 +451,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"}],
@@ -521,7 +478,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 0,
@@ -534,7 +490,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 5,
                     "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 5,
@@ -564,7 +519,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
@@ -577,7 +531,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 4,
@@ -605,7 +558,6 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
                     "min": 1,
@@ -618,7 +570,6 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 4,
                     "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
                     "min": 2,
@@ -643,7 +594,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -663,7 +613,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 3,
@@ -694,7 +643,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
@@ -707,7 +655,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
                     "min": 2,
@@ -731,7 +678,6 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 6,
                     "movement": 8,
                     "weapons": ["double_shotgun", "frags", {"id": "ultra_claw", "count": 3}],
                     "options": [{"addWeapon": ["twin_carbine", "twin_mini_mg", "twin_double_shotgun"], "limit": 1}],
@@ -755,7 +701,6 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 10,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
@@ -783,7 +728,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -812,7 +756,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front", "Left", "Right"]}],
                     "options": [
@@ -847,7 +790,6 @@
                     "fight": 4,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 9,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -877,7 +819,6 @@
                     "fight": 4,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 9,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun"}],
                     "options": [
@@ -909,7 +850,6 @@
                     "fight": 3,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 10,
                     "weapons": [{"id": "plasma_rifle"}],
                     "options": [{"replaceWeapon": {"id": "plasma_rifle"}, "withWeapon": ["heavy_flamethrower", "rocket_launcher", "heavy_machinegun", "goblin_bazooka"]}],
@@ -934,7 +874,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 6,
                     "movement": 8,
                     "weapons": [{"count": 2, "id": "twin_heavy_machinegun"}, {"count": 3, "id": "heavy_machinegun"}],
                     "options": [
@@ -969,7 +908,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": [{"id": "plasma_rifle"}, "stomp", "mini_claw"],
                     "options": [{"replaceWeapon": {"id": "plasma_rifle"}, "withWeapon": ["heavy_flamethrower", "rocket_launcher", "heavy_machinegun", "goblin_bazooka"]}],
@@ -993,7 +931,6 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "movement": 6,
                     "weapons": [{"id": "plasma_rifle", "count": 2}, {"id": "stomp", "count": 2}, {"id": "walker_claw", "count": 2}],
                     "options": [
@@ -1020,7 +957,6 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 10,
                     "weapons": [{"id": "heavy_flamethrower", "count": 1}],
                     "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1044,7 +980,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "shock_rifle", "count": 1, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 1, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1068,7 +1003,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "beast_cannon", "count": 1, "mount": ["Front"]}, {"id": "beast_launcher", "count": 1}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1092,7 +1026,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "rivet_cannon", "count": 1}, {"id": "frags", "count": 1}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1116,7 +1049,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "combi_gun", "count": 1}, {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}],
                     "min": 1,
@@ -1139,7 +1071,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_rocket_launcher", "count": 1, "mount": ["Front"]}, {"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1163,7 +1094,6 @@
                     "fight": 4,
                     "defense": 7,
                     "reflexes": 4,
-                    "wounds": 3,
                     "movement": 3,
                     "weapons": ["cannon", {"id": "ccw", "count": 3}],
                     "options": [{"replaceWeapon": "cannon", "withWeapon": ["smasher_cannon", "tractor_beam", "lightning_cannon", "plasma_cannon", "heavy_mortar", "bubble_cannon"]}],
@@ -1188,7 +1118,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "smasher_cannon", "count": 1, "mount": ["Front"]}, {"id": "twin_teleport_rifle", "count": 2, "mount": ["Front"]}],
                     "options": [
@@ -1217,7 +1146,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_heavy_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "flame_bombs"}],
                     "options": [{"addWeapon": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "flame_missiles", "mount": ["Front"]}]}],
@@ -1242,7 +1170,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "heavy_bombs"}],
                     "min": 1,
@@ -1266,7 +1193,6 @@
                     "fight": 4,
                     "defense": 9,
                     "reflexes": 4,
-                    "wounds": 6,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun", "count": 2, "mount": ["Front"]}],
                     "options": [{"addWeapon": [{"id": "twin_super_machinegun"}]}],
@@ -1290,7 +1216,6 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 5,
-                    "wounds": 9,
                     "movement": 8,
                     "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, {"id": "mega_claw", "count": 2}, {"id": "heavy_stomp", "count": 4}],
                     "options": [
@@ -1311,7 +1236,7 @@
             "category": "super_heavy",
             "min": 1,
             "max": 1,
-            "keywords":["Super Heavy Vehicle"],
+            "keywords": ["Super Heavy Vehicle"],
             "rules": ["vulnerable_rear", "titanic", "damage_table_titan"],
             "models": [
                 {
@@ -1321,7 +1246,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 12,
                     "movement": 8,
                     "weapons": [{"id": "mega_claw", "count": 4}, {"id": "heavy_stomp", "count": 5}],
                     "options": [
@@ -1338,9 +1262,7 @@
             ]
         }
     },
-    "models": {
-        "attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 1, "weapons": ["beast_bite"], "min": 0, "max": 1}
-    },
+    "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["beast_bite"], "min": 0, "max": 1}},
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24},
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
@@ -1421,11 +1343,7 @@
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2}
     },
     "rules": {
-        "orc_idol": {
-            "name": "Orc Idol",
-            "description": "This model and friendly Infantry units within 6\" gain +1 Courage.",
-            "points": 10
-        },
+        "orc_idol": {"name": "Orc Idol", "description": "This model and friendly Infantry units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {
             "name": "Heavy Armor",
             "hidden": "true",
@@ -1440,23 +1358,9 @@
             "description_short": "+2 Save, -1\" Movement",
             "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": "model.wounds"}, {"multiply": 2}]}]
         },
-        "precision_monicle": {
-            "name": "Precision Monicle",
-            "hidden": "true",
-            "description": "This model gets +1 Shoot.",
-            "description_short": "+1 Shoot",
-            "points": 5
-        },
-        "energy_field": {
-            "name": "Energy Field",
-            "description": "This model and friendly Infantry units within 3\" get +1 Defense.",
-            "points": ["constants.defenseCost", {"multiply": 10}]
-        },
-        "war!": {
-            "name": "WAR!",
-            "description": "This model and friendly Infantry units within 3\" get +2\" of Movement.",
-            "points": ["constants.movementCost", {"multiply": 10}]
-        },
+        "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Shoot", "points": 5},
+        "energy_field": {"name": "Energy Field", "description": "This model and friendly Infantry units within 3\" get +1 Defense.", "points": ["constants.defenseCost", {"multiply": 10}]},
+        "war!": {"name": "WAR!", "description": "This model and friendly Infantry units within 3\" get +2\" of Movement.", "points": ["constants.movementCost", {"multiply": 10}]},
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
@@ -1481,13 +1385,7 @@
             "description": "This model gains +3 impact.",
             "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
         },
-        "extra_space": {
-            "name": "Extra Space",
-            "description_short": "Transport +10",
-            "hidden": true,
-            "description": "This model gains +10 impact.",
-            "points": 10
-        },
+        "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 impact.", "points": 10},
         "extra_armor": {
             "name": "Extra Armor",
             "description_short": "Save +1",
@@ -1495,11 +1393,7 @@
             "description": "This model gains +1 Save.",
             "points": ["model.wounds", {"multiply": "constants.defenseCost"}]
         },
-        "war_banner": {
-            "name": "War Banner",
-            "description": "This model and friendly Infantry units within 3\" gain +1 Strength.",
-            "points": 20
-        }
+        "war_banner": {"name": "War Banner", "description": "This model and friendly Infantry units within 3\" gain +1 Strength.", "points": 20}
     },
     "powers": {
         "warpath": {"name": "Warpath", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 generate an additional attack.", "charge": 8},

@@ -21,7 +21,6 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
@@ -53,7 +52,6 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["deadly_arts"],
                     "options": [{"addRule": ["graceful_brutality", "ambush"]}],
                     "rules": [],
@@ -79,7 +77,6 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
@@ -109,7 +106,6 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["sniper_cannon", {"id": "jester_blade", "count": 4}],
                     "rules": [],
                     "min": 1,
@@ -134,7 +130,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
@@ -165,7 +160,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
                     "rules": [],
                     "min": 5,
@@ -190,12 +184,8 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["shard_cannon", "energy_glaive"],
-                    "options": [
-                        {"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]},
-                        {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}
-                    ],
+                    "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
                     "min": 2,
                     "max": 6
                 }
@@ -209,21 +199,7 @@
             "category": "transport",
             "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
-            "models": [
-                {
-                    "name": "Hover Tank",
-                    "courage": 6,
-                    "movement": 10,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 5,
-                    "wounds": 6,
-                    "weapons": [{"id": "shard_cannon", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
         },
         "hover_tank": {
             "name": "Hover Tank",
@@ -242,7 +218,6 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
                     "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
                     "min": 1,
@@ -253,28 +228,31 @@
     },
     "weapons": {
         "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
-        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"], "ap":1},
-        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap":2, "damage":2},
+        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"], "ap": 1},
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2, "damage": 2},
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
-        "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap":3},
+        "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap": 3},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
         "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 6, "short": "Melee", "damage": 3},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
-        "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap":2},
-        "sniper_cannon": {"name": "Sniper Cannon", "profiles":[
-                {"name": "Sniper Mode","attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3, "damage": 2},
+        "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap": 2},
+        "sniper_cannon": {
+            "name": "Sniper Cannon",
+            "profiles": [
+                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3, "damage": 2},
                 {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
-        ]},
-        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap":4, "rules": [{"id": "blast", "x": 2}]},
-        "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "ap":2},
+            ]
+        },
+        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "ap": 2},
         "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault", {"id": "blast", "x": 3}]},
-        "irridescent_cannon":{
+        "irridescent_cannon": {
             "name": "Irridescent Cannon",
-            "profiles":[
+            "profiles": [
                 {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", {"id": "blast", "x": 3}]},
                 {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
-                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap":2, "rules": ["assault"]}
+                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]}
             ]
         },
         "plasma_grenade": {"name": "Plasma Grenade", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
@@ -282,16 +260,8 @@
         "power_storm": {"medium": 12, "ap": 1, "attacks": 8}
     },
     "rules": {
-        "graceful_brutality": {
-            "name": "Graceful Brutality",
-            "description": "This model and friendly Infantry units within 3\" may move up to 3\" after shooting.",
-            "points": 5
-        },
-        "blur_field": {
-            "name": "Blur Field",
-            "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.",
-            "points": 2
-        }
+        "graceful_brutality": {"name": "Graceful Brutality", "description": "This model and friendly Infantry units within 3\" may move up to 3\" after shooting.", "points": 5},
+        "blur_field": {"name": "Blur Field", "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.", "points": 2}
     },
     "strategies": {
         "irridescent_blur": {
@@ -339,10 +309,10 @@
     },
     "relics": [],
     "powers": {
-        "deadly": { "name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "charge": 7 },
-        "fortify": { "name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "charge": 8 },
-        "void": { "name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6 },
-        "storm": { "name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "charge": 6 },
-        "death": { "name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7. Add 1 to damage rolls on Damage Table(X) units.", "charge": 6 }
+        "deadly": {"name": "Deadly Precision", "description": "Target friendly unit within 18\" gets +2 Strength the next time it fights in melee.", "charge": 7},
+        "fortify": {"name": "Time Warp", "description": "Target friendly unit within 12\" may immediately move up to 6\".", "charge": 8},
+        "void": {"name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
+        "storm": {"name": "Psychic Storm", "description": "Target 2 enemy units within 12\" take 4 hits each with AP 1.", "charge": 6},
+        "death": {"name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7. Add 1 to damage rolls on Damage Table(X) units.", "charge": 6}
     }
 }

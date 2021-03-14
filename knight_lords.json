@@ -21,7 +21,6 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}],
                     "options": [
                         {"replaceWeapon": [{"id": "heavy_autocannon", "count": 2}], "withWeapon": [["fusion_blaster", "mini_titan_sword"]]},
@@ -51,7 +50,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 12,
                     "weapons": ["titan_fist", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -81,7 +79,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 12,
                     "weapons": ["gatling_cannon", "heavy_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -111,7 +108,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 12,
                     "weapons": ["pulse_laser", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -143,7 +139,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 12,
                     "weapons": ["fusion_cannon", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -173,7 +168,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 14,
                     "weapons": ["plasma_battle_cannon", "light_machinegun", "volcano_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -205,7 +199,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 12,
                     "weapons": ["rapidfire_battle_cannon", "light_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -235,7 +228,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 14,
                     "weapons": ["harpoon_cannon", "triple_flamethrower_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
@@ -267,7 +259,6 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "wounds": 12,
                     "weapons": ["gatling_cannon", "rapidfire_battle_cannon", {"id": "light_machinegun", "count": 2}, {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},

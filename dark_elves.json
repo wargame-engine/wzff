@@ -8,44 +8,14 @@
             "description": "A group of Dark Elven warriors with poisonous weaponry.",
             "min": 1,
             "max": 1,
-            "keywords": [
-                "Infantry"
-            ],
+            "keywords": ["Infantry"],
             "models": [
-                {
-                    "name": "Warrior Leader",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["barb_rifle", { "id": "ccw", "count": 1 }],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Warriors",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["barb_rifle", { "id": "ccw", "count": 1 }],
-                    "min": 4,
-                    "max": 19
-                }
+                {"name": "Warrior Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["barb_rifle", {"id": "ccw", "count": 1}], "min": 1, "max": 1},
+                {"name": "Warriors", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["barb_rifle", {"id": "ccw", "count": 1}], "min": 4, "max": 19}
             ]
         }
     },
-    "weapons": {
-        "barb_rifle": {"name": "Barb Rifles", "attacks": 1, "short": 12, "medium": 24, "rules": [{ "id": "poison", "x": 2 }]}
-    },
-    "rules": {
-        "tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}
-    },
+    "weapons": {"barb_rifle": {"name": "Barb Rifles", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "poison", "x": 2}]}},
+    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}},
     "relics": []
 }

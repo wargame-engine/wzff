@@ -59,19 +59,7 @@
             "category": "command",
             "rules": ["hive_mind", "leader", "outflank", {"id": "wounds", "x": 3}],
             "models": [
-                {
-                    "name": "Snatcher Lord",
-                    "courage": 8,
-                    "shoot": 0,
-                    "fight": 8,
-                    "defense": 8,
-                    "reflexes": 8,
-                    "wounds": 6,
-                    "movement": 8,
-                    "weapons": [{"id": "large_piercing_claws", "count": 6}],
-                    "min": 1,
-                    "max": 1
-                }
+                {"name": "Snatcher Lord", "courage": 8, "shoot": 0, "fight": 8, "defense": 8, "reflexes": 8, "movement": 8, "weapons": [{"id": "large_piercing_claws", "count": 6}], "min": 1, "max": 1}
             ]
         },
         "soul_snatchers": {
@@ -89,7 +77,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 8,
                     "weapons": [{"id": "piercing_claws", "count": 2}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
@@ -113,7 +100,6 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 4}],
                     "options": [
@@ -142,7 +128,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "rules": ["hive_mind"],
@@ -164,7 +149,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
                     "options": [
@@ -194,7 +178,6 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
-                    "wounds": 1,
                     "movement": 8,
                     "weapons": ["meat_borer", "ccw"],
                     "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}],
@@ -211,19 +194,7 @@
             "category": "core",
             "rules": ["agile"],
             "models": [
-                {
-                    "name": "Assault Grunt",
-                    "courage": 4,
-                    "shoot": 0,
-                    "fight": 6,
-                    "defense": 4,
-                    "reflexes": 4,
-                    "wounds": 1,
-                    "movement": 8,
-                    "weapons": [{"id": "razor_talons", "count": 2}],
-                    "min": 10,
-                    "max": 30
-                }
+                {"name": "Assault Grunt", "courage": 4, "shoot": 0, "fight": 6, "defense": 4, "reflexes": 4, "movement": 8, "weapons": [{"id": "razor_talons", "count": 2}], "min": 10, "max": 30}
             ]
         },
         "hive_swarm": {

@@ -21,7 +21,6 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["annihiliation_gun", "metal_claws", "reaper_glaive"],
                     "rules": [],
                     "min": 1,
@@ -46,7 +45,6 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": [{"id": "phase_sword", "count": 3}],
                     "options": [
                         {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
@@ -75,7 +73,6 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": [{"id": "phase_sword", "count": 3}],
                     "options": [
                         {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
@@ -104,7 +101,6 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": [{"id": "phase_sword", "count": 3}],
                     "options": [
                         {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
@@ -133,25 +129,12 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": ["staff"],
                     "options": [{"addWeapon": "tesla_field"}, {"addRule": ["phase_field", "flight_cloak", "dark_prism"]}],
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Techno-thralls",
-                    "courage": 5,
-                    "movement": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 6,
-                    "wounds": 1,
-                    "weapons": ["techno_scythes", "techno_beam"],
-                    "min": 0,
-                    "max": 2
-                }
+                {"name": "Techno-thralls", "courage": 5, "movement": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["techno_scythes", "techno_beam"], "min": 0, "max": 2}
             ]
         },
         "machine_swarm": {
@@ -162,7 +145,7 @@
             "category": "core",
             "rules": ["hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
             "keywords": ["Swarm"],
-            "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "wounds": 3, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
+            "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
         "warden": {
             "name": "Warden",
@@ -172,9 +155,7 @@
             "category": "specialist",
             "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
-            "models": [
-                {"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "wounds": 3, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}
-            ]
+            "models": [{"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}]
         },
         "dimensional_shard": {
             "name": "Dimensional Shard",
@@ -193,7 +174,6 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": ["dimensional_strikes"],
                     "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}],
                     "rules": [],
@@ -219,7 +199,6 @@
                     "fight": 5,
                     "defense": 7,
                     "reflexes": 4,
-                    "wounds": 1,
                     "weapons": ["gauss_rifle", "heavy_ccw"],
                     "options": [{"replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}],
                     "rules": [],
@@ -237,7 +216,7 @@
             "rules": [{"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
-            "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "wounds": 1, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
+            "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
         },
         "guardians": {
             "name": "Guardians",
@@ -252,7 +231,7 @@
                 {"addRule": "void_shield", "modelLimit": "all"},
                 {"addRule": "anti_gravity_generators", "modelLimit": "all"}
             ],
-            "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 2, "weapons": ["rod"], "min": 5, "max": 10}]
+            "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["rod"], "min": 5, "max": 10}]
         },
         "flayers": {
             "name": "Flayers",
@@ -263,7 +242,7 @@
             "rules": [{"id": "resilient", "x": 3}, "fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "wounds": 1, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
+            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
         },
         "hunters": {
             "name": "Hunters",
@@ -273,7 +252,7 @@
             "category": "specialist",
             "rules": ["ambush", {"id": "resilient", "x": 3}],
             "keywords": ["Infantry"],
-            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 1, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
+            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
         },
         "gyro_bikes": {
             "name": "Gyro-Bikes",
@@ -289,19 +268,7 @@
                 {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}
             ],
             "models": [
-                {
-                    "name": "Biker",
-                    "courage": 6,
-                    "movement": 8,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 5,
-                    "wounds": 2,
-                    "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}],
-                    "min": 3,
-                    "max": 9
-                }
+                {"name": "Biker", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}], "min": 3, "max": 9}
             ]
         },
         "shifters": {
@@ -317,7 +284,7 @@
                 {"addWeapon": ["whip_coil"]},
                 {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
             ],
-            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "wounds": 3, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
+            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
         },
         "tri_scorpion_annihilators": {
             "name": "Tri-Scorpion Annihilators",
@@ -337,7 +304,6 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "reaper_sword", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -350,12 +316,11 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "reaper_glaive", "count": 3}],
                     "min": 2,
                     "max": 2
                 },
-                {"name": "Plasma-cell", "courage": 5, "movement": 5, "shoot": 5, "fight": 5, "defense": 8, "reflexes": 5, "wounds": 1, "weapons": ["plasma_spike"], "min": 0, "max": 1}
+                {"name": "Plasma-cell", "courage": 5, "movement": 5, "shoot": 5, "fight": 5, "defense": 8, "reflexes": 5, "weapons": ["plasma_spike"], "min": 0, "max": 1}
             ]
         },
         "annihilators": {
@@ -367,7 +332,7 @@
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
             "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
-            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
+            "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
         },
         "heavy_annihilators": {
             "name": "Heavy Annihilators",
@@ -381,9 +346,7 @@
                 {"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]},
                 {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
             ],
-            "models": [
-                {"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "wounds": 3, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}
-            ]
+            "models": [{"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}]
         },
         "transport_arc": {
             "name": "Transport Arc",
@@ -402,7 +365,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
                     "options": [{"addRule": ["extra_space", "regeneration_pods", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
@@ -427,7 +389,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
                     "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
@@ -452,7 +413,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
                     "options": [{"addRule": ["extra_space", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
@@ -477,7 +437,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}, {"addWeapon": {"id": "heavy_doom_ray", "mount": ["Front"]}}],
                     "min": 1,
@@ -502,7 +461,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heat_ray", "mount": ["Front"]}, {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {
@@ -533,7 +491,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "metal_fangs"}, {"id": "stomp", "count": 2}],
                     "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "dark_prism", "swarm_fabricator"]}],
                     "min": 1,
@@ -558,7 +515,6 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": [{"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
@@ -583,7 +539,6 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 4,
-                    "wounds": 9,
                     "weapons": [
                         {"id": "heavy_antimatter_cannon"},
                         {"id": "doom_ray", "mount": ["Left", "Front"]},
@@ -632,7 +587,6 @@
             "fight": 5,
             "defense": 4,
             "reflexes": 4,
-            "wounds": 3,
             "weapons": ["feeding_teeth"],
             "min": 3,
             "max": 6,

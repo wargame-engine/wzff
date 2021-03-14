@@ -20,7 +20,6 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 4,
                     "weapons": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol", "at_grenade"],
                     "options": [
                         {
@@ -68,7 +67,6 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 3,
                     "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
@@ -104,7 +102,6 @@
                     "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
-                    "wounds": 3,
                     "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
@@ -128,7 +125,6 @@
                     "fight": 7,
                     "defense": 13,
                     "reflexes": 7,
-                    "wounds": 9,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
                     "options": [{"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
                     "rules": [],

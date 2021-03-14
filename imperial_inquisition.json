@@ -19,7 +19,6 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": [{"id": "heavy_pistol"}, "at_grenade", {"id": "chainsword", "count": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": ["energy_hammer"]},
@@ -47,7 +46,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
                     "options": [
@@ -78,7 +76,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
@@ -96,7 +93,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
@@ -125,7 +121,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 4,
-                    "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
@@ -154,7 +149,6 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 4,
-                    "wounds": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
                     "rules": [],
@@ -164,9 +158,7 @@
             ]
         }
     },
-    "weapons": {
-        "guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}
-    },
+    "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}},
     "powers": {
         "fortify": {"name": "Fortify", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
         "terror": {"name": "Terror", "description": "Target enemy model within 12\" gets -1 Courage until the end of the round.", "charge": 8},
@@ -175,7 +167,6 @@
         "pursuit": {"name": "Pursuit", "description": "Target friendly unit within 12\" may target Character units even if they are protected by enemy units.", "charge": 6},
         "retribution": {"name": "Retribution", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6}
     },
-    "rules": {
-    },
+    "rules": {},
     "relics": []
 }

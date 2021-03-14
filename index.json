@@ -3,19 +3,41 @@
     "id": "grim_darkness",
     "factions": {
         "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm", "version": "0.1"},
-        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1.1"},        
+        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1.1"},
         "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horrors.json", "color": "#90305d", "alliance": "traitors", "version": "0.1"},
         "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.2"},
         "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab", "alliance": "elven_coaliation", "version": "0.1"},
         "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080", "version": "0.1"},
         "knight_lords": {"name": "Knight Lords", "id": "knight_lords", "url": "knight_lords.json", "color": "#396e9e", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
-        "battle_sisters": {"name": "Battle Sisters", "id": "battle_sisters", "url": "battle_sisters.json", "color": "#010203", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
+        "battle_sisters": {
+            "name": "Battle Sisters",
+            "id": "battle_sisters",
+            "url": "battle_sisters.json",
+            "color": "#010203",
+            "secondary_color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "version": "0.1"
+        },
         "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
-        "imperial_defense_force": {"name": "Imperial Defence Force", "id": "imperial_defense_force", "url": "imperial_defense_force.json", "color": "#314821", "alliance": "imperial_alliance", "version": "0.1"},
+        "imperial_defense_force": {
+            "name": "Imperial Defence Force",
+            "id": "imperial_defense_force",
+            "url": "imperial_defense_force.json",
+            "color": "#314821",
+            "alliance": "imperial_alliance",
+            "version": "0.1"
+        },
         "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance", "version": "0.1.3"},
         "throne_guardians": {"name": "Throne Guardians", "id": "throne_guardians", "url": "throne_guardians.json", "color": "#D4AF37", "alliance": "imperial_alliance", "version": "0.1"},
         "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A", "version": "0.1"},
-        "imperial_inquisition": {"name": "Imperial Inquisition", "id": "imperial_inquisition", "url": "imperial_inquisition.json", "color": "#d4af37", "alliance": "imperial_alliance", "version": "0.1"}
+        "imperial_inquisition": {
+            "name": "Imperial Inquisition",
+            "id": "imperial_inquisition",
+            "url": "imperial_inquisition.json",
+            "color": "#d4af37",
+            "alliance": "imperial_alliance",
+            "version": "0.1"
+        }
     },
     "unfinished_factions": {
         "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
@@ -37,170 +59,40 @@
             "name": "Battle (Core)",
             "cost": 2,
             "description": "A well-rounded force for taking on any mission.",
-            "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "core": {
-                    "min": 2,
-                    "max": 4
-                },
-                "specialist": {
-                    "max": 2
-                },
-                "strike": {
-                    "max": 2
-                },
-                "heavy": {
-                    "max": 2
-                },
-                "transport": {
-                    "max": 5
-                }
-            }
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
         },
         "strike": {
             "name": "Strike (Core)",
             "cost": 2,
             "description": "A strike force for outflanking or shock assaulting.",
-            "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "core": {
-                    "max": 3
-                },
-                "specialist": {
-                    "max": 2
-                },
-                "strike": {
-                    "min": 2,
-                    "max": 4
-                },
-                "heavy": {
-                    "max": 2
-                },
-                "transport": {
-                    "max": 5
-                }
-            }
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 3}, "specialist": {"max": 2}, "strike": {"min": 2, "max": 4}, "heavy": {"max": 2}, "transport": {"max": 5}}
         },
         "specialist": {
             "name": "Specialist (Core)",
             "cost": 2,
             "description": "An elite force to deal with specific targets.",
-            "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "core": {
-                    "max": 3
-                },
-                "specialist": {
-                    "min": 2,
-                    "max": 4
-                },
-                "strike": {
-                    "max": 2
-                },
-                "heavy": {
-                    "max": 2
-                },
-                "transport": {
-                    "max": 5
-                }
-            }
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 3}, "specialist": {"min": 2, "max": 4}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
         },
         "heavy": {
             "name": "Heavy (Core)",
             "cost": 3,
             "description": "A heavy force to pack a punch on the field.",
-            "categories": {
-                "command": {
-                    "min": 1,
-                    "max": 2
-                },
-                "core": {
-                    "max": 2
-                },
-                "specialist": {
-                    "max": 2
-                },
-                "strike": {
-                    "max": 2
-                },
-                "heavy": {
-                    "min": 2,
-                    "max": 4
-                },
-                "transport": {
-                    "max": 4
-                }
-            }
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 2}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"min": 2, "max": 4}, "transport": {"max": 4}}
         },
         "support": {
             "name": "Support (Core)",
             "cost": 1,
             "description": "A small supporting force.",
-            "categories": {
-                "command": {
-                    "max": 1
-                },
-                "core": {
-                    "max": 2
-                },
-                "specialist": {
-                    "max": 1
-                },
-                "strike": {
-                    "max": 1
-                },
-                "heavy": {
-                    "max": 1
-                },
-                "transport": {
-                    "max": 2
-                }
-            }
+            "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 1}, "strike": {"max": 1}, "heavy": {"max": 1}, "transport": {"max": 2}}
         },
-        "super_heavy_support": {
-            "name": "Super Heavy Support (Core)",
-            "cost": 2,
-            "description": "A supporting super-heavy unit.",
-            "categories": {
-                "super_heavy": {
-                    "min": 1,
-                    "max": 1
-                }
-            }
-        },
-        "super_heavy": {
-            "name": "Super Heavy (Core)",
-            "cost": 4,
-            "description": "A group of super-heavy units.",
-            "categories": {
-                "super_heavy": {
-                    "min": 2,
-                    "max": 4
-                }
-            }
-        }
+        "super_heavy_support": {"name": "Super Heavy Support (Core)", "cost": 2, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
+        "super_heavy": {"name": "Super Heavy (Core)", "cost": 4, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
     "relics": [
         {"rule": "legend_wounds", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."},
         {"rule": "legend_courage", "flavor": "This model inspires the best in those who serve them."}
     ],
-    "powers": {
-        "blast": {
-            "name": "Shock Wave",
-            "description": "Target enemy unit within 24\" takes 3 hits with AP 3.",
-            "flavor": "This enemy is hit by a single blast of shock.",
-            "charge": 6
-        }
-    },
+    "powers": {"blast": {"name": "Shock Wave", "description": "Target enemy unit within 24\" takes 3 hits with AP 3.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 6}},
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
@@ -222,15 +114,15 @@
         "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "damage": 2, "rules": [{"id": "blast", "x": 2}]},
         "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
         "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
-        "chainsword": {"name": "Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
-        "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 2, "ap": 4, "short": "Melee"},
+        "chainsword": {"name": "Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
+        "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 1, "ap": 3, "short": "Melee"},
         "pistol": {"name": "Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
         "marine_pistol": {"name": "Marine Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 12, "medium": 24, "long": 30, "ap": 1, "rules": ["assault"]},
         "storm_rifle": {"name": "Storm Rifle", "attacks": 2, "short": 12, "ap": 1, "medium": 24},
         "twin_storm_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24},
-        "energy_sword": {"name": "Energy Sword", "attacks": 2, "short": "Melee", "ap": 2},
+        "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
         "minigun": {"name": "Minigun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
@@ -459,31 +351,16 @@
             "points": 15
         },
         "ward": {"name": "Ward", "description": "This model may deny psychic powers as if it had Psychic.", "points": 8},
-        "legend_wounds": {
-            "name": "Resilient",
-            "description": "This model gains Wounds(+1).",
-            "points": 5
-        },
-        "legend_courage": {
-            "name": "Inspired",
-            "description": "This model gains +1 Courage.",
-            "points": 5
-        },
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 5},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 5},
         "gravity": {"name": "Gravity", "description": "Add 2 to Damage Table(x) rolls against targets with Save 7 or higher.", "points": ["weapon.attacks", {"multiply": 2}]},
-        "homing": {
-            "name": "Homing",
-            "description": "This weapon hits at Accuracy +1.",
-            "points": ["weapon.attacks"]
-        },
+        "homing": {"name": "Homing", "description": "This weapon hits at Accuracy +1.", "points": ["weapon.attacks"]},
         "grenade": {"name": "Grenade", "description": "One model in this unit may use this weapon instead of any other weapons."},
-        "titanic": {"name": "Titanic", "description": "When this unit is activated it may only perform one action and benefit from abilties which trigger when the unit is activated once. It may then be activated a second time to perform its second action."},
-        "spiked_ram": {
-            "name": "Spiked Ram",
-            "hidden": true,
-            "description": "This model gains Impact(+3).",
-            "description_short": "Impact +3",
-            "points": 6
+        "titanic": {
+            "name": "Titanic",
+            "description": "When this unit is activated it may only perform one action and benefit from abilties which trigger when the unit is activated once. It may then be activated a second time to perform its second action."
         },
+        "spiked_ram": {"name": "Spiked Ram", "hidden": true, "description": "This model gains Impact(+3).", "description_short": "Impact +3", "points": 6},
         "heavy_impact": {
             "name": "Heavy Impact",
             "inputs": ["x"],
@@ -541,11 +418,7 @@
             "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
             "points": 10
         },
-        "fusion": {
-            "name": "Fusion",
-            "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.",
-            "effects": ["weapon.attacks", {"multiply": 2}]
-        },
+        "fusion": {"name": "Fusion", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "effects": ["weapon.attacks", {"multiply": 2}]},
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "psychic": {
             "name": "Psychic",

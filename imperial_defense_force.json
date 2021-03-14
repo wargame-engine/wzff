@@ -23,7 +23,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
@@ -49,7 +48,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
                     "options": [
@@ -79,7 +77,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
@@ -105,7 +102,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
@@ -131,7 +127,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "movement": 6,
                     "weapons": ["pistol", "frags", "staff"],
                     "options": [
@@ -160,11 +155,8 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
-                    ],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}],
                     "min": 1,
                     "max": 1
                 },
@@ -176,11 +168,8 @@
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [
-                        {"addRule": "field_radio", "modelLimit": 1}
-                    ],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
                     "min": 9,
                     "max": 29
                 },
@@ -192,16 +181,18 @@
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "rules": [{"id": "crew", "x": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
-                            {"id": "missile_launcher", "mount": ["Front"]},
-                            {"id": "autocannon", "mount": ["Front"]},
-                            {"id": "laser_cannon", "mount": ["Front"]},
-                            {"id": "mortar", "mount": ["Front"]}
-                        ]}
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
                     ],
                     "min": 0,
                     "max": 1
@@ -223,7 +214,6 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}], "marine_rifle"]},
@@ -241,7 +231,6 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
@@ -259,16 +248,18 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "rules": [{"id": "crew", "x": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
-                            {"id": "missile_launcher", "mount": ["Front"]},
-                            {"id": "autocannon", "mount": ["Front"]},
-                            {"id": "laser_cannon", "mount": ["Front"]},
-                            {"id": "mortar", "mount": ["Front"]}
-                        ]}
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
                     ],
                     "min": 0,
                     "max": 1
@@ -290,7 +281,6 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}], "marine_rifle", "shotgun"]},
@@ -309,7 +299,6 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
@@ -328,16 +317,18 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "rules": [{"id": "crew", "x": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
-                            {"id": "missile_launcher", "mount": ["Front"]},
-                            {"id": "autocannon", "mount": ["Front"]},
-                            {"id": "laser_cannon", "mount": ["Front"]},
-                            {"id": "mortar", "mount": ["Front"]}
-                        ]},
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        },
                         {"addRule": ["heavy_armor"]}
                     ],
                     "min": 0,
@@ -360,7 +351,6 @@
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["field_radio"], "modelLimit": 1},
@@ -392,15 +382,17 @@
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": [
-                            {"id": "missile_launcher", "mount": ["Front"]},
-                            {"id": "autocannon", "mount": ["Front"]},
-                            {"id": "laser_cannon", "mount": ["Front"]},
-                            {"id": "mortar", "mount": ["Front"]}
-                        ]}
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
                     ],
                     "min": 3,
                     "max": 6
@@ -422,7 +414,6 @@
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
-                    "wounds": 1,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
@@ -440,25 +431,8 @@
             "category": "specialist",
             "min": 3,
             "max": 3,
-            "rules": [
-                "stealth",
-                "scout"
-            ],
-            "models": [
-                {
-                    "name": "Trooper",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["sniper_rifle", "frags", "ccw"],
-                    "min": 3,
-                    "max": 3
-                }
-            ]
+            "rules": ["stealth", "scout"],
+            "models": [{"name": "Trooper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
         "stormtroopers": {
             "name": "Stormtroopers",
@@ -476,7 +450,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
@@ -494,7 +467,6 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
@@ -512,13 +484,8 @@
             "category": "strike",
             "min": 5,
             "max": 10,
-            "rules": [
-                {"id": "impact", "x": 1},
-                {"id": "wounds", "x": 2}
-            ],
-            "options": [
-                {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}
-            ],
+            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "options": [{"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["rider_lance"]}],
             "models": [
                 {
                     "name": "Rider Sergeant",
@@ -528,7 +495,6 @@
                     "defense": 5,
                     "movement": 8,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_axe", "energy_mace", "energy_fist"]},
@@ -545,7 +511,6 @@
                     "movement": 8,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
@@ -577,7 +542,6 @@
                     "defense": 7,
                     "movement": 6,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
@@ -590,7 +554,6 @@
                     "movement": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 2,
                     "max": 8
@@ -614,10 +577,12 @@
                     "defense": 12,
                     "movement": 10,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
-                        {"replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"}, "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]},
+                        {
+                            "replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"},
+                            "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]
+                        },
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
@@ -656,7 +621,6 @@
                     "defense": 12,
                     "movement": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
@@ -697,7 +661,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
@@ -729,7 +692,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
@@ -758,7 +720,6 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["light_battle_cannon"],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
@@ -788,14 +749,16 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "acid_cannon"],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"replaceWeapon": "acid_cannon", "withWeapon": ["fusion_cannon", "flamestorm_cannon"]},
-                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Front"]}]}
+                        {
+                            "replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Front"]}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -819,7 +782,6 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
@@ -849,7 +811,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addRule": [{"id": "stealth", "name": "Camouflage Netting"}, "heavy_armor", "scout"]},
@@ -878,7 +839,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
@@ -907,11 +867,17 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": [{"id": "laser_cannon", "mount": ["Front"]}, {"id": "heavy_machinegun", "mount": ["Front"]}]},
-                        {"replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]}, "withWeapon": [{"id": "rocket_pod", "count": 2, "mount": ["Front"]}, {"id": "twin_laser_cannon", "count": 2, "mount": ["Front"]}, {"id": "gatling_gun", "count": 2, "mount": ["Front"]}]},
+                        {
+                            "replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "rocket_pod", "count": 2, "mount": ["Front"]},
+                                {"id": "twin_laser_cannon", "count": 2, "mount": ["Front"]},
+                                {"id": "gatling_gun", "count": 2, "mount": ["Front"]}
+                            ]
+                        },
                         {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
                     ],
                     "min": 1,
@@ -936,7 +902,6 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "wounds": 12,
                     "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
@@ -993,31 +958,14 @@
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
-        "ogre_shield": {
-            "name": "Ogre Shield",
-            "description_short": "+1 Save",
-            "description": "This model gets +1 Save.",
-            "points": 2
-        },
+        "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
         "no_retreat": {
             "name": "No Retreat",
             "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
             "points": 5
         },
-        "extra_armor": {
-            "name": "Extra Armor",
-            "hidden": true,
-            "description": "This model gets +1 Save.",
-            "description_short": "Save +1",
-            "points": 10
-        },
-        "heavy_armor": {
-            "name": "Heavy Armor",
-            "hidden": true,
-            "description": "This model gets +1 Save.",
-            "description_short": "Save +1",
-            "points": 2
-        },
+        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
             "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
@@ -1033,20 +981,10 @@
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
             "points": 10
         },
-        "banner": {
-            "name": "Inspiring Banner",
-            "description": "Friendly Infantry units within 6\" get +1 Courage.",
-            "points": 20
-        },
-        "power_fortify": {
-            "effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]
-        },
-        "power_barrier": {
-            "effects": [{"type": "alterStat", "statName": "defense", "value": 1, "target": "friendly", "range": 12}]
-        },
-        "power_shroud": {
-            "effects": [{"type": "grantRule", "rule": "stealth", "frequency": 20, "target": "friendly", "range": 12}]
-        }
+        "banner": {"name": "Inspiring Banner", "description": "Friendly Infantry units within 6\" get +1 Courage.", "points": 20},
+        "power_fortify": {"effects": [{"type": "alterStat", "statName": "courage", "value": 1, "target": "friendly", "range": 12}]},
+        "power_barrier": {"effects": [{"type": "alterStat", "statName": "defense", "value": 1, "target": "friendly", "range": 12}]},
+        "power_shroud": {"effects": [{"type": "grantRule", "rule": "stealth", "frequency": 20, "target": "friendly", "range": 12}]}
     },
     "powers": {
         "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Save the next time it is attacked.", "effects": [{"rule": "power_barrier"}]},
@@ -1056,12 +994,7 @@
         "bolt": {"name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}]}
     },
     "strategies": {
-        "more_grenades": {
-            "name": "More Grenades",
-            "phase": "activation",
-            "description": "Use when shooting with an Infantry unit. Two additional models may use Grenade weapons.",
-            "cost": 1
-        },
+        "more_grenades": {"name": "More Grenades", "phase": "activation", "description": "Use when shooting with an Infantry unit. Two additional models may use Grenade weapons.", "cost": 1},
         "regroup": {
             "name": "Regroup",
             "phase": "activation",
@@ -1080,11 +1013,6 @@
             "description": "Use when activating a Vehicle unit. Roll a D10. On a 5 or less the unit may repair one critical effect.",
             "cost": 2
         },
-        "final_stand": {
-            "name": "Final Stand",
-            "phase": "activation",
-            "description": "Use when a unit with a Field Radio is destroyed. All units within 3\" receive 3 hits with AP 2.",
-            "cost": 3
-        }
+        "final_stand": {"name": "Final Stand", "phase": "activation", "description": "Use when a unit with a Field Radio is destroyed. All units within 3\" receive 3 hits with AP 2.", "cost": 3}
     }
 }

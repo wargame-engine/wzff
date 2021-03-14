@@ -21,8 +21,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "wounds": 3,
-                    "rules": ["leader", "fly", {"id":"wounds", "x":2}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 2}],
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -50,8 +49,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "wounds": 3,
-                    "rules": ["leader", "fly", {"id":"wounds", "x":2}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 2}],
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -79,8 +77,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "wounds": 3,
-                    "rules": ["leader", "fly", {"id":"wounds", "x": 3}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 3}],
                     "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -106,13 +103,9 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 1,
                     "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
                     "weapons": ["energy_sword"],
-                    "options": [
-                        {"addRule": "hover_drone"},
-                        {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}
-                    ],
+                    "options": [{"addRule": "hover_drone"}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -139,7 +132,6 @@
                     "fight": 4,
                     "defense": 6,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "warrior_team_leader", "modelLimit": 1}],
                     "min": 5,
@@ -170,7 +162,6 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 6,
-                    "wounds": 1,
                     "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "pathfinder_team_leader", "modelLimit": 1}],
                     "min": 5,
@@ -194,7 +185,6 @@
                     "fight": 6,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "rules": ["leader", {"id": "wounds", "x": 2}],
                     "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
                     "min": 1,
@@ -218,7 +208,6 @@
                     "fight": 6,
                     "defense": 4,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 1}],
                     "min": 10,
                     "max": 20
@@ -232,7 +221,7 @@
             "max": 1,
             "category": "strike",
             "rules": [],
-            "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "wounds": 2, "weapons": ["hound_fangs"], "min": 4, "max": 12}]
+            "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 4, "max": 12}]
         },
         "savage_beast_riders": {
             "name": "Savage Beast Riders",
@@ -242,19 +231,7 @@
             "category": "strike",
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
-                {
-                    "name": "Savage Beast Rider",
-                    "movement": 8,
-                    "courage": 4,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "wounds": 3,
-                    "weapons": ["savage_cannon", "beast_fists"],
-                    "min": 1,
-                    "max": 3
-                }
+                {"name": "Savage Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["savage_cannon", "beast_fists"], "min": 1, "max": 3}
             ]
         },
         "insect_warriors": {
@@ -272,7 +249,6 @@
                     "fight": 5,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 1,
                     "rules": ["fly"],
                     "weapons": ["neutron_carbine", {"id": "ccw", "count": 1}],
                     "options": [{"replaceModel": "insect_warrior_leader", "modelLimit": 1}],
@@ -298,7 +274,6 @@
                     "fight": 4,
                     "defense": 8,
                     "reflexes": 6,
-                    "wounds": 2,
                     "weapons": ["pulse_gatling", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "stealth_suit_leader", "modelLimit": 1}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
                     "min": 3,
@@ -324,7 +299,6 @@
                     "defense": 9,
                     "reflexes": 6,
                     "rules": ["fly", {"id": "wounds", "x": 2}],
-                    "wounds": 3,
                     "weapons": ["suit_fists"],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -351,7 +325,6 @@
                     "fight": 4,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["defense_system"],
                     "rules": ["fly", "tactical_drone"],
                     "min": 2,
@@ -375,7 +348,6 @@
                     "fight": 4,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 1,
                     "weapons": ["pulse_gatling"],
                     "rules": ["fly"],
                     "options": [{"addWeapon": "pulse_gatling"}, {"addRule": "spotting_laser"}],
@@ -392,20 +364,7 @@
             "keywords": ["Drone"],
             "category": "specialist",
             "models": [
-                {
-                    "name": "Sniper Drone",
-                    "movement": 8,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "wounds": 1,
-                    "weapons": ["pulse_sniper"],
-                    "rules": ["fly", "stealth"],
-                    "min": 3,
-                    "max": 9
-                }
+                {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["fly", "stealth"], "min": 3, "max": 9}
             ]
         },
         "hover_apc": {
@@ -425,7 +384,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
@@ -455,12 +413,16 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 6,
-                    "wounds": 6,
                     "weapons": [{"id": "railgun", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
                         {"replaceWeapon": {"id": "railgun", "mount": ["Front"]}, "withWeapon": "ion_cannon"},
-                        {"addWeapon": [[{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}], [{"id": "pulse_gatling", "mount": ["Left, Front"]}, {"id": "pulse_gatling", "mount": ["Right, Front"]}]]},
+                        {
+                            "addWeapon": [
+                                [{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}],
+                                [{"id": "pulse_gatling", "mount": ["Left, Front"]}, {"id": "pulse_gatling", "mount": ["Right, Front"]}]
+                            ]
+                        },
                         {"addWeapon": ["seeker_missiles"], "limit": 3},
                         {"addRule": [{"id": "inhibitor", "name": "Inhibitor Field"}, {"id": "stealth", "name": "Stealth Camouflage"}]}
                     ],
@@ -486,7 +448,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 6,
-                    "wounds": 3,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
@@ -515,7 +476,6 @@
                     "fight": 4,
                     "defense": 10,
                     "reflexes": 6,
-                    "wounds": 3,
                     "rules": ["damage_table_vehicle"],
                     "weapons": ["suit_fists", {"id": "stomp", "count": 2}],
                     "options": [
@@ -546,7 +506,6 @@
                     "defense": 10,
                     "reflexes": 6,
                     "rules": ["fly", "stealth", "damage_table_vehicle"],
-                    "wounds": 6,
                     "weapons": ["suit_fists", {"id": "stomp", "count": 2}],
                     "options": [
                         {"id": "ambush", "name": "Stealth Infiltration"},
@@ -575,11 +534,10 @@
                     "fight": 3,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}, "quad_ion_rifle", {"id": "seeker_missiles", "count": 2}],
                     "options": [
                         {"addModel": "attached_gunner_drone", "modelLimit": 2},
-                        {"replaceWeapon": {"id": "pulse_gatling", "mount": ["Front"]}, "withWeapon": {"id": "missile_pod", "mount": ["Front"]} }
+                        {"replaceWeapon": {"id": "pulse_gatling", "mount": ["Front"]}, "withWeapon": {"id": "missile_pod", "mount": ["Front"]}}
                     ],
                     "min": 1,
                     "max": 1
@@ -593,9 +551,7 @@
             "keywords": ["Vehicle", "Aircraft"],
             "min": 1,
             "max": 1,
-            "options": [
-                {"addModel": "attached_interceptor_drone", "modelLimit": 2}                    
-            ],
+            "options": [{"addModel": "attached_interceptor_drone", "modelLimit": 2}],
             "models": [
                 {
                     "name": "Light Bomber",
@@ -605,7 +561,6 @@
                     "fight": 3,
                     "defense": 9,
                     "reflexes": 5,
-                    "wounds": 6,
                     "rules": ["aircraft", "damage_table_aircraft", "spotting_laser"],
                     "weapons": ["missile_pod", {"id": "seeker_missiles", "count": 2}, "ion_bombs"],
                     "min": 1,
@@ -623,7 +578,6 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "wounds": 1,
             "rules": ["fly", "attached"],
             "weapons": [{"id": "ion_rifle", "count": 2}],
             "min": 0,
@@ -637,7 +591,6 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "wounds": 1,
             "rules": ["fly", "attached"],
             "weapons": ["pulse_carbine"],
             "min": 0,
@@ -651,7 +604,6 @@
             "fight": 5,
             "defense": 7,
             "reflexes": 5,
-            "wounds": 1,
             "rules": ["fly"],
             "weapons": ["neutron_carbine", {"id": "ccw", "count": 1}],
             "min": 5,
@@ -665,7 +617,6 @@
             "fight": 4,
             "defense": 8,
             "reflexes": 6,
-            "wounds": 2,
             "weapons": ["pulse_gatling", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addRule": "spotting_laser", "modelLimit": 1}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
             "min": 0,
@@ -679,7 +630,6 @@
             "fight": 4,
             "defense": 6,
             "reflexes": 6,
-            "wounds": 1,
             "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
             "min": 0,
@@ -693,7 +643,6 @@
             "fight": 4,
             "defense": 5,
             "reflexes": 6,
-            "wounds": 1,
             "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}],
             "min": 0,
@@ -707,7 +656,6 @@
             "fight": 4,
             "defense": 6,
             "reflexes": 5,
-            "wounds": 1,
             "rules": ["deployable"],
             "weapons": ["support_missile_pod"],
             "options": [{"replaceWeapon": "support_missile_pod", "withWeapon": "smart_missiles"}],
@@ -722,106 +670,19 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "wounds": 1,
             "weapons": ["pulse_gatling"],
             "rules": ["fly", "recon_drone"],
             "min": 0,
             "max": 1
         },
-        "inhibitor_drone": {
-            "name": "Inhibitor Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly", "inhibitor"],
-            "min": 0,
-            "max": 1
-        },
-        "spotter_drone": {
-            "name": "Spotter Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly", "spotting_laser"],
-            "min": 0,
-            "max": 1
-        },
-        "missile_drone": {
-            "name": "Missile Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly"],
-            "weapons": ["missile_pod"],
-            "min": 0,
-            "max": 1
-        },
-        "stealth_drone": {
-            "name": "Stealth Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly", "stealth"],
-            "min": 0,
-            "max": 1
-        },
-        "gunner_drone": {
-            "name": "Gunner Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly"],
-            "weapons": ["pulse_carbine"],
-            "min": 0,
-            "max": 1
-        },
-        "shield_drone": {
-            "name": "Shield Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly", {"id": "resilient", "x": 4}],
-            "min": 0,
-            "max": 1
-        },
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "wounds": 1, "rules": ["fly", "guardian"], "min": 0, "max": 1},
-        "accelerator_drone": {
-            "name": "Accelerator Drone",
-            "movement": 8,
-            "courage": 4,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "wounds": 1,
-            "rules": ["fly", "accelerator"],
-            "min": 0,
-            "max": 1
-        }
+        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor"], "min": 0, "max": 1},
+        "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "spotting_laser"], "min": 0, "max": 1},
+        "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly"], "weapons": ["missile_pod"], "min": 0, "max": 1},
+        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth"], "min": 0, "max": 1},
+        "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly"], "weapons": ["pulse_carbine"], "min": 0, "max": 1},
+        "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}], "min": 0, "max": 1},
+        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "min": 0, "max": 1},
+        "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "accelerator"], "min": 0, "max": 1}
     },
     "weapons": {
         "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "damage": 3, "rules": ["bomb", {"id": "blast", "x": 3}]},
@@ -861,13 +722,6 @@
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
                 {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
-        "ion_rifle": {
-            "name": "Ion Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
-                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "damage": 2, "rules": [{"id": "overheat"}]}
             ]
         },
         "quad_ion_rifle": {
@@ -914,51 +768,18 @@
             "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to re-roll hit rolls of 9+ against that target or 2 spotting markers to get +1 to hit.",
             "points": 5
         },
-        "homing_beacon": {
-            "name": "Homing Beacon",
-            "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model.",
-            "points": 5
-        },
-        "inhibitor": {
-            "name": "Inhibitor",
-            "description": "Enemy units suffer -2\" of movement with any Charge moves targetting friendly units within 3\".",
-            "points": 5
-        },
+        "homing_beacon": {"name": "Homing Beacon", "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model.", "points": 5},
+        "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with any Charge moves targetting friendly units within 3\".", "points": 5},
         "tactical_drone": {
             "name": "Tactical Drone",
             "description": "When this unit is activated, choose one ability: One enemy unit within 12\" may not benefit from cover this round. Choose a unit within 2\" and roll one die for each drone. On any results of 5 or less the unit may heal 1 wound. No more than 3 wounds may be healed in one activation.",
             "points": 5
         },
-        "recon_drone": {
-            "name": "Recon Scope",
-            "description": "Friendly units within 3\" may ignores cover bonuses.",
-            "points": 10
-        },
-        "accelerator": {
-            "name": "Accelerator",
-            "description": "This model and models in its unit add +6\" maximum Range to all weapons.",
-            "points": 5
-        },
-        "threat_detector_suit": {
-            "name": "Threat Detector",
-            "description_short": "+1 Initiative",
-            "description": "This model gets +1 Initiative.",
-            "points": 5
-        },
-        "hover_drone": {
-            "name": "Hover Drone",
-            "hidden": "true",
-            "description": "This model gets +2\" Move and Fly.",
-            "description_short": "+4\" Move, Fly",
-            "points": 5
-        },
-        "cold_fusion_booster": {
-            "name": "Cold Fusion Booster",
-            "hidden": "true",
-            "description": "This model gets +4\" Move.",
-            "description_short": "+4\" Move",
-            "points": 4
-        },
+        "recon_drone": {"name": "Recon Scope", "description": "Friendly units within 3\" may ignores cover bonuses.", "points": 10},
+        "accelerator": {"name": "Accelerator", "description": "This model and models in its unit add +6\" maximum Range to all weapons.", "points": 5},
+        "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
+        "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
+        "cold_fusion_booster": {"name": "Cold Fusion Booster", "hidden": "true", "description": "This model gets +4\" Move.", "description_short": "+4\" Move", "points": 4},
         "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Save.", "points": 20}
     },
     "strategies": {

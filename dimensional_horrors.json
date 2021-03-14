@@ -28,7 +28,6 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 7,
-                    "wounds": 8,
                     "weapons": ["exhalted_staff_of_change"],
                     "options": [
                         {"replaceWeapon": "exhalted_staff_of_change", "withWeapon": ["exhalted_power_hammer", "exhalted_power_spear"]},
@@ -55,7 +54,6 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 7,
-                    "wounds": 3,
                     "weapons": ["daemon_sword"],
                     "options": [
                         {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
@@ -84,7 +82,6 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": ["power_staff"],
                     "options": [
                         {"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"},
@@ -113,7 +110,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["power_staff", {"id": "parasitic_bite", "count": 2}],
                     "options": [{"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"}, {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}],
                     "min": 1,
@@ -132,20 +128,7 @@
             "max": 1,
             "rules": ["leader", "stealth", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, "strider", "psychic_syphon"],
             "models": [
-                {
-                    "name": "Blue Scholars",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 2,
-                    "weapons": ["quills", "disk_blades"],
-                    "min": 1,
-                    "max": 1,
-                    "rules": []
-                }
+                {"name": "Blue Scholars", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["quills", "disk_blades"], "min": 1, "max": 1, "rules": []}
             ]
         },
         "the_shifter": {
@@ -157,9 +140,7 @@
             "min": 1,
             "max": 1,
             "rules": ["stealth", {"id": "tough", "x": 2}, {"id": "psychic", "x": 1}, "strider", "leader"],
-            "models": [
-                {"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "wounds": 2, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}
-            ]
+            "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "chromatic_horrors": {
             "name": "Chromatic Horrors",
@@ -177,7 +158,6 @@
                     "shoot": 3,
                     "fight": 3,
                     "defense": 4,
-                    "wounds": 2,
                     "reflexes": 4,
                     "weapons": [{"id": "ccw", "count": 2}],
                     "options": [{"replaceModel": ["blue_warriors", "pink_warriors"]}],
@@ -202,7 +182,6 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": ["changing_flames", "flame_tongues"],
                     "min": 1,
                     "max": 1,
@@ -226,7 +205,6 @@
                     "fight": 4,
                     "defense": 7,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": ["flickering_flames", {"id": "ccw", "count": 2}],
                     "min": 3,
                     "max": 9,
@@ -241,7 +219,7 @@
             "min": 3,
             "max": 9,
             "rules": ["fly"],
-            "models": [{"name": "Manta Daemon", "movement": 12, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "wounds": 2, "weapons": ["parasitic_bite"], "min": 3, "max": 9}]
+            "models": [{"name": "Manta Daemon", "movement": 12, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": ["parasitic_bite"], "min": 3, "max": 9}]
         },
         "flame_chariot": {
             "name": "Flame Chariot",
@@ -260,7 +238,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 4,
                     "weapons": ["changing_flames", {"id": "parasitic_bite", "count": 2}, "flame_tongues"],
                     "options": [{"addRule": ["chanting_warriors"]}],
                     "min": 1,
@@ -286,7 +263,6 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 8,
-                    "wounds": 5,
                     "weapons": ["fangs_and_claws"],
                     "min": 1,
                     "max": 1,
@@ -311,7 +287,6 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 4,
-                    "wounds": 6,
                     "weapons": ["power_cannon", "power_claw", "daemon_sword", "phlegm_cannon"],
                     "options": [{"replaceWeapon": "daemon_sword", "withWeapon": "daemon_claw"}],
                     "min": 1,
@@ -338,7 +313,6 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "min": 1,
                     "max": 1,
@@ -364,7 +338,6 @@
                     "fight": 7,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": [{"id": "sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
@@ -390,7 +363,6 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 6,
                     "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
@@ -417,7 +389,6 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}, "reaper_axle"],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
@@ -444,7 +415,6 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
@@ -471,7 +441,6 @@
                     "fight": 7,
                     "defense": 5,
                     "reflexes": 5,
-                    "wounds": 2,
                     "weapons": ["enrapturing_lyre", {"id": "sweeping_claws", "count": 3}],
                     "min": 1,
                     "max": 1,
@@ -497,7 +466,6 @@
                     "fight": 8,
                     "defense": 9,
                     "reflexes": 7,
-                    "wounds": 9,
                     "weapons": ["splitting_claws", "souleating_sword"],
                     "options": [{"addRule": ["ritual_dagger", "glittering_sheild", "menacing_hand"]}, {"addWeapon": ["living_whip"]}],
                     "min": 1,
@@ -515,20 +483,7 @@
             "min": 1,
             "max": 1,
             "models": [
-                {
-                    "name": "Deadly Duo",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
-                    "defense": 9,
-                    "reflexes": 6,
-                    "wounds": 4,
-                    "weapons": ["daemon_axe", "tormenting_whip"],
-                    "min": 1,
-                    "max": 1,
-                    "rules": []
-                }
+                {"name": "Deadly Duo", "movement": 8, "courage": 7, "shoot": 8, "fight": 8, "defense": 9, "reflexes": 6, "weapons": ["daemon_axe", "tormenting_whip"], "min": 1, "max": 1, "rules": []}
             ]
         },
         "mask_of_excess": {
@@ -540,22 +495,7 @@
             "rules": ["leader", {"id": "resilient", "x": 1}, "agile", "stealth"],
             "min": 1,
             "max": 1,
-            "models": [
-                {
-                    "name": "Mask of Excess",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "wounds": 2,
-                    "weapons": ["segmented_claws"],
-                    "min": 1,
-                    "max": 1,
-                    "rules": []
-                }
-            ]
+            "models": [{"name": "Mask of Excess", "movement": 8, "courage": 6, "shoot": 7, "fight": 7, "defense": 5, "reflexes": 5, "weapons": ["segmented_claws"], "min": 1, "max": 1, "rules": []}]
         },
         "excess_warriors": {
             "name": "Excess Warriors",
@@ -574,7 +514,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 1,
                     "weapons": [{"id": "sweeping_claws", "count": 3}],
                     "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
                     "min": 1,
@@ -589,7 +528,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 1,
                     "weapons": [{"id": "sweeping_claws", "count": 2}],
                     "min": 9,
                     "max": 29,
@@ -614,7 +552,6 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": [{"id": "sweeping_claws", "count": 4}, "barbed_tail"],
                     "options": [{"modelLimit": 1, "addWeapon": ["sweeping_claws"]}],
                     "min": 1,
@@ -632,20 +569,7 @@
             "min": 5,
             "max": 20,
             "models": [
-                {
-                    "name": "Gargoyle",
-                    "movement": 10,
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 3,
-                    "wounds": 1,
-                    "weapons": [{"id": "ccw", "count": 2}],
-                    "min": 5,
-                    "max": 20,
-                    "rules": []
-                }
+                {"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 3, "weapons": [{"id": "ccw", "count": 2}], "min": 5, "max": 20, "rules": []}
             ]
         },
         "reaper_chariot": {
@@ -665,7 +589,6 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 5,
-                    "wounds": 3,
                     "weapons": ["lashing_tentacles", {"id": "sweeping_claws", "count": 6}, "reaper_axle"],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
@@ -691,7 +614,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": [{"id": "sweeping_claws", "count": 3}, "lashing_tentacles"],
                     "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
                     "min": 1,
@@ -706,7 +628,6 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 4,
-                    "wounds": 2,
                     "weapons": [{"id": "sweeping_claws", "count": 3}, "lashing_tentacles"],
                     "min": 4,
                     "max": 19,
@@ -724,7 +645,6 @@
             "fight": 5,
             "defense": 6,
             "reflexes": 4,
-            "wounds": 1,
             "weapons": ["twisting_flames", "ccw"],
             "options": [
                 {"modelLimit": 1, "addRule": ["banner_of_change"]},
@@ -736,7 +656,7 @@
             "max": 30,
             "rules": []
         },
-        "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "wounds": 1, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
+        "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
     },
     "weapons": {
         "exhalted_staff_of_change": {"name": "Exhalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4, "damage": 2},
