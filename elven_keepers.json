@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "furious", {"id": "resilient", "x": 3}, "agile", {"id": "tough", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -68,7 +68,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}],
+            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -98,7 +98,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}],
+            "rules": ["leader", "blur_field", "agile", {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -154,17 +154,17 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["blur_field", "furious", "agile"],
+            "rules": ["blur_field", "agile"],
             "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Mimes",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 7,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "wounds": 1,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
                     "rules": [],
@@ -179,7 +179,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["hover", {"id": "impact", "x": 1}, "blur_field"],
+            "rules": ["hover", "blur_field", {"id": "wounds", "x": 2}],
             "keywords": ["Biker"],
             "models": [
                 {
@@ -191,11 +191,10 @@
                     "defense": 7,
                     "reflexes": 5,
                     "wounds": 3,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
+                    "weapons": ["shard_cannon", "energy_glaive"],
                     "options": [
-                        {"replaceWeapon": ["shard_pistol", {"id": "jester_blade", "count": 2}], "withWeapon": "shard_cannon"},
                         {"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]},
-                        {"addWeapon": ["exploding_bola", "energy_glaive"]}
+                        {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}
                     ],
                     "min": 2,
                     "max": 6
@@ -244,8 +243,8 @@
                     "defense": 8,
                     "reflexes": 5,
                     "wounds": 6,
-                    "weapons": [{"id": "shard_cannon", "count": 2}],
-                    "options": [{"limit": 1, "addWeapon": ["energy_glaive", "emp_cannon", "irridescent_cannon"]}],
+                    "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
+                    "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
                     "min": 1,
                     "max": 1
                 }
@@ -266,16 +265,16 @@
                 {"name": "Sniper Mode","attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3, "damage": 2},
                 {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
         ]},
-        "exploding_bola": {"name": "Exploding Bola", "attacks": 2, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}], "ap":4},
-        "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap":2, "damage":2},
-        "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
-        "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}, "emp"], "ap":1},
+        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap":4, "rules": [{"id": "blast", "x": 2}]},
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "ap":2},
+        "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault", {"id": "blast", "x": 3}]},
         "irridescent_cannon":{
             "name": "Irridescent Cannon",
             "profiles":[
-                {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": []},
-                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap":2}
+                {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", {"id": "blast", "x": 3}]},
+                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
+                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap":2, "rules": ["assault"]}
             ]
         },
         "plasma_grenade": {"name": "Plasma Grenade", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
