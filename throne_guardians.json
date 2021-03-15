@@ -10,7 +10,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["fearless", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Guardian Captain",
@@ -44,7 +44,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
                     "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
@@ -79,7 +79,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": ["fearless", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {
                     "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
@@ -115,7 +115,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "resilient", "x": 2}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "resilient", "x": 3}, "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Relic Heavy Assault APC",
