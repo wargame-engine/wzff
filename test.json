@@ -14,7 +14,7 @@
     "weapons": {"testWep": {"name": "Test Weapon", "attacks": 1, "short": "Melee", "rules": [{"id": "testWepRule", "x": 2}]}},
     "rules": {
         "testWepRule": {"name": "Test", "inputs": ["x"], "description": "Test description.", "points": ["rule.x"]},
-        "testRule": {"name": "Test", "description": "Test description.", "points": [5, {"multiply": "model.wounds"}]}
+        "testRule": {"name": "Test", "description": "Test description.", "points": 5}
     },
     "relics": []
 }

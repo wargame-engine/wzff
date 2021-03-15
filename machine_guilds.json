@@ -672,7 +672,7 @@
             "hidden": true,
             "description": "This model gains +1 Courage.",
             "description_short": "+1 Courage",
-            "points": ["model.wounds", {"multiply": "constants.courageCost"}]
+            "points": [{"multiply": "constants.courageCost"}]
         },
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6 inch max range when shooting.", "points": 5},
         "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},

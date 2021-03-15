@@ -152,7 +152,7 @@
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
         "marine_shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["rending"]},
-        "energy_claws": {"name": "Energy Claws", "attacks": 2, "short": "Melee", "ap": 2},
+        "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2},
         "plasma_pistol": {
             "name": "Plasma Pistol",
             "rules": ["pistol"],
@@ -200,8 +200,9 @@
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
         "energy_axe": {"name": "Energy Axe", "attacks": 1, "short": "Melee", "ap": 3, "damage": 1},
         "energy_mace": {"name": "Energy Mace", "attacks": 1, "short": "Melee", "ap": 4, "damage": 1},
-        "energy_fist": {"name": "Energy Fist", "attacks": 1, "short": "Melee", "ap": 6, "damage": 2},
-        "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "damage": 3, "rules": []},
+        "energy_fist": {"name": "Energy Fist", "attacks": 1, "short": "Melee", "ap": 6, "damage": 2, "rules": ["cumbersome"]},
+        "energy_greataxe": {"name": "Energy Greataxe", "attacks": 1, "short": "Melee", "ap": 5, "damage": 3, "rules": []},
+        "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "damage": 3},
         "combi_flamer": {
             "name": "Combi-flamer",
             "profiles": [{"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
@@ -309,9 +310,9 @@
         "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
         "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["pistol"]},
-        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
-        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "damage": 1, "rules": ["sniper"]},
-        "prime_chainsword": {"name": "Prime Chainsword", "attacks": 2, "ap": 1, "short": "Melee"},
+        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
+        "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "damage": 1},
+        "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
         "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault", "fusion"]},
         "heavy_plasma_rifle": {
             "name": "Heavy Plasma Rifle",
@@ -388,13 +389,9 @@
             "name": "Destroyer Armor",
             "hidden": true,
             "description_short": "Ambush, Save 8, Movement -1\"",
-            "description": "Gives the model the ambush keyword. Gives the model 2 additional wounds. Gives the model Save 8.",
-            "effects": [
-                {"type": "grantRule", "rule": "ambush"},
-                {"type": "changeStat", "statName": "defense", "value": 8},
-                {"type": "alterStat", "statName": "wounds", "value": 2},
-                {"type": "alterStat", "statName": "movement", "value": -1}
-            ]
+            "description": "Gives the model the ambush keyword. Gives the model Save 8.",
+            "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": 1}]}]
+            
         },
         "field_radio": {
             "name": "Field Radio",

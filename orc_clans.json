@@ -1349,14 +1349,14 @@
             "hidden": "true",
             "description": "This model gets +1 Save.",
             "description_short": "+1 Save",
-            "points": ["model.wounds", {"multiply": "constants.defenseCost"}]
+            "points": [1, {"multiply": "constants.defenseCost"}]
         },
         "ultra_armor": {
             "name": "Ultra Armor",
             "hidden": "true",
             "description": "This model gets +2 Save and -2\" of movement.",
             "description_short": "+2 Save, -1\" Movement",
-            "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": "model.wounds"}, {"multiply": 2}]}]
+            "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": 2}]}]
         },
         "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Shoot", "points": 5},
         "energy_field": {"name": "Energy Field", "description": "This model and friendly Infantry units within 3\" get +1 Defense.", "points": ["constants.defenseCost", {"multiply": 10}]},
@@ -1364,7 +1364,7 @@
         "biggest_boss": {
             "name": "The Biggest Boss",
             "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
-            "points": [5, {"multiply": "model.wounds"}]
+            "points": 5
         },
         "mad_doctor": {
             "name": "Mad Doctor",
@@ -1391,7 +1391,7 @@
             "description_short": "Save +1",
             "hidden": true,
             "description": "This model gains +1 Save.",
-            "points": ["model.wounds", {"multiply": "constants.defenseCost"}]
+            "points": 10
         },
         "war_banner": {"name": "War Banner", "description": "This model and friendly Infantry units within 3\" gain +1 Strength.", "points": 20}
     },

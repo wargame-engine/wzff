@@ -36,7 +36,7 @@
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
                     ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}],
+                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -64,7 +64,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["war_chant", "traitor_tactics"]}
                     ],
-                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", "relentless", {"id": "tough", "x": 1}],
+                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -92,7 +92,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor"]}
                     ],
-                    "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}],
+                    "rules": ["leader", {"id": "repair", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -132,7 +132,7 @@
             "description": "A powerful human whose mental powers have been twisted by the dark side.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "command",
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -149,7 +149,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
                         {"addRule": ["jetpack", "destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, "leader", {"id": "tough", "x": 1}],
+                    "rules": [{"id": "psychic", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -160,7 +160,7 @@
             "description": "A powerful human whose mental powers have been twisted by the dark side on a combat bike.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "command",
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -175,7 +175,7 @@
                         {"replaceWeapon": ["marine_pistol", "chainsword"], "withWeapon": [["marine_rifle", "ccw"], {"id": "energy_claws", "count": 2}, "combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": ["energy_sword", "energy_fist", "energy_hammer"]},
-                        {"addRule": ["destroyer_armor", "war_chant", "traitor_tactics", "relentless", {"id": "psychic", "x": 2}]}
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}],
                     "min": 1,
@@ -185,11 +185,10 @@
         },
         "daemon_champion": {
             "name": "Daemon Champion",
-            "description": "A twisted daemon whose powers have been boosted through service to the dark gods.",
-            "subfactions": ["none", "change_traitors"],
-            "min": 1,
-            "max": 1,
+            "description": "A massive daemon gifted in the art of war.",
             "category": "command",
+            "rules": ["leader", "fear", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "keywords": ["monster"],
             "models": [
                 {
                     "name": "Daemon Champion",
@@ -205,7 +204,7 @@
                         {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
                         {"addRule": "wings"}
                     ],
-                    "rules": ["leader", "fear", {"id": "tough", "x": 1}],
+                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -225,9 +224,9 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", "chainsword"]]}, {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}],
-                    "rules": ["leader"],
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2} ], "withWeapon": [["pistol", {"id": "chainsword", "count": 2}]]}, {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}],
+                    "rules": ["leader", {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -377,7 +376,7 @@
                 }
             ]
         },
-        "traitor_support": {
+        "traitor_devastators": {
             "name": "Traitor Devastators",
             "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
             "min": 5,
@@ -444,24 +443,16 @@
             ]
         },
         "possessed_brothers": {
-            "name": "Possessed Brothers",
+            "name": "Possessed Traitors",
             "description": "A squad of traitor marines that have been gifted with daemonic mutations to aid them in battle.",
             "min": 5,
             "max": 10,
             "category": "specialist",
             "rules": ["mutations"],
+            "options": [
+                {"addRule": "wings", "modelLimit": "all"}
+            ],
             "models": [{"name": "Possessed Brother", "movement": 8, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["chainsword"], "rules": [], "min": 5, "max": 10}]
-        },
-        "winged_possessed_brothers": {
-            "name": "Possessed Brothers",
-            "description": "A squad of traitor marines that have been gifted with wings to aid them in battle.",
-            "min": 5,
-            "max": 10,
-            "category": "strike",
-            "rules": ["mutations"],
-            "models": [
-                {"name": "Possessed Brother", "movement": 8, "courage": 6, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["chainsword"], "rules": ["wings"], "min": 5, "max": 10}
-            ]
         },
         "greater_possessed_brothers": {
             "name": "Greater Possessed Brothers",
@@ -469,7 +460,7 @@
             "min": 3,
             "max": 9,
             "category": "specialist",
-            "rules": ["mutations"],
+            "rules": ["mutations", {"id": "wounds", "x": 2}],
             "models": [
                 {"name": "Possessed Brother", "movement": 8, "courage": 6, "shoot": 6, "fight": 7, "defense": 9, "reflexes": 5, "weapons": [{"id": "ccw", "count": 4}], "rules": [], "min": 3, "max": 9}
             ]
@@ -619,7 +610,7 @@
         "daemon_spawn": {
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
-            "rules": ["mutations", "strider", "fear"],
+            "rules": ["mutations", "strider", "fear", {"id": "wounds", "x": 2}],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 5,
@@ -631,7 +622,7 @@
         "havoc_apc": {
             "name": "Traitor APC",
             "description": "A durable transport for the followers of the dark gods.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors"],
             "min": 1,
             "max": 1,
@@ -642,9 +633,9 @@
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,
-                    "fight": 3,
+                    "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "weapons": ["twin_marine_rifle"],
                     "options": [
                         {"addWeapon": ["marine_rifle", "twin_marine_rifle", "havoc_missiles"]},
@@ -706,11 +697,11 @@
                 {
                     "name": "Heavy Assault APC",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
                     "options": [
                         {"addWeapon": ["storm_rifle", "havoc_missiles"]},
@@ -739,7 +730,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 11,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": [{"id": "brute_fist", "count": 2}, "stomp"],
                     "options": [
                         {
@@ -919,7 +910,7 @@
             "notes": "not updated",
             "name": "Lord of Change",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["leader", {"id": "tough", "x": 1}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -951,7 +942,7 @@
         "sorceror_of_change": {
             "name": "Sorceror of Change",
             "description": "A distinguished sorceror who has managed to rise through the ranks of the change brothers.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -983,7 +974,7 @@
         "birdman_sorceror": {
             "name": "Birdman Sorceror",
             "description": "A mutated half bird half man sorceror that leads demonic forces of change.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",
@@ -1192,7 +1183,7 @@
             "hidden": true,
             "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
             "description_short": "Fly, Ambush, 8\" Move",
-            "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
+            "points": 10
         },
         "mutations": {
             "name": "Mutations",
@@ -1203,33 +1194,37 @@
                 {"type": "grantRule", "rule": {"id": "resilient", "x": 3}, "frequency": 3}
             ]
         },
-        "spiked_ram": {
-            "name": "Spiked Ram",
-            "hidden": true,
-            "description": "This model gains +3 impact.",
-            "description_short": "Impact +3",
-            "effects": [{"type": "alterRule", "ruleName": "impact", "input": "x", "value": 3}]
-        },
         "invigorating_beam": {"effects": [{"type": "alterStat", "statName": "movement", "value": 6, "frequency": 5, "target": "friendly", "range": 12}]},
         "encroaching_mutations": {"effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 24}]},
         "inspiring_word": {"effects": [{"type": "grantRule", "rule": {"id": "resilient", "x": 3}, "target": "friendly", "range": 6}]}
     },
     "strategies": {
+        "hate": {
+            "phase": "activation",
+            "subfactions": ["none", "change_traitors"],
+            "name": "Hate",
+            "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
+            "description": "Use before an Infantry unit fights. All hits have +1 AP.",
+            "cost": 1
+        },
         "daemonforge": {
+            "phase": "activation",
             "subfactions": ["none", "change_traitors"],
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a Vehicle unit shoots. All hits have +1 AP.",
+            "description": "Use before a Vehicle unit shoots. It may re-roll failed hit rolls of 9+.",
             "cost": 1
         },
-        "blood_ritual": {
+        "dark_blessing": {
+            "phase": "activation",
             "subfactions": ["none", "change_traitors"],
-            "name": "Blood Ritual",
-            "flavor": "With a simple sacrifice of flesh, comes a gift of life.",
-            "description": "Use when an Infantry unit is activated. Roll a D10 on a roll of 3 or less the unit regains 3 wounds (put on any models in the unit). On any other result it regains 2 wounds instead. If the unit has lost any models, they may be used to restore those models.",
+            "name": "Dark Blessing",
+            "flavor": "With a simple sacrifice, comes a gift of life.",
+            "description": "Use when an Infantry unit is activated. Roll 3D10 and on any rolls of 5 or less, models in that unit with Wounds(x) regain that many wounds. If all models are at full Wounds, models may be restored one by one until they each have full Wounds.",
             "cost": 2
         },
         "psychic_channeling": {
+            "phase": "activation",
             "subfactions": ["change_traitors"],
             "name": "Psychic Channeling",
             "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
@@ -1237,6 +1232,7 @@
             "cost": 1
         },
         "hex_rounds": {
+            "phase": "activation",
             "subfactions": ["change_traitors"],
             "name": "Hex Rounds",
             "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
@@ -1244,6 +1240,7 @@
             "cost": 1
         },
         "psychic_fury": {
+            "phase": "activation",
             "subfactions": ["change_traitors"],
             "name": "Psychic Fury",
             "flavor": "The psyker explodes with energy, infused with additonal power.",
