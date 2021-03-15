@@ -4,7 +4,7 @@
     "author": "guitarninja#5707",
     "background": "The Machine Guilds are a group of aspiring machinist and inventors of war machines. Their strange obsession with cybernetic augmentation has left them in a state of machine-worship. With some of the most high-tech weaponry available to mortals, the Machine Guilds make good use of it against their enemies.",
     "subfactions": {
-        "stealth_masters": {"name": "Stealth Focus", "id": "stealth_masters", "color": "#231f20", "background": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."}
+        "stealth_masters": {"name": "Stealth", "id": "stealth_masters", "color": "#231f20", "background": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."}
     },
     "units": {
         "machine_grand_master": {

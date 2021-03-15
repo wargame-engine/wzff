@@ -4,13 +4,13 @@
     "author": "Caliallie#6369",
     "subfactions": {
         "change_traitors": {
-            "name": "Psychic Focus",
+            "name": "Psychic",
             "id": "change_traitors",
             "color": "#18abcc",
             "restricted": true,
             "background": "Traitor marines focused on using powerful magic to defeat their foes."
         },
-        "rage_focus": {"name": "Rage Focus", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."}
+        "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."}
     },
     "units": {
         "traitor_lord": {
