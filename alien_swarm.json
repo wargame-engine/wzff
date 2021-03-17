@@ -323,7 +323,7 @@
         {
             "name": "Hive Mind",
             "phase": "activation",
-            "description": "Use at the beginning of the activation phase on a the Hive Mind unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
+            "description": "Use at the beginning of the activation phase on a Hive Mind unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
             "cost": 1
         }
