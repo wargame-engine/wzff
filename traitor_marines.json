@@ -273,7 +273,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
                     "options": [
                         {
@@ -300,11 +300,11 @@
                 {
                     "name": "Traitor Marine",
                     "movement": 6,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 4,
+                    "reflexes": 6,
                     "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
                     "options": [
                         {"replaceWeapon": "marine_rifle", "withWeapon": ["chainsword"]},

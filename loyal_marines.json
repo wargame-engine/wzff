@@ -29,7 +29,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader",  {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "siege_masters"],
             "models": [
                 {
@@ -53,7 +53,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader",  {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -69,7 +69,10 @@
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
                         {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 4}, "marine_pistol"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 5}]]},
                         {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "prime_chainsword", "count": 5}, "withWeapon": [{"id": "prime_energy_sword", "count": 5}, {"id": "energy_fist", "count": 5}, {"id": "energy_hammer", "count": 5}]},
+                        {
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 5},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 5}, {"id": "energy_fist", "count": 5}, {"id": "energy_hammer", "count": 5}]
+                        },
                         {"addRule": ["prime_combat_shield"]}
                     ],
                     "min": 1,
@@ -84,7 +87,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader",  {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -100,7 +103,10 @@
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
                         {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 3}, "marine_pistol"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 4}]]},
                         {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "prime_chainsword", "count": 4}, "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 4},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]
+                        },
                         {"addRule": ["prime_combat_shield"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
@@ -132,7 +138,10 @@
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
                         {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 3}, "marine_pistol"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 4}]]},
                         {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "prime_chainsword", "count": 4}, "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 4},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]
+                        },
                         {"addRule": ["prime_combat_shield"]}
                     ],
                     "min": 1,
@@ -158,15 +167,16 @@
                     "defense": 8,
                     "movement": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}, "prime_pistol"],
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 3}, "marine_pistol"],
                     "rules": ["banner_of_wrath"],
                     "options": [
-                        {"replaceWeapon": "prime_auto_rifle", "withWeapon": ["prime_pistol", "prime_rifle", "prime_precision_rifle", "plasma_pistol", "prime_heavy_carbine", "flamethrower_pistol"]},
+                        {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
+                        {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 3}, "marine_pistol"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 4}]]},
+                        {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
                         {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
-                            "withWeapon": [{"id": "heavy_ccw", "count": 3}, "prime_chainsword", "prime_energy_sword", {"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 4},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]
                         },
-                        {"addRule": ["prime_combat_shield"]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
                     ],
                     "min": 1,
@@ -194,7 +204,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader",  "medical_training", {"id": "wounds", "x": 3}],
+            "rules": ["leader", "medical_training", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -211,44 +221,55 @@
                 }
             ]
         },
-        "marine_squad": {
-            "name": "Marine Squad",
-            "description": "Elite trained marines adept at fighting any enemies.",
-            "min": 5,
-            "max": 10,
+        "loyal_marines": {
+            "name": "Loyal Marines",
+            "description": "Marines corrupted by the dark gods.",
             "category": "core",
-            "keywords": ["Infantry"],
-            "subfactions": ["none", "wolf_marines"],
-            "rules": [],
             "models": [
                 {
-                    "name": "Marine Sergeant",
+                    "name": "Marine Leader",
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "movement": 6,
-                    "agility": 6,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "marine_pistol"],
-                    "options": [{"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [[{"id": "energy_sword", "count": 1}], ["energy_fist", "marine_pistol"]]}],
+                    "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [{"id": "chainsword", "count": 2}]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Marine",
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "movement": 6,
-                    "weapons": [{"id": "marine_rifle"}, "at_grenade", "heavy_ccw", "marine_pistol"],
-                    "options": [{"replaceWeapon": "marine_rifle", "withWeapon": [[{"id": "missile_launcher", "count": 1}], ["laser_cannon"]]}],
+                    "weapons": ["marine_rifle", "marine_pistol", "heavy_ccw", "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [{"id": "chainsword", "count": 2}]},
+                        {
+                            "modelLimit": 1,
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon"]
+                        },
+                        {
+                            "modelLimit": 1,
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle"]
+                        }
+                    ],
                     "rules": [],
                     "min": 4,
-                    "max": 9
+                    "max": 10
                 }
             ]
         },
@@ -263,7 +284,7 @@
             "rules": [],
             "options": [
                 {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"},
-                {"replaceWeapon": ["prime_rifle", "heavy_ccw"], "withWeapon": [["prime_pistol", "prime_chainsword"]], "modelLimit": "all"}
+                {"replaceWeapon": ["prime_rifle", "heavy_ccw"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 2}]], "modelLimit": "all"}
             ],
             "models": [
                 {
@@ -321,19 +342,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Werewolf",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "movement": 8,
-                    "weapons": [{"id": "energy_claws", "count": 3}],
-                    "rules": [],
-                    "min": 4,
-                    "max": 9
-                }
+                {"name": "Werewolf", "courage": 6, "shoot": 5, "fight": 6, "defense": 8, "reflexes": 6, "movement": 8, "weapons": [{"id": "energy_claws", "count": 3}], "rules": [], "min": 4, "max": 9}
             ]
         },
         "prime_reaper_squad": {
@@ -344,9 +353,9 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "fear"],
+            "rules": ["fear"],
             "options": [
-                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 2}], "withWeapon": ["prime_heavy_carbine"]},
+                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["prime_heavy_carbine"]},
                 {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
             ],
             "models": [
@@ -358,7 +367,7 @@
                     "defense": 8,
                     "movement": 6,
                     "reflexes": 6,
-                    "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -384,7 +393,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "scout"],
+            "rules": ["scout", "stealth"],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -422,7 +431,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "prime_combat_shield", {"id": "wounds", "x": 2}],
+            "rules": ["prime_combat_shield", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Blade Guardian Sergeant",
@@ -458,7 +467,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Eradication Sergeant",
@@ -534,7 +543,7 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "fly", {"id": "wounds", "x": 2}],
+            "rules": ["fly", {"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": "twin_assault_carbine", "withWeapon": "twin_plasma_carbine", "limit": "all"},
                 {"addRule": [{"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all"}
@@ -576,7 +585,7 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ "ambush", "fly", {"id": "wounds", "x": 2}],
+            "rules": ["ambush", "fly", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Suppression Sergeant",
@@ -612,7 +621,7 @@
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": "grenade_launcher", "modelLimit": "all"},
                 {"replaceWeapon": {"id": "fist_carbine", "count": 2}, "withWeapon": {"id": "fist_flamethrower", "count": 2}, "modelLimit": "all"}
@@ -626,19 +635,19 @@
                     "movement": 4,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
+                    "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Prime Aggression Marine",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 4,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 1}],
+                    "weapons": [{"id": "fist_carbine", "count": 2}, "at_grenade", {"id": "energy_fist", "count": 2}],
                     "min": 2,
                     "max": 5
                 }
@@ -652,7 +661,7 @@
             "keywords": ["Heavy Infantry"],
             "category": "specialist",
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "min": 3,
@@ -684,7 +693,7 @@
             "category": "strike",
             "keywords": ["Biker"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [ {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Prime Rider Sergeant",
@@ -694,7 +703,7 @@
                     "movement": 8,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_prime_rifle", "count": 1, "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 1}, {"id": "prime_pistol", "count": 1}],
+                    "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 2}, "prime_pistol"],
                     "min": 1,
                     "max": 1
                 },
@@ -706,7 +715,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_prime_rifle", "count": 1, "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 1}, {"id": "prime_pistol", "count": 1}],
+                    "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 2}, "prime_pistol"],
                     "min": 2,
                     "max": 3
                 }
@@ -715,7 +724,7 @@
         "marine_apc": {
             "name": "APC",
             "description": "A durable transport built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -741,7 +750,7 @@
         "marine_assault_apc": {
             "name": "Assault APC",
             "description": "A durable transport built by the loyal marines with upgraded weaponry.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -849,7 +858,7 @@
         "hover_apc": {
             "name": "Hover APC",
             "description": "A durable transport with hover technology.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -1028,7 +1037,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader",  "ward", {"id": "tough", "x": 1}],
+            "rules": ["leader", "ward", {"id": "tough", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1060,7 +1069,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader",  "ward", {"id": "tough", "x": 1}],
+            "rules": ["leader", "ward", {"id": "tough", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1185,7 +1194,7 @@
                     "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
-            "rules": [ {"id": "teleport", "x": 6}],
+            "rules": [{"id": "teleport", "x": 6}],
             "models": [
                 {
                     "name": "Teleport Sergeant",
@@ -1231,7 +1240,7 @@
                 },
                 {"addRule": [{"id": "resilient", "x": 3, "name": "Paladins"}], "modelLimit": "all"}
             ],
-            "rules": [ "ambush"],
+            "rules": ["ambush"],
             "models": [
                 {
                     "name": "Psychic Destroyer Sergeant",
@@ -1311,13 +1320,12 @@
         },
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
-        "banner_of_wrath": {"name": "Banner of Wrath", "description": "This model and friendly Infantry units within 3\" gain +1 Strength.", "points": 10},
-        "banner_of_focus": {"name": "Banner of Focus", "description": "This model and friendly Infantry units within 3\" gain +1 Accuracy.", "points": 10},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "This model and friendly Infantry units within 6\" may re-roll failed Strength tests of 9+.", "points": 10},
+        "banner_of_focus": {"name": "Banner of Focus", "description": "This model and friendly Infantry units within 6\" may re-roll failed Accuracy tests of 9+.", "points": 10},
         "expert_marksman": {"name": "Expert Marksman", "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.", "points": 10},
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This model may ignore vertical movement distances when moving.", "points": ["model.movement", {"multiply": 0.25}]},
         "prime_combat_shield": {"name": "Prime Combat Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
-
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]}
     },
     "relics": [
@@ -1334,6 +1342,14 @@
             "phase": "activation",
             "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
             "flavor": "Marines often split off into small tactical units in order to cover more ground.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "flavor": "Marines are trained to stay strong even in the toughest fights.",
             "cost": 1
         },
         {
@@ -1382,46 +1398,6 @@
             "phase": "activation",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["siege_masters"],
-            "name": "Destroy",
-            "phase": "activation",
-            "description": "Use before shooting at a target with Saveance 6 or greater. This attack gains +1 AP and +1 Damage.",
-            "flavor": "Even the toughest armor has its weaknesses.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["psychic_marines"],
-            "name": "Psychic Aim",
-            "phase": "activation",
-            "flavor": "With psychic vision, some can even see their enemies through walls.",
-            "description": "Use before a unit shoots. That unit may target units out of line of sight for this attack.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["alien_hunters"],
-            "name": "Hunters",
-            "phase": "activation",
-            "description": "Use when declaring a shoot or fight action. You may choose where hits are assigned.",
-            "flavor": "With deadly precision, the alien hunters attack and kill their target with precision.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Expert Marksmen",
-            "phase": "activation",
-            "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
-            "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
-            "cost": 2
-        },
-        {
-            "subfactions": ["psychic_marines"],
-            "name": "Psychic Fury",
-            "phase": "activation",
-            "flavor": "The psyker explodes with energy, infused with additonal power.",
-            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
             "cost": 2
         }
     ],
