@@ -11,7 +11,8 @@
             "name": "Hive Lord",
             "description": "A representation of the hive mind itself come to direct the swarm's attacks",
             "category": "command",
-            "rules": [ "damage_table_monster"],
+            "keywords": ["Hive Mind"],
+            "rules": ["damage_table_monster"],
             "models": [
                 {
                     "name": "Hive Lord",
@@ -56,10 +57,23 @@
             "description": "A massive mutant with psychic powers",
             "min": 1,
             "max": 1,
+            "keywords": ["Hive Mind"],
             "category": "command",
-            "rules": [ "leader", "outflank", {"id": "wounds", "x": 3}],
+            "rules": ["leader", "outflank", {"id": "wounds", "x": 3}],
             "models": [
-                {"name": "Snatcher Lord", "courage": 8, "shoot": 0, "fight": 8, "defense": 8, "reflexes": 8, "movement": 8, "weapons": [{"id": "large_piercing_claws", "count": 6}], "min": 1, "max": 1}
+                {
+                    "name": "Snatcher Lord",
+                    "courage": 8,
+                    "shoot": 0,
+                    "fight": 8,
+                    "defense": 8,
+                    "reflexes": 8,
+                    "wounds": 6,
+                    "movement": 8,
+                    "weapons": [{"id": "large_piercing_claws", "count": 6}],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "soul_snatchers": {
@@ -77,6 +91,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
+                    "wounds": 1,
                     "movement": 8,
                     "weapons": [{"id": "piercing_claws", "count": 2}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
@@ -91,7 +106,8 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [ "leader", {"id": "wounds", "x": 3}],
+            "keywords": ["Heavy Infantry", "Hive Mind"],
+            "rules": ["leader", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Hive Warrior Prime",
@@ -100,12 +116,13 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 7,
+                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 4}],
                     "options": [
                         {
                             "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acidspitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
+                            "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
                         },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                         {"addWeapon": ["meat_hooks"]}
@@ -120,6 +137,11 @@
             "description": "Large bugs which can extend the hive mind",
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]},
+                {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
+                {"addWeapon": ["meat_hooks"]}
+            ],
             "models": [
                 {
                     "name": "Hive Warrior Champion",
@@ -128,17 +150,9 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
+                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
-                    "rules": [],
-                    "options": [
-                        {
-                            "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acidspitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
-                        },
-                        {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
-                        {"addWeapon": ["meat_hooks"]}
-                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -149,17 +163,10 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
+                    "wounds": 1,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
-                    "options": [
-                        {
-                            "replaceWeapon": "consumer",
-                            "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acidspitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
-                        },
-                        {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
-                        {"addWeapon": ["meat_hooks"]},
-                        {"replaceWeapon": "consumer", "withWeapon": ["spiked_strangler", "acid_cannon"], "modelLimit": "1/3"}
-                    ],
+                    "options": [{"replaceWeapon": "consumer", "withWeapon": ["spiked_strangler", "acid_cannon"], "modelLimit": "1/3"}],
                     "min": 2,
                     "max": 8
                 }
@@ -178,6 +185,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 4,
+                    "wounds": 1,
                     "movement": 8,
                     "weapons": ["meat_borer", "ccw"],
                     "options": [{"replaceWeapon": "meat_borer", "withWeapon": ["consumer"]}],
@@ -194,14 +202,27 @@
             "category": "core",
             "rules": ["agile"],
             "models": [
-                {"name": "Assault Grunt", "courage": 4, "shoot": 0, "fight": 6, "defense": 4, "reflexes": 4, "movement": 8, "weapons": [{"id": "razor_talons", "count": 2}], "min": 10, "max": 30}
+                {
+                    "name": "Assault Grunt",
+                    "courage": 4,
+                    "shoot": 0,
+                    "fight": 6,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "movement": 8,
+                    "weapons": [{"id": "razor_talons", "count": 2}],
+                    "min": 10,
+                    "max": 30
+                }
             ]
         },
         "hive_swarm": {
             "name": "Hive Swarm",
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
-            "rules": ["ambush", {"id": "wounds", "x": 2}],
+            "keywords": ["Swarm"],
+            "rules": ["ambush", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Hive Swarm",
@@ -222,7 +243,7 @@
             "name": "Transport Spore",
             "description": "A floating spore which can hover across the battlefield or be launched from hive ships",
             "category": "transport",
-            "rules": ["hover", "ambush", "damage_table_monster"],
+            "rules": ["hover", "ambush", "damage_table_monster", {"id": "transport", "x": 20}],
             "models": [
                 {
                     "name": "Transport Spore",
@@ -279,12 +300,63 @@
                     "max": 6
                 }
             ]
+        },
+        "lurker": {
+            "name": "Lurker",
+            "description": "Working alone, Lurkers hide in the shadows waiting for the moment to strike",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}, "stealth", "ambush"],
+            "models": [
+                {
+                    "name": "Lurker",
+                    "courage": 7,
+                    "reflexes": 7,
+                    "fight": 7,
+                    "shoot": 5,
+                    "defense": 6,
+                    "movement": 9,
+                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 2}, "piercing_claws"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_beast": {
+            "name": "Psychic Beast",
+            "description": "",
+            "category": "specialist",
+            "rules": ["damage_table_monster"],
+            "models": [
+                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 6, "shoot": 5, "defense": 11, "movement": 7, "weapons": [{"id": "large_razor_talons", "count": 3}], "min": 1, "max": 1}
+            ]
+        },
+        "flame_beasts": {
+            "name": "Flame Beasts",
+            "description": "",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Flame Beast",
+                    "courage": 4,
+                    "reflexes": 4,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 7,
+                    "movement": 5,
+                    "weapons": ["flame_spit", {"id": "acidic_jaws", "count": 2}],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
         }
     },
     "models": {},
     "weapons": {
+        "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
+        "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
-        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect"]},
+        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect", "flame"]},
         "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
@@ -296,7 +368,7 @@
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "consumer": {"name": "Consumer", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
         "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
-        "acid_spitter": {"name": "Acidspitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+        "acid_spitter": {"name": "Acid Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
         "spiked_strangler": {"name": "Spiked Strangler", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
         "acid_cannon": {"name": "Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
