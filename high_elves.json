@@ -34,11 +34,11 @@
     "weapons": {
         "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "rending"]},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", {"id": "poison", "x": 2}]},
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 4, "damage": 6, "rules": ["pistol"]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 4,  "rules": ["pistol"]},
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 4, "short": "Melee", "rules": ["rending"]},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 1, "short": "Melee", "damage": 3}
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 1, "short": "Melee"}
     },
     "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}},
     "relics": []

@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -41,7 +41,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -66,7 +66,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "blur_field", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -95,7 +95,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "blur_field", "agile", {"id": "wounds", "x": 3}],
+            "rules": ["leader", "agile", {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -119,7 +119,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["blur_field", "agile"],
+            "rules": ["agile"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -149,7 +149,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["blur_field", "agile"],
+            "rules": ["agile"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -173,7 +173,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["hover", "blur_field", {"id": "wounds", "x": 2}],
+            "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Biker"],
             "models": [
                 {
@@ -197,7 +197,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
         },
@@ -207,7 +207,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "blur_field", "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -229,17 +229,17 @@
     "weapons": {
         "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"], "ap": 1},
-        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2, "damage": 2},
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
         "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap": 3},
-        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 6, "short": "Melee", "damage": 3},
+        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 6, "short": "Melee"},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap": 2},
         "sniper_cannon": {
             "name": "Sniper Cannon",
             "profiles": [
-                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3, "damage": 2},
+                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3},
                 {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
             ]
         },
@@ -256,7 +256,7 @@
             ]
         },
         "plasma_grenade": {"name": "Plasma Grenade", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 12, "ap": 1, "attacks": 8}
     },
     "rules": {
@@ -264,19 +264,12 @@
         "blur_field": {"name": "Blur Field", "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.", "points": 2}
     },
     "strategies": {
-        "irridescent_blur": {
-            "name": "Irridescent Blur",
-            "phase": "activation",
-            "flavor": "The lightning fast movements of the elven keepers blind and confuse their enemies.",
-            "description": "Selected unit that has sprinted this round increases its Save value by 2.",
-            "cost": 1
-        },
         "speedy_defense": {
-            "name": "Speedy Defense",
+            "name": "Blur Field",
             "phase": "activation",
             "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dogde even the best gunman's bullets.",
-            "description": "Use this strategy when an elven keeper unit is targeted by a ranged or melee weapon. Subtract 1 from all hit rolls made from that weapon.",
-            "cost": 2
+            "description": "Use this strategy when an elven keeper unit is targeted by an enemy unit. That unit gets -1 Accuracy for this attack.",
+            "cost": 1
         },
         "dance_of_war": {
             "name": "Dance of War",
@@ -290,20 +283,6 @@
             "phase": "activation",
             "flavor": "The elven keepers are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
             "description": "Use after one of your units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
-            "cost": 2
-        },
-        "bloody_entrance": {
-            "name": "Bloody Entrance",
-            "phase": "activation",
-            "flavor": "The elven keepers delight in the performances of their dances of war. One of their favorite ones begins with a explosion of violence nearly before the enemy has perceived that they are in combat.",
-            "description": "Target a friendly elven keepers unit that has Charged. This unit gains +1 Damage for their melee weapons.",
-            "cost": 2
-        },
-        "dancers_in_the_dark": {
-            "name": "Dancers in the Dark",
-            "phase": "activation",
-            "flavor": "The elven keepers are adept at controlling their enmies perception and are able to hide in shadows and re-emerge in places where their foes least expect.",
-            "description": "Use this strategem before activating one elven keepers Infantry unit that is not in melee range of any enemy units. Remove this unit from the battlefield and redeploy anywhere outside of 9\" of any enemy units. This unit may not take a move or sprint action this round.",
             "cost": 2
         }
     },

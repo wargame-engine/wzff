@@ -659,17 +659,17 @@
         "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
     },
     "weapons": {
-        "exhalted_staff_of_change": {"name": "Exhalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4, "damage": 2},
-        "exhalted_power_hammer": {"name": "Exhalted Power Hammer", "attacks": 4, "short": "Melee", "ap": 5, "damage": 3},
-        "exhalted_power_spear": {"name": "Exhalted Power Spear", "attacks": 3, "short": "Melee", "ap": 7, "damage": 3},
+        "exhalted_staff_of_change": {"name": "Exhalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4},
+        "exhalted_power_hammer": {"name": "Exhalted Power Hammer", "attacks": 4, "short": "Melee", "ap": 5},
+        "exhalted_power_spear": {"name": "Exhalted Power Spear", "attacks": 3, "short": "Melee", "ap": 7},
         "exhalted_magic_beam": {"name": "Exhalted Magic Beam", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
         "exhalted_magic_bolt": {"name": "Exhalted Magic Bolt", "attacks": 3, "short": 6, "medium": 12, "ap": 5},
-        "change_blast": {"name": "Change Blast", "attacks": 1, "short": 9, "medium": 18, "ap": 7, "damage": 3},
+        "change_blast": {"name": "Change Blast", "attacks": 1, "short": 9, "medium": 18, "ap": 7},
         "power_staff": {"name": "Power Staff", "attacks": 2, "short": "Melee", "ap": 2},
         "ritual_daggers": {"name": "Ritual Daggers", "attacks": 2, "short": "Melee"},
         "magic_beam": {"name": "Magic Beam", "attacks": 2, "short": 6, "ap": 4},
         "magic_bolt": {"name": "Magic Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 4},
-        "parasitic_bite": {"name": "Parasitic Bite", "attacks": 3, "short": "Melee", "ap": 4, "damage": 2},
+        "parasitic_bite": {"name": "Parasitic Bite", "attacks": 3, "short": "Melee", "ap": 4},
         "quills": {"name": "Quills", "attacks": 2, "short": "Melee"},
         "disk_blades": {"name": "Disk Blades", "attacks": 2, "short": "Melee", "ap": 1},
         "tricksters_staff": {
@@ -685,34 +685,34 @@
         "changing_flames": {
             "name": "Changing Flames",
             "profiles": [
-                {"name": "Blue Flame", "attacks": 3, "short": 9, "medium": 18, "ap": 7, "damage": 2},
-                {"name": "Pink Flame", "attacks": 6, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]}
+                {"name": "Blue Flame", "attacks": 3, "short": 9, "medium": 18, "ap": 7},
+                {"name": "Pink Flame", "attacks": 6, "short": 6, "medium": 12, "ap": 3, "rules": []}
             ]
         },
         "flame_tongues": {"name": "Flame Tongues", "attacks": 3, "short": "Melee", "ap": 2},
-        "flickering_flames": {"name": "Flickering Flames", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame", "pistol"]},
-        "fangs_and_claws": {"name": "Fangs and Claws", "attacks": 9, "short": "Melee", "ap": 7, "damage": 2},
-        "power_cannon": {"name": "Power Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "damage": 2},
-        "power_claw": {"name": "Power Claw", "attacks": 5, "short": "Melee", "ap": 9, "damage": 3},
-        "phlegm_cannon": {"name": "Phlegm Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": [{"id": "blast", "x": 3}]},
-        "daemon_claw": {"name": "Daemon Claw", "attacks": 10, "short": "Melee", "ap": 6, "damage": 2},
-        "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 2, "short": "Melee", "ap": 3, "damage": 3},
-        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 1, "damage": 2, "rules": ["rending"]},
+        "flickering_flames": {"name": "Flickering Flames", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "fangs_and_claws": {"name": "Fangs and Claws", "attacks": 9, "short": "Melee", "ap": 7},
+        "power_cannon": {"name": "Power Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4},
+        "power_claw": {"name": "Power Claw", "attacks": 5, "short": "Melee", "ap": 9},
+        "phlegm_cannon": {"name": "Phlegm Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6,  "rules": [{"id": "blast", "x": 3}]},
+        "daemon_claw": {"name": "Daemon Claw", "attacks": 10, "short": "Melee", "ap": 6},
+        "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 2, "short": "Melee", "ap": 3},
+        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 1,  "rules": ["rending"]},
         "tormenting_whips": {"name": "Tormenting Whips", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
-        "reaper_axle": {"name": "Reaper Axle", "attacks": 5, "short": "Melee", "ap": 5, "damage": 2},
+        "reaper_axle": {"name": "Reaper Axle", "attacks": 5, "short": "Melee", "ap": 5},
         "enrapturing_lyre": {
             "name": "Enrapturing Lyre",
-            "profiles": [{"name": "Raucous Melody", "attacks": 6, "short": 9, "medium": 18, "ap": 1}, {"name": "Melodious Blast", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3}]
+            "profiles": [{"name": "Raucous Melody", "attacks": 6, "short": 9, "medium": 18, "ap": 1}, {"name": "Melodious Blast", "attacks": 1, "short": 12, "medium": 24, "ap": 6}]
         },
-        "splitting_claws": {"name": "Splitting Claws", "attacks": 6, "short": "Melee", "ap": 4, "damage": 3, "rules": ["rending"]},
-        "souleating_sword": {"name": "Soul-eating Sword", "attacks": 6, "short": "Melee", "ap": 6, "damage": 3},
+        "splitting_claws": {"name": "Splitting Claws", "attacks": 6, "short": "Melee", "ap": 4,  "rules": ["rending"]},
+        "souleating_sword": {"name": "Soul-eating Sword", "attacks": 6, "short": "Melee", "ap": 6},
         "living_whip": {"name": "Living Whip", "attacks": 6, "short": 6, "ap": 4},
         "tormenting_whip": {
             "name": "Tormenting Whip",
             "profiles": [{"name": "Melee", "attacks": 8, "short": "Melee", "ap": 1, "rules": ["blast"]}, {"name": "Shooting", "attacks": 3, "short": 6, "ap": 2}]
         },
-        "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2, "damage": 2, "rules": ["rending"]},
-        "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2, "damage": 2}
+        "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2,  "rules": ["rending"]},
+        "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2}
     },
     "rules": {
         "disk_of_change": {

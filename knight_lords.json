@@ -274,34 +274,34 @@
         }
     },
     "weapons": {
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["fusion"]},
-        "mini_titan_sword": {"name": "Mini Titan Sword", "attacks": 3, "short": "Melee", "ap": 8, "damage": 2},
-        "titan_fist": {"name": "Titan Fist", "attacks": 2, "short": "Melee", "ap": 9, "damage": 6},
-        "titan_sword": {"name": "Titan Sword", "attacks": 3, "short": "Melee", "ap": 8, "damage": 4},
-        "titan_rocket_pod": {"name": "Titan Rocket Pod", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "damage": 3},
-        "titan_missile_pod": {"name": "Titan Missile Pod", "attacks": 3, "short": 24, "medium": 48, "ap": 2, "damage": 2, "rule": ["indirect"]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["fusion"]},
+        "mini_titan_sword": {"name": "Mini Titan Sword", "attacks": 3, "short": "Melee", "ap": 8},
+        "titan_fist": {"name": "Titan Fist", "attacks": 2, "short": "Melee", "ap": 9},
+        "titan_sword": {"name": "Titan Sword", "attacks": 3, "short": "Melee", "ap": 8},
+        "titan_rocket_pod": {"name": "Titan Rocket Pod", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
+        "titan_missile_pod": {"name": "Titan Missile Pod", "attacks": 3, "short": 24, "medium": 48, "ap": 2,  "rule": ["indirect"]},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 12, "short": 18, "medium": 36, "ap": 4},
         "pulse_laser": {
             "name": "Pulse Laser",
             "profiles": [
-                {"name": "High Intensity", "attacks": 3, "short": 9, "medium": 18, "ap": 9, "damage": 3},
-                {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4, "damage": 2}
+                {"name": "High Intensity", "attacks": 3, "short": 9, "medium": 18, "ap": 9},
+                {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4}
             ]
         },
-        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 7, "damage": 3, "rules": ["fusion"]},
+        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 7,  "rules": ["fusion"]},
         "plasma_battle_cannon": {
             "name": "Plasma Battle Cannon",
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 6}]},
-                {"name": "Overcharge", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}, {"id": "blast", "x": 6}]}
+                {"name": "Overcharge", "attacks": 1, "short": 24, "medium": 48, "ap": 6,  "rules": [{"id": "overheat"}, {"id": "blast", "x": 6}]}
             ]
         },
-        "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": [{"id": "blast", "x": 2}]},
-        "twin_shield_missiles": {"name": "Twin Shield Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 3, "rules": [{"id": "ammo", "x": 1}]},
-        "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10, "damage": 6},
-        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["fusion"]},
+        "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4,  "rules": [{"id": "blast", "x": 2}]},
+        "twin_shield_missiles": {"name": "Twin Shield Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 8,  "rules": [{"id": "ammo", "x": 1}]},
+        "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10},
+        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6,  "rules": ["fusion"]},
         "rapidfire_battle_cannon": {"name": "Rapid-fire Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
-        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5, "damage": 2, "rules": ["flame"]},
+        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5,  "rules": []},
         "harpoon_cannon": {
             "notes": "This profile needs to be looked at. Seems really swingy- either it misses or it devestates.",
             "name": "Harpoon Cannon",
@@ -309,7 +309,7 @@
             "short": 6,
             "medium": 12,
             "ap": 10,
-            "damage": 9
+            
         }
     },
     "rules": {

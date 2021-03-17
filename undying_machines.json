@@ -143,7 +143,7 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+            "rules": ["hover", {"id": "wounds", "x": 3}],
             "keywords": ["Swarm"],
             "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
@@ -153,7 +153,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "wounds", "x": 2}],
             "keywords": ["Infantry"],
             "models": [{"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}]
         },
@@ -188,7 +188,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 3}],
+            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -213,7 +213,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 3}],
+            "rules": [],
             "keywords": ["Infantry"],
             "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
             "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
@@ -224,7 +224,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "resilient", "x": 3}],
+            "rules": [],
             "keywords": ["Infantry"],
             "options": [
                 {"replaceWeapon": "rod", "withWeapon": [{"id": "war_scythe", "count": 2}, {"id": "phase_sword", "count": 2}, ["antimatter_pistol", "void_sword"]], "modelLimit": "all"},
@@ -239,7 +239,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 3}, "fear"],
+            "rules": ["fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
             "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
@@ -250,7 +250,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["ambush", {"id": "resilient", "x": 3}],
+            "rules": ["ambush"],
             "keywords": ["Infantry"],
             "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
         },
@@ -491,7 +491,7 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "metal_fangs"}, {"id": "stomp", "count": 2}],
+                    "weapons": [{"id": "metal_fangs"}],
                     "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "dark_prism", "swarm_fabricator"]}],
                     "min": 1,
                     "max": 1
@@ -590,15 +590,15 @@
             "weapons": ["feeding_teeth"],
             "min": 3,
             "max": 6,
-            "rules": [{"id": "resilient", "x": 3}, "hover"]
+            "rules": ["hover"]
         }
     },
     "weapons": {
         "heat_ray": {
             "name": "Heat Ray",
             "profiles": [
-                {"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["flame"]},
-                {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]}
+                {"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": []},
+                {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": []}
             ]
         },
         "doom_cannon": {
@@ -608,22 +608,22 @@
                 {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
-        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9, "damage": 2, "rules": [{"id": "blast", "x": 3}]},
-        "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "damage": 2},
-        "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1, "damage": 1},
-        "metal_fangs": {"name": "Metal Fangs", "attacks": 3, "short": "Melee", "ap": 4, "damage": 2},
+        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9,  "rules": [{"id": "blast", "x": 3}]},
+        "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
+        "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1},
+        "metal_fangs": {"name": "Metal Fangs", "attacks": 3, "short": "Melee", "ap": 4},
         "techno_beam": {"name": "Techno-Beam", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol"]},
         "techno_scythes": {"name": "Techno-Scythes", "attacks": 3, "short": "Melee", "ap": 2},
-        "whip_coil": {"name": "Whip Coil", "attacks": 1, "short": "Melee", "ap": 4, "damage": 2, "rules": ["snare"]},
+        "whip_coil": {"name": "Whip Coil", "attacks": 1, "short": "Melee", "ap": 4,  "rules": ["snare"]},
         "flaying_claws": {"name": "Flaying Claws", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 5, "damage": 1},
-        "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 5, "damage": 2},
-        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5, "damage": 3},
+        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 5},
+        "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 5},
+        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5},
         "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 3, "short": "Melee"},
         "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
-        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "damage": 2, "rules": ["rending"]},
+        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4,  "rules": ["rending"]},
         "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": []},
         "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": []},
@@ -641,8 +641,8 @@
         "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 2},
         "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
         "void_sword": {"name": "Void Sword", "attacks": 2, "short": "Melee", "ap": 2},
-        "void_scythe": {"name": "Void Scythe", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
-        "war_scythe": {"name": "War Scythe", "attacks": 1, "short": "Melee", "ap": 3, "damage": 2},
+        "void_scythe": {"name": "Void Scythe", "attacks": 2, "short": "Melee", "ap": 6},
+        "war_scythe": {"name": "War Scythe", "attacks": 1, "short": "Melee", "ap": 3},
         "antimatter_pistol": {"name": "Antimatter Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
         "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
@@ -653,8 +653,8 @@
             "name": "Guardian Rod",
             "profiles": [{"name": "Melee", "attacks": 2, "short": "Melee", "ap": 3}, {"name": "Shoot", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]}]
         },
-        "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "damage": 3},
-        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "damage": 2},
+        "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
+        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
         "gravity_pulse": {"name": "Gravity Pulse", "attacks": 6, "short": "Melee", "ap": 2}
     },
     "rules": {
@@ -700,9 +700,9 @@
             "cost": 1
         },
         {
-            "name": "Enhanced Regeneration",
+            "name": "Reanimation",
             "phase": "activation",
-            "description": "Use before an Infantry unit with Regeneration makes a Save roll. That unit gets Regeneration(+1).",
+            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored.",
             "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
             "cost": 2
         },

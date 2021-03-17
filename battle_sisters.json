@@ -370,13 +370,13 @@
     },
     "weapons": {
         "walker_flail": {"name": "Walker Flail", "attacks": 2, "ap": 3, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
-        "walker_saw": {"name": "Walker Saw", "attacks": 2, "ap": 6, "damage": 2, "short": "Melee"},
+        "walker_saw": {"name": "Walker Saw", "attacks": 2, "ap": 6,  "short": "Melee"},
         "shock_whip": {"name": "Shock Whip", "attacks": 2, "ap": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
         "organ_missiles": {
             "name": "Organ Missiles",
             "profiles": [
                 {"name": "HE", "attacks": 3, "ap": 3, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 2}, "indirect"]},
-                {"name": "AT", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "damage": 3, "rules": ["indirect"]}
+                {"name": "AT", "attacks": 2, "ap": 6, "short": 24, "medium": 48,  "rules": ["indirect"]}
             ]
         }
     },

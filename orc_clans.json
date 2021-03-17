@@ -36,12 +36,12 @@
                     "reflexes": 6,
                     "movement": 5,
                     "rules": ["leader", {"id": "wounds", "x": 3}],
-                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 5}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 5},
+                            "withWeapon": [{"id": "ultra_drill", "count": 5}, {"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
                         },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]}
                     ],
@@ -60,6 +60,7 @@
             "models": [
                 {
                     "name": "Mechanic",
+                    "movement": 5,
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
@@ -84,7 +85,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Goblin Assistant", "courage": 2, "shoot": 3, "fight": 3, "defense": 3, "reflexes": 2, "weapons": ["heavy_ccw"], "rules": [{"id": "repair", "x": 1}], "min": 0, "max": 1}
+                {"name": "Goblin Assistant", "movement": 6, "courage": 2, "shoot": 3, "fight": 3, "defense": 3, "reflexes": 2, "weapons": ["heavy_ccw"], "rules": [{"id": "repair", "x": 1}], "min": 0, "max": 1}
             ]
         },
         "warbanner_boss": {
@@ -97,11 +98,12 @@
             "models": [
                 {
                     "name": "Warbanner Boss",
+                    "movement": 5,
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
@@ -125,11 +127,12 @@
             "models": [
                 {
                     "name": "Mad Doctor",
+                    "movement": 5,
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
-                    "defense": 5,
-                    "reflexes": 4,
+                    "defense": 7,
+                    "reflexes": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
@@ -156,8 +159,8 @@
                     "courage": 5,
                     "shoot": 4,
                     "fight": 6,
-                    "defense": 5,
-                    "reflexes": 4,
+                    "defense": 7,
+                    "reflexes": 5,
                     "movement": 5,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -336,7 +339,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["fly", "ambush"],
+            "rules": ["fly"],
             "models": [
                 {
                     "name": "Storm Orc Boss",
@@ -382,7 +385,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth", "ambush"],
+            "rules": ["stealth", "outflank"],
             "models": [
                 {
                     "name": "Commando Orc Boss",
@@ -422,8 +425,8 @@
                 }
             ]
         },
-        "specialist_orcs": {
-            "name": "Specialist Orcs",
+        "specialist_mob": {
+            "name": "Specialist Mob",
             "description": "A group of orcs who can be equipped to specialize in specific combat roles.",
             "min": 1,
             "max": 1,
@@ -467,7 +470,7 @@
             "category": "specialist",
             "rules": ["relentless"],
             "options": [
-                {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": ["cutlass"], "modelLimit": "all"},
+                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": [{"id": "cutlass", "count": 2}], "modelLimit": "all"},
                 {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
             ],
             "models": [
@@ -479,7 +482,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "movement": 5,
-                    "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+                    "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 0,
                     "max": 1
                 },
@@ -491,7 +494,7 @@
                     "defense": 7,
                     "reflexes": 5,
                     "movement": 5,
-                    "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 3}, "frags"],
+                    "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "min": 5,
                     "max": 10
                 }
@@ -634,7 +637,7 @@
                 },
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
-            "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Boss Biker Leader",
@@ -669,7 +672,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": ["leader", {"id": "impact", "x": 3}, "relentless", "damage_table_vehicle"],
+            "rules": ["leader", "relentless", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Boss Trike",
@@ -692,7 +695,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["fly", {"id": "impact", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": ["fly", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Orc Minicopter",
@@ -719,7 +722,7 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "resilient", "x": 3}, {"id": "open_topped", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "open_topped", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Truck",
@@ -822,7 +825,7 @@
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun"}],
                     "options": [
-                        {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
+                        {"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": {"id": "rocket_launcher"}},
                         {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
                         {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"},
                         {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon"], "limit": 1},
@@ -909,7 +912,7 @@
                     "defense": 9,
                     "reflexes": 4,
                     "movement": 6,
-                    "weapons": [{"id": "plasma_rifle"}, "stomp", "mini_claw"],
+                    "weapons": [{"id": "plasma_rifle"}, "mini_claw"],
                     "options": [{"replaceWeapon": {"id": "plasma_rifle"}, "withWeapon": ["heavy_flamethrower", "rocket_launcher", "heavy_machinegun", "goblin_bazooka"]}],
                     "min": 1,
                     "max": 3
@@ -932,7 +935,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": [{"id": "plasma_rifle", "count": 2}, {"id": "stomp", "count": 2}, {"id": "walker_claw", "count": 2}],
+                    "weapons": [{"id": "plasma_rifle", "count": 2}, {"id": "walker_claw", "count": 2}],
                     "options": [
                         {"replaceWeapon": "plasma_rifle", "withWeapon": ["walker_claw", "rocket_launcher", "heavy_flamethrower", "heavy_machinegun"]},
                         {"replaceWeapon": "walker_claw", "withWeapon": ["walker_saw"]}
@@ -1119,9 +1122,9 @@
                     "defense": 9,
                     "reflexes": 4,
                     "movement": 10,
-                    "weapons": [{"id": "smasher_cannon", "count": 1, "mount": ["Front"]}, {"id": "twin_teleport_rifle", "count": 2, "mount": ["Front"]}],
+                    "weapons": [{"id": "smasher_cannon", "count": 1, "mount": ["Front"]}, {"id": "twin_plasma_cannon", "mount": ["Front"]}],
                     "options": [
-                        {"replaceWeapon": {"id": "twin_teleport_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_plasma_cannon", "mount": ["Front"]}]},
+                        {"replaceWeapon": {"id": "twin_plasma_cannon", "mount": ["Front"]}, "withWeapon": [{"id": "twin_teleport_rifle", "mount": ["Front"]}]},
                         {"addWeapon": {"id": "twin_super_machinegun", "mount": ["Front"]}},
                         {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}]}
                     ],
@@ -1217,7 +1220,7 @@
                     "defense": 12,
                     "reflexes": 5,
                     "movement": 8,
-                    "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, {"id": "mega_claw", "count": 2}, {"id": "heavy_stomp", "count": 4}],
+                    "weapons": [{"id": "deathstorm_plasma_cannon", "mount": ["Front"]}, {"id": "mega_claw", "count": 3}],
                     "options": [
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 2, "mount": ["Front"]}], "limit": 1},
                         {"addWeapon": [{"id": "twin_heavy_machinegun", "count": 2}, {"id": "rocket_launcher", "count": 2}], "limit": 1},
@@ -1237,7 +1240,7 @@
             "min": 1,
             "max": 1,
             "keywords": ["Super Heavy Vehicle"],
-            "rules": ["vulnerable_rear", "titanic", "damage_table_titan"],
+            "rules": ["vulnerable_rear", "damage_table_titan"],
             "models": [
                 {
                     "name": "Super Heavy Walker",
@@ -1247,11 +1250,10 @@
                     "defense": 13,
                     "reflexes": 5,
                     "movement": 8,
-                    "weapons": [{"id": "mega_claw", "count": 4}, {"id": "heavy_stomp", "count": 5}],
+                    "weapons": [{"id": "mega_claw", "count": 4}, {"id": "heavy_stomp", "count": 5}, {"id": "death_cannon", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": {"id": "mega_claw", "count": 2}, "withWeapon": ["mega_saw", "heavy_tractor_cannon"]},
                         {"replaceWeapon": {"id": "mega_claw", "count": 2}, "withWeapon": [[{"id": "super_gatling_gun", "mount": ["Front"]}]]},
-                        {"addWeapon": {"id": "death_cannon", "mount": ["Front"]}},
                         {"addWeapon": [{"id": "super_rocket_launcher", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}], "limit": 3},
                         {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}, {"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
@@ -1265,16 +1267,16 @@
     "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["beast_bite"], "min": 0, "max": 1}},
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24},
-        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "damage": 3},
-        "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "damage": 3},
-        "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": ["anti_air"]},
-        "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "damage": 3, "rules": ["anti_air"]},
+        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
+        "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
+        "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6,  "rules": ["anti_air"]},
+        "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6,  "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "cannon": {
             "name": "Cannon",
             "profiles": [
-                {"name": "HE", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "damage": 2}
+                {"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 6}
             ]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
@@ -1282,28 +1284,28 @@
         "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
         "death_cannon": {"name": "Death Cannon", "attacks": 1, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-        "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 5, "damage": 2},
-        "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 6, "damage": 3},
-        "mega_claw": {"name": "Mega-Claw", "attacks": 1, "short": "Melee", "ap": 8, "damage": 4},
-        "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6, "damage": 3},
-        "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6, "damage": 2},
+        "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 5},
+        "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 6},
+        "mega_claw": {"name": "Mega-Claw", "attacks": 1, "short": "Melee", "ap": 8},
+        "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
+        "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 4},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 4},
-        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
         "twin_teleport_rifle": {"name": "Twin Teleport Rifle", "attacks": 2, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
-        "boarding_pistol": {"name": "Boarding Pistol", "attacks": 3, "short": 6, "ap": 2, "medium": 12},
-        "boarding_gun": {"name": "Boarding Gun", "attacks": 3, "short": 12, "ap": 4, "medium": 24},
+        "boarding_pistol": {"name": "Boarding Pistol", "attacks": 2, "short": 6, "ap": 2, "medium": 12},
+        "boarding_gun": {"name": "Boarding Gun", "attacks": 2, "short": 12, "ap": 4, "medium": 24},
         "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
         "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 5}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "carbine": {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "twin_carbine": {"name": "Twin Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 6, "damage": 3},
+        "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 6},
         "super_carbine": {"name": "Super Carbine", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
@@ -1311,35 +1313,35 @@
             "name": "Combi Heavy Flamer",
             "profiles": [
                 {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 9, "medium": 18, "rules": ["flame"]}
+                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 9, "medium": 18, "rules": []}
             ]
         },
         "combi_rocket_launcher": {
             "name": "Combi Rocket Launcher",
             "profiles": [
                 {"name": "Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
-                {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]}
+                {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]}
             ]
         },
-        "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 3, "short": "Melee"},
-        "ultra_drill": {"name": "Ultra Drill", "ap": 2, "attacks": 2, "short": "Melee"},
-        "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
-        "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 6, "damage": 2, "short": "Melee"},
-        "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "damage": 3, "ap": 6, "short": "Melee"},
-        "beast_bite": {"name": "Beast Bite", "attacks": 2, "damage": 1, "ap": 1, "short": "Melee"},
-        "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
-        "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "damage": 3},
-        "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "damage": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
-        "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 3, "rules": ["assault"]},
-        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "damage": 3, "rules": ["assault", "pistol"]},
-        "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "damage": 1, "short": 6, "medium": 12, "rules": ["flame", "assault"]},
-        "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "damage": 4, "short": "Melee"},
-        "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "damage": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
-        "flame_bombs": {"name": "Flame Bombs", "attacks": 2, "damage": 1, "ap": 2, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}, "flame"]},
-        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "damage": 1, "ap": 4, "short": 6, "rules": ["bomb", {"id": "blast", "x": 6}]},
-        "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "damage": 1, "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}, "flame"]},
-        "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "damage": 2, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-        "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "damage": 3, "ap": 4, "short": "Melee"},
+        "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
+        "ultra_drill": {"name": "Ultra Drill", "ap": 2, "attacks": 1, "short": "Melee"},
+        "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee"},
+        "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4,  "short": "Melee"},
+        "ultra_claw": {"name": "Ultra Claw", "attacks": 1,  "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
+        "beast_bite": {"name": "Beast Bite", "attacks": 2,  "ap": 1, "short": "Melee"},
+        "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]},
+        "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7},
+        "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3,  "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
+        "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]},
+        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6,  "rules": ["assault", "pistol"]},
+        "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1,  "short": 6, "medium": 12, "rules": ["assault"]},
+        "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7,  "short": "Melee"},
+        "assault_bomb": {"name": "Assault Bomb", "attacks": 1,  "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
+        "flame_bombs": {"name": "Flame Bombs", "attacks": 2,  "ap": 2, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
+        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1,  "ap": 4, "short": 6, "rules": ["bomb", {"id": "blast", "x": 6}]},
+        "flame_missiles": {"name": "Flame Missiles", "attacks": 2,  "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6,  "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+        "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3,  "ap": 4, "short": "Melee"},
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2}
     },
     "rules": {
@@ -1403,62 +1405,22 @@
         "teleport": {"name": "Jump Teleport", "description": "Target friendly unit within 12\" may immediately move up to 12\" ignoring models and terrain.", "charge": 6},
         "psychic_vomit": {"name": "Psychic Vomit", "description": "Target enemy unit within 12\" takes 4 hits with AP 2.", "charge": 6}
     },
-    "relics": [
-        {"rule": "biggest_boss", "flavor": "The biggest boss man.", "filter": {"keywords": ["Infantry"]}},
-        {"weapon": "sharpest_claw", "flavor": "A deadly ultra claw with the power to rip anything to shreds.", "filter": {"keywords": ["Infantry"]}},
-        {"rule": "war!", "flavor": "A true warlord knows how to inspire and this war chant does this and more.", "filter": {"keywords": ["Infantry"]}},
-        {"rule": "war_banner", "flavor": "A powerful looking banner can inspire strength some didn't even know they had.", "filter": {"keywords": ["Infantry"]}}
-    ],
+    "relics": [],
     "strategies": {
         "war!": {"name": "WAR!", "phase": "activation", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
-        "group_up": {
+        "ramshackle": {
             "subfactions": ["none", "goblin_army"],
             "phase": "activation",
-            "name": "Group Up",
-            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "name": "Ramshackle",
+            "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
+            "description": "Use when a Vehicle unit is targetted by an attack. Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less the attack is ignored.",
             "cost": 1
-        },
-        "full_speed": {"name": "Full Speed", "phase": "activation", "description": "Use when a Vehicle is declared to charge an enemy unit. That Vehicle gains +3 Impact.", "cost": 1},
-        "scrap_armor": {
-            "subfactions": ["none", "goblin_army"],
-            "phase": "activation",
-            "name": "Scrap Armor",
-            "description": "Use when activating an Infantry unit. If that unit ends its activation within 3\" of a destroyed vehicle it may choose not to shoot or fight but gain +1 Save (to a maximum of 7) for the rest of the battle.",
-            "cost": 1
-        },
-        "grab_on": {
-            "subfactions": ["none", "goblin_army"],
-            "phase": "activation",
-            "name": "Grab On",
-            "description": "Use when a Vehicle with the Transport keyword is activated. One friendly infantry unit within 3\" may be picked up and moved within 3\" of the vehicle's final location.",
-            "cost": 2
         },
         "goblin_shield": {
             "name": "Goblin Shield",
             "phase": "activation",
             "description": "Use after an Infantry unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Goblin Herd unit within 5\" of it, and the Goblin Herd unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the Goblin Herd instead of the original target.",
             "cost": 2
-        },
-        "never_surrender": {
-            "subfactions": ["none", "goblin_army"],
-            "phase": "activation",
-            "name": "Never Surrender",
-            "description": "Use after a Character has been killed. That unit may shoot or fight if it has not yet activated, after which it is removed.",
-            "cost": 2
-        },
-        "force_field_projector": {
-            "name": "Force Field Projector",
-            "phase": "activation",
-            "description": "Use at the start of the round. Choose a unit with the 'Force Field' rule. For the rest of the round, that force field applies to friendly units within 5\".",
-            "cost": 3
-        },
-        "spread_out": {
-            "subfactions": ["goblin_army"],
-            "phase": "activation",
-            "name": "Spread Out",
-            "description": "Use before activating an Infantry unit. That unit may be split into two units of no less than 5 models.",
-            "flavor": "Goblins often split off into small raiding units in order to cover more ground.",
-            "cost": 1
         },
         "tune_up": {
             "subfactions": ["goblin_army"],

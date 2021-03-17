@@ -731,7 +731,7 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": [{"id": "brute_fist", "count": 2}, "stomp"],
+                    "weapons": [{"id": "brute_fist", "count": 2}],
                     "options": [
                         {
                             "replaceWeapon": "brute_fist",
@@ -771,7 +771,7 @@
                     "fight": 7,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": ["bane_flamethrower", "maul_cutter", "claws", "chainsaw_glaive", "stomp"],
+                    "weapons": ["bane_flamethrower", "maul_cutter", "claws", "chainsaw_glaive"],
                     "options": [{"replaceWeapon": "bane_flamethrower", "withWeapon": ["autocannon"]}, {"replaceWeapon": "maul_cutter", "withWeapon": ["virus_injector"]}],
                     "rules": [],
                     "min": 1,
@@ -846,7 +846,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 4,
-                    "weapons": [{"id": "excruciating_cannons", "count": 2}, "claws_and_tendrils", {"id": "stomp", "count": 2}],
+                    "weapons": [{"id": "excruciating_cannons", "count": 2}, "claws_and_tendrils"],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -870,7 +870,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 4,
-                    "weapons": ["battle_cannon", "crab_claw", "crab_flail", "reaper_cannon", "stomp"],
+                    "weapons": ["battle_cannon", "crab_claw", "crab_flail", "reaper_cannon"],
                     "options": [
                         {"replaceWeapon": "crab_flail", "withWeapon": ["twin_heavy_flamethrower", "havoc_missiles"]},
                         {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
@@ -1144,16 +1144,16 @@
         "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2},
         "reaper_minigun": {"name": "Reaper Minigun", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
-        "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "damage": 2},
-        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 4, "medium": 8, "ap": 3, "rules": ["flame"]},
+        "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 12, "medium": 24, "ap": 6},
+        "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 6, "short": 4, "medium": 8, "ap": 3, "rules": []},
         "hexed_blades": {"name": "Hexed Blades", "attacks": 3, "short": "Melee", "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 2, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
-        "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2, "damage": 2},
-        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7, "damage": 3},
+        "super_staff": {"name": "Super Staff", "attacks": 2, "short": "Melee", "ap": 2},
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 18, "attacks": 10},
         "psychic_inferno": {"medium": 12, "ap": 4, "attacks": 5},
-        "change_bolt": {"medium": 18, "ap": 7, "attacks": 1, "damage": 3},
+        "change_bolt": {"medium": 18, "ap": 7, "attacks": 1},
         "claws": {"name": "Mutated Claws", "attacks": 3, "short": "Melee", "ap": 3}
     },
     "rules": {

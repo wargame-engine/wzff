@@ -11,7 +11,7 @@
             "name": "Hive Lord",
             "description": "A representation of the hive mind itself come to direct the swarm's attacks",
             "category": "command",
-            "rules": ["hive_mind", "damage_table_monster"],
+            "rules": [ "damage_table_monster"],
             "models": [
                 {
                     "name": "Hive Lord",
@@ -57,7 +57,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader", "outflank", {"id": "wounds", "x": 3}],
+            "rules": [ "leader", "outflank", {"id": "wounds", "x": 3}],
             "models": [
                 {"name": "Snatcher Lord", "courage": 8, "shoot": 0, "fight": 8, "defense": 8, "reflexes": 8, "movement": 8, "weapons": [{"id": "large_piercing_claws", "count": 6}], "min": 1, "max": 1}
             ]
@@ -91,7 +91,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["hive_mind", "leader", {"id": "wounds", "x": 3}],
+            "rules": [ "leader", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Hive Warrior Prime",
@@ -130,7 +130,7 @@
                     "reflexes": 6,
                     "movement": 6,
                     "weapons": ["consumer", {"id": "razor_talons", "count": 3}],
-                    "rules": ["hive_mind"],
+                    "rules": [],
                     "options": [
                         {
                             "replaceWeapon": "consumer",
@@ -284,7 +284,7 @@
     "models": {},
     "weapons": {
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
-        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect", "flame"]},
+        "impaler_lance": {"name": "Impaler Lance", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["indirect"]},
         "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
@@ -310,7 +310,6 @@
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {
-        "hive_mind": {"name": "Hive Mind", "description": "Friendly Infantry units within 12\" may use this unit's Courage value when taking Courage tests.", "points": 10},
         "wings": {
             "name": "Wings",
             "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 5\" movement.",
@@ -320,5 +319,13 @@
     },
     "powers": {},
     "relics": [],
-    "strategies": []
+    "strategies": [
+        {
+            "name": "Hive Mind",
+            "phase": "activation",
+            "description": "Use at the beginning of the activation phase on a the Hive Mind unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
+            "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
+            "cost": 1
+        }
+    ]
 }

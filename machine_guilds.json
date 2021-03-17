@@ -498,7 +498,7 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 7,
-                    "weapons": [{"id": "robot_fist", "count": 2}, {"id": "heavy_stomp", "count": 1}, "heavy_flamethrower"],
+                    "weapons": [{"id": "robot_fist", "count": 2}, "heavy_flamethrower"],
                     "options": [
                         {"replaceWeapon": {"id": "robot_fist", "count": 2}, "withWeapon": [{"id": "phosphor_cannon", "count": 2}]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["phosphor_cannon"]},
@@ -526,7 +526,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": ["taser_lance", {"id": "heavy_stomp", "count": 1}],
+                    "weapons": ["taser_lance"],
                     "options": [{"addWeapon": ["radiation_carbine"]}, {"replaceWeapon": "taser_lance", "withWeapon": ["radiation_sniper"]}],
                     "min": 1,
                     "max": 3
@@ -550,7 +550,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "twin_autocannon"}, {"id": "heavy_stomp", "count": 1}],
+                    "weapons": [{"id": "twin_autocannon"}],
                     "options": [{"replaceWeapon": "twin_autocannon", "withWeapon": ["twin_laser_cannon"]}],
                     "min": 1,
                     "max": 3
@@ -595,38 +595,38 @@
             "name": "Mini Plasma Cannon",
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 2, "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6,  "rules": [{"id": "blast", "x": 3}, {"id": "overheat"}]}
             ]
         },
         "energy_cannon": {"name": "Energy Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 3}, "indirect"]},
-        "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6, "damage": 3},
-        "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "damage": 2, "rules": ["emp"]},
-        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 3, "short": 18, "medium": 36, "ap": 5, "damage": 2},
-        "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "damage": 3},
+        "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4,  "rules": ["emp"]},
+        "disruption_missiles": {"name": "Disruption Missiles", "attacks": 3, "short": 18, "medium": 36, "ap": 5},
+        "contortion_cannon": {"name": "Contortion Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6},
         "revolver_pistol": {"name": "Revolver Pistol", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
         "raider_sabre": {"name": "Raider Sabre", "attacks": 2, "ap": 1, "short": "Melee"},
         "blaster_smg": {"name": "Blaster SMG", "attacks": 3, "short": 6, "medium": 12, "rules": ["pistol"]},
         "phosphor_breath": {"name": "Phosphor Breath", "attacks": 3, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
         "blaster_carbine": {"name": "Blaster Carbine", "attacks": 2, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
-        "axe_halberd": {"name": "Axe-Halberd", "attacks": 2, "ap": 3, "damage": 2, "short": "Melee"},
+        "axe_halberd": {"name": "Axe-Halberd", "attacks": 2, "ap": 3,  "short": "Melee"},
         "staff": {"name": "Staff", "attacks": 3, "ap": 2, "short": "Melee"},
         "shock_staff": {"name": "Shock Staff", "attacks": 2, "ap": 3, "short": "Melee"},
         "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "sonic_razor": {"name": "Sonic Razor", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
         "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
-        "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8, "damage": 3},
+        "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
         "taser_gauntlets": {
             "name": "Taser Gauntlets",
             "profiles": [{"name": "Strike", "ap": 1, "attacks": 2, "short": "Melee", "rules": ["taser"]}, {"name": "Zap", "ap": 1, "attacks": 2, "short": 6, "medium": 12, "rules": ["taser"]}]
         },
-        "taser_sword": {"name": "Taser Sword", "attacks": 2, "damage": 1, "ap": 2, "short": "Melee", "rules": ["taser"]},
+        "taser_sword": {"name": "Taser Sword", "attacks": 2,  "ap": 2, "short": "Melee", "rules": ["taser"]},
         "taser_lance": {"name": "Taser Lance", "attacks": 3, "ap": 2, "short": "Melee", "rules": ["taser", {"id": "impact", "x": 3}]},
-        "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2, "damage": 1, "short": "Melee", "rules": ["taser"]},
-        "taser_maul": {"name": "Taser Maul", "attacks": 2, "ap": 3, "damage": 2, "short": "Melee", "rules": ["taser"]},
-        "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "damage": 2, "rules": ["sniper"]},
-        "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "damage": 2, "medium": 30, "ap": 2, "rules": ["sniper", "radiation"]},
-        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "radiation"]},
+        "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2,  "short": "Melee", "rules": ["taser"]},
+        "taser_maul": {"name": "Taser Maul", "attacks": 2, "ap": 3,  "short": "Melee", "rules": ["taser"]},
+        "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4,  "rules": ["sniper"]},
+        "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15,  "medium": 30, "ap": 2, "rules": ["sniper"]},
+        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "rifle": {"name": "Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
@@ -634,19 +634,19 @@
             "name": "Plasma Burst Carbine",
             "profiles": [
                 {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "damage": 2, "rules": [{"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6,  "rules": [{"id": "overheat"}]}
             ]
         },
-        "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "damage": 2},
-        "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "damage": 2, "rules": ["flame"]},
+        "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
+        "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1,  "rules": []},
         "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
-        "neutron_laser": {"name": "Neutron Laster", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "damage": 6},
+        "neutron_laser": {"name": "Neutron Laster", "attacks": 1, "short": 24, "medium": 48, "ap": 8},
         "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol", "phosphor"]},
-        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "radiation"]},
-        "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "damage": 2, "rules": ["pistol"]},
+        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
+        "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4,  "rules": ["pistol"]},
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol", "emp"]},
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault", "phosphor"]},
         "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
@@ -656,7 +656,7 @@
         "aa_missiles": {
             "name": "AA Missile System",
             "profiles": [
-                {"name": "Hunter", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "damage": 3, "rules": ["anti_air"]},
+                {"name": "Hunter", "attacks": 1, "short": 24, "medium": 48, "ap": 5,  "rules": ["anti_air"]},
                 {"name": "Gatling", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]}
             ]
         }
@@ -676,8 +676,7 @@
         },
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6 inch max range when shooting.", "points": 5},
         "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
-        "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]},
-        "radiation": {"name": "Radiation", "description": "On failed Save rolls of 9 or 10, the defender takes +1 Damage.", "points": ["weapon.attacks"]}
+        "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]}
     },
     "relics": [{"rule": "canticles", "flavor": "Some members of the Machine Guild have ascended far enough to perform machine miracles."}],
     "strategies": [

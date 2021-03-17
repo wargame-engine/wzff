@@ -24,6 +24,6 @@
             ]
         }
     },
-    "weapons": {"razor_claws": {"name": "Razor Claws", "attacks": 3, "short": "Melee", "ap": 3, "damage": 3, "rules": []}},
+    "weapons": {"razor_claws": {"name": "Razor Claws", "attacks": 3, "short": "Melee", "ap": 3,  "rules": []}},
     "rules": {}
 }

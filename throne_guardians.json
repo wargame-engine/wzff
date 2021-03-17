@@ -26,8 +26,8 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                                ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
-                                [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"]
+                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
+                                ["guardian_rifle", {"id": "heavy_ccw", "count": 4}]
                             ]
                         },
                         {"addWeapon": {"id": "guardian_dagger"}},
@@ -47,12 +47,10 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
-                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                        [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"]
+                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                     ]
                 },
                 {"addWeapon": "guardian_dagger"},
@@ -82,12 +80,11 @@
             "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 5}],
-                        [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                        [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"]
+                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                        [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                     ]
                 },
                 {"addWeapon": "guardian_dagger"},
@@ -135,17 +132,17 @@
         }
     },
     "weapons": {
-        "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 3},
-        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 6},
+        "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
+        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
         "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
-        "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
+        "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
         "guardian_rifle": {
             "name": "Guardian Rifle",
-            "profiles": [{"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 2}, {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "damage": 2}]
+            "profiles": [{"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 1}, {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3}]
         },
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
-        "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 3},
+        "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "eagle_lance": {"name": "Eagle Lance", "attacks": 1, "short": "Melee", "ap": 3, "rule": "+1 ap on charge"},
         "laser_spear": {
             "name": "Laser Spear",
@@ -163,24 +160,19 @@
     "strategies": [
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Tactical Flexibility",
-            "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
-            "flavor": "Marines often split off into small tactical units in order to cover more ground.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Genetically Engineered",
+            "phase": "activation",
+            "name": "Genetic Perfection",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Expert Marksmen",
-            "description": "Use before shooting with an Infantry unit. It gets +1 to hit.",
-            "flavor": "Expertly trained and well-drilled, marines can focus and kill their target swiftly.",
-            "cost": 2
+            "phase": "activation",
+            "name": "Psychic Shield",
+            "description": "Use when a Psychic(x) test is taken within 12\" of any Infantry unit. Roll a D10. On a 5 or less that Psychic(x) test fails.",
+            "flavor": "Shielded by holy energy, Throne Guardians can protect themselves from psychic powers.",
+            "cost": 1
         }
     ],
     "powers": {}
