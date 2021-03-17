@@ -21,7 +21,7 @@
                     "shoot": 6,
                     "fight": 7,
                     "defense": 11,
-                    "movement": 9,
+                    "movement": 8,
                     "weapons": [{"id": "large_razor_talons", "count": 4}, "grabbing_tail"],
                     "options": [
                         {
@@ -384,9 +384,9 @@
     "rules": {
         "wings": {
             "name": "Wings",
-            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 5\" movement.",
-            "description_short": "Fly, +5\" movement",
-            "points": [{"add": [3, {"multiply": ["constants.baseStats.movement", 5]}]}]
+            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
+            "description_short": "Fly, +4\" Move",
+            "points": [4, {"multiply": "constants.movementCost"}, {"add": 2}]
         }
     },
     "powers": {},
