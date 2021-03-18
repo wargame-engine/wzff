@@ -24,8 +24,12 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -49,11 +53,11 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
+                    "weapons": ["heavy_defense_rifle", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
-                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]}
+                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -78,8 +82,12 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -103,8 +111,11 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}],
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -749,15 +760,15 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "acid_cannon"],
+                    "weapons": [{"id": "heavy_fusion_rifle", "mount": ["Front"]}, "fusion_cannon"],
                     "options": [
                         {"addRule": [{"id": "strider", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
-                        {"replaceWeapon": "acid_cannon", "withWeapon": ["fusion_cannon", "flamestorm_cannon"]},
+                        {"replaceWeapon": "fusion_cannon", "withWeapon": ["acid_cannon", "flamestorm_cannon"]},
                         {
-                            "replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]},
-                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Front"]}]
+                            "replaceWeapon": {"id": "heavy_fusion_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]
                         }
                     ],
                     "min": 1,
@@ -929,7 +940,7 @@
         "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8,  "rules": [{"id": "blast", "x": 3}]},
-        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": []},
+        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": []},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
