@@ -293,7 +293,7 @@
             "name": "Blur Field",
             "phase": "activation",
             "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dogde even the best gunman's bullets.",
-            "description": "Use this strategy when an elven keeper unit is targeted by an enemy unit. That unit gets -1 Accuracy for this attack.",
+            "description": "Use this strategy when an elven keeper unit is targeted by an enemy unit. That unit gets -1 Accuracy and -1 Strength for this attack.",
             "cost": 1
         },
         "dance_of_war": {
