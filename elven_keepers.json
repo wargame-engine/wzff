@@ -130,7 +130,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
@@ -163,10 +163,10 @@
             "models": [
                 {
                     "name": "Mimes",
-                    "courage": 6,
+                    "courage": 5,
                     "movement": 7,
-                    "shoot": 5,
-                    "fight": 5,
+                    "shoot": 6,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
