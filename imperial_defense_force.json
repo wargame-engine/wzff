@@ -1005,7 +1005,6 @@
         "bolt": {"name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "power_bolt"}]}
     },
     "strategies": {
-        "more_grenades": {"name": "More Grenades", "phase": "activation", "description": "Use when shooting with an Infantry unit. Two additional models may use Grenade weapons.", "cost": 1},
         "regroup": {
             "name": "Regroup",
             "phase": "activation",
@@ -1015,15 +1014,14 @@
         "high_command": {
             "name": "High Command",
             "phase": "activation",
-            "description": "Use after an Infantry unit with the Field Orders rule activates. One additional unit may activate and benefit from Field Orders.",
-            "cost": 2
+            "description": "Use after an Infantry unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "cost": 1
         },
         "field_repairs": {
             "name": "Field Repairs",
             "phase": "activation",
-            "description": "Use when activating a Vehicle unit. Roll a D10. On a 5 or less the unit may repair one critical effect.",
+            "description": "Use when activating a Vehicle unit. That unit may remove one critical damage.",
             "cost": 2
-        },
-        "final_stand": {"name": "Final Stand", "phase": "activation", "description": "Use when a unit with a Field Radio is destroyed. All units within 3\" receive 3 hits with AP 2.", "cost": 3}
+        }
     }
 }
