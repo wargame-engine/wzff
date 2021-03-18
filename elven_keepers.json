@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", "agile", {"id": "keeper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -21,12 +21,13 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}, "plasma_grenade"],
+                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 5}, "plasma_grenade"],
                     "options": [
+                        {"replaceRule": {"id": "keeper_tactics", "x": 1}, "withRule": {"id": "keeper_tactics", "x": 2}},
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 4},
-                            "withWeapon": [{"id": "deathly_touch", "count": 2}, {"id": "deathly_caress", "count": 2}, {"id": "deathly_kiss", "count": 2}, {"id": "deathly_embrace", "count": 2}]
+                            "replaceWeapon": {"id": "jester_blade", "count": 5},
+                            "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "deathly_caress", "count": 5}, {"id": "deathly_kiss", "count": 5}, {"id": "deathly_embrace", "count": 5}]
                         }
                     ],
                     "rules": [],
@@ -53,7 +54,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["deadly_arts"],
-                    "options": [{"addRule": ["graceful_brutality", "ambush"]}],
+                    "options": [{"addRule": ["ambush"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -77,7 +78,7 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 4}],
+                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
                         {"replaceRule": [{"id": "psychic", "x": 1}], "withRule": [{"id": "psychic", "x": 2}]},
@@ -133,8 +134,16 @@
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
-                        {"replaceWeapon": {"id": "jester_blade", "count": 2}, "withWeapon": ["deathly_touch", "deathly_caress", "deathly_kiss", "deathly_embrace"]},
-                        {"replaceWeapon": ["shard_pistol", {"id": "jester_blade", "count": 2}], "withWeapon": ["energy_glaive"]},
+                        {
+                            "replaceWeapon": {"id": "jester_blade", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "deathly_kiss", "count": 2},
+                                {"id": "deathly_caress", "count": 2},
+                                {"id": "deathly_embrace", "count": 2},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
                         {"adRule": "ambush"}
                     ],
                     "rules": [],
@@ -161,7 +170,20 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
-                    "rules": [],
+                    "options": [
+                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
+                        {
+                            "replaceWeapon": {"id": "jester_blade", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "deathly_kiss", "count": 2},
+                                {"id": "deathly_caress", "count": 2},
+                                {"id": "deathly_embrace", "count": 2},
+                                {"id": "energy_glaive", "count": 3}
+                            ]
+                        },
+                        {"adRule": "ambush"}
+                    ],
                     "min": 5,
                     "max": 20
                 }
@@ -184,7 +206,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "weapons": ["shard_cannon", "energy_glaive"],
+                    "weapons": ["shard_cannon", {"id": "energy_glaive", "count": 2}],
                     "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
                     "min": 2,
                     "max": 6
@@ -227,13 +249,12 @@
         }
     },
     "weapons": {
-        "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
-        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "rending"], "ap": 1},
+        "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee"},
+        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
-        "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
-        "deathly_caress": {"name": "Deathly Caress", "attacks": 2, "short": "Melee", "rules": ["rending"], "ap": 3},
-        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 6, "short": "Melee"},
+        "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
+        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
+        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee"},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap": 2},
         "sniper_cannon": {
@@ -244,14 +265,14 @@
             ]
         },
         "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
-        "energy_glaive": {"name": "Energy Glaive", "attacks": 3, "short": "Melee", "ap": 2},
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault", {"id": "blast", "x": 3}]},
         "irridescent_cannon": {
             "name": "Irridescent Cannon",
             "profiles": [
                 {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", {"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
+                {"name": "Lance", "attacks": 2, "short": 12, "medium": 24, "ap": 7, "rules": ["assault"]},
                 {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]}
             ]
         },
@@ -260,8 +281,12 @@
         "power_storm": {"medium": 12, "ap": 1, "attacks": 8}
     },
     "rules": {
-        "graceful_brutality": {"name": "Graceful Brutality", "description": "This model and friendly Infantry units within 3\" may move up to 3\" after shooting.", "points": 5},
-        "blur_field": {"name": "Blur Field", "description": "Models suffer -1 Accuracy when shooting at this unit and -1 Strength when fighting this unit.", "points": 2}
+        "keeper_tactics": {
+            "name": "Keeper Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        }
     },
     "strategies": {
         "speedy_defense": {
