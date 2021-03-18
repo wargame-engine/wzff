@@ -43,7 +43,7 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 5},
                             "withWeapon": [{"id": "ultra_drill", "count": 5}, {"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]}
+                        {"addRule": ["ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -56,7 +56,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader"],
             "models": [
                 {
                     "name": "Mechanic",
@@ -73,19 +73,31 @@
                             "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol", "teleport_pistol", "plasma_rifle", "rocket_launcher", "shock_gun"]
                         },
                         {
-                            "replaceWeapon": "heavy_ccw",
-                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]},
-                        {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
+                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1},
+                        {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
                         {"addRule": ["precision_monicle"]},
                         {"addRule": ["energy_field"]}
                     ],
-                    "rules": [{"id": "repair", "x": 2}],
+                    "rules": [{"id": "repair", "x": 3}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Goblin Assistant", "movement": 6, "courage": 2, "shoot": 3, "fight": 3, "defense": 3, "reflexes": 2, "weapons": ["heavy_ccw"], "rules": [{"id": "repair", "x": 1}], "min": 0, "max": 1}
+                {
+                    "name": "Goblin Assistant",
+                    "movement": 6,
+                    "courage": 2,
+                    "shoot": 3,
+                    "fight": 3,
+                    "defense": 3,
+                    "reflexes": 2,
+                    "weapons": ["heavy_ccw"],
+                    "rules": ["goblin_assistant"],
+                    "min": 0,
+                    "max": 1
+                }
             ]
         },
         "warbanner_boss": {
@@ -94,7 +106,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", "war_banner"],
+            "rules": ["leader", "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Warbanner Boss",
@@ -108,8 +120,8 @@
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
                         {
-                            "replaceWeapon": "heavy_ccw",
-                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -137,8 +149,8 @@
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
                         {
-                            "replaceWeapon": "heavy_ccw",
-                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -169,7 +181,6 @@
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                             "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "rules": [{"id": "psychic", "x": 1}],
@@ -185,7 +196,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
         },
         "goblin_doctor": {
@@ -1269,15 +1280,12 @@
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24},
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
-        "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6,  "rules": ["anti_air"]},
-        "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6,  "rules": ["anti_air"]},
+        "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
+        "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "cannon": {
             "name": "Cannon",
-            "profiles": [
-                {"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 6}
-            ]
+            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 6}]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 18, "short": 18, "medium": 36, "ap": 3},
@@ -1300,7 +1308,7 @@
         "boarding_pistol": {"name": "Boarding Pistol", "attacks": 2, "short": 6, "ap": 2, "medium": 12},
         "boarding_gun": {"name": "Boarding Gun", "attacks": 2, "short": 12, "ap": 4, "medium": 24},
         "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
-        "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 5}]},
+        "shock_gun": {"name": "Teleport Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "carbine": {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
@@ -1320,39 +1328,34 @@
             "name": "Combi Rocket Launcher",
             "profiles": [
                 {"name": "Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
-                {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]}
+                {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
             ]
         },
         "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
         "ultra_drill": {"name": "Ultra Drill", "ap": 2, "attacks": 1, "short": "Melee"},
         "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee"},
-        "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4,  "short": "Melee"},
-        "ultra_claw": {"name": "Ultra Claw", "attacks": 1,  "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
-        "beast_bite": {"name": "Beast Bite", "attacks": 2,  "ap": 1, "short": "Melee"},
-        "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]},
+        "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
+        "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
+        "beast_bite": {"name": "Beast Bite", "attacks": 2, "ap": 1, "short": "Melee"},
+        "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
         "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7},
-        "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3,  "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
-        "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["assault"]},
-        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6,  "rules": ["assault", "pistol"]},
-        "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1,  "short": 6, "medium": 12, "rules": ["assault"]},
-        "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7,  "short": "Melee"},
-        "assault_bomb": {"name": "Assault Bomb", "attacks": 1,  "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
-        "flame_bombs": {"name": "Flame Bombs", "attacks": 2,  "ap": 2, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
-        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1,  "ap": 4, "short": 6, "rules": ["bomb", {"id": "blast", "x": 6}]},
-        "flame_missiles": {"name": "Flame Missiles", "attacks": 2,  "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
-        "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6,  "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
-        "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3,  "ap": 4, "short": "Melee"},
+        "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
+        "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
+        "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault", "pistol"]},
+        "orc_flamethrower": {"name": "Orc Flamethrower", "attacks": 2, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
+        "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "short": "Melee"},
+        "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
+        "flame_bombs": {"name": "Flame Bombs", "attacks": 2, "ap": 2, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
+        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "ap": 4, "short": 6, "rules": ["bomb", {"id": "blast", "x": 6}]},
+        "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+        "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2}
     },
     "rules": {
+        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
         "orc_idol": {"name": "Orc Idol", "description": "This model and friendly Infantry units within 6\" gain +1 Courage.", "points": 10},
-        "heavy_armor": {
-            "name": "Heavy Armor",
-            "hidden": "true",
-            "description": "This model gets +1 Save.",
-            "description_short": "+1 Save",
-            "points": [1, {"multiply": "constants.defenseCost"}]
-        },
+        "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {
             "name": "Ultra Armor",
             "hidden": "true",
@@ -1360,14 +1363,10 @@
             "description_short": "+2 Save, -1\" Movement",
             "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": 2}]}]
         },
-        "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Shoot", "points": 5},
+        "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
         "energy_field": {"name": "Energy Field", "description": "This model and friendly Infantry units within 3\" get +1 Defense.", "points": ["constants.defenseCost", {"multiply": 10}]},
         "war!": {"name": "WAR!", "description": "This model and friendly Infantry units within 3\" get +2\" of Movement.", "points": ["constants.movementCost", {"multiply": 10}]},
-        "biggest_boss": {
-            "name": "The Biggest Boss",
-            "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.",
-            "points": 5
-        },
+        "biggest_boss": {"name": "The Biggest Boss", "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.", "points": 5},
         "mad_doctor": {
             "name": "Mad Doctor",
             "description": "Whenever this model, or a friend Infatry model within 3\" loses a wound, roll a D10. On a 3 or less that wound is not lost.",
@@ -1388,14 +1387,8 @@
             "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
         },
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 impact.", "points": 10},
-        "extra_armor": {
-            "name": "Extra Armor",
-            "description_short": "Save +1",
-            "hidden": true,
-            "description": "This model gains +1 Save.",
-            "points": 10
-        },
-        "war_banner": {"name": "War Banner", "description": "This model and friendly Infantry units within 3\" gain +1 Strength.", "points": 20}
+        "extra_armor": {"name": "Extra Armor", "description_short": "Save +1", "hidden": true, "description": "This model gains +1 Save.", "points": 10},
+        "war_banner": {"name": "War Banner", "description": "This model and friendly Infantry units within 6\" may re-roll failed Strength tests of 9+.", "points": 10}
     },
     "powers": {
         "warpath": {"name": "Warpath", "description": "The next time target friendly unit fights, hit rolls of 1 or 2 generate an additional attack.", "charge": 8},
