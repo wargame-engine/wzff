@@ -57,7 +57,7 @@
     "organizations": {
         "skirmish": {
             "name": "Battle (Core)",
-            "cost": 2,
+            "cost": 1,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
         },
@@ -86,13 +86,13 @@
             "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 1}, "strike": {"max": 1}, "heavy": {"max": 1}, "transport": {"max": 2}}
         },
         "super_heavy_support": {"name": "Super Heavy Support (Core)", "cost": 2, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
-        "super_heavy": {"name": "Super Heavy (Core)", "cost": 4, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
+        "super_heavy": {"name": "Super Heavy (Core)", "cost": 3, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
     "relics": [
         {"rule": "legend_wounds", "description": "Upgrade one Infantry model with Resilient.", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."},
         {"rule": "legend_courage", "description": "Upgrade one Leader model with Inspired.", "flavor": "This model inspires the best in those who serve them."}
     ],
-    "powers": {"blast": {"name": "Shock Wave", "description": "Target enemy unit within 24\" takes 3 hits with AP 3.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 6}},
+    "powers": {"blast": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.", "flavor": "This enemy is hit by a single blast of shock.", "charge": 8}},
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},

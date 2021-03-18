@@ -136,7 +136,7 @@
             "name": "Hive Warriors",
             "description": "Large bugs which can extend the hive mind",
             "category": "core",
-            "rules": [{"id": "wounds", "x": 3}],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]},
                 {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
