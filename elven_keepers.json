@@ -131,17 +131,17 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}, "plasma_grenade"],
+                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 2},
+                            "replaceWeapon": {"id": "jester_blade", "count": 3},
                             "withWeapon": [
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "deathly_kiss", "count": 2},
-                                {"id": "deathly_caress", "count": 2},
-                                {"id": "deathly_embrace", "count": 2},
-                                {"id": "energy_glaive", "count": 3}
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
                             ]
                         },
                         {"adRule": "ambush"}
@@ -169,17 +169,17 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 2}],
+                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 2},
+                            "replaceWeapon": {"id": "jester_blade", "count": 3},
                             "withWeapon": [
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "deathly_kiss", "count": 2},
-                                {"id": "deathly_caress", "count": 2},
-                                {"id": "deathly_embrace", "count": 2},
-                                {"id": "energy_glaive", "count": 3}
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "deathly_kiss", "count": 3},
+                                {"id": "deathly_caress", "count": 3},
+                                {"id": "deathly_embrace", "count": 3},
+                                {"id": "energy_glaive", "count": 4}
                             ]
                         },
                         {"adRule": "ambush"}
