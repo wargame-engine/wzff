@@ -1109,6 +1109,7 @@
                     "defense": 7,
                     "reflexes": 4,
                     "movement": 3,
+                    "rules": [{"id": "wounds", "x": 3}],
                     "weapons": ["cannon", {"id": "ccw", "count": 3}],
                     "options": [{"replaceWeapon": "cannon", "withWeapon": ["smasher_cannon", "tractor_beam", "lightning_cannon", "plasma_cannon", "heavy_mortar", "bubble_cannon"]}],
                     "min": 1,
