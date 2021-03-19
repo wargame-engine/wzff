@@ -267,7 +267,7 @@
         "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
-        "emp_cannon": {"name": "EMP Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault", {"id": "blast", "x": 3}]},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
         "irridescent_cannon": {
             "name": "Irridescent Cannon",
             "profiles": [
