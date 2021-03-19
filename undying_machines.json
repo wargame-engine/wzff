@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "walker", {"id": "wounds", "x": 3}],
+            "rules": ["leader", "walker", {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -21,7 +21,7 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "weapons": ["annihiliation_gun", "metal_claws", "reaper_glaive"],
+                    "weapons": ["annihiliation_gun", {"id": "metal_claws", "count": 2}, {"id": "reaper_glaive", "count": 3}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -34,7 +34,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "hover", {"id": "wounds", "x": 3}],
+            "rules": ["leader", "hover", {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Heavy Infantry"],
             "models": [
                 {
@@ -45,10 +45,17 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "weapons": [{"id": "phase_sword", "count": 3}],
+                    "weapons": [{"id": "void_sword", "count": 4}],
                     "options": [
-                        {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
-                        {"addWeapon": "wrist_arrow"},
+                        {
+                            "replaceWeapon": {"id": "void_sword", "count": 4},
+                            "withWeapon": [
+                                [{"id": "energy_staff_melee", "count": 4}, "energy_staff_shoot"],
+                                {"id": "phase_sword", "count": 4},
+                                {"id": "void_scythe", "count": 4},
+                                {"id": "war_scythe", "count": 4}
+                            ]
+                        },
                         {"addRule": "regeneration_orb"}
                     ],
                     "min": 1,
@@ -62,7 +69,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -73,9 +80,17 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "phase_sword", "count": 3}],
+                    "weapons": [{"id": "void_sword", "count": 4}],
                     "options": [
-                        {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
+                        {
+                            "replaceWeapon": {"id": "void_sword", "count": 4},
+                            "withWeapon": [
+                                [{"id": "energy_staff_melee", "count": 4}, "energy_staff_shoot"],
+                                {"id": "phase_sword", "count": 4},
+                                {"id": "void_scythe", "count": 4},
+                                {"id": "war_scythe", "count": 4}
+                            ]
+                        },
                         {"addWeapon": "wrist_arrow"},
                         {"addRule": "regeneration_orb"}
                     ],
@@ -90,7 +105,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "machine_tactics", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -101,9 +116,17 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "phase_sword", "count": 3}],
+                    "weapons": [{"id": "void_sword", "count": 3}],
                     "options": [
-                        {"replaceWeapon": {"id": "phase_sword", "count": 3}, "withWeapon": ["staff", {"id": "void_sword", "count": 2}, "void_scythe", {"id": "war_scythe", "count": 3}]},
+                        {
+                            "replaceWeapon": {"id": "void_sword", "count": 3},
+                            "withWeapon": [
+                                [{"id": "energy_staff_melee", "count": 3}, "energy_staff_shoot"],
+                                {"id": "phase_sword", "count": 3},
+                                {"id": "void_scythe", "count": 3},
+                                {"id": "war_scythe", "count": 3}
+                            ]
+                        },
                         {"addWeapon": "wrist_arrow"},
                         {"addRule": "regeneration_orb"}
                     ],
@@ -129,7 +152,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": ["staff"],
+                    "weapons": [{"id": "energy_staff_melee", "count": 2}, "energy_staff_shoot"],
                     "options": [{"addWeapon": "tesla_field"}, {"addRule": ["phase_field", "flight_cloak", "dark_prism"]}],
                     "min": 1,
                     "max": 1
@@ -153,9 +176,22 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": ["leader", {"id": "wounds", "x": 2}, "warden_tactics"],
             "keywords": ["Infantry"],
-            "models": [{"name": "Warden", "courage": 7, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": ["heavy_reaper_rifle", "warden_blade"], "min": 1, "max": 1}]
+            "models": [
+                {
+                    "name": "Warden",
+                    "courage": 7,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_reaper_rifle", {"id": "warden_blade", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "dimensional_shard": {
             "name": "Dimensional Shard",
@@ -202,7 +238,7 @@
                     "weapons": ["gauss_rifle", "heavy_ccw"],
                     "options": [{"replaceWeapon": "gauss_rifle", "withWeapon": ["reaper_rifle"]}],
                     "rules": [],
-                    "min": 5,
+                    "min": 10,
                     "max": 20
                 }
             ]
@@ -215,8 +251,8 @@
             "category": "core",
             "rules": [],
             "keywords": ["Infantry"],
-            "options": [{"replaceWeapon": "tesla_rifle", "withWeapon": ["heavy_gauss_rifle"]}],
-            "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["tesla_rifle", "heavy_ccw"], "min": 5, "max": 10}]
+            "options": [{"replaceWeapon": "heavy_gauss_rifle", "withWeapon": ["tesla_rifle"]}],
+            "models": [{"name": "Eternal", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": ["heavy_gauss_rifle", {"id": "heavy_ccw", "count": 2}], "min": 5, "max": 10}]
         },
         "guardians": {
             "name": "Guardians",
@@ -227,11 +263,27 @@
             "rules": [],
             "keywords": ["Infantry"],
             "options": [
-                {"replaceWeapon": "rod", "withWeapon": [{"id": "war_scythe", "count": 2}, {"id": "phase_sword", "count": 2}, ["antimatter_pistol", "void_sword"]], "modelLimit": "all"},
-                {"addRule": "void_shield", "modelLimit": "all"},
+                {
+                    "replaceWeapon": ["antimatter_pistol", {"id": "void_sword", "count": 3}],
+                    "withWeapon": [{"id": "war_scythe", "count": 3}, [{"id": "phase_sword", "count": 3}, "void_shield"], ["guardian_rod_shoot", {"id": "guardian_rod_melee", "count": 3}]],
+                    "modelLimit": "all"
+                },
                 {"addRule": "anti_gravity_generators", "modelLimit": "all"}
             ],
-            "models": [{"name": "Guardian", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["rod"], "min": 5, "max": 10}]
+            "models": [
+                {
+                    "name": "Guardian",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": ["antimatter_pistol", {"id": "void_sword", "count": 3}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
         },
         "flayers": {
             "name": "Flayers",
@@ -242,7 +294,7 @@
             "rules": ["fear"],
             "keywords": ["Infantry"],
             "options": [{"addRule": "ambush", "modelLimit": "all"}],
-            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": ["flaying_claws"], "min": 5, "max": 20}]
+            "models": [{"name": "Flayer", "courage": 5, "movement": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 4, "weapons": [{"id": "flaying_claws", "count": 2}], "min": 5, "max": 20}]
         },
         "hunters": {
             "name": "Hunters",
@@ -250,9 +302,10 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["ambush"],
+            "rules": [],
             "keywords": ["Infantry"],
-            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}]
+            "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}],
+            "options": [{"addRule": {"id": "ambush", "name": "Dimenional Interception"}, "modelLimit": "all"}]
         },
         "gyro_bikes": {
             "name": "Gyro-Bikes",
@@ -277,14 +330,10 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["stealth", {"id": "wounds", "x": 2}],
+            "rules": ["teleport", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [
-                {"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1},
-                {"addWeapon": ["whip_coil"]},
-                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
-            ],
-            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["metal_fangs"], "min": 3, "max": 6}]
+            "options": [{"addWeapon": ["antimatter_pistol", "dimensional_beam"], "limit": 1}, {"addWeapon": ["whip_coil"]}],
+            "models": [{"name": "Shifter", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "metal_fangs", "count": 3}], "min": 3, "max": 6}]
         },
         "tri_scorpion_annihilators": {
             "name": "Tri-Scorpion Annihilators",
@@ -304,7 +353,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "reaper_sword", "count": 2}],
+                    "weapons": [{"id": "reaper_sword", "count": 4}],
                     "min": 1,
                     "max": 1
                 },
@@ -342,10 +391,7 @@
             "category": "heavy",
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [
-                {"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]},
-                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}
-            ],
+            "options": [{"replaceWeapon": "heavy_gauss_destructor", "withWeapon": ["heavy_gauss_exterminator"]}],
             "models": [{"name": "Heavy Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["heavy_gauss_destructor"], "min": 1, "max": 3}]
         },
         "transport_arc": {
@@ -366,7 +412,30 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "options": [{"addRule": ["extra_space", "regeneration_pods", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": ["extra_space", "regeneration_pods"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "doom_walker": {
+            "name": "Doom Walker",
+            "description": "A tall walking machine tasked with a large cannon.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["walker", "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Doom Walker",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -390,7 +459,6 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
-                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -414,7 +482,7 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addRule": ["extra_space", {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
+                    "options": [{"addRule": ["extra_space"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -438,7 +506,7 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}],
-                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}, {"addWeapon": {"id": "heavy_doom_ray", "mount": ["Front"]}}],
+                    "options": [{"addWeapon": {"id": "heavy_doom_ray", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -466,8 +534,7 @@
                         {
                             "replaceWeapon": {"id": "heat_ray", "mount": ["Front"]},
                             "withWeapon": [{"id": "twin_heavy_gauss_cannon", "mount": ["Front"]}, {"id": "antimatter_cannon", "mount": ["Front"]}]
-                        },
-                        {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -491,8 +558,8 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 5,
-                    "weapons": [{"id": "metal_fangs"}],
-                    "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "dark_prism", "swarm_fabricator"]}],
+                    "weapons": [{"id": "metal_fangs", "count": 3}],
+                    "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": ["dark_prism", {"id": "repair", "x": 5, "name": "Repair Arm"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -504,7 +571,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["walker", "vulnerable_side_rear", "flare_shielding", "reanimation_beam", "damage_table_vehicle"],
+            "rules": ["walker", "reanimation_beam", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -516,7 +583,6 @@
                     "defense": 9,
                     "reflexes": 5,
                     "weapons": [{"id": "gauss_rifle", "count": 2, "mount": ["Front"]}],
-                    "options": [{"addRule": [{"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -548,13 +614,7 @@
                         "gravity_pulse"
                     ],
                     "options": [
-                        {
-                            "addRule": [
-                                {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"},
-                                {"id": "transport", "x": 20, "name": "Invasion Portal"},
-                                {"id": "ambush_large", "name": "Orbital Drop"}
-                            ]
-                        },
+                        {"addRule": [{"id": "transport", "x": 20, "name": "Invasion Portal"}, {"id": "ambush_large", "name": "Orbital Drop"}]},
                         {
                             "replaceWeapon": [
                                 {"id": "doom_ray", "mount": ["Left", "Front"]},
@@ -581,10 +641,7 @@
     "weapons": {
         "heat_ray": {
             "name": "Heat Ray",
-            "profiles": [
-                {"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": []},
-                {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": []}
-            ]
+            "profiles": [{"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": []}, {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": []}]
         },
         "doom_cannon": {
             "name": "Doom Cannon",
@@ -593,27 +650,33 @@
                 {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
             ]
         },
-        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9,  "rules": [{"id": "blast", "x": 3}]},
+        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9, "rules": [{"id": "blast", "x": 3}]},
         "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1},
-        "metal_fangs": {"name": "Metal Fangs", "attacks": 3, "short": "Melee", "ap": 4},
+        "void_shield": {"name": "Void Shield", "attacks": 0, "short": "Melee", "rules": ["void_shield"]},
+        "metal_fangs": {"name": "Metal Fangs", "attacks": 1, "short": "Melee", "ap": 4},
+        "warden_blade": {"name": "Warden Blade", "attacks": 1, "short": "Melee", "ap": 2},
+        "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
+        "void_sword": {"name": "Void Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "void_scythe": {"name": "Void Scythe", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "war_scythe": {"name": "War Scythe", "attacks": 1, "short": "Melee", "ap": 4},
         "techno_beam": {"name": "Techno-Beam", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol"]},
         "techno_scythes": {"name": "Techno-Scythes", "attacks": 3, "short": "Melee", "ap": 2},
-        "whip_coil": {"name": "Whip Coil", "attacks": 1, "short": "Melee", "ap": 4,  "rules": ["snare"]},
-        "flaying_claws": {"name": "Flaying Claws", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "whip_coil": {"name": "Whip Coils", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["snare"]},
+        "flaying_claws": {"name": "Flaying Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 5},
-        "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 5},
+        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 4},
         "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5},
-        "metal_claws": {"name": "Metal Claws", "attacks": 3, "ap": 3, "short": "Melee"},
+        "metal_claws": {"name": "Metal Claws", "attacks": 1, "ap": 3, "short": "Melee"},
         "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
-        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4,  "rules": ["rending"]},
+        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["rending"]},
         "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": []},
         "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": []},
         "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": []},
-        "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
+        "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
         "tesla_field": {"name": "Tesla Field", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla"]},
@@ -623,29 +686,34 @@
         "twin_heavy_gauss_rifle": {"name": "Twin Heavy Gauss Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
         "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["rending"]},
-        "warden_blade": {"name": "Warden Blade", "attacks": 3, "short": "Melee", "ap": 2},
-        "phase_sword": {"name": "Phase Sword", "attacks": 1, "short": "Melee", "ap": 3},
-        "void_sword": {"name": "Void Sword", "attacks": 2, "short": "Melee", "ap": 2},
-        "void_scythe": {"name": "Void Scythe", "attacks": 2, "short": "Melee", "ap": 6},
-        "war_scythe": {"name": "War Scythe", "attacks": 1, "short": "Melee", "ap": 3},
         "antimatter_pistol": {"name": "Antimatter Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
         "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "antimatter_cannon": {"name": "Antimatter Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
-        "staff": {"name": "Staff", "profiles": [{"name": "Melee", "attacks": 3, "short": "Melee", "ap": 2}, {"name": "Shoot", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]}]},
-        "rod": {
-            "name": "Guardian Rod",
-            "profiles": [{"name": "Melee", "attacks": 2, "short": "Melee", "ap": 3}, {"name": "Shoot", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]}]
-        },
+        "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
+        "energy_staff_melee": {"name": "Energy Staff (Melee)", "attacks": 1, "short": "Melee", "ap": 1},
+        "guardian_rod_melee": {"name": "Guardian Rod (Melee)", "attacks": 1, "short": "Melee", "ap": 2},
+        "guardian_rod_shoot": {"name": "Guardian Rod (Shoot)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
         "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
         "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
         "gravity_pulse": {"name": "Gravity Pulse", "attacks": 6, "short": "Melee", "ap": 2}
     },
     "rules": {
+        "machine_tactics": {
+            "name": "Machine Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "warden_tactics": {
+            "name": "Warden Tactics",
+            "description": "When this unit is activated, choose one friendly Infantry unit within 6\". That unit may re-roll failed Initiative tests of 9+.",
+            "points": 5
+        },
         "reanimation_beam": {
             "name": "Reanimation Beam",
-            "description": "Once during this unit's activation, if within 6\" if a friendly Infantry unit with killed models, roll 5D10. For each roll of a 5 or less, a wound is restored on a model. If there are left-over successes, you may spend a success to return a model to the unit with 1 wound remaining. Repeat until all successes are allocated. All models must be fully healed before returning fallen models to the unit.",
+            "description": "Once during this unit's activation, choose a friendly Infantry unit within 6\" with killed models or Wound(x) lost. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
         },
         "swarm_fabricator": {
@@ -672,7 +740,7 @@
             "points": 5
         },
         "flight_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
-        "void_shield": {"name": "Void Shield", "hidden": true, "description_short": "+1 Save", "description": "This model gains +1\" Save.", "points": 2},
+        "void_shield": {"name": "Void Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "points": 5},
         "snare": {"name": "Snare", "description": "A model may make one free attack with this weapon against units that fall back from combat with it.", "points": 2}
     },
@@ -687,7 +755,7 @@
         {
             "name": "Reanimation",
             "phase": "activation",
-            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored.",
+            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
             "cost": 2
         },

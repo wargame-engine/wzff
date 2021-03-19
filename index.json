@@ -384,17 +384,17 @@
         "jetpack": {
             "name": "Jetpack",
             "hidden": true,
-            "description_short": "Fly, Ambush, Movement 8\"",
-            "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
-            "effects": [{"type": "changeStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
+            "description_short": "Fly, Ambush, Movement +2\"",
+            "description": "Increases movement by 2\". Gives the model fly and ambush.",
+            "points": 15
         },
         "overheat": {"name": "Overheat", "description": "The firer must take 1 save for each hit roll of 9+.", "points": ["weapon.attacks"]},
         "destroyer_armor": {
             "name": "Destroyer Armor",
             "hidden": true,
-            "description_short": "Ambush, Save 8, Movement -1\"",
+            "description_short": "Ambush, Save +1, Movement -1\"",
             "description": "Gives the model the ambush keyword. Gives the model Save 8.",
-            "points": ["constants.movementCost", {"multiply": -1}, {"add": ["constants.defenseCost", {"multiply": 1}]}]
+            "points": 15
             
         },
         "field_radio": {
