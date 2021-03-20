@@ -210,7 +210,7 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 6,
-                    "weapons": ["dimensional_strikes"],
+                    "weapons": [{"id": "dimensional_strikes", "count": 5}],
                     "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}],
                     "rules": [],
                     "min": 1,
@@ -667,7 +667,7 @@
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
         "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 2},
         "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 4},
-        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 3, "short": "Melee", "ap": 5},
+        "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 1, "short": "Melee", "ap": 5},
         "metal_claws": {"name": "Metal Claws", "attacks": 1, "ap": 3, "short": "Melee"},
         "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
@@ -768,11 +768,11 @@
         }
     ],
     "powers": {
-        "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 12\" gets -1 to hit in melee next time it fights.", "charge": 8},
-        "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 2 hits with AP(2).", "charge": 8},
-        "fury": {"name": "Fury", "description": "Target friendly unit within 12\" may immediately move by up to 6\".", "charge": 7},
-        "lightning_bolts": {"name": "Lightning Bolts", "description": "Target enemy model within 12\" takes 4 hits.", "charge": 7},
-        "dimensional_rift": {"name": "Dimensional Rift", "description": "Target enemy unit within 12\" gets -2 to hit next time it shoots.", "charge": 6},
-        "firestorm": {"name": "Firestorm", "description": "Target 2 enemy units within 6\" take 6 hits with AP(1) each.", "charge": 6}
+        "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 12\" gets -1 to hit in melee next time it fights.", "charge": 7},
+        "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 3 hits with AP(2).", "charge": 7},
+        "fury": {"name": "Fury", "description": "Target enemy unit within 12\" takes 5 hits with AP(0).", "charge": 7},
+        "dimensional_rift": {"name": "Dimensional Rift", "description": "Target enemy unit within 12\" gets -1 Accuracy next time it shoots.", "charge": 6},
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
+        "firestorm": {"name": "Firestorm", "description": "Target 2 enemy units within 6\" take 3 hits with AP(1) each.", "charge": 6}
     }
 }
