@@ -1137,7 +1137,7 @@
         "heavy_hover_apc": {
             "name": "Prime Heavy Hover APC",
             "description": "A heavy transport with hover technology and loaded out with many weapons.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
