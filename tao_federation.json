@@ -103,9 +103,34 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
                     "weapons": [{"id": "energy_sword", "count": 3}],
                     "options": [{"addRule": "hover_drone"}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warrior_commander": {
+            "name": "Warrior Commander",
+            "description": "A commander who is in charge of warrior teams.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "options": [
+                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}
+            ],
+            "models": [
+                {
+                    "name": "Warrior Commander",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pulse_rifle", {"id": "ccw", "count": 3}, "stun_grenades"],
+                    "rules": [{"id": "warrior_tactics", "x": 2}, {"id": "wounds", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -761,6 +786,12 @@
         "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
     },
     "rules": {
+        "warrior_tactics": {
+            "name": "Warrior Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space."},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "spotting_laser": {
