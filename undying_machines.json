@@ -792,10 +792,10 @@
         }
     ],
     "powers": {
-        "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 12\" gets -1 to hit in melee next time it fights.", "charge": 7},
+        "star_fire": {"name": "Star Fire", "description": "Target enemy unit within 12\" takes 2 hits with AP(4).", "charge": 8},
+        "dimensional_rift": {"name": "Dimensional Rift", "description": "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.", "charge": 7},
         "meteorites": {"name": "Meteorites", "description": "Target enemy unit within 12\" takes 3 hits with AP(2).", "charge": 7},
         "fury": {"name": "Fury", "description": "Target enemy unit within 12\" takes 5 hits with AP(0).", "charge": 7},
-        "dimensional_rift": {"name": "Dimensional Rift", "description": "Target enemy unit within 12\" gets -1 Accuracy next time it shoots.", "charge": 6},
         "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
         "firestorm": {"name": "Firestorm", "description": "Target 2 enemy units within 6\" take 3 hits with AP(1) each.", "charge": 6}
     }
