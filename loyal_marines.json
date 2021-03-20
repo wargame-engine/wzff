@@ -68,7 +68,17 @@
                     "options": [
                         {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_mace", "count": 3}, {"id": "energy_axe", "count": 3}, {"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4}
+                            ]
+                        },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
@@ -100,7 +110,17 @@
                     "options": [
                         {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}, {"id": "energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}, {"id": "energy_claws", "count": 5}]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 4},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 4},
+                                {"id": "energy_axe", "count": 4},
+                                {"id": "energy_sword", "count": 4},
+                                {"id": "energy_fist", "count": 4},
+                                {"id": "energy_hammer", "count": 4},
+                                {"id": "energy_claws", "count": 5}
+                            ]
+                        },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
@@ -133,7 +153,17 @@
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
                         {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_mace", "count": 3}, {"id": "energy_axe", "count": 3}, {"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}, {"id": "energy_claws", "count": 4}]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 4}
+                            ]
+                        },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
@@ -432,10 +462,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": [],
-            "options": [
-                {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"},
-                {"replaceWeapon": ["prime_rifle", "heavy_ccw"], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 2}]], "modelLimit": "all"}
-            ],
+            "options": [{"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Prime Marine Sergeant",
@@ -460,6 +487,45 @@
                     "movement": 6,
                     "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "prime_assault_squad": {
+            "name": "Prime Assault Marines",
+            "description": "Elite trained marines of a new breed.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "rules": [],
+            "models": [
+                {
+                    "name": "Prime Assault Marine Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
+                    "options": [{"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol"]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Prime Assault Marine",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -823,14 +889,14 @@
                     "movement": 4,
                     "defense": 10,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_fist", "count": 2}, {"id": "heavy_machinegun", "count": 2}],
+                    "weapons": [{"id": "heavy_fist", "count": 3}, {"id": "fusion_rifle", "count": 2}],
                     "options": [
-                        {"addWeapon": [{"id": "fist_carbine", "count": 2}, {"id": "missile_launcher", "count": 2}], "limit": 1},
+                        {"addWeapon": [{"id": "fist_carbine", "count": 2}, "assault_missile_launcher"], "limit": 1},
                         {
-                            "replaceWeapon": {"id": "heavy_machinegun", "count": 2},
-                            "withWeapon": [{"id": "fusion_rifle", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]
+                            "replaceWeapon": {"id": "fusion_rifle", "count": 2},
+                            "withWeapon": [{"id": "heavy_machinegun", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]
                         },
-                        {"replaceWeapon": {"id": "heavy_fist", "count": 2}, "withWeapon": {"id": "assault_drill", "count": 2}}
+                        {"replaceWeapon": {"id": "heavy_fist", "count": 2}, "withWeapon": {"id": "assault_drill", "count": 3}}
                     ]
                 }
             ]
@@ -891,6 +957,32 @@
                     "reflexes": 6,
                     "weapons": ["storm_rifle"],
                     "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "drop_pod": {
+            "name": "Drop Pod",
+            "description": "A durable transport built by the loyal marines.",
+            "rules": [{"id": "transport", "x": 12}, "damage_table_vehicle", "ambush"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Drop Pod",
+                    "movement": 0,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": ["storm_rifle"],
+                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": "missile_launcher"}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1008,7 +1100,7 @@
         "hover_apc": {
             "name": "Hover APC",
             "description": "A durable transport with hover technology.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
