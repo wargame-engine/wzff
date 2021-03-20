@@ -1301,11 +1301,12 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_storm_rifle"}],
+                    "weapons": ["heavy_plasma_cannon", {"id": "walker_fist", "count": 4}, {"id": "twin_storm_rifle"}],
                     "options": [
-                        {"replaceWeapon": "heavy_gatling_gun", "withWeapon": "heavy_plasma_cannon"},
+                        {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_gatling_gun"},
                         {"replaceWeapon": "twin_storm_rifle", "withWeapon": "twin_grenade_launcher"},
-                        {"addWeapon": [{"id": "heavy_flamethrower", "count": 1}, "gatling_gun", {"id": "aa_rocket_pod"}]}
+                        {"addWeapon": ["heavy_flamethrower", "gatling_gun"], "limit": 1},
+                        {"addWeapon": ["aa_rocket_pod"]}
                     ],
                     "min": 1,
                     "max": 1
