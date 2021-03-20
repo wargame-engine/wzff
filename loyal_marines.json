@@ -1098,7 +1098,7 @@
             ]
         },
         "hover_apc": {
-            "name": "Hover APC",
+            "name": "Prime Hover APC",
             "description": "A durable transport with hover technology.",
             "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
@@ -1108,7 +1108,7 @@
             "category": "transport",
             "models": [
                 {
-                    "name": "Hover APC",
+                    "name": "Prime Hover APC",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,
@@ -1132,7 +1132,7 @@
             ]
         },
         "heavy_hover_apc": {
-            "name": "Heavy Hover APC",
+            "name": "Prime Heavy Hover APC",
             "description": "A heavy transport with hover technology and loaded out with many weapons.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
@@ -1142,7 +1142,7 @@
             "category": "heavy",
             "models": [
                 {
-                    "name": "Heavy Hover APC",
+                    "name": "Prime Heavy Hover APC",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,
@@ -1177,8 +1177,44 @@
                 }
             ]
         },
+        "prime_battle_tank": {
+            "name": "Prime Hover Battle Tank",
+            "description": "A heavy transport with hover technology and a large anti-tank weapon.",
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Prime Heavy Hover Tank",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_heavy_laser_cannon"}],
+                    "options": [
+                        {"replaceWeapon": "twin_heavy_laser_cannon", "withWeapon": ["twin_heavy_gatling_gun", "twin_laser_talon"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "storm_rifle_array", "mount": ["Left", "Front"]}, {"id": "storm_rifle_array", "mount": ["Right", "Front"]}],
+                                [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}]
+                            ]
+                        },
+                        {"addWeapon": [[{"id": "storm_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]], "limit": 1},
+                        {"id": "aa_rocket_pod", "mount": ["Rear"]},
+                        {"addWeapon": ["light_machinegun"], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "heavy_hover_tank": {
-            "name": "Heavy Hover Tank",
+            "name": "Prime Heavy Hover Tank",
             "description": "A heavy transport with hover technology and a large anti-tank weapon.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_rear", "hover", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
@@ -1188,7 +1224,7 @@
             "category": "heavy",
             "models": [
                 {
-                    "name": "Heavy Hover Tank",
+                    "name": "Prime Heavy Hover Tank",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,
@@ -1197,7 +1233,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "heavy_plasma_cannon", "heavy_gatling_gun"],
                     "options": [
-                        {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_laser_cannon"},
+                        {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_laser_destroyer"},
                         {
                             "addWeapon": [
                                 {"id": "storm_rifle", "mount": ["Rear"]},

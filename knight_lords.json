@@ -308,8 +308,7 @@
             "attacks": 1,
             "short": 6,
             "medium": 12,
-            "ap": 10,
-            
+            "ap": 10
         }
     },
     "rules": {
