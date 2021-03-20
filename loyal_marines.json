@@ -1636,13 +1636,13 @@
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Accuracy tests of 9+.",
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
             "points": 10
         },
         "melee_tactics": {
             "name": "Melee Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+.",
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": 10
         },
         "mobility_training": {"name": "Mobility Training", "description": "This model and models in its unit gain +3 inch max range when shooting and +3 inches to charges.", "points": 5},

@@ -59,8 +59,10 @@
                             "addRule": [
                                 {"id": "repair", "x": 5, "name": "Master Machinist"},
                                 {"id": "psychic", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "psychic", "x": 2, "name": "Enhanced Psychic Resonator"}
-                            ]
+                                {"id": "psychic", "x": 2, "name": "Enhanced Psychic Resonator"},
+                                {"id": "canticles", "x": 1}
+                            ],
+                            "limit": 1
                         },
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
@@ -664,7 +666,7 @@
         "vanguard_tactics": {
             "name": "Vanguard Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "manipulator": {
@@ -679,8 +681,9 @@
         },
         "canticles": {
             "name": "Canticles",
-            "description": "When activated, choose one of the following to apply to this unit and friendly units within 3\". +1 AP or -1 to be hit or hit rolls of 1 or 2 when shooting generate an additional attack.",
-            "points": 10
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
+            "points": ["rule.x", {"multiply": 15}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6\" max range when shooting.", "points": 5},

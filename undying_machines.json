@@ -703,12 +703,12 @@
         "machine_tactics": {
             "name": "Machine Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "warden_tactics": {
             "name": "Warden Tactics",
-            "description": "When this unit is activated, choose one friendly Infantry unit within 6\". That unit may re-roll failed Initiative tests of 9+.",
+            "description": "When this unit is activated, choose one friendly Infantry unit within 6\". That unit may re-roll failed Initiative tests of 9+ until the end of the round.",
             "points": 5
         },
         "reanimation_beam": {
