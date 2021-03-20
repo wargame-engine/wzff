@@ -113,7 +113,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": 2, "name": "Machinist"}, {"id": "psychic", "x": 1, "name": "Psychic Resonator"}]},
+                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "psychic", "x": 1, "name": "Psychic Resonator"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
