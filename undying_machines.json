@@ -758,7 +758,7 @@
         {
             "name": "Overwhelming Firewpoer",
             "phase": "activation",
-            "description": "Use before an Infantry or Heavy Infantry unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use before an Infantry unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
             "flavor": "Massed firepower can be relatively effective in taking down most targets.",
             "cost": 1
         },
