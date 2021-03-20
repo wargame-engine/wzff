@@ -343,7 +343,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["scout", "agile", {"id": "impact", "x": 1}],
+            "rules": ["scout", "agile", {"id": "wounds", "x": 2}],
             "options": [{"addWeapon": ["phosphor_breath"], "modelLimit": "all"}, {"replaceWeapon": {"id": "phosphor_pistol", "count": 2}, "withWeapon": "phosphor_carbine", "limit": "all"}],
             "models": [
                 {
@@ -382,7 +382,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [{"replaceWeapon": "emp_cannon", "withWeapon": ["contortion_cannon"]}, {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "iron_claws", "count": 3}}],
             "models": [
                 {"name": "Breacher", "courage": 5, "movement": 6, "shoot": 5, "fight": 5, "defense": 9, "reflexes": 5, "weapons": ["emp_cannon", {"id": "claws", "count": 3}], "min": 3, "max": 6}
@@ -394,7 +394,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [],
+            "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {"addWeapon": ["phosphor_rifle", "flamethrower"]},
                 {"replaceWeapon": "mini_plasma_cannon", "withWeapon": ["heavy_gravity_cannon"]},
