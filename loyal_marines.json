@@ -6,6 +6,13 @@
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
+    
+    "hidden_subfactions": {
+        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
+        "fire_masters": {"name": "Flame", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
+        "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
+        "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."}
+    },
     "subfactions": {
         "wolf_marines": {
             "name": "Counter-attack",
@@ -15,11 +22,7 @@
             "restricted": true
         },
         "psychic_marines": {"name": "Psychic", "id": "psychic_marines", "color": "#C0C0C0", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
-        "alien_hunters": {"name": "Alien Hunter", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true},
-        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
-        "fire_masters": {"name": "Flame", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
-        "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
-        "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."}
+        "alien_hunters": {"name": "Alien Hunters", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true}
     },
     "units": {
         "grav_captin": {
@@ -1679,6 +1682,14 @@
         },
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "name": "Genetically Engineered",
+            "phase": "activation",
+            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
+            "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Fearless",
             "phase": "activation",
             "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
@@ -1689,9 +1700,25 @@
             "subfactions": ["alien_hunters"],
             "name": "Special Ammunition",
             "phase": "activation",
-            "description": "Use when shooting with an Infantry unit. Choose a weapon name to gain one of the following for this attack. That weapon ignores cover or that weapon gets +1 AP or that weapon gets +3\" of range.",
+            "description": "Use when shooting with an Infantry unit. Choose a weapon name to gain one of the following for this attack: \n * +1 AP \n * +3\" of range",
             "flavor": "Equipped with special Alien Hunting armaments, they are trained to kill.",
             "cost": 1
+        },
+        {
+            "subfactions": ["alien_hunters"],
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["alien_hunters"],
+            "name": "Hunters",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": "1/per"
         },
         {
             "subfactions": ["psychic_marines"],
@@ -1716,35 +1743,23 @@
             "description": "Use before shooting with a unit. The target reduces its cover level by 1 (hard to soft, soft to none).",
             "flavor": "Finding and expoiting a vulnerable piece of cover can lead to devastating results.",
             "cost": 1
-        },
-        {
-            "subfactions": ["alien_hunters"],
-            "name": "Vigilance",
-            "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
-            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
-            "cost": 1
-        },
-        {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Genetically Engineered",
-            "phase": "activation",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
-            "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
-            "cost": 2
         }
     ],
     "powers": {
+        "fortify": {"subfactions": ["none", "alien_hunters"], "name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
+        "magic_shield": {"subfactions": ["none", "alien_hunters"], "name": "Shield", "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
+        "might": {"subfactions": ["none", "alien_hunters"], "name": "Strength", "description": "Target friendly unit within 12\" gets +1 Strength for its next attack.", "charge": 7},
+        "weakness": {"subfactions": ["none", "alien_hunters"], "name": "Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
+        "storm": {"subfactions": ["none", "alien_hunters"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 1.", "charge": 6},
+        "bolt": {"subfactions": ["none", "alien_hunters"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
+        "pacify": {"subfactions": ["alien_hunters"], "name": "Pacify", "description": "Target enemy unit within 12\" suffers -1 Strength with its next attack.", "charge": 6},
+        "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.", "charge": 7},
+        "clouded": {"subfactions": ["alien_hunters"], "name": "Clouded", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6},
         "banish": {"subfactions": ["psychic_marines"], "name": "Banish", "description": "Target enemy unit within 12\" gets -1 to melee rolls next time it fights.", "charge": 8},
         "cleanse": {"subfactions": ["psychic_marines"], "name": "Cleanse", "description": "Target enemy unit within 12” takes 2 automatic hits with AP(2).", "charge": 8},
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit may move up to 12\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 7},
         "strike": {"subfactions": ["psychic_marines"], "name": "Strike", "description": "Target friendly unit within 12\" may immediately shoot.", "charge": 6},
-        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each."},
-        "might": {"name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength for its next attack.", "charge": 7},
-        "fortify": {"name": "Fortify Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
-        "void": {"name": "Exploit Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Save test.", "charge": 6},
-        "storm": {"name": "Psychic Storm", "description": "Target 2 enemy units within 9\" take 4 hits each with AP 1.", "charge": 6},
-        "bolt": {"name": "Psychic Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 5}
+        "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target 2 enemy units within 9\" take 5 automatic hits with AP 1 each."}
     }
 }

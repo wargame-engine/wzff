@@ -313,11 +313,11 @@
     },
     "relics": [],
     "powers": {
-        "storm": {"name": "Psychic Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 0.", "charge": 7},
-        "magic_shield": {"name": "Magic Shield", "description": "Target friendly unit within 12\". Roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
-        "time_warp": {"name": "Time Warp", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
-        "weakness": {"name": "Exploit Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
-        "death": {"name": "Death Blow", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
-        "clouded_vision": {"name": "Clouded Vision", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6}
+        "storm": {"name": "Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 0.", "charge": 7},
+        "magic_shield": {"name": "Shield", "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
+        "time_warp": {"name": "Warp", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
+        "weakness": {"name": "Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 6},
+        "death": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
+        "clouded_vision": {"name": "Clouded", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6}
     }
 }
