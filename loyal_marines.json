@@ -496,6 +496,68 @@
                 }
             ]
         },
+        "prime_hunter_team": {
+            "name": "Prime Hunter Team",
+            "description": "A specialized hunter team.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "subfactions": ["alien_hunters"],
+            "rules": [],
+            "options": [],
+            "models": [
+                {
+                    "name": "Prime Marine",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"]},
+                        {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1},
+                        {"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]},
+                        {"replaceModel": ["prime_assault_marine", "prime_blaster_marine", "prime_rider_marine"]}
+                    ],
+                    "rules": [],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "prime_stealth_hunter_team": {
+            "name": "Prime Stealth Hunter Team",
+            "description": "A specialized hunter team.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "subfactions": ["alien_hunters"],
+            "rules": [],
+            "options": [
+                {"addRule": ["scout", "stealth"], "modelLimit": "all"}
+            ],
+            "models": [
+                {
+                    "name": "Prime Infiltration Marine",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"replaceModel": ["prime_reaper_marine"]}
+                    ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "prime_assault_squad": {
             "name": "Prime Assault Marines",
             "description": "Elite trained marines of a new breed.",
@@ -1626,6 +1688,70 @@
                     "max": 1
                 }
             ]
+        }
+    },
+    "models": {
+        "prime_assault_marine": {
+            "name": "Prime Assault Marine",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 8,
+            "reflexes": 6,
+            "movement": 6,
+            "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
+            "rules": [],
+            "min": 4,
+            "max": 9
+        },
+        "prime_reaper_marine": {
+            "name": "Prime Reaper Marine",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 8,
+            "reflexes": 6,
+            "movement": 6,
+            "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
+            "min": 4,
+            "max": 9
+        },
+        "prime_infiltration_marine": {
+            "name": "Prime Infiltration Marine",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 8,
+            "movement": 6,
+            "reflexes": 6,
+            "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
+            "min": 4,
+            "max": 9
+        },
+        "prime_blaster_marine": {
+            "name": "Prime Blaster Marine",
+            "courage": 6,
+            "movement": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 8,
+            "reflexes": 6,
+            "agility": 6,
+            "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
+            "min": 4,
+            "max": 9
+        },
+        "prime_rider_marine": {
+            "name": "Prime Rider Marine",
+            "courage": 6,
+            "movement": 8,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 9,
+            "reflexes": 6,
+            "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 2}, "prime_pistol"],
+            "min": 2,
+            "max": 3
         }
     },
     "weapons": {
