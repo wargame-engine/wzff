@@ -3,6 +3,9 @@
     "name": "Undying Machines",
     "author": "guitarninja#5707",
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
+    "subfactions": {
+        "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "background": "Undying Machines focused on overwhelming firepower."}
+    },
     "units": {
         "tri_scorpion_lord": {
             "name": "Tri-Scorpion Lord",
@@ -745,6 +748,27 @@
         "snare": {"name": "Snare", "description": "A model may make one free attack with this weapon against units that fall back from combat with it.", "points": 2}
     },
     "strategies": [
+        {
+            "name": "Distruption Flare",
+            "phase": "activation",
+            "description": "Use before a unit performs a Shoot action. The target reduces its cover level by 1 (hard to soft, soft to none).",
+            "flavor": "A solar flare from the sky distrupts the enemy's footing.",
+            "cost": 1
+        },
+        {
+            "name": "Overwhelming Firewpoer",
+            "phase": "activation",
+            "description": "Use before an Infantry or Heavy Infantry unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "Massed firepower can be relatively effective in taking down most targets.",
+            "cost": 1
+        },
+        {
+            "name": "Energy Amplificiation",
+            "phase": "activation",
+            "description": "Use before a unit performs a Shoot action. All attacks are treated as being at close range.",
+            "flavor": "Amplifying the power of an energy weapon can cause it to reach out and hit enemies at great distances.",
+            "cost": 2
+        },
         {
             "name": "Time Shift",
             "phase": "activation",
