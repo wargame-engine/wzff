@@ -749,10 +749,10 @@
     },
     "strategies": [
         {
-            "name": "Time Shift",
+            "name": "Fearless",
             "phase": "activation",
-            "description": "Use before an Infantry unit activates. That unit gets +2\" of Movement for this activation.",
-            "flavor": "Using enhanced otherworldly technology, time can be bent around this unit allowing it to seemingly warp from one place to another.",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "flavor": "With cold an unyielding metal, they fear no one.",
             "cost": 1
         },
         {
