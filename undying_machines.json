@@ -596,8 +596,8 @@
             "description": "A large hovering fortress with optional portal.",
             "min": 1,
             "max": 1,
-            "category": "heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_vehicle"],
+            "category": "super_heavy",
+            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -607,7 +607,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": [
                         {"id": "heavy_antimatter_cannon"},
                         {"id": "doom_ray", "mount": ["Left", "Front"]},
