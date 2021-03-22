@@ -786,7 +786,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": [],
-            "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
+            "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"], "modelLimit": "all", "limit": 1}],
             "models": [
                 {
                     "name": "Prime Blaster Sergeant",
