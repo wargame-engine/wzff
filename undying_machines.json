@@ -596,8 +596,8 @@
             "description": "A large hovering fortress with optional portal.",
             "min": 1,
             "max": 1,
-            "category": "heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_vehicle"],
+            "category": "super_heavy",
+            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -607,7 +607,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": [
                         {"id": "heavy_antimatter_cannon"},
                         {"id": "doom_ray", "mount": ["Left", "Front"]},
@@ -716,7 +716,7 @@
         },
         "reanimation_beam": {
             "name": "Reanimation Beam",
-            "description": "Once during this unit's activation, choose a friendly Infantry unit within 6\" with killed models or Wound(x) lost. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "Once per round after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
         },
         "swarm_fabricator": {
@@ -732,8 +732,8 @@
         },
         "dark_prism": {"name": "Dark Prism", "description": "This model may deny psychic powers as if it had Psychic.", "points": 5},
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "points": ["weapon.attacks", {"multiply": 3}]},
-        "regeneration_orb": {"name": "Regeneration Orb", "description": "This unit and friendly Infantry units within 6\" get Resilient(+1).", "points": 20},
-        "regeneration_pods": {"name": "Regeneration Pods", "description": "Friendly Infantry units within 6\" get Resilient(+1).", "points": 20},
+        "regeneration_orb": {"name": "Regeneration Orb", "description": "Once per game after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
+        "regeneration_pods": {"name": "Regeneration Pods", "description": "Once per round after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
         "phase_field": {"name": "Phase Field", "description": "This model and friendly Infantry units within 6\" get +1 Save.", "points": 20},
         "anti_gravity_generators": {
             "name": "Anti-Grav Generators",
@@ -749,10 +749,10 @@
     },
     "strategies": [
         {
-            "name": "Time Shift",
+            "name": "Fearless",
             "phase": "activation",
-            "description": "Use before an Infantry unit activates. That unit gets +2\" of Movement for this activation.",
-            "flavor": "Using enhanced otherworldly technology, time can be bent around this unit allowing it to seemingly warp from one place to another.",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "flavor": "With cold an unyielding metal, they fear no one.",
             "cost": 1
         },
         {

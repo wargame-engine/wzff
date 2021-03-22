@@ -300,7 +300,7 @@
         "laser_talon": {"name": "Laser Talon", "ap": 7, "attacks": 2, "short": 12, "medium": 24},
         "twin_laser_talon": {"name": "Twin Laser Talon", "ap": 7, "attacks": 4, "short": 12, "medium": 24},
         "prime_rifle": {"name": "Prime Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1},
-        "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 4, "short": 15, "medium": 30, "ap": 1},
+        "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 2, "short": 15, "medium": 30, "ap": 1},
         "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
         "missile_array": {
