@@ -88,10 +88,22 @@
         "super_heavy_support": {"name": "Super Heavy Support (Core)", "cost": 1, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
         "super_heavy": {"name": "Super Heavy (Core)", "cost": 2, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
-    "relics": [
-        {"rule": "legend_wounds", "description": "Upgrade one Infantry model with Resilient.", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."},
-        {"rule": "legend_courage", "description": "Upgrade one Leader model with Inspired.", "flavor": "This model inspires the best in those who serve them."}
-    ],
+    "relics": {
+        "resilient": {
+            "name": "Resilient",
+            "rule": "legend_wounds",
+            "description": "Upgrade one Infantry model with Resilient.",
+            "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale.",
+            "points": 10
+        },
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 10
+        }
+    },
     "powers": {
         "blast": {
             "name": "Shock Wave",
