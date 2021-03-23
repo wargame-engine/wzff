@@ -690,7 +690,6 @@
         "phosphor": {"name": "Phosphor", "description": "This weapon ignores cover at Short range.", "points": ["weapon.attacks"]},
         "taser": {"name": "Taser", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks"]}
     },
-    "relics": {},
     "strategies": [
         {
             "name": "Mechanically Adept",

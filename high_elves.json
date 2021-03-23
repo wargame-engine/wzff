@@ -40,6 +40,5 @@
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
         "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 1, "short": "Melee"}
     },
-    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}},
-    "relics": []
+    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}}
 }

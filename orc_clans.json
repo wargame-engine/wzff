@@ -1406,7 +1406,6 @@
         "strength": {"name": "Mighty Strength", "description": "Target friendly unit within 12\" gets +1 Strength until the end of the round.", "charge": 6},
         "headbang": {"name": "Headbang", "description": "Target enemy unit within 6\" takes 3 hits with AP 5.", "charge": 5}
     },
-    "relics": [],
     "strategies": {
         "war!": {"name": "WAR!", "phase": "activation", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
         "ramshackle": {

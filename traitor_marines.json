@@ -1248,10 +1248,6 @@
             "cost": 2
         }
     },
-    "relics": [
-        {"weapon": "super_staff", "flavor": "The best staff.", "subfactions": ["change_traitors"]},
-        {"rule": "psychic_helmet", "flavor": "A helmet imbued with psychic energy.", "subfactions": ["change_traitors"]}
-    ],
     "powers": {
         "beam": {
             "subfactions": ["change_traitors"],

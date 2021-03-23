@@ -16,6 +16,5 @@
         }
     },
     "weapons": {"barb_rifle": {"name": "Barb Rifles", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "poison", "x": 2}]}},
-    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}},
-    "relics": []
+    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}}
 }

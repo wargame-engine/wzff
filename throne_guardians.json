@@ -198,7 +198,6 @@
         },
         "guardian_shield": {"name": "Guardian Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5}
     },
-    "relics": [],
     "strategies": [
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],

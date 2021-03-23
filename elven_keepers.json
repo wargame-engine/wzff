@@ -311,7 +311,6 @@
             "cost": 2
         }
     },
-    "relics": [],
     "powers": {
         "storm": {"name": "Storm", "description": "Target enemy unit within 12\" take 5 hits each with AP 0.", "charge": 7},
         "magic_shield": {"name": "Shield", "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.", "charge": 7},
