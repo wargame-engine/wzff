@@ -250,7 +250,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
                     "options": [
-                        {"limit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
+                        {"modelLimit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "light_machinegun", "sniper_rifle"]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", "chainsword"]]}
                     ],
                     "rules": [],

@@ -445,14 +445,15 @@
                         {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
                         {
                             "modelLimit": 1,
+                            "limit": 1,
                             "replaceWeapon": "marine_rifle",
                             "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon"]
                         },
-                        {"modelLimit": 1, "replaceWeapon": "marine_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]}
+                        {"modelLimit": 1, "limit": 1, "replaceWeapon": "marine_rifle", "withWeapon": ["plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]}
                     ],
                     "rules": [],
                     "min": 4,
-                    "max": 10
+                    "max": 9
                 }
             ]
         },

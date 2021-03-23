@@ -546,7 +546,7 @@
             "name": "Light Fighter",
             "description": "A light fighter aircraft.",
             "rules": ["aircraft", "damage_table_aircraft"],
-            "category": "transport",
+            "category": "strike",
             "keywords": ["Vehicle", "Aircraft"],
             "min": 1,
             "max": 1,
@@ -572,7 +572,7 @@
         "light_bomber": {
             "name": "Light Bomber",
             "description": "A light bomber aircraft.",
-            "category": "transport",
+            "category": "strike",
             "keywords": ["Vehicle", "Aircraft"],
             "min": 1,
             "max": 1,
