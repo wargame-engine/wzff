@@ -1450,7 +1450,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
             ],
@@ -1536,7 +1536,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
             "rules": ["teleport"],
@@ -1581,7 +1581,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "resilient", "x": 3, "name": "Paladins"}], "modelLimit": "all"}
             ],
@@ -1625,7 +1625,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 2}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
             "rules": ["ambush", {"id": "wounds", "x": 2}],
