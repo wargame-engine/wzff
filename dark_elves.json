@@ -19,14 +19,14 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 7,
-                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "melting_blade", "count": 5}],
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 5}],
                     "min": 1,
                     "max": 1,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 2}, {"id": "lord_tactics", "x": 1}],
                     "options": [
                         {"replaceRule": {"id": "lord_tactics", "x": 1}, "withRule": {"id": "lord_tactics", "x": 2}},
                         {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
-                        {"replaceWeapon": {"id": "melting_blade", "count": 5}, "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "barb_whip", "count": 5}]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "melting_blade", "count": 5}, {"id": "energy_sword", "count": 5}, {"id": "barb_whip", "count": 5}]},
                         {"addRule": "flayed_cape"}
                     ]
                 }
@@ -186,7 +186,7 @@
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
             "points": 1
         },
-        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 1}]},
+        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
         "dodge": {"name": "Dodge", "description": "This model gets Save(+2) while in Melee.", "points": 2},
         "combat_drugs": {
             "name": "Combat Drugs",
