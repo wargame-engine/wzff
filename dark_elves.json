@@ -6,7 +6,7 @@
         "dark_elf_lord": {
             "category": "command",
             "name": "Lord",
-            "description": "A Dark Elf Lord.",
+            "description": "A Dark Elf Lord good at supporting troops and fighting.",
             "min": 1,
             "max": 1,
             "keywords": ["Infantry"],
@@ -32,6 +32,37 @@
                 }
             ]
         },
+        "succubus": {
+            "category": "command",
+            "name": "Succubus",
+            "description": "A Dark Elf succubus adept at fighting in Melee.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Succubus",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 7,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "energy_glaive", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 1}, "dodge", {"id": "succubus_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "succubus_tactics", "x": 1}, "withRule": {"id": "succubus_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "energy_glaive", "count": 3},
+                            "withWeapon": [{"id": "razor_whips", "count": 6}, {"id": "net_and_spear", "count": 4}, {"id": "barb_gauntlets", "count": 4}]
+                        }
+                    ]
+                }
+            ]
+        },
         "warriors": {
             "category": "core",
             "name": "Warriors",
@@ -50,7 +81,7 @@
                     "movement": 7,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
@@ -68,7 +99,7 @@
                     "movement": 7,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 6,
                     "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 4,
@@ -175,6 +206,12 @@
             "name": "Lord Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "succubus_tactics": {
+            "name": "Succubus Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * +3\" Movement",
             "points": ["rule.x", {"multiply": 10}]
         },
         "flayed_cape": {"name": "Flayed Flesh Cape", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},

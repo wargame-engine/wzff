@@ -372,7 +372,8 @@
         "heavy_fist": {"name": "Heavy Fist", "attacks": 1, "ap": 3, "short": "Melee"},
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "short": "Melee"},
         "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"},
-        "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 2}], "ap": 2}
+        "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 2}], "ap": 2},
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]}
     },
     "rules": {
         "medical_training": {
