@@ -1,20 +1,197 @@
 {
     "id": "dark_elves",
-    "name": "Dark Elf Pact",
+    "name": "Dark Elf Raiders",
     "author": "guitarninja#5707",
     "units": {
+        "dark_elf_lord": {
+            "category": "command",
+            "name": "Lord",
+            "description": "A Dark Elf Lord.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Lord",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "melting_blade", "count": 5}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 2}, {"id": "lord_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "lord_tactics", "x": 1}, "withRule": {"id": "lord_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "melting_blade", "count": 5}, "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "barb_whip", "count": 5}]},
+                        {"addRule": "flayed_cape"}
+                    ]
+                }
+            ]
+        },
         "warriors": {
+            "category": "core",
             "name": "Warriors",
             "description": "A group of Dark Elven warriors with poisonous weaponry.",
             "min": 1,
             "max": 1,
             "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon"], "modelLimit": "1/10"},
+                {"replaceWeapon": "barb_rifle", "withWeapon": ["blast_rifle", "shred_rifle"], "modelLimit": "1/5"}
+            ],
             "models": [
-                {"name": "Warrior Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["barb_rifle", {"id": "ccw", "count": 1}], "min": 1, "max": 1},
-                {"name": "Warriors", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["barb_rifle", {"id": "ccw", "count": 1}], "min": 4, "max": 19}
+                {
+                    "name": "Warrior Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Warrior",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "witches": {
+            "category": "core",
+            "name": "Witches",
+            "description": "A group of Dark Elven witches with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "rules": ["dodge"],
+            "options": [
+                {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1},
+                {
+                    "replaceWeapon": {"id": "barb_blade", "count": 2},
+                    "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
+                    "modelLimit": "1/10"
+                }
+            ],
+            "models": [
+                {
+                    "name": "Witch Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Witch",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "light_transport": {
+            "name": "Hover Transport",
+            "description": "A light hovering transport outfitted to carry infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Transport",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "fusion_cannon", "mount": ["Front"]}, "cutting_blade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["weapon_racks", "reinforced_ram", "trophy_racks"]},
+                        {"addWeapon": "grenade_launcher_backpack"},
+                        {"replaceWeapon": {"id": "fusion_cannon", "mount": ["Front"]}, "withWeapon": {"id": "destroyer_cannon", "mount": ["Front"]}}
+                    ]
+                }
             ]
         }
     },
-    "weapons": {"barb_rifle": {"name": "Barb Rifles", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "poison", "x": 2}]}},
-    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}}
+    "weapons": {
+        "melting_blade": {"name": "Melting Blade", "attacks": 1, "short": "Melee", "ap": 1},
+        "cutting_blade": {"name": "Cutting Blade", "attacks": 3, "short": "Melee", "ap": 1},
+        "barb_gauntlets": {"name": "Barbed Gauntlets", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["poison"]},
+        "razor_whips": {"name": "Razor Whips", "attacks": 1, "short": "Melee", "ap": 1},
+        "net_and_spear": {"name": "Combat Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net"]},
+        "barb_whip": {"name": "Barbed Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
+        "barb_rifle": {"name": "Barbed Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["poison"]},
+        "barb_pistol": {"name": "Barbed Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
+        "barb_cannon": {"name": "Barbed Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
+        "barb_blade": {"name": "Barbed Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
+        "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
+        "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
+        "shred_rifle": {"name": "Shred Rifle", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", {"id": "blast", "x": 3}]}
+    },
+    "rules": {
+        "lord_tactics": {
+            "name": "Lord Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "flayed_cape": {"name": "Flayed Flesh Cape", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
+        "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked in this transport may re-roll failed Accuracy tests of 9+.", "points": 10},
+        "trophy_racks": {"name": "Tropy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
+        "reinforced_ram": {"name": "Reinforced Ram", "description": "This model gains Impact(+3).", "points": 6},
+        "net": {
+            "name": "Net",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 1
+        },
+        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 1}]},
+        "dodge": {"name": "Dodge", "description": "This model gets Save(+2) while in Melee.", "points": 2},
+        "combat_drugs": {
+            "name": "Combat Drugs",
+            "description": "At the beginning of the game, choose one of the following bonuses for the unit to receive until the end of the game: \n * +1 Strength \n * +1\" Movement \n * +1 Courage \n * +1 Save",
+            "points": 2
+        }
+    }
 }

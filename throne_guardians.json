@@ -139,6 +139,36 @@
                 }
             ]
         },
+        "throne_jetbikes": {
+            "name": "Jetbikes",
+            "description": "Throne guardians on high speed jet bikes.",
+            "min": 5,
+            "max": 10,
+            "category": "strike",
+            "rules": [{"id": "wounds", "x": 2}, "hover"],
+            "options": [
+                {
+                    "replaceWeapon": ["guardian_missiles"],
+                    "withWeapon": [
+                        "assault_rifle_array"
+                    ]
+                }
+            ],
+            "models": [
+                {
+                    "name": "Jetbike",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "movement": 8,
+                    "reflexes": 7,
+                    "weapons": ["guardian_missiles", {"id": "guardian_lance", "count": 3}],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
         "guardian_heavy_tank": {
             "name": "Relic Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
@@ -146,7 +176,7 @@
             "min": 1,
             "category": "heavy",
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", {"id": "resilient", "x": 3}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Relic Heavy Assault APC",
@@ -166,6 +196,11 @@
         }
     },
     "weapons": {
+        "guardian_missiles": {
+            "name": "Guardian Missiles",
+            "profiles": [{"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["anti_air"]}, {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]}]
+        },
+        "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
         "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
@@ -177,7 +212,6 @@
         },
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
-        "eagle_lance": {"name": "Eagle Lance", "attacks": 1, "short": "Melee", "ap": 3, "rule": "+1 ap on charge"},
         "laser_spear": {
             "name": "Laser Spear",
             "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
@@ -190,6 +224,11 @@
         "twin_guardian_carbine": {"name": "Twin Guardian Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}
     },
     "rules": {
+        "lance": {
+            "name": "Lance",
+            "description": "This weapon gets +2 AP when used during a Charge.",
+            "points": ["weapon.attacks", {"multiply": 2}]
+        },
         "battle_tactics": {
             "name": "Battle Tactics",
             "inputs": ["x"],
@@ -206,6 +245,14 @@
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
+        },
+        {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "phase": "activation",
+            "name": "Relic Deflectors",
+            "description": "Use before a Vehicle unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
+            "flavor": "With ancient defense fields, Throne Guardian vehicles can deflect even the heaviest attacks.",
+            "cost": 1
         },
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],

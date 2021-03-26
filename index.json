@@ -2,6 +2,7 @@
     "name": "Grim Darkness (Beta)",
     "id": "grim_darkness",
     "factions": {
+        "dark_elves": {"name": "Dark Elf Raiders", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm", "version": "0.1"},
         "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1.1"},
         "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horrors.json", "color": "#90305d", "alliance": "traitors", "version": "0.1"},
@@ -40,7 +41,6 @@
         }
     },
     "unfinished_factions": {
-        "dark_elves": {"name": "Dark Elf Pact", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
         "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"},
         "high_elves": {"name": "High Elf Order", "id": "high_elves", "url": "high_elves.json", "color": "#e8bb00", "alliance": "elven_coaliation"}
     },
@@ -114,6 +114,7 @@
     },
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
+        "plasma_grenade": {"name": "Plasma Grenades", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenade": {
             "name": "Grenades",
@@ -370,7 +371,8 @@
         "storm_rifle_array": {"name": "Storm Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
         "heavy_fist": {"name": "Heavy Fist", "attacks": 1, "ap": 3, "short": "Melee"},
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "short": "Melee"},
-        "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"}
+        "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"},
+        "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 2}], "ap": 2}
     },
     "rules": {
         "medical_training": {

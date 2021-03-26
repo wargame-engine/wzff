@@ -256,7 +256,6 @@
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
         "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee"},
         "deadly_arts": {"name": "Deadly Arts", "attacks": 6, "short": "Melee", "ap": 3, "rules": ["rending"]},
-        "grenade_launcher_backpack": {"name": "Grenade Launcher Backpack", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}], "ap": 2},
         "sniper_cannon": {
             "name": "Sniper Cannon",
             "profiles": [
@@ -276,7 +275,6 @@
                 {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]}
             ]
         },
-        "plasma_grenade": {"name": "Plasma Grenade", "attacks": 1, "short": 6, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 12, "ap": 1, "attacks": 8}
     },
