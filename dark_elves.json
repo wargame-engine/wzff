@@ -61,6 +61,32 @@
                 }
             ]
         },
+        "dark_mercenary_master": {
+            "category": "command",
+            "name": "Dark Mercenary Master",
+            "description": "A Dark Elf mercenary blade master.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Dark Mercenary Master",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": ["dual_dark_blades"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "mercenary_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "mercenary_tactics", "x": 1}, "withRule": {"id": "mercenary_tactics", "x": 2}}
+                    ]
+                }
+            ]
+        },
         "succubus": {
             "category": "command",
             "name": "Succubus",
@@ -641,6 +667,10 @@
         "soul_stealer": {"name": "Soul Stealer", "attacks": 3, "short": 8, "ap": 1},
         "leeching_tentacles": {"name": "Leeching Tentacles", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "dual_dark_blades": {"name": "Dual Dark Blades", "profiles": [
+            {"name": "Whirl", "attacks": 6, "ap": 2, "short": "Melee"},
+            {"name": "Strike", "attacks": 4, "ap": 3, "short": "Melee"}
+        ]},
         "sharp_claws": {"name": "Sharp Claws", "attacks": 1, "short": "Melee"},
         "melting_blade": {"name": "Melting Blade", "attacks": 1, "short": "Melee", "ap": 1},
         "cutting_blade": {"name": "Cutting Blade", "attacks": 1, "short": "Melee", "ap": 1},
@@ -669,6 +699,12 @@
         "void_bombs": {"name": "Void Bombs", "attacks": 2, "short": 3, "ap": 4,  "rules": ["bomb", {"id": "blast", "x": 3}]}
     },
     "rules": {
+        "mercenary_tactics": {
+            "name": "Mercenary Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive +1 AP with Melee weapons until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "abomination_tactics": {
             "name": "Abomination Tactics",
             "inputs": ["x"],
