@@ -32,6 +32,35 @@
                 }
             ]
         },
+        "abomination_master": {
+            "category": "command",
+            "name": "Abomination Master",
+            "description": "A Dark Elf Lord who experiments on Dark Elves to create abominations.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Abomination Master",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", {"id": "barb_blade", "count": 5}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "abomination_tactics", "x": 1}],
+                    "options": [
+                        {"replaceRule": {"id": "abomination_tactics", "x": 1}, "withRule": {"id": "abomination_tactics", "x": 2}},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["poison_sprayer", "hexed_rifle"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "barb_whip", "count": 5}]},
+                        {"addWeapon": "poison_injector"}
+                    ]
+                }
+            ]
+        },
         "succubus": {
             "category": "command",
             "name": "Succubus",
@@ -104,6 +133,43 @@
                     "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 4,
                     "max": 19
+                }
+            ]
+        },
+        "abomination_warriors": {
+            "category": "core",
+            "name": "Abomination Warriors",
+            "description": "A group of Dark Elven warriors subject to experiments.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "options": [
+                {"addWeapon": ["poison_sprayer", "poison_dart_rifle"], "modelLimit": "1/5"}
+            ],
+            "models": [
+                {
+                    "name": "Tortured Warrior Leader",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Tortured Warrior",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "barb_blade", "count": 2}],
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
@@ -332,6 +398,61 @@
                 }
             ]
         },
+        "leeching_beast": {
+            "category": "strike",
+            "name": "Leeching Beast",
+            "description": "A group of Dark Elven witches with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Monster"],
+            "models": [
+                {
+                    "name": "Leeching Beast",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "rules": ["damage_table_monster", "hover"],
+                    "weapons": [{"id": "leeching_tentacles", "count": 3}],
+                    "options": [
+                        {"addWeapon": "soul_vortex"},
+                        {"addRule": "leech_tactics"}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "pain_beast": {
+            "category": "strike",
+            "name": "Pain Beast",
+            "description": "A group of Dark Elven witches with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Monster"],
+            "models": [
+                {
+                    "name": "Pain Beast",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "rules": ["damage_table_monster", "hover"],
+                    "weapons": [{"id": "claw_blade", "count": 4}, {"id": "barb_stinger", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "claw_blade", "count": 2}, "withWeapon": [{"id": "chain_whips", "count": 4}, {"id": "pain_gauntlet", "count": 2}]},
+                        {"replaceWeapon": {"id": "claw_blade", "count": 2}, "withWeapon": [{"id": "poison_injector", "count": 2}, "twin_poison_sprayer"]},
+                        {"replaceWeapon": {"id": "barb_stinger", "count": 2}, "withWeapon": [{"id": "barb_cannon", "count": 2}, {"id": "heat_cannon", "count": 2}, {"id": "emp_rifle", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
         "light_hover_transport": {
             "name": "Light Hover Transport",
             "description": "A light hovering transport outfitted to carry infantry.",
@@ -507,6 +628,18 @@
         }
     },
     "weapons": {
+        "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper"]},
+        "poison_dart_rifle": {"name": "Poison Dart Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["assault", "poison"]},
+        "poison_sprayer": {"name": "Poison Sprayer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
+        "twin_poison_sprayer": {"name": "Twin Poison Sprayer", "attacks": 6, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
+        "poison_injector": {"name": "Poison Injector", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["poison"]},
+        "pain_gauntlet": {"name": "Pain Gauntlet", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "barb_stinger": {"name": "Poison Stinger", "attacks": 1, "short": "Melee", "ap": 2},
+        "chain_whips": {"name": "Chain Whips", "attacks": 1, "short": "Melee", "ap": 2},
+        "claw_blade": {"name": "Claw Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "soul_vortex": {"name": "Soul Vortex", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "soul_stealer": {"name": "Soul Stealer", "attacks": 3, "short": 8, "ap": 1},
+        "leeching_tentacles": {"name": "Leeching Tentacles", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
         "sharp_claws": {"name": "Sharp Claws", "attacks": 1, "short": "Melee"},
         "melting_blade": {"name": "Melting Blade", "attacks": 1, "short": "Melee", "ap": 1},
@@ -536,6 +669,17 @@
         "void_bombs": {"name": "Void Bombs", "attacks": 2, "short": 3, "ap": 4,  "rules": ["bomb", {"id": "blast", "x": 3}]}
     },
     "rules": {
+        "abomination_tactics": {
+            "name": "Abomination Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive +1 Save until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "leech_tactics": {
+            "name": "Leech Tactics",
+            "description": "When this unit is activated, choose one friendly Infantry unit within 6\" to re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": 10
+        },
         "lord_tactics": {
             "name": "Lord Tactics",
             "inputs": ["x"],
