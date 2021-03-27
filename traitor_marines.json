@@ -34,7 +34,7 @@
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": [{"id": "chainsword", "count": 4}], "withWeapon": [{"id":"energy_sword", "count": 4}, {"id":"energy_fist", "count":4}, {"id": "energy_hammer", "count":4}]},
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
-                        {"addRule": ["war_chant", {"id":"melee_tactics", "x":1}], "limit": 1}
+                        {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id":"melee_tactics", "x":2}}
                     ],
                     "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
                     "min": 1,
@@ -62,7 +62,7 @@
                         {"replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 4}], "withWeapon": [["marine_rifle", {"id":"ccw", "count": 3}], {"id": "energy_claws", "count": 4}, "combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": [{"id": "chainsword", "count": 4}], "withWeapon": [{"id":"energy_sword", "count": 4}, {"id":"energy_fist", "count":4}, {"id": "energy_hammer", "count":4}]},
-                        {"addRule": ["war_chant", {"id":"melee_tactics", "x":1}]}
+                        {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id":"melee_tactics", "x":2}}
                     ],
                     "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
                     "min": 1,
@@ -146,7 +146,7 @@
                         {"replaceWeapon": ["marine_pistol", {"id":"chainsword", "count":3}], "withWeapon": [["marine_rifle", {"id":"ccw", "count": 2}], {"id": "energy_claws", "count": 3}, "combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id":"energy_sword", "count": 3}, {"id":"energy_fist", "count":3}, {"id": "energy_hammer", "count":3}]},
-                        {"addRule": ["jetpack", "destroyer_armor", "war_chant", {"id":"rifle_tactics", "x": 1}, "relentless", {"id": "psychic", "x": 2}]}
+                        {"addRule": ["jetpack", "destroyer_armor", "war_chant", "relentless", {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, "leader",  {"id": "wounds", "x": 2}],
                     "min": 1,
@@ -174,8 +174,7 @@
                         {"replaceWeapon": ["marine_pistol", {"id":"chainsword", "count":3}], "withWeapon": [["marine_rifle", {"id":"ccw", "count": 2}], {"id": "energy_claws", "count": 3}, "combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id":"energy_sword", "count": 3}, {"id":"energy_fist", "count":3}, {"id": "energy_hammer", "count":3}]},
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
-                        {"addRule": {"id":"rifle_tactics", "x": 1}}
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "wounds", "x": 2}],
                     "min": 1,
