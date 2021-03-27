@@ -140,6 +140,7 @@
         "storm_rifle": {"name": "Storm Rifle", "attacks": 2, "short": 12, "ap": 1, "medium": 24},
         "twin_storm_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
         "minigun": {"name": "Minigun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "mortar": {"name": "Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
@@ -373,7 +374,9 @@
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "short": "Melee"},
         "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"},
         "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 2}], "ap": 2},
-        "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]}
+        "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
+        "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]}
     },
     "rules": {
         "medical_training": {

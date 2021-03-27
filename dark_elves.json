@@ -107,6 +107,138 @@
                 }
             ]
         },
+        "veteran_warriors": {
+            "category": "core",
+            "name": "Veteran Warriors",
+            "description": "A group of Dark Elven warriors with poisonous weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon"], "modelLimit": "1/10"},
+                {"replaceWeapon": "barb_rifle", "withWeapon": ["blast_rifle", "shred_rifle"], "modelLimit": "1/5"}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Warrior Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "barb_whip", "count": 3}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Veteran Warrior",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", {"id": "ccw", "count": 2}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "dark_mercenaries": {
+            "category": "core",
+            "name": "Dark Mercenaries",
+            "description": "A group of Dark Elven warriors with poisonous weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "rules": ["fear"],
+            "models": [
+                {
+                    "name": "Dark Mercenary Leader",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "dark_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Dark Mercenary",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "dark_blade", "count": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "harpies": {
+            "category": "strike",
+            "name": "Harpies",
+            "description": "A group of Dark Elven warriors with poisonous weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "barb_rifle", "withWeapon": ["barb_cannon", "fusion_cannon", "blast_rifle", "shred_rifle", "heat_cannon", "emp_rifle"], "modelLimit": 4}
+            ],
+            "rules": ["fly", "ambush"],
+            "models": [
+                {
+                    "name": "Harpie Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}, {"id": "energy_lance", "count": 2}]}
+                    ]
+                },
+                {
+                    "name": "Harpie",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "bird_swarm": {
+            "name": "Bird Swarm",
+            "description": "A swarm of small birds with sharp claws.",
+            "min": 3,
+            "max": 6,
+            "category": "strike",
+            "rules": ["fly", {"id": "wounds", "x": 3}],
+            "keywords": ["Swarm"],
+            "models": [{"name": "Bird Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "sharp_claws", "count": 3}], "min": 3, "max": 12}]
+        },
         "witches": {
             "category": "core",
             "name": "Witches",
@@ -155,7 +287,79 @@
                 }
             ]
         },
-        "light_transport": {
+        "jetbike_witches": {
+            "category": "strike",
+            "name": "Jetbike Witches",
+            "description": "A group of Dark Elven witches with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "rules": ["hover"],
+            "options": [
+                {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1},
+                {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "barb_blade", "count": 2}]]},
+                {"addWeapon": ["heat_cannon", "blast_rifle"], "modelLimit": "1/3"}
+            ],
+            "models": [
+                {
+                    "name": "Jetbike Witch Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw", {"id": "cutting_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["barb_rifle", "ccw"], "withWeapon": [["barb_pistol", {"id": "barb_blade", "count": 2}]]},
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]}
+                    ]
+                },
+                {
+                    "name": "Jetbike Witch",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["barb_rifle", "plasma_grenade", "ccw", {"id": "cutting_blade", "count": 2}],
+                    "min": 2,
+                    "max": 11
+                }
+            ]
+        },
+        "light_hover_transport": {
+            "name": "Light Hover Transport",
+            "description": "A light hovering transport outfitted to carry infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": ["hover", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Light Hover Transport",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "barb_cannon", "mount": ["Front"]}, {"id": "twin_barb_rifle", "mount": ["Front"]}, {"id": "cutting_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["trophy_racks"]},
+                        {"replaceWeapon": {"id": "twin_barb_rifle", "mount": ["Front"]}, "withWeapon": {"id": "barb_cannon", "mount": ["Front"]}}
+                    ]
+                }
+            ]
+        },
+        "hover_transport": {
             "name": "Hover Transport",
             "description": "A light hovering transport outfitted to carry infantry.",
             "min": 1,
@@ -172,7 +376,7 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": [{"id": "fusion_cannon", "mount": ["Front"]}, "cutting_blade"],
+                    "weapons": [{"id": "fusion_cannon", "mount": ["Front"]}, {"id": "cutting_blade", "count": 2}],
                     "min": 1,
                     "max": 1,
                     "options": [
@@ -182,24 +386,154 @@
                     ]
                 }
             ]
+        },
+        "hover_tank": {
+            "name": "Hover Tank",
+            "description": "A hovering light tank outfitted to fight other vehicles or infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [
+                        {"id": "fusion_cannon", "mount": ["Front"]},
+                        {"id": "fusion_cannon", "mount": ["Left", "Front"]},
+                        {"id": "fusion_cannon", "mount": ["Right", "Front"]},
+                        {"id": "cutting_blade", "count": 2}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["reinforced_ram", "trophy_racks"]},
+                        {"addWeapon": "grenade_launcher_backpack"},
+                        {"replaceWeapon": {"id": "fusion_cannon", "mount": ["Front"]}, "withWeapon": {"id": "destroyer_cannon", "mount": ["Front"]}},
+                        {"replaceWeapon": {"id": "fusion_cannon", "mount": ["Left", "Front"]}, "withWeapon": {"id": "destroyer_cannon", "mount": ["Left", "Front"]}},
+                        {"replaceWeapon": {"id": "fusion_cannon", "mount": ["Right", "Front"]}, "withWeapon": {"id": "destroyer_cannon", "mount": ["Right", "Front"]}}
+                    ]
+                }
+            ]
+        },
+        "heavy_hover_tank": {
+            "name": "Heavy Hover Tank",
+            "description": "A hovering light tank outfitted to fight other vehicles or infantry.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Heavy Hover Tank",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [
+                        {"id": "heavy_wave_cannon", "mount": ["Front"]},
+                        {"id": "cutting_blade", "count": 2}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"addRule": ["reinforced_ram", "trophy_racks"]}
+                    ]
+                }
+            ]
+        },
+        "strike_fighter": {
+            "name": "Strike Fighter",
+            "description": "A light fighter aircraft.",
+            "rules": ["aircraft", "damage_table_aircraft"],
+            "category": "strike",
+            "keywords": ["Vehicle", "Aircraft"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Strike Fighter",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_barb_rifle", "mount": ["Front"]}, {"id": "fusion_cannon", "mount": ["Front"], "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "twin_barb_rifle", "mount": ["Front"]}, "withWeapon": {"id": "barb_cannon", "mount": ["Front"]}},
+                        {"replaceWeapon": {"id": "fusion_cannon", "mount": ["Front"], "count": 2}, "withWeapon": {"id": "destroyer_cannon", "mount": ["Front"], "count": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "void_bomber": {
+            "name": "Void Bomber",
+            "description": "A light bomber aircraft.",
+            "category": "strike",
+            "keywords": ["Vehicle", "Aircraft"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Void Bomber",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": ["aircraft", "damage_table_aircraft"],
+                    "weapons": [{"id": "fusion_cannon", "count": 2, "mount": ["Front"]}, "void_bombs"],
+                    "options": [
+                        {"replaceWeapon": {"id": "fusion_cannon", "count": 2, "mount": ["Front"]}, "withWeapon": {"id": "fusion_burst_cannon", "count": 2, "mount": ["Front"]} },
+                        {"addWeapon": ["void_missiles"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
+        "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
+        "sharp_claws": {"name": "Sharp Claws", "attacks": 1, "short": "Melee"},
         "melting_blade": {"name": "Melting Blade", "attacks": 1, "short": "Melee", "ap": 1},
-        "cutting_blade": {"name": "Cutting Blade", "attacks": 3, "short": "Melee", "ap": 1},
+        "cutting_blade": {"name": "Cutting Blade", "attacks": 1, "short": "Melee", "ap": 1},
         "barb_gauntlets": {"name": "Poison Gauntlets", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["poison"]},
         "razor_whips": {"name": "Razor Whips", "attacks": 1, "short": "Melee", "ap": 1},
         "net_and_spear": {"name": "Combat Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net"]},
         "barb_whip": {"name": "Poison Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
         "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["poison"]},
+        "twin_barb_rifle": {"name": "Twin Poison Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["poison"]},
+        "barb_carbine": {"name": "Poison Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
         "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
         "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
+        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["fusion"]},
+        "heavy_wave_cannon": {"name": "Heavy Wave Cannon", "profiles": [
+            {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},
+            {"name": "Blast", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}
+        ]},
+        "heat_cannon": {"name": "Heat Cannon", "ap": 4, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "fusion"]},
         "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
         "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
-        "shred_rifle": {"name": "Shred Rifle", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", {"id": "blast", "x": 3}]}
+        "shred_rifle": {"name": "Shred Rifle", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", {"id": "blast", "x": 3}]},
+        "void_missiles": {"name": "Void Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 4,  "rules": [{"id": "blast", "x": 3}]},
+        "void_bombs": {"name": "Void Bombs", "attacks": 2, "short": 3, "ap": 4,  "rules": ["bomb", {"id": "blast", "x": 3}]}
     },
     "rules": {
         "lord_tactics": {
@@ -217,7 +551,7 @@
         "flayed_cape": {"name": "Flayed Flesh Cape", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
         "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked in this transport may re-roll failed Accuracy tests of 9+.", "points": 10},
         "trophy_racks": {"name": "Tropy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
-        "reinforced_ram": {"name": "Reinforced Ram", "description": "This model gains Impact(+3).", "points": 6},
+        "reinforced_ram": {"name": "Reinforced Ram", "hidden": true, "description_short": "Impact(+3)", "description": "This model gains Impact(+3).", "points": 6},
         "net": {
             "name": "Net",
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
@@ -229,6 +563,15 @@
             "name": "Combat Drugs",
             "description": "At the beginning of the game, choose one of the following bonuses for the unit to receive until the end of the game: \n * +1 Strength \n * +1\" Movement \n * +1 Courage \n * +1 Save",
             "points": 2
+        }
+    },
+    "strategies": {
+        "pain_embrace": {
+            "name": "Pain's Embrace",
+            "phase": "activation",
+            "flavor": "Dark Elves revel in pain as it only makes them stronger.",
+            "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
+            "cost": 1
         }
     }
 }
