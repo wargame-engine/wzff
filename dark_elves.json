@@ -730,7 +730,7 @@
         },
         "flayed_cape": {"name": "Flayed Flesh Cape", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
         "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked in this transport may re-roll failed Accuracy tests of 9+.", "points": 10},
-        "trophy_racks": {"name": "Tropy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
+        "trophy_racks": {"name": "Trophy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
         "reinforced_ram": {"name": "Reinforced Ram", "hidden": true, "description_short": "Impact(+3)", "description": "This model gains Impact(+3).", "points": 6},
         "net": {
             "name": "Net",
