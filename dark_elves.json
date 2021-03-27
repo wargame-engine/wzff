@@ -752,6 +752,20 @@
             "flavor": "Dark Elves revel in pain as it only makes them stronger.",
             "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
             "cost": 1
+        },
+        "eager_to_fight": {
+            "name": "Eager to Fight",
+            "phase": "activation",
+            "flavor": "Dark Elves long for the next raid to fight again.",
+            "description": "Use when an Infantry unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "defiance": {
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "flavor": "Defiant in the face of death, Dark Elves fight on.",
+            "cost": 1
         }
     }
 }
