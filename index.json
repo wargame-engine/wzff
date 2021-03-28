@@ -309,6 +309,7 @@
                 {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
             ]
         },
+        "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 2},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": []},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 6, "short": 15, "medium": 30, "ap": 2},
         "twin_heavy_gatling_gun": {"name": "Twin Heavy Gatling Gun", "attacks": 12, "short": 15, "medium": 30, "ap": 2},

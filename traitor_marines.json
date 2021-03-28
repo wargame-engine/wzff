@@ -218,8 +218,8 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": ["leader", "fear", {"id": "tough", "x": 1}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}],
-            "keywords": ["monster"],
+            "rules": ["leader", "fear", "damage_table_monster", {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
+            "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Daemon Champion",
@@ -229,9 +229,9 @@
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 7,
-                    "weapons": [{"id": "daemon_sword", "count": 4}],
+                    "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule":[{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
                         {"replaceWeapon": {"id": "daemon_sword", "count": 4}, "withWeapon": [{"id": "daemon_axe", "count": 4}, {"id": "daemon_claws", "count": 6}]},
                         {"addRule": "wings"}
                     ],
@@ -657,7 +657,7 @@
         "daemon_spawn": {
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
-            "rules": ["mutations", "strider", "fear", {"id": "wounds", "x": 2}],
+            "rules": ["mutations", "agile", "fear", {"id": "wounds", "x": 2}],
             "subfactions": ["none", "change_traitors", "rage_focus"],
             "min": 1,
             "max": 5,
@@ -1009,7 +1009,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 4,
-                    "weapons": [{"id": "hexed_staff", "count": 3}],
+                    "weapons": [{"id": "energy_staff", "count": 3}],
                     "options": [{"changeRule": {"id": "psychic", "x": 2}}, {"addRule": "disk_of_change"}],
                     "rules": [],
                     "min": 1,
@@ -1071,20 +1071,20 @@
             "min": 5,
             "max": 15,
             "category": "specialist",
+            "options": [{"modelLimit": 1, "addWeapon": ["missile_rack"]}],
             "models": [
                 {
                     "name": "Psychic Destroyer Sorceror",
-                    "movement": 5,
-                    "courage": 7,
+                    "movement": 4,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "weapons": ["twin_hexed_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]},
-                        {"limit": 1, "addWeapon": ["missile_rack"]},
-                        {"limit": 1, "replaceWeapon": "twin_marine_rifle", "withWeapon": [{"id": "energy_sword", "count": 2}]}
+                        {"replaceRule": "ward", "withRule": {"id": "psychic", "x": 1}},
+                        {"replaceWeapon": "twin_hexed_rifle", "withWeapon": [{"id": "energy_sword", "count": 2}]}
                     ],
                     "rules": ["ward"],
                     "min": 1,
@@ -1098,11 +1098,9 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "weapons": ["twin_hexed_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]},
-                        {"limit": 1, "addWeapon": ["missile_rack"]},
-                        {"limit": 1, "replaceWeapon": "twin_marine_rifle", "withWeapon": [{"id": "energy_sword", "count": 2}]}
+                        {"replaceWeapon": "twin_hexed_rifle", "withWeapon": ["heavy_flamethrower", "reaper_minigun"]}
                     ],
                     "min": 4,
                     "max": 14
@@ -1136,7 +1134,7 @@
         "birdmen_disc_riders": {
             "name": "Birdmen Disk Riders",
             "description": "Exhalted birdmen riding psychic disks.",
-            "rules": ["strider", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}],
+            "rules": ["hover", {"id": "impact", "x": 1}, {"id": "resilient", "x": 3}],
             "subfactions": ["change_traitors"],
             "min": 3,
             "max": 9,
@@ -1153,8 +1151,7 @@
                     "weapons": ["marine_pistol", {"id": "chainsword", "count": 2}],
                     "options": [
                         {
-                            "replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 2}],
-                            "withWeapon": [{"id": "hexed_blades", "count": 3}, {"id": "hexed_spear", "count": 3}, ["hexed_bow", {"id": "ccw", "count": 2}]]
+                            "replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 2}], "withWeapon": [{"id": "hexed_blades", "count": 3}, {"id": "hexed_spear", "count": 3}, ["hexed_bow", {"id": "heavy_ccw", "count": 2}]]
                         }
                     ],
                     "rules": [],
@@ -1174,7 +1171,8 @@
         "hexed_blades": {"name": "Hexed Blades", "attacks": 1, "short": "Melee", "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
-        "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3}
+        "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3},
+        "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2}
     },
     "rules": {
         "rifle_tactics": {
@@ -1191,8 +1189,8 @@
         },
         "disk_of_change": {
             "name": "Disk of Change",
-            "description": "Gives the unit strider and impact(1). Also increases the units movement to 8 inches.",
-            "effects": [{"type": "grantRule", "rule": "strider"}, {"type": "grantRule", "rule": {"id": "impact", "x": 1}}]
+            "description": "Gives the unit strider and impact(1). Also increases the units movement by 2\".",
+            "points": 5
         },
         "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
         "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
@@ -1201,23 +1199,11 @@
             "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.",
             "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]
         },
-        "traitor_tactics": {
-            "name": "Traitor Tactics",
-            "description": "This model and friendly Infantry units within 3\" gain +3 inch max range when shooting and +3 inches to charges.",
-            "effects": [
-                {"type": "alterStat", "statName": "movement", "value": 3, "frequency": 50, "target": "friendly"},
-                {"type": "alterWeapon", "statName": "medium", "value": 3, "frequency": 100, "target": "friendly"}
-            ]
-        },
-        "wings": {"name": "Daemon Wings", "hidden": true, "description": "Increases movement to 8 inches. Gives the model fly and ambush.", "description_short": "Fly, Ambush, 8\" Move", "points": 10},
+        "wings": {"name": "Daemon Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
         "mutations": {
             "name": "Mutations",
-            "description": "When this unit fights in melee, roll one dice. On a roll of 1-3 the units weapons have AP -3 to their attacks. On a roll of 4-6 the unit gains +2 attack per model. On a roll of 7-9 the unit gains Tough(3) until the end of the round. On a roll of 10, reroll until an ability is chosen.",
-            "effects": [
-                {"type": "alterWeapon", "statName": "ap", "value": 3, "frequency": 3},
-                {"type": "alterWeapon", "statName": "attacks", "value": 2, "frequency": 3},
-                {"type": "grantRule", "rule": {"id": "resilient", "x": 3}, "frequency": 3}
-            ]
+            "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
+            "points": 2
         },
         "invigorating_beam": {"effects": [{"type": "alterStat", "statName": "movement", "value": 6, "frequency": 5, "target": "friendly", "range": 12}]},
         "encroaching_mutations": {"effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 24}]},
@@ -1275,25 +1261,25 @@
     },
     "powers": {
         "beam": {
-            "subfactions": ["change_traitors"],
+            "subfactions": ["none", "change_traitors"],
             "name": "Invigorating Beam",
-            "description": "Target friendly unit within 12\"may immediately make a 6\" move.",
-            "effects": [{"rule": "invigorating_beam"}]
+            "description": "Target friendly unit within 12\"may immediately make a free move action.",
+            "charge": 7
         },
-        "mutation": {
+        "illusion": {
             "subfactions": ["change_traitors"],
             "name": "Encroaching Mutations",
-            "description": "Target enemy unit within 24\" gets -1 to hit the next time it shoots.",
-            "effects": [{"rule": "encroaching_mutations"}]
+            "description": "Target enemy unit within 18\" gets -1 to hit the next time it shoots or fights.",
+            "charge": 6
         },
         "inspire": {
             "subfactions": ["change_traitors"],
             "name": "Inspiring Word",
-            "description": "Target friendly unit within 6\". When that unit next takes hits, roll a dice for each wound that would be taken. On a roll of equal to or less than 3, that wound is not lost.",
-            "effects": [{"rule": "inspiring_word"}]
+            "description": "Target friendly unit within 6\". When that unit next takes hits, roll a D10 for each wound that would be taken. On a roll of equal to or less than 3, that wound is not lost.",
+            "charge": 7
         },
-        "storm": {"subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 10 hits.", "effects": [{"weapon": "power_storm"}]},
-        "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 5 hit with AP 4.", "effects": [{"weapon": "psychic_inferno"}]},
-        "bolt": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" takes 1 hit with AP 7 and Damage 3.", "effects": [{"weapon": "change_bolt"}]}
+        "storm": {"subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 6 hits with AP 1.", "charge": 6},
+        "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 3 hit with AP 4.", "charge": 6},
+        "terror": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" immediately takes 3 strain.", "charge": 7}
     }
 }
