@@ -81,10 +81,10 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+                        [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
                     ]
                 },
                 {"addWeapon": "guardian_dagger"},
@@ -99,7 +99,7 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -111,18 +111,17 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 4}, {"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                        [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
                         [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
                     ]
                 },
-                {"addWeapon": "guardian_dagger"},
-                {"addRule": "guardian_shield"}
+                {"addWeapon": "guardian_dagger"}
             ],
             "models": [
                 {
@@ -133,7 +132,7 @@
                     "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -160,10 +159,10 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 10,
+                    "defense": 9,
                     "movement": 8,
                     "reflexes": 7,
-                    "weapons": ["guardian_missiles", {"id": "guardian_lance", "count": 3}],
+                    "weapons": ["guardian_missiles", {"id": "guardian_lance", "count": 2}],
                     "min": 3,
                     "max": 9
                 }
