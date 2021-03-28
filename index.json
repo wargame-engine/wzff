@@ -259,7 +259,7 @@
         "maul_cutter": {"name": "Maul Cutter", "attacks": 1, "short": 6, "ap": 6},
         "chainsaw_glaive": {"name": "Chainsaw Glaive", "attacks": 1, "short": "Melee", "ap": 4},
         "virus_injector": {"name": "Virus Injector", "attacks": 1, "short": "Melee", "ap": 6},
-        "fiend_claws": {"name": "Fiend Claws", "attacks": 1, "short": "Melee", "ap": 9},
+        "fiend_claws": {"name": "Fiend Claws", "attacks": 1, "short": "Melee", "ap": 7},
         "dragon_claws": {"name": "Dragon Claws", "attacks": 1, "short": "Melee", "ap": 4},
         "steel_tails": {"name": "Steel Tails", "attacks": 1, "short": "Melee", "ap": 4},
         "ecto_cannon": {"name": "Ecto Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
