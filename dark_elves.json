@@ -27,7 +27,7 @@
                         {"replaceRule": {"id": "lord_tactics", "x": 1}, "withRule": {"id": "lord_tactics", "x": 2}},
                         {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
                         {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "melting_blade", "count": 5}, {"id": "energy_sword", "count": 5}, {"id": "barb_whip", "count": 5}]},
-                        {"addRule": "flayed_cape"}
+                        {"addRule": ["flayed_cape", "dark_prism"]}
                     ]
                 }
             ]
@@ -56,7 +56,8 @@
                         {"replaceRule": {"id": "abomination_tactics", "x": 1}, "withRule": {"id": "abomination_tactics", "x": 2}},
                         {"replaceWeapon": "barb_pistol", "withWeapon": ["poison_sprayer", "hexed_rifle"]},
                         {"replaceWeapon": {"id": "barb_blade", "count": 5}, "withWeapon": [{"id": "barb_whip", "count": 5}]},
-                        {"addWeapon": "poison_injector"}
+                        {"addWeapon": "poison_injector"},
+                        {"addRule": "dark_prism"}
                     ]
                 }
             ]
@@ -113,7 +114,8 @@
                         {
                             "replaceWeapon": {"id": "energy_glaive", "count": 3},
                             "withWeapon": [{"id": "razor_whips", "count": 6}, {"id": "net_and_spear", "count": 4}, {"id": "barb_gauntlets", "count": 4}]
-                        }
+                        },
+                        {"addRule": "dark_prism"}
                     ]
                 }
             ]
