@@ -81,10 +81,10 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
+                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                     ]
                 },
                 {"addWeapon": "guardian_dagger"},
@@ -99,7 +99,7 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -114,11 +114,11 @@
             "rules": [{"id": "resilient", "x": 4}, {"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
+                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
                         [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]
+                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                     ]
                 },
                 {"addWeapon": "guardian_dagger"}
@@ -132,7 +132,7 @@
                     "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -147,9 +147,9 @@
             "rules": [{"id": "wounds", "x": 2}, "hover"],
             "options": [
                 {
-                    "replaceWeapon": ["guardian_missiles"],
+                    "replaceWeapon": ["guardian_rifle_array"],
                     "withWeapon": [
-                        "assault_rifle_array"
+                        "guardian_missiles"
                     ]
                 }
             ],
@@ -162,7 +162,7 @@
                     "defense": 9,
                     "movement": 8,
                     "reflexes": 7,
-                    "weapons": ["guardian_missiles", {"id": "guardian_lance", "count": 2}],
+                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 2}],
                     "min": 3,
                     "max": 9
                 }
@@ -195,6 +195,7 @@
         }
     },
     "weapons": {
+        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
         "guardian_missiles": {
             "name": "Guardian Missiles",
             "profiles": [{"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["anti_air"]}, {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]}]
@@ -202,14 +203,14 @@
         "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
-        "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
+        "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
-        "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 2, "short": 12, "medium": 24, "ap": 1},
+        "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "guardian_rifle": {
             "name": "Guardian Rifle",
-            "profiles": [{"name": "Dispersed", "attacks": 3, "short": 15, "medium": 30, "ap": 1}, {"name": "Focused", "attacks": 2, "short": 9, "medium": 18, "ap": 3}]
+            "profiles": [{"name": "Dispersed", "attacks": 2, "short": 15, "medium": 30, "ap": 1}, {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 3}]
         },
-        "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "laser_spear": {
             "name": "Laser Spear",
@@ -225,8 +226,8 @@
     "rules": {
         "lance": {
             "name": "Lance",
-            "description": "This weapon gets +2 AP when used during a Charge.",
-            "points": ["weapon.attacks", {"multiply": 2}]
+            "description": "This weapon gets +1 AP when used during a Charge.",
+            "points": ["weapon.attacks", {"multiply": 1}]
         },
         "battle_tactics": {
             "name": "Battle Tactics",
