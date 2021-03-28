@@ -48,6 +48,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
+            "keywords": ["Biker"],
             "models": [
                 {
                     "name": "Traitor Lord",
@@ -64,7 +65,7 @@
                         {"replaceWeapon": [{"id": "chainsword", "count": 4}], "withWeapon": [{"id":"energy_sword", "count": 4}, {"id":"energy_fist", "count":4}, {"id": "energy_hammer", "count":4}]},
                         {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id":"melee_tactics", "x":2}}
                     ],
-                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+                    "rules": [{"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -104,6 +105,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
+            "keywords": ["Biker"],
             "models": [
                 {
                     "name": "Dark Engineer",
@@ -120,7 +122,7 @@
                         {"replaceWeapon": [{"id": "chainsword", "count": 3}], "withWeapon": [{"id":"energy_sword", "count": 3}, {"id":"energy_fist", "count":3}, {"id": "energy_hammer", "count":3}]},
                         {"addRule": ["destroyer_armor"]}
                     ],
-                    "rules": ["combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "repair", "x": 2}, {"id": "wounds", "x": 3}],
+                    "rules": [{"id": "impact", "x": 1}, "leader", {"id": "repair", "x": 2}, {"id": "wounds", "x": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -146,7 +148,8 @@
                         {"replaceWeapon": ["marine_pistol", {"id":"chainsword", "count":3}], "withWeapon": [["marine_rifle", {"id":"ccw", "count": 2}], {"id": "energy_claws", "count": 3}, "combi_plasma", "combi_flamer", "combi_fusion"]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id":"energy_sword", "count": 3}, {"id":"energy_fist", "count":3}, {"id": "energy_hammer", "count":3}]},
-                        {"addRule": ["jetpack", "destroyer_armor", "war_chant", {"id": "psychic", "x": 2}]}
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
+                        {"addRule": ["jetpack", "destroyer_armor", {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, "leader",  {"id": "wounds", "x": 2}],
                     "min": 1,
@@ -160,6 +163,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
+            "keywords": ["Biker"],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -176,7 +180,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id":"energy_sword", "count": 3}, {"id":"energy_fist", "count":3}, {"id": "energy_hammer", "count":3}]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, "combat_bike", {"id": "impact", "x": 1}, "leader", {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, {"id": "impact", "x": 1}, "leader", {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -209,28 +213,6 @@
                 }
             ]
         },
-        "cultists_champion": {
-            "name": "Cultist Champion",
-            "description": "A cult leader.",
-            "subfactions": ["none", "change_traitors"],
-            "category": "command",
-            "models": [
-                {
-                    "name": "Cultist Champion",
-                    "movement": 6,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
-                    "options": [{"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2} ], "withWeapon": [["pistol", {"id": "chainsword", "count": 2}]]}, {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]}],
-                    "rules": ["leader", {"id": "wounds", "x": 2}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "dark_priest":{
             "name": "Dark Priest",
             "description": "A devotee of the dark gods who seeks to spread their faith to non-believers on the battlefield.",
@@ -243,7 +225,7 @@
                     "courage": 7,
                     "shoot": 6,
                     "fight": 7,
-                    "defense": 4,
+                    "defense": 8,
                     "reflexes": 6,
                     "weapons": ["marine_pistol", {"id":"holy_mace", "count": 3}, "at_grenade"],
                     "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "melee_tactics", "x": 1}],
@@ -289,12 +271,12 @@
                 {
                     "name": "Traitor Leader",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_rifle", {"id":"heavy_ccw", "count": 2}, "at_grenade"],
+                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [
                         {
                             "replaceWeapon": "marine_rifle",
@@ -357,7 +339,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_rifle", {"id":"ccw", "count":2}, "at_grenade"],
+                    "weapons": ["marine_rifle", {"id":"heavy_ccw", "count":2}, "at_grenade"],
                     "options": [
                         {
                             "replaceWeapon": "marine_rifle",
@@ -388,7 +370,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 4,
-                    "weapons": ["marine_pistol", {"id":"chainsword", "count":2}, "at_grenade"],
+                    "weapons": ["marine_pistol", {"id":"heavy_ccw", "count":2}, "at_grenade"],
                     "options": [{"modelLimit": 2, "replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "marine_pistol", "withWeapon": {"id": "energy_axe", "count": 2}}],
                     "rules": [],
                     "min": 4,
@@ -406,15 +388,15 @@
                 {
                     "name": "Traitor Devastator Leader",
                     "movement": 6,
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_pistol", "at_grenade", {"id":"chainsword", "count": 2}],
+                    "weapons": ["marine_rifle", "at_grenade", "heavy_ccw"],
                     "options": [
                         {
-                            "replaceWeapon": ["marine_pistol", {"id":"chainsword", "count": 2}],
+                            "replaceWeapon": ["marine_rifle", "heavy_ccw"],
                             "withWeapon": [
                                 ["marine_rifle", {"id":"ccw", "count":1}],
                                 {"id": "energy_claws", "count": 2},
@@ -447,7 +429,7 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_rifle", "at_grenade", "ccw"],
+                    "weapons": ["marine_rifle", "at_grenade", "heavy_ccw"],
                     "options": [
                         {"replaceWeapon": ["marine_rifle", "ccw"], "withWeapon": [[{"id":"chainsword", "count": 2}, "marine_pistol"]]},
                         {
@@ -560,10 +542,8 @@
         "mutated_destoyers": {
             "name": "Mutated Destroyers",
             "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
-            "rules": ["ambush", "mutations"],
+            "rules": ["ambush", {"id": "wounds", "x": 2}],
             "category": "specialist",
-            "min": 3,
-            "max": 9,
             "models": [
                 {
                     "name": "Mutated Destroyer",
@@ -573,10 +553,9 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "mutated_claws", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "mutated_claws", "count": 2}, "withWeapon": [{"id": "mutated_guns", "count": 2}]}],
-                    "min": 3,
-                    "max": 9,
+                    "weapons": [{"id": "mutated_fists", "count": 3}, "mutated_guns"],
+                    "min": 1,
+                    "max": 3,
                     "rules": []
                 }
             ]
@@ -889,9 +868,9 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["battle_cannon", {"id":"crab_claw", "count": 4}, {"id":"crab_flail", "count": 3}, "reaper_cannon"],
+                    "weapons": ["crab_cannon", {"id":"crab_claw", "count": 4}, "twin_heavy_flamethrower", "reaper_cannon"],
                     "options": [
-                        {"replaceWeapon": {"id":"crab_flail", "count": 3}, "withWeapon": ["twin_heavy_flamethrower", "havoc_missiles"]},
+                        {"replaceWeapon": "twin_heavy_flamethrower", "withWeapon": [{"id":"crab_flail", "count": 3}, "havoc_missiles"]},
                         {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
                     ],
                     "rules": [],
