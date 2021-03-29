@@ -26,7 +26,7 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
                                 ["guardian_rifle", {"id": "heavy_ccw", "count": 4}]
                             ]
                         },
@@ -60,7 +60,7 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 4}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
                                 ["guardian_rifle", {"id": "heavy_ccw", "count": 3}]
                             ]
                         },
