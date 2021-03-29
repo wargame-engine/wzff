@@ -1239,7 +1239,7 @@
             "subfactions": ["change_traitors"],
             "name": "Psychic Channeling",
             "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
-            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +3\" of range.",
+            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +6\" of range.",
             "cost": 1
         },
         "hex_rounds": {

@@ -291,17 +291,17 @@
         "dread_fist": {"name": "Dread Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "psychic_sword": {"name": "Psychic Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "psychic_greatsword": {"name": "Psychic Greatsword", "attacks": 1, "short": "Melee", "ap": 6},
-        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "defensive", "x": 1}]},
+        "psychic_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending", "shielding"]},
         "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "psychic_falchion": {"name": "Psychic Falchions", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]},
         "psychic_greathammer": {"name": "Psychic Greathammer", "attacks": 1, "ap": 7, "short": "Melee"},
-        "incinerator": {"name": "Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": []},
-        "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "rules": []},
-        "psychic_silencer": {"name": "Psychic Silencer", "attacks": 6, "short": 12, "medium": 24, "ap": 1},
-        "gatling_psychic_silencer": {"name": "Gatling Psychic Silencer", "attacks": 12, "short": 12, "medium": 24},
-        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 6}]},
+        "incinerator": {"name": "Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 3},
+        "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 3, "short": 9, "medium": 18, "ap": 4},
+        "psychic_silencer": {"name": "Psychic Silencer", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
+        "gatling_psychic_silencer": {"name": "Gatling Psychic Silencer", "attacks": 8, "short": 12, "medium": 24, "ap": 1},
+        "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
+        "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 5, "short": 12, "medium": 24, "ap": 4},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48},
         "heavy_plasma_cannon": {
             "name": "Heavy Plasma Cannon",
@@ -386,6 +386,7 @@
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]}
     },
     "rules": {
+        "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
         "dark_prism": {"name": "Dark Prism", "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.", "points": 5},
         "medical_training": {
