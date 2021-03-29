@@ -72,6 +72,43 @@
                 }
             ]
         },
+        "witch_hunters": {
+            "name": "Witch Hunters",
+            "description": "A group of Witch hunters adept at hunting Psychic individuals.",
+            "min": 5,
+            "max": 10,
+            "category": "core",
+            "options": [
+                {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}], "modelLimit": "all", "limit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Witch Hunter Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
+                    "rules": ["ward"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Witch Hunter",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "throne_guardians": {
             "name": "Guardians",
             "description": "Highly trained and elite fighters.",
@@ -81,11 +118,8 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
-                    "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                        ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
-                    ]
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                    "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                 },
                 {"addWeapon": "guardian_dagger"},
                 {"addRule": "guardian_shield"}
@@ -99,7 +133,7 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 6
                 }
@@ -111,7 +145,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 4}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {
                     "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
@@ -141,18 +175,9 @@
         "throne_jetbikes": {
             "name": "Jetbikes",
             "description": "Throne guardians on high speed jet bikes.",
-            "min": 5,
-            "max": 10,
             "category": "strike",
             "rules": [{"id": "wounds", "x": 2}, "hover"],
-            "options": [
-                {
-                    "replaceWeapon": ["guardian_rifle_array"],
-                    "withWeapon": [
-                        "guardian_missiles"
-                    ]
-                }
-            ],
+            "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}],
             "models": [
                 {
                     "name": "Jetbike",
@@ -192,14 +217,107 @@
                     "max": 1
                 }
             ]
+        },
+        "light_attack_vehicle": {
+            "name": "Light Hover Tank",
+            "description": "A light attack vehicle with medium tank killing capability.",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "strike",
+            "max": 1,
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
+            "models": [
+                {"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 7, "fight": 7, "defense": 10, "reflexes": 7, "weapons": ["guardian_twin_light_laser_cannon"], "min": 1, "max": 1}
+            ]
+        },
+        "hover_tank": {
+            "name": "Hover Tank",
+            "description": "A hover tank with good tank killing capability.",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 7,
+                    "weapons": ["guardian_twin_light_laser_cannon", {"id": "guardian_twin_heavy_machinegun", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": "guardian_twin_light_laser_cannon", "withWeapon": "guardian_twin_laser_cannon"}]
+                }
+            ]
+        },
+        "hover_transport": {
+            "name": "Hover Transport",
+            "description": "A hover transport with decent supporting weaponry.",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "transport",
+            "max": 1,
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 12,
+                    "reflexes": 7,
+                    "weapons": ["guardian_twin_light_laser_cannon", {"id": "guardian_twin_heavy_machinegun", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_apc": {
+            "name": "APC",
+            "description": "A durable transport built by the loyal marines.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": ["storm_rifle"],
+                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
-        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
+        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 6, "short": 12, "medium": 24},
         "guardian_missiles": {
             "name": "Guardian Missiles",
-            "profiles": [{"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["anti_air"]}, {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]}]
+            "profiles": [
+                {"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["anti_air"]},
+                {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]}
+            ]
         },
+        "guardian_twin_light_laser_cannon": {
+            "name": "Guardian Twin Light Laser Cannon",
+            "profiles": [{"name": "Focused", "attacks": 2, "short": 18, "medium": 36, "ap": 5}, {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 3}]
+        },
+        "guardian_twin_heavy_machinegun": {"name": "Guardian Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
+        "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 5},
         "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
@@ -224,11 +342,7 @@
         "twin_guardian_carbine": {"name": "Twin Guardian Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}
     },
     "rules": {
-        "lance": {
-            "name": "Lance",
-            "description": "This weapon gets +1 AP when used during a Charge.",
-            "points": ["weapon.attacks", {"multiply": 1}]
-        },
+        "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "battle_tactics": {
             "name": "Battle Tactics",
             "inputs": ["x"],

@@ -818,7 +818,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "fiend_claws", "count": 4}, {"id": "maul_cutter", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 6}]}],
+                    "options": [{"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 4}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -897,9 +897,9 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["crab_cannon", {"id": "crab_claw", "count": 4}, "twin_heavy_flamethrower", "reaper_cannon"],
+                    "weapons": ["crab_cannon", {"id": "crab_claw", "count": 2}, "havoc_missiles", "reaper_cannon"],
                     "options": [
-                        {"replaceWeapon": "twin_heavy_flamethrower", "withWeapon": [{"id": "crab_flail", "count": 3}, "havoc_missiles"]},
+                        {"replaceWeapon": "twin_heavy_flamethrower", "withWeapon": [{"id": "crab_flail", "count": 3}, "twin_heavy_flamethrower"]},
                         {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
                     ],
                     "rules": [],

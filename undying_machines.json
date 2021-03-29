@@ -693,7 +693,7 @@
         "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "antimatter_cannon": {"name": "Antimatter Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
+        "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
         "energy_staff_melee": {"name": "Energy Staff (Melee)", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_rod_melee": {"name": "Guardian Rod (Melee)", "attacks": 1, "short": "Melee", "ap": 2},
@@ -730,7 +730,7 @@
             "description": "This model gains +1 Save when hit at Long Range.",
             "points": ["model.defense", {"subtract": "constants.baseStats.defense"}, {"multiply": 5}]
         },
-        "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 3 hits.", "points": ["weapon.attacks", {"multiply": 3}]},
+        "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {"name": "Regeneration Orb", "description": "Once per game after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
         "regeneration_pods": {"name": "Regeneration Pods", "description": "Once per round after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
         "phase_field": {"name": "Phase Field", "description": "This model and friendly Infantry units within 6\" get +1 Save.", "points": 20},

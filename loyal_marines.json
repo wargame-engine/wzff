@@ -637,7 +637,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fear"],
             "options": [
-                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["prime_heavy_carbine"]},
+                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]},
                 {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
             ],
             "models": [
@@ -1783,7 +1783,6 @@
             "points": 10
         },
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
-        "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
         "banner_of_wrath": {"name": "Banner of Wrath", "description": "This model and friendly Infantry units within 6\" may re-roll failed Strength tests of 9+.", "points": 10},
         "banner_of_focus": {"name": "Banner of Focus", "description": "This model and friendly Infantry units within 6\" may re-roll failed Accuracy tests of 9+.", "points": 10},
         "expert_marksman": {"name": "Expert Marksman", "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.", "points": 10},
