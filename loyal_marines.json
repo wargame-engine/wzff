@@ -637,7 +637,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["fear"],
             "options": [
-                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": ["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]},
+                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]]},
                 {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
             ],
             "models": [
