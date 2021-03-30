@@ -1407,7 +1407,7 @@
         "headbang": {"name": "Headbang", "description": "Target enemy unit within 6\" takes 3 hits with AP 5.", "charge": 5}
     },
     "strategies": {
-        "war!": {"name": "WAR!", "phase": "activation", "description": "Choose one unit. That unit adds +2\" to its movement stat this round.", "cost": 1},
+        "here_we_go": {"name": "Here We Go!", "phase": "activation", "description": "Use when an Infantry unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
         "ramshackle": {
             "subfactions": ["none", "goblin_army"],
             "phase": "activation",
