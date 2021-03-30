@@ -734,21 +734,21 @@
             "max": 1,
             "category": "transport",
             "keywords": ["Vehicle"],
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "open_topped", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Truck",
                     "courage": 5,
                     "shoot": 4,
                     "fight": 4,
-                    "defense": 10,
+                    "defense": 9,
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": "heavy_machinegun", "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
-                        {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"}
+                        {"addRule": [{"id": "dozer", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
+                        {"replaceRule": {"id": "open_topped", "x": 12}, "withRule": "extra_armor"}
                     ],
                     "min": 1,
                     "max": 1
@@ -809,7 +809,7 @@
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_armor", {"id": "transport", "x": 10, "name": "Extra Space"}]},
+                        {"addRule": [{"id": "dozer", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_armor", {"id": "transport", "x": 10, "name": "Extra Space"}]},
                         {"addWeapon": ["heavy_cannon", "cannon", "lightning_cannon"], "limit": 1},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
                     ],
@@ -825,21 +825,21 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", {"id": "open_topped", "x": 11}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 12}, "vulnerable_side_rear", {"id": "open_topped", "x": 12}, "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Battle Truck",
                     "courage": 5,
                     "shoot": 4,
                     "fight": 4,
-                    "defense": 11,
+                    "defense": 10,
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun"}],
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": {"id": "rocket_launcher"}},
-                        {"addRule": [{"id": "strider", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
-                        {"replaceRule": {"id": "open_topped", "x": 11}, "withRule": "extra_armor"},
+                        {"addRule": [{"id": "dozer", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
+                        {"replaceRule": {"id": "open_topped", "x": 12}, "withRule": "extra_armor"},
                         {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon"], "limit": 1},
                         {"addWeapon": ["heavy_mortar"]},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
@@ -1287,7 +1287,7 @@
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "cannon": {
             "name": "Cannon",
-            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 6}]
+            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 5}]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 18, "short": 18, "medium": 36, "ap": 3},
@@ -1302,7 +1302,10 @@
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
-        "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_cannon": {
+            "name": "Heavy Cannon",
+            "profiles": [{"name": "HE", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
+        },
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},
@@ -1385,14 +1388,14 @@
             "hidden": true,
             "description_short": "Impact +3",
             "description": "This model gains +3 impact.",
-            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
+            "points": 6
         },
         "boarding_plank": {
             "name": "Boarding Plank",
             "description_short": "Impact +3",
             "hidden": true,
             "description": "This model gains +3 impact.",
-            "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"multiply": 3}]
+            "points": 6
         },
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 impact.", "points": 10},
         "extra_armor": {"name": "Extra Armor", "description_short": "Save +1", "hidden": true, "description": "This model gains +1 Save.", "points": 10},

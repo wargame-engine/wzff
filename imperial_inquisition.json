@@ -150,7 +150,7 @@
                     "defense": 11,
                     "reflexes": 4,
                     "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "strider", "name": "Dozer Blade"}]}],
+                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
