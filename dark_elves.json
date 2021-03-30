@@ -176,7 +176,7 @@
             ],
             "models": [
                 {
-                    "name": "Tortured Warrior Leader",
+                    "name": "Abomination Warrior Leader",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -188,7 +188,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Tortured Warrior",
+                    "name": "Abomination Warrior",
                     "courage": 5,
                     "movement": 6,
                     "shoot": 5,
@@ -682,7 +682,7 @@
         "barb_whip": {"name": "Poison Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
         "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["poison"]},
         "twin_barb_rifle": {"name": "Twin Poison Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["poison"]},
-        "barb_carbine": {"name": "Poison Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
+        "barb_carbine": {"name": "Poison Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
         "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
@@ -692,7 +692,7 @@
             {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},
             {"name": "Blast", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}
         ]},
-        "heat_cannon": {"name": "Heat Cannon", "ap": 4, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "fusion"]},
+        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "fusion"]},
         "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
         "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
@@ -739,7 +739,6 @@
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
             "points": 1
         },
-        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
         "dodge": {"name": "Dodge", "description": "This model gets Save(+2) while in Melee.", "points": 2},
         "combat_drugs": {
             "name": "Combat Drugs",

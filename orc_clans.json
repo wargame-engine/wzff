@@ -308,26 +308,6 @@
             "options": [{"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}],
             "models": [
                 {
-                    "name": "Orc Boss",
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 5,
-                    "rules": [],
-                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
-                            "withWeapon": [{"id": "ultra_drill", "count": 2}, {"id": "ultra_axe", "count": 2}, {"id": "ultra_saw", "count": 2}, {"id": "ultra_claw", "count": 2}]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
-                },
-                {
                     "name": "Orc",
                     "courage": 4,
                     "shoot": 4,
@@ -337,6 +317,7 @@
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceModel": ["orc_boss"], "modelLimit": 1},
                         {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]},
                         {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["rocket_launcher", "heavy_machinegun"], "modelLimit": "1/10"}
                     ],
@@ -354,26 +335,6 @@
             "rules": ["fly"],
             "models": [
                 {
-                    "name": "Storm Orc Boss",
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 8,
-                    "rules": [],
-                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
-                },
-                {
                     "name": "Storm Orc",
                     "courage": 4,
                     "shoot": 4,
@@ -383,6 +344,7 @@
                     "movement": 8,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
+                        {"replaceModel": ["storm_boss"], "modelLimit": 1},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine"]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
                     ],
@@ -400,26 +362,6 @@
             "rules": ["stealth", "outflank"],
             "models": [
                 {
-                    "name": "Commando Orc Boss",
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 5,
-                    "rules": [],
-                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                        {
-                            "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
-                },
-                {
                     "name": "Commando Orc",
                     "courage": 4,
                     "shoot": 4,
@@ -429,6 +371,7 @@
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
+                        {"replaceModel": ["commando_boss"], "modelLimit": 1},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "shotgun"]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["flamethrower", "plasma_rifle", "shred_rifle", "rocket_launcher", "heavy_machinegun"], "limit": 1}
                     ],
@@ -446,20 +389,6 @@
             "options": [{"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"], "modelLimit": 2}],
             "models": [
                 {
-                    "name": "Specialist Orc Boss",
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 5,
-                    "rules": [],
-                    "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]}],
-                    "min": 0,
-                    "max": 1
-                },
-                {
                     "name": "Specialist Orc",
                     "courage": 4,
                     "shoot": 4,
@@ -468,7 +397,10 @@
                     "reflexes": 5,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
-                    "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"}],
+                    "options": [
+                        {"replaceModel": ["specialist_boss"], "modelLimit": 1},
+                        {"replaceWeapon": "orc_flamethrower", "withWeapon": ["rocket_launcher", "railgun", "heavy_machinegun"], "modelLimit": "all"}
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -481,23 +413,7 @@
             "max": 1,
             "category": "specialist",
             "rules": ["relentless"],
-            "options": [
-                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": [{"id": "cutlass", "count": 2}], "modelLimit": "all"},
-                {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
-            ],
             "models": [
-                {
-                    "name": "Pirate Orc Boss",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "movement": 5,
-                    "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "min": 0,
-                    "max": 1
-                },
                 {
                     "name": "Pirate Orc",
                     "courage": 5,
@@ -506,6 +422,11 @@
                     "defense": 7,
                     "reflexes": 5,
                     "movement": 5,
+                    "options": [
+                        {"replaceModel": ["pirate_boss"], "modelLimit": 1},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": [{"id": "cutlass", "count": 2}], "modelLimit": "all"},
+                        {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"], "modelLimit": "all"}
+                    ],
                     "weapons": ["boarding_pistol", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "min": 5,
                     "max": 10
@@ -1277,7 +1198,99 @@
             ]
         }
     },
-    "models": {"attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["beast_bite"], "min": 0, "max": 1}},
+    "models": {
+        "attack_beast": {"name": "Attack Beast", "courage": 5, "shoot": 4, "movement": 6, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["beast_bite"], "min": 0, "max": 1},
+        "orc_boss": {
+            "name": "Orc Boss",
+            "courage": 5,
+            "shoot": 4,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 5,
+            "rules": [],
+            "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+            "options": [
+                {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {
+                    "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "specialist_boss": {
+            "name": "Specialist Orc Boss",
+            "courage": 5,
+            "shoot": 4,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 5,
+            "rules": [],
+            "weapons": ["orc_flamethrower", "frags", {"id": "heavy_ccw", "count": 3}],
+            "options": [{"replaceWeapon": "orc_flamethrower", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher", "rocket_launcher", "railgun", "heavy_machinegun"]}],
+            "min": 0,
+            "max": 1
+        },
+        "commando_boss": {
+            "name": "Commando Orc Boss",
+            "courage": 5,
+            "shoot": 4,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 5,
+            "rules": [],
+            "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+            "options": [
+                {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {
+                    "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "storm_boss": {
+            "name": "Storm Orc Boss",
+            "courage": 5,
+            "shoot": 4,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 8,
+            "rules": [],
+            "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+            "options": [
+                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {
+                    "replaceWeapon": {"id": "heavy_ccw", "count": 3},
+                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "pirate_boss": {
+            "name": "Pirate Orc Boss",
+            "courage": 6,
+            "shoot": 5,
+            "fight": 6,
+            "defense": 7,
+            "reflexes": 5,
+            "movement": 5,
+            "options": [
+                {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "cutlass", "count": 3}]},
+                {"replaceWeapon": "boarding_pistol", "withWeapon": ["boarding_gun"]}
+            ],
+            "weapons": ["boarding_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
+            "min": 0,
+            "max": 1
+        }
+    },
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24},
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
@@ -1316,23 +1329,23 @@
         "shock_gun": {"name": "Teleport Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
-        "carbine": {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "twin_carbine": {"name": "Twin Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "carbine": {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "twin_carbine": {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
-        "super_carbine": {"name": "Super Carbine", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+        "super_carbine": {"name": "Super Carbine", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
         "combi_heavy_flamer": {
             "name": "Combi Heavy Flamer",
             "profiles": [
-                {"name": "Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 9, "medium": 18, "rules": []}
+                {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": []}
             ]
         },
         "combi_rocket_launcher": {
             "name": "Combi Rocket Launcher",
             "profiles": [
-                {"name": "Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+                {"name": "Twin Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
                 {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
             ]
         },

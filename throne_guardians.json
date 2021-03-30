@@ -304,7 +304,7 @@
         }
     },
     "weapons": {
-        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 6, "short": 12, "medium": 24},
+        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
         "guardian_missiles": {
             "name": "Guardian Missiles",
             "profiles": [
@@ -337,9 +337,7 @@
         "scorching_spear": {
             "name": "Scorching Spear",
             "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Flame", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]}]
-        },
-        "guardian_carbine": {"name": "Guardian Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
-        "twin_guardian_carbine": {"name": "Twin Guardian Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}
+        }
     },
     "rules": {
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},

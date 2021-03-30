@@ -114,7 +114,10 @@
     },
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
-        "plasma_grenade": {"name": "Plasma Grenades", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+        "plasma_grenade": {
+            "name": "Plasma Grenades",
+            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]}, {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}]
+        },
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenade": {
             "name": "Grenades",
@@ -129,8 +132,8 @@
             "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3}]
         },
         "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "rules": [{"id": "blast", "x": 2}]},
-        "ccw": {"name": "CCW (Light)", "attacks": 1, "short": "Melee"},
-        "heavy_ccw": {"name": "CCW (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
+        "ccw": {"name": "Light CCW", "attacks": 1, "short": "Melee"},
+        "heavy_ccw": {"name": "Heavy CCW", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainsword": {"name": "Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
         "chainaxe": {"name": "Chainaxe", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "heavy_chainsword": {"name": "Heavy Chainsword", "attacks": 1, "ap": 3, "short": "Melee"},
@@ -335,7 +338,7 @@
         },
         "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
-        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["rending"]},
+        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["rending"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["pistol"]},
         "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
@@ -362,8 +365,8 @@
                 {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
             ]
         },
-        "assault_carbine": {"name": "Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
-        "twin_assault_carbine": {"name": "Twin Assault Carbine", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
+        "assault_carbine": {"name": "Assault Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
+        "twin_assault_carbine": {"name": "Twin Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
         "twin_plasma_carbine": {
             "name": "Twin Plasma Carbine",
             "profiles": [
@@ -373,7 +376,7 @@
         },
         "judge_blade": {"name": "Judge Blade", "attacks": 3, "short": "Melee", "ap": 5},
         "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
-        "fist_carbine": {"name": "Fist Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "fist_carbine": {"name": "Fist Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
         "fist_pistol": {"name": "Fist Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "assault_rifle_array": {"name": "Assault Rifle Array", "attacks": 6, "short": 12, "medium": 24, "ap": 1},
@@ -387,6 +390,7 @@
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]}
     },
     "rules": {
+        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
         "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
@@ -454,7 +458,7 @@
             "description": "When this unit is activated, choose a friendly Stormtrooper Infantry unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
             "points": 10
         },
-        "fusion": {"name": "Fusion", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "effects": ["weapon.attacks", {"multiply": 2.5}]},
+        "fusion": {"name": "Fusion", "description": "Enemy units add 1 to rolls on any Damage Table(X) rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "psychic": {
             "name": "Psychic",
