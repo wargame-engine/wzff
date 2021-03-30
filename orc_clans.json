@@ -711,11 +711,11 @@
             "models": [
                 {
                     "name": "Orc Minicopter",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [
@@ -738,11 +738,11 @@
             "models": [
                 {
                     "name": "Truck",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
-                    "defense": 9,
-                    "reflexes": 4,
+                    "defense": 10,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}],
                     "options": [
@@ -766,11 +766,11 @@
             "models": [
                 {
                     "name": "War Helicopter",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 8,
-                    "reflexes": 4,
+                    "defense": 9,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front", "Left", "Right"]}],
                     "options": [
@@ -832,7 +832,7 @@
                     "courage": 5,
                     "shoot": 4,
                     "fight": 4,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_machinegun"}],
@@ -922,7 +922,7 @@
                     "shoot": 5,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "plasma_rifle"}, "mini_claw"],
                     "options": [{"replaceWeapon": {"id": "plasma_rifle"}, "withWeapon": ["heavy_flamethrower", "rocket_launcher", "heavy_machinegun", "goblin_bazooka"]}],
@@ -967,11 +967,11 @@
             "models": [
                 {
                     "name": "Attack Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 8,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_flamethrower", "count": 1}],
                     "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -990,11 +990,11 @@
             "models": [
                 {
                     "name": "Dragster Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "shock_rifle", "count": 1, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 1, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1013,11 +1013,11 @@
             "models": [
                 {
                     "name": "Beast Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "beast_cannon", "count": 1, "mount": ["Front"]}, {"id": "beast_launcher", "count": 1}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1036,11 +1036,11 @@
             "models": [
                 {
                     "name": "Blaster Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "rivet_cannon", "count": 1}, {"id": "frags", "count": 1}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1059,11 +1059,11 @@
             "models": [
                 {
                     "name": "Snazz Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "combi_gun", "count": 1}, {"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}],
                     "min": 1,
@@ -1081,11 +1081,11 @@
             "models": [
                 {
                     "name": "Jet Buggy",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "twin_rocket_launcher", "count": 1, "mount": ["Front"]}, {"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}],
                     "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
@@ -1104,11 +1104,11 @@
             "models": [
                 {
                     "name": "Goblin Artillery",
-                    "courage": 3,
+                    "courage": 4,
                     "shoot": 5,
                     "fight": 4,
                     "defense": 7,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 3,
                     "rules": [{"id": "wounds", "x": 3}],
                     "weapons": ["cannon", {"id": "ccw", "count": 3}],
@@ -1129,11 +1129,11 @@
             "models": [
                 {
                     "name": "Blaster Plane",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "smasher_cannon", "count": 1, "mount": ["Front"]}, {"id": "twin_plasma_cannon", "mount": ["Front"]}],
                     "options": [
@@ -1157,11 +1157,11 @@
             "models": [
                 {
                     "name": "Flame Bomber",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "twin_heavy_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "flame_bombs"}],
                     "options": [{"addWeapon": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "flame_missiles", "mount": ["Front"]}]}],
@@ -1181,11 +1181,11 @@
             "models": [
                 {
                     "name": "Blitz Bomber",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun"}, {"id": "twin_super_machinegun", "count": 1, "mount": ["Front"]}, {"id": "heavy_bombs"}],
                     "min": 1,
@@ -1204,11 +1204,11 @@
             "models": [
                 {
                     "name": "Attack Plane",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 4,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "twin_super_machinegun", "count": 2, "mount": ["Front"]}],
                     "options": [{"addWeapon": [{"id": "twin_super_machinegun"}]}],
@@ -1300,8 +1300,8 @@
         "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
         "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
-        "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 4},
-        "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 4},
+        "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
+        "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
         "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
@@ -1348,7 +1348,7 @@
         "bomb_hammer": {"name": "Bomb Hammer", "attacks": 1, "ap": 7, "short": "Melee"},
         "assault_bomb": {"name": "Assault Bomb", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "blast", "x": 3}]},
         "flame_bombs": {"name": "Flame Bombs", "attacks": 2, "ap": 2, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
-        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "ap": 4, "short": 6, "rules": ["bomb", {"id": "blast", "x": 6}]},
+        "heavy_bombs": {"name": "Heavy Bomb", "attacks": 1, "ap": 3, "short": 6, "rules": ["bomb", {"id": "blast", "x": 3}]},
         "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
         "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
