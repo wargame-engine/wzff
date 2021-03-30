@@ -389,6 +389,7 @@
     "rules": {
         "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
+        "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
         "dark_prism": {"name": "Dark Prism", "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.", "points": 5},
         "medical_training": {
