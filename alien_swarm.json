@@ -253,8 +253,8 @@
                     "shoot": 4,
                     "defense": 9,
                     "movement": 6,
-                    "weapons": [{"id": "acid_spitter", "count": 5}, {"id": "heavy_ccw", "count": 4}],
-                    "options": [{"replaceWeapon": {"id": "acid_spitter", "count": 5}, "withWeapon": [{"id": "spiked_strangler", "count": 5}, {"id": "acid_cannon", "count": 5}]}],
+                    "weapons": [{"id": "acid_spitter", "count": 4}, {"id": "heavy_ccw", "count": 4}],
+                    "options": [{"replaceWeapon": {"id": "acid_spitter", "count": 4}, "withWeapon": [{"id": "spiked_strangler", "count": 4}, {"id": "acid_cannon", "count": 4}]}],
                     "min": 1,
                     "max": 1
                 }
