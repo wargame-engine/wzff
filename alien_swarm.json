@@ -222,7 +222,7 @@
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
             "keywords": ["Swarm"],
-            "rules": ["ambush", {"id": "wounds", "x": 3}],
+            "rules": ["ambush", {"id": "wounds", "x": 4}],
             "models": [
                 {
                     "name": "Hive Swarm",

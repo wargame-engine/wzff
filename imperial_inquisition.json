@@ -2,7 +2,8 @@
     "id": "imperial_inquisition",
     "name": "Imperial Inquisition",
     "author": "guitarninja#5707",
-    "color": "#d4af37",
+    "color": "#7d0a15",
+    "secondary_color": "#010203",
     "units": {
         "inquisitor": {
             "name": "Inquisitor",
