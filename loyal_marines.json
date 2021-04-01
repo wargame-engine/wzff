@@ -354,7 +354,7 @@
                     "movement": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 3}],
-                    "rules": ["banner_of_wrath"],
+                    "rules": ["banner_of_wrath", "support"],
                     "options": [
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
                         {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 4}]]},
@@ -1838,8 +1838,8 @@
             "points": 10
         },
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
-        "banner_of_wrath": {"name": "Banner of Wrath", "description": "This model and friendly Infantry units within 6\" may re-roll failed Strength tests of 9+.", "points": 10},
-        "banner_of_focus": {"name": "Banner of Focus", "description": "This model and friendly Infantry units within 6\" may re-roll failed Accuracy tests of 9+.", "points": 10},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round a Infantry unit within 6\" may re-roll failed Strength tests of 9+.", "points": 10},
+        "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round a Infantry unit within 6\" may re-roll failed Accuracy tests of 9+.", "points": 10},
         "expert_marksman": {"name": "Expert Marksman", "description": "This model and friendly Infantry units within 3\" gain +1 to hit with shooting attacks.", "points": 10},
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This model may ignore vertical movement distances when moving.", "points": ["model.movement", {"multiply": 0.25}]},
         "combat_shield": {"name": "Combat Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
