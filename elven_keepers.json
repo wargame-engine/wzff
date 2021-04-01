@@ -250,7 +250,6 @@
     },
     "weapons": {
         "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee"},
-        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
@@ -263,18 +262,7 @@
                 {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
             ]
         },
-        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
-        "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
-        "irridescent_cannon": {
-            "name": "Irridescent Cannon",
-            "profiles": [
-                {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", {"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 2, "short": 12, "medium": 24, "ap": 7, "rules": ["assault"]},
-                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]}
-            ]
-        },
-        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
-        "power_storm": {"medium": 12, "ap": 1, "attacks": 8}
+        "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]}
     },
     "rules": {
         "keeper_tactics": {

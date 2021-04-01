@@ -686,7 +686,6 @@
         "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
-        "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
         "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["fusion"]},
         "heavy_wave_cannon": {"name": "Heavy Wave Cannon", "profiles": [
             {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},

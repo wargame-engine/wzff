@@ -18,7 +18,7 @@
             "models": [
                 {
                     "name": "Company Commander",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
@@ -47,7 +47,7 @@
             "models": [
                 {
                     "name": "Stormtrooper Commander",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
@@ -76,7 +76,7 @@
             "models": [
                 {
                     "name": "Platoon Commander",
-                    "courage": 5,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,

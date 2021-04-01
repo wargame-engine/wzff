@@ -55,7 +55,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "rifle_tactics", "x": 1}],
+            "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "rifle_tactics", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -227,16 +227,8 @@
                     "movement": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "energy_sword", "count": 4}],
                     "options": [
-                        {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
-                        {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 3}]]},
-                        {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-                        {
-                            "replaceWeapon": {"id": "prime_chainsword", "count": 3},
-                            "withWeapon": [{"id": "prime_energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]
-                        },
-                        {"addRule": ["combat_shield"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "min": 1,
@@ -278,6 +270,33 @@
                 }
             ]
         },
+        "prime_champion_on_bike": {
+            "name": "Prime Champion on Bike",
+            "description": "A fearless next-generation combat master on a bike.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "models": [
+                {
+                    "name": "Prime Champion on Bike",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "holy_mace", "count": 4}, "prime_pistol"],
+                    "options": [
+                        {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "prime_champion": {
             "name": "Prime Champion",
             "description": "A fearless next-generation combat master.",
@@ -296,14 +315,9 @@
                     "defense": 8,
                     "movement": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "prime_chainsword", "count": 4}],
+                    "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "holy_mace", "count": 4}],
                     "options": [
-                        {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
-                        {
-                            "replaceWeapon": {"id": "prime_chainsword", "count": 4},
-                            "withWeapon": [{"id": "prime_energy_sword", "count": 4}, {"id": "energy_fist", "count": 4}, {"id": "energy_hammer", "count": 4}]
-                        },
-                        {"addRule": ["combat_shield"]}
+                        {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}
                     ],
                     "min": 1,
                     "max": 1
@@ -380,7 +394,7 @@
             "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "tough", "x": 1}],
             "subfactions": ["none", "wolf_marines"],
             "models": [
-                {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "weapons": ["at_grenade", "judge_blade", "prime_pistol"], "min": 1, "max": 1}
+                {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "weapons": ["at_grenade", {"id": "judge_blade", "count": 3}, "prime_pistol"], "min": 1, "max": 1}
             ]
         },
         "prime_surgeon": {
@@ -1822,20 +1836,21 @@
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "short": "Melee"},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
-        "power_purge": {"medium": 9, "ap": 1, "attacks": 10}
+        "power_purge": {"medium": 9, "ap": 1, "attacks": 10},
+        "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": 10
+            "points": ["rule.x", {"multiply": 10}]
         },
         "melee_tactics": {
             "name": "Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": 10
+            "points": ["rule.x", {"multiply": 10}]
         },
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
         "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round a friendly Infantry unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},

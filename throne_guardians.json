@@ -106,7 +106,12 @@
             "category": "core",
             "keywords": ["Infantry", "Witch Hunters"],
             "options": [
-                {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}], "modelLimit": "all", "limit": 1}
+                {
+                    "replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 2}],
+                    "withWeapon": [["flamethrower", {"id": "ccw", "count": 2}], {"id": "energy_greatblade", "count": 2}],
+                    "modelLimit": "all",
+                    "limit": 1
+                }
             ],
             "models": [
                 {
@@ -401,7 +406,11 @@
         }
     },
     "rules": {
-        "banner_of_blindness": {"name": "Banner of Blindness", "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, that unit suffers -1 Accuracy.", "points": 10},
+        "banner_of_blindness": {
+            "name": "Banner of Blindness",
+            "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, that unit suffers -1 Accuracy.",
+            "points": 10
+        },
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "battle_tactics": {
             "name": "Battle Tactics",

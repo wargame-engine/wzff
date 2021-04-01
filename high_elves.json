@@ -3,42 +3,65 @@
     "name": "High Elf Worlds",
     "author": "Caliallie#6369",
     "units": {
-        "troupe": {
-            "name": "Troupe",
-            "description": "A group of elven jesters on foot.",
+        "defenders": {
+            "name": "Defenders",
+            "description": "A group of high elf warriors.",
             "min": 1,
             "max": 1,
-            "rules": ["stealth"],
+            "category": "core",
             "keywords": ["Infantry"],
             "models": [
                 {
-                    "name": "Jester",
-                    "courage": 6,
-                    "movement": 6,
-                    "shoot": 7,
-                    "fight": 7,
+                    "name": "Defender Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "ccw", "count": 2}],
+                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Defender",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 4,
+                    "max": 9
+                },
+                {
+                    "name": "Weapon Platform",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 7,
+                    "weapons": [{"id": "fusion_cannon", "count": 1, "mount": ["Front"]}],
                     "options": [
-                        {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["deathly_touch", "deathly_caress", "deathly_kiss", "deathly_embrace"]}
+                        {
+                            "replaceWeapon": {"id": "fusion_cannon", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "shard_cannon", "mount": ["Front"]},
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "sky_cannon", "mount": ["Front"]},
+                                {"id": "laser_machinegun", "mount": ["Front"]}
+                            ]
+                        }
                     ],
-                    "rules": [],
-                    "min": 5,
-                    "max": 20
+                    "min": 0,
+                    "max": 1
                 }
             ]
         }
     },
     "weapons": {
-        "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", "rending"]},
-        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 5, "medium": 10, "rules": ["pistol", {"id": "poison", "x": 2}]},
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 5, "medium": 10, "ap": 4,  "rules": ["pistol"]},
-        "deathly_touch": {"name": "Deathly Touch", "attacks": 4, "short": "Melee"},
-        "deathly_caress": {"name": "Deathly Caress", "attacks": 4, "short": "Melee", "rules": ["rending"]},
-        "deathly_kiss": {"name": "Deathly Kiss", "attacks": 2, "short": "Melee", "ap": 2},
-        "deathly_embrace": {"name": "Deathly Embrace", "attacks": 2, "ap": 1, "short": "Melee"}
-    },
-    "rules": {"tesla": {"name": "Tesla", "description": "Each successful unmodified hit roll of 1 or 2 with this weapon causes 3 hits."}}
+        "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4}
+    }
 }
