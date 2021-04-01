@@ -344,9 +344,8 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["walker", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [{"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Tri-Scorpion Annihilator",
@@ -356,7 +355,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "reaper_sword", "count": 4}],
+                    "weapons": [{"id": "reaper_glaive", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
@@ -368,7 +367,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
-                    "weapons": [{"id": "reaper_glaive", "count": 3}],
+                    "weapons": [{"id": "reaper_swords", "count": 4}],
                     "min": 2,
                     "max": 2
                 },
@@ -668,7 +667,7 @@
         "whip_coil": {"name": "Whip Coils", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["snare"]},
         "flaying_claws": {"name": "Flaying Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "feeding_teeth": {"name": "Feeding Teeth", "attacks": 3, "short": "Melee", "rules": ["rending"]},
-        "reaper_sword": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "reaper_swords": {"name": "Reaper Sword", "attacks": 1, "short": "Melee", "ap": 2},
         "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 4},
         "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 1, "short": "Melee", "ap": 5},
         "metal_claws": {"name": "Metal Claws", "attacks": 1, "ap": 3, "short": "Melee"},
