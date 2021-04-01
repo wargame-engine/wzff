@@ -178,7 +178,7 @@
         "plasma_pistol": {
             "name": "Plasma Pistol",
             "rules": ["pistol"],
-            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 5}, {"name": "Overcharge", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "overheat"}]}]
+            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 5}, {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "overheat"}]}]
         },
         "plasma_rifle": {
             "name": "Plasma Rifle",
