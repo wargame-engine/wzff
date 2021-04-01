@@ -4,7 +4,7 @@
     "author": "Caliallie#6369",
     "units": {
         "defenders": {
-            "name": "Defenders",
+            "name": "Defender Squad",
             "description": "A group of high elf warriors.",
             "min": 1,
             "max": 1,
@@ -19,7 +19,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -31,9 +31,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["shard_rifle", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
                     "min": 4,
-                    "max": 9
+                    "max": 19
                 },
                 {
                     "name": "Weapon Platform",
@@ -59,9 +59,194 @@
                     "max": 1
                 }
             ]
+        },
+        "avengers": {
+            "name": "Avenger Squad",
+            "description": "A group of elite high elf warriors.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Avenger",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "options": [{"replaceModel": "avenger_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "rangers": {
+            "name": "Ranger Squad",
+            "description": "A group of high elf warriors.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "rules": ["stealth", "ambush"],
+            "models": [
+                {
+                    "name": "Rangers",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["shard_sniper", "plasma_grenade", {"id": "ccw", "count": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "storm_squad": {
+            "name": "Storm Squad",
+            "description": "A group of high elf assault troops.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Storm Troop",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["shard_pistol", "plasma_grenade", {"id": "elven_blade", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": [
+                            {"id": "chainsword", "count": 2}
+                        ]},
+                        {"replaceWeapon": {"id": "elven_blade", "count": 2}, "withWeapon": {"id": "energy_sword", "count": 2}, "modelLimit": 2},
+                        {"replaceWeapon": [{"id": "elven_blade", "count": 1}, "shard_pistol"], "withWeapon": [
+                            "flamethrower", "fusion_rifle"
+                        ], "modelLimit": 2}
+                    ],
+                    "min": 5,
+                    "max": 24
+                }
+            ]
+        },
+        "hover_tank": {
+            "name": "Hover Tank",
+            "description": "A heavy hover tank that can be outfitted with heavier weaponry to eliminate vehicle threats.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", {"id": "impact", "x": 6}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Tank",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "heavy_fusion_cannon"],
+                    "options": [
+                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
+                        {"addRule": ["sky_engine", "gravity_thrusters"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hover_artillery_tank": {
+            "name": "Hover Artillery Tank",
+            "description": "A hover tank with indirect fire artillery.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", {"id": "impact", "x": 6}, "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover Artillery Tank",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "doom_artillery_cannon"],
+                    "options": [
+                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
+                        {"addRule": ["sky_engine", "gravity_thrusters"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "models": {
+        "avenger_leader": {
+            "name": "Avenger Leader",
+            "courage": 6,
+            "movement": 7,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 6,
+            "reflexes": 7,
+            "weapons": ["shard_carbine", "plasma_grenade", {"id": "ccw", "count": 1}],
+            "options": [
+                {"replaceWeapon": ["shard_carbine", {"id": "ccw", "count": 1}], "withWeapon": [
+                    [{"id": "shard_carbine", "count": 2}, {"id": "ccw", "count": 1}],
+                    [{"id": "energy_glaive", "count": 2}, "shining_shield"],
+                    ["shard_pistol", {"id": "energy_sword", "count": 2}],
+                    ["shard_pistol", {"id": "energy_glaive", "count": 2}]
+                ]}
+            ],
+            "min": 1,
+            "max": 1
+        }
+    },
+    "rules": {
+        "sky_engine": {
+            "name": "Sky Engine",
+            "hidden": true,
+            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
+            "description_short": "+2\" Move",
+            "points": 5
+        },
+        "gravity_thrusters": {
+            "name": "Gravity Thrusters",
+            "description": "If this model performs two move actions on its turn, enemy units suffer -1 Accuracy when targeting this model.",
+            "points": 10
         }
     },
     "weapons": {
-        "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4}
+        "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
+        "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]}
+    },
+    "strategies": {
+        "mobility_training": {
+            "name": "Mobility Training",
+            "phase": "activation",
+            "flavor": "High Elves are trained to fight fast and furiously even with ranged weapons.",
+            "description": "Use this strategy when one of your _Infantry_ units with an _Assault_ weapon moves. That unit may ignore the -1 Accuracy penalty of firing with an _Assault_ weapon.",
+            "cost": 1
+        },
+        "expedient_retreat": {
+            "name": "Expedient Retreat",
+            "phase": "activation",
+            "flavor": "The High Elves are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
+            "description": "Use after one of your _Infantry_ units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
+            "cost": 2
+        }
     }
 }

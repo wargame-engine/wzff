@@ -2,7 +2,6 @@
     "name": "Throne Guardians",
     "id": "throne_guardians",
     "author": "guitarninja#5707",
-    "color": "#D4AF37",
     "units": {
         "witch_hunters_champion": {
             "name": "Witch Hunter Champion",
@@ -383,7 +382,7 @@
             "profiles": [{"name": "Focused", "attacks": 2, "short": 18, "medium": 36, "ap": 5}, {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 3}]
         },
         "guardian_twin_heavy_machinegun": {"name": "Guardian Twin Heavy Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
-        "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 5},
+        "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 6},
         "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},

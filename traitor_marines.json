@@ -879,7 +879,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "fiend_claws", "count": 3}, {"id": "maul_cutter", "count": 2}],
-                    "options": [{"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 4}]}],
+                    "options": [{"replaceWeapon": {"id": "maul_cutter", "count": 2}, "withWeapon": [{"id": "steel_tails", "count": 6}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1

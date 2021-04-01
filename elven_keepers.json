@@ -21,12 +21,12 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 5}, "plasma_grenade"],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 5}, "plasma_grenade"],
                     "options": [
                         {"replaceRule": {"id": "keeper_tactics", "x": 1}, "withRule": {"id": "keeper_tactics", "x": 2}},
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 5},
+                            "replaceWeapon": {"id": "elven_blade", "count": 5},
                             "withWeapon": [{"id": "energy_sword", "count": 5}, {"id": "deathly_caress", "count": 5}, {"id": "deathly_kiss", "count": 5}, {"id": "deathly_embrace", "count": 5}]
                         }
                     ],
@@ -78,7 +78,7 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
                         {"replaceRule": [{"id": "psychic", "x": 1}], "withRule": [{"id": "psychic", "x": 2}]},
@@ -107,7 +107,7 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["sniper_cannon", {"id": "jester_blade", "count": 4}],
+                    "weapons": ["sniper_cannon", {"id": "elven_blade", "count": 4}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -131,11 +131,11 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}, "plasma_grenade"],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}, "plasma_grenade"],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 3},
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
                             "withWeapon": [
                                 {"id": "energy_sword", "count": 3},
                                 {"id": "deathly_kiss", "count": 3},
@@ -169,11 +169,11 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["shard_pistol", {"id": "jester_blade", "count": 3}],
+                    "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
                         {
-                            "replaceWeapon": {"id": "jester_blade", "count": 3},
+                            "replaceWeapon": {"id": "elven_blade", "count": 3},
                             "withWeapon": [
                                 {"id": "energy_sword", "count": 3},
                                 {"id": "deathly_kiss", "count": 3},
@@ -249,7 +249,6 @@
         }
     },
     "weapons": {
-        "jester_blade": {"name": "Jester Blade", "attacks": 1, "short": "Melee"},
         "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
@@ -273,7 +272,7 @@
         }
     },
     "strategies": {
-        "speedy_defense": {
+        "blur_field": {
             "name": "Blur Field",
             "phase": "activation",
             "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dodge even the best gunman's bullets.",
