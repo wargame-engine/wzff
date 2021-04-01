@@ -572,7 +572,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 3}],
                     "options": [{"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol"]}],
                     "rules": [],
                     "min": 1,
@@ -586,7 +586,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 6,
-                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
+                    "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 3}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -1761,7 +1761,7 @@
             "defense": 8,
             "reflexes": 6,
             "movement": 6,
-            "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 2}],
+            "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 3}],
             "rules": [],
             "min": 4,
             "max": 9
