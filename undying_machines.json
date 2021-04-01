@@ -750,7 +750,7 @@
         {
             "name": "Fearless",
             "phase": "activation",
-            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
             "flavor": "With cold an unyielding metal, they fear no one.",
             "cost": 1
         },

@@ -764,7 +764,7 @@
         "defiance": {
             "name": "Fearless",
             "phase": "activation",
-            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
             "flavor": "Defiant in the face of death, Dark Elves fight on.",
             "cost": 1
         }

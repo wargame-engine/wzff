@@ -1342,6 +1342,6 @@
         },
         "storm": {"subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 6 hits with AP 1.", "charge": 6},
         "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 3 hit with AP 4.", "charge": 6},
-        "terror": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" immediately takes 3 strain.", "charge": 7}
+        "terror": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7}
     }
 }

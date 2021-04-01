@@ -1873,7 +1873,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Fearless",
             "phase": "activation",
-            "description": "Use before activating a unit. That unit may immediately remove up to 2 Strain.",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
             "flavor": "Marines are trained to stay strong even in the toughest fights.",
             "cost": 1
         },
