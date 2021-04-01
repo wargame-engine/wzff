@@ -443,7 +443,8 @@
             "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"add": 1}, {"multiply": "rule.x"}]
         },
         "emp": {"name": "EMP", "description": "Successful hit rolls of 5 or less gain +2 AP.", "points": ["weapon.attacks", {"multiply": 4}, {"multiply": 0.5}]},
-        "jetpack": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "description": "Increases movement by 2\". Gives the model fly and ambush.", "points": 15},
+        "jetpack_character": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "description": "Increases movement by 2\". Gives the model fly and ambush.", "points": 15},
+        "jetpack": {"name": "Jetpacks", "description": "This model's movement is increased by 2\". This model may cross all terrain as if it was not there. This unit may be set aside in reserves before the match begins if all models have ambush. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.", "points": 4},
         "overheat": {"name": "Overheat", "description": "The firer must take 1 save for each hit roll of 9+.", "points": ["weapon.attacks", {"multiply": -2}]},
         "destroyer_armor": {
             "name": "Destroyer Armor",

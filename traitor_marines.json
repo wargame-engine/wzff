@@ -598,7 +598,7 @@
                 {
                     "name": "Talon Raptor",
                     "movement": 8,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,

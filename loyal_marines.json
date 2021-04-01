@@ -82,7 +82,7 @@
                             ]
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
-                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
                     ],
                     "min": 1,
@@ -124,7 +124,7 @@
                             ]
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
-                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
                     ],
                     "min": 1,
@@ -167,7 +167,7 @@
                             ]
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]},
-                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
+                        {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1},
                         {"addRule": ["combat_shield"]}
                     ],
                     "min": 1,
@@ -1008,6 +1008,104 @@
                     "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 3}, "prime_pistol"],
                     "min": 2,
                     "max": 3
+                }
+            ]
+        },
+        "assault_squad": {
+            "name": "Assault Squad",
+            "description": "A squad of elite marines trained to fight in close combat.",
+            "category": "strike",
+            "options": [{"addRule": "jetpack", "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Assault Marine Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        },
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Assault Marine",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 1}], "withWeapon": [["plasma_pistol", {"id": "chainsword", "count": 1}], "flamethrower"], "modelLimit": 2}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "devastators": {
+            "name": "Devastators",
+            "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Devastator Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "storm_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {
+                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 2},
+                                {"id": "energy_axe", "count": 2},
+                                {"id": "energy_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        },
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "gravity_pistol"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Devastator",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["laser_cannon", "at_grenade", "heavy_ccw"],
+                    "options": [{"replaceWeapon": "laser_cannon", "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon"]}],
+                    "rules": [],
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
