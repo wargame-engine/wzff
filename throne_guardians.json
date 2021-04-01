@@ -136,6 +136,40 @@
                 }
             ]
         },
+        "throne_ancient": {
+            "name": "Guardian Ancient",
+            "description": "A banner carrier for the Throne Guardians.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 3}, "banner_of_blindness"],
+            "models": [
+                {
+                    "name": "Guardian Captain",
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 6,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
+                            "withWeapon": [
+                                [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
+                                ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
+                            ]
+                        },
+                        {"addWeapon": {"id": "guardian_dagger"}},
+                        {"addRule": "guardian_shield"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "throne_guardians": {
             "name": "Guardians",
             "description": "Highly trained and elite fighters.",
@@ -367,6 +401,7 @@
         }
     },
     "rules": {
+        "banner_of_blindness": {"name": "Banner of Blindness", "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, that unit suffers -1 Accuracy.", "points": 10},
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "battle_tactics": {
             "name": "Battle Tactics",
