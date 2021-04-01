@@ -1966,11 +1966,10 @@
     ],
     "strategies": [
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
-            "name": "Tactical Flexibility",
+            "name": "Vigilance",
             "phase": "activation",
-            "description": "Use before activating a unit. That unit may be split into two units of no less than the minimum size for that unit.",
-            "flavor": "Marines often split off into small tactical units in order to cover more ground.",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
             "cost": 1
         },
         {
@@ -1991,18 +1990,18 @@
         },
         {
             "subfactions": ["alien_hunters"],
-            "name": "Special Ammunition",
+            "name": "Takedown",
             "phase": "activation",
-            "description": "Use when shooting with an Infantry unit. Choose a weapon name to gain one of the following for this attack: \n * +1 AP \n * +3\" of range",
-            "flavor": "Equipped with special Alien Hunting armaments, they are trained to kill.",
+            "description": "Use when an Infantry unit is given a Fight action. Hits rolls of 1 or 2 gain +1 AP.",
+            "flavor": "Trained in deadly close combat tactics, Alien Hunters are prepared to fight.",
             "cost": 1
         },
         {
             "subfactions": ["alien_hunters"],
-            "name": "Vigilance",
+            "name": "Special Ammunition",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
-            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "description": "Use when shooting with an Infantry unit. Choose a weapon name to gain one of the following for this attack: \n * +1 AP \n * +3\" of range",
+            "flavor": "Equipped with special Alien Hunting armaments, they are trained to kill.",
             "cost": 1
         },
         {
