@@ -246,7 +246,7 @@
             ]
         },
         "dark_mercenaries": {
-            "category": "core",
+            "category": "specialist",
             "name": "Dark Mercenaries",
             "description": "A group of Dark Elven warriors with poisonous weaponry.",
             "min": 1,
@@ -427,7 +427,7 @@
             ]
         },
         "leeching_beast": {
-            "category": "strike",
+            "category": "heavy",
             "name": "Leeching Beast",
             "description": "A group of Dark Elven witches with poisonous melee weaponry.",
             "min": 1,
@@ -454,7 +454,7 @@
             ]
         },
         "pain_beast": {
-            "category": "strike",
+            "category": "heavy",
             "name": "Pain Beast",
             "description": "A group of Dark Elven witches with poisonous melee weaponry.",
             "min": 1,
