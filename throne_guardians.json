@@ -97,6 +97,27 @@
                 }
             ]
         },
+        "guardian_captain_on_jetbike": {
+            "name": "Guardian Captain on Jetbike",
+            "description": "Throne guardians on high speed jet bikes.",
+            "category": "command",
+            "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "battle_tactics", "x": 1}],
+            "models": [
+                {
+                    "name": "Guardian Captain on Jetbike",
+                    "courage": 7,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 9,
+                    "movement": 8,
+                    "reflexes": 7,
+                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 5}],
+                    "options": [{"replaceWeapon": ["guardian_rifle_array"], "withWeapon": ["guardian_missiles"]}, {"addWeapon": {"id": "guardian_dagger"}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "witch_hunters": {
             "name": "Witch Hunters",
             "description": "A group of Witch hunters adept at hunting Psychic individuals.",
@@ -150,7 +171,7 @@
             "models": [
                 {
                     "name": "Guardian Captain",
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "movement": 6,
@@ -200,6 +221,30 @@
                     "reflexes": 7,
                     "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
+                    "max": 5
+                }
+            ]
+        },
+        "guardian_jetpack_squad": {
+            "name": "Guardian Jetpack Squad",
+            "description": "Highly trained and elite fighters.",
+            "min": 5,
+            "max": 10,
+            "category": "strike",
+            "rules": [{"id": "wounds", "x": 2}, "fly", "ambush"],
+            "options": [{"addWeapon": "guardian_dagger"}],
+            "models": [
+                {
+                    "name": "Guardian Jetpack",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "movement": 8,
+                    "defense": 8,
+                    "reflexes": 7,
+                    "weapons": ["guardian_combat_shield", "guardian_pistol", "at_grenade"],
+                    "options": [{"replaceWeapon": ["guardian_combat_shield", "guardian_pistol"], "withWeapon": [["guardian_lance_rifle", "guardian_lance_blade"]]}],
+                    "min": 3,
                     "max": 6
                 }
             ]
@@ -233,7 +278,7 @@
                     "reflexes": 7,
                     "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
-                    "max": 6
+                    "max": 5
                 }
             ]
         },
@@ -366,10 +411,38 @@
                     "max": 1
                 }
             ]
+        },
+        "heavy_assault_walker": {
+            "name": "Heavy Assault Walker",
+            "description": "A heavily armed prime walker.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Assault Walker",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 13,
+                    "reflexes": 7,
+                    "weapons": [{"id": "heavy_walker_fist", "count": 4}, "guardian_missile_array"],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_walker_fist", "count": 2}, "withWeapon": ["guardian_twin_light_laser_cannon", "guardian_twin_laser_cannon"]},
+                        {"replaceWeapon": {"id": "heavy_walker_fist", "count": 2}, "withWeapon": ["guardian_twin_light_laser_cannon", "guardian_twin_laser_cannon"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
         "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1},
+        "guardian_missile_array": {"name": "Guardian Missile Array", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "guardian_missiles": {
             "name": "Guardian Missiles",
             "profiles": [
@@ -387,12 +460,16 @@
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
         "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
+        "guardian_lance_blade": {"name": "Guardian Lance (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
+        "guardian_lance_rifle": {"name": "Guardian Lance (Rifle)", "attacks": 1, "short": 6, "medium": 12, "ap": 3},
         "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "guardian_rifle": {
             "name": "Guardian Rifle",
             "profiles": [{"name": "Dispersed", "attacks": 2, "short": 15, "medium": 30, "ap": 1}, {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 3}]
         },
+        "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
+        "guardian_combat_shield": {"name": "Guardian Combat Shield", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["shielding"]},
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "laser_spear": {
@@ -407,7 +484,7 @@
     "rules": {
         "banner_of_blindness": {
             "name": "Banner of Blindness",
-            "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, that unit suffers -1 Accuracy.",
+            "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, the attacker suffers -1 Accuracy.",
             "points": 10
         },
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},

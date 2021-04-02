@@ -228,9 +228,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "energy_sword", "count": 4}],
-                    "options": [
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
-                    ],
+                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -289,9 +287,7 @@
                     "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "holy_mace", "count": 4}, "prime_pistol"],
-                    "options": [
-                        {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}
-                    ],
+                    "options": [{"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -316,9 +312,7 @@
                     "movement": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "holy_mace", "count": 4}],
-                    "options": [
-                        {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}
-                    ],
+                    "options": [{"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "melee_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -394,7 +388,18 @@
             "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "tough", "x": 1}],
             "subfactions": ["none", "wolf_marines"],
             "models": [
-                {"name": "Prime Judge", "courage": 7, "shoot": 6, "movement": 6, "fight": 7, "defense": 8, "reflexes": 6, "weapons": ["at_grenade", {"id": "judge_blade", "count": 3}, "prime_pistol"], "min": 1, "max": 1}
+                {
+                    "name": "Prime Judge",
+                    "courage": 7,
+                    "shoot": 6,
+                    "movement": 6,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["at_grenade", {"id": "judge_blade", "count": 3}, "prime_pistol"],
+                    "min": 1,
+                    "max": 1
+                }
             ]
         },
         "prime_surgeon": {
