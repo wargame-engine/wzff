@@ -2080,9 +2080,9 @@
         },
         "storm": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
-        "pacify": {"subfactions": ["alien_hunters"], "name": "Pacify", "description": "Target enemy unit within 12\" suffers -1 Strength with its next attack.", "charge": 6},
-        "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.", "charge": 7},
-        "clouded": {"subfactions": ["alien_hunters"], "name": "Clouded", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6},
+        "pacify": {"subfactions": ["alien_hunters"], "name": "Pacify", "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.", "charge": 6},
+        "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 18\" gets -2\" of Movement until the end of the round.", "charge": 7},
+        "clouded": {"subfactions": ["alien_hunters"], "name": "Clouded", "description": "Target enemy unit within 18\" gets -1 Accuracy until the end of the round.", "charge": 6},
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 6},
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6}
