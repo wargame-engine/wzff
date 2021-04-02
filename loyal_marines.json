@@ -2029,7 +2029,7 @@
             "subfactions": ["alien_hunters"],
             "name": "Takedown",
             "phase": "activation",
-            "description": "Use when an Infantry unit is given a Fight action. Hits rolls of 1 or 2 gain +1 AP.",
+            "description": "Use when an Infantry unit is given a Fight action. Hits rolls of 1 or 2 generate one additional hit.",
             "flavor": "Trained in deadly close combat tactics, Alien Hunters are prepared to fight.",
             "cost": 1
         },
