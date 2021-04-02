@@ -537,7 +537,6 @@
                     "options": [
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"]},
                         {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1},
-                        {"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]},
                         {"replaceModel": ["prime_assault_marine", "prime_blaster_marine"]}
                     ],
                     "rules": [],
@@ -1012,7 +1011,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 3}, "prime_pistol"],
                     "min": 2,
-                    "max": 3
+                    "max": 2
                 }
             ]
         },
@@ -1523,7 +1522,7 @@
             "description": "A heavily armed prime walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "subfactions": ["psychic_marines"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -1891,6 +1890,10 @@
             "reflexes": 6,
             "movement": 6,
             "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
+            "rules": ["fear"],
+            "options": [
+                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]]}
+            ],
             "min": 4,
             "max": 9
         },
@@ -1916,6 +1919,7 @@
             "reflexes": 6,
             "agility": 6,
             "weapons": ["plasma_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
+            "options": [{"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]}],
             "min": 4,
             "max": 9
         },
