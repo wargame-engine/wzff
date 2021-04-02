@@ -522,8 +522,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
-            "rules": [],
-            "options": [],
+            "rules": ["hunter_team"],
             "models": [
                 {
                     "name": "Prime Marine",
@@ -553,7 +552,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
-            "rules": [],
+            "rules": ["hunter_team"],
             "options": [{"addRule": ["scout", "stealth"], "modelLimit": "all"}],
             "models": [
                 {
@@ -1550,6 +1549,33 @@
                 }
             ]
         },
+        "contemptor_assault_walker": {
+            "name": "Contemptor Assault Walker",
+            "description": "A heavily armed prime walker.",
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Contemptor Assault Walker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                    "options": [
+                        {"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "psychic_grand_master": {
             "name": "Psychic Grand Master",
             "description": "A Master of psychic powers and martial combat.",
@@ -1946,6 +1972,7 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "hunter_team": {"name": "Hunter Team", "description": "At the start of the game, choose a unit category. Accuracy and Strength rolls of 1 or 2 gain +1 AP against units in that category.", "points": 1},
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
@@ -1975,6 +2002,7 @@
     ],
     "strategies": [
         {
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Vigilance",
             "phase": "activation",
             "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
