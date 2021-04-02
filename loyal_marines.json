@@ -533,7 +533,7 @@
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"]},
                         {"addWeapon": ["grenade_launcher_attachment"], "modelLimit": 1},
                         {"replaceWeapon": "plasma_rifle", "withWeapon": ["heavy_plasma_rifle", "plasma_assault_rifle"]},
-                        {"replaceModel": ["prime_assault_marine", "prime_blaster_marine", "prime_rider_marine"]}
+                        {"replaceModel": ["prime_assault_marine", "prime_blaster_marine"]}
                     ],
                     "rules": [],
                     "min": 5,
