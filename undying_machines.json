@@ -458,7 +458,7 @@
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 5,
                     "weapons": [{"id": "doom_cannon", "mount": ["Front"]}, {"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
                     "min": 1,
@@ -529,7 +529,7 @@
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 5,
                     "weapons": [{"id": "heat_ray", "mount": ["Front"]}, {"id": "heavy_stomp", "count": 2}],
                     "options": [
@@ -605,7 +605,7 @@
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 12,
+                    "defense": 13,
                     "reflexes": 5,
                     "weapons": [
                         {"id": "heavy_antimatter_cannon"},
