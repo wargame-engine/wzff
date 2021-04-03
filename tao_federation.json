@@ -9,7 +9,7 @@
             "description": "An elite commander in an agile battlesuit.",
             "min": 1,
             "max": 1,
-            "keywords": ["Battlesuit"],
+            "keywords": ["Heavy Infantry"],
             "category": "command",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
@@ -21,7 +21,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "rules": ["leader", "fly", {"id": "wounds", "x": 2}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
                     "weapons": [{"id": "suit_fists", "count": 4}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -37,7 +37,7 @@
             "description": "An elite commander in an agile battlesuit.",
             "min": 1,
             "max": 1,
-            "keywords": ["Battlesuit"],
+            "keywords": ["Heavy Infantry"],
             "category": "command",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
@@ -49,7 +49,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "rules": ["leader", "fly", {"id": "wounds", "x": 2}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
                     "weapons": [{"id": "suit_fists", "count": 4}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -65,7 +65,7 @@
             "description": "An elite armored commander in an agile battlesuit.",
             "min": 1,
             "max": 1,
-            "keywords": ["Battlesuit"],
+            "keywords": ["Heavy Infantry"],
             "category": "command",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
@@ -75,9 +75,9 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 6,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 6,
-                    "rules": ["leader", "fly", {"id": "wounds", "x": 3}],
+                    "rules": ["leader", "fly", {"id": "wounds", "x": 3}, {"id": "commander_tactics", "x": 2}],
                     "weapons": [{"id": "suit_fists", "count": 4}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
@@ -199,6 +199,7 @@
             "description": "An intelligent savage commander with a rifle.",
             "min": 1,
             "max": 1,
+            "keywords": ["Infantry", "Savages"],
             "category": "specialist",
             "options": [{"addRule": "scout"}],
             "models": [
@@ -210,8 +211,11 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "savage_tactics", "x": 1}],
                     "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 3}],
+                    "options": [{
+                        "replaceRule": {"id": "savage_tactics", "x": 1}, "withRule": {"id": "savage_tactics", "x": 2}
+                    }],
                     "min": 1,
                     "max": 1
                 }
@@ -222,6 +226,7 @@
             "description": "A squad of angry savages with rifles.",
             "min": 1,
             "max": 1,
+            "keywords": ["Infantry", "Savages"],
             "category": "core",
             "options": [{"addRule": "scout", "modelLimit": "all"}],
             "models": [
@@ -245,7 +250,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": [],
+            "keywords": ["Infantry", "Savages"],
             "models": [{"name": "Savage Hound", "movement": 8, "courage": 4, "shoot": 4, "fight": 6, "defense": 4, "reflexes": 5, "weapons": ["hound_fangs"], "min": 4, "max": 12}]
         },
         "savage_beast_riders": {
@@ -254,6 +259,7 @@
             "min": 1,
             "max": 1,
             "category": "strike",
+            "keywords": ["Heavy Infantry", "Savages"],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {"name": "Savage Beast Rider", "movement": 8, "courage": 4, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["savage_cannon", "beast_fists"], "min": 1, "max": 3}
@@ -311,7 +317,7 @@
             "description": "Warriors in agile battlesuits.",
             "min": 1,
             "max": 1,
-            "keywords": ["Heavvy Infantry"],
+            "keywords": ["Heavy Infantry"],
             "category": "specialist",
             "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
@@ -786,10 +792,22 @@
         "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
     },
     "rules": {
+        "commander_tactics": {
+            "name": "Commander Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "warrior_tactics": {
             "name": "Warrior Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "savage_tactics": {
+            "name": "Savage Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Savages_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space."},

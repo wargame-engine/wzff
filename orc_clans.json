@@ -1377,7 +1377,7 @@
         "orc_tactics": {
             "name": "Orc Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n Re-roll failed Initiative tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
