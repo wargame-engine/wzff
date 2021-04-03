@@ -544,7 +544,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 8,
+                    "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "barb_cannon", "mount": ["Front"]}, {"id": "twin_barb_rifle", "mount": ["Front"]}, {"id": "cutting_blade", "count": 2}],
                     "min": 1,

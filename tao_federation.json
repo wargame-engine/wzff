@@ -444,10 +444,10 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": [{"id": "railgun", "mount": ["Front"]}],
+                    "weapons": [{"id": "heavy_railgun", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
                     "options": [
-                        {"replaceWeapon": {"id": "railgun", "mount": ["Front"]}, "withWeapon": "ion_cannon"},
+                        {"replaceWeapon": {"id": "heavy_railgun", "mount": ["Front"]}, "withWeapon": "ion_cannon"},
                         {
                             "addWeapon": [
                                 [{"id": "smart_missiles", "mount": ["Left, Front"]}, {"id": "smart_missiles", "mount": ["Right, Front"]}],
@@ -477,7 +477,7 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 10,
+                    "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "pulse_gatling", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
@@ -734,11 +734,11 @@
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
         "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1,  "rules": [{"id": "blast", "x": 3}]},
         "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1},
-        "railgun": {
-            "name": "Railgun",
+        "heavy_railgun": {
+            "name": "Heavy Rail Cannon",
             "profiles": [
                 {"name": "Beam", "attacks": 1, "short": 36, "medium": 72, "ap": 8},
-                {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3,  "rules": [{"id": "blast", "x": 3}]}
+                {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3,  "rules": [{"id": "blast", "x": 6}]}
             ]
         },
         "ion_rifle": {
@@ -776,7 +776,7 @@
         "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
         "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4},
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
-        "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 6},
+        "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
         "smart_missiles": {"name": "Smart missiles", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
         "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
         "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
