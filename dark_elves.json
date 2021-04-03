@@ -381,6 +381,54 @@
                 }
             ]
         },
+        "veteran_witches": {
+            "category": "core",
+            "name": "Veteran Witches",
+            "description": "A group of Dark Elven witches with poisonous melee weaponry.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "rules": ["dodge"],
+            "options": [
+                {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1},
+                {
+                    "replaceWeapon": {"id": "barb_blade", "count": 2},
+                    "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
+                    "modelLimit": "1/10"
+                }
+            ],
+            "models": [
+                {
+                    "name": "Veteran Witch Leader",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
+                        {"replaceWeapon": {"id": "barb_blade", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "barb_whip", "count": 2}]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Veteran Witch",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
         "jetbike_witches": {
             "category": "strike",
             "name": "Jetbike Witches",
@@ -427,7 +475,7 @@
             ]
         },
         "leeching_beast": {
-            "category": "heavy",
+            "category": "specialist",
             "name": "Leeching Beast",
             "description": "A group of Dark Elven witches with poisonous melee weaponry.",
             "min": 1,
@@ -454,7 +502,7 @@
             ]
         },
         "pain_beast": {
-            "category": "heavy",
+            "category": "specialist",
             "name": "Pain Beast",
             "description": "A group of Dark Elven witches with poisonous melee weaponry.",
             "min": 1,
@@ -523,7 +571,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 6,
                     "weapons": [{"id": "fusion_cannon", "mount": ["Front"]}, {"id": "cutting_blade", "count": 2}],
                     "min": 1,
@@ -551,7 +599,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 6,
                     "weapons": [
                         {"id": "fusion_cannon", "mount": ["Front"]},
@@ -586,7 +634,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 6,
                     "weapons": [
                         {"id": "heavy_wave_cannon", "mount": ["Front"]},

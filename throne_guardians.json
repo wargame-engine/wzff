@@ -69,7 +69,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "wounds", "x": 3}, {"id": "battle_tactics", "x": 1}],
+            "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 1}, {"id": "battle_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Guardian Captain",
@@ -366,7 +366,7 @@
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle", "hover"],
             "models": [
-                {"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 7, "fight": 7, "defense": 10, "reflexes": 7, "weapons": ["guardian_twin_light_laser_cannon"], "min": 1, "max": 1}
+                {"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 7, "fight": 7, "defense": 11, "reflexes": 7, "weapons": ["guardian_twin_light_laser_cannon"], "min": 1, "max": 1}
             ]
         },
         "hover_tank": {
@@ -384,7 +384,7 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 7,
                     "weapons": ["guardian_twin_light_laser_cannon", {"id": "guardian_twin_heavy_machinegun", "mount": ["Front"]}],
                     "min": 1,

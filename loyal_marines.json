@@ -1210,7 +1210,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": ["heavy_autocannon"],
                     "options": [
@@ -1322,7 +1322,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 12,
+                    "defense": 13,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "laser_talon", "light_machinegun"],
                     "options": [
@@ -1404,7 +1404,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 12,
+                    "defense": 13,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, "heavy_plasma_cannon", "heavy_gatling_gun"],
                     "options": [
@@ -1497,7 +1497,7 @@
             "models": [
                 {
                     "name": "Assault Walker",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -1528,7 +1528,7 @@
             "models": [
                 {
                     "name": "Psychic Assault Walker",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
