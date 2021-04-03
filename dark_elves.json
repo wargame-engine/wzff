@@ -400,7 +400,7 @@
             "models": [
                 {
                     "name": "Veteran Witch Leader",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 7,
                     "shoot": 6,
                     "fight": 6,
@@ -417,7 +417,7 @@
                 },
                 {
                     "name": "Veteran Witch",
-                    "courage": 5,
+                    "courage": 6,
                     "movement": 7,
                     "shoot": 6,
                     "fight": 6,
