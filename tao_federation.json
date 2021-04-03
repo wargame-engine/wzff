@@ -436,7 +436,7 @@
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": [{"id": "railgun", "mount": ["Front"]}],
                     "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],

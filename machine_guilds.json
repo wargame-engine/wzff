@@ -474,7 +474,7 @@
             "models": [
                 {
                     "name": "Crawler Tank",
-                    "movement": 10,
+                    "movement": 11,
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
