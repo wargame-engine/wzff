@@ -7,7 +7,7 @@
     "subfactions": {
         "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true}
     },
-    "units": {
+    "hidden_units": {
         "grand_warlord": {
             "name": "Grand Warlord",
             "description": "A massive clan leader in very heavy armor.",
@@ -18,7 +18,9 @@
             "models": [
                 {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
             ]
-        },
+        }
+    },
+    "units": {
         "warlord": {
             "name": "Warlord",
             "description": "The clan leader and toughest orc boss.",
