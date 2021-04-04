@@ -2,15 +2,85 @@
     "name": "Grim Darkness (Beta)",
     "id": "grim_darkness",
     "factions": {
-        "high_elves": {"name": "High Elf Worlds", "id": "high_elves", "url": "high_elves.json", "color": "#295788", "secondary_color": "#e8bb00", "alliance": "elven_coaliation"},
-        "dark_elves": {"name": "Dark Elf Raiders", "id": "dark_elves", "url": "dark_elves.json", "color": "#0b474a", "alliance": "elven_coaliation"},
-        "alien_swarm": {"name": "Alien Swarm", "id": "alien_swarm", "url": "alien_swarm.json", "color": "#3d3354", "alliance": "alien_swarm", "version": "0.1"},
-        "traitor_marines": {"name": "Traitor Marines", "id": "traitor_marines", "url": "traitor_marines.json", "color": "#231f20", "alliance": "traitors", "version": "0.1.1"},
-        "dimensional_horrors": {"name": "Dimensional Horrors", "id": "dimensional_horrors", "url": "dimensional_horrors.json", "color": "#90305d", "alliance": "traitors", "version": "0.1"},
-        "undying_machines": {"name": "Undying Machines", "id": "undying_machines", "url": "undying_machines.json", "color": "#1e7331", "version": "0.1.2"},
-        "elven_keepers": {"name": "Elven Keepers", "id": "elven_keepers", "url": "elven_keepers.json", "color": "#7761ab", "alliance": "elven_coaliation", "version": "0.1"},
-        "tao_federation": {"name": "Tao Federation", "id": "tao_federation", "url": "tao_federation.json", "color": "#008080", "version": "0.1"},
-        "knight_lords": {"name": "Knight Lords", "id": "knight_lords", "url": "knight_lords.json", "color": "#396e9e", "secondary_color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
+        "high_elves": {
+            "name": "High Elf Worlds",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#295788",
+            "secondary_color": "#e8bb00",
+            "alliance": "elven_coaliation",
+            "description": "The High Elf Worlds are a group of large constructed fleet habitats. They focus on a mobile and deadly mix of advanced technology and unique fast tactics to achieve victory"
+        },
+        "dark_elves": {
+            "name": "Dark Elf Raiders",
+            "id": "dark_elves",
+            "url": "dark_elves.json",
+            "color": "#0b474a",
+            "alliance": "elven_coaliation",
+            "description": "The Dark Elf Raiders are a group of elves who have an obsession with attacking a raiding settlements for plunder. Their tactics revolve around attacking quickly with highly agile ships and doing damage after which they quickly escape."
+        },
+        "alien_swarm": {
+            "name": "Alien Swarm",
+            "id": "alien_swarm",
+            "url": "alien_swarm.json",
+            "color": "#3d3354",
+            "alliance": "alien_swarm",
+            "version": "0.1",
+            "description": "The Alien Swarm is an interconnected hive mind alien species that exists only to expand and integrate other species. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes."
+        },
+        "traitor_marines": {
+            "name": "Traitor Marines",
+            "id": "traitor_marines",
+            "url": "traitor_marines.json",
+            "color": "#231f20",
+            "alliance": "traitors",
+            "version": "0.1.1",
+            "description": "The traitor marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry."
+        },
+        "dimensional_horrors": {
+            "name": "Dimensional Horrors",
+            "id": "dimensional_horrors",
+            "url": "dimensional_horrors.json",
+            "color": "#90305d",
+            "alliance": "traitors",
+            "version": "0.1",
+            "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes."
+        },
+        "undying_machines": {
+            "name": "Undying Machines",
+            "id": "undying_machines",
+            "url": "undying_machines.json",
+            "color": "#1e7331",
+            "version": "0.1.2",
+            "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles."
+        },
+        "elven_keepers": {
+            "name": "Elven Keepers",
+            "id": "elven_keepers",
+            "url": "elven_keepers.json",
+            "color": "#7761ab",
+            "alliance": "elven_coaliation",
+            "version": "0.1",
+            "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
+        },
+        "tao_federation": {
+            "name": "Tao Federation",
+            "id": "tao_federation",
+            "url": "tao_federation.json",
+            "color": "#008080",
+            "version": "0.1",
+            "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies."
+        },
+        "knight_lords": {
+            "name": "Knight Lords",
+            "id": "knight_lords",
+            "url": "knight_lords.json",
+            "color": "#396e9e",
+            "secondary_color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Knight Lords are a loose organization of many different knight guilds which build and maintain unique and gigantic war machines. The Knight Lords rely on huge Knight war machines and good old fashioned chivalry to pound their foes."
+        },
         "battle_sisters": {
             "name": "Battle Sisters",
             "id": "battle_sisters",
@@ -18,20 +88,54 @@
             "color": "#010203",
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
-            "version": "0.1"
+            "version": "0.1",
+            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies."
         },
-        "machine_guilds": {"name": "Machine Guilds", "id": "machine_guilds", "url": "machine_guilds.json", "color": "#9a1115", "alliance": "imperial_alliance", "version": "0.1"},
+        "machine_guilds": {
+            "name": "Machine Guilds",
+            "id": "machine_guilds",
+            "url": "machine_guilds.json",
+            "color": "#9a1115",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies."
+        },
         "imperial_defense_force": {
             "name": "Imperial Defence Force",
             "id": "imperial_defense_force",
             "url": "imperial_defense_force.json",
             "color": "#314821",
             "alliance": "imperial_alliance",
-            "version": "0.1"
+            "version": "0.1",
+            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire."
         },
-        "loyal_marines": {"name": "Loyal Marines", "id": "loyal_marines", "url": "loyal_marines.json", "color": "#0d407f", "alliance": "imperial_alliance", "version": "0.1.3"},
-        "throne_guardians": {"name": "Throne Guardians", "id": "throne_guardians", "url": "throne_guardians.json", "color": "#D4AF37", "secondary_color": "#7d0a15", "alliance": "imperial_alliance", "version": "0.1"},
-        "orc_clans": {"name": "Orc Clans", "id": "orc_clans", "url": "orc_clans.json", "color": "#50974A", "version": "0.1"},
+        "loyal_marines": {
+            "name": "Loyal Marines",
+            "id": "loyal_marines",
+            "url": "loyal_marines.json",
+            "color": "#0d407f",
+            "alliance": "imperial_alliance",
+            "version": "0.1.3",
+            "description": "The Loyal Marines are the pride of the Human Empire and its elite order-keeping force should they need to be deployed. The Loyal Marines rely on tough infantry and somewhat advanced vehicle technology to outsmart and eliminate their enemies."
+        },
+        "throne_guardians": {
+            "name": "Throne Guardians",
+            "id": "throne_guardians",
+            "url": "throne_guardians.json",
+            "color": "#D4AF37",
+            "secondary_color": "#7d0a15",
+            "alliance": "imperial_alliance",
+            "version": "0.1",
+            "description": "The Throne Guardians are the defenders of the Human Empire's capital. Only the most elite Loyal Marines are recruited to be Throne Guardians and with that they are the most well-trained. The Throne Guardians rely on the most elite and well-trained infantry along with powerful and ancient war weaponry to defend their home planet."
+        },
+        "orc_clans": {
+            "name": "Orc Clans",
+            "id": "orc_clans",
+            "url": "orc_clans.json",
+            "color": "#50974A",
+            "version": "0.1",
+            "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes."
+        },
         "imperial_inquisition": {
             "name": "Imperial Inquisition",
             "id": "imperial_inquisition",
@@ -39,12 +143,11 @@
             "color": "#7d0a15",
             "secondary_color": "#010203",
             "alliance": "imperial_alliance",
-            "version": "0.1"
+            "version": "0.1",
+            "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "unfinished_factions": {
-        "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"}
-    },
+    "unfinished_factions": {"alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"}},
     "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
     "categories": {
         "command": {"name": "Command"},
@@ -117,7 +220,10 @@
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "plasma_grenade": {
             "name": "Plasma Grenades",
-            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]}, {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}]
+            "profiles": [
+                {"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}
+            ]
         },
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
         "at_grenade": {
@@ -421,13 +527,21 @@
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
-        "dark_prism": {"name": "Dark Prism", "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.", "points": 5},
+        "dark_prism": {
+            "name": "Dark Prism",
+            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "points": 5
+        },
         "medical_training": {
             "name": "Medical Training",
             "description": "Whenever this model, or a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
             "points": 15
         },
-        "ward": {"name": "Ward", "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.", "points": 5},
+        "ward": {
+            "name": "Ward",
+            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "points": 5
+        },
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
         "gravity": {"name": "Gravity", "description": "This weapon gets +2 AP against targets with Save 10 or higher.", "points": ["weapon.attacks", {"multiply": 1}]},
@@ -444,8 +558,18 @@
             "points": ["model.movement", {"divide": 12}, {"add": ["model.fight", {"subtract": "constants.baseStats.fight"}]}, {"add": 1}, {"multiply": "rule.x"}]
         },
         "emp": {"name": "EMP", "description": "Successful hit rolls of 5 or less gain +2 AP.", "points": ["weapon.attacks", {"multiply": 4}, {"multiply": 0.5}]},
-        "jetpack_character": {"name": "Jetpack", "hidden": true, "description_short": "Fly, Ambush, Movement +2\"", "description": "Increases movement by 2\". Gives the model fly and ambush.", "points": 15},
-        "jetpack": {"name": "Jetpacks", "description": "This model's movement is increased by 2\". This model may cross all terrain as if it was not there. This unit may be set aside in reserves before the match begins if all models have ambush. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.", "points": 4},
+        "jetpack_character": {
+            "name": "Jetpack",
+            "hidden": true,
+            "description_short": "Fly, Ambush, Movement +2\"",
+            "description": "Increases movement by 2\". Gives the model fly and ambush.",
+            "points": 15
+        },
+        "jetpack": {
+            "name": "Jetpacks",
+            "description": "This model's movement is increased by 2\". This model may cross all terrain as if it was not there. This unit may be set aside in reserves before the match begins if all models have ambush. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
+            "points": 4
+        },
         "overheat": {"name": "Overheat", "description": "The firer must take 1 save for each hit roll of 9+.", "points": ["weapon.attacks", {"multiply": -2}]},
         "destroyer_armor": {
             "name": "Destroyer Armor",
@@ -484,7 +608,11 @@
             "description": "When this unit is activated, choose a friendly _Stormtrooper Infantry_ unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
             "points": 10
         },
-        "fusion": {"name": "Fusion", "description": "Enemy units add 1 to rolls on any _Damage Table(X)_ rules when hit by this weapon at Short range.", "points": ["weapon.attacks", {"multiply": 2.5}]},
+        "fusion": {
+            "name": "Fusion",
+            "description": "Enemy units add 1 to rolls on any _Damage Table(X)_ rules when hit by this weapon at Short range.",
+            "points": ["weapon.attacks", {"multiply": 2.5}]
+        },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
         "psychic": {
             "name": "Psychic",
