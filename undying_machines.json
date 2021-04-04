@@ -726,8 +726,8 @@
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},
         "flare_shielding": {
             "name": "Flare Shields",
-            "description": "This model gains +1 Save when hit at Long Range.",
-            "points": ["model.defense", {"subtract": "constants.baseStats.defense"}, {"multiply": 5}]
+            "description": "Subtract 1 from all Damage Table(X) rolls for this model.",
+            "points": 5
         },
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {"name": "Regeneration Orb", "description": "Once per game after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
