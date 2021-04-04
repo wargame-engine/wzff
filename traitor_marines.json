@@ -745,8 +745,8 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -774,7 +774,7 @@
                     "weapons": ["heavy_autocannon"],
                     "options": [
                         {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": ["storm_rifle", "havoc_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "havoc_missiles"]},
                         {
                             "addWeapon": [
                                 [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
@@ -809,7 +809,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
                     "options": [
-                        {"addWeapon": ["storm_rifle", "havoc_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "havoc_missiles"]},
                         {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}
                     ],
                     "rules": [],

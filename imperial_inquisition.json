@@ -150,8 +150,8 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 4,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1

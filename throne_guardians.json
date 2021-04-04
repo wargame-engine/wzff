@@ -350,7 +350,7 @@
                     "defense": 13,
                     "reflexes": 7,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
-                    "options": [{"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -433,8 +433,8 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -458,7 +458,7 @@
                     "fight": 7,
                     "defense": 12,
                     "reflexes": 7,
-                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                     "options": [
                         {"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}
                     ],
@@ -581,7 +581,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "phase": "activation",
             "name": "Psychic Shield",
-            "description": "Use when a Psychic(x) test is taken within 12\" of any Infantry unit. Roll a D10. On a 5 or less that Psychic(x) test fails.",
+            "description": "Use when a Psychic(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, Throne Guardians can protect themselves from psychic powers.",
             "cost": 1
         }

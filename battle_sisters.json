@@ -120,10 +120,10 @@
                     "options": [
                         {
                             "replaceWeapon": "marine_rifle",
-                            "withWeapon": ["heavy_machinegun", "heavy_flamethrower", "heavy_fusion_rifle", "flamethrower", "fusion_rifle", "storm_rifle"],
+                            "withWeapon": ["heavy_machinegun", "heavy_flamethrower", "heavy_fusion_rifle", "flamethrower", "fusion_rifle", "twin_marine_rifle"],
                             "modelLimit": 1
                         },
-                        {"replaceWeapon": "marine_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "storm_rifle"], "modelLimit": 1}
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "twin_marine_rifle"], "modelLimit": 1}
                     ],
                     "min": 4,
                     "max": 14
@@ -308,8 +308,8 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -334,7 +334,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "twin_heavy_flamethrower"],
                     "options": [
-                        {"addWeapon": ["storm_rifle", "hunter_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]},
                         {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]},
                         {"replaceWeapon": "twin_heavy_flamethrower", "withWeapon": ["twin_heavy_machinegun", "twin_heavy_fusion_rifle"]}
                     ],
@@ -361,7 +361,7 @@
                     "defense": 11,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "organ_missiles"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "min": 1,
                     "max": 1
                 }

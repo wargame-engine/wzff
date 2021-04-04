@@ -1078,7 +1078,7 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "storm_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
                         {
                             "replaceWeapon": {"id": "chainsword", "count": 2},
@@ -1130,8 +1130,8 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"addWeapon": ["storm_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1156,8 +1156,8 @@
                     "fight": 6,
                     "defense": 10,
                     "reflexes": 6,
-                    "weapons": ["storm_rifle"],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": "missile_launcher"}],
+                    "weapons": ["twin_marine_rifle"],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": "missile_launcher"}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1184,7 +1184,7 @@
                     "reflexes": 6,
                     "weapons": ["twin_heavy_machinegun"],
                     "options": [
-                        {"addWeapon": ["storm_rifle", "hunter_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]},
                         {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]},
                         {"replaceWeapon": "twin_heavy_machinegun", "withWeapon": ["twin_minigun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
                     ],
@@ -1215,7 +1215,7 @@
                     "weapons": ["heavy_autocannon"],
                     "options": [
                         {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": ["storm_rifle", "hunter_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]},
                         {
                             "addWeapon": [
                                 [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
@@ -1254,7 +1254,7 @@
                         {"id": "assault_rifle_array", "mount": ["Right", "Front"]}
                     ],
                     "options": [
-                        {"addWeapon": ["storm_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
+                        {"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
                         {
                             "replaceWeapon": [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
                             "withWeapon": [
@@ -1290,10 +1290,10 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
+                    "weapons": [{"id": "twin_marine_rifle", "mount": ["Left", "Front"]}, {"id": "twin_marine_rifle", "mount": ["Right", "Front"]}],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "storm_rifle", "mount": ["Left", "Front"]}, {"id": "storm_rifle", "mount": ["Right", "Front"]}],
+                            "replaceWeapon": [{"id": "twin_marine_rifle", "mount": ["Left", "Front"]}, {"id": "twin_marine_rifle", "mount": ["Right", "Front"]}],
                             "withWeapon": [[{"id": "grenade_launcher", "mount": ["Left", "Front"]}, {"id": "grenade_launcher", "mount": ["Right", "Front"]}]]
                         },
                         {"addWeapon": ["light_machinegun"]},
@@ -1330,7 +1330,7 @@
                         {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_laser_cannon", "mount": ["Front"]}},
                         {
                             "addWeapon": [
-                                {"id": "storm_rifle", "mount": ["Rear"]},
+                                {"id": "twin_marine_rifle", "mount": ["Rear"]},
                                 {"id": "grenade_launcher", "mount": ["Rear"]},
                                 {"id": "aa_rocket_pod", "mount": ["Rear"]},
                                 {"id": "aa_light_machinegun", "mount": ["Rear"]}
@@ -1339,7 +1339,7 @@
                         },
                         {
                             "addWeapon": [
-                                [{"id": "storm_rifle", "mount": ["Left"]}, {"id": "storm_rifle", "mount": ["Right"]}],
+                                [{"id": "twin_marine_rifle", "mount": ["Left"]}, {"id": "twin_marine_rifle", "mount": ["Right"]}],
                                 [{"id": "grenade_launcher", "mount": ["Left"]}, {"id": "grenade_launcher", "mount": ["Right"]}]
                             ],
                             "limit": 1
@@ -1375,11 +1375,11 @@
                         {"replaceWeapon": "twin_heavy_laser_cannon", "withWeapon": ["twin_heavy_gatling_gun", "twin_laser_talon"]},
                         {
                             "addWeapon": [
-                                [{"id": "storm_rifle_array", "mount": ["Left", "Front"]}, {"id": "storm_rifle_array", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_marine_rifle_array", "mount": ["Left", "Front"]}, {"id": "twin_marine_rifle_array", "mount": ["Right", "Front"]}],
                                 [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}]
                             ]
                         },
-                        {"addWeapon": [[{"id": "storm_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]], "limit": 1},
+                        {"addWeapon": [[{"id": "twin_marine_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]], "limit": 1},
                         {"id": "aa_rocket_pod", "mount": ["Rear"]},
                         {"addWeapon": ["light_machinegun"], "limit": 1}
                     ],
@@ -1411,14 +1411,14 @@
                         {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_laser_destroyer"},
                         {
                             "addWeapon": [
-                                {"id": "storm_rifle", "mount": ["Rear"]},
+                                {"id": "twin_marine_rifle", "mount": ["Rear"]},
                                 {"id": "grenade_launcher", "mount": ["Rear"]},
                                 {"id": "aa_rocket_pod", "mount": ["Rear"]},
                                 {"id": "twin_aa_light_machinegun", "mount": ["Rear"]}
                             ],
                             "limit": 1
                         },
-                        {"addWeapon": [[{"id": "storm_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]]},
+                        {"addWeapon": [[{"id": "twin_marine_rifle", "count": 2}], [{"id": "grenade_launcher", "count": 2}]]},
                         {"addWeapon": {"id": "at_grenade_launcher", "count": 2}},
                         {"addWeapon": ["light_machinegun"], "limit": 1}
                     ],
@@ -1473,10 +1473,10 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["heavy_plasma_cannon", {"id": "walker_fist", "count": 4}, {"id": "twin_storm_rifle"}],
+                    "weapons": ["heavy_plasma_cannon", {"id": "walker_fist", "count": 4}, {"id": "twin_twin_marine_rifle"}],
                     "options": [
                         {"replaceWeapon": "heavy_plasma_cannon", "withWeapon": "heavy_gatling_gun"},
-                        {"replaceWeapon": "twin_storm_rifle", "withWeapon": "twin_grenade_launcher"},
+                        {"replaceWeapon": "twin_twin_marine_rifle", "withWeapon": "twin_grenade_launcher"},
                         {"addWeapon": ["heavy_flamethrower", "gatling_gun"], "limit": 1},
                         {"addWeapon": ["aa_rocket_pod"]}
                     ],
@@ -1503,10 +1503,10 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                    "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                            "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                             "withWeapon": [[{"id": "walker_fist", "count": 4}, {"id": "heavy_flamethrower"}], "missile_launcher", "twin_autocannon"]
                         },
                         {"replaceWeapon": "minigun", "withWeapon": ["plasma_cannon", "twin_autocannon", "heavy_fusion_rifle", "twin_heavy_machinegun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
@@ -1534,12 +1534,12 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                    "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                     "rules": ["ward"],
                     "options": [
                         {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}},
                         {
-                            "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                            "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                             "withWeapon": [[{"id": "walker_fist", "count": 4}, {"id": "heavy_flamethrower"}], "missile_launcher", "twin_autocannon"]
                         },
                         {"replaceWeapon": "minigun", "withWeapon": ["plasma_cannon", "twin_autocannon", "heavy_fusion_rifle", "twin_heavy_machinegun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
@@ -1567,7 +1567,7 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                    "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                     "options": [
                         {"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}
                     ],
@@ -1593,12 +1593,12 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "marine_pistol"],
+                    "weapons": [{"id": "twin_marine_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 5}, "marine_pistol"],
                     "options": [
                         {"replaceRule": {"id": "melee_tactics", "x": 2}, "withRule": {"id": "rifle_tactics", "x": 2}},
                         {
-                            "replaceWeapon": {"id": "psychic_sword", "count": 4},
-                            "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
+                            "replaceWeapon": {"id": "psychic_sword", "count": 5},
+                            "withWeapon": [{"id": "psychic_staff", "count": 5}, {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
                         },
                         {"addRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
@@ -1626,12 +1626,12 @@
                     "movement": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}, "marine_pistol"],
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "marine_pistol"],
                     "options": [
                         {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "rifle_tactics", "x": 1}},
                         {
-                            "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                            "replaceWeapon": {"id": "psychic_sword", "count": 4},
+                            "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
                         },
                         {"addRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
@@ -1797,7 +1797,7 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
                     "rules": ["ward"],
                     "min": 1,
@@ -1811,8 +1811,8 @@
                     "defense": 9,
                     "movement": 5,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -1840,7 +1840,7 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
                     "rules": ["ward"],
                     "min": 1,
@@ -1854,8 +1854,8 @@
                     "defense": 9,
                     "movement": 5,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
                     "rules": [],
                     "min": 2,
                     "max": 9
@@ -1878,7 +1878,7 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": [{"id": "dread_fist", "count": 4}],
                     "options": [
@@ -1909,7 +1909,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": [{"id": "dread_fist", "count": 4}],
                     "options": [

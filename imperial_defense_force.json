@@ -599,7 +599,7 @@
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {
                             "addWeapon": [
@@ -639,7 +639,7 @@
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {
                             "addWeapon": [
@@ -677,7 +677,7 @@
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
@@ -708,7 +708,7 @@
                     "weapons": [],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": [{"id": "autocannon", "count": 2, "mount": ["Front"]}]}
                     ],
                     "min": 1,
@@ -736,7 +736,7 @@
                     "weapons": ["light_battle_cannon"],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
                         {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
                     ],
@@ -765,7 +765,7 @@
                     "weapons": [{"id": "heavy_fusion_rifle", "mount": ["Front"]}, "fusion_cannon"],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"replaceWeapon": "fusion_cannon", "withWeapon": ["acid_cannon", "flamestorm_cannon"]},
                         {
@@ -798,7 +798,7 @@
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
                     ],
@@ -919,7 +919,7 @@
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
                         {"replaceWeapon": "hell_cannon", "withWeapon": ["super_heavy_battle_cannon"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "storm_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {
                             "addWeapon": [
