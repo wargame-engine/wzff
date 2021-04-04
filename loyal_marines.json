@@ -350,7 +350,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}],
+            "rules": ["support", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -1593,14 +1593,13 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_marine_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 5}, "marine_pistol"],
+                    "weapons": [{"id": "twin_marine_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 5}],
                     "options": [
                         {"replaceRule": {"id": "melee_tactics", "x": 2}, "withRule": {"id": "rifle_tactics", "x": 2}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 5},
                             "withWeapon": [{"id": "psychic_staff", "count": 5}, {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
                         },
-                        {"addRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [],
@@ -1626,17 +1625,82 @@
                     "movement": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}, "marine_pistol"],
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 4}],
                     "options": [
                         {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "rifle_tactics", "x": 1}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 4},
                             "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
                         },
-                        {"addRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
                     "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_ancient": {
+            "name": "Psychic Ancient",
+            "description": "A psychic marine carrying a sacred banner.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": ["support", {"id": "wounds", "x": 3}, "ward"],
+            "subfactions": ["psychic_marines"],
+            "models": [
+                {
+                    "name": "Psychic Ancient",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}],
+                    "rules": ["banner_of_wrath", "support"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "psychic_sword", "count": 3},
+                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                        },
+                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
+                        {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_destroyer_ancient": {
+            "name": "Psychic Destroyer Ancient",
+            "description": "A psychic destroyer marine carrying a sacred banner.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": ["support", {"id": "wounds", "x": 3}, "ward"],
+            "subfactions": ["psychic_marines"],
+            "models": [
+                {
+                    "name": "Psychic Destroyer Ancient",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "movement": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_marine_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}],
+                    "rules": ["banner_of_wrath", "support"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "psychic_sword", "count": 3},
+                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                        },
+                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
+                        {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -1778,16 +1842,15 @@
             "description": "Marines in heavy armor trained to hunt demons and adept in psychic powers.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
+            "category": "core",
             "subfactions": ["psychic_marines"],
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
                     "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
-                {"addRule": [{"id": "resilient", "x": 3, "name": "Paladins"}], "modelLimit": "all"}
+                {"addRule": [{"id": "ambush", "name": "Strike"}], "modelLimit": "all", "limit": 1}
             ],
-            "rules": ["ambush"],
             "models": [
                 {
                     "name": "Psychic Destroyer Sergeant",
@@ -2028,7 +2091,10 @@
         "expert_marksman": {"name": "Expert Marksman", "description": "This model and friendly _Infantry_ units within 3\" gain +1 to hit with shooting attacks.", "points": 10},
         "grappling_hooks": {"name": "Grappling Hooks", "description": "This model may ignore vertical movement distances when moving.", "points": ["model.movement", {"multiply": 0.25}]},
         "combat_shield": {"name": "Combat Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
-        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]}
+        "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]},
+        "legend_remembrance": {"name": "Armor of Remembrance", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
+        "legend_shard": {"name": "Demonic Shard", "description": "This model increases all power charge values by 1.", "points": 1},
+        "legend_staff": {"name": "Warding Staff", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
     },
     "hidden_relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -2037,6 +2103,32 @@
         {"subfactions": ["none", "wolf_marines", "psychic_marines"], "rule": "mobility_training", "flavor": "A well-trained tactician in mobility warfare."},
         {"subfactions": ["psychic_marines"], "rule": "combat_master", "flavor": "A trained fighter can dispatch even the toughest foes in deadly combat."}
     ],
+    "relics": {
+        "legend_remembrance": {
+            "subfactions": ["psychic_marines"],
+            "name": "Armor of Remembrance",
+            "rule": "legend_remembrance",
+            "description": "Upgrade one model with Armor of Remembrance.",
+            "flavor": "This armor serves as a reminder to those who have fallen before them.",
+            "points": 15
+        },
+        "legend_shard": {
+            "subfactions": ["psychic_marines"],
+            "name": "Demonic Shard",
+            "rule": "legend_shard",
+            "description": "Upgrade one model with Demonic Shard.",
+            "flavor": "This demonic crystal is imbued with psychic energy.",
+            "points": 10
+        },
+        "legend_staff": {
+            "subfactions": ["psychic_marines"],
+            "name": "Warding Staff",
+            "rule": "legend_staff",
+            "description": "Upgrade one model's Psychic Staff with Warding Staff.",
+            "flavor": "This staff has the power to absorb and stop psychic energy.",
+            "points": 5
+        }
+    },
     "strategies": [
         {
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],

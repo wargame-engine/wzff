@@ -193,13 +193,6 @@
         "super_heavy": {"name": "Super Heavy (Core)", "cost": 2, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
     "relics": {
-        "resilient": {
-            "name": "Resilient",
-            "rule": "legend_wounds",
-            "description": "Upgrade one Infantry model with Resilient.",
-            "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale.",
-            "points": 10
-        },
         "inspired": {
             "name": "Inspired",
             "rule": "legend_courage",
@@ -422,8 +415,8 @@
         "heavy_plasma_cannon": {
             "name": "Heavy Plasma Cannon",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
             ]
         },
         "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 3},
@@ -432,7 +425,7 @@
         "twin_heavy_gatling_gun": {"name": "Twin Heavy Gatling Gun", "attacks": 12, "short": 15, "medium": 30, "ap": 2},
         "gatling_gun": {"name": "Gatling Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "twin_gatling_gun": {"name": "Twin Gatling Gun", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
-        "heavy_laser_destroyer": {"name": "Heavy Laser Destroyer", "ap": 10, "attacks": 2, "short": 36, "medium": 72, "rules": []},
+        "heavy_laser_destroyer": {"name": "Heavy Laser Destroyer", "ap": 8, "attacks": 2, "short": 36, "medium": 72, "rules": []},
         "twin_heavy_laser_cannon": {"name": "Twin Heavy Laser Cannon", "ap": 8, "attacks": 2, "short": 36, "medium": 72, "rules": []},
         "laser_talon": {"name": "Laser Talon", "ap": 7, "attacks": 2, "short": 12, "medium": 24},
         "twin_laser_talon": {"name": "Twin Laser Talon", "ap": 7, "attacks": 4, "short": 12, "medium": 24},
