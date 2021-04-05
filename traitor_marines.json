@@ -1192,6 +1192,30 @@
                 }
             ]
         },
+        "warp_beast":{
+            "name": "Warp Beast",
+            "description": "An amagamation of corupted flesh whose power is harnessed by a massive portal on it's back.",
+            "rules": [{"id": "psychic", "x": 1}, "damage_table_monster", "vulnerable_rear"],
+            "subfactions": ["change_traitors"],
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Warp Beast",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 0,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "enormous_claws", "count": 2}, {"id":"tentacle_maw", "count": 2}],
+                    "options":[],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "birdmen_disc_riders": {
             "name": "Birdmen Disk Riders",
             "description": "Exhalted birdmen riding psychic disks.",
@@ -1234,7 +1258,9 @@
         "hexed_spear": {"name": "Hexed Spear", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
         "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3},
-        "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2}
+        "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2},
+        "enormous_claws": {"name": "Enormous Claws", "attacks": 1, "short": "Melee", "ap": 6},
+        "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]}
     },
     "rules": {
         "rifle_tactics": {
