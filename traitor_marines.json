@@ -219,7 +219,7 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": ["leader", "fear", "damage_table_monster", {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": ["leader", {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
