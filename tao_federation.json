@@ -25,7 +25,7 @@
                     "weapons": [{"id": "suit_fists", "count": 4}],
                     "options": [
                         {"limit": 3, "addWeapon": ["flak_launcher", "ion_gatling", "flamethrower", "pulse_gatling", "plasma_rifle", "fusion_blaster", "missile_pod"]},
-                        {"addRule": ["cold_fusion_booster", {"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
+                        {"addRule": [{"id": "ambush", "name": "Sky Strike"}, {"id": "resilient", "x": 4, "name": "Shield Generator"}, "threat_detector_suit"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -828,7 +828,6 @@
         "accelerator": {"name": "Accelerator", "description": "This model and models in its unit add +6\" maximum Range to all weapons.", "points": 5},
         "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
         "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
-        "cold_fusion_booster": {"name": "Cold Fusion Booster", "hidden": "true", "description": "This model gets +4\" Move.", "description_short": "+4\" Move", "points": 4},
         "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Save.", "points": 20}
     },
     "strategies": {
