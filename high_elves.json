@@ -3,11 +3,103 @@
     "name": "High Elf Worlds",
     "author": "Caliallie#6369",
     "units": {
+       "high_elf_champion":{
+            "name": "High Elf Champion",
+            "description": "A leader of the high elf martial forces.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "leader"],
+            "models":[
+                {
+                    "name": "High Elf Champion",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 7, 
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "star_spear", "count": 4}, "plasma_grenade"],
+                    "min": 1,
+                    "max": 1
+
+                }
+            ]
+        },
+        "high_elf_champion_on_bike":{
+            "name": "High Elf Champion on Bike",
+            "description": "A leader of the high elf martial forces riding a swift hover bike.",
+            "category": "command",
+            "keywords": ["Biker"],
+            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}, "hover", "leader"],
+            "models":[
+                {
+                    "name": "High Elf Champion on Bike",
+                    "courage": 7,
+                    "movement": 10,
+                    "shoot": 7, 
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "energy_sword", "count": 4}, "twin_shard_rifle"],
+                    "options":[
+                        {"replaceWeapon": {"id": "energy_sword", "count": 4}, "withWeapon":[["fusion_rifle", {"id":"ccw", "count": 4}], ["laser_lance_shoot",{"id": "laser_lance_melee", "count": 4}]]},
+                        {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": [{"id": "melee_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 11
+
+                }
+            ]
+        },
+        "high_elf_champion_with_wings":{
+            "name": "High Elf Champion with Wings",
+            "description": "A leader of the high elf martial forces using advanced flight technology resembling wings to swoop around the battlefield.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "fly", "ambush", "leader"],
+            "models":[
+                {
+                    "name": "High Elf Champion with Wings",
+                    "courage": 7,
+                    "movement": 10,
+                    "shoot": 7, 
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "ccw", "count": 4}, "fusion_rifle", "plasma_grenade"],
+                    "options": [
+                        {"replaceWeapon": {"id": "ccw", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+
+                }
+            ]
+        },
+        "war_god_avatar":{
+            "name": "War God Avatar",
+            "description": "A recently risen avatar of an ancient elven god of war.",
+            "category": "command",
+            "keywords": [],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 4}, "leader"],
+            "models": [
+                {
+                    "name": "War God Avatar",
+                    "courage": 8,
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": [{"id":"shreiking_spear_melee", "count": 5}, "shreiking_spear_shoot"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "defenders": {
             "name": "Defender Squad",
             "description": "A group of high elf warriors.",
-            "min": 1,
-            "max": 1,
             "category": "core",
             "keywords": ["Infantry"],
             "models": [
@@ -226,12 +318,29 @@
             "name": "Gravity Thrusters",
             "description": "If this model performs two move actions on its turn, enemy units suffer -1 Accuracy when targeting this model.",
             "points": 10
+        },
+        "rifle_tactics": {
+            "name": "Rifle Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": 10
+        },
+        "melee_tactics": {
+            "name": "Melee Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": 10
         }
     },
     "weapons": {
         "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
-        "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]}
+        "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
+        "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},
+        "laser_lance_melee":{"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
+        "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 1, "rules":["rending"]},
+        "shreiking_spear_melee":{"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id":"critical", "x": 1}]},
+        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 6, "rules": ["fusion"]}
     },
     "strategies": {
         "mobility_training": {
