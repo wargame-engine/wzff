@@ -545,7 +545,7 @@
             "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, the attacker suffers -1 Accuracy.",
             "points": 10
         },
-        "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
+        
         "battle_tactics": {
             "name": "Battle Tactics",
             "inputs": ["x"],

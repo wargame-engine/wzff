@@ -519,6 +519,7 @@
     },
     "rules": {
         "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
+        "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "shield": {"name": "Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
