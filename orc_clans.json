@@ -734,7 +734,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "rocket_launcher", "mount": ["Front"]}},
                         {"addRule": [{"id": "dozer", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_armor", {"id": "transport", "x": 10, "name": "Extra Space"}]},
-                        {"addWeapon": ["heavy_cannon", "cannon", "lightning_cannon"], "limit": 1},
+                        {"addWeapon": ["heavy_cannon", "cannon", "lightning_cannon", "super_cannon"], "limit": 1},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
                     ],
                     "min": 1,
@@ -764,7 +764,7 @@
                         {"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": {"id": "rocket_launcher"}},
                         {"addRule": [{"id": "dozer", "name": "Battle Ram"}, "wrecking_ball", "boarding_plank", "extra_space"]},
                         {"replaceRule": {"id": "open_topped", "x": 12}, "withRule": "extra_armor"},
-                        {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon"], "limit": 1},
+                        {"addWeapon": ["heavy_cannon", "lightning_cannon", "cannon", "super_cannon"], "limit": 1},
                         {"addWeapon": ["heavy_mortar"]},
                         {"addWeapon": ["rocket_launcher", "heavy_machinegun"], "limit": 3}
                     ],
@@ -1296,14 +1296,22 @@
     },
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
-        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
         "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
+        "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "cannon": {
             "name": "Cannon",
-            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 18, "medium": 36, "ap": 5}]
+            "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]
+        },
+        "heavy_cannon": {
+            "name": "Heavy Cannon",
+            "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]
+        },
+        "super_cannon": {
+            "name": "Super Cannon",
+            "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": [{"id": "blast", "x": 3}]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 18, "short": 18, "medium": 36, "ap": 3},
@@ -1315,13 +1323,9 @@
         "mega_claw": {"name": "Mega-Claw", "attacks": 1, "short": "Melee", "ap": 8},
         "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
         "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6},
-        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": ["indirect", {"id": "blast", "x": 3}]},
+        "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
-        "heavy_cannon": {
-            "name": "Heavy Cannon",
-            "profiles": [{"name": "HE", "attacks": 1, "short": 24, "medium": 48, "ap": 3, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
-        },
         "rivet_cannon": {"name": "Rivet Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
         "teleport_pistol": {"name": "Teleport Pistol", "attacks": 1, "short": 6, "ap": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "teleport_rifle": {"name": "Teleport Rifle", "attacks": 1, "short": 9, "ap": 6, "medium": 18, "rules": [{"id": "blast", "x": 3}, "rending"]},

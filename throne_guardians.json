@@ -562,7 +562,6 @@
     },
     "strategies": [
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "phase": "activation",
             "name": "Genetic Perfection",
             "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
@@ -570,7 +569,6 @@
             "cost": 2
         },
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "phase": "activation",
             "name": "Relic Deflectors",
             "description": "Use before a Vehicle unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
@@ -578,7 +576,6 @@
             "cost": 1
         },
         {
-            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "phase": "activation",
             "name": "Psychic Shield",
             "description": "Use when a Psychic(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
