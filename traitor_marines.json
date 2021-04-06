@@ -3,9 +3,10 @@
     "name": "Traitor Marines",
     "author": "Caliallie#6369",
     "subfactions": {
-        "change_traitors": {"name": "Psychic", "id": "change_traitors", "color": "#18abcc", "restricted": true, "background": "Traitor marines focused on using powerful magic to defeat their foes."},
         "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
-        "pestilence_focus": {"name": "Pestilence", "id": "pestilence_focus", "color": "#6a0001", "restricted": true, "background": "Traitor marines focused on using disease and decay to defeat their foes."}
+        "stealth_focus": {"name": "Deception", "id": "stealth_focus", "color": "#6a0001", "background": "Traitor marines focused on stealth and deception to defeat their foes."},
+        "pestilence_focus": {"name": "Pestilence", "id": "pestilence_focus", "color": "#6a0001", "restricted": true, "background": "Traitor marines focused on using disease and decay to defeat their foes."},
+        "change_traitors": {"name": "Psychic", "id": "change_traitors", "color": "#18abcc", "restricted": true, "background": "Traitor marines focused on using powerful magic to defeat their foes."}
     },
     "units": {
         "lord_on_infernal_stalker": {
@@ -1320,6 +1321,30 @@
             "name": "Dark Blessing",
             "flavor": "With a simple sacrifice, comes a gift of life.",
             "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "cost": 2
+        },
+        "concealment": {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Traitor marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 1
+        },
+        "infiltrate": {
+            "subfactions": ["stealth_focus"],
+            "name": "Infiltrate",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": "1/per"
+        },
+        "decoy": {
+            "subfactions": ["stealth_focus"],
+            "name": "Decoy",
+            "phase": "activation",
+            "description": "Our commander has been defeated, probably?",
+            "flavor": "Once per game, when a unit with the Leader rule is defeated, swap its place with another Leader. Then defeat the unit that was swapped with instead.",
             "cost": 2
         },
         "psychic_channeling": {
