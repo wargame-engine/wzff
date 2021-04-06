@@ -2080,7 +2080,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "melee_tactics": {
-            "name": "Melee Melee Tactics",
+            "name": "Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
