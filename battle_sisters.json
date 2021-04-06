@@ -9,7 +9,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint"],
             "models": [
                 {
                     "name": "High Sister",
@@ -37,7 +37,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 1}],
             "models": [
                 {
                     "name": "High Sister",

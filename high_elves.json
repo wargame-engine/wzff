@@ -8,7 +8,7 @@
             "description": "A leader of the high elf martial forces.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "leader"],
+            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
             "models":[
                 {
                     "name": "High Elf Champion",
@@ -30,7 +30,7 @@
             "description": "A leader of the high elf martial forces riding a swift hover bike.",
             "category": "command",
             "keywords": ["Biker"],
-            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}, "hover", "leader"],
+            "rules": [{"id": "rifle_tactics", "x": 2}, {"id": "wounds", "x": 3}, "hover", {"id": "leader_x", "x": "Infantry"}],
             "models":[
                 {
                     "name": "High Elf Champion on Bike",
@@ -56,7 +56,7 @@
             "description": "A leader of the high elf martial forces using advanced flight technology resembling wings to swoop around the battlefield.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "fly", "ambush", "leader"],
+            "rules": [{"id": "melee_tactics", "x": 2}, {"id": "wounds", "x": 3}, "fly", "ambush", {"id": "leader_x", "x": "Infantry"}],
             "models":[
                 {
                     "name": "High Elf Champion with Wings",
@@ -81,7 +81,7 @@
             "description": "A recently risen avatar of an ancient elven god of war.",
             "category": "command",
             "keywords": [],
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 4}, "leader"],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 4}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "War God Avatar",

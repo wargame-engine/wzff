@@ -13,7 +13,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "repair", "x": 3}, {"id": "tough", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}, {"id": "tough", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -43,7 +43,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -78,7 +78,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}, "manipulator"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, "manipulator"],
             "models": [
                 {
                     "name": "Machine Manipulator",
@@ -101,7 +101,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -128,7 +128,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["leader"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Data Specialist",
@@ -151,7 +151,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "vanguard_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Vanguard Commander",

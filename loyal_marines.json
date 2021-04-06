@@ -31,7 +31,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "siege_masters"],
             "models": [
                 {
@@ -55,7 +55,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "rifle_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "rifle_tactics", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -97,7 +97,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -139,7 +139,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -182,7 +182,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -216,7 +216,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -241,7 +241,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -275,7 +275,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -300,7 +300,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -325,7 +325,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -385,7 +385,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "tough", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "tough", "x": 1}],
             "subfactions": ["none", "wolf_marines"],
             "models": [
                 {
@@ -409,7 +409,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["leader", "medical_training", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "medical_training", {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "models": [
                 {
@@ -1582,7 +1582,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 2}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1614,7 +1614,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": ["leader", "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {

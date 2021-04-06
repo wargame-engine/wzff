@@ -68,7 +68,7 @@
                         {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
                         {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id": "melee_tactics", "x": 2}}
                     ],
-                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -108,7 +108,7 @@
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceRule": {"id": "rifle_tactics", "x": 2}, "withRule": {"id": "melee_tactics", "x": 2}}
                     ],
-                    "rules": [{"id": "impact", "x": 1}, "leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+                    "rules": [{"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -146,7 +146,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
                     ],
-                    "rules": ["leader", {"id": "repair", "x": 5}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 5}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -178,7 +178,7 @@
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
                         {"addRule": ["jetpack", "destroyer_armor", {"id": "psychic", "x": 2}]}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, "leader", {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -210,7 +210,7 @@
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, {"id": "impact", "x": 1}, "leader", {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, {"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -220,7 +220,7 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": ["leader", {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -258,7 +258,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["marine_pistol", {"id": "holy_mace", "count": 3}, "at_grenade"],
-                    "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "melee_tactics", "x": 1}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "melee_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -999,7 +999,7 @@
         "sorcerer_lord": {
             "name": "Sorcerer Lord",
             "description": "A master of combat that leads the forces of change.",
-            "rules": ["leader", {"id": "psychic", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1028,7 +1028,7 @@
         "sorcerer": {
             "name": "Sorcerer",
             "description": "A distinguished sorcerer who has managed to rise through the ranks of the change brothers.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}, {"id": "tough", "x": 1}, {"id": "rifle_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}, {"id": "tough", "x": 1}, {"id": "rifle_tactics", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1057,7 +1057,7 @@
         "birdman_sorcerer": {
             "name": "Birdman Sorcerer",
             "description": "A mutated half bird half man sorcerer that leads demonic forces of change.",
-            "rules": ["leader", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",
