@@ -37,8 +37,7 @@
         "traitor_lord": {
             "name": "Traitor Lord",
             "description": "A lord of the dark gods.",
-            "min": 1,
-            "max": 1,
+            "subfactions": ["none", "pestilence_focus"],
             "category": "command",
             "models": [
                 {
@@ -155,8 +154,6 @@
         "dark_psychic": {
             "name": "Dark Psychic",
             "description": "A powerful human whose mental powers have been twisted by the dark side.",
-            "min": 1,
-            "max": 1,
             "category": "command",
             "models": [
                 {
@@ -220,6 +217,7 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
+            "subfactions": ["none", "pestilence_focus", "change_traitors"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
@@ -267,7 +265,7 @@
         "cultists": {
             "name": "Cultists",
             "description": "Humans who have sold their souls to the dark gods.",
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "min": 10,
             "max": 30,
             "category": "core",
@@ -288,6 +286,28 @@
                     "rules": [],
                     "min": 10,
                     "max": 30
+                }
+            ]
+        },
+        "plague_walkers": {
+            "name": "Plague Walkers",
+            "description": "Humans who have been mutated into walking undead.",
+            "subfactions": ["pestilence_focus"],
+            "min": 10,
+            "max": 30,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Plague Walker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "ccw", "count": 2}],
+                    "min": 10,
+                    "max": 20
                 }
             ]
         },
@@ -350,6 +370,76 @@
                 }
             ]
         },
+        "lord_of_pestilence": {
+            "name": "Lord of Pestilence",
+            "description": "A lord of death and decay.",
+            "subfactions": ["pestilence_focus"],
+            "category": "command",
+            "models": [
+                {
+                    "name": "Lord of Pestilence",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "pestilence_scythe", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": {"id": "pestilence_scythe", "count": 3}, "withWeapon": [{"id": "pestilence_great_scythe", "count": 5}, [{"id": "pestilence_claw", "count": 5}, "pestilence_sprayer"]]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}, "ambush"],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pestilence_psychic": {
+            "name": "Pestilence Psychic",
+            "description": "A powerful infected marine whose mental powers can be used for destruction.",
+            "subfactions": ["pestilence_focus"],
+            "category": "command",
+            "models": [
+                {
+                    "name": "Pestilence Psychic",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "frags", {"id": "energy_staff", "count": 4}],
+                    "options": [
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
+                    ],
+                    "rules": [{"id": "psychic", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pestilence_surgeon": {
+            "name": "Pestilence Surgeon",
+            "description": "A doctor infected with pestilence.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "medical_training", {"id": "wounds", "x": 2}],
+            "subfactions": ["pestilence_focus"],
+            "models": [
+                {
+                    "name": "Pestilence Surgeon",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "marine_pistol"}, "pestilence_grenade", {"id": "pestilence_sword", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "pestilence_marines": {
             "name": "Pestilence Marines",
             "description": "Marines corrupted by the dark gods.",
@@ -357,10 +447,46 @@
             "category": "core",
             "options": [
                 {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": "marine_rifle",
+                    "withWeapon": ["plasma_rifle", "pestilence_sprayer", "pestilence_launcher", "fusion_rifle"]
+                },
+                {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": ["marine_rifle", "pestilence_ccw"],
+                    "withWeapon": [["marine_pistol", {"id": "pestilence_ccw", "count": 2}]]
+                },
+                {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": ["marine_rifle", "pestilence_ccw"],
+                    "withWeapon": [["marine_pistol", {"id": "pestilence_axe", "count": 2}]]
+                },
+                {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": ["marine_rifle", "pestilence_ccw"],
+                    "withWeapon": [["marine_pistol", {"id": "pestilence_mace", "count": 1}, {"id": "pestilence_axe", "count": 1}]]
+                },
+                {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": ["marine_rifle", "pestilence_ccw"],
+                    "withWeapon": [["marine_pistol", {"id": "pestilence_great_cleaver", "count": 2}]]
+                },
+                {
+                    "modelLimit": "1/5",
+                    "limit": 1,
+                    "replaceWeapon": ["marine_rifle", "pestilence_ccw"],
+                    "withWeapon": [["marine_pistol", {"id": "pestilence_flail", "count": 4}]]
+                },
+                {
                     "modelLimit": "1/10",
                     "limit": 1,
                     "replaceWeapon": "marine_rifle",
-                    "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "autocannon", "minigun", "plasma_rifle", "flamethrower", "fusion_rifle"]
+                    "withWeapon": ["pestilence_sprayer", "pestilence_launcher"]
                 }
             ],
             "models": [
@@ -372,19 +498,15 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
+                    "weapons": ["marine_rifle", "pestilence_ccw", "at_grenade"],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
-                        {"replaceWeapon": ["marine_rifle", "pestilence_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["plasma_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle", "pestilence_ccw"], "withWeapon": [["marine_pistol", {"id": "pestilence_ccw", "count": 2}]]},
                         {
-                            "replaceWeapon": {"id": "chainsword", "count": 2},
+                            "replaceWeapon": {"id": "pestilence_ccw", "count": 2},
                             "withWeapon": [
-                                {"id": "energy_mace", "count": 2},
-                                {"id": "energy_axe", "count": 2},
-                                {"id": "energy_sword", "count": 2},
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "energy_hammer", "count": 2},
-                                {"id": "energy_claws", "count": 3}
+                                {"id": "pestilence_sword", "count": 2},
+                                {"id": "energy_fist", "count": 2}
                             ]
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
@@ -400,10 +522,44 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
-                    "rules": [],
+                    "weapons": ["marine_rifle", "pestilence_ccw", "at_grenade"],
                     "min": 4,
-                    "max": 20
+                    "max": 9
+                }
+            ]
+        },
+        "pestilence_tank": {
+            "name": "Pestilence Tank",
+            "description": "An armored tank helmed by Pestilence Marines.",
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "models": [
+                {
+                    "name": "Pestilence Tank",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "pestilence_mortar", "mount": ["Front"]}, {"id": "light_machinegun", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
+                        {"replaceWeapon": "light_machinegun", "withWeapon": "heavy_machinegun"},
+                        {
+                            "addWeapon": [
+                                {"id": "pestilence_sprayer", "mount": ["Front"], "count": 2},
+                                {"id": "pestilence_cannon", "mount": ["Front"], "count": 2}
+                            ],
+                            "limit": 1
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -478,7 +634,7 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [
-                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "flamer", "plasma_rifle", "fusion_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "flamethrower", "plasma_rifle", "fusion_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
                         {
                             "replaceWeapon": {"id": "chainsword", "count": 2},
@@ -720,7 +876,7 @@
             "name": "Daemon Spawn",
             "description": "Horribly mutated beings that run rampant on the battlefield.",
             "rules": ["mutations", "agile", "fear", {"id": "wounds", "x": 2}],
-            "subfactions": ["none", "change_traitors", "rage_focus"],
+            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
             "min": 1,
             "max": 5,
             "category": "strike",
@@ -732,7 +888,7 @@
             "name": "Traitor APC",
             "description": "A durable transport built by the loyal marines.",
             "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -758,7 +914,7 @@
             "name": "Traitor Battle Tank",
             "description": "An armored tank helmed by the Traitor Marines.",
             "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors", "rage_focus"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "keywords": ["Vehicle"],
             "min": 1,
             "category": "heavy",
@@ -794,7 +950,7 @@
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the Traitor Marines.",
             "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors", "rage_focus"],
+            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
             "keywords": ["Vehicle"],
             "min": 1,
             "category": "heavy",
@@ -823,7 +979,7 @@
             "name": "Infernal Brute",
             "description": "A corrupted attack walker upgraded with infernal weapons.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors", "rage_focus"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "min": 1,
             "max": 1,
             "category": "specialist",
@@ -945,7 +1101,7 @@
             "name": "Crab Walker",
             "description": "A huge demonic creation of metal which is powered by the souls of its victims.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors", "rage_focus"],
+            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
             "min": 1,
             "max": 1,
             "category": "heavy",
@@ -1240,7 +1396,6 @@
                             "replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 2}], "withWeapon": [{"id": "hexed_blades", "count": 3}, {"id": "hexed_spear", "count": 3}, ["hexed_bow", {"id": "heavy_ccw", "count": 2}]]
                         }
                     ],
-                    "rules": [],
                     "min": 3,
                     "max": 9
                 }
@@ -1248,7 +1403,27 @@
         }
     },
     "weapons": {
-        "pestilence_ccw": {"name": "Pestilence CCW", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "pestilence_grenade": {
+            "name": "Pestilence Grenades",
+            "profiles": [{"name": "Pestilence", "attacks": 1, "short": 6, "rules": ["pestilence", "grenade", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]}]
+        },
+        "pestilence_scythe": {"name": "Pestilence Scythe", "profiles": [
+                {"name": "Cleave", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
+                {"name": "Sweep", "attacks": 2, "ap": 1, "short": "Melee", "rules": ["pestilence"]}
+            ]
+        },
+        "pestilence_great_scythe": {"name": "Pestilence Great-scythe","attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
+        "pestilence_launcher": {"name": "Pestilence Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "pestilence"]},
+        "pestilence_mortar": {"name": "Pestilence Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["indirect", "pestilence", {"id": "blast", "x": 3}]},
+        "pestilence_cannon": {"name": "Pestilence Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": ["pestilence"]},
+        "pestilence_sprayer": {"name": "Pestilence Sprayer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pestilence"]},
+        "pestilence_sword": {"name": "Pestilence Sword", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["pestilence"]},
+        "pestilence_flail": {"name": "Pestilence Flail", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["pestilence"]},
+        "pestilence_great_cleaver": {"name": "Pestilence Great-cleaver", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
+        "pestilence_axe": {"name": "Pestilence Axe", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["pestilence"]},
+        "pestilence_mace": {"name": "Pestilence Mace", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
+        "pestilence_claw": {"name": "Pestilence Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
+        "pestilence_ccw": {"name": "Pestilence CCW", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["pestilence"]},
         "hexed_flamethrower_pistol": {"name": "Hexed Flamethrower Pistol", "attacks": 3, "short": 6, "ap": 1, "rules": ["rending"]},
         "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "hexed_flamethrower": {"name": "Hexed Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
@@ -1264,6 +1439,7 @@
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]}
     },
     "rules": {
+        "pestilence": {"name": "Pestilence", "description": "Each successful hit roll of 2 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
@@ -1370,21 +1546,46 @@
             "flavor": "The psyker explodes with energy, infused with additonal power.",
             "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
             "cost": 2
+        },
+        "resilience": {
+            "name": "Resilience",
+            "subfactions": ["pestilence_focus"],
+            "phase": "activation",
+            "flavor": "These marines are so diseased and rotten that they often shrug off some powerful attacks.",
+            "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
+            "cost": 1
+        },
+        "pestilent_aura": {
+            "name": "Pestilent Aura",
+            "subfactions": ["pestilence_focus"],
+            "phase": "activation",
+            "flavor": "Following these marines is an aura of death and disease.",
+            "description": "Use this strategy when you activate one of your _Infantry_ or _Heavy Infantry_ units. Up to 2 units within 6\" take 3 hits with AP 1 each.",
+            "cost": 2
+        },
+        "pestilence_rounds": {
+            "name": "Pestilence Rounds",
+            "subfactions": ["pestilence_focus"],
+            "phase": "activation",
+            "flavor": "Sometimes it is necessary to infuse marine rifle rounds with disease to cause extra damage.",
+            "description": "Use this strategy when one of your _Infantry_ or _Heavy Infantry_ units Shoots. Choose a weapon name. Each successful hit roll of 2 or less with that weapon gets +1 AP.",
+            "cost": 1
         }
     },
     "powers": {
         "beam": {
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Invigorating Beam",
             "description": "Target friendly unit within 12\"may immediately make a free move action.",
             "charge": 7
         },
         "illusion": {
-            "subfactions": ["change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Encroaching Mutations",
             "description": "Target enemy unit within 18\" gets -1 to hit the next time it shoots or fights.",
             "charge": 6
         },
+        "terror": {"subfactions": ["none", "change_traitors", "pestilence_focus"], "name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
         "inspire": {
             "subfactions": ["change_traitors"],
             "name": "Inspiring Word",
@@ -1392,7 +1593,6 @@
             "charge": 7
         },
         "storm": {"subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 6 hits with AP 1.", "charge": 6},
-        "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 3 hit with AP 4.", "charge": 6},
-        "terror": {"subfactions": ["change_traitors"], "name": "Change Bolt", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7}
+        "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 4.", "charge": 6}
     }
 }
