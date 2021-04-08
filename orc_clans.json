@@ -1446,6 +1446,7 @@
             "cost": 2
         },
         "tough_ones": {
+            "subfactions": ["combat_focus"],
             "name": "Tough Ones",
             "phase": "activation",
             "flavor": "These Orcs are some of the toughest you've ever seen.",
@@ -1453,6 +1454,7 @@
             "cost": 1
         },
         "smash_them": {
+            "subfactions": ["combat_focus"],
             "name": "Smash Them",
             "phase": "activation",
             "flavor": "It's about time we got to fighting.",
@@ -1460,6 +1462,7 @@
             "cost": 2
         },
         "counter_attack": {
+            "subfactions": ["combat_focus"],
             "name": "Counter Attack",
             "phase": "activation",
             "flavor": "The toughest orcs never back down from a challenge.",
