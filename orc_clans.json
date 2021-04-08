@@ -1436,7 +1436,7 @@
             "phase": "activation",
             "name": "Ramshackle",
             "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
-            "description": "Use when a Vehicle unit is targetted by an attack. Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less the attack is ignored.",
+            "description": "Use when a Vehicle unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
             "cost": 1
         },
         "goblin_shield": {
