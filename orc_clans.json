@@ -1375,7 +1375,8 @@
         "flame_missiles": {"name": "Flame Missiles", "attacks": 2, "ap": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
         "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
-        "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2}
+        "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
+        "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]}
     },
     "rules": {
         "orc_tactics": {
@@ -1420,6 +1421,15 @@
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 impact.", "points": 10},
         "extra_armor": {"name": "Extra Armor", "description_short": "Save +1", "hidden": true, "description": "This model gains +1 Save.", "points": 10},
         "war_banner": {"name": "War Banner", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10}
+    },
+    "relics": {
+        "relic_killer_claw": {
+            "name": "Killer Claw",
+            "weapon": "relic_ultra_claw",
+            "description": "Replace one model's Ultra Claw with Killer Claw.",
+            "flavor": "This Claw is the most killy claw you've ever seen.",
+            "points": 10
+        }
     },
     "powers": {
         "roar": {"name": "Roar", "description": "Target enemy unit within 12\" gets -1 Courage until the end of the round.", "charge": 8},
