@@ -22,6 +22,7 @@
                     "fight": 7,
                     "defense": 11,
                     "movement": 8,
+                    "rules": [{"id": "psychic", "x": 1}],
                     "weapons": [{"id": "large_razor_talons", "count": 4}, "grabbing_tail"],
                     "options": [
                         {
@@ -45,7 +46,8 @@
                             ],
                             "limit": 1
                         },
-                        {"addRule": "wings"}
+                        {"addRule": "wings"},
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "min": 1,
                     "max": 1
@@ -59,7 +61,7 @@
             "max": 1,
             "keywords": ["Hive Mind"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "outflank", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "outflank", {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Snatcher Lord",
@@ -71,6 +73,9 @@
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
+                    "rules": [
+                        {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -107,7 +112,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Heavy Infantry", "Hive Mind"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Hive Warrior Prime",
@@ -125,7 +130,8 @@
                             "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]
                         },
                         {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
-                        {"addWeapon": ["meat_hooks"]}
+                        {"addWeapon": ["meat_hooks"]},
+                        {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
                     ],
                     "min": 1,
                     "max": 1
@@ -222,7 +228,7 @@
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
             "keywords": ["Swarm"],
-            "rules": ["ambush", {"id": "wounds", "x": 4}],
+            "rules": ["ambush", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Hive Swarm",
@@ -232,10 +238,30 @@
                     "shoot": 4,
                     "defense": 4,
                     "movement": 6,
-                    "weapons": [{"id": "ccw", "count": 4}],
+                    "weapons": [{"id": "ccw", "count": 3}],
                     "options": [{"addWeapon": ["spinethrowers"]}],
                     "min": 3,
                     "max": 9
+                }
+            ]
+        },
+        "gargoyles": {
+            "name": "Gargoyles",
+            "description": "Basic bugs with biological weapons",
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Gargoyle",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "movement": 8,
+                    "weapons": ["meat_borer", "ccw", "venom_spit"],
+                    "rules": ["fly"],
+                    "min": 10,
+                    "max": 30
                 }
             ]
         },
@@ -253,8 +279,8 @@
                     "shoot": 4,
                     "defense": 9,
                     "movement": 6,
-                    "weapons": [{"id": "acid_spitter", "count": 4}, {"id": "heavy_ccw", "count": 4}],
-                    "options": [{"replaceWeapon": {"id": "acid_spitter", "count": 4}, "withWeapon": [{"id": "spiked_strangler", "count": 4}, {"id": "acid_cannon", "count": 4}]}],
+                    "weapons": [{"id": "heavy_ccw", "count": 4}],
+                    "options": [{"addWeapon": [{"id": "acid_spitter"}, {"id": "spiked_strangler"}, {"id": "acid_cannon"}], "limit": 5}],
                     "min": 1,
                     "max": 1
                 }
@@ -314,8 +340,8 @@
                     "fight": 7,
                     "shoot": 5,
                     "defense": 6,
-                    "movement": 9,
-                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 2}, "piercing_claws"],
+                    "movement": 8,
+                    "weapons": ["meat_hooks", {"id": "grabbing_talons", "count": 4}, "piercing_claws"],
                     "min": 1,
                     "max": 1
                 }
@@ -353,6 +379,7 @@
     },
     "models": {},
     "weapons": {
+        "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": "Melee", "rules": ["stun"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
         "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
@@ -382,6 +409,12 @@
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {
+        "swarm_melee_tactics": {
+            "name": "Swarm Melee Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "wings": {
             "name": "Wings",
             "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
@@ -392,11 +425,25 @@
     "powers": {},
     "strategies": [
         {
+            "name": "Flesh Hunger",
+            "phase": "activation",
+            "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+            "flavor": "With a burst of speed, hive units attack like nothing before.",
+            "cost": 1
+        },
+        {
+            "name": "Swarm Reflexes",
+            "phase": "activation",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "Sometimes manual override by the swarm host is necessary to react efficiently.",
+            "cost": 1
+        },
+        {
             "name": "Hive Mind",
             "phase": "activation",
-            "description": "Use at the beginning of the activation phase on a Hive Mind unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
+            "description": "Use at the beginning of the activation phase on a _Hive Mind_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
-            "cost": 1
+            "cost": 2
         }
     ]
 }

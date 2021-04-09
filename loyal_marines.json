@@ -430,6 +430,9 @@
             "name": "Loyal Marines",
             "description": "Marines corrupted by the dark gods.",
             "category": "core",
+            "options": [
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -482,8 +485,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [],
-            "options": [{"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle"], "modelLimit": "all"}, {"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Marine Sergeant",
@@ -523,6 +525,9 @@
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
             "rules": ["hunter_team"],
+            "options": [
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Prime Marine",
@@ -553,7 +558,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
             "rules": ["hunter_team"],
-            "options": [{"addRule": ["scout", "stealth"], "modelLimit": "all"}],
+            "options": [{"addRule": ["scout", "stealth"], "modelLimit": "all"}, {"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Infiltration Marine",
@@ -578,7 +583,9 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "rules": [],
+            "options": [
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Prime Assault Marine Sergeant",
@@ -590,7 +597,6 @@
                     "movement": 6,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 3}],
                     "options": [{"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol"]}],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 },
@@ -603,7 +609,6 @@
                     "reflexes": 6,
                     "movement": 6,
                     "weapons": ["prime_pistol", "at_grenade", {"id": "prime_chainsword", "count": 3}],
-                    "rules": [],
                     "min": 4,
                     "max": 9
                 }
@@ -649,7 +654,8 @@
             "rules": ["fear"],
             "options": [
                 {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]]},
-                {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1}
+                {"addRule": ["grappling_hooks", {"id": "ambush", "name": "Orbital Deployment"}], "modelLimit": "all", "limit": 1},
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
             ],
             "models": [
                 {
@@ -687,6 +693,9 @@
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["scout", "stealth"],
+            "options": [
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
+            ],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -697,7 +706,6 @@
                     "reflexes": 6,
                     "movement": 6,
                     "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
-                    "options": [],
                     "min": 1,
                     "max": 1
                 },
@@ -710,7 +718,6 @@
                     "movement": 6,
                     "reflexes": 6,
                     "weapons": ["prime_heavy_carbine", "at_grenade", {"id": "heavy_ccw", "count": 2}],
-                    "options": [],
                     "min": 4,
                     "max": 9
                 }
@@ -1018,7 +1025,7 @@
             "name": "Assault Squad",
             "description": "A squad of elite marines trained to fight in close combat.",
             "category": "strike",
-            "options": [{"addRule": "jetpack", "modelLimit": "all"}],
+            "options": [{"addRule": "jetpack", "modelLimit": "all"}, {"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Assault Marine Leader",
@@ -1568,9 +1575,7 @@
                     "defense": 12,
                     "reflexes": 6,
                     "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
-                    "options": [
-                        {"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}
-                    ],
+                    "options": [{"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["heavy_fusion_rifle"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -2011,9 +2016,7 @@
             "movement": 6,
             "weapons": ["prime_pistol", "at_grenade", {"id": "heavy_ccw", "count": 3}],
             "rules": ["fear"],
-            "options": [
-                {"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]]}
-            ],
+            "options": [{"replaceWeapon": ["prime_pistol", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_heavy_carbine", {"id": "heavy_ccw", "count": 2}]]}],
             "min": 4,
             "max": 9
         },
@@ -2066,7 +2069,11 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
-        "hunter_team": {"name": "Hunter Team", "description": "At the start of the game, choose a unit category. Accuracy and Strength rolls of 1 or 2 gain +1 AP against units in that category.", "points": 1},
+        "hunter_team": {
+            "name": "Hunter Team",
+            "description": "At the start of the game, choose a unit category. Accuracy and Strength rolls of 1 or 2 gain +1 AP against units in that category.",
+            "points": 1
+        },
         "rifle_tactics": {
             "name": "Marine Ranged Tactics",
             "inputs": ["x"],
@@ -2229,23 +2236,21 @@
             "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
             "charge": 7
         },
-        "might": {
+        "clouded": {
             "subfactions": ["none", "alien_hunters", "psychic_marines"],
-            "name": "Strength",
-            "description": "Target friendly unit within 12\" gets +1 Strength for its next attack.",
-            "charge": 7
+            "name": "Clouded",
+            "description": "Target enemy unit within 18\" gets -1 Accuracy until the end of the round.",
+            "charge": 6
         },
-        "weakness": {
+        "pacify": {
             "subfactions": ["none", "alien_hunters", "psychic_marines"],
-            "name": "Weakness",
-            "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.",
+            "name": "Pacify",
+            "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.",
             "charge": 6
         },
         "storm": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
-        "pacify": {"subfactions": ["alien_hunters"], "name": "Pacify", "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.", "charge": 6},
         "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 18\" gets -2\" of Movement until the end of the round.", "charge": 7},
-        "clouded": {"subfactions": ["alien_hunters"], "name": "Clouded", "description": "Target enemy unit within 18\" gets -1 Accuracy until the end of the round.", "charge": 6},
         "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 6},
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6}

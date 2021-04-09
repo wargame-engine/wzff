@@ -134,7 +134,7 @@
             "name": "Battle Sisters",
             "description": "A group of sisters with marine rifles to pack an extra punch.",
             "category": "core",
-            "options": [{"addRule": [{"id": "scout", "name": "Dominion"}], "limit": 1, "modelLimit": "all"}],
+            "options": [{"addRule": [{"id": "scout", "name": "Dominion"}], "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Sister Superior",

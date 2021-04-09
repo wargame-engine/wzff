@@ -263,6 +263,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Goblin Veteran",
@@ -308,7 +309,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "options": [{"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}],
+            "options": [{"addRule": [{"id": "heavy_armor"}], "modelLimit": "all"}, {"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Orc",
@@ -336,6 +337,7 @@
             "max": 1,
             "category": "specialist",
             "rules": ["fly"],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Storm Orc",
@@ -363,6 +365,7 @@
             "max": 1,
             "category": "specialist",
             "rules": ["stealth", "outflank"],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Commando Orc",
@@ -389,7 +392,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "options": [{"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"], "modelLimit": 2}],
+            "options": [{"replaceWeapon": "rocket_launcher", "withWeapon": ["bomb_hammer", "rocket_pistol"], "modelLimit": 2}, {"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Specialist Orc",
@@ -442,13 +445,13 @@
             "category": "core",
             "min": 1,
             "max": 1,
-            "rules": [],
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
                     "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
-                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
+                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
             ],
             "models": [
                 {

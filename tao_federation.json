@@ -811,7 +811,6 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space."},
-        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "spotting_laser": {
             "name": "Spotting Laser",
             "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend 1 spotting marker to re-roll hit rolls of 9+ against that target or 2 spotting markers to get +1 to hit.",

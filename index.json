@@ -334,7 +334,7 @@
             "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]}, {"name": "Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1}]
         },
         "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "ap": 6, "rules": ["pistol", "fusion"]},
-        "fusion_bomb": {"name": "Fusion Bomb", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
+        "fusion_bomb": {"name": "Fusion Bombs", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
         "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
         "hunter_missiles": {"name": "Hunter Missile", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "ammo", "x": 1}]},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
@@ -518,6 +518,7 @@
         }
     },
     "rules": {
+        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
         "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},
         "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Shooting weapons.", "points": 10},
