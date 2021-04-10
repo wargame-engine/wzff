@@ -1551,15 +1551,15 @@
             "subfactions": ["change_traitors"],
             "name": "Hex Rounds",
             "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
-            "description": "Use before an Infantry unit shoots. The attack has +6\" maximum range.",
+            "description": "Use before an Infantry unit shoots. Add +6\" to the short and long range bands of all weapons.",
             "cost": 1
         },
-        "psychic_fury": {
-            "phase": "activation",
+        "cursed_form": {
             "subfactions": ["change_traitors"],
-            "name": "Psychic Fury",
-            "flavor": "The psyker explodes with energy, infused with additonal power.",
-            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
+            "name": "Cursed Form",
+            "phase": "activation",
+            "description": "Use when a unit is targeted by an attack. That unit ignores up to 1 AP.",
+            "flavor": "Psychic Traitors, cursed with the loss of their souls, they are less susceptible to damage.",
             "cost": 2
         },
         "resilience": {
