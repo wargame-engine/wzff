@@ -2,6 +2,13 @@
     "id": "traitor_marines",
     "name": "Traitor Marines",
     "author": "Caliallie#6369",
+    "hidden_subfactions": {
+        "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#18abcc"},
+        "siege_focus": {"name": "Siege", "id": "siege_focus", "color": "#18abcc"},
+        "mobility_focus": {"name": "Mobility", "id": "mobility_focus", "color": "#18abcc"},
+        "terror_focus": {"name": "Terror", "id": "terror_focus", "color": "#18abcc"},
+        "morale_focus": {"name": "Morale", "id": "morale_focus", "color": "#18abcc"}
+    },
     "subfactions": {
         "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
         "stealth_focus": {"name": "Deception", "id": "stealth_focus", "color": "#6a0001", "background": "Traitor marines focused on stealth and deception to defeat their foes."},

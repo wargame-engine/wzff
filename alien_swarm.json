@@ -73,7 +73,7 @@
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
-                    "rules": [
+                    "options": [
                         {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
                     ],
                     "min": 1,
