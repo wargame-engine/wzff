@@ -499,7 +499,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 4,
                     "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
                     "min": 1,
@@ -511,7 +511,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "movement": 4,
                     "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
                     "min": 2,
@@ -879,7 +879,7 @@
                     "defense": 9,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": [{"id": "plasma_rifle"}, "mini_claw"],
+                    "weapons": [{"id": "plasma_rifle"}, {"id": "mini_claw", "count": 2}],
                     "options": [{"replaceWeapon": {"id": "plasma_rifle"}, "withWeapon": ["heavy_flamethrower", "rocket_launcher", "heavy_machinegun", "goblin_bazooka"]}],
                     "min": 1,
                     "max": 3
@@ -902,10 +902,12 @@
                     "defense": 11,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": [{"id": "plasma_rifle", "count": 2}, {"id": "walker_claw", "count": 2}],
+                    "weapons": [{"id": "heavy_flamethrower", "count": 4}],
                     "options": [
-                        {"replaceWeapon": "plasma_rifle", "withWeapon": ["walker_claw", "rocket_launcher", "heavy_flamethrower", "heavy_machinegun"]},
-                        {"replaceWeapon": "walker_claw", "withWeapon": ["walker_saw"]}
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "count": 1}, "withWeapon": [{"id": "walker_claw", "count": 2}, {"id": "walker_saw", "count": 2}, "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "count": 1}, "withWeapon": [{"id": "walker_claw", "count": 2}, {"id": "walker_saw", "count": 2}, "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "count": 1}, "withWeapon": [{"id": "walker_claw", "count": 2}, {"id": "walker_saw", "count": 2}, "rocket_launcher", "heavy_machinegun"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "count": 1}, "withWeapon": [{"id": "walker_claw", "count": 2}, {"id": "walker_saw", "count": 2}, "rocket_launcher", "heavy_machinegun"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1178,7 +1180,7 @@
             "category": "heavy",
             "min": 1,
             "max": 1,
-            "rules": ["fear", {"id": "transport", "x": 6}, "vulnerable_rear", "damage_table_vehicle"],
+            "rules": [{"id": "transport", "x": 6}, "vulnerable_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Orc Heavy Walker",
@@ -1345,15 +1347,15 @@
             "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": [{"id": "blast", "x": 3}]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
-        "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 18, "short": 18, "medium": 36, "ap": 3},
+        "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 12, "short": 18, "medium": 36, "ap": 3},
         "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
         "death_cannon": {"name": "Death Cannon", "attacks": 1, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
-        "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-        "mini_claw": {"name": "Mini-Claw", "attacks": 2, "short": "Melee", "ap": 5},
-        "walker_claw": {"name": "Walker-Claw", "attacks": 2, "short": "Melee", "ap": 6},
+        "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "mini_claw": {"name": "Mini-Claw", "attacks": 1, "short": "Melee", "ap": 5},
+        "walker_claw": {"name": "Walker-Claw", "attacks": 1, "short": "Melee", "ap": 6},
         "mega_claw": {"name": "Mega-Claw", "attacks": 1, "short": "Melee", "ap": 8},
         "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
-        "walker_saw": {"name": "Walker-Saw", "attacks": 3, "short": "Melee", "ap": 6},
+        "walker_saw": {"name": "Walker-Saw", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_mortar": {"name": "Heavy Mortar", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "super_machinegun": {"name": "Super Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "twin_super_machinegun": {"name": "Twin Super Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
