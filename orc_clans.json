@@ -490,7 +490,7 @@
             "options": [
                 {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
                 {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                {"addRule": {"id": "ambush"}}
+                {"addRule": {"id": "ambush", "name": "Teleporter"}}
             ],
             "models": [
                 {
