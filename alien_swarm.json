@@ -5,7 +5,6 @@
     "alliance": "alien_swarm",
     "version": 0.1,
     "author": "Solpine#1305",
-    "background": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind.",
     "units": {
         "hive_lord": {
             "name": "Hive Lord",
@@ -55,7 +54,7 @@
             ]
         },
         "snatcher_lord": {
-            "name": "Snatcher Lord",
+            "name": "Soul Stealer Lord",
             "description": "A massive mutant with psychic powers",
             "min": 1,
             "max": 1,
@@ -64,7 +63,7 @@
             "rules": [{"id": "leader_x", "x": "Infantry"}, "outflank", {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
-                    "name": "Snatcher Lord",
+                    "name": "Soul Stealer Lord",
                     "courage": 8,
                     "shoot": 0,
                     "fight": 8,
@@ -82,7 +81,7 @@
             ]
         },
         "soul_snatchers": {
-            "name": "Soul Snatchers",
+            "name": "Soul Stealers",
             "description": "Barely recognizable mutants of other species",
             "min": 1,
             "max": 1,

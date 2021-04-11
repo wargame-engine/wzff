@@ -810,7 +810,7 @@
         "light_walker": {
             "name": "Light Walker",
             "description": "A lightly equipped recon walker.",
-            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
@@ -936,37 +936,7 @@
         }
     },
     "weapons": {
-        "note1": "Super Heavy cannons ----------------------------------------------------------------------------------------------->",
-        "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
-        "super_heavy_battle_cannon": {"name": "Super Heavy Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
-        "note2": "Battle Tank Stuff ------------------------------------------------------------------------------------------------------->",
-        "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8,  "rules": [{"id": "blast", "x": 3}]},
-        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": []},
-        "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
-        "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
-        "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
-        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3,  "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
-        "heavy_shotgun": {"name": "Heavy Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
-        "wrist_grenades": {"name": "Wrist Grenades", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
-        "heavy_volley_gun": {"name": "Heavy Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
-        "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5,  "short": "Melee"},
-        "light_battle_cannon": {"name": "Light Battle Cannon", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["fusion"]},
-        "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": []},
-        "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 42, "medium": 84, "rules": [{"id": "blast", "x": 6}]},
-        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
-        "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},
-        "twin_shard_mortar": {"name": "Twin Shard Mortar", "attacks": 2, "ap": 2, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "missile_rack": {
-            "name": "Missile Rack",
-            "profiles": [
-                {"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]},
-                {"name": "AT", "attacks": 1, "short": 24, "medium": 48,  "ap": 6}
-            ]
-        },
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
