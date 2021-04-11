@@ -33,6 +33,7 @@
             "id": "alien_cults",
             "url": "alien_cults.json",
             "color": "#606060",
+            "secondary_color": "#7d0a15",
             "alliance": "alien_swarm",
             "version": "0.1",
             "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics."
