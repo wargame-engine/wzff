@@ -1505,15 +1505,15 @@
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
             "description": "Use before a Vehicle unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
-            "cost": 1
-        },
-        "dark_blessing": {
-            "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
-            "name": "Dark Blessing",
-            "flavor": "With a simple sacrifice, comes a gift of life.",
-            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "cost": 2
+        },
+        "fearless": {
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Marines are trained to stay strong even in the toughest fights.",
+            "cost": 1
         },
         "concealment": {
             "subfactions": ["stealth_focus"],
@@ -1521,7 +1521,7 @@
             "phase": "activation",
             "flavor": "Traitor marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
             "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
-            "cost": 1
+            "cost": 2
         },
         "infiltrate": {
             "subfactions": ["stealth_focus"],
