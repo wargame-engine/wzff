@@ -764,41 +764,5 @@
         }
     },
     "strategies": {},
-    "powers": {
-        "daemonforge": {
-            "subfactions": ["none", "change"],
-            "name": "Daemonforge",
-            "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a Vehicle unit shoots. All hits have +1 AP.",
-            "cost": 1
-        },
-        "blood_ritual": {
-            "subfactions": ["none", "change"],
-            "name": "Blood Ritual",
-            "flavor": "With a simple sacrifice of flesh, comes a gift of life.",
-            "description": "Use when an Infantry unit is activated. Roll a D10 on a roll of 3 or less the unit regains 3 wounds (put on any models in the unit). On any other result it regains 2 wounds instead. If the unit has lost any models, they may be used to restore those models.",
-            "cost": 2
-        },
-        "psychic_channeling": {
-            "subfactions": ["change_traitors"],
-            "name": "Psychic Channeling",
-            "flavor": "With focus and energy, even the most difficult psychic powers can be manifested.",
-            "description": "Use before a unit rolls for casting a psychic power. The spell charge value is increased by 1 and the spell has +3\" of range.",
-            "cost": 1
-        },
-        "hex_rounds": {
-            "subfactions": ["change"],
-            "name": "Hex Rounds",
-            "flavor": "Sometimes used, hex rounds are imbued with psychic fire and are highly deadly.",
-            "description": "Use before an Infantry unit shoots. The attack has +6\" maximum range.",
-            "cost": 1
-        },
-        "psychic_fury": {
-            "subfactions": ["change"],
-            "name": "Psychic Fury",
-            "flavor": "The psyker explodes with energy, infused with additonal power.",
-            "description": "Use when activating a unit with the Psychic keyword. That unit may cast one additional psychic power.",
-            "cost": 2
-        }
-    }
+    "powers": {}
 }

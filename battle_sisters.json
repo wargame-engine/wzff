@@ -31,13 +31,13 @@
                 }
             ]
         },
-        "high_sister": {
-            "name": "High Sister",
+        "greater_high_sister": {
+            "name": "Greater High Sister",
             "description": "A High sister of the Battle Sisters order.",
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
             "models": [
                 {
                     "name": "High Sister",
@@ -52,8 +52,35 @@
                         {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
                         {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}]},
-                        {"replaceRule": {"id": "sisters_tactics", "x": 1}, "withRule": {"id": "sisters_tactics", "x": 2}}
+                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "high_sister": {
+            "name": "High Sister",
+            "description": "A High sister of the Battle Sisters order.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
+            "models": [
+                {
+                    "name": "High Sister",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}]}
                     ],
                     "min": 1,
                     "max": 1

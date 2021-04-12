@@ -490,8 +490,8 @@
                 }
             ]
         },
-        "heavy_battle_suits": {
-            "name": "Heavy Battlesuits",
+        "support_battle_suits": {
+            "name": "Support Battlesuits",
             "description": "Warriors in heavy battlesuits armed with deadly weapons.",
             "min": 1,
             "max": 1,
@@ -500,7 +500,7 @@
             "options": [{"addModel": ["missile_drone", "spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
-                    "name": "Heavy Battlesuit",
+                    "name": "Support Battlesuit",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
@@ -508,7 +508,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "rules": ["damage_table_vehicle"],
-                    "weapons": ["suit_fists"],
+                    "weapons": [{"id": "suit_fists", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["heavy_rail_rifle", {"id": "heavy_missile_pod", "count": 2}]},
                         {"limit": 1, "addWeapon": [{"id": "plasma_rifle", "count": 2}, {"id": "smart_missiles", "count": 2}]},
@@ -516,6 +516,35 @@
                     ],
                     "min": 1,
                     "max": 3
+                }
+            ]
+        },
+        "heavy_battle_suit": {
+            "name": "Heavy Battlesuit",
+            "description": "An elite warriors in a heavy battlesuit.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Battlesuits"],
+            "category": "heavy",
+            "options": [{"addModel": ["shield_missile_drone"], "modelLimit": 2}],
+            "models": [
+                {
+                    "name": "Heavy Battlesuit",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "rules": ["damage_table_vehicle", "fly"],
+                    "weapons": [{"id": "suit_fists", "count": 4}, "ion_cannon", {"id": "plasma_rifle", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "ion_cannon", "withWeapon": "heavy_pulse_gatling"},
+                        {"replaceWeapon": {"id": "plasma_rifle", "count": 2}, "withWeapon": [{"id": "fusion_blaster", "count": 2}, {"id": "smart_missiles", "count": 2}]},
+                        {"addRule": ["threat_detector_suit"]}
+                    ],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -706,19 +735,21 @@
             "min": 0,
             "max": 1
         },
-        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor"], "min": 0, "max": 1},
-        "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "spotting_laser"], "min": 0, "max": 1},
-        "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly"], "weapons": ["missile_pod"], "min": 0, "max": 1},
-        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth"], "min": 0, "max": 1},
-        "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly"], "weapons": ["pulse_carbine"], "min": 0, "max": 1},
-        "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}], "min": 0, "max": 1},
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "min": 0, "max": 1},
-        "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "accelerator"], "min": 0, "max": 1}
+        "shield_missile_drone": {"name": "Shield Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"], "weapons": ["missile_pod"], "min": 0, "max": 1},
+        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor", "guardian"], "min": 0, "max": 1},
+        "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "spotting_laser", "guardian"], "min": 0, "max": 1},
+        "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "weapons": ["missile_pod"], "min": 0, "max": 1},
+        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth", "guardian"], "min": 0, "max": 1},
+        "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "weapons": ["pulse_carbine"], "min": 0, "max": 1},
+        "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"], "min": 0, "max": 1},
+        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection", "guardian"], "min": 0, "max": 1},
+        "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "accelerator", "guardian"], "min": 0, "max": 1}
     },
     "weapons": {
         "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4,  "rules": ["bomb", {"id": "blast", "x": 3}]},
         "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6,  "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
+        "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 8, "short": 18, "medium": 36, "ap": 3},
         "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "ion_gatling": {
             "name": "Ion Gatling",
@@ -827,7 +858,7 @@
         "accelerator": {"name": "Accelerator", "description": "This model and models in its unit add +6\" maximum Range to all weapons.", "points": 5},
         "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
         "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
-        "guardian": {"name": "Guardian", "description": "Models in this unit get +1 Save.", "points": 20}
+        "protection": {"name": "Protection", "description": "Models in this unit get +1 Save.", "points": 20}
     },
     "strategies": {
         "covering_fire": {

@@ -1244,7 +1244,6 @@
             "defense": 5,
             "reflexes": 5,
             "movement": 5,
-            "rules": [],
             "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
             "options": [
                 {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
@@ -1429,9 +1428,7 @@
             "points": 10
         },
         "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
-        "energy_field": {"name": "Energy Field", "description": "This model and friendly Infantry units within 3\" get +1 Defense.", "points": ["constants.defenseCost", {"multiply": 10}]},
-        "war!": {"name": "WAR!", "description": "This model and friendly Infantry units within 3\" get +2\" of Movement.", "points": ["constants.movementCost", {"multiply": 10}]},
-        "biggest_boss": {"name": "The Biggest Boss", "description": "Whenever this model loses a wound, roll a D10. On a 5 or less that wound is not lost.", "points": 5},
+        "energy_field": {"name": "Energy Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" get +1 Save.", "points": 10},
         "mad_doctor": {
             "name": "Mad Doctor",
             "description": "Whenever this model, or a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
@@ -1480,7 +1477,7 @@
             "name": "Ramshackle",
             "flavor": "Many parts of Orc vehicles end up being less important than they seem, falling off without causing damage.",
             "description": "Use when a Vehicle unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
-            "cost": 1
+            "cost": 2
         },
         "goblin_shield": {
             "name": "Goblin Shield",
@@ -1493,8 +1490,8 @@
             "name": "Tough Ones",
             "phase": "activation",
             "flavor": "These Orcs are some of the toughest you've ever seen.",
-            "description": "Use this strategy when one of your _Infantry_ units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
-            "cost": 1
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "cost": 2
         },
         "smash_them": {
             "subfactions": ["combat_focus"],

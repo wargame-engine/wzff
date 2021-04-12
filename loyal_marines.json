@@ -7,12 +7,12 @@
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
     "hidden_subfactions": {
-        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
         "fire_masters": {"name": "Flame", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
         "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
         "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."}
     },
     "subfactions": {
+        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
         "wolf_marines": {
             "name": "Counter-attack",
             "id": "wolf_marines",
@@ -1240,7 +1240,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle", "assault_ramp"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -1282,7 +1282,7 @@
         "hover_apc": {
             "name": "Prime Hover APC",
             "description": "A durable transport with hover technology.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle", "assault_ramp"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -2146,7 +2146,7 @@
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "name": "Genetically Engineered",
             "phase": "activation",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
@@ -2195,7 +2195,7 @@
             "name": "Devastation",
             "phase": "activation",
             "description": "Use before shooting with a unit. The target reduces its cover level by 1 (hard to soft, soft to none).",
-            "flavor": "Finding and expoiting a vulnerable piece of cover can lead to devastating results.",
+            "flavor": "Finding and exploiting a vulnerable piece of cover can lead to devastating results.",
             "cost": 1
         },
         {

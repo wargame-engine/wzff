@@ -799,7 +799,7 @@
             "phase": "activation",
             "flavor": "Dark Elves revel in pain as it only makes them stronger.",
             "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
-            "cost": 1
+            "cost": 2
         },
         "eager_to_fight": {
             "name": "Eager to Fight",

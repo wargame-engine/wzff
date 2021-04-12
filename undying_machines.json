@@ -756,7 +756,7 @@
         {
             "name": "Reanimation",
             "phase": "activation",
-            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
             "cost": 2
         },

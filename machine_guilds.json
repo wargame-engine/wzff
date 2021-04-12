@@ -700,7 +700,7 @@
         {
             "name": "Cybernetic Enhancements",
             "phase": "activation",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
+            "description": "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
             "cost": 2
         },

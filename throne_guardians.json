@@ -564,7 +564,7 @@
         {
             "phase": "activation",
             "name": "Genetic Perfection",
-            "description": "Use before taking defense rolls for an Infantry unit. It gets +1 Save.",
+            "description": "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
@@ -573,7 +573,7 @@
             "name": "Relic Deflectors",
             "description": "Use before a Vehicle unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
             "flavor": "With ancient defense fields, Throne Guardian vehicles can deflect even the heaviest attacks.",
-            "cost": 1
+            "cost": 2
         },
         {
             "phase": "activation",

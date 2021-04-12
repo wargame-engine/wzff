@@ -186,7 +186,7 @@
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
-                        {"addRule": ["jetpack", "destroyer_armor", {"id": "psychic", "x": 2}]}
+                        {"addRule": ["jetpack", "destroyer_armor"]}
                     ],
                     "rules": [{"id": "psychic", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
@@ -296,7 +296,6 @@
                         {"modelLimit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "light_machinegun"]},
                         {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]}
                     ],
-                    "rules": [],
                     "min": 10,
                     "max": 30
                 }
@@ -621,7 +620,7 @@
                     "weapons": ["marine_pistol", {"id": "heavy_ccw", "count": 3}, "at_grenade"],
                     "options": [
                         {"modelLimit": 2, "replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": {"id": "energy_axe", "count": 3}}
+                        {"replaceWeapon": "marine_pistol", "withWeapon": {"id": "chainaxe", "count": 3}}
                     ],
                     "min": 4,
                     "max": 19
@@ -813,11 +812,12 @@
                         {
                             "replaceWeapon": {"id": "chainaxe", "count": 2},
                             "withWeapon": [
+                                {"id": "chainfist", "count": 2},
                                 {"id": "energy_mace", "count": 2},
                                 {"id": "energy_axe", "count": 2},
                                 {"id": "energy_fist", "count": 2},
                                 {"id": "energy_hammer", "count": 2},
-                                {"id": "energy_claws", "count": 2}
+                                {"id": "energy_claws", "count": 3}
                             ]
                         },
                         {"replaceWeapon": ["twin_marine_rifle", {"id": "chainaxe", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]}
@@ -930,8 +930,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle"],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
-                    "rules": [],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -957,7 +956,7 @@
                     "reflexes": 5,
                     "weapons": ["heavy_autocannon"],
                     "options": [
-                        {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
+                        {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]},
                         {"addWeapon": ["twin_marine_rifle", "havoc_missiles"]},
                         {
                             "addWeapon": [
@@ -976,7 +975,7 @@
         "marine_heavy_tank": {
             "name": "Heavy Assault APC",
             "description": "A heavily armored transport sporting an arsenal of weapons built by the Traitor Marines.",
-            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle", "assault_ramp"],
             "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -992,7 +991,7 @@
                     "defense": 13,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1141,6 +1140,7 @@
                     "reflexes": 6,
                     "weapons": ["crab_cannon", {"id": "crab_claw", "count": 2}, "havoc_missiles", "reaper_cannon"],
                     "options": [
+                        {"addRule": ["doom_siren"]},
                         {"replaceWeapon": "havoc_missiles", "withWeapon": [{"id": "crab_flail", "count": 3}, "twin_heavy_flamethrower"]},
                         {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
                     ],
@@ -1458,6 +1458,7 @@
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]}
     },
     "rules": {
+        "doom_siren": {"name": "Doom Siren", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
         "pestilence": {"name": "Pestilence", "description": "Each successful hit roll of 2 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
         "rifle_tactics": {
             "name": "Rifle Tactics",
@@ -1558,7 +1559,7 @@
             "subfactions": ["change_traitors"],
             "name": "Cursed Form",
             "phase": "activation",
-            "description": "Use when a unit is targeted by an attack. That unit ignores up to 1 AP.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
             "flavor": "Psychic Traitors, cursed with the loss of their souls, they are less susceptible to damage.",
             "cost": 2
         },
