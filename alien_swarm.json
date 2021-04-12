@@ -378,7 +378,7 @@
     },
     "models": {},
     "weapons": {
-        "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": "Melee", "rules": ["stun"]},
+        "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
         "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
