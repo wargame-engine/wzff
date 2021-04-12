@@ -765,7 +765,7 @@
             "phase": "activation",
             "description": "Use when activating a Vehicle unit. It may immediately fix a critical damage it has sustained.",
             "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
-            "cost": 1
+            "cost": 2
         },
         {
             "subfactions": ["solar_fire"],
