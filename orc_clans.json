@@ -1335,15 +1335,15 @@
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "cannon": {
             "name": "Cannon",
-            "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]
+            "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]
         },
         "heavy_cannon": {
             "name": "Heavy Cannon",
-            "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]
+            "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]
         },
         "super_cannon": {
             "name": "Super Cannon",
-            "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": [{"id": "blast", "x": 3}]
+            "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "blast", "x": 3}]
         },
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 12, "short": 18, "medium": 36, "ap": 3},
