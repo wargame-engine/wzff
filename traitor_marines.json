@@ -1496,7 +1496,7 @@
             "subfactions": ["none", "change_traitors"],
             "name": "Hate",
             "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
-            "description": "Use before an Infantry unit fights. All hits have +1 AP.",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
             "cost": 1
         },
         "daemonforge": {
