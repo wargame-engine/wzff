@@ -272,6 +272,10 @@
             "name": "Missile Launcher",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
         },
+        "twin_missile_launcher": {
+            "name": "Twin Missile Launcher",
+            "profiles": [{"name": "Frag", "attacks": 2, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 2, "short": 24, "medium": 48, "ap": 6}]
+        },
         "assault_missile_launcher": {"name": "Assault Missile Launcher", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
         "laser_cannon": {"name": "Laser Cannon", "ap": 7, "attacks": 1, "short": 24, "medium": 48},
         "twin_laser_cannon": {"name": "Twin Laser Cannon", "ap": 7, "attacks": 2, "short": 24, "medium": 48, "rules": []},
@@ -435,6 +439,13 @@
                 {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
             ]
         },
+        "twin_heavy_plasma_cannon": {
+            "name": "Twin Heavy Plasma Cannon",
+            "profiles": [
+                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+            ]
+        },
         "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 3},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": []},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 6, "short": 15, "medium": 30, "ap": 2},
@@ -552,6 +563,7 @@
         "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},
+        "storm_missiles": {"name": "Storm Missiles", "attacks": 1, "ap": 6, "short": 36, "medium": 72},
         "twin_shard_mortar": {"name": "Twin Shard Mortar", "attacks": 2, "ap": 2, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "missile_rack": {
             "name": "Missile Rack",
@@ -683,7 +695,7 @@
         },
         "hover_mode": {
             "name": "Hover Mode",
-            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but is not requried to make a move action."
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
         }
     }
 }

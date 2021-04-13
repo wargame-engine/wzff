@@ -636,7 +636,7 @@
             "reflexes": 5,
             "rules": ["fly", "attached"],
             "weapons": [{"id": "ion_rifle", "count": 2}],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "attached_gunner_drone": {
@@ -675,7 +675,7 @@
             "reflexes": 6,
             "weapons": ["pulse_gatling", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addRule": "spotting_laser", "modelLimit": 1}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "warrior_team_leader": {
@@ -688,7 +688,7 @@
             "reflexes": 6,
             "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "pathfinder_team_leader": {
@@ -701,7 +701,7 @@
             "reflexes": 6,
             "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "support_turret": {
@@ -715,7 +715,7 @@
             "rules": ["deployable"],
             "weapons": ["support_missile_pod"],
             "options": [{"replaceWeapon": "support_missile_pod", "withWeapon": "smart_missiles"}],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "recon_drone": {
@@ -728,7 +728,7 @@
             "reflexes": 5,
             "weapons": ["pulse_gatling"],
             "rules": ["fly", "recon_drone"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "shield_missile_drone": {
@@ -741,7 +741,7 @@
             "reflexes": 5,
             "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
             "weapons": ["missile_pod"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor", "guardian"], "min": 0, "max": 1},
@@ -754,7 +754,7 @@
             "defense": 7,
             "reflexes": 5,
             "rules": ["fly", "spotting_laser", "guardian"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "missile_drone": {
@@ -767,10 +767,10 @@
             "reflexes": 5,
             "rules": ["fly", "guardian"],
             "weapons": ["missile_pod"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
-        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth", "guardian"], "min": 0, "max": 1},
+        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth", "guardian"], "min": 1, "max": 1},
         "gunner_drone": {
             "name": "Gunner Drone",
             "movement": 8,
@@ -781,7 +781,7 @@
             "reflexes": 5,
             "rules": ["fly", "guardian"],
             "weapons": ["pulse_carbine"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
         "shield_drone": {
@@ -793,10 +793,10 @@
             "defense": 7,
             "reflexes": 5,
             "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
-            "min": 0,
+            "min": 1,
             "max": 1
         },
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection", "guardian"], "min": 0, "max": 1},
+        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection", "guardian"], "min": 1, "max": 1},
         "accelerator_drone": {
             "name": "Accelerator Drone",
             "movement": 8,
@@ -806,7 +806,7 @@
             "defense": 7,
             "reflexes": 5,
             "rules": ["fly", "accelerator", "guardian"],
-            "min": 0,
+            "min": 1,
             "max": 1
         }
     },
@@ -927,14 +927,14 @@
             "name": "Covering Fire",
             "phase": "activation",
             "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
-            "description": "Use when a friendly Infantry unit is Charged. One friendly Infantry unit within 6\" may attempt take a Initiative test and attempt to react to the charging unit.",
+            "description": "Use when a friendly _Infantry_ unit is Charged. One friendly _Infantry_ unit within 6\" may attempt take a Initiative test and attempt to react to the charging unit.",
             "cost": 1
         },
         "preservation_protocols": {
             "name": "Preservation Protocols",
             "phase": "activation",
             "flavor": "Federation drones are programmed to protect their creators at all costs.",
-            "description": "Use after an Infantry unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly Drone unit within 6\" of it, and the Drone unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the Drone unit instead of the original target.",
+            "description": "Use after an _Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
             "cost": 2
         },
         "spotting_laser_uplink": {

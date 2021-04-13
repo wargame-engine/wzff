@@ -948,7 +948,7 @@
         "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
         "no_retreat": {
             "name": "No Retreat",
-            "description": "When a friendly Infantry unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
+            "description": "Once per round, when a friendly _Infantry_ unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
             "points": 5
         },
         "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
@@ -968,7 +968,7 @@
             "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
             "points": 10
         },
-        "banner": {"name": "Inspiring Banner", "description": "Friendly Infantry units within 6\" get +1 Courage.", "points": 20}
+        "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 20}
     },
     "powers": {
         "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
@@ -981,15 +981,15 @@
         "regroup": {
             "name": "Regroup",
             "phase": "activation",
-            "description": "Use before activating an Infantry unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "description": "Use before activating an _Infantry_ unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
             "cost": 1
         },
         "high_command": {
             "name": "High Command",
             "phase": "activation",
-            "description": "Use after an Infantry unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "description": "Use after an _Infantry_ unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
             "cost": 1
         },
-        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a Vehicle unit. That unit may remove one critical damage.", "cost": 2}
+        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
     }
 }

@@ -135,7 +135,6 @@
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
                     ],
                     "rules": [],
@@ -220,7 +219,7 @@
                     "reflexes": 5,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio_battle_tank"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},

@@ -665,23 +665,23 @@
         "vanguard_tactics": {
             "name": "Vanguard Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "manipulator": {
             "name": "Manipulator",
-            "description": "At any point during this unit's activaton, it may choose a friendly Infantry unit within 3\" to receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range \n\n\n The bonus is in effect until a new one is chosen.",
+            "description": "At any point during this unit's activation, it may choose a friendly _Infantry_ unit within 3\" to receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range \n\n\n The bonus is in effect until a new one is chosen.",
             "points": 10
         },
         "data_chips": {
             "name": "Data Chips",
-            "description": "At any point during this unit's activaton, it may choose a friendly Combat Robots unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
+            "description": "At any point during this unit's activation, it may choose a friendly Combat Robots unit within 3\" to receive one of the following bonuses: \n * +1 Save \n * Hit rolls of 1 or 2 generate one additional attack \n\n\n The bonus is in effect until a new one is chosen.",
             "points": 10
         },
         "canticles": {
             "name": "Canticles",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
             "points": ["rule.x", {"multiply": 15}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
@@ -700,7 +700,7 @@
         {
             "name": "Cybernetic Enhancements",
             "phase": "activation",
-            "description": "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
             "flavor": "Half-man and half-machine, Machine Guild infantry can withstand even the toughest punishment.",
             "cost": 2
         },
@@ -708,7 +708,7 @@
             "name": "Radiation Supercharge",
             "phase": "activation",
             "description": "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
-            "flavor": "While very harmful to the firer, sometimes it is benefitial to supercharge radiation weapons to deal with a foe more swiftly.",
+            "flavor": "While very harmful to the firer, sometimes it is beneficial to supercharge radiation weapons to deal with a foe more swiftly.",
             "cost": 1
         }
     ],

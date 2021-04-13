@@ -705,17 +705,17 @@
         "machine_tactics": {
             "name": "Machine Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Accuracy tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "warden_tactics": {
             "name": "Warden Tactics",
-            "description": "When this unit is activated, choose one friendly Infantry unit within 6\". That unit may re-roll failed Initiative tests of 9+ until the end of the round.",
+            "description": "When this unit is activated, choose one friendly _Infantry_ unit within 6\". That unit may re-roll failed Initiative tests of 9+ until the end of the round.",
             "points": 5
         },
         "reanimation_beam": {
             "name": "Reanimation Beam",
-            "description": "Once per round after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "Once per round after an attack is completed against an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
         },
         "swarm_fabricator": {
@@ -730,9 +730,9 @@
             "points": 5
         },
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
-        "regeneration_orb": {"name": "Regeneration Orb", "description": "Once per game after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
-        "regeneration_pods": {"name": "Regeneration Pods", "description": "Once per round after an attack is completed against an Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
-        "phase_field": {"name": "Phase Field", "description": "This model and friendly Infantry units within 6\" get +1 Save.", "points": 20},
+        "regeneration_orb": {"name": "Regeneration Orb", "description": "Once per game after an attack is completed against an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
+        "regeneration_pods": {"name": "Regeneration Pods", "description": "Once per round after an attack is completed against an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.", "points": 20},
+        "phase_field": {"name": "Phase Field", "description": "This model and friendly _Infantry_ units within 6\" get +1 Save.", "points": 20},
         "anti_gravity_generators": {
             "name": "Anti-Grav Generators",
             "hidden": true,
@@ -756,14 +756,14 @@
         {
             "name": "Reanimation",
             "phase": "activation",
-            "description": "Use after an attack is completed against an Infantry or Heavy Infantry unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "description": "Use after an attack is completed against an _Infantry_ or _Heavy Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "flavor": "Even when they appear to be fully destroyed, their regeneration may kick in and they will live again.",
             "cost": 2
         },
         {
             "name": "Repair Overdrive",
             "phase": "activation",
-            "description": "Use when activating a Vehicle unit. It may immediately fix a critical damage it has sustained.",
+            "description": "Use when activating a _Vehicle_ unit. It may immediately fix a critical damage it has sustained.",
             "flavor": "With self-repairing nano-machines this vehicle can recover from nearly anything.",
             "cost": 2
         },
@@ -772,14 +772,14 @@
             "name": "Distruption Flare",
             "phase": "activation",
             "description": "Use before a unit performs a Shoot action. The target reduces its cover level by 1 (hard to soft, soft to none).",
-            "flavor": "A solar flare from the sky distrupts the enemy's footing.",
+            "flavor": "A solar flare from the sky disrupts the enemy's footing.",
             "cost": 1
         },
         {
             "subfactions": ["solar_fire"],
             "name": "Overwhelming Firewpoer",
             "phase": "activation",
-            "description": "Use before an Infantry unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use before an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
             "flavor": "Massed firepower can be relatively effective in taking down most targets.",
             "cost": 1
         },
