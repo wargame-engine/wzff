@@ -56,6 +56,50 @@
                 }
             ]
         },
+        "neophytes": {
+            "name": "Neophytes",
+            "description": "A corrupted defense force squad turned to the cult.",
+            "category": "core",
+            "options": [
+                {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"},
+                {"addRule": "banner", "modelLimit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Neophyte Leader",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Neophyte",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "blasting_charges", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"], "modelLimit": 2},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"], "modelLimit": 2}
+                    ],
+                    "min": 9,
+                    "max": 19
+                }
+            ]
+        },
         "defense_force_squad": {
             "name": "Cult Defense Force Squad",
             "description": "A corrupted defense force squad turned to the cult.",
@@ -287,6 +331,12 @@
     },
     "models": {},
     "weapons": {
+        "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
+        "seismic_cannon": {"name": "Seismic Cannon", "profiles": [
+            {"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24},
+            {"name": "Short Wave", "attacks": 2, "short": 6, "medium": 12, "ap": 3}
+        ]},
+        "web_gun": {"name": "Web Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["web", "assault"]},
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": "Melee", "rules": ["stun"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
         "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},

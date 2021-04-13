@@ -233,6 +233,10 @@
             "name": "Grenades",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]}]
         },
+        "blasting_charges": {
+            "name": "Blasting Charges",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "ap": 4, "rules": ["grenade"]}]
+        },
         "grenade_launcher_attachment": {
             "name": "Grenade Launcher Attachment",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3}]
@@ -257,6 +261,7 @@
             "profiles": [{"name": "Burst", "attacks": 2, "short": 12, "medium": 24}, {"name": "Single", "attacks": 1, "short": 12, "medium": 24, "ap": 1}]
         },
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24},
+        "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
         "energy_staff": {"name": "Energy Staff", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3},
@@ -286,7 +291,7 @@
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
         "marine_shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
-        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["rending"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "rending"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2},
         "plasma_pistol": {
             "name": "Plasma Pistol",
@@ -557,6 +562,21 @@
         }
     },
     "rules": {
+        "banner": {
+            "name": "Banner",
+            "description": "This unit may re-roll a single failed Courage test when removing Shock.",
+            "points": 5
+        },
+        "net": {
+            "name": "Net",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 1
+        },
+        "web": {
+            "name": "Web",
+            "description": "Units hit by this weapon lose 2\" from their next move.",
+            "points": 2
+        },
         "assault_ramp": {"name": "Assault Ramp", "description": "Units disembarking from this unit gain +3\" of Movement for that action.", "points": 5},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
