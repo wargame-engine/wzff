@@ -89,7 +89,7 @@
             "rules": ["agile"],
             "models": [
                 {
-                    "name": "Soul Snatcher",
+                    "name": "Soul Stealer",
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
