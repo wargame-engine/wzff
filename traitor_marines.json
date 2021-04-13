@@ -618,10 +618,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["marine_pistol", {"id": "heavy_ccw", "count": 3}, "at_grenade"],
-                    "options": [
-                        {"modelLimit": 2, "replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": {"id": "chainaxe", "count": 3}}
-                    ],
+                    "options": [{"modelLimit": 2, "replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "marine_pistol", "withWeapon": {"id": "chainaxe", "count": 3}}],
                     "min": 4,
                     "max": 19
                 }
@@ -1616,7 +1613,7 @@
         "strike": {"subfactions": ["none", "change_traitors", "pestilence_focus"], "name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
         "terror": {"subfactions": ["none", "change_traitors", "pestilence_focus"], "name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
         "death": {"name": "Bolt", "subfactions": ["change_traitors"], "description": "Target enemy unit within 18\" takes 1 hit with AP 7.", "charge": 6},
-        "storm": {"subfactions": ["change_traitors"], "name": "Psychic Storm", "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
-        "inferno": {"subfactions": ["change_traitors"], "name": "Psychic Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
+        "storm": {"subfactions": ["change_traitors"], "name": "Storm", "description": "Target enemy unit within 18\" take 5 hits with AP 1.", "charge": 6},
+        "inferno": {"subfactions": ["change_traitors"], "name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6}
     }
 }

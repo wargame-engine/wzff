@@ -117,9 +117,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "options": [
-                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}
-            ],
+            "options": [{"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
             "models": [
                 {
                     "name": "Warrior Commander",
@@ -213,9 +211,7 @@
                     "reflexes": 5,
                     "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "savage_tactics", "x": 1}],
                     "weapons": ["savage_rifle", {"id": "heavy_ccw", "count": 3}],
-                    "options": [{
-                        "replaceRule": {"id": "savage_tactics", "x": 1}, "withRule": {"id": "savage_tactics", "x": 2}
-                    }],
+                    "options": [{"replaceRule": {"id": "savage_tactics", "x": 1}, "withRule": {"id": "savage_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -735,19 +731,88 @@
             "min": 0,
             "max": 1
         },
-        "shield_missile_drone": {"name": "Shield Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"], "weapons": ["missile_pod"], "min": 0, "max": 1},
+        "shield_missile_drone": {
+            "name": "Shield Missile Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
+            "weapons": ["missile_pod"],
+            "min": 0,
+            "max": 1
+        },
         "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor", "guardian"], "min": 0, "max": 1},
-        "spotter_drone": {"name": "Spotter Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "spotting_laser", "guardian"], "min": 0, "max": 1},
-        "missile_drone": {"name": "Missile Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "weapons": ["missile_pod"], "min": 0, "max": 1},
+        "spotter_drone": {
+            "name": "Spotter Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", "spotting_laser", "guardian"],
+            "min": 0,
+            "max": 1
+        },
+        "missile_drone": {
+            "name": "Missile Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", "guardian"],
+            "weapons": ["missile_pod"],
+            "min": 0,
+            "max": 1
+        },
         "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth", "guardian"], "min": 0, "max": 1},
-        "gunner_drone": {"name": "Gunner Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "guardian"], "weapons": ["pulse_carbine"], "min": 0, "max": 1},
-        "shield_drone": {"name": "Shield Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"], "min": 0, "max": 1},
+        "gunner_drone": {
+            "name": "Gunner Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", "guardian"],
+            "weapons": ["pulse_carbine"],
+            "min": 0,
+            "max": 1
+        },
+        "shield_drone": {
+            "name": "Shield Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
+            "min": 0,
+            "max": 1
+        },
         "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection", "guardian"], "min": 0, "max": 1},
-        "accelerator_drone": {"name": "Accelerator Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "accelerator", "guardian"], "min": 0, "max": 1}
+        "accelerator_drone": {
+            "name": "Accelerator Drone",
+            "movement": 8,
+            "courage": 4,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 7,
+            "reflexes": 5,
+            "rules": ["fly", "accelerator", "guardian"],
+            "min": 0,
+            "max": 1
+        }
     },
     "weapons": {
-        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4,  "rules": ["bomb", {"id": "blast", "x": 3}]},
-        "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6,  "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
+        "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", {"id": "blast", "x": 3}]},
+        "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
         "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 8, "short": 18, "medium": 36, "ap": 3},
         "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
@@ -755,49 +820,46 @@
             "name": "Ion Gatling",
             "profiles": [
                 {"name": "Standard", "attacks": 3, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 4,  "rules": [{"id": "overheat"}, "assault"]}
+                {"name": "Overcharge", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6,  "rules": ["fusion", "assault"]},
-        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["fusion"]},
-        "missile_pod": {"name": "Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 3,  "rules": ["assault"]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": ["fusion", "assault"]},
+        "heavy_fusion_blaster": {"name": "Heavy Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
+        "missile_pod": {"name": "Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["assault"]},
         "heavy_missile_pod": {"name": "Heavy Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
         "support_missile_pod": {"name": "Support Missile Pod", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
-        "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1,  "rules": [{"id": "blast", "x": 3}]},
+        "twin_missile_battery": {"name": "Twin Missile Battery", "attacks": 4, "short": 20, "medium": 30, "long": 40, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gatling_vulcan": {"name": "Heavy Gatling Vulcan", "attacks": 12, "short": 20, "medium": 30, "long": 40, "ap": 1},
         "heavy_railgun": {
             "name": "Heavy Rail Cannon",
-            "profiles": [
-                {"name": "Beam", "attacks": 1, "short": 36, "medium": 72, "ap": 8},
-                {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3,  "rules": [{"id": "blast", "x": 6}]}
-            ]
+            "profiles": [{"name": "Beam", "attacks": 1, "short": 36, "medium": 72, "ap": 8}, {"name": "Blast", "attacks": 1, "short": 36, "medium": 72, "ap": 3, "rules": [{"id": "blast", "x": 6}]}]
         },
         "ion_rifle": {
             "name": "Ion Rifle",
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
-                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5,  "rules": [{"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": [{"id": "overheat"}]}
             ]
         },
         "ion_cannon": {
             "name": "Ion Cannon",
             "profiles": [
                 {"name": "Standard", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6,  "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+                {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
             ]
         },
         "quad_ion_rifle": {
             "name": "Quad Ion Rifle",
             "profiles": [
                 {"name": "Standard", "attacks": 4, "short": 15, "medium": 30, "ap": 4},
-                {"name": "Overcharge", "attacks": 4, "short": 15, "medium": 30, "ap": 5,  "rules": [{"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 4, "short": 15, "medium": 30, "ap": 5, "rules": [{"id": "overheat"}]}
             ]
         },
         "ion_destroyer": {
             "name": "Ion Destroyer",
             "profiles": [
                 {"name": "Standard", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
-                {"name": "Overcharge", "attacks": 4, "short": 24, "medium": 48, "ap": 4,  "rules": [{"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "overheat"}]}
             ]
         },
         "hound_fangs": {"name": "Hound Fangs", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
@@ -883,5 +945,12 @@
             "cost": 1
         }
     },
-    "powers": {}
+    "powers": {
+        "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.", "charge": 8},
+        "steady": {"name": "Steady", "description": "Target friendly unit within 12\" gets +2 Initiative until the end of the round.", "charge": 8},
+        "calm": {"name": "Calm", "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.", "charge": 6},
+        "inferno": {"name": "Inferno", "description": "Target enemy unit within 12\" takes 3 hits with AP 3.", "charge": 6},
+        "terror": {"name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7},
+        "storm": {"name": "Storm", "description": "Target enemy unit within 12\" takes 3 hits with AP 2.", "charge": 7}
+    }
 }
