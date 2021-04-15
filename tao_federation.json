@@ -169,8 +169,8 @@
             "max": 1,
             "category": "specialist",
             "options": [
-                {"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"], "modelLimit": 3},
                 {"addRule": "scout", "modelLimit": "all"},
+                {"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"], "modelLimit": 3},
                 {"addRule": "spotting_laser"},
                 {"addModel": "recon_drone"},
                 {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
@@ -626,32 +626,6 @@
         }
     },
     "models": {
-        "attached_interceptor_drone": {
-            "name": "Attached Interceptor Drone",
-            "movement": 8,
-            "courage": 5,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "rules": ["fly", "attached"],
-            "weapons": [{"id": "ion_rifle", "count": 2}],
-            "min": 1,
-            "max": 1
-        },
-        "attached_gunner_drone": {
-            "name": "Attached Gunner Drone",
-            "movement": 8,
-            "courage": 5,
-            "shoot": 5,
-            "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "rules": ["fly", "attached"],
-            "weapons": ["pulse_carbine"],
-            "min": 0,
-            "max": 1
-        },
         "insect_warrior_leader": {
             "name": "Insect Warrior Leader",
             "movement": 8,
@@ -718,14 +692,40 @@
             "min": 1,
             "max": 1
         },
+        "attached_interceptor_drone": {
+            "name": "Attached Interceptor Drone",
+            "movement": 8,
+            "courage": "-",
+            "shoot": 5,
+            "fight": 4,
+            "defense": "-",
+            "reflexes": "-",
+            "rules": ["fly", "attached"],
+            "weapons": [{"id": "ion_rifle", "count": 2}],
+            "min": 1,
+            "max": 1
+        },
+        "attached_gunner_drone": {
+            "name": "Attached Gunner Drone",
+            "movement": 8,
+            "courage": "-",
+            "shoot": 5,
+            "fight": 4,
+            "defense": "-",
+            "reflexes": "-",
+            "rules": ["fly", "attached"],
+            "weapons": ["pulse_carbine"],
+            "min": 0,
+            "max": 1
+        },
         "recon_drone": {
             "name": "Recon Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "weapons": ["pulse_gatling"],
             "rules": ["fly", "recon_drone"],
             "min": 1,
@@ -734,25 +734,36 @@
         "shield_missile_drone": {
             "name": "Shield Missile Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["fly", {"id": "resilient", "x": 4}],
             "weapons": ["missile_pod"],
             "min": 1,
             "max": 1
         },
-        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor"], "min": 0, "max": 1},
+        "inhibitor_drone": {
+            "name": "Inhibitor Drone",
+            "movement": 8,
+            "courage": "-",
+            "shoot": 5,
+            "fight": 4,
+            "defense": "-",
+            "reflexes": "-",
+            "rules": ["fly", "inhibitor"],
+            "min": 0,
+            "max": 1
+        },
         "spotter_drone": {
             "name": "Spotter Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["fly", "spotting_laser"],
             "min": 1,
             "max": 1
@@ -760,25 +771,34 @@
         "missile_drone": {
             "name": "Missile Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["fly"],
             "weapons": ["missile_pod"],
             "min": 1,
             "max": 1
         },
-        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth"], "min": 1, "max": 1},
+        "stealth_drone": {"name": "Stealth Drone",
+            "movement": 8,
+            "courage": "-",
+            "shoot": 5,
+            "fight": 4,
+            "defense": "-",
+            "reflexes": "-", "rules": ["fly", "stealth_field"],
+            "min": 1,
+            "max": 1
+        },
         "gunner_drone": {
             "name": "Gunner Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["fly"],
             "weapons": ["pulse_carbine"],
             "min": 1,
@@ -787,24 +807,35 @@
         "shield_drone": {
             "name": "Shield Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
-            "rules": ["fly", {"id": "resilient", "x": 4}],
+            "defense": "-",
+            "reflexes": "-",
+            "rules": ["fly", "pulse_shield"],
             "min": 1,
             "max": 1
         },
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection"], "min": 1, "max": 1},
+        "guardian_drone": {
+            "name": "Guardian Drone",
+            "movement": 8,
+            "courage": "-",
+            "shoot": 5,
+            "fight": 4,
+            "defense": "-",
+            "reflexes": "-",
+            "rules": ["fly", "protection"],
+            "min": 1,
+            "max": 1
+        },
         "accelerator_drone": {
             "name": "Accelerator Drone",
             "movement": 8,
-            "courage": 4,
+            "courage": "-",
             "shoot": 5,
             "fight": 4,
-            "defense": 7,
-            "reflexes": 5,
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["fly", "accelerator"],
             "min": 1,
             "max": 1
@@ -837,8 +868,8 @@
         "ion_rifle": {
             "name": "Ion Rifle",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
-                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 4, "rules": ["sniper"]},
+                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["sniper", {"id": "overheat"}]}
             ]
         },
         "ion_cannon": {
@@ -859,7 +890,7 @@
             "name": "Ion Destroyer",
             "profiles": [
                 {"name": "Standard", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
-                {"name": "Overcharge", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "overheat"}]}
+                {"name": "Overcharge", "attacks": 4, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "overheat"}]}
             ]
         },
         "hound_fangs": {"name": "Hound Fangs", "attacks": 2, "short": "Melee", "ap": 1, "rules": ["rending"]},
@@ -868,7 +899,7 @@
         "vulcan_carbine": {"name": "Vulcan Carbine", "attacks": 1, "short:": 9, "medium": 18, "ap": 1},
         "vulcan_shotgun": {"name": "Vulcan Shotgun", "attacks": 1, "short": 6, "medium": 12, "long": 15, "ap": 3},
         "hand_railgun": {"name": "Hand railgun", "attacks": 1, "short": 20, "medium": 25, "long": 30, "ap": 4},
-        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
+        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["sniper"]},
         "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
         "smart_missiles": {"name": "Smart missiles", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
         "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "rending"]},
@@ -885,6 +916,8 @@
         "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
     },
     "rules": {
+        "stealth_field": {"name": "Stealth Field", "description": "For each model with this rule, enemy units targeting this unit suffer -1 Accuracy.", "points": 20},
+        "pulse_shield": {"name": "Pulse Shield", "description": "Once per round, roll a die for each hit this unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.", "points": 20},
         "commander_tactics": {
             "name": "Commander Tactics",
             "inputs": ["x"],
@@ -910,13 +943,13 @@
             "points": 5
         },
         "homing_beacon": {"name": "Homing Beacon", "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model.", "points": 5},
-        "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with any Charge moves targetting friendly units within 3\".", "points": 5},
+        "inhibitor": {"name": "Inhibitor", "description": "Enemy units suffer -2\" of movement with any Charge actions targeting friendly units within 3\".", "points": 5},
         "tactical_drone": {
             "name": "Tactical Drone",
             "description": "When this unit is activated, choose one ability: One enemy unit within 12\" may not benefit from cover this round. Choose a unit within 2\" and roll one die for each drone. On any results of 5 or less the unit may heal 1 wound. No more than 3 wounds may be healed in one activation.",
             "points": 5
         },
-        "recon_drone": {"name": "Recon Scope", "description": "Friendly units within 3\" may ignores cover bonuses.", "points": 10},
+        "recon_drone": {"name": "Recon Scope", "description": "Models in this unit may ignores cover bonuses.", "points": 10},
         "accelerator": {"name": "Accelerator", "description": "This model and models in its unit add +6\" maximum Range to all weapons.", "points": 5},
         "threat_detector_suit": {"name": "Threat Detector", "description_short": "+1 Initiative", "description": "This model gets +1 Initiative.", "points": 5},
         "hover_drone": {"name": "Hover Drone", "hidden": "true", "description": "This model gets +2\" Move and Fly.", "description_short": "+4\" Move, Fly", "points": 5},
@@ -927,14 +960,14 @@
             "name": "Covering Fire",
             "phase": "activation",
             "flavor": "Members of the Federation are tirelessly drilled on covering one another in the event that one unit is overrun.",
-            "description": "Use when a friendly _Infantry_ unit is Charged. One friendly _Infantry_ unit within 6\" may attempt take a Initiative test and attempt to react to the charging unit.",
+            "description": "Use when a friendly _Infantry_ or _Heavy Infantry_ unit is Charged. One friendly _Infantry_ or _Heavy Infantry_ unit within 6\" may take an Initiative test and attempt to react to the charging unit.",
             "cost": 1
         },
         "preservation_protocols": {
             "name": "Preservation Protocols",
             "phase": "activation",
             "flavor": "Federation drones are programmed to protect their creators at all costs.",
-            "description": "Use after an _Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
+            "description": "Use after an _Infantry_ or _Heavy Infantry_ unit has been hit by a ranged weapon. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. If there is a friendly _Drone_ unit within 6\" of it, and the _Drone_ unit is closer to the attacking model than the target unit. On an 8 or less a hit is transferred to the _Drone_ unit instead of the original target.",
             "cost": 2
         },
         "spotting_laser_uplink": {

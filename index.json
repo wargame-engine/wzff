@@ -166,14 +166,15 @@
         "strike": {"name": "Strike"},
         "heavy": {"name": "Heavy"},
         "transport": {"name": "Transport"},
-        "super_heavy": {"name": "Super Heavy"}
+        "super_heavy": {"name": "Super Heavy"},
+        "fortification": {"name": "Fortification"}
     },
     "organizations": {
         "skirmish": {
             "name": "Battle (Core)",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 5}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 2}, "transport": {"max": 5}}
         },
         "strike": {
             "name": "Strike (Core)",
@@ -199,6 +200,7 @@
             "description": "A small supporting force.",
             "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 1}, "strike": {"max": 1}, "heavy": {"max": 1}, "transport": {"max": 2}}
         },
+        "fortification": {"name": "Fortification (Core)", "cost": 0, "description": "A supporting super-heavy unit.", "categories": {"fortification": {"min": 1, "max": 4}}},
         "super_heavy_support": {"name": "Super Heavy Support (Core)", "cost": 1, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
         "super_heavy": {"name": "Super Heavy (Core)", "cost": 2, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
@@ -696,6 +698,65 @@
         "hover_mode": {
             "name": "Hover Mode",
             "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
+        }
+    },
+    "units": {
+        "defense_line": {
+            "name": "Defense Line",
+            "description": "A prepared defense wall.",
+            "min": 1,
+            "max": 1,
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Large Wall (8\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "soft_cover"],
+                    "min": 1,
+                    "max": 4
+                },
+                {
+                    "name": "Twin Small Wall (4\" Sections)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [],
+                    "rules": ["terrain", "soft_cover"],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "improvised_barricade": {
+            "name": "Improvised Barricade (8\"x1\" Sections)",
+            "description": "A hastily constructed barricade.",
+            "min": 1,
+            "max": 1,
+            "category": "fortification",
+            "keywords": ["Fortification"],
+            "models": [
+                {
+                    "name": "Improvised Barricade (8\"x1\" Section)",
+                    "courage": "-",
+                    "movement": "-",
+                    "shoot": "-",
+                    "fight": "-",
+                    "defense": "-",
+                    "reflexes": "-",
+                    "rules": ["terrain", "clearable", {"id": "impassable", "x": "Artillery, Vehicle"}, "soft_cover"],
+                    "min": 1,
+                    "max": 2
+                }
+            ]
         }
     }
 }

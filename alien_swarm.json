@@ -4,6 +4,7 @@
     "color": "#3d3354",
     "alliance": "alien_swarm",
     "version": 0.1,
+    "description": "A swarm of aliens from far-away systems controlled by an ancient hive mind. They feast on other species, absorbing their biomass to turn into more of their kind. They have a combination of deadly creatures and swarms of agile aliens to defeat their foes.",
     "author": "Solpine#1305",
     "units": {
         "hive_lord": {
@@ -72,9 +73,7 @@
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
-                    "options": [
-                        {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
-                    ],
+                    "options": [{"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -346,13 +345,13 @@
                 }
             ]
         },
-        "psychic_beast": {
-            "name": "Psychic Beast",
+        "mind_beast": {
+            "name": "Mind Beast",
             "description": "",
             "category": "specialist",
             "rules": ["damage_table_monster"],
             "models": [
-                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 6, "shoot": 5, "defense": 11, "movement": 7, "weapons": [{"id": "large_razor_talons", "count": 3}], "min": 1, "max": 1}
+                {"name": "Mind Beast", "courage": 7, "reflexes": 6, "fight": 6, "shoot": 5, "defense": 11, "movement": 7, "weapons": [{"id": "large_razor_talons", "count": 3}], "min": 1, "max": 1}
             ]
         },
         "flame_beasts": {
@@ -374,11 +373,64 @@
                     "max": 3
                 }
             ]
+        },
+        "hive_lord_guard": {
+            "name": "Hive Lord Guard",
+            "description": "The heavily armored guardians of a Hive Lord",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Hive Lord Guard",
+                    "courage": 5,
+                    "reflexes": 4,
+                    "fight": 6,
+                    "shoot": 5,
+                    "defense": 9,
+                    "movement": 7,
+                    "weapons": [{"id": "medium_razor_talons", "count": 1}, {"id": "medium_piercing_claws", "count": 2}],
+                    "options": [{"replaceWeapon": "medium_razor_talons", "withWeapon": ["crushing_claws"]}],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "venom_beasts": {
+            "name": "Venom Beasts",
+            "description": "",
+            "category": "specialist",
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [{"addRule": "spore_cloud"}],
+            "models": [{"name": "Venom Beast", "courage": 4, "reflexes": 5, "fight": 5, "shoot": 5, "defense": 6, "movement": 5, "weapons": [{"id": "venom_lashes", "count": 2}], "min": 3, "max": 6}]
+        },
+        "psychic_beasts": {
+            "name": "Psychic Beasts",
+            "description": "",
+            "category": "specialist",
+            "keywords": ["Hive Mind"],
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Psychic Beast Leader",
+                    "courage": 7,
+                    "reflexes": 6,
+                    "fight": 5,
+                    "shoot": 0,
+                    "defense": 8,
+                    "movement": 5,
+                    "weapons": ["ccw"],
+                    "rules": [{"id": "psychic", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 8, "movement": 5, "weapons": ["ccw"], "min": 2, "max": 5}
+            ]
         }
     },
     "models": {},
     "weapons": {
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
+        "venom_lashes": {"name": "Venom Lashes", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
         "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
         "grabbing_tongue": {"name": "Grabbing Tongue", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
@@ -387,8 +439,11 @@
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "medium_piercing_claws": {"name": "Medium Piercing Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
+        "medium_razor_talons": {"name": "Medium Razor Talons", "attacks": 1, "short": "Melee", "ap": 2},
+        "crushing_claws": {"name": "Crushing Claws", "attacks": 1, "short": "Melee", "ap": 8},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
@@ -419,30 +474,45 @@
             "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
             "description_short": "Fly, +4\" Move",
             "points": [4, {"multiply": "constants.movementCost"}, {"add": 2}]
+        },
+        "spore_cloud": {"name": "Spore Cloud", "description": "Once per round, models suffer -1 Accuracy when shooting at a friendly unit within 6\" of this model. This may be used one additional time per round for each model with this rule.", "points": 5}
+    },
+    "powers": {
+        "direct_control": {"name": "Direct Control", "description": "Target friendly unit within 24\" may activate, and this model's Courage value until the end of the activation phase.", "charge": 7},
+        "vitality": {
+            "name": "Vitality",
+            "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
+            "charge": 7
+        },
+        "horror": {"name": "Horror", "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.", "charge": 6},
+        "onslaught": {
+            "name": "Onslaught",
+            "description": "Target friendly unit within 18\" gains one of the following effects until the end of the phase: \n * The unit may make a free shoot action after it moves \n * The unit may make a free Charge action after it moves",
+            "charge": 7
         }
     },
-    "powers": {},
-    "strategies": [
-        {
+    "strategies": {
+        "0": {
             "name": "Flesh Hunger",
             "phase": "activation",
             "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
             "flavor": "With a burst of speed, hive units attack like nothing before.",
             "cost": 1
         },
-        {
+        "1": {
             "name": "Swarm Reflexes",
             "phase": "activation",
             "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Sometimes manual override by the swarm host is necessary to react efficiently.",
             "cost": 1
         },
-        {
+        "2": {
             "name": "Hive Mind",
             "phase": "activation",
             "description": "Use at the beginning of the activation phase on a _Hive Mind_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
             "cost": 2
         }
-    ]
+    },
+    "relics": {}
 }
