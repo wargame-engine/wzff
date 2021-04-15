@@ -709,8 +709,8 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "warden_tactics": {
-            "name": "Warden Tactics",
-            "description": "When this unit is activated, choose one friendly _Infantry_ unit within 6\". That unit may re-roll failed Initiative tests of 9+ until the end of the round.",
+            "name": "Warden",
+            "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +2 Initiative for a skill test.",
             "points": 5
         },
         "reanimation_beam": {

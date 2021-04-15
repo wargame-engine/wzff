@@ -739,12 +739,12 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
+            "rules": ["fly", {"id": "resilient", "x": 4}],
             "weapons": ["missile_pod"],
             "min": 1,
             "max": 1
         },
-        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor", "guardian"], "min": 0, "max": 1},
+        "inhibitor_drone": {"name": "Inhibitor Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "inhibitor"], "min": 0, "max": 1},
         "spotter_drone": {
             "name": "Spotter Drone",
             "movement": 8,
@@ -753,7 +753,7 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", "spotting_laser", "guardian"],
+            "rules": ["fly", "spotting_laser"],
             "min": 1,
             "max": 1
         },
@@ -765,12 +765,12 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", "guardian"],
+            "rules": ["fly"],
             "weapons": ["missile_pod"],
             "min": 1,
             "max": 1
         },
-        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth", "guardian"], "min": 1, "max": 1},
+        "stealth_drone": {"name": "Stealth Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "stealth"], "min": 1, "max": 1},
         "gunner_drone": {
             "name": "Gunner Drone",
             "movement": 8,
@@ -779,7 +779,7 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", "guardian"],
+            "rules": ["fly"],
             "weapons": ["pulse_carbine"],
             "min": 1,
             "max": 1
@@ -792,11 +792,11 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", {"id": "resilient", "x": 4}, "guardian"],
+            "rules": ["fly", {"id": "resilient", "x": 4}],
             "min": 1,
             "max": 1
         },
-        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection", "guardian"], "min": 1, "max": 1},
+        "guardian_drone": {"name": "Guardian Drone", "movement": 8, "courage": 4, "shoot": 5, "fight": 4, "defense": 7, "reflexes": 5, "rules": ["fly", "protection"], "min": 1, "max": 1},
         "accelerator_drone": {
             "name": "Accelerator Drone",
             "movement": 8,
@@ -805,7 +805,7 @@
             "fight": 4,
             "defense": 7,
             "reflexes": 5,
-            "rules": ["fly", "accelerator", "guardian"],
+            "rules": ["fly", "accelerator"],
             "min": 1,
             "max": 1
         }
@@ -871,7 +871,7 @@
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 4},
         "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
         "smart_missiles": {"name": "Smart missiles", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
-        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
+        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "rending"]},
         "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "twin_pulse_carbine": {"name": "Twin Pulse Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]},

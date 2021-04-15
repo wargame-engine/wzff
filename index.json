@@ -289,7 +289,7 @@
         "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36},
         "laser_machinegun": {"name": "Laser Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
         "strike_missiles": {"name": "Strike Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
-        "rocket_pod": {"name": "Rocket Pod", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
+        "rocket_pod": {"name": "Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36},
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
