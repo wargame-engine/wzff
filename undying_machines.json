@@ -648,8 +648,8 @@
         "doom_cannon": {
             "name": "Doom Cannon",
             "profiles": [
-                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": []},
-                {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]}
+                {"name": "Focused", "attacks": 1, "short": 24, "medium": 48, "ap": 8},
+                {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 6}]}
             ]
         },
         "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9, "rules": [{"id": "blast", "x": 3}]},
