@@ -240,7 +240,7 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 10,
+                    "defense": 9,
                     "reflexes": 7,
                     "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
