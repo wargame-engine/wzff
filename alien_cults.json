@@ -100,6 +100,53 @@
                 }
             ]
         },
+        "acolytes": {
+            "name": "Acolytes",
+            "description": "A corrupted defense force squad turned to the cult.",
+            "category": "core",
+            "options": [
+                {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}], "withWeapon": [
+                    {"id": "rock_cutter", "count": 2},
+                    {"id": "rock_drill", "count": 2},
+                    {"id": "rock_saw", "count": 2},
+                    {"id": "demolition_charges", "count": 1}
+                ]},
+                {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
+                {"addRule": "banner", "modelLimit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Acolyte Leader",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_ccw", "count": 2}, "pistol"], "withWeapon": [
+                            [{"id": "bone_sword", "count": 2}, "pistol"],
+                            [{"id": "bone_sword", "count": 2}, {"id": "lashing_whip", "count": 1}]
+                        ]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Acolyte",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
         "defense_force_squad": {
             "name": "Cult Defense Force Squad",
             "description": "A corrupted defense force squad turned to the cult.",
@@ -328,8 +375,12 @@
             ]
         }
     },
-    "models": {},
     "weapons": {
+        "demolition_charges": {"name": "Demolition Charges", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "lashing_whip": {"name": "Lashing Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "rock_cutter": {"name": "Rock Cutter", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
+        "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
+        "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 6},
         "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
         "seismic_cannon": {"name": "Seismic Cannon", "profiles": [
             {"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24},
@@ -353,7 +404,7 @@
         "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
         "acid_spitter": {"name": "Acid Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
-        "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
+        "bone_sword": {"name": "Bone Sword", "attacks": 1, "short": "Melee", "ap": 2},
         "spiked_strangler": {"name": "Spiked Strangler", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
         "acid_cannon": {"name": "Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
         "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
