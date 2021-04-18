@@ -96,7 +96,7 @@
                 {
                     "name": "Mechanic",
                     "movement": 5,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
