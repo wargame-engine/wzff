@@ -5,6 +5,30 @@
     "version": 0.1,
     "author": "guitarninja#5707",
     "units": {
+        "hidden_units": {
+            "cult_war_leader": {
+                "name": "Cult War Leader",
+                "description": "A mutated being carrying a cult icon.",
+                "min": 1,
+                "max": 1,
+                "category": "command",
+                "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
+                "models": [
+                    {
+                        "name": "Cult War Leader",
+                        "movement": 6,
+                        "courage": 6,
+                        "shoot": 6,
+                        "fight": 7,
+                        "defense": 7,
+                        "reflexes": 6,
+                        "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
+                        "min": 1,
+                        "max": 1
+                    }
+                ]
+            }
+        },
         "snatcher_lord": {
             "name": "Soul Stealer Lord",
             "description": "A massive mutant with psychic powers",
@@ -27,6 +51,65 @@
                     "options": [
                         {"replaceRule": {"id": "swarm_melee_tactics", "x": 1}, "withRule": {"id": "swarm_melee_tactics", "x": 2}}
                     ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic": {
+            "name": "Psychic",
+            "description": "An uplifted human with psychic powers.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "models": [
+                {
+                    "name": "Psychic",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
+                    "weapons": ["pistol", "blasting_charges", {"id": "energy_staff", "count": 3}],
+                    "options": [
+                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Familiar",
+                    "movement": 6,
+                    "courage": "-",
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": "-",
+                    "reflexes": "-",
+                    "weapons": [{"id": "piercing_claws", "count": 2}],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "acolyte_icon_bearer": {
+            "name": "Acolyte Icon Bearer",
+            "description": "A mutated being carrying a cult icon.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "cult_icon", {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Acolyte Icon Bearer",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
                     "min": 1,
                     "max": 1
                 }
@@ -417,6 +500,7 @@
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {
+        "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
         "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
         "swarm_melee_tactics": {
             "name": "Swarm Melee Tactics",

@@ -474,7 +474,7 @@
     "rules": {
         "holy_saint": {
             "name": "Holy Saint",
-            "description": "Once per round, a friendly _Infantry_ unit within 6\" +1 Save when targeted by a Shooting or Fighting attack.",
+            "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.",
             "points": 10
         },
         "sisters_tactics": {
@@ -485,7 +485,7 @@
         },
         "preacher": {
             "name": "Preacher",
-            "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 Strength when performing a Fight action.",
+            "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Strength when performing a Fight action.",
             "points": 10
         },
         "lucky_angel": {
