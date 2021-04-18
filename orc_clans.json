@@ -26,9 +26,9 @@
             "min": 1,
             "max": 1,
             "category": "super_heavy",
-            "rules": [{}],
+            "rules": [{}, "damage_table_titan"],
             "models": [
-                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 7, "weapons": [], "min": 1, "max": 1}
+                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 8, "weapons": [""], "min": 1, "max": 1}
             ]
         }
     },
