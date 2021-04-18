@@ -20,15 +20,15 @@
                 {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
             ]
         },
-        "colossal_fungalbeast": {
-            "name": "Colossal Fungalbeast",
+        "colossal_attack_beast": {
+            "name": "Colossal Attack Beast",
             "description": "An enormous four legged beast of war.",
             "min": 1,
             "max": 1,
             "category": "super_heavy",
             "rules": [{}],
             "models": [
-                {"name": "Colossal Fungalbeast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 7, "weapons": [], "min": 1, "max": 1}
+                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 7, "weapons": [], "min": 1, "max": 1}
             ]
         }
     },
