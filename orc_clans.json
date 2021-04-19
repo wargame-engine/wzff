@@ -623,7 +623,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "relentless", "damage_table_vehicle"],
+            "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Boss Trike",
