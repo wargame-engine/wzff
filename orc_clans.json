@@ -19,6 +19,18 @@
             "models": [
                 {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
             ]
+        },
+        "colossal_attack_beast": {
+            "name": "Colossal Attack Beast",
+            "description": "An enormous four legged beast of war.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "options": [],
+            "rules": [{"id": "transport", "x": 20}, {"id": "open_topped", "x": 20}, "damage_table_titan", "vulnerable_rear", "walker"],
+            "models": [
+                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 8, "weapons": [""], "min": 1, "max": 1}
+            ]
         }
     },
     "units": {
@@ -613,7 +625,7 @@
             "max": 1,
             "keywords": ["Biker"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "relentless", "damage_table_vehicle"],
+            "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Boss Trike",
@@ -635,6 +647,7 @@
             "description": "A miniature helicopter for quick and deadly air attacks.",
             "min": 1,
             "max": 1,
+            "keywords": ["Vehicle"],
             "category": "heavy",
             "rules": ["fly", {"id": "wounds", "x": 2}],
             "models": [
@@ -724,6 +737,7 @@
             "description": "A tank build out of various parts taken from other wrecked vehicles.",
             "min": 1,
             "category": "heavy",
+            "keywords": ["Vehicle"],
             "max": 1,
             "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
@@ -809,8 +823,8 @@
         "goblin_tank": {
             "name": "Goblin Tanks",
             "description": "A small tank squadron built and crewed by goblins.",
-            "category": "heavy",
-            "subfactions": ["none", "specialist"],
+            "category": "specialist",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 3,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -834,6 +848,7 @@
             "name": "Goblin Mega Tank",
             "description": "A huge tank built and crewed by goblins.",
             "category": "heavy",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "subfactions": ["none", "goblin_army"],
@@ -867,6 +882,7 @@
         "goblin_walker": {
             "name": "Goblin Walkers",
             "description": "A small walker group built and crewed by goblins.",
+            "keywords": ["Vehicle"],
             "category": "specialist",
             "subfactions": ["none", "goblin_army"],
             "min": 1,
@@ -892,6 +908,7 @@
             "name": "Orc Walker",
             "description": "A larger and more deadly walker built and piloted by orcs.",
             "category": "heavy",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": ["fear", "vulnerable_rear", "damage_table_vehicle"],
@@ -920,6 +937,7 @@
             "name": "Attack Buggy",
             "description": "A multi-purpose speedy buggy for quick harassment.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -943,6 +961,7 @@
             "name": "Dragster Buggy",
             "description": "A teleporting speedy buggy that packs a punch.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, {"id": "teleport", "x": 5}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -966,6 +985,7 @@
             "name": "Beast Buggy",
             "description": "A buggy carrying a payload of beasts for launching.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -989,6 +1009,7 @@
             "name": "Blaster Buggy",
             "description": "A buggy equipped with longer-range fire support weapons.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -1012,6 +1033,7 @@
             "name": "Snazz Buggy",
             "description": "A buggy equipped with a large fancy gun for taking out many targets.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "strider", "vulnerable_side_rear", "damage_table_vehicle"],
@@ -1034,6 +1056,7 @@
             "name": "Jet Buggy",
             "description": "A fast buggy equipped for hunting tanks.",
             "category": "strike",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -1056,6 +1079,7 @@
         "goblin_artillery": {
             "name": "Goblin Artillery",
             "description": "A battery of small artillery guns built by goblins.",
+            "keywords": ["Vehicle"],
             "category": "specialist",
             "subfactions": ["none", "goblin_army"],
             "min": 1,
@@ -1180,6 +1204,7 @@
             "name": "Orc Heavy Walker",
             "description": "A large walker with multiple heavy upgrades.",
             "category": "heavy",
+            "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "rules": [{"id": "transport", "x": 6}, "vulnerable_rear", "damage_table_vehicle"],
