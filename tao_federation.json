@@ -845,7 +845,7 @@
         "ion_bombs": {"name": "Ion Bombs", "attacks": 2, "short": 3, "ap": 4, "rules": ["bomb", {"id": "blast", "x": 3}]},
         "seeker_missiles": {"name": "Homing Missile", "attacks": 1, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect", "homing", {"id": "ammo", "x": 1}]},
         "flak_launcher": {"name": "Flak Launcher", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": [{"id": "indirect"}, {"id": "blast", "x": 3}, "assault"]},
-        "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 8, "short": 18, "medium": 36, "ap": 3},
+        "heavy_pulse_gatling": {"name": "Heavy Pulse Gatling", "attacks": 10, "short": 18, "medium": 36, "ap": 3},
         "pulse_gatling": {"name": "Pulse Gatling", "attacks": 3, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "ion_gatling": {
             "name": "Ion Gatling",
@@ -875,8 +875,8 @@
         "ion_cannon": {
             "name": "Ion Cannon",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
+                {"name": "Standard", "attacks": 1, "short": 30, "medium": 60, "ap": 5, "rules": [{"id": "blast", "x": 6}]},
+                {"name": "Overcharge", "attacks": 1, "short": 30, "medium": 60, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 6}]}
             ]
         },
         "quad_ion_rifle": {
@@ -917,7 +917,7 @@
     },
     "rules": {
         "stealth_field": {"name": "Stealth Field", "description": "For each model with this rule, enemy units targeting this unit suffer -1 Accuracy.", "points": 20},
-        "pulse_shield": {"name": "Pulse Shield", "description": "Once per round, roll a die for each hit this unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.", "points": 20},
+        "pulse_shield": {"name": "Pulse Shield", "description": "Once per round, roll a die for each hit this unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.", "points": 5},
         "commander_tactics": {
             "name": "Commander Tactics",
             "inputs": ["x"],
