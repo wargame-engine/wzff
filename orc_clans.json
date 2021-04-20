@@ -1591,7 +1591,7 @@
             "subfactions": ["speed_focus"],
             "phase": "activation",
             "name": "Extra Juice",
-            "description": "Use before a unit makes any move action. It gains +3\" movement speed for that action.",
+            "description": "Use when a unit makes a move action it gains +3\" move for that action",
             "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
             "cost": 1
         }
