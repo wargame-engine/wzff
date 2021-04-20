@@ -7,7 +7,7 @@
     "subfactions": {
         "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
         "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
-        "speed_focus": {"name": "Speed Focus", "id": "speed_focus", "background": "an Orc Clan with a need for speed."}
+        "speed_focus": {"name": "Speed Focus", "id": "speed_focus", "background": "An Orc Clan with a need for speed."}
     },
     "hidden_units": {
         "grand_warlord": {
