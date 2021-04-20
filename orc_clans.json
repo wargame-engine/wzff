@@ -6,7 +6,8 @@
     "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
     "subfactions": {
         "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
-        "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."}
+        "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
+        "speed_focus": {"name": "Speed Focus", "id": "speed_focus", "background": "An Orc Clan with a need for speed."}
     },
     "hidden_units": {
         "grand_warlord": {
@@ -26,10 +27,11 @@
             "min": 1,
             "max": 1,
             "category": "super_heavy",
-            "options": [],
+            "options": [{"addWeapon": ["twin_heavy_machinegun"], "limit": 2},
+                {"replaceWeapon": "cannon", "withWeapon": ["super_cannon"], "limit": 1}],
             "rules": [{"id": "transport", "x": 20}, {"id": "open_topped", "x": 20}, "damage_table_titan", "vulnerable_rear", "walker"],
             "models": [
-                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 8, "weapons": [""], "min": 1, "max": 1}
+                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 8, "weapons": ["cannon", {"id": "goring_tusks", "count": 6}, {"id": "heavy_stomp", "count": 2} ], "min": 1, "max": 1}
             ]
         }
     },
@@ -1259,6 +1261,21 @@
                     "min": 1,
                     "max": 1
                 }
+                
+            ]
+        },
+        "colossal_attack_beast": {
+            "name": "Colossal Attack Beast",
+            "description": "An enormous four legged beast of war.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "keywords": ["Super Heavy Vehicle"],
+            "rules": [{"id": "transport", "x": 20}, {"id": "open_topped", "x": 20}, "damage_table_titan", "vulnerable_rear", "walker", {"id": "impact", "x": 6}], 
+            "models": [
+                {"name": "Colossal Attack Beast", "courage": 5, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 5, "movement": 8, "weapons": ["cannon", {"id": "goring_tusks", "count": 5}, {"id": "heavy_stomp", "count": 2} ], 
+                "options": [{"addWeapon": ["twin_heavy_machinegun"], "limit": 2},
+                    {"addWeapon": ["cannon", "super_cannon"], "limit": 1}], "min": 1, "max": 1}
             ]
         }
     },
@@ -1436,7 +1453,8 @@
         "bomb_beast": {"name": "Bomb Beast", "attacks": 1, "ap": 6, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
         "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
-        "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]}
+        "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
+        "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee" }
     },
     "rules": {
         "orc_tactics": {
@@ -1552,6 +1570,30 @@
             "description": "Use before shooting with an _Infantry_ unit. It gets +1 to hit.",
             "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
             "cost": 2
+        },
+        "quick_aim": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Quick Aim",
+            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule",
+            "flavor": "These orcs are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
+            "cost": 1  
+        },
+        "run_them_down": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Run Them Down",
+            "description": "Use when a Vehicle or Super Heavy Vehicle makes a charge action. The Impact Rule gains +1 AP for the charge.",
+            "flavor": "Those clans with a focus on speed enjoy putting a little extra oomph on their vehicles, making them hit just a little harder when they ram into something.",
+            "cost": 1
+        },
+        "extra_juice": {
+            "subfactions": ["speed_focus"],
+            "phase": "activation",
+            "name": "Extra Juice",
+            "description": "Use when a unit makes a move action it gains +3\" move for that action",
+            "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
+            "cost": 1
         }
     }
 }
