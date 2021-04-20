@@ -544,11 +544,33 @@
                 }
             ]
         },
+        "pestilence_hauler": {
+            "name": "Pestilence Hauler",
+            "description": "A lightly armored living strike vehicle.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "subfactions": ["pestilence_focus"],
+            "keywords": ["Vehicle"],
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Pestilence Hauler",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": [{"id": "pestilence_spit", "mount": ["Front"]}, {"id": "hauler_jaws", "count": 3}, {"id": "heavy_fusion_rifle", "mount": ["Front"]}, {"id": "missile_launcher", "mount": ["Front"]}],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
         "pestilence_tank": {
             "name": "Pestilence Tank",
             "description": "An armored tank helmed by Pestilence Marines.",
             "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "subfactions": ["pestilence_focus"],
             "keywords": ["Vehicle"],
             "min": 1,
             "category": "heavy",
@@ -1427,6 +1449,8 @@
                 {"name": "Sweep", "attacks": 2, "ap": 1, "short": "Melee", "rules": ["pestilence"]}
             ]
         },
+        "hauler_jaws": {"name": "Hauler Jaws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["pestilence"]},
+        "pestilence_spit": {"name": "Pestilence Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pestilence", {"id": "blast", "x": 3}]},
         "pestilence_pistol": {"name": "Pestilence Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "pestilence"]},
         "pestilence_great_scythe": {"name": "Pestilence Great-scythe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
         "pestilence_launcher": {"name": "Pestilence Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "pestilence"]},
