@@ -41,10 +41,10 @@
                 {
                     "name": "Annihilator Overlord",
                     "courage": 7,
-                    "movement": 5,
+                    "movement": 8,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 10,
+                    "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "void_sword", "count": 4}],
                     "options": [
