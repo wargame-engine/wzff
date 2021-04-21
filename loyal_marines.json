@@ -428,7 +428,7 @@
         },
         "loyal_marines": {
             "name": "Loyal Marines",
-            "description": "Marines corrupted by the dark gods.",
+            "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
             "options": [
                 {"addWeapon": "fusion_bomb", "modelLimit": 3}
@@ -1072,7 +1072,7 @@
         },
         "devastators": {
             "name": "Devastators",
-            "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
+            "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
             "category": "heavy",
             "models": [
                 {

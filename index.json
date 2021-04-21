@@ -1,6 +1,7 @@
 {
     "name": "Grim Darkness",
     "id": "grim_darkness",
+    "reportUrl": "https://github.com/wargame-engine/wzff/issues",
     "factions": {
         "high_elves": {
             "name": "High Elf Worlds",
