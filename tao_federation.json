@@ -915,7 +915,7 @@
         "neutron_carbine": {"name": "Neutron Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3}
     },
     "rules": {
-        "stealth_field": {"name": "Stealth Field", "description": "For each model with this rule, enemy units targeting this unit suffer -1 Accuracy.", "points": 20},
+        "stealth_field": {"name": "Stealth Field", "description": "Once per round, enemy units targeting this unit suffer -1 Accuracy. This may be used one additional time per round for each model with this rule.", "points": 10},
         "pulse_shield": {"name": "Pulse Shield", "description": "Once per round, roll a die for each hit this unit takes. On a 3 or less that hit is prevented. This may be used one additional time per round for each model with this rule.", "points": 5},
         "commander_tactics": {
             "name": "Commander Tactics",
