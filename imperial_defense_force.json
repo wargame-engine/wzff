@@ -980,10 +980,10 @@
         "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 6}
     },
     "strategies": {
-        "regroup": {
-            "name": "Regroup",
+        "focus_fire": {
+            "name": "Focus Fire",
             "phase": "activation",
-            "description": "Use before activating an _Infantry_ unit within 2\" of another of the same unit. The two units merge and, for the rest of the battle, they are counted as a single unit for all rules purposes. This may not bring a unit above its maximum size.",
+            "description": "Use before Shooting with an _Infantry_ unit with Defense Rifles. Hits rolls of 1 or 2 with Defense Rifles cause 2 hits.",
             "cost": 1
         },
         "high_command": {
