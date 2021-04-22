@@ -382,7 +382,7 @@
                     "min": 2,
                     "max": 2
                 },
-                {"name": "Plasma-cell", "courage": 5, "movement": 5, "shoot": 5, "fight": 5, "defense": 8, "reflexes": 5, "weapons": ["plasma_spike"], "min": 0, "max": 1}
+                {"name": "Plasma-cell", "courage": "-", "movement": 5, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "min": 0, "max": 1}
             ]
         },
         "annihilators": {

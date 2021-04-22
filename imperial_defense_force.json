@@ -287,7 +287,10 @@
             "category": "core",
             "min": 5,
             "max": 10,
-            "options": [{"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "options": [
+                {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"},
+                {"addRule": ["heavy_armor"], "modelLimit": "all"}
+            ],
             "models": [
                 {
                     "name": "Veteran Sergeant",
@@ -321,7 +324,6 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
                     ],
                     "min": 9,
