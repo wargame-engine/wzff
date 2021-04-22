@@ -20,19 +20,6 @@
             "models": [
                 {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
             ]
-        },
-        "colossal_attack_beast": {
-            "name": "Colossal Attack Beast",
-            "description": "An enormous four legged beast of war.",
-            "min": 1,
-            "max": 1,
-            "category": "super_heavy",
-            "options": [{"addWeapon": ["twin_heavy_machinegun"], "limit": 2},
-                {"replaceWeapon": "cannon", "withWeapon": ["super_cannon"], "limit": 1}],
-            "rules": [{"id": "transport", "x": 20}, {"id": "open_topped", "x": 20}, "damage_table_titan", "vulnerable_rear", "walker"],
-            "models": [
-                {"name": "Colossal Attack Beast", "courage": 7, "shoot": 4, "fight": 6, "defense": 13, "reflexes": 6, "movement": 8, "weapons": ["cannon", {"id": "goring_tusks", "count": 6}, {"id": "heavy_stomp", "count": 2} ], "min": 1, "max": 1}
-            ]
         }
     },
     "units": {
@@ -210,7 +197,7 @@
         "goblin_leader": {
             "name": "Goblin Leader",
             "subfactions": ["goblin_army"],
-            "description": "A strange orc with psychic powers.",
+            "description": "A cunning goblin with a motivating presence.",
             "min": 1,
             "max": 1,
             "category": "command",
@@ -345,6 +332,40 @@
                     "max": 30
                 }
             ]
+        },
+        "Attack Beast Swarm": {
+            "name": "Attack Beast Swarm",
+            "description": "A ravening horde of bouncing beasts with gnashing teeth.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "subfaction": ["none", "goblin_army"],
+            "models": [
+                {"name": "Attack Beast", 
+                    "courage": 4, 
+                    "shoot": 4, 
+                    "movement": 6, 
+                    "fight": 5, 
+                    "defense": 4, 
+                    "reflexes": 5, 
+                    "weapons": [{"id": "beasts_bite", "count": 2}], 
+                    "min": 10, 
+                    "max": 20},
+            
+                {
+                    "name": "Attack Beast Herder",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+
         },
         "storm_orcs": {
             "name": "Storm Orcs",
@@ -1439,6 +1460,7 @@
         "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
         "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
         "beast_bite": {"name": "Beast Bite", "attacks": 2, "ap": 1, "short": "Melee"},
+        "beasts_bite": {"name": "Beasts Bite", "attacks": 1, "ap": 1, "short": "Melee"},
         "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
         "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7},
         "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
