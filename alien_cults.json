@@ -167,7 +167,7 @@
         },
         "acolytes": {
             "name": "Acolytes",
-            "description": "A corrupted defense force squad turned to the cult.",
+            "description": "A disfigured squad of humans turned to the cult.",
             "category": "core",
             "options": [
                 {
@@ -207,6 +207,74 @@
                     "weapons": ["pistol", "blasting_charges", {"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
                     "min": 4,
                     "max": 19
+                }
+            ]
+        },
+        "metamorphs": {
+            "name": "Metamorphs",
+            "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
+            "category": "core",
+            "options": [
+                {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
+                {"replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}], "withWeapon": [
+                    {"id": "metamorph_claws", "count": 3},
+                    [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]
+                ]},
+                {"addRule": "banner", "modelLimit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Metamorph Leader",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                    "options": [
+                        {"addWeapon": [{"id": "bone_sword", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Metamorph",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "abominations": {
+            "name": "Abominations",
+            "description": "Mutated with super strength, these aliens will tear enemies to shreds.",
+            "category": "core",
+            "rules": [{"id": "resilient", "x": 3}],
+            "models": [
+                {
+                    "name": "Abomination",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
+                    "options": [
+                        {"replaceModel": "abomination_hypermorph", "modelLimit": "1/5"},
+                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [
+                            {"id": "energy_hammer", "count": 2}
+                        ]}
+                    ],
+                    "min": 5,
+                    "max": 10
                 }
             ]
         },
@@ -370,12 +438,39 @@
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor", "field_radio"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "light_truck": {
+            "name": "Cult Truck",
+            "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Cult Truck",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": ["twin_autocannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "spiked_ram"]},
+                        {"addWeapon": ["light_machinegun"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -402,7 +497,7 @@
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addRule": ["extra_armor", "scout"]},
-                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"addWeapon": ["walker_chainsaw"]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
                     ],
                     "min": 1,
@@ -413,7 +508,7 @@
         "light_gunship": {
             "name": "Cult Light Transport Gunship",
             "description": "A light gunship with sliding doors for troop transport.",
-            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
+            "rules": [{"id": "transport", "x": 12}, "aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -437,6 +532,53 @@
                     "max": 1
                 }
             ]
+        },
+        "mining_truck": {
+            "name": "Cult Mining Vehicle",
+            "description": "A repurposed heavy mining vehicle turned into a cult heavy vehicle.",
+            "rules": [{"id": "heavy_impact", "x": 3}, {"id": "transport", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Cult Mining Vehicle",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": ["heavy_mining_laser"],
+                    "options": [
+                        {"replaceWeapon": "heavy_mining_laser", "withWeapon": ["heavy_seismic_cannon", "incinerator"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
+                        {"addWeapon": ["light_machinegun"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "models": {
+        "abomination_hypermorph": {
+            "name": "Abomination Hypermorph",
+            "courage": 6,
+            "shoot": 5,
+            "fight": 6,
+            "defense": 6,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
+            "options": [
+                {"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [
+                    {"id": "energy_hammer", "count": 3}
+                ]}
+            ],
+            "min": 1,
+            "max": 1
         }
     },
     "weapons": {
@@ -446,10 +588,16 @@
         "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
         "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 6},
         "mining_laser": {"name": "Mining Laser", "attacks": 1, "short": 12, "medium": 24, "ap": 8},
+        "heavy_mining_laser": {"name": "Heavy Mining Laser", "attacks": 1, "short": 18, "medium": 36, "ap": 8},
         "seismic_cannon": {
             "name": "Seismic Cannon",
             "profiles": [{"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24}, {"name": "Short Wave", "attacks": 2, "short": 6, "medium": 12, "ap": 3}]
         },
+        "heavy_seismic_cannon": {
+            "name": "Seismic Cannon",
+            "profiles": [{"name": "Long Wave", "attacks": 4, "short": 24, "medium": 48}, {"name": "Short Wave", "attacks": 2, "short": 12, "medium": 24, "ap": 3}]
+        },
+        "incinerator": {"name": "Incinerator", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
         "web_gun": {"name": "Web Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["web", "assault"]},
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": "Melee", "rules": ["stun"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
@@ -460,7 +608,9 @@
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "metamorph_claws": {"name": "Metamorph Claws", "attacks": 1, "short": "Melee", "ap": 3},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+        "hypermorph_tail": {"name": "Hypermorph Tail", "attacks": 1, "short": "Melee", "ap": 1},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},

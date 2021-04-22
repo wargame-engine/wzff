@@ -343,7 +343,7 @@
             "name": "Redemption Walker",
             "description": "A walker atoning for its sins with righteous fury.",
             "rules": ["walker", "vulnerable_rear", "damage_table_vehicle"],
-            "category": "transport",
+            "category": "heavy",
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
