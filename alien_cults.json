@@ -213,7 +213,7 @@
         "metamorphs": {
             "name": "Metamorphs",
             "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
-            "category": "core",
+            "category": "specialist",
             "options": [
                 {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
                 {"replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}], "withWeapon": [
@@ -255,7 +255,7 @@
         "abominations": {
             "name": "Abominations",
             "description": "Mutated with super strength, these aliens will tear enemies to shreds.",
-            "category": "core",
+            "category": "specialist",
             "rules": [{"id": "resilient", "x": 3}],
             "models": [
                 {
