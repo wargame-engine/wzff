@@ -197,7 +197,7 @@
         "goblin_leader": {
             "name": "Goblin Leader",
             "subfactions": ["goblin_army"],
-            "description": "A strange orc with psychic powers.",
+            "description": "A cunning goblin with a motivating presence.",
             "min": 1,
             "max": 1,
             "category": "command",
