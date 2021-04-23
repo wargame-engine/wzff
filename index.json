@@ -542,7 +542,7 @@
             "profiles": [
                 {"name": "Focus", "attacks": 2, "short": 30, "medium": 60, "ap": 7},
                 {"name": "Lance", "attacks": 1, "short": 30, "medium": 60, "ap": 9, "rules": ["fusion"]},
-                {"name": "Dispersed", "attacks": 6, "short": 30, "medium": 60, "ap": 4}
+                {"name": "Dispersed", "attacks": 3, "short": 30, "medium": 60, "ap": 4}
             ]
         },
         "hell_cannon": {"name": "Hell Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 6}]},
