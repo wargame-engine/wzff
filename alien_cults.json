@@ -4,31 +4,30 @@
     "color": "#606060",
     "version": 0.1,
     "author": "guitarninja#5707",
-    "hidden_units": {
+    "units": {
         "cult_war_leader": {
             "name": "Cult War Leader",
             "description": "A mutated being carrying a cult icon.",
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "cult_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Cult War Leader",
                     "movement": 6,
-                    "courage": 6,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
+                    "weapons": ["needle_pistol", "blasting_charges", {"id": "toxic_claw", "count": 2}, {"id": "bone_sword", "count": 3}],
+                    "options": [{"replaceRule": {"id": "cult_melee_tactics", "x": 1}, "withRule": {"id": "cult_melee_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
             ]
-        }
-    },
-    "units": {
+        },
         "snatcher_lord": {
             "name": "Soul Stealer Lord",
             "description": "A massive mutant with psychic powers",
@@ -105,7 +104,7 @@
             "description": "Barely recognizable mutants of other species",
             "min": 1,
             "max": 1,
-            "category": "core",
+            "category": "specialist",
             "rules": ["agile"],
             "models": [
                 {
@@ -216,10 +215,10 @@
             "category": "specialist",
             "options": [
                 {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
-                {"replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}], "withWeapon": [
-                    {"id": "metamorph_claws", "count": 3},
-                    [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]
-                ]},
+                {
+                    "replaceWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
+                    "withWeapon": [{"id": "metamorph_claws", "count": 3}, [{"id": "lashing_whip", "count": 2}, {"id": "piercing_claws", "count": 2}]]
+                },
                 {"addRule": "banner", "modelLimit": 1}
             ],
             "models": [
@@ -232,9 +231,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 3}, {"id": "razor_talons", "count": 1}],
-                    "options": [
-                        {"addWeapon": [{"id": "bone_sword", "count": 2}]}
-                    ],
+                    "options": [{"addWeapon": [{"id": "bone_sword", "count": 2}]}],
                     "min": 1,
                     "max": 1
                 },
@@ -269,9 +266,7 @@
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
                     "options": [
                         {"replaceModel": "abomination_hypermorph", "modelLimit": "1/5"},
-                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [
-                            {"id": "energy_hammer", "count": 2}
-                        ]}
+                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}
                     ],
                     "min": 5,
                     "max": 10
@@ -468,10 +463,7 @@
                     "defense": 10,
                     "reflexes": 5,
                     "weapons": ["twin_autocannon"],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "spiked_ram"]},
-                        {"addWeapon": ["light_machinegun"]}
-                    ],
+                    "options": [{"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "spiked_ram"]}, {"addWeapon": ["light_machinegun"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -572,18 +564,16 @@
             "reflexes": 5,
             "movement": 6,
             "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
-            "options": [
-                {"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [
-                    {"id": "energy_hammer", "count": 3}
-                ]}
-            ],
+            "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}],
             "min": 1,
             "max": 1
         }
     },
     "weapons": {
+        "needle_pistol": {"name": "Needle Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["poison"]},
         "demolition_charges": {"name": "Demolition Charges", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
         "lashing_whip": {"name": "Lashing Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "toxic_claw": {"name": "Toxic Claw", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
         "rock_cutter": {"name": "Rock Cutter", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
         "rock_drill": {"name": "Rock Drill", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]},
         "rock_saw": {"name": "Rock Saw", "attacks": 1, "short": "Melee", "ap": 6},
@@ -631,10 +621,16 @@
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {
-        "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
-        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
         "swarm_melee_tactics": {
             "name": "Swarm Melee Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
+        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "cult_melee_tactics": {
+            "name": "Cult Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
