@@ -562,7 +562,7 @@
         "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
         "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": []},
         "artillery_cannon": {"name": "Artillery Cannon", "attacks": 1, "ap": 7, "short": 42, "medium": 84, "rules": [{"id": "blast", "x": 6}]},
-        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "artillery_barrage": {"name": "Artillery Barrage", "attacks": 1, "ap": 6, "short": 18, "medium": 36, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "eagle_rockets": {"name": "Eagle Rockets", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "death_missile": {"name": "Death Missile", "attacks": 1, "ap": 3, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 10}]},
         "storm_missiles": {"name": "Storm Missiles", "attacks": 1, "ap": 6, "short": 36, "medium": 72},
@@ -655,33 +655,19 @@
         },
         "field_radio": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Field Orders_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Field Orders_ rule.",
+            "description": "This unit may be targeted by the _Defense Force Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Defense Force Tactics_ rule.",
             "points": 5
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Field Orders_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Field Orders_ rule.",
+            "description": "This unit may be targeted by the _Storm Trooper Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Storm Trooper Tactics_ rule.",
             "points": 5
         },
-        "commander_field_orders": {
-            "name": "Field Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly _Infantry_ units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
-            "points": 15
-        },
-        "field_orders": {
-            "name": "Field Orders",
-            "description": "When this unit is activated, choose a friendly _Infantry_ unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
-            "points": 10
-        },
-        "commander_field_orders_stormtrooper": {
-            "name": "Field Orders (Stormtrooper Commander)",
-            "description": "When this unit is activated, choose two friendly _Stormtrooper Infantry_ units within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
-            "points": 15
-        },
-        "field_orders_stormtrooper": {
-            "name": "Field Orders (Stormtroopers)",
-            "description": "When this unit is activated, choose a friendly _Stormtrooper Infantry_ unit within 6\" to receive one of the following bonuses: \n * Re-roll failed Accuracy tests of 9+ \n * +1 AP for all weapons \n * +3\" Movement \n * Re-roll failed Strength tests of 9+. \n\n\n A unit may only benefit from one Field Order.",
-            "points": 10
+        "stormtrooper_tactics": {
+            "name": "Storm Trooper Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Storm Trooper_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement \n * +1 AP",
+            "points": ["rule.x", {"multiply": 10}]
         },
         "fusion": {
             "name": "Fusion",

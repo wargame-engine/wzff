@@ -50,8 +50,8 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "keywords": ["Stormtrooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "keywords": ["Storm Trooper", "Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -63,6 +63,7 @@
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "heavy_ccw"],
                     "options": [
+                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
@@ -78,7 +79,7 @@
             "name": "Inquisition Stormtroopers",
             "description": "Specially equipped and elite trained stormtrooper infantry.",
             "category": "core",
-            "keywords": ["Stormtrooper", "Infantry"],
+            "keywords": ["Storm Trooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {

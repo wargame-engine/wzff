@@ -14,7 +14,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "commander_field_orders", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -22,7 +22,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -42,8 +42,8 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "commander_field_orders_stormtrooper", {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "keywords": ["Storm Trooper", "Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -55,6 +55,7 @@
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_defense_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
@@ -72,7 +73,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "field_orders", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Platoon Commander",
@@ -80,7 +81,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
                     "options": [
@@ -109,7 +110,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
                     "options": [
@@ -453,10 +454,8 @@
         "stormtroopers": {
             "name": "Stormtroopers",
             "description": "Specially equipped and elite trained stormtrooper infantry.",
-            "min": 5,
-            "max": 10,
             "category": "core",
-            "keywords": ["Stormtrooper", "Infantry"],
+            "keywords": ["Storm Trooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {
@@ -944,6 +943,12 @@
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
     },
     "rules": {
+        "defense_force_tactics": {
+            "name": "Defense Force Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement \n * +1 AP",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
         "no_retreat": {
             "name": "No Retreat",
