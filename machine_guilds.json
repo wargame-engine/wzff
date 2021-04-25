@@ -292,7 +292,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 1,
                     "max": 1
