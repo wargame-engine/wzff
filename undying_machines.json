@@ -154,7 +154,9 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": [{"id": "energy_staff_melee", "count": 2}, "energy_staff_shoot"],
-                    "options": [{"addWeapon": "tesla_field"}, {"addRule": ["phase_field", "flight_cloak", "dark_prism"]}],
+                    "options": [
+                        {"addWeapon": "tesla_field"}, {"addRule": ["phase_field", "flight_cloak", "dark_prism", {"id": "repair", "x": 5, "name": "Repair Orb"}]}
+                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -167,7 +169,7 @@
             "min": 3,
             "max": 6,
             "category": "core",
-            "rules": ["hover", {"id": "wounds", "x": 3}],
+            "rules": ["hover", {"id": "swarm", "x": 3}],
             "keywords": ["Swarm"],
             "models": [{"name": "Machine Swarm", "courage": 5, "movement": 8, "shoot": 3, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["feeding_teeth"], "min": 3, "max": 6}]
         },
@@ -345,7 +347,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [],
+            "rules": ["ambush"],
             "keywords": ["Infantry"],
             "models": [{"name": "Hunter", "courage": 6, "movement": 5, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 6, "weapons": ["gauss_sniper"], "min": 5, "max": 10}],
             "options": [{"addRule": {"id": "ambush", "name": "Dimenional Interception"}, "modelLimit": "all"}]
