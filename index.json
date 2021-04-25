@@ -682,6 +682,12 @@
             "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "points": [15, {"multiply": "rule.x"}]
         },
+        "psychic_prowess": {
+            "name": "Psychic Prowess",
+            "inputs": ["x"],
+            "description": "All Psychic power charge values are increased by X for this model. For example a power requiring a 6 or less now requires 6+X or less.",
+            "points": [5]
+        },
         "hover_mode": {
             "name": "Hover Mode",
             "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."

@@ -681,6 +681,58 @@
                     "max": 1
                 }
             ]
+        },
+        "dimensional_shard": {
+            "name": "Dimensional Shard",
+            "description": "A dimensional being that can take many forms, often regarded as a god of the sky.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "psychic", "x": 1}, "damage_table_monster"],
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Dimensional Shard",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": [{"id": "dimensional_strikes", "count": 5}],
+                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "dimensional_shard_container": {
+            "name": "Dimensional Shard Vault",
+            "description": "A large hovering vault containing a dimensional shard.",
+            "category": "super_heavy",
+            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan", {"id": "psychic", "x": 3}, {"id": "psychic_prowess", "x": 2}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Dimensional Shard Vault",
+                    "courage": 7,
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "weapons": [
+                        {"id": "tesla_field"},
+                        "gravity_pulse"
+                    ],
+                    "options": [
+                        {"addRule": [{"id": "ambush_large", "name": "Orbital Drop"}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {
