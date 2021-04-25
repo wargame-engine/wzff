@@ -318,12 +318,47 @@
                 }
             ]
         },
+        "engineer": {
+            "name": "Engineer",
+            "description": "A fearless next-generation engineer.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "models": [
+                {
+                    "name": "Engineer",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "axe_halberd", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "twin_marine_rifle", "gravity_pistol", "marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma"]},
+                        {"replaceWeapon": {"id": "axe_halberd", "count": 3}, "withWeapon": [
+                            {"id": "energy_mace", "count": 3},
+                            {"id": "energy_axe", "count": 3},
+                            {"id": "energy_sword", "count": 3},
+                            {"id": "energy_fist", "count": 3},
+                            {"id": "energy_hammer", "count": 3},
+                            {"id": "energy_claws", "count": 3}
+                        ]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "prime_engineer": {
             "name": "Prime Engineer",
             "description": "A fearless next-generation engineer.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
+            "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
