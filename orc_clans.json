@@ -1116,7 +1116,7 @@
                     "defense": 8,
                     "reflexes": 5,
                     "movement": 3,
-                    "rules": [{"id": "wounds", "x": 3}],
+                    "rules": ["damage_table_vehicle"],
                     "weapons": ["smasher_cannon", {"id": "ccw", "count": 3}],
                     "options": [{"replaceWeapon": "smasher_cannon", "withWeapon": ["tractor_beam", "plasma_cannon", "bubble_cannon"]}],
                     "min": 1,
