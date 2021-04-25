@@ -1797,6 +1797,37 @@
                 }
             ]
         },
+        "veteran_assault_walker": {
+            "name": "Veteran Assault Walker",
+            "description": "A heavily armed prime walker.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Veteran Assault Walker",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
+                            "withWeapon": [[{"id": "walker_fist", "count": 4}, {"id": "heavy_flamethrower"}], "missile_launcher", "twin_autocannon"]
+                        },
+                        {"replaceWeapon": "minigun", "withWeapon": ["plasma_cannon", "twin_autocannon", "heavy_fusion_rifle", "twin_heavy_machinegun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "psychic_assault_walker": {
             "name": "Psychic Assault Walker",
             "description": "A heavily armed prime walker.",
