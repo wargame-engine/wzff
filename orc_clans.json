@@ -1400,7 +1400,7 @@
     "weapons": {
         "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
-        "tractor_beam": {"name": "Tractor Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
+        "tractor_beam": {"name": "Tractor Beam", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["anti_air"]},
         "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
         "bubble_cannon": {"name": "Bubble Cannon", "attacks": 1, "short": 18, "ap": 1, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
