@@ -611,6 +611,44 @@
                 }
             ]
         },
+        "prime_elimination_squad": {
+            "name": "Prime Elimination Squad",
+            "description": "Elite trained marines with long ranged sniper weaponry.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "options": [{"replaceWeapon": "prime_sniper_rifle", "withWeapon": ["light_laser_cannon"]}],
+            "rules": ["stealth", "ambush"],
+            "models": [
+                {
+                    "name": "Prime Elimination Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": [{"id": "prime_sniper_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "options": [{"addWeapon": "prime_sniper_carbine"}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Prime Elimination Marine",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": [{"id": "prime_sniper_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
         "prime_hunter_team": {
             "name": "Prime Hunter Team",
             "description": "A specialized hunter team.",
