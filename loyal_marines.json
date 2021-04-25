@@ -477,6 +477,53 @@
                 }
             ]
         },
+        "scout_marines": {
+            "name": "Scout Marines",
+            "description": "Elite trained marines sworn to protect the Empire.",
+            "category": "specialist",
+            "options": [
+                {"replaceWeapon": "marine_rifle", "withWeapon": ["marine_shotgun", "sniper_rifle"]},
+                {"addRule": {"id": "stealth", "name": "Camouflage Cloak"}, "modelLimit": "all"},
+                {"addWeapon": "fusion_bomb", "modelLimit": 3}
+            ],
+            "rules": ["outflank"],
+            "models": [
+                {
+                    "name": "Scout Marine Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
+                        {"replaceWeapon": ["marine_rifle", "heavy_ccw"], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Scout Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
+                    "options": [
+                        {"modelLimit": 1, "limit": 1, "replaceWeapon": "marine_rifle", "withWeapon": ["heavy_machinegun", "missile_launcher", "plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "veteran_marines": {
             "name": "Veteran Marines",
             "description": "Veteran marines with a variety of special weapons.",

@@ -23,7 +23,6 @@
                     "defense": 10,
                     "reflexes": 6,
                     "weapons": ["annihiliation_gun", {"id": "metal_claws", "count": 2}, {"id": "reaper_glaive", "count": 3}],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -155,7 +154,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "energy_staff_melee", "count": 2}, "energy_staff_shoot"],
                     "options": [
-                        {"addWeapon": "tesla_field"}, {"addRule": ["phase_field", "flight_cloak", "dark_prism", {"id": "repair", "x": 5, "name": "Repair Orb"}]}
+                        {"addWeapon": "tesla_field"}, {"addRule": ["flight_cloak", "dark_prism"]}, {"addRule": [{"id": "repair", "x": 5, "name": "Repair Orb"}, "control_orb", "phase_field", "time_orb"], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -747,7 +746,7 @@
                 {"name": "Dispersed", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 6}]}
             ]
         },
-        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 9, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_doom_ray": {"name": "Heavy Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
         "doom_ray": {"name": "Doom Ray", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "plasma_spike": {"name": "Plasma Spike", "attacks": 1, "short": "Melee", "ap": 1},
         "void_shield": {"name": "Void Shield", "attacks": 0, "short": "Melee", "rules": ["void_shield"]},
@@ -769,7 +768,7 @@
         "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["rending"]},
-        "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": []},
         "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": []},
         "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": []},
@@ -814,6 +813,16 @@
             "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
         },
+        "control_orb": {
+            "name": "Control Orb",
+            "description": "When this unit activates, choose one friendly _Vehicle_ unit to immediately activate. That unit gets +1 Accuracy and Strength.",
+            "points": 10
+        },
+        "time_orb": {
+            "name": "Time Orb",
+            "description": "When this unit activates, choose one visible enemy unit within 18\". That unit subtracts 2\" from its Movement characteristic until the end of the round.",
+            "points": 10
+        },
         "targeting_relay": {
             "name": "Targeting Relay",
             "description": "If this unit hits an enemy unit with a ranged attack, mark that unit. The next friendly unit to target that enemy unit may re-roll failed Accuracy rolls of 9+.",
@@ -829,13 +838,13 @@
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {
             "name": "Regeneration Orb",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
-            "points": 20
+            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "points": 15
         },
         "regeneration_pods": {
             "name": "Regeneration Pods",
-            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
-            "points": 20
+            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "points": 15
         },
         "phase_field": {"name": "Phase Field", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 10},
         "anti_gravity_generators": {

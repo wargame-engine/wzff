@@ -297,7 +297,7 @@
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
-        "marine_shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
+        "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "rending"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2},
         "plasma_pistol": {
