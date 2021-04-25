@@ -531,7 +531,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["walker", "flare_shielding", "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": ["walker", "flare_shielding", "vulnerable_side_rear", "damage_table_vehicle", "targeting_relay"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -724,6 +724,11 @@
             "name": "Reanimation Beam",
             "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 20
+        },
+        "targeting_relay": {
+            "name": "Targeting Relay",
+            "description": "If this unit hits an enemy unit with a ranged attack, mark that unit. The next friendly unit to target that enemy unit may re-roll failed Accuracy rolls of 9+.",
+            "points": 10
         },
         "swarm_fabricator": {
             "name": "Swarm Fabricator",
