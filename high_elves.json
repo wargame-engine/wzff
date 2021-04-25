@@ -271,7 +271,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 12,
+                    "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "doom_artillery_cannon"],
                     "options": [

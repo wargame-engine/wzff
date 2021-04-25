@@ -1070,6 +1070,38 @@
                 }
             ]
         },
+        "destoyers": {
+            "name": "Destroyers",
+            "description": "Marines clad in very heavy armor and highly trained.",
+            "rules": ["ambush"],
+            "category": "specialist",
+            "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "missile_launcher", "minigun"], "modelLimit": "1/5"}],
+            "models": [
+                {
+                    "name": "Destroyer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "energy_sword", "count": 2},
+                            "withWeapon": [
+                                {"id": "energy_fist", "count": 2},
+                                {"id": "energy_hammer", "count": 2}
+                            ]
+                        },
+                        {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
+                        {"addRule": "shield"}
+                    ],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
         "devastators": {
             "name": "Devastators",
             "description": "A squad of highly trained marines armed to the teeth with advanced weaponry.",
@@ -1196,6 +1228,32 @@
                         {"replaceWeapon": "twin_heavy_machinegun", "withWeapon": ["twin_minigun", "twin_heavy_flamethrower", "twin_laser_cannon"]}
                     ],
                     "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_artillery_vehicle": {
+            "name": "Artillery Vehicle",
+            "description": "An armored artillery vehicle helmed by loyal marines.",
+            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
+            "keywords": ["Vehicle"],
+            "category": "heavy",
+            "models": [
+                {
+                    "name": "Artillery Vehicle",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": ["artillery_missiles"],
+                    "options": [
+                        {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
+                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -2095,8 +2153,13 @@
         }
     },
     "weapons": {
+        "artillery_missiles": {
+            "name": "Artillery Missiles",
+            "profiles": [{"name": "Frag", "attacks": 2, "short": 36, "medium": 72, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 3, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect"]}]
+        },
         "wolf_grenade_launcher": {"name": "Wolf Grenade Launcher", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
         "wolf_shield": {"name": "Wolf Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
+        "combat_shield": {"name": "Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "short": "Melee"},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
