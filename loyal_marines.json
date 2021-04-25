@@ -477,6 +477,54 @@
                 }
             ]
         },
+        "veteran_marines": {
+            "name": "Veteran Marines",
+            "description": "Veteran marines with a variety of special weapons.",
+            "category": "core",
+            "options": [
+                {"addWeapon": "fusion_bomb", "modelLimit": 3},
+                {"replaceWeapon": ["veteran_marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Marine Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["veteran_marine_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["veteran_marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["veteran_marine_rifle", {"id": "heavy_ccw", "count": 2}, "at_grenade"],
+                    "options": [
+                        {
+                            "modelLimit": 2,
+                            "limit": 1,
+                            "replaceWeapon": "veteran_marine_rifle",
+                            "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon", "plasma_rifle", "flamethrower", "heavy_flamethrower", "fusion_rifle", "gravity_rifle"]
+                        }
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "prime_marines": {
             "name": "Prime Marine Squad",
             "description": "Elite trained marines of a new breed.",
@@ -1065,6 +1113,54 @@
                     "options": [
                         {"replaceWeapon": ["marine_pistol", {"id": "chainsword", "count": 1}], "withWeapon": [["plasma_pistol", {"id": "chainsword", "count": 1}], "flamethrower"], "modelLimit": 2}
                     ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "veteran_assault_squad": {
+            "name": "Veteran Assault Squad",
+            "description": "A squad of veteran marines trained to fight in close combat.",
+            "category": "specialist",
+            "options": [
+                {"addRule": "jetpack", "modelLimit": "all"},
+                {"addWeapon": "fusion_bomb", "modelLimit": 3},
+                {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "gravity_pistol"]},
+                {
+                    "replaceWeapon": {"id": "chainsword", "count": 3},
+                    "withWeapon": [
+                        {"id": "energy_mace", "count": 3},
+                        {"id": "energy_axe", "count": 3},
+                        {"id": "energy_sword", "count": 3},
+                        {"id": "energy_fist", "count": 3},
+                        {"id": "energy_hammer", "count": 3},
+                        {"id": "energy_claws", "count": 4}
+                    ]
+                },
+                {"addRule": "combat_shield"}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Assault Marine Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 3}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Veteran Assault Marine",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 3}],
                     "min": 4,
                     "max": 9
                 }
