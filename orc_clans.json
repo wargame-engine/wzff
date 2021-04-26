@@ -1608,7 +1608,7 @@
             "subfactions": ["shooting_focus"],
             "phase": "activation",
             "name": "Gunnery Experts",
-            "description": "Use when a unit Shoots. That unit gets +1 Accuracy.",
+            "description": "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
             "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
             "cost": 1
         },
