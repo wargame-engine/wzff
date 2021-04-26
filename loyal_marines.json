@@ -397,7 +397,7 @@
                     "movement": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 3}],
-                    "rules": ["banner_of_wrath", "support"],
+                    "rules": ["banner_of_wrath"],
                     "options": [
                         {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
                         {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 3}], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 4}]]},
@@ -2004,7 +2004,7 @@
                     "movement": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}],
-                    "rules": ["banner_of_wrath", "support"],
+                    "rules": ["banner_of_wrath"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
@@ -2037,7 +2037,7 @@
                     "movement": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "at_grenade", "psychic_grenade", {"id": "psychic_sword", "count": 3}],
-                    "rules": ["banner_of_wrath", "support"],
+                    "rules": ["banner_of_wrath"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
