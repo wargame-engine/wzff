@@ -291,6 +291,7 @@
         "flamethrower_cannon": {"name": "Flamethrower Cannon", "attacks": 3, "ap": 4, "short": 6, "medium": 12, "rules": []},
         "light_machinegun": {"name": "Light Machinegun", "attacks": 3, "short": 18, "medium": 36},
         "laser_machinegun": {"name": "Laser Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 3},
+        "twin_laser_machinegun": {"name": "Twin Laser Machinegun", "attacks": 6, "short": 18, "medium": 36, "ap": 3},
         "strike_missiles": {"name": "Strike Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
         "rocket_pod": {"name": "Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "twin_light_machinegun": {"name": "Twin Light Machingun", "attacks": 6, "short": 18, "medium": 36},
@@ -529,6 +530,7 @@
         "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
         "shard_cannon": {"name": "Shard Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
+        "twin_shard_cannon": {"name": "Twin Shard Cannon", "attacks": 6, "short": 12, "medium": 24, "ap": 3, "rules": ["assault", "rending"]},
         "irridescent_cannon": {
             "name": "Irridescent Cannon",
             "profiles": [
@@ -542,8 +544,17 @@
         "shard_rifle": {"name": "Shard Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["rending", "assault"]},
         "twin_shard_rifle": {"name": "Twin Shard Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["rending", "assault"]},
         "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
+        "twin_fusion_cannon": {"name": "Twin Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
         "shard_sniper": {"name": "Shard Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
         "elven_blade": {"name": "Elven Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "elven_missile_launcher": {
+            "name": "Elven Missile Launcher",
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 2, "short": 24, "medium": 48, "ap": 6}]
+        },
+        "twin_elven_missile_launcher": {
+            "name": "Twin Elven Missile Launcher",
+            "profiles": [{"name": "Frag", "attacks": 2, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 4, "short": 24, "medium": 48, "ap": 6}]
+        },
         "heavy_fusion_cannon": {
             "name": "Heavy Fusion Cannon",
             "profiles": [
@@ -583,6 +594,11 @@
         }
     },
     "rules": {
+        "scrambler": {
+            "name": "Scrambler",
+            "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.",
+            "points": 5
+        },
         "banner": {
             "name": "Banner",
             "description": "This unit may re-roll a single failed Courage test when removing Shock.",

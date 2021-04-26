@@ -13,6 +13,11 @@
     },
     "subfactions": {
         "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
+        "stealth_focus": {
+            "name": "Stealth",
+            "id": "stealth_focus",
+            "background": "Loyal Marines focused on stealth and ambush tactics."
+        },
         "wolf_marines": {
             "name": "Counter-attack",
             "id": "wolf_marines",
@@ -1452,7 +1457,7 @@
         "marine_artillery_vehicle": {
             "name": "Artillery Vehicle",
             "description": "An armored artillery vehicle helmed by loyal marines.",
-            "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "keywords": ["Vehicle"],
             "category": "heavy",
@@ -2578,6 +2583,30 @@
             "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
             "flavor": "Psychic marines often arrive via a teleporter to surprise their enemies.",
             "cost": "1/per"
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Ambush",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": "1/per"
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "Loyal marines are sometimes trained in stealth tactics allowing them to hide even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["stealth_focus"],
+            "name": "Stealth Assault",
+            "phase": "activation",
+            "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
+            "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "cost": 1
         }
     ],
     "powers": {

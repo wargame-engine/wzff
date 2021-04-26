@@ -262,7 +262,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -276,6 +276,34 @@
                     "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "doom_artillery_cannon"],
                     "options": [
                         {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
+                        {"addRule": ["sky_engine", "gravity_thrusters"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "hover_apc": {
+            "name": "Hover APC",
+            "description": "A hover tank with indirect fire artillery.",
+            "min": 1,
+            "max": 1,
+            "category": "transport",
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", {"id": "transport", "x": 12}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Hover APC",
+                    "courage": 5,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": [{"id": "twin_shard_rifle", "mount": ["Front"]}, "twin_fusion_cannon"],
+                    "options": [
+                        {"replaceWeapon": {"id": "twin_shard_rifle", "mount": ["Front"]}, "withWeapon": {"id": "shard_cannon", "mount": ["Front"]}},
+                        {"replaceWeapon": "twin_fusion_cannon", "withWeapon": ["twin_shard_cannon", "twin_elven_missile_launcher", "twin_sky_cannon", "twin_laser_machinegun"]},
                         {"addRule": ["sky_engine", "gravity_thrusters"]}
                     ],
                     "min": 1,
@@ -335,6 +363,7 @@
     "weapons": {
         "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
+        "twin_sky_cannon": {"name": "Twin Sky Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
         "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
         "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},
         "laser_lance_melee":{"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},

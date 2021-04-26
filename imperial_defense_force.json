@@ -398,8 +398,8 @@
                     "fight": 5,
                     "defense": 5,
                     "movement": 6,
-                    "reflexes": 4,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
