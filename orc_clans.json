@@ -7,7 +7,8 @@
     "subfactions": {
         "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
         "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
-        "speed_focus": {"name": "Speed Focus", "id": "speed_focus", "background": "An Orc Clan with a need for speed."}
+        "speed_focus": {"name": "Speed", "id": "speed_focus", "background": "An Orc Clan with a need for speed."},
+        "shooting_focus": {"name": "Shooting", "id": "speed_focus", "background": "An Orc Clan with an addiction for shiny weapons."}
     },
     "hidden_units": {
         "grand_warlord": {
@@ -1555,10 +1556,10 @@
             "description": "Use when a unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
             "cost": 1
         },
-        "tune_up": {
+        "shoot_them": {
             "subfactions": ["goblin_army"],
             "phase": "activation",
-            "name": "Tune Up",
+            "name": "Shoot Them",
             "description": "Use before shooting with a unit. It gains +3\" maximum range with all weapons.",
             "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
             "cost": 1
@@ -1593,6 +1594,30 @@
             "name": "Extra Juice",
             "description": "Use when a unit makes a move action it gains +3\" move for that action",
             "flavor": "These orcs have either a special fuel or know little tricks to get them upfield just that little bit faster than their slower brethren.",
+            "cost": 1
+        },
+        "indescriminate_fire": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Indiscriminate Fire",
+            "description": "Use when shooting with an _Infantry_ unit. If the attack hits, assign 2 additional Shock.",
+            "flavor": "Firing mostly at random, its enough to Shock most enemies.",
+            "cost": 1
+        },
+        "gunnery_experts": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Gunnery Experts",
+            "description": "Use when a unit Shoots. That unit gets +1 Accuracy.",
+            "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
+            "cost": 1
+        },
+        "tune_up": {
+            "subfactions": ["shooting_focus"],
+            "phase": "activation",
+            "name": "Tune Up",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
+            "flavor": "Souped up and well-oiled, their weapons perform much better than any others.",
             "cost": 1
         }
     }

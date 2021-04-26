@@ -901,9 +901,9 @@
             "subfactions": ["solar_fire"],
             "name": "Energy Amplificiation",
             "phase": "activation",
-            "description": "Use before a unit performs a Shoot action. All attacks are treated as being at close range.",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
             "flavor": "Amplifying the power of an energy weapon can cause it to reach out and hit enemies at great distances.",
-            "cost": 2
+            "cost": 1
         },
         {
             "subfactions": ["combat_focus"],
