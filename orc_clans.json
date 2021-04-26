@@ -8,7 +8,7 @@
         "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
         "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
         "speed_focus": {"name": "Speed", "id": "speed_focus", "background": "An Orc Clan with a need for speed."},
-        "shooting_focus": {"name": "Shooting", "id": "speed_focus", "background": "An Orc Clan with an addiction for shiny weapons."}
+        "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "background": "An Orc Clan with an addiction for shiny weapons."}
     },
     "hidden_units": {
         "grand_warlord": {
@@ -1604,10 +1604,10 @@
             "flavor": "Firing mostly at random, its enough to Shock most enemies.",
             "cost": 1
         },
-        "gunnery_experts": {
+        "good_shots": {
             "subfactions": ["shooting_focus"],
             "phase": "activation",
-            "name": "Gunnery Experts",
+            "name": "Good Shots",
             "description": "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
             "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
             "cost": 1
