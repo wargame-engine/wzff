@@ -644,7 +644,7 @@
                 {
                     "name": "Heavy Invasion Arc",
                     "courage": 6,
-                    "movement": 6,
+                    "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
@@ -716,7 +716,7 @@
                 {
                     "name": "Dimensional Shard Vault",
                     "courage": 7,
-                    "movement": 6,
+                    "movement": 8,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
