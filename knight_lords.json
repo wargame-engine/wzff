@@ -290,8 +290,8 @@
             {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 3}
         ]},
         "titan_fist": {"name": "Titan Fist", "profiles": [
-            {"name": "Strike", "attacks": 2, "short": "Melee", "ap": 10, "rules": ["cumbersome", {"id": "critical", "x": 3}]},
-            {"name": "Smash", "attacks": 4, "short": "Melee", "ap": 4, "rules": ["cumbersome"]}
+            {"name": "Strike", "attacks": 3, "short": "Melee", "ap": 10, "rules": ["cumbersome", {"id": "critical", "x": 1}]},
+            {"name": "Smash", "attacks": 6, "short": "Melee", "ap": 4, "rules": ["cumbersome"]}
         ]},
         "titan_sword": {"name": "Titan Sword", "profiles": [
             {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8},
