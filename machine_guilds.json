@@ -631,8 +631,8 @@
         "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2, "short": "Melee", "rules": ["taser"]},
         "taser_maul": {"name": "Taser Maul", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["taser"]},
         "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": ["sniper"]},
-        "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
-        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "rending"]},
+        "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper", "radiation"]},
+        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "radiation"]},
         "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
@@ -651,7 +651,7 @@
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "phosphor_pistol": {"name": "Phosphor Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol", "phosphor"]},
-        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
+        "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", "radiation"]},
         "wave_pistol": {"name": "Wave Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["pistol"]},
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol", "emp"]},
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault", "phosphor"]},
@@ -662,6 +662,7 @@
         "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
     },
     "rules": {
+        "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
         "vanguard_tactics": {
             "name": "Vanguard Tactics",
             "inputs": ["x"],
