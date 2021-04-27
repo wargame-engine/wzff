@@ -632,15 +632,15 @@
         "taser_maul": {"name": "Taser Maul", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["taser"]},
         "uranium_rifle": {"name": "Uranium Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 4, "rules": ["sniper"]},
         "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
-        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "radiation_carbine": {"name": "Radiation Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "rending"]},
         "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
         "plasma_burst_carbine": {
-            "name": "Plasma Burst Carbine",
+            "name": "Plasma Carbine",
             "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
+                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "overheat"]}
             ]
         },
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
