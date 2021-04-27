@@ -19,7 +19,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}],
                     "options": [
@@ -53,7 +53,6 @@
                     "weapons": ["titan_fist", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
                     "min": 1,
@@ -82,7 +81,6 @@
                     "weapons": ["gatling_cannon", "heavy_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
                     "min": 1,
@@ -111,7 +109,6 @@
                     "weapons": ["pulse_laser", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"replaceWeapon": "titan_sword", "withWeapon": ["titan_fist"]},
                         {"limit": 1, "addWeapon": ["light_machinegun", "laser_machinegun"]}
@@ -142,7 +139,6 @@
                     "weapons": ["fusion_cannon", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
                     "min": 1,
@@ -171,7 +167,6 @@
                     "weapons": ["plasma_battle_cannon", "light_machinegun", "volcano_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
                         {"limit": 1, "addWeapon": ["twin_siege_cannon", "twin_shield_missiles", {"id": "twin_siege_cannon", "count": 2}, {"id": "twin_shield_missiles", "count": 2}]}
@@ -202,7 +197,6 @@
                     "weapons": ["rapidfire_battle_cannon", "light_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
                     ],
                     "min": 1,
@@ -231,7 +225,6 @@
                     "weapons": ["harpoon_cannon", "triple_flamethrower_cannon", {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"addWeapon": [{"id": "twin_fusion_rifle", "count": 2}]},
                         {"limit": 1, "addWeapon": ["twin_siege_cannon", "twin_shield_missiles", {"id": "twin_siege_cannon", "count": 2}, {"id": "twin_shield_missiles", "count": 2}]}
@@ -262,7 +255,6 @@
                     "weapons": ["gatling_cannon", "rapidfire_battle_cannon", {"id": "light_machinegun", "count": 2}, {"id": "heavy_stomp", "count": 2}],
                     "options": [
                         {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]},
-                        {"limit": 1, "addRule": ["power_sheilds", "extra_armor"]},
                         {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]},
                         {"replaceWeapon": "gatling_cannon", "withWeapon": "fusion_cannon"}
                     ],
@@ -311,9 +303,28 @@
             "ap": 10
         }
     },
-    "rules": {
-        "power_sheilds": {"name": "Power Sheilds", "description": "This model gains Regeneration(3).", "effects": [{"type": "grantRule", "rule": {"id": "resilient", "x": 3}}]},
-        "extra_armor": {"name": "Extra Armor", "description": "This model increases its Saveance by 1.", "effects": [{"type": "alterStat", "statName": "defense", "value": 1}]}
-    },
-    "strategies": {}
+    "rules": {},
+    "strategies": {
+        "ion_shields": {
+            "phase": "activation",
+            "name": "Ion Shields",
+            "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
+            "flavor": "Knight Lords are equipped with powerful ion shields which allow them to deflect the heaviest of firepower.",
+            "cost": 2
+        },
+        "heroic_moment": {
+            "phase": "activation",
+            "name": "Heroic Moment",
+            "description": "Use when a unit shoots or fights. That unit may re-roll failed skill tests of 9+.",
+            "flavor": "Each Knight Lord is a hero which can take on the mightiest of foes.",
+            "cost": 1
+        },
+        "final_stand": {
+            "phase": "activation",
+            "name": "Final Stand",
+            "description": "Use when a unit is destroyed. If that unit has not activated yet this round, it may perform one shoot or fight action before it is destroyed.",
+            "flavor": "A Knight Lord fights to the last breath.",
+            "cost": 1
+        }
+    }
 }
