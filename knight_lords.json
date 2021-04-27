@@ -4,8 +4,8 @@
     "author": "Caliallie#6369",
     "background": "An army consisting of titanic machines and the chivilrous order of warriours that pilot and support them.",
     "units": {
-        "mini_knight": {
-            "name": "Mini Knight",
+        "helverin_knight": {
+            "name": "Helverin Titan",
             "description": "The smallest of titans can still make an impact on the battlefield with its guns.",
             "min": 1,
             "max": 1,
@@ -21,10 +21,36 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}],
+                    "weapons": [{"id": "heavy_autocannon", "count": 2}, "light_machinegun", {"id": "stomp", "count": 2}],
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_autocannon", "count": 2}], "withWeapon": [["fusion_blaster", "mini_titan_sword"]]},
-                        {"limit": 1, "addWeapon": ["light_machinegun", "fusion_rifle"]}
+                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "warglaive_knight": {
+            "name": "Warglaive Titan",
+            "description": "The smallest of titans can still make an impact on the battlefield with its sword.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": ["damage_table_vehicle"],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Mini Knight",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 5,
+                    "weapons": ["fusion_blaster", "mini_titan_sword", "light_machinegun", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}
                     ],
                     "rules": [],
                     "min": 1,

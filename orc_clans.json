@@ -1576,7 +1576,7 @@
             "subfactions": ["speed_focus"],
             "phase": "activation",
             "name": "Quick Aim",
-            "description": "Use when an Infantry unit with any Assault weapons is firing. That unit does not suffer -1 to hit when using the Assault rule",
+            "description": "Use when an _Infantry_ unit with any _Assault_ weapons is firing. That unit does not suffer -1 to hit when using the _Assault_ rule.",
             "flavor": "These orcs are so used to firing from the hip while speeding their way upfield that their accuracy doesn't suffer.",
             "cost": 1
         },

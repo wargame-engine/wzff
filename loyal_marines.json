@@ -8,16 +8,18 @@
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
     "hidden_subfactions": {
         "fire_masters": {"name": "Flame", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
-        "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
-        "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."}
+        "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true}
     },
     "subfactions": {
+        "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."},
         "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
+        "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "color": "#f0c251", "background": "Loyal Marines that are tougher than the rest."},
         "stealth_focus": {
             "name": "Stealth",
             "id": "stealth_focus",
             "background": "Loyal Marines focused on stealth and ambush tactics."
         },
+        "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
         "wolf_marines": {
             "name": "Counter-attack",
             "id": "wolf_marines",
@@ -2545,10 +2547,34 @@
             "cost": "1/per"
         },
         {
+            "subfactions": ["toughness_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These marines are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["toughness_focus"],
+            "name": "Durability",
+            "phase": "activation",
+            "description": "Use before activating a unit with a Damage Table. That unit is treated as having no critical damage tokens for this activation.",
+            "flavor": "Some of the most well-maintained vehicles and machinery can operate under great stress.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["toughness_focus"],
+            "name": "Machine Might",
+            "phase": "activation",
+            "description": "Use when a _Vehicle_ unit attacks in melee. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        {
             "subfactions": ["siege_masters"],
             "name": "Bolster",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit is targeted by an enemy. That unit may increase its cover level by 1 (none to soft, soft to hard).",
+            "description": "Use when an _Infantry_ unit is targeted by an enemy. If it did not move this round, that unit may increase its cover level by 1 (none to soft, soft to hard).",
             "flavor": "A strong defensive position ensures greater survival, even against the toughest of weapons.",
             "cost": 1
         },
@@ -2558,6 +2584,14 @@
             "phase": "activation",
             "description": "Use before shooting with a unit. The target reduces its cover level by 1 (hard to soft, soft to none).",
             "flavor": "Finding and exploiting a vulnerable piece of cover can lead to devastating results.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["siege_masters"],
+            "name": "Rapid Fire",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit performs a Shoot action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
             "cost": 1
         },
         {
@@ -2606,6 +2640,54 @@
             "phase": "activation",
             "flavor": "Striking when the enemy least expects is a good way to quietly deal with an enemy.",
             "description": "Use this strategy when an _Infantry_ unit charges. If the charging unit only makes a single move action this activation, enemy units may not react to that charge.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["mobility_masters"],
+            "name": "Encircle",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Encirclement reserves before the game begins. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
+            "flavor": "With speed a ferocity, these marines can outflank their enemies.",
+            "cost": "1/per"
+        },
+        {
+            "subfactions": ["mobility_masters"],
+            "name": "Moving Fire",
+            "phase": "activation",
+            "flavor": "These marines are trained to shoot while moving to maintain pressure on their enemies.",
+            "description": "Use after an _Infantry_ unit makes a Move action. That unit may make a free shoot action with -1 Accuracy.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["mobility_masters"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "flavor": "With a furious charge, these marines move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["tactical_masters"],
+            "name": "Tactical Retreat",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit attempts to fall back from melee. That unit automatically passes the Initiative check required to fall back.",
+            "flavor": "A quick tactical retreat and a burst of fire can cause an enemy a lot of problems.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["tactical_masters"],
+            "name": "Courageous",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These marines are some of the most courage, fighting to the bitter end.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["tactical_masters"],
+            "name": "Re-organize",
+            "phase": "activation",
+            "description": "Use at any point during an _Infantry_ unit's activation. That unit may split into two separate units or merge with another unit of the same data-sheet. This may not exceed the maximum unit size or go below the unit's minimum size.",
+            "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
             "cost": 1
         }
     ],
