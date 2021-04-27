@@ -11,9 +11,11 @@
         "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true}
     },
     "subfactions": {
+        "zeal_focus": {"name": "Zeal", "id": "zeal_focus", "color": "#ffffff", "background": "Loyal Marines with a righteous zeal."},
         "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."},
         "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
         "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "color": "#f0c251", "background": "Loyal Marines that are tougher than the rest."},
+        "forge_focus": {"name": "Craftsmen", "id": "forge_focus", "color": "#f0c251", "background": "Loyal Marines that are expert craftsmen and tough in battle."},
         "stealth_focus": {
             "name": "Stealth",
             "id": "stealth_focus",
@@ -2563,6 +2565,30 @@
             "cost": 1
         },
         {
+            "subfactions": ["forge_focus"],
+            "name": "Reliability",
+            "phase": "activation",
+            "description": "Use when a unit attacks. That unit may re-roll a single hit die.",
+            "flavor": "With expert craftsmanship, their weapons can perform better than most.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["forge_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes Save rolls. Roll a die for each hit this unit takes. On a 3 or less that hit is prevented.",
+            "flavor": "These marines are particularly tough and can take a hit.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["forge_focus"],
+            "name": "Enhancements",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "With enhanced firepower, their weapons can hit with extra strength.",
+            "cost": 1
+        },
+        {
             "subfactions": ["toughness_focus"],
             "name": "Machine Might",
             "phase": "activation",
@@ -2688,6 +2714,30 @@
             "phase": "activation",
             "description": "Use at any point during an _Infantry_ unit's activation. That unit may split into two separate units or merge with another unit of the same data-sheet. This may not exceed the maximum unit size or go below the unit's minimum size.",
             "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "name": "Zealous Assault",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+            "flavor": "With righteous fury, these marines charge into battle.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "name": "Strike Down",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "These marines strike their foes down with a flurry of melee attacks.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "phase": "activation",
+            "name": "Psychic Shield",
+            "description": "Use when a Psychic(x) test is taken within 24\" of an _Infantry_ unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "flavor": "Shielded by holy energy, the Inquisition can protect themselves from psychic powers.",
             "cost": 1
         }
     ],

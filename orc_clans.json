@@ -1545,7 +1545,7 @@
             "name": "Smash Them",
             "phase": "activation",
             "flavor": "It's about time we got to fighting.",
-            "description": "Use before a unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
             "cost": 1
         },
         "counter_attack": {
