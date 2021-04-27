@@ -655,7 +655,7 @@
             "description": "When this model successfully charges an enemy unit, make X Strength tests. For each success, the enemy takes 1 hit with AP 1.",
             "points": ["rule.x", {"multiply": 3}]
         },
-        "emp": {"name": "EMP", "description": "Successful hit rolls of 5 or less gain +2 AP.", "points": ["weapon.attacks", {"multiply": 4}, {"multiply": 0.5}]},
+        "emp": {"name": "EMP", "description": "Successful hit rolls of 5 or less gain +2 AP.", "points": ["weapon.attacks", {"multiply": 2}]},
         "jetpack_character": {
             "name": "Jetpack",
             "hidden": true,
