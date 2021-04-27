@@ -6,14 +6,11 @@
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
-    "hidden_subfactions": {
-        "fire_masters": {"name": "Flame", "id": "fire_masters", "color": "#00401f", "background": "Loyal Marines focused on using fire to burn their enemies."},
-        "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true}
-    },
     "subfactions": {
+        "combined_arms_focus": {"name": "Combined Arms", "id": "combined_arms_focus", "color": "#ffffff", "background": "Loyal Marines who specialize in combined arms tactics."},
         "zeal_focus": {"name": "Zeal", "id": "zeal_focus", "color": "#ffffff", "background": "Loyal Marines with a righteous zeal."},
         "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."},
-        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on psychic tactics and hunting demons."},
+        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on sieges and defeating entrenched enemies."},
         "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "color": "#f0c251", "background": "Loyal Marines that are tougher than the rest."},
         "forge_focus": {"name": "Craftsmen", "id": "forge_focus", "color": "#f0c251", "background": "Loyal Marines that are expert craftsmen and tough in battle."},
         "stealth_focus": {
@@ -26,9 +23,10 @@
             "name": "Counter-attack",
             "id": "wolf_marines",
             "color": "#547588",
-            "background": "Loyal Marines focused on counter-attack tactics specialize in brutal counter-assaults in close combat.",
+            "background": "Loyal Marines that specialize in brutal counter-assaults in close combat.",
             "restricted": true
         },
+        "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true},
         "psychic_marines": {"name": "Psychic", "id": "psychic_marines", "color": "#C0C0C0", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
         "alien_hunters": {"name": "Alien Hunters", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true}
     },
@@ -2687,6 +2685,30 @@
         {
             "subfactions": ["mobility_masters"],
             "name": "Ferocity",
+            "phase": "activation",
+            "flavor": "With a furious charge, these marines move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "Sometimes with disregard for their own life, these marines will stop at nothing to defeat their enemies.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Fury",
+            "phase": "activation",
+            "flavor": "These marines are furious in resolve and can rip through their enemies.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Assault",
             "phase": "activation",
             "flavor": "With a furious charge, these marines move into combat quickly.",
             "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
