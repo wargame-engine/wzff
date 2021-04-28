@@ -310,6 +310,36 @@
                     "max": 1
                 }
             ]
+        },
+        "wraith_titan": {
+            "name": "Wraith Titan",
+            "description": "A wraith lord with a variety of loadouts to punish enemies of the high elves on the bloodiest of battlefields.",
+            "min": 1,
+            "max": 1,
+            "category": "super_heavy",
+            "rules": ["damage_table_titan"],
+            "keywords": ["vehicle"],
+            "models": [
+                {
+                    "name": "Wraith Titan",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "weapons": ["titan_shield", "titan_glaive", {"id": "heavy_stomp", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": [ "titan_shield", "titan_glaive"], "withWeapon": {"id":"titan_fusion_cannon", "count":2}},
+                        {"replaceWeapon": "titan_glaive", "withWeapon": "shining_cannon"},
+                        {"limit": 1, "addWeapon": ["laser_machinegun", "shard_cannon", "sky_cannon"]},
+                        {"limit": 1, "addWeapon": ["laser_machinegun", "shard_cannon", "sky_cannon"]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": []
+                }
+            ]
         }
     },
     "models": {
@@ -358,6 +388,11 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": 10
+        },
+        "titan_shield":{
+            "name": "Titan Shield",
+            "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.",
+            "points": 15
         }
     },
     "weapons": {
@@ -369,7 +404,14 @@
         "laser_lance_melee":{"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
         "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 1, "rules":["rending"]},
         "shreiking_spear_melee":{"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id":"critical", "x": 1}]},
-        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 6, "rules": ["fusion"]}
+        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 6, "rules": ["fusion"]},
+        "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
+        "shining_cannon":{"name": "Shining Cannon", "attacks": 2, "short": 24, "long": 48, "ap": 4, "rules": [{"id": "blast", "x":3}]},
+        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "long": 36, "ap": 10, "rules": ["fusion", "assault"]},
+        "titan_glaive": {"name": "Titan Glaive", "profiles": [
+            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 10},
+            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 5}
+        ]}
     },
     "strategies": {
         "mobility_training": {
