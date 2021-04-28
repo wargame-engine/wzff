@@ -637,10 +637,10 @@
         "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
         "plasma_burst_carbine": {
-            "name": "Plasma Burst Carbine",
+            "name": "Plasma Carbine",
             "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "overheat"]}
+                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
+                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "overheat"]}
             ]
         },
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
