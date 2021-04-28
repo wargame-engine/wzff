@@ -903,7 +903,7 @@
         "super_heavy_battle_tank": {
             "name": "Super Heavy Battle Tank",
             "description": "A titanic battle tank with a variety of weapon options.",
-            "rules": ["vulnerable_rear", "damage_table_titan"],
+            "rules": ["vulnerable_rear", "damage_table_titan", {"id": "heavy_impact", "x": 6}],
             "category": "super_heavy",
             "keywords": ["Vehicle", "Battle Tank"],
             "min": 1,
@@ -917,10 +917,10 @@
                     "fight": 5,
                     "defense": 13,
                     "reflexes": 5,
-                    "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
+                    "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "titan_hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
-                        {"replaceWeapon": "hell_cannon", "withWeapon": ["super_heavy_battle_cannon"]},
+                        {"replaceWeapon": "titan_hell_cannon", "withWeapon": ["titan_battle_cannon"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {
@@ -938,6 +938,8 @@
         }
     },
     "weapons": {
+        "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
+        "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
