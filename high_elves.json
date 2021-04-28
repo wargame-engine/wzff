@@ -327,8 +327,8 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 13,
-                    "reflexes": 5,
-                    "weapons": ["titan_shield", "titan_glaive", {"id": "heavy_stomp", "count": 3}],
+                    "reflexes": 6,
+                    "weapons": ["titan_shield", "titan_glaive", {"id": "heavy_stomp", "count": 5}],
                     "options": [
                         {"replaceWeapon": [ "titan_shield", "titan_glaive"], "withWeapon": {"id":"titan_fusion_cannon", "count":2}},
                         {"replaceWeapon": "titan_glaive", "withWeapon": "shining_cannon"},
@@ -392,7 +392,7 @@
         "titan_shield":{
             "name": "Titan Shield",
             "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.",
-            "points": 15
+            "points": 10
         }
     },
     "weapons": {
@@ -406,11 +406,11 @@
         "shreiking_spear_melee":{"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id":"critical", "x": 1}]},
         "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 6, "rules": ["fusion"]},
         "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
-        "shining_cannon":{"name": "Shining Cannon", "attacks": 2, "short": 24, "long": 48, "ap": 4, "rules": [{"id": "blast", "x":3}]},
+        "shining_cannon":{"name": "Shining Cannon", "attacks": 2, "short": 24, "long": 48, "ap": 5, "rules": [{"id": "blast", "x":3}]},
         "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "long": 36, "ap": 10, "rules": ["fusion", "assault"]},
         "titan_glaive": {"name": "Titan Glaive", "profiles": [
-            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 10},
-            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 5}
+            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 9},
+            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}
         ]}
     },
     "strategies": {
