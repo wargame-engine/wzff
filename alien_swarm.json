@@ -473,7 +473,7 @@
         "spore_cloud": {"name": "Spore Cloud", "description": "Once per round, models suffer -1 Accuracy when shooting at a friendly unit within 6\" of this model. This may be used one additional time per round for each model with this rule.", "points": 5}
     },
     "powers": {
-        "direct_control": {"name": "Direct Control", "description": "Target friendly unit within 24\" may activate, and this model's Courage value until the end of the activation phase.", "charge": 7},
+        "direct_control": {"name": "Direct Control", "description": "Target friendly unit within 24\" may immediately activate, and use this model's Courage value until the end of the activation phase.", "charge": 7},
         "vitality": {
             "name": "Vitality",
             "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
