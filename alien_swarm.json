@@ -226,17 +226,17 @@
             "description": "Swarms of smaller bugs, weak on their own but dangerous in numbers",
             "category": "core",
             "keywords": ["Swarm"],
-            "rules": ["ambush", {"id": "swarm", "x": 3}],
+            "rules": [{"id": "swarm", "x": 3}],
             "models": [
                 {
                     "name": "Hive Swarm",
                     "courage": 4,
                     "reflexes": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "shoot": 4,
                     "defense": 4,
                     "movement": 6,
-                    "weapons": [{"id": "ccw", "count": 3}],
+                    "weapons": [{"id": "swarm_claws", "count": 4}],
                     "options": [{"addWeapon": ["spinethrowers"]}],
                     "min": 3,
                     "max": 9
@@ -439,6 +439,7 @@
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
         "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "swarm_claws": {"name": "Swarm Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "medium_piercing_claws": {"name": "Medium Piercing Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
@@ -460,7 +461,7 @@
         "brain_consumer": {"name": "Brain Consumer", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
         "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}]},
         "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
-        "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
+        "spinethrowers": {"name": "Spinethrowers", "attacks": 3, "short": 6, "rules": ["assault", "pistol"]}
     },
     "rules": {
         "swarm_melee_tactics": {
