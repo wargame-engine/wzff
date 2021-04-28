@@ -594,6 +594,7 @@
         }
     },
     "rules": {
+        "wings": {"name": "Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
         "scrambler": {
             "name": "Scrambler",
             "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.",

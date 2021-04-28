@@ -708,7 +708,7 @@
             "max": 10,
             "category": "specialist",
             "rules": ["mutations"],
-            "options": [{"addRule": "wings", "modelLimit": "all"}],
+            "options": [{"addRule": "fly", "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Possessed Brother",
@@ -1501,7 +1501,6 @@
             "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.",
             "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]
         },
-        "wings": {"name": "Daemon Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
         "mutations": {
             "name": "Mutations",
             "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",

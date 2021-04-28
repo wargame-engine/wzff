@@ -458,7 +458,7 @@
         "grabbing_tail": {"name": "Grabbing Tail", "attacks": 1, "short": "Melee", "ap": 3, "rules": []},
         "large_boneswords": {"name": "Large Boneswords", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
         "maggot_spitter": {"name": "Maggot Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
-        "brain_consumer": {"name": "Brain Consumer", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
+        "brain_consumer": {"name": "Brain Consumer", "attacks": 5, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
         "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}]},
         "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
         "spinethrowers": {"name": "Spinethrowers", "attacks": 3, "short": 6, "rules": ["assault", "pistol"]}
@@ -469,12 +469,6 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
-        },
-        "wings": {
-            "name": "Wings",
-            "description": "This model may ignore terrain and other models without the Fly special rule when moving and gains an extra 4\" movement.",
-            "description_short": "Fly, +4\" Move",
-            "points": [4, {"multiply": "constants.movementCost"}, {"add": 2}]
         },
         "spore_cloud": {"name": "Spore Cloud", "description": "Once per round, models suffer -1 Accuracy when shooting at a friendly unit within 6\" of this model. This may be used one additional time per round for each model with this rule.", "points": 5}
     },
