@@ -4,7 +4,8 @@
     "author": "guitarninja#5707",
     "subfactions": {
         "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "background": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
-        "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."}
+        "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."},
+        "neon_hive": {"name": "Neon-Light MegaCity", "id": "neon_hive", "background": "This section of the Imperial Defense Force recruits the elite, drafts the reasonable, and drags the hivescum from a large, heavily overpopulated neon-lit world of Megacities and gang-warfare."}
     },
     "units": {
         "commander": {
@@ -211,6 +212,67 @@
                 }
             ]
         },
+        "megacity_gang_scum": {
+            "name": "Megacity Penal Squad",
+            "description": "The losers of gang-wars get 'shanghaied' off to be in penal infantry squads. They have only the lessons they learned in gang warfare and not much else in the way of training.",
+            "subfactions": ["neon_hive"],
+            "category": "core",
+            "options": [{"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"] }],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Megacity Made Man",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "craft_defense_carbine", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Megacity Gang Scum",
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
+                    "min": 9,
+                    "max": 29
+                },
+                {
+                    "name": "Megacity Gang Weapon Team",
+                    "courage": 4,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
         "infantry_squad": {
             "name": "Infantry Squad",
             "description": "The backbone of the imperial defense force.",
@@ -248,6 +310,81 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
+                    ],
+                    "rules": [],
+                    "min": 9,
+                    "max": 9
+                },
+                {
+                    "name": "Weapon Team",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "line_infantry_squad": {
+            "name": "Line Infantry Squad",
+            "description": "Those who 'wash-out' of the more advanced units, along with general conscripts from the neon-lit streets of the mega cities, end up in the line infantry squads. They're properlly trained, but their equipment isn't that great, they're not really organized, and their leadership doesn't even bother to try organizing them. Some suspect they're just used as 'meat shields'.",
+            "subfactions": ["neon_hive"],
+            "category": "core",
+            "options": [
+                {"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]},
+                {"addWeapon": ["at_grenades"], "modelLimit": 3}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Sergeant",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "craft_defense_carbine", "withWeapon": ["assault_rifle"]},
+                        {"replaceWeapon": ["craft_defense_carbine", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Trooper",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
@@ -323,6 +460,83 @@
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 9,
+                    "max": 9
+                },
+                {
+                    "name": "Veteran Weapon Team",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "eliminators_squad": {
+            "name": "Eliminators Squad",
+            "description": "The cream of the Mega City crop, these men are often heavily experienced veterans of various gang wars, who have enlistened in order to 'finally get some money and respect for being shot at'.",
+            "subfactions": ["neon_hive"],
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_carbine", "withWeapon": "shotgun"},
+                {"replaceWeapon": "defense_carbine", "withWeapon": "defense_mac"},
+                 {"addRule": ["heavy_armor"], "modelLimit": "all"},
+                {"addWeapon": ["stun_grenades"], "modelLimit": 3},
+                {"addWeapon": ["at_grenades"], "modelLimit": 3}
+                ],
+            "models": [
+                {
+                    "name": "Eliminator Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_carbine", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_carbine", "withWeapon": ["assault_rifle"]},
+                        {"replaceWeapon": ["defense_carbine", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Eliminator Trooper",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_carbine", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
                     ],
                     "min": 9,
                     "max": 9
@@ -942,7 +1156,8 @@
         "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
-        "power_storm": {"medium": 9, "ap": 1, "attacks": 8}
+        "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
+        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
     },
     "rules": {
         "defense_force_tactics": {
@@ -994,6 +1209,22 @@
             "name": "High Command",
             "phase": "activation",
             "description": "Use after an _Infantry_ unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "cost": 1
+        },
+        "defensive_tactics": {
+            "phase": "activation",
+            "subfactions": ["neon_hive"],
+            "name": "Tunnels and Trenches",
+            "flavor": "The people of the megacities are unused to being above ground and not inside massive buildings, and thus spend much of their offhours building complex tunnel networks and trenches",
+            "description": "Use when an Infantry is targetted by an attack. That unit is treated as being in Light Cover, or Hard Cover if already in Light Cover.",
+            "cost": 1
+        },
+        "bug_dust": {
+            "phase": "activation",
+            "subfactions": ["neon_hive"],
+            "name": "Alien Roach Dust",
+            "flavor": "Made from the ground up glands of the foul insectoid aliens, this stimulent is very powerful, and warps the user to hate their enemy.",
+            "description": "Use when an Infantry is doing a charge or fight action. The unit is treated as having +1 strength, but at the end of the unit's activation, it gets +1 shock.",
             "cost": 1
         },
         "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
