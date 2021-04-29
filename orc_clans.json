@@ -278,7 +278,7 @@
             "max": 1,
             "category": "core",
             "keywords": ["Goblin", "Infantry"],
-            "models": [{"name": "Goblin", "courage": 5, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["carbine", "ccw"], "min": 10, "max": 20}]
+            "models": [{"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["carbine", "ccw"], "min": 10, "max": 20}]
         },
         "goblin_veterans": {
             "name": "Goblin Veterans",
@@ -297,7 +297,7 @@
                     "defense": 4,
                     "reflexes": 5,
                     "movement": 6,
-                    "weapons": ["carbine", {"id": "ccw", "count": 2}],
+                    "weapons": ["carbine", {"id": "ccw"}],
                     "options": [{"addRule": ["heavy_armor"], "modelLimit": "all"}],
                     "min": 10,
                     "max": 20
