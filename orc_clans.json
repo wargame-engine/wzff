@@ -1294,13 +1294,10 @@
                     "defense": 13,
                     "reflexes": 5,
                     "movement": 8,
-                    "weapons": [{"id": "mega_claw", "count": 4}, {"id": "heavy_stomp", "count": 5}, {"id": "death_cannon", "mount": ["Front"]}],
+                    "weapons": [{"id": "titan_chopper", "count": 2}, {"id": "heavy_machinegun", "count": 2}, {"id": "heavy_stomp", "count": 3}, {"id": "titan_death_cannon", "mount": ["Front"]}, {"id": "titan_gatling_gun", "mount": ["Front"]}],
                     "options": [
-                        {"replaceWeapon": {"id": "mega_claw", "count": 2}, "withWeapon": ["mega_saw", "heavy_tractor_cannon"]},
-                        {"replaceWeapon": {"id": "mega_claw", "count": 2}, "withWeapon": [[{"id": "super_gatling_gun", "mount": ["Front"]}]]},
-                        {"addWeapon": [{"id": "super_rocket_launcher", "mount": ["Front"]}]},
-                        {"addWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}], "limit": 3},
-                        {"addRule": [{"id": "resilient", "x": 3, "name": "Force Field"}, {"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
+                        {"addWeapon": {"id": "titan_rocket_launcher", "mount": ["Front"]}},
+                        {"addRule": [{"id": "transport", "x": 20, "name": "Carrier Compartment"}, "orc_idol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -1433,8 +1430,9 @@
         "super_cannon": {"name": "Super Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 12, "short": 18, "medium": 36, "ap": 3},
+        "titan_gatling_gun": {"name": "Titan Gatling Gun", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
-        "death_cannon": {"name": "Death Cannon", "attacks": 1, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 6}]},
+        "titan_death_cannon": {"name": "Titan Death Cannon", "attacks": 3, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
         "mini_claw": {"name": "Mini-Claw", "attacks": 1, "short": "Melee", "ap": 5},
         "walker_claw": {"name": "Walker-Claw", "attacks": 1, "short": "Melee", "ap": 6},
@@ -1482,7 +1480,7 @@
         "beast_bite": {"name": "Beast Bite", "attacks": 2, "ap": 1, "short": "Melee"},
         "beasts_bite": {"name": "Beasts Bite", "attacks": 1, "ap": 1, "short": "Melee"},
         "rocket_launcher": {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
-        "super_rocket_launcher": {"name": "Super Rocket Launcher", "attacks": 1, "short": 36, "medium": 72, "ap": 7},
+        "titan_rocket_launcher": {"name": "Titan Rocket Launcher", "attacks": 3, "short": 36, "medium": 72, "ap": 6},
         "goblin_bazooka": {"name": "Goblin Bazooka", "attacks": 1, "ap": 3, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 3}, "assault"]},
         "twin_rocket_launcher": {"name": "Twin Rocket Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]},
         "rocket_pistol": {"name": "Rocket Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["assault", "pistol"]},
@@ -1496,7 +1494,11 @@
         "sharpest_claw": {"name": "The Sharpest Claw", "attacks": 3, "ap": 4, "short": "Melee"},
         "double_shotgun": {"name": "Double Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "relic_ultra_claw": {"name": "Killer Claw", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
-        "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee"}
+        "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee"},
+        "titan_chopper": {"name": "Titan Chopper", "profiles": [
+            {"name": "Strike", "attacks": 3, "short": "Melee", "ap": 8},
+            {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 4}
+        ]}
     },
     "rules": {
         "goblin_tactics": {
