@@ -485,7 +485,7 @@
         "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
-        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", "fusion"]},
+        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", "fusion"]},
         "heavy_plasma_rifle": {
             "name": "Heavy Plasma Rifle",
             "profiles": [
