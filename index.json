@@ -409,7 +409,7 @@
         "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "crab_claw": {"name": "Crab Claw", "attacks": 1, "short": "Melee", "ap": 7},
-        "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 3},
+        "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
         "crab_flail": {"name": "Crab Flail", "attacks": 1, "short": "Melee", "ap": 6},
         "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": []},
