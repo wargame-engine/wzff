@@ -5,6 +5,43 @@
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
     "subfactions": {"solar_fire": {"name": "Solar Fire", "id": "solar_fire", "background": "Undying Machines focused on overwhelming firepower."}, "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "Undying Machines focused on deadly close assaults."}},
     "units": {
+        "command_barge": {
+            "name": "Command Barge",
+            "description": "A floating command vehicle.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": ["hover", {"id": "leader_x", "x": "Infantry"}, "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}, {"id": "machine_tactics", "x": 1}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Doom Barge",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": [{"id": "void_sword", "count": 3}, {"id": "gauss_cannon", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "void_sword", "count": 3},
+                            "withWeapon": [
+                                [{"id": "energy_staff_melee", "count": 3}, "energy_staff_shoot"],
+                                {"id": "phase_sword", "count": 3},
+                                {"id": "void_scythe", "count": 3},
+                                {"id": "war_scythe", "count": 3}
+                            ]
+                        },
+                        {"addRule": "regeneration_orb"},
+                        {"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}},
+                        {"replaceRule": {"id": "machine_tactics", "x": 1}, "withRule": {"id": "machine_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "tri_scorpion_lord": {
             "name": "Tri-Scorpion Lord",
             "description": "A lord of the undying machines equipped with high tech tri-legs and a tough carapace.",
@@ -304,7 +341,7 @@
             "description": "A group of machine guardians with special anti-gravity generators.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "strike",
             "rules": ["fly"],
             "keywords": ["Infantry"],
             "options": [
@@ -457,6 +494,30 @@
                     "reflexes": 5,
                     "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
                     "options": [{"addRule": ["extra_space", "regeneration_pods"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "doom_barge": {
+            "name": "Doom Barge",
+            "description": "A floating vehicle with large tesla cannons.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Doom Barge",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}, {"id": "gauss_cannon", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -787,7 +848,7 @@
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "antimatter_cannon": {"name": "Antimatter Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-        "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
+        "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "energy_staff_melee": {"name": "Energy Staff (Melee)", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_rod_melee": {"name": "Guardian Rod (Melee)", "attacks": 1, "short": "Melee", "ap": 2},
         "guardian_rod_shoot": {"name": "Guardian Rod (Shoot)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},

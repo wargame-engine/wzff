@@ -72,11 +72,11 @@
             "models": [
                 {
                     "name": "Soul Stealer Lord",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 0,
                     "fight": 8,
                     "defense": 8,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
@@ -127,6 +127,29 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": ["pistol", "blasting_charges", {"id": "piercing_claws", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cult_strategist": {
+            "name": "Cult Strategist",
+            "description": "A cult specialist who rallies the hordes of troops.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "cult_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Cult Strategist",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pistol", "blasting_charges", {"id": "ccw", "count": 3}],
+                    "options": [{"replaceRule": {"id": "cult_tactics", "x": 1}, "withRule": {"id": "cult_tactics", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -677,11 +700,7 @@
     },
     "rules": {
         "cult_speaker": {"name": "Cult Speaker", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
-        "chosen_abomination": {
-            "name": "Chosen Abomination",
-            "description": "Once per round, a friendly _Abominations_ unit within 6\" may gain +1 AP on all Melee weapons.",
-            "points": 10
-        },
+        "chosen_abomination": {"name": "Chosen Abomination", "description": "Once per round, a friendly _Abominations_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
         "swarm_melee_tactics": {
             "name": "Swarm Melee Tactics",
             "inputs": ["x"],
@@ -690,6 +709,12 @@
         },
         "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
         "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "cult_tactics": {
+            "name": "Cult Mind Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 24\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+ \n * +1 Courage \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 20}]
+        },
         "cult_melee_tactics": {
             "name": "Cult Melee Tactics",
             "inputs": ["x"],
@@ -697,7 +722,15 @@
             "points": ["rule.x", {"multiply": 10}]
         }
     },
-    "powers": {},
+    "relics": {
+        "strategist": {
+            "name": "Brilliant Strategist",
+            "rule": "legend_strategist",
+            "description": "Upgrade one Leader model with Brilliant Strategist.",
+            "flavor": "This model has an adept strategic mind.",
+            "points": 25
+        }
+    },
     "strategies": [
         {
             "name": "Ambush",

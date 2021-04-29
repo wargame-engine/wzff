@@ -2727,7 +2727,7 @@
             "name": "Courageous",
             "phase": "activation",
             "description": "Use when activating a unit. That unit gets +1 Courage.",
-            "flavor": "These marines are some of the most courage, fighting to the bitter end.",
+            "flavor": "These marines are some of the most courageous ever seen, fighting to the bitter end.",
             "cost": 1
         },
         {

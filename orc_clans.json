@@ -202,8 +202,23 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
-            "models": [{"name": "Goblin Leader", "courage": 5, "shoot": 6, "fight": 5, "defense": 5, "reflexes": 5, "movement": 5, "weapons": ["pistol", "ccw"], "min": 1, "max": 1}]
+            "keywords": ["Goblin", "Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
+            "models": [
+                {
+                    "name": "Goblin Leader",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["carbine", {"id": "ccw", "count": 3}],
+                    "options": [{"replaceRule": {"id": "goblin_tactics", "x": 1}, "withRule": {"id": "goblin_tactics", "x": 2}}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         "goblin_doctor": {
             "name": "Goblin Doctor",
@@ -212,17 +227,18 @@
             "max": 1,
             "subfactions": ["goblin_army"],
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
+            "keywords": ["Goblin", "Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Goblin Doctor",
-                    "courage": 5,
-                    "shoot": 6,
+                    "courage": 6,
+                    "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 5,
-                    "movement": 5,
-                    "weapons": ["heavy_pistol", "ccw"],
+                    "movement": 6,
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
                     "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol"]}],
                     "min": 1,
                     "max": 1
@@ -235,48 +251,54 @@
             "min": 1,
             "max": 1,
             "subfactions": ["goblin_army"],
-            "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 2}, {"id": "wounds", "x": 2}],
+            "category": "command",
+            "keywords": ["Goblin", "Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 5}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Goblin Mechanic",
-                    "courage": 5,
-                    "shoot": 6,
+                    "courage": 6,
+                    "shoot": 5,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 5,
-                    "movement": 5,
-                    "weapons": ["heavy_pistol", "ccw"],
-                    "options": [
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol", "teleport_pistol"]},
-                        {"addRule": ["heavy_armor"]},
-                        {"replaceRule": {"id": "repair", "x": "2"}, "withRule": {"id": "repair", "x": "3"}},
-                        {"addRule": ["energy_field"]}
-                    ],
+                    "movement": 6,
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
+                    "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol", "teleport_pistol"]}, {"addRule": ["heavy_armor"]}, {"addRule": ["energy_field"]}],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
+        "goblins": {
+            "name": "Goblins",
+            "description": "A group of independent goblins.",
+            "subfactions": ["goblin_army"],
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Goblin", "Infantry"],
+            "models": [{"name": "Goblin", "courage": 5, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["carbine", "ccw"], "min": 10, "max": 20}]
+        },
         "goblin_veterans": {
             "name": "Goblin Veterans",
             "subfactions": ["goblin_army"],
+            "keywords": ["Goblin", "Infantry"],
             "description": "A herd of veteran goblin fighters.",
             "min": 1,
             "max": 1,
             "category": "core",
-            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Goblin Veteran",
-                    "courage": 4,
-                    "shoot": 5,
+                    "courage": 5,
+                    "shoot": 6,
                     "fight": 5,
-                    "defense": 5,
-                    "reflexes": 4,
-                    "movement": 5,
-                    "weapons": ["goblin_rifle", "ccw"],
-                    "options": [{"addRule": ["heavy_armor"]}],
+                    "defense": 4,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["carbine", {"id": "ccw", "count": 2}],
+                    "options": [{"addRule": ["heavy_armor"], "modelLimit": "all"}],
                     "min": 10,
                     "max": 20
                 }
@@ -284,8 +306,9 @@
         },
         "goblin_herd": {
             "name": "Goblin Herd",
+            "keywords": ["Goblin", "Infantry"],
             "description": "A herd of lowly goblins.",
-            "subfactions": ["none", "goblin_army"],
+            "subfactions": ["none"],
             "min": 1,
             "max": 1,
             "category": "core",
@@ -836,7 +859,7 @@
             "description": "A small tank squadron built and crewed by goblins.",
             "subfactions": ["none", "goblin_army"],
             "category": "specialist",
-            "keywords": ["Vehicle"],
+            "keywords": ["Goblin", "Vehicle"],
             "min": 1,
             "max": 3,
             "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
@@ -860,7 +883,7 @@
             "name": "Goblin Mega Tank",
             "description": "A huge tank built and crewed by goblins.",
             "category": "heavy",
-            "keywords": ["Vehicle"],
+            "keywords": ["Goblin", "Vehicle"],
             "min": 1,
             "max": 1,
             "subfactions": ["none", "goblin_army"],
@@ -1399,7 +1422,7 @@
         }
     },
     "weapons": {
-        "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
+        "goblin_rifle": {"name": "Goblin Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 1},
         "smasher_cannon": {"name": "Smasher Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
         "tractor_beam": {"name": "Tractor Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
         "heavy_tractor_cannon": {"name": "Heavy Tractor Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 6, "rules": ["anti_air"]},
@@ -1428,7 +1451,7 @@
         "boarding_pistol": {"name": "Boarding Pistol", "attacks": 2, "short": 6, "ap": 2, "medium": 12},
         "boarding_gun": {"name": "Boarding Gun", "attacks": 2, "short": 12, "ap": 4, "medium": 24},
         "shock_rifle": {"name": "Shock Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 6},
-        "shock_gun": {"name": "Teleport Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "carbine": {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
@@ -1476,14 +1499,20 @@
         "goring_tusks": {"name": "Goring Tusks", "attacks": 1, "ap": 8, "short": "Melee"}
     },
     "rules": {
+        "goblin_tactics": {
+            "name": "Goblin Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Goblin_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "orc_tactics": {
             "name": "Orc Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly Infantry units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
         "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
-        "orc_idol": {"name": "Orc Idol", "description": "This model and friendly Infantry units within 6\" gain +1 Courage.", "points": 10},
+        "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},
         "precision_monicle": {"name": "Precision Monicle", "hidden": "true", "description": "This model gets +1 Shoot.", "description_short": "+1 Accuracy", "points": 5},
@@ -1526,6 +1555,30 @@
             "description": "Use when a Vehicle unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
             "cost": 2
         },
+        "shoot_them": {
+            "subfactions": ["goblin_army"],
+            "phase": "activation",
+            "name": "Tune Up",
+            "description": "Use before shooting with a unit. Add 3\" to the Short and Long ranges of all weapons.",
+            "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
+            "cost": 1
+        },
+        "deadly_in_numbers": {
+            "subfactions": ["goblin_army"],
+            "phase": "activation",
+            "name": "Deadly In Numbers",
+            "description": "Use before shooting with an _Infantry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
+            "cost": 1
+        },
+        "courageous": {
+            "subfactions": ["goblin_army"],
+            "name": "Courageous",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These goblins are some of the most courageous ever seen, fighting to the bitter end.",
+            "cost": 1
+        },
         "goblin_shield": {
             "name": "Goblin Shield",
             "phase": "activation",
@@ -1555,22 +1608,6 @@
             "flavor": "The toughest orcs never back down from a challenge.",
             "description": "Use when a unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
             "cost": 1
-        },
-        "shoot_them": {
-            "subfactions": ["goblin_army"],
-            "phase": "activation",
-            "name": "Shoot Them",
-            "description": "Use before shooting with a unit. It gains +3\" maximum range with all weapons.",
-            "flavor": "With the turn of a knob or the twisting of a dial, Goblins squeeze out the best in the equipment.",
-            "cost": 1
-        },
-        "deadly_in_numbers": {
-            "subfactions": ["goblin_army"],
-            "phase": "activation",
-            "name": "Deadly In Numbers",
-            "description": "Use before shooting with an _Infantry_ unit. It gets +1 to hit.",
-            "flavor": "With enough Goblins trained on a target, even they can do significant damage.",
-            "cost": 2
         },
         "quick_aim": {
             "subfactions": ["speed_focus"],

@@ -997,5 +997,14 @@
             "cost": 1
         },
         "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
+    },
+    "relics": {
+        "strategist": {
+            "name": "Brilliant Strategist",
+            "rule": "legend_strategist",
+            "description": "Upgrade one Leader model with Brilliant Strategist.",
+            "flavor": "This model has an adept strategic mind.",
+            "points": 25
+        }
     }
 }
