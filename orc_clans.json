@@ -1435,8 +1435,8 @@
         "mini_claw": {"name": "Mini-Claw", "attacks": 1, "short": "Melee", "ap": 5},
         "walker_claw": {"name": "Walker-Claw", "attacks": 1, "short": "Melee", "ap": 6},
         "mega_claw": {"name": "Mega Claw", "profiles": [
-            {"name": "Strike", "attacks": 5, "short": "Melee", "ap": 8},
-            {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 4}
+            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8},
+            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}
         ]},
         "mega_saw": {"name": "Mega-Saw", "attacks": 4, "short": "Melee", "ap": 6},
         "walker_saw": {"name": "Walker-Saw", "attacks": 1, "short": "Melee", "ap": 5},
