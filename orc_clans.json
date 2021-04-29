@@ -1431,7 +1431,7 @@
         "titan_gatling_gun": {"name": "Titan Gatling Gun", "attacks": 3, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "super_gatling_gun": {"name": "Super Gatling Gun", "attacks": 9, "short": 24, "medium": 48, "ap": 5},
         "titan_death_cannon": {"name": "Titan Death Cannon", "attacks": 3, "short": 18, "ap": 8, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
-        "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "deathstorm_plasma_cannon": {"name": "Deathstorm Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": ["overheat", {"id": "blast", "x": 3}]},
         "mini_claw": {"name": "Mini-Claw", "attacks": 1, "short": "Melee", "ap": 5},
         "walker_claw": {"name": "Walker-Claw", "attacks": 1, "short": "Melee", "ap": 6},
         "mega_claw": {"name": "Mega Claw", "profiles": [
