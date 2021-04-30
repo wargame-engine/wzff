@@ -7,9 +7,7 @@
     },
     "subfactions": {
         "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "background": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
-        "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."},
-        "neon_hive": {"name": "Urban", "id": "neon_hive", "background": "This section of the Imperial Defense Force recruits the elite, drafts the reasonable, and drags the hivescum from a large, heavily overpopulated neon-lit world of Megacities and gang-warfare."}
-    },
+        "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."}    },
     "units": {
         "commander": {
             "name": "Company Commander",
