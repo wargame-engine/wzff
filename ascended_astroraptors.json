@@ -174,6 +174,7 @@
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["marine_rifle"]},
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "laser_pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
                         {
                             "replaceWeapon": {"id": "ccw", "count": 2},
                             "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
@@ -886,9 +887,9 @@
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
-        "laser_carbine": {"name": "Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
+        "laser_carbine": {"name": "Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "shrapnel_shotgun": {"name": "Shrapnel Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 2}]},
-        "heavy_laser_carbine": {"name": "Supercharged Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]}
+        "heavy_laser_carbine": {"name": "Supercharged Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}
     },
     "rules": {
         "raptor_tactics": {

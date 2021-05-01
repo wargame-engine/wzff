@@ -103,12 +103,22 @@
             "description": "The Elven Keepers are a race of elves who are tasked with keeping the grand elf library. They have a unique close combat and fast oriented style with deadly weaponry and quick jetbike and hovercraft vehicles."
         },
         "tao_federation": {
+            "alliance": "federation",
             "name": "Tao Federation",
             "id": "tao_federation",
             "url": "tao_federation.json",
             "color": "#008080",
             "version": "0.1",
             "description": "The Tao Federation is an alliance of several alien species to band together in the name of survival and prosperity. The Tao rely on a mix of advanced battle warsuits and deadly pulse weaponry to defeat their enemies."
+        },
+        "ascended_astroraptors": {
+            "alliance": "federation",
+            "name": "Ascended Astro-Raptors",
+            "id": "ascended_astroraptors",
+            "url": "ascended_astroraptors.json",
+            "color": "#59ffff",
+            "version": "0.1",
+            "description": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor."
         },
         "knight_lords": {
             "name": "Knight Lords",
@@ -231,7 +241,7 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
+    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "The Federation"}},
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},
