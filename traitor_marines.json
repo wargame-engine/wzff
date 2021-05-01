@@ -9,18 +9,6 @@
         "terror_focus": {"name": "Terror", "id": "terror_focus", "color": "#18abcc"},
         "morale_focus": {"name": "Morale", "id": "morale_focus", "color": "#18abcc"}
     },
-    "subfactions": {
-        "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
-        "stealth_focus": {"name": "Deception", "id": "stealth_focus", "color": "#6a0001", "background": "Traitor marines focused on stealth and deception to defeat their foes."},
-        "pestilence_focus": {
-            "name": "Pestilence",
-            "id": "pestilence_focus",
-            "color": "#6a0001",
-            "restricted": true,
-            "background": "Traitor marines focused on using disease and decay to defeat their foes."
-        },
-        "change_traitors": {"name": "Psychic", "id": "change_traitors", "color": "#18abcc", "restricted": true, "background": "Traitor marines focused on using powerful magic to defeat their foes."}
-    },
     "units": {
         "lord_on_infernal_stalker": {
             "name": "Traitor Lord on Infernal Stalker",

@@ -3,12 +3,6 @@
     "name": "Dimensional Horrors",
     "author": "Caliallie#6369",
     "background": "Mutated servants of the dark gods able to materialize anywhere their influence is strong enough.",
-    "subfactions": {
-        "change": {"name": "Magic", "id": "change", "color": "#90305d", "background": ""},
-        "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "background": ""},
-        "wrath": {"name": "Wrath", "id": "wrath", "color": "#547588", "background": ""},
-        "excess": {"name": "Excess", "id": "excess", "color": "#547588", "background": ""}
-    },
     "units": {
         "greater_daemon_of_change": {
             "name": "Greater Daemon of Change",

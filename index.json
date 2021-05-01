@@ -46,7 +46,25 @@
             "color": "#231f20",
             "alliance": "traitors",
             "version": "0.1.1",
-            "description": "The traitor marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry."
+            "description": "The traitor marines are a band of marines that betrayed the Human Empire and now cooperate with demons and other heretics to pursue their own desires. They have a mix of deadly beasts, dangerous war machines and tough marine infantry.",
+            "subfactions": {
+                "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
+                "stealth_focus": {"name": "Deception", "id": "stealth_focus", "color": "#6a0001", "background": "Traitor marines focused on stealth and deception to defeat their foes."},
+                "pestilence_focus": {
+                    "name": "Pestilence",
+                    "id": "pestilence_focus",
+                    "color": "#6a0001",
+                    "restricted": true,
+                    "background": "Traitor marines focused on using disease and decay to defeat their foes."
+                },
+                "change_traitors": {
+                    "name": "Psychic",
+                    "id": "change_traitors",
+                    "color": "#18abcc",
+                    "restricted": true,
+                    "background": "Traitor marines focused on using powerful magic to defeat their foes."
+                }
+            }
         },
         "dimensional_horrors": {
             "name": "Dimensional Horrors",
@@ -55,7 +73,13 @@
             "color": "#90305d",
             "alliance": "traitors",
             "version": "0.1",
-            "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes."
+            "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
+            "subfactions": {
+                "change": {"name": "Magic", "id": "change", "color": "#90305d", "background": ""},
+                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "background": ""},
+                "wrath": {"name": "Wrath", "id": "wrath", "color": "#547588", "background": ""},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "background": ""}
+            }
         },
         "undying_machines": {
             "name": "Undying Machines",
@@ -63,7 +87,11 @@
             "url": "undying_machines.json",
             "color": "#1e7331",
             "version": "0.1.2",
-            "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles."
+            "description": "The Undying Machines are a race of once-people now turned into machine beings that are immortal. The Undying machines rely on waves of reanimating machines and advanced ancient battle technology to win their battles.",
+            "subfactions": {
+                "solar_fire": {"name": "Solar Fire", "id": "solar_fire", "background": "Undying Machines focused on overwhelming firepower."},
+                "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "Undying Machines focused on deadly close assaults."}
+            }
         },
         "elven_keepers": {
             "name": "Elven Keepers",
@@ -109,7 +137,15 @@
             "color": "#9a1115",
             "alliance": "imperial_alliance",
             "version": "0.1",
-            "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies."
+            "description": "The Machine Guilds are a unique group of several different but organized planets which create and maintain all sort sof wild war machines and contraptions. The Machine Guilds rely on technological augmentation and deadly weapons to destroy their enemies.",
+            "subfactions": {
+                "stealth_masters": {
+                    "name": "Stealth",
+                    "id": "stealth_masters",
+                    "color": "#231f20",
+                    "background": "A Machine Guild focused on stealth uses surprise and infiltration to defeat its foes."
+                }
+            }
         },
         "imperial_defense_force": {
             "name": "Imperial Defence Force",
@@ -118,7 +154,18 @@
             "color": "#314821",
             "alliance": "imperial_alliance",
             "version": "0.1",
-            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire."
+            "description": "The Imperial Defense Force is the backbone defense force of the many civilian planets of the empire. They are the first to respond to any miliary threats. They rely on hardy battle tanks and good old artillery shells along with waves of human soldiers to defend the Empire.",
+            "hidden_subfactions": {
+                "neon_hive": {
+                    "name": "Urban",
+                    "id": "neon_hive",
+                    "background": "This section of the Imperial Defense Force recruits the elite, drafts the reasonable, and drags the hivescum from a large, heavily overpopulated neon-lit world of Megacities and gang-warfare."
+                }
+            },
+            "subfactions": {
+                "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "background": "An Imperial Defense force trained and drilled in deadly close combat fighting."},
+                "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Imperial Defense force with the best shooting skill in the galaxy."}
+            }
         },
         "loyal_marines": {
             "name": "Loyal Marines",
@@ -127,7 +174,27 @@
             "color": "#0d407f",
             "alliance": "imperial_alliance",
             "version": "0.1.3",
-            "description": "The Loyal Marines are the pride of the Human Empire and its elite order-keeping force should they need to be deployed. The Loyal Marines rely on tough infantry and somewhat advanced vehicle technology to outsmart and eliminate their enemies."
+            "description": "The Loyal Marines are the pride of the Human Empire and its elite order-keeping force should they need to be deployed. The Loyal Marines rely on tough infantry and somewhat advanced vehicle technology to outsmart and eliminate their enemies.",
+            "subfactions": {
+                "combined_arms_focus": {"name": "Combined Arms", "id": "combined_arms_focus", "color": "#ffffff", "background": "Loyal Marines who specialize in combined arms tactics."},
+                "zeal_focus": {"name": "Zeal", "id": "zeal_focus", "color": "#ffffff", "background": "Loyal Marines with a righteous zeal."},
+                "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."},
+                "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on sieges and defeating entrenched enemies."},
+                "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "color": "#f0c251", "background": "Loyal Marines that are tougher than the rest."},
+                "forge_focus": {"name": "Craftsmen", "id": "forge_focus", "color": "#f0c251", "background": "Loyal Marines that are expert craftsmen and tough in battle."},
+                "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "background": "Loyal Marines focused on stealth and ambush tactics."},
+                "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
+                "wolf_marines": {
+                    "name": "Counter-attack",
+                    "id": "wolf_marines",
+                    "color": "#547588",
+                    "background": "Loyal Marines that specialize in brutal counter-assaults in close combat.",
+                    "restricted": true
+                },
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true},
+                "psychic_marines": {"name": "Psychic", "id": "psychic_marines", "color": "#C0C0C0", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
+                "alien_hunters": {"name": "Alien Hunters", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true}
+            }
         },
         "throne_guardians": {
             "name": "Throne Guardians",
@@ -145,7 +212,13 @@
             "url": "orc_clans.json",
             "color": "#50974A",
             "version": "0.1",
-            "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes."
+            "description": "The Orc Clans are a mostly disconnected species of clans who are constantly at war with others and each other. The Orc Clans rely on massive all-out assaults and cobbled-together technology and vehicles to outlast and overwhelm their foes.",
+            "subfactions": {
+                "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
+                "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
+                "speed_focus": {"name": "Speed", "id": "speed_focus", "background": "An Orc Clan with a need for speed."},
+                "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "background": "An Orc Clan with an addiction for shiny weapons."}
+            }
         },
         "imperial_inquisition": {
             "name": "Imperial Inquisition",
@@ -158,7 +231,6 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "unfinished_factions": {"alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"}},
     "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
     "categories": {
         "command": {"name": "Command"},
@@ -175,25 +247,57 @@
             "name": "Battle (Core)",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 5}, "specialist": {"max": 3}, "strike": {"max": 3}, "heavy": {"max": 2}, "transport": {"max": 5}, "fortification": {"max": 4}}
+            "categories": {
+                "command": {"min": 1, "max": 2},
+                "core": {"min": 2, "max": 5},
+                "specialist": {"max": 3},
+                "strike": {"max": 3},
+                "heavy": {"max": 2},
+                "transport": {"max": 5},
+                "fortification": {"max": 4}
+            }
         },
         "strike": {
             "name": "Strike (Core)",
             "cost": 1,
             "description": "A strike force for outflanking or shock assaulting.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 3}, "specialist": {"max": 3}, "strike": {"min": 2, "max": 5}, "heavy": {"max": 2}, "transport": {"max": 5}, "fortification": {"max": 4}}
+            "categories": {
+                "command": {"min": 1, "max": 2},
+                "core": {"max": 3},
+                "specialist": {"max": 3},
+                "strike": {"min": 2, "max": 5},
+                "heavy": {"max": 2},
+                "transport": {"max": 5},
+                "fortification": {"max": 4}
+            }
         },
         "specialist": {
             "name": "Specialist (Core)",
             "cost": 1,
             "description": "An elite force to deal with specific targets.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 3}, "specialist": {"min": 2, "max": 5}, "strike": {"max": 3}, "heavy": {"max": 2}, "transport": {"max": 5}, "fortification": {"max": 4}}
+            "categories": {
+                "command": {"min": 1, "max": 2},
+                "core": {"max": 3},
+                "specialist": {"min": 2, "max": 5},
+                "strike": {"max": 3},
+                "heavy": {"max": 2},
+                "transport": {"max": 5},
+                "fortification": {"max": 4}
+            }
         },
         "heavy": {
             "name": "Heavy (Core)",
             "cost": 2,
             "description": "A heavy force to pack a punch on the field.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 2}, "specialist": {"max": 3}, "strike": {"max": 3}, "heavy": {"min": 2, "max": 4}, "transport": {"max": 4}, "fortification": {"max": 4}}
+            "categories": {
+                "command": {"min": 1, "max": 2},
+                "core": {"max": 2},
+                "specialist": {"max": 3},
+                "strike": {"max": 3},
+                "heavy": {"min": 2, "max": 4},
+                "transport": {"max": 4},
+                "fortification": {"max": 4}
+            }
         },
         "support": {
             "name": "Support (Core)",
@@ -259,10 +363,7 @@
         "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1},
         "veteran_marine_rifle": {"name": "Veteran Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
         "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 12, "medium": 24, "long": 30, "ap": 1, "rules": ["assault"]},
-        "storm_rifle": {
-            "name": "Storm Rifle",
-            "profiles": [{"name": "Burst", "attacks": 2, "short": 12, "medium": 24}, {"name": "Single", "attacks": 1, "short": 12, "medium": 24, "ap": 1}]
-        },
+        "storm_rifle": {"name": "Storm Rifle", "profiles": [{"name": "Burst", "attacks": 2, "short": 12, "medium": 24}, {"name": "Single", "attacks": 1, "short": 12, "medium": 24, "ap": 1}]},
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24},
         "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
@@ -298,10 +399,13 @@
         "aa_light_machinegun": {"name": "AA Light Machingun", "attacks": 3, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "twin_aa_light_machinegun": {"name": "Twin AA Light Machingun", "attacks": 6, "short": 18, "medium": 36, "rules": ["anti_air"]},
         "sniper_rifle": {"name": "Sniper Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["sniper"]},
-        "prime_sniper_rifle": {"name": "Prime Sniper Rifle", "profiles": [
-            {"name": "Execution", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["sniper"]},
-            {"name": "Frag", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper", {"id": "blast", "x": 2}]}
-        ]},
+        "prime_sniper_rifle": {
+            "name": "Prime Sniper Rifle",
+            "profiles": [
+                {"name": "Execution", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["sniper"]},
+                {"name": "Frag", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper", {"id": "blast", "x": 2}]}
+            ]
+        },
         "light_laser_cannon": {"name": "Light Laser Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
         "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "rending"]},
@@ -567,16 +671,16 @@
             ]
         },
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8,  "rules": [{"id": "blast", "x": 3}]},
+        "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 3}]},
         "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": []},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
-        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3,  "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "rider_lance": {"name": "Rider Lance", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
         "heavy_shotgun": {"name": "Heavy Shotgun", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "wrist_grenades": {"name": "Wrist Grenades", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 3}]},
         "heavy_volley_gun": {"name": "Heavy Volley Gun", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
-        "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5,  "short": "Melee"},
+        "ogre_maul": {"name": "Ogre Maul", "attacks": 2, "ap": 5, "short": "Melee"},
         "light_battle_cannon": {"name": "Light Battle Cannon", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "acid_cannon": {"name": "Acid Cannon", "attacks": 3, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "poison", "x": 3}]},
         "flamestorm_cannon": {"name": "Flamestorm Cannon", "attacks": 6, "short": 9, "medium": 18, "ap": 3, "rules": []},
@@ -588,34 +692,19 @@
         "twin_shard_mortar": {"name": "Twin Shard Mortar", "attacks": 2, "ap": 2, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "missile_rack": {
             "name": "Missile Rack",
-            "profiles": [
-                {"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]},
-                {"name": "AT", "attacks": 1, "short": 24, "medium": 48,  "ap": 6}
-            ]
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
         }
     },
     "rules": {
         "wings": {"name": "Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
-        "scrambler": {
-            "name": "Scrambler",
-            "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.",
-            "points": 5
-        },
-        "banner": {
-            "name": "Banner",
-            "description": "This unit may re-roll a single failed Courage test when removing Shock.",
-            "points": 5
-        },
+        "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
+        "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
         "net": {
             "name": "Net",
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
             "points": 1
         },
-        "web": {
-            "name": "Web",
-            "description": "Units hit by this weapon lose 2\" from their next move.",
-            "points": 2
-        },
+        "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 2},
         "assault_ramp": {"name": "Assault Ramp", "description": "Units disembarking from this unit gain +3\" of Movement for that action.", "points": 5},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},

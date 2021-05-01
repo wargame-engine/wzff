@@ -4,12 +4,6 @@
     "version": 0.1,
     "author": "guitarninja#5707",
     "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
-    "subfactions": {
-        "goblin_army": {"name": "Goblin", "id": "goblin_army", "color": "#5f9370", "background": "An Orc Clan with an abundance of powerful and well-equipped goblins.", "restricted": true},
-        "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "An especially tough Orc clan with a focus on close combat."},
-        "speed_focus": {"name": "Speed", "id": "speed_focus", "background": "An Orc Clan with a need for speed."},
-        "shooting_focus": {"name": "Shooting", "id": "shooting_focus", "background": "An Orc Clan with an addiction for shiny weapons."}
-    },
     "hidden_units": {
         "grand_warlord": {
             "name": "Grand Warlord",

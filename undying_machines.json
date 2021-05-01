@@ -3,7 +3,6 @@
     "name": "Undying Machines",
     "author": "guitarninja#5707",
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
-    "subfactions": {"solar_fire": {"name": "Solar Fire", "id": "solar_fire", "background": "Undying Machines focused on overwhelming firepower."}, "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "Undying Machines focused on deadly close assaults."}},
     "units": {
         "command_barge": {
             "name": "Command Barge",
