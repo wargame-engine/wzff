@@ -118,7 +118,11 @@
             "url": "ascended_astroraptors.json",
             "color": "#59ffff",
             "version": "0.1",
-            "description": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor."
+            "description": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
+            "hidden_subfactions": {
+                "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
+                "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
+            }
         },
         "knight_lords": {
             "name": "Knight Lords",
@@ -241,7 +245,7 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "The Federation"}},
+    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "Federated Species"}},
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},

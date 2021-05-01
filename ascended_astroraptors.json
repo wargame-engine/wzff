@@ -3,10 +3,6 @@
     "name": "Ascended Astro-Raptors",
     "background": "Uplifted millenia ago by an unknown precursor race, the Ascended Astro-Raptors advanced from feral beasts to exploring the stars with high-tech lasers and armor.",
     "author": "yrcrazypa#1716",
-    "subfactions": {
-        "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "background": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
-        "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "background": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
-    },
     "units": {
         "commander": {
             "name": "Raptor Commander",
