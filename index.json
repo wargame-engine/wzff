@@ -245,7 +245,7 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "The Federation"}},
+    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "Federated Species"}},
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},
