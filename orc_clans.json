@@ -992,7 +992,7 @@
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "heavy_flamethrower", "count": 1}],
-                    "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": [{"id": "strider", "name": "Tracks"}]}],
+                    "options": [{"replaceWeapon": "heavy_flamethrower", "withWeapon": ["twin_rocket_launcher", "twin_heavy_machinegun"]}, {"addRule": [{"id": "tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1016,7 +1016,7 @@
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "shock_rifle", "count": 1, "mount": ["Front"]}, {"id": "rocket_launcher", "count": 1, "mount": ["Front"]}],
-                    "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
+                    "options": [{"addRule": [{"id": "tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1040,7 +1040,7 @@
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "beast_cannon", "count": 1, "mount": ["Front"]}, {"id": "beast_launcher", "count": 1}],
-                    "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
+                    "options": [{"addRule": [{"id": "tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1064,7 +1064,7 @@
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "rivet_cannon", "count": 1}, {"id": "frags", "count": 1}],
-                    "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
+                    "options": [{"addRule": [{"id": "tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1077,7 +1077,7 @@
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
-            "rules": [{"id": "impact", "x": 3}, "strider", "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, "tracks", "vulnerable_side_rear", "damage_table_vehicle"],
             "models": [
                 {
                     "name": "Snazz Buggy",
@@ -1111,7 +1111,7 @@
                     "reflexes": 5,
                     "movement": 10,
                     "weapons": [{"id": "twin_rocket_launcher", "count": 1, "mount": ["Front"]}, {"id": "twin_heavy_machinegun", "count": 2, "mount": ["Front"]}],
-                    "options": [{"addRule": [{"id": "strider", "name": "Tracks"}]}],
+                    "options": [{"addRule": [{"id": "tracks"}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1508,6 +1508,7 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         },
+        "tracks": {"name": "Tracks", "description": "This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
         "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
         "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
