@@ -193,7 +193,7 @@
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
                     ],
                     "rules": [],
-                    "min": 9,
+                    "min": 4,
                     "max": 9
                 },
                 {
