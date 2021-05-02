@@ -611,8 +611,8 @@
         "heavy_plasma_rifle": {
             "name": "Heavy Plasma Rifle",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 15, "medium": 30, "ap": 6},
-                {"name": "Overcharge", "attacks": 1, "short": 15, "medium": 30, "ap": 7, "rules": [{"id": "overheat"}]}
+                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
+                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "overheat"}]}
             ]
         },
         "plasma_assault_rifle": {
