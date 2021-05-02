@@ -604,7 +604,7 @@
         "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
         "prime_sniper_carbine": {"name": "Sniper Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "sniper", "rending"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "ap": 1, "rules": ["pistol"]},
-        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
+        "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
         "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "profiles": [{"name": "Single", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["assault", "fusion"]}, {"name": "Rapid", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "fusion"]}]},
