@@ -1,6 +1,7 @@
 {
     "name": "Grim Darkness",
     "id": "grim_darkness",
+    "author": "guitarninja#5707",
     "reportUrl": "https://github.com/wargame-engine/wzff/issues",
     "factions": {
         "high_elves": {
