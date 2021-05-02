@@ -440,9 +440,9 @@
         "combi_plasma": {
             "name": "Combi-plasma",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}]},
-                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1}
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
             ]
         },
         "twin_plasma_rifle": {
@@ -475,7 +475,7 @@
         "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
         "combi_flamer": {
             "name": "Combi-flamer",
-            "profiles": [{"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [{"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
         },
         "combi_fusion": {
             "name": "Combi-fusion",
