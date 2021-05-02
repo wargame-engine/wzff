@@ -306,7 +306,7 @@
             "category": "core",
             "options": [
                 {
-                    "modelLimit": "1/10",
+                    "modelLimit": "1/5",
                     "limit": 1,
                     "replaceWeapon": "marine_rifle",
                     "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "autocannon", "minigun", "plasma_rifle", "flamethrower", "fusion_rifle"]
@@ -1023,25 +1023,24 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": [{"id": "brute_fist", "count": 4}],
+                    "weapons": [{"id": "brute_fist", "count": 4}, "heavy_fusion_rifle"],
                     "options": [
                         {
-                            "replaceWeapon": {"id": "brute_fist", "count": 2},
+                            "replaceWeapon": "heavy_fusion_rifle",
                             "withWeapon": [
-                                [{"id": "brute_fist", "count": 2}, "twin_marine_rifle"],
-                                [{"id": "brute_fist", "count": 2}, "heavy_flamethrower"],
-                                {"id": "brute_flail", "count": 2},
-                                {"id": "brute_hammer", "count": 2},
+                                {"id": "brute_fist", "count": 4},
+                                [{"id": "brute_fist", "count": 4}, "twin_marine_rifle"],
+                                [{"id": "brute_fist", "count": 4}, "heavy_flamethrower"],
+                                {"id": "brute_flail", "count": 4},
+                                {"id": "brute_hammer", "count": 4},
                                 "plasma_cannon",
                                 "missile_launcher",
-                                "heavy_fusion_rifle",
                                 "reaper_cannon",
                                 "twin_heavy_machinegun",
                                 "twin_laser_cannon"
                             ]
                         }
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -1495,7 +1494,7 @@
     "strategies": {
         "hate": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Hate",
             "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
@@ -1503,7 +1502,7 @@
         },
         "daemonforge": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
             "description": "Use before a Vehicle unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",

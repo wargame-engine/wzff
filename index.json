@@ -511,7 +511,7 @@
         "mutated_guns": {"name": "Mutated Guns", "attacks": 3, "short": 12, "medium": 24, "ap": 6, "rules": ["rending"]},
         "havoc_missiles": {"name": "Havoc Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "demolition_cannon": {"name": "Demolition Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": [{"id": "blast", "x": 3}]},
-        "brute_fist": {"name": "Brute Fist", "attacks": 1, "short": "Melee", "ap": 7},
+        "brute_fist": {"name": "Brute Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "brute_flail": {"name": "Brute Flail", "attacks": 1, "short": "Melee", "ap": 4},
         "brute_hammer": {"name": "Brute Hammer", "attacks": 1, "short": "Melee", "ap": 9},
         "bane_flamethrower": {"name": "Bane Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4},

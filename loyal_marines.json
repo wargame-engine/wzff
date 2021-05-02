@@ -1131,7 +1131,7 @@
                             "replaceWeapon": {"id": "fusion_rifle", "count": 2},
                             "withWeapon": [{"id": "heavy_machinegun", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]
                         },
-                        {"replaceWeapon": {"id": "heavy_fist", "count": 2}, "withWeapon": {"id": "assault_drill", "count": 3}}
+                        {"replaceWeapon": {"id": "heavy_fist", "count": 3}, "withWeapon": {"id": "assault_drill", "count": 3}}
                     ]
                 }
             ]
