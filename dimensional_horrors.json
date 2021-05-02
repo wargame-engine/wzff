@@ -672,16 +672,16 @@
             ]
         },
         "magical_ccw": {"name": "Magical CCW", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
-        "twisting_flames": {"name": "Twisting Flames", "attacks": 2, "short": 9, "medium": 18},
+        "twisting_flames": {"name": "Twisting Flames", "attacks": 2, "short": 9, "medium": 18, "rules": ["flame"]},
         "changing_flames": {
             "name": "Changing Flames",
             "profiles": [
-                {"name": "Blue Flame", "attacks": 3, "short": 9, "medium": 18, "ap": 7},
-                {"name": "Pink Flame", "attacks": 6, "short": 6, "medium": 12, "ap": 3, "rules": []}
+                {"name": "Blue Flame", "attacks": 3, "short": 9, "medium": 18, "ap": 7, "rules": ["flame"]},
+                {"name": "Pink Flame", "attacks": 6, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]}
             ]
         },
         "flame_tongues": {"name": "Flame Tongues", "attacks": 3, "short": "Melee", "ap": 2},
-        "flickering_flames": {"name": "Flickering Flames", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
+        "flickering_flames": {"name": "Flickering Flames", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "flame"]},
         "fangs_and_claws": {"name": "Fangs and Claws", "attacks": 9, "short": "Melee", "ap": 7},
         "power_cannon": {"name": "Power Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 4},
         "power_claw": {"name": "Power Claw", "attacks": 1, "short": "Melee", "ap": 6},
