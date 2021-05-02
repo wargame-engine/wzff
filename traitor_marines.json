@@ -1536,8 +1536,8 @@
             "subfactions": ["stealth_focus"],
             "name": "Decoy",
             "phase": "activation",
-            "description": "Our commander has been defeated, probably?",
-            "flavor": "Once per game, when a unit with the Leader rule is defeated, swap its place with another Leader. Then defeat the unit that was swapped with instead.",
+            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly _Infantry_ unit within 6\" of it. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "flavor": "Unsure of which is the real leader, enemies often get confused and shoot a different target.",
             "cost": 2
         },
         "psychic_channeling": {
