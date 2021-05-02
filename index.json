@@ -158,7 +158,9 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "unfinished_factions": {"alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"}},
+    "unfinished_factions": {
+        "alien_cults": {"name": "Alien Cults", "id": "alien_cults", "url": "alien_cults.json", "color": "#509ba9", "alliance": "alien_swarm"},
+    "rebels": {"name": "Rebels", "id": "rebels", "url": "rebels.json", "color": "#509ba9"}},
     "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}},
     "categories": {
         "command": {"name": "Command"},
@@ -374,6 +376,7 @@
         "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 2, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24},
         "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24},
+        "craft_defense_rifle": {"name": "Craft Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["unreliable"]},
         "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},
         "defense_carbine": {"name": "Defense Carbine", "attacks": 1, "short": 12, "medium": 18, "rules": ["assault"]},
         "craft_defense_carbine": {"name": "Craftmade Defense Carbine", "attacks": 1, "short": 12, "medium": 18, "rules": ["assault", "unreliable"]},
