@@ -114,7 +114,7 @@
         },
         "ascended_astroraptors": {
             "alliance": "federation",
-            "name": "Ascended Astro-Raptors",
+            "name": "Ascended Astro-Raptors (Beta)",
             "id": "ascended_astroraptors",
             "url": "ascended_astroraptors.json",
             "color": "#4f9ae0",

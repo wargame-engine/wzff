@@ -1937,7 +1937,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1969,7 +1969,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
