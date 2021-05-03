@@ -302,7 +302,7 @@
         },
         "heavy": {
             "name": "Heavy (Core)",
-            "cost": 2,
+            "cost": 1,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
                 "command": {"min": 1, "max": 2},
