@@ -59,6 +59,8 @@
                                 {"id": "energy_mace", "count": 4},
                                 {"id": "energy_axe", "count": 4},
                                 {"id": "energy_sword", "count": 4},
+                                {"id": "chainfist", "count": 4},
+                                {"id": "chainaxe", "count": 4},
                                 {"id": "energy_fist", "count": 4},
                                 {"id": "energy_hammer", "count": 4},
                                 {"id": "energy_claws", "count": 5}
@@ -1144,11 +1146,11 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": ["crab_cannon", {"id": "crab_claw", "count": 2}, "havoc_missiles", "reaper_cannon"],
+                    "weapons": ["crab_cannon", {"id": "crab_claw"}, "havoc_missiles", "twin_laser_cannon"],
                     "options": [
                         {"addRule": ["doom_siren"]},
-                        {"replaceWeapon": "havoc_missiles", "withWeapon": [{"id": "crab_flail", "count": 3}, "twin_heavy_flamethrower"]},
-                        {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
+                        {"replaceWeapon": "havoc_missiles", "withWeapon": [{"id": "crab_flail", "count": 6}, "twin_heavy_flamethrower"]},
+                        {"replaceWeapon": "twin_laser_cannon", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun"]}
                     ],
                     "rules": [],
                     "min": 1,

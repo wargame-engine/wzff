@@ -378,7 +378,7 @@
         "marine_rifle": {"name": "Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "veteran_marine_rifle": {"name": "Veteran Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
         "auto_rifle": {"name": "Auto Rifle", "attacks": 2, "short": 12, "medium": 24, "long": 30, "ap": 1, "rules": ["assault"]},
-        "storm_rifle": {"name": "Storm Rifle", "profiles": [{"name": "Single", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}, {"name": "Burst", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire"]}]},
+        "storm_rifle": {"name": "Storm Rifle", "attacks": 1, "short": 6, "ap": 1, "medium": 12, "rules": ["rapid_fire"]},
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24, "rules": ["rapid_fire"]},
         "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
@@ -490,7 +490,7 @@
         "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
         "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 2, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
+        "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 5, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "assault_rifle": {"name": "Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["assault"]},
@@ -503,7 +503,7 @@
         "daemon_sword": {"name": "Daemon Sword", "attacks": 1, "short": "Melee", "ap": 5},
         "daemon_axe": {"name": "Daemon Axe", "attacks": 1, "short": "Melee", "ap": 6},
         "daemon_claws": {"name": "Daemon Claws", "attacks": 1, "short": "Melee", "ap": 3},
-        "reaper_cannon": {"name": "Reaper Autocannon", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
+        "reaper_cannon": {"name": "Reaper Autocannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
         "heavy_flamethrower": {"name": "Heavy Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
         "mutated_claws": {"name": "Mutated Claws", "attacks": 2, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "huge_mutated_claw": {"name": "Huge Mutated Claw", "attacks": 1, "short": "Melee", "ap": 3},
@@ -530,10 +530,14 @@
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
         "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
-        "crab_claw": {"name": "Crab Claw", "attacks": 1, "short": "Melee", "ap": 7},
+        "crab_claw": {"name": "Crab Claw", "profiles": [{
+            "name": "Strike", "attacks": 3, "short": "Melee", "ap": 7
+        }, {
+            "name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3
+        }]},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
-        "crab_flail": {"name": "Crab Flail", "attacks": 1, "short": "Melee", "ap": 6},
+        "crab_flail": {"name": "Crab Flail", "attacks": 1, "short": "Melee", "ap": 3},
         "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
         "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},
         "gravity_pistol": {"name": "Gravity Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["gravity"]},
@@ -814,7 +818,7 @@
         "psychic": {
             "name": "Psychic",
             "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
+            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. On a roll of 10, the user takes 2 Shock. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
             "points": [15, {"multiply": "rule.x"}]
         },
         "psychic_prowess": {
