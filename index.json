@@ -259,7 +259,7 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Battle (Core)",
+            "name": "Generalist (Core)",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
