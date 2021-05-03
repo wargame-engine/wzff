@@ -331,7 +331,7 @@
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "models": [
                 {
                     "name": "Engineer",
@@ -1903,6 +1903,7 @@
             "rules": ["aircraft", "damage_table_aircraft", "hover_mode", {"id": "transport", "x": 12}, {"id": "walker_transport", "x": 1}],
             "category": "strike",
             "keywords": ["Vehicle", "Aircraft"],
+            "subfactions": ["none", "psychic_marines", "wolf_marines", "alien_hunters"],
             "min": 1,
             "max": 1,
             "models": [
