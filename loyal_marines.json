@@ -2100,7 +2100,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2140,7 +2140,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2164,7 +2164,7 @@
             "models": [
                 {
                     "name": "Teleport Sergeant",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -2178,14 +2178,14 @@
                 },
                 {
                     "name": "Teleport Marine",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2230,7 +2230,7 @@
                     "movement": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2273,7 +2273,7 @@
                     "movement": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": "2/5"}],
                     "rules": [],
                     "min": 2,
                     "max": 9
