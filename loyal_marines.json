@@ -7,6 +7,28 @@
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
     "units": {
+        "arch_marine_tactics": {
+            "name": "Arch-Marine of Tactics",
+            "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "arch_tactics", "x": 2}],
+            "subfactions": ["none"],
+            "models": [
+                {
+                    "name": "Arch-Marine of Tactics",
+                    "courage": 8,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 11,
+                    "reflexes": 7,
+                    "movement": 6,
+                    "weapons": [{"id": "arch_fist_fight", "count": 2}, {"id": "empire_sword"}, {"id": "arch_fist_shoot"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "grav_captin": {
             "name": "Prime Captain (Grav Armor)",
             "description": "A fearless next-generation leader in heavy Grav armor.",
@@ -321,15 +343,21 @@
                     "reflexes": 6,
                     "weapons": ["marine_pistol", "at_grenade", {"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "twin_marine_rifle", "gravity_pistol", "marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma"]},
-                        {"replaceWeapon": {"id": "axe_halberd", "count": 3}, "withWeapon": [
-                            {"id": "energy_mace", "count": 3},
-                            {"id": "energy_axe", "count": 3},
-                            {"id": "energy_sword", "count": 3},
-                            {"id": "energy_fist", "count": 3},
-                            {"id": "energy_hammer", "count": 3},
-                            {"id": "energy_claws", "count": 3}
-                        ]}
+                        {
+                            "replaceWeapon": "marine_pistol",
+                            "withWeapon": ["plasma_pistol", "flamethrower_pistol", "twin_marine_rifle", "gravity_pistol", "marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma"]
+                        },
+                        {
+                            "replaceWeapon": {"id": "axe_halberd", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -448,9 +476,7 @@
             "name": "Loyal Marines",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -535,7 +561,12 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [
-                        {"modelLimit": 1, "limit": 1, "replaceWeapon": "marine_rifle", "withWeapon": ["heavy_machinegun", "missile_launcher", "plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]}
+                        {
+                            "modelLimit": 1,
+                            "limit": 1,
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["heavy_machinegun", "missile_launcher", "plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]
+                        }
                     ],
                     "min": 4,
                     "max": 9
@@ -582,7 +613,19 @@
                             "modelLimit": 2,
                             "limit": 1,
                             "replaceWeapon": "veteran_marine_rifle",
-                            "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon", "plasma_rifle", "flamethrower", "heavy_flamethrower", "fusion_rifle", "gravity_rifle"]
+                            "withWeapon": [
+                                "heavy_machinegun",
+                                "missile_launcher",
+                                "laser_cannon",
+                                "heavy_fusion_rifle",
+                                "plasma_cannon",
+                                "gravity_cannon",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "heavy_flamethrower",
+                                "fusion_rifle",
+                                "gravity_rifle"
+                            ]
                         }
                     ],
                     "min": 4,
@@ -676,9 +719,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
             "rules": ["hunter_team"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Marine",
@@ -734,9 +775,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Assault Marine Sergeant",
@@ -844,9 +883,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["scout", "stealth"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -1286,13 +1323,7 @@
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {
-                            "replaceWeapon": {"id": "energy_sword", "count": 2},
-                            "withWeapon": [
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "energy_hammer", "count": 2}
-                            ]
-                        },
+                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
                         {"addRule": "shield"}
                     ],
@@ -1449,10 +1480,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["artillery_missiles"],
-                    "options": [
-                        {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}
-                    ],
+                    "options": [{"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]}, {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1889,15 +1917,14 @@
                     "weapons": [{"id": "twin_heavy_fusion_rifle", "mount": ["Front"]}, {"id": "storm_missiles", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]}],
                     "options": [
                         [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
-                        {"replaceWeapon": {"id": "twin_heavy_fusion_rifle", "mount": ["Front"]},"withWeapon": [
-                            {"id": "twin_heavy_machinegun", "mount": ["Front"]},
-                            {"id": "twin_missile_launcher", "mount": ["Front"]},
-                            {"id": "twin_minigun", "mount": ["Front"]}
-                        ]},
-                        {"replaceWeapon": {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]},"withWeapon": [
-                            {"id": "twin_minigun", "mount": ["Front", "Left", "Right"]},
-                            {"id": "twin_heavy_plasma_cannon", "mount": ["Front", "Left", "Right"]}
-                        ]}
+                        {
+                            "replaceWeapon": {"id": "twin_heavy_fusion_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_missile_launcher", "mount": ["Front"]}, {"id": "twin_minigun", "mount": ["Front"]}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]},
+                            "withWeapon": [{"id": "twin_minigun", "mount": ["Front", "Left", "Right"]}, {"id": "twin_heavy_plasma_cannon", "mount": ["Front", "Left", "Right"]}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -2271,9 +2298,9 @@
                     "fight": 7,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": [{"id": "dread_fist", "count": 4}],
+                    "weapons": [{"id": "dread_fist", "count": 8}],
                     "options": [
-                        {"replaceWeapon": {"id": "dread_fist", "count": 2}, "withWeapon": [{"id": "psychic_greathammer", "count": 3}, {"id": "psychic_greatsword", "count": 3}], "limit": 1},
+                        {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
                         {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 1}]},
@@ -2302,9 +2329,9 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": [{"id": "dread_fist", "count": 4}],
+                    "weapons": [{"id": "dread_fist", "count": 8}],
                     "options": [
-                        {"replaceWeapon": {"id": "dread_fist", "count": 2}, "withWeapon": [{"id": "psychic_greathammer", "count": 3}, {"id": "psychic_greatsword", "count": 3}], "limit": 1},
+                        {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
                         {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
@@ -2385,28 +2412,39 @@
     "weapons": {
         "artillery_missiles": {
             "name": "Artillery Missiles",
-            "profiles": [{"name": "Frag", "attacks": 2, "short": 36, "medium": 72, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 3, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect"]}]
+            "profiles": [
+                {"name": "Frag", "attacks": 2, "short": 36, "medium": 72, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 3, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect"]}
+            ]
         },
         "wolf_grenade_launcher": {"name": "Wolf Grenade Launcher", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
         "wolf_shield": {"name": "Wolf Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "combat_shield": {"name": "Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "short": "Melee"},
+        "arch_fist_shoot": {"name": "Arch-Marine Fist (Ranged)", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["rapid_fire"]},
+        "arch_fist_fight": {"name": "Arch-Marine Fist (Melee)", "short": "Melee", "attacks": 1, "ap": 7, "rules": ["rending"]},
+        "empire_sword": {"name": "The Emperor's Sword", "profiles": [{
+            "name": "Strike", "short": "Melee", "attacks": 4, "ap": 6
+        }, {
+            "name": "Sweep", "short": "Melee", "attacks": 8, "ap": 3
+        }]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
         "power_purge": {"medium": 9, "ap": 1, "attacks": 10},
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
-        "walker_transport": {
-            "name": "Walker Transport",
-            "description": "This model may carry X _Walker_ models inside of it.",
-            "inputs": ["x"],
-            "points": ["rule.x", {"multiply": 10}]
-        },
+        "walker_transport": {"name": "Walker Transport", "description": "This model may carry X _Walker_ models inside of it.", "inputs": ["x"], "points": ["rule.x", {"multiply": 10}]},
         "hunter_team": {
             "name": "Hunter Team",
             "description": "At the start of the game, choose a unit category. Accuracy and Strength rolls of 1 or 2 gain +1 AP against units in that category.",
             "points": 1
+        },
+        "arch_tactics": {
+            "name": "Arch-Marine Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests \n * Re-roll all failed Initiative tests",
+            "points": ["rule.x", {"multiply": 20}]
         },
         "rifle_tactics": {
             "name": "Marine Ranged Tactics",
