@@ -2,7 +2,7 @@
     "name": "Grim Darkness",
     "id": "grim_darkness",
     "author": "guitarninja#5707",
-    "reportUrl": "https://github.com/wargame-engine/wzff/issues",
+    "reportUrl": "https://github.com/wargame-engine/grim-darkness/issues",
     "factions": {
         "high_elves": {
             "name": "High Elf Worlds",
