@@ -2435,6 +2435,8 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "legend_charge": {"name": "Charge Leader", "description": "This model and friendly _Infantry_ units within 3\" gain +3\" Movement on any Charge actions."},
+        "legend_hammer": {"name": "Righteousness", "description": "On a turn where this model charges, all Melee attacks gain +1 AP."},
         "walker_transport": {"name": "Walker Transport", "description": "This model may carry X _Walker_ models inside of it.", "inputs": ["x"], "points": ["rule.x", {"multiply": 10}]},
         "hunter_team": {
             "name": "Hunter Team",
@@ -2510,6 +2512,22 @@
             "description": "Upgrade one model's Psychic Staff with Warding Staff.",
             "flavor": "This staff has the power to absorb and stop psychic energy.",
             "points": 5
+        },
+        "legend_righteousness": {
+            "subfactions": ["psychic_marines"],
+            "name": "Righteousness",
+            "rule": "legend_hammer",
+            "description": "Upgrade one Leader model with Righteousness.",
+            "flavor": "This model's purpose is pure and aim is righteous.",
+            "points": 10
+        },
+        "legend_charge": {
+            "subfactions": ["psychic_marines"],
+            "name": "Charge Leader",
+            "rule": "legend_charge",
+            "description": "Upgrade one Leader model with Charge Leader.",
+            "flavor": "This model is known to be on the front line leading the first charge against the enemy.",
+            "points": 10
         }
     },
     "strategies": [
