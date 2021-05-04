@@ -187,13 +187,13 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "frags", "ccw"],
+                    "weapons": ["laser_carbine", "frags", "heavy_ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
                     ],
                     "rules": [],
-                    "min": 9,
+                    "min": 4,
                     "max": 9
                 },
                 {
@@ -325,7 +325,7 @@
         },
         "stormtroopers": {
             "name": "Stormtroopers",
-            "description": "Specially equipped and elite trained stormtrooper infantry.",
+            "description": "Heavily armed and armored raptors with the most advanced technology the Ascended Astroraptors have to offer.",
             "category": "heavy",
             "keywords": ["Storm Trooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
@@ -355,13 +355,13 @@
                     "defense": 9,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "frags", "ccw"],
+                    "weapons": ["heavy_laser_carbine", "ccw"],
                     "options": [
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1},
                         {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
                     ],
-                    "min": 4,
-                    "max": 9
+                    "min": 2,
+                    "max": 5
                 }
             ]
         },
@@ -793,10 +793,23 @@
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
-        "laser_carbine": {"name": "Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+        "laser_carbine": {"name": "Laser Carbine", "profiles": [
+            {"name:": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+            {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "overheat"}, "assault"]}
+            ]
+        },
         "shrapnel_shotgun": {"name": "Shrapnel Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 2}]},
-        "heavy_laser_carbine": {"name": "Supercharged Laser Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
+        "heavy_laser_carbine": {"name": "Heavy Laser Carbine", "profiles": [
+            {"name:": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+            {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
+            ]
+        },
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["sniper"]},
+        "heavy_auto_laser":  {"name": "Heavy Auto-Laser", "profiles": [
+            {"name:": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+            {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
+            ]
+        },
         "feral_gnashing": {"name": "Feral Gnashing", "attacks": 1, "short": "Melee", "ap": 3
         }
     },
