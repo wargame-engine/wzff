@@ -1496,6 +1496,7 @@
         ]}
     },
     "rules": {
+        "speed_pole": {"name": "Big Boss Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
         "goblin_tactics": {
             "name": "Goblin Tactics",
             "inputs": ["x"],
@@ -1533,6 +1534,13 @@
             "weapon": "relic_ultra_claw",
             "description": "Replace one model's Ultra Claw with Killer Claw.",
             "flavor": "This Claw is the most killy claw you've ever seen.",
+            "points": 10
+        },
+        "speed_pole": {
+            "name": "Big Boss Pole",
+            "rule": "speed_pole",
+            "description": "Upgrade one Warlord model with Big Boss Pole.",
+            "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
             "points": 10
         }
     },

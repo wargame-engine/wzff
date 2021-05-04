@@ -330,6 +330,20 @@
             "description": "Upgrade one Leader model with Inspired.",
             "flavor": "This model inspires the best in those who serve them.",
             "points": 10
+        },
+        "expert_fighter": {
+            "name": "Expert Fighter",
+            "rule": "legend_expert_fighter",
+            "description": "Upgrade one Leader model with Expert Fighter.",
+            "flavor": "This model has fought in many close quarters fights and survived.",
+            "points": 10
+        },
+        "quick_reflexes": {
+            "name": "Quick Reflexes",
+            "rule": "legend_quick_reflexes",
+            "description": "Upgrade one Leader model with Quick Reflexes.",
+            "flavor": "This model has expert awareness and can react quickly.",
+            "points": 10
         }
     },
     "powers": {
@@ -715,6 +729,11 @@
         }
     },
     "rules": {
+        "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
+        "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
+        "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
         "wings": {"name": "Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
         "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
         "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
@@ -750,9 +769,6 @@
             "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
             "points": 5
         },
-        "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
-        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
-        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
         "gravity": {"name": "Gravity", "description": "This weapon gets +2 AP against targets with Save 10 or higher.", "points": ["weapon.attacks", {"multiply": 1}]},
         "homing": {"name": "Homing", "description": "This weapon hits at Accuracy +1.", "points": ["weapon.attacks"]},
         "titanic": {
