@@ -747,11 +747,11 @@
             "cost": 1
         },
         {
-            "name": "Hive Mind",
+            "name": "Devotion",
             "phase": "activation",
-            "description": "Use at the beginning of the activation phase on a _Hive Mind_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
-            "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
-            "cost": 2
+            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "flavor": "With unquestioning loyalty, cult members will throw themselves into the line of fire to protect their leaders.",
+            "cost": 1
         }
     ]
 }
