@@ -338,7 +338,7 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
@@ -348,6 +348,50 @@
                     ],
                     "min": 5,
                     "max": 10
+                }
+            ]
+        },
+        "dirt_bikes": {
+            "name": "Dirt-Bikers",
+            "description": "Fast, agile motorbike fighters.",
+            "category": "strike",
+            "rules": ["stealth"],
+            "options": [
+                {"replaceWeapon": "defense_rifle", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+                {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
+            ],
+            "models": [
+                {
+                    "name": "Dirt-bike Leader",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Dirt-Bike",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 8,
+                    "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
+                    "options": [
+                        {"replaceModel": "quad_biker", "modelLimit": "1/3"}
+                    ],
+                    "min": 3,
+                    "max": 11
                 }
             ]
         },
@@ -523,6 +567,33 @@
                 }
             ]
         },
+        "scout_buggy": {
+            "name": "Scout Buggy",
+            "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
+            "rules": [{"id": "impact", "x": 3}, "scout", "vulnerable_side_rear", "damage_table_vehicle", "marking_flares"],
+            "category": "strike",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Scout Buggy",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "light_machinegun", "count": 2, "mount": ["Front"]}, {"id": "heavy_mining_laser", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_mining_laser", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_mortar", "mount": ["Front"]}, {"id": "missile_launcher", "mount": ["Front"]}]},
+                        {"replaceRule": "marking_flares", "withRule": ["spotting_device", "surveying_device"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "light_truck": {
             "name": "Cult Truck",
             "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
@@ -645,6 +716,19 @@
             "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}],
             "min": 1,
             "max": 1
+        },
+        "quad_biker": {
+            "name": "Quad-Biker",
+            "courage": 6,
+            "shoot": 5,
+            "fight": 5,
+            "defense": 7,
+            "reflexes": 6,
+            "movement": 8,
+            "weapons": ["light_machinegun", "defense_rifle", "blasting_charges", {"id": "ccw"}],
+            "options": [{"replaceWeapon": "light_machinegun", "withWeapon": ["mining_laser", "light_incinerator"]}],
+            "min": 1,
+            "max": 1
         }
     },
     "weapons": {
@@ -665,7 +749,8 @@
             "name": "Seismic Cannon",
             "profiles": [{"name": "Long Wave", "attacks": 4, "short": 24, "medium": 48}, {"name": "Short Wave", "attacks": 2, "short": 12, "medium": 24, "ap": 3}]
         },
-        "incinerator": {"name": "Incinerator", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
+        "incinerator": {"name": "Incinerator", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
+        "light_incinerator": {"name": "Light Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
         "web_gun": {"name": "Web Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["web", "assault"]},
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": "Melee", "rules": ["stun"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
@@ -699,6 +784,9 @@
         "spinethrowers": {"name": "Spinethrowers", "attacks": 4, "short": 3, "medium": 6, "ap": 0, "rules": ["assault"]}
     },
     "rules": {
+        "marking_flares": {"name": "Marking Flares", "description": "Once per round, a friendly _Biker_ unit may gain +4\" of Movement.", "points": 5},
+        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
+        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5},
         "cult_speaker": {"name": "Cult Speaker", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
         "chosen_abomination": {"name": "Chosen Abomination", "description": "Once per round, a friendly _Abominations_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
         "swarm_melee_tactics": {
