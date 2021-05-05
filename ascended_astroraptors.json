@@ -34,25 +34,25 @@
             ]
         },
         "stormtrooper_commander": {
-            "name": "Stormtrooper Commander",
+            "name": "Ascendent Commander",
             "description": "Foot infantry commaner of the elite storm troopers.",
             "min": 5,
             "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Stormtrooper Commander",
+                    "name": "Ascendent Commander",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
-                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}},
+                        {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
@@ -63,17 +63,15 @@
                 }
             ]
         },
-        "platoon_commander": {
-            "name": "Platoon Commander",
-            "description": "Foot infantry platoon leader of the Ascended Astro-Raptors.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
+        "raptor_assassin": {
+            "name": "Raptor Assassin",
+            "description": "A master of infiltration who swears by their easily concealable blade.",
+            "category": "strike",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}, "assassin"],
             "models": [
                 {
-                    "name": "Platoon Commander",
+                    "name": "Raptor Assassin",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
@@ -255,6 +253,7 @@
                 }
             ]
         },
+        
         "heavy_weapon_squad": {
             "name": "Heavy Weapons Squad",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
