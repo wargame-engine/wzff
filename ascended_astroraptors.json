@@ -323,19 +323,19 @@
             "rules": ["stealth", "scout"],
             "models": [{"name": "Sniper", "courage": 5, "shoot": 7, "fight": 5, "defense": 5, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
-        "stormtroopers": {
-            "name": "Stormtroopers",
+        "ascendent_shocktroopers": {
+            "name": "Ascendent Shocktroopers",
             "description": "Heavily armed and armored raptors with the most advanced technology the Ascended Astroraptors have to offer.",
             "category": "specialist",
-            "keywords": ["Storm Trooper", "Infantry"],
+            "keywords": ["Shock Trooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {
-                    "name": "Stormtrooper Sergeant",
+                    "name": "Ascendent Shocktrooper Sergeant",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "frags", "ccw"],
@@ -348,11 +348,11 @@
                     "max": 1
                 },
                 {
-                    "name": "Stormtrooper",
+                    "name": "Ascendent Shocktrooper",
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "ccw"],
@@ -389,7 +389,7 @@
         "rangers": {
             "name": "Rangers",
             "description": "A squad of raptors trained in close-range infiltration.",
-            "category": "strike",
+            "category": "core",
             "min": 5,
             "max": 10,
             "rules": ["scout"],
