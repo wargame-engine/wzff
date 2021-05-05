@@ -348,7 +348,7 @@
                 },
                 {
                     "name": "Ascendent Shocktrooper",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
                     "defense": 8,
@@ -359,8 +359,8 @@
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1},
                         {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
                     ],
-                    "min": 2,
-                    "max": 5
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
