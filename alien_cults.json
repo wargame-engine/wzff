@@ -691,11 +691,10 @@
                     "fight": 5,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": ["heavy_mining_laser"],
+                    "weapons": ["heavy_mining_laser", "light_machinegun"],
                     "options": [
                         {"replaceWeapon": "heavy_mining_laser", "withWeapon": ["heavy_seismic_cannon", "incinerator"]},
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": ["light_machinegun"]}
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]}
                     ],
                     "min": 1,
                     "max": 1
