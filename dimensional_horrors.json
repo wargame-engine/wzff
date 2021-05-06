@@ -823,7 +823,7 @@
         },
         "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2,  "rules": ["rending"]},
         "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2},
-        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 1, "rule": ["rending"]},
+        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 2, "rule": ["rending"]},
         "throne_mouth": {"name": "War-Throne's Mashing Gnaw", "attacks": 1, "short": "Melee", "ap": 3},
         "hounds_teeth": {"name": "Hound's Jaws", "attacks": 1, "short": "Melee", "ap": 1}
     },
