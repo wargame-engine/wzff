@@ -769,11 +769,11 @@
         "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
     },
     "weapons": {
-        "exalted_staff_of_change": {"name": "exalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4},
-        "exalted_power_hammer": {"name": "exalted Power Hammer", "attacks": 4, "short": "Melee", "ap": 5},
-        "exalted_power_spear": {"name": "exalted Power Spear", "attacks": 3, "short": "Melee", "ap": 7},
-        "exalted_magic_beam": {"name": "exalted Magic Beam", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
-        "exalted_magic_bolt": {"name": "exalted Magic Bolt", "attacks": 3, "short": 6, "medium": 12, "ap": 5},
+        "exalted_staff_of_change": {"name": "Exalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4},
+        "exalted_power_hammer": {"name": "Exalted Power Hammer", "attacks": 4, "short": "Melee", "ap": 5},
+        "exalted_power_spear": {"name": "Exalted Power Spear", "attacks": 3, "short": "Melee", "ap": 7},
+        "exalted_magic_beam": {"name": "Exalted Magic Beam", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
+        "exalted_magic_bolt": {"name": "Exalted Magic Bolt", "attacks": 3, "short": 6, "medium": 12, "ap": 5},
         "change_blast": {"name": "Change Blast", "attacks": 1, "short": 9, "medium": 18, "ap": 7},
         "power_staff": {"name": "Power Staff", "attacks": 2, "short": "Melee", "ap": 2},
         "ritual_daggers": {"name": "Ritual Daggers", "attacks": 2, "short": "Melee"},
