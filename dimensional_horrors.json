@@ -652,8 +652,55 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "war_sword", "count": 4}],
-                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}],
+                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 2}],
                     "options": [{"replaceRule": {"id": "warrior_tactics", "x": 1}, "withRule": {"id": "warrior_tactics", "x": 2}}]
+                }
+            ]
+        },
+        "warleader_throne": {
+            "name": "Warleader Champion on Skull Throne",
+            "description": "A great general of the war-god, atop a throne befitting his status",
+            "keywords": ["cavalry"],
+            "category": "command",
+            "rules": [],
+            "subfaction": ["war"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Warleader Champion on Skull Throne",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 11,
+                    "rules": [{"id": "impact", "x": 2}, "damage_table_vehicle", {"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 2}],
+                    "weapons": [{"id": "war_sword", "count": 6}, {"id": "throne_mouth", "count": 2}]
+                }
+            ]
+        },
+        "khorne_dogs": {
+            "name": "Dogs of War",
+            "description": "Cry havoc!  The dogs of war bite seek only to tear their master's foes asunder.",
+            "keywords": ["cavalry"],
+            "category": "strike",
+            "rules": [],
+            "subfaction": ["war"],
+            "min": 5,
+            "max": 10,
+            "models":
+            [
+                {
+                    "name": "Dogs of War",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 6,
+                    "min": 5,
+                    "max": 10,
+                    "rules": ["ward"],
+                    "weapons": [{"id": "hounds_teeth", "count": 4}]
                 }
             ]
         },
@@ -675,16 +722,20 @@
             "fight": 7,
             "defense": 5,
             "reflexes": 5,
+            "min": 1,
+            "max": 1,
             "weapons": [{"id": "war_sword", "count": 2}]
                 },
                 {
-                    "name": "Daemonic SOldier",
+                    "name": "Daemonic Soldier",
                     "movement": 6,
                     "courage": 5,
                     "shoot": 6,
                     "fight": 7,
                     "defense": 5,
                     "reflexes": 5,
+                    "min": 9,
+                    "max": 29,
                     "weapons": [{"id": "war_sword", "count": 1}],
                     "options": [
                     {"modelLimit": 1, "addRule": ["banner_of_blood"]},
@@ -756,7 +807,7 @@
         "phlegm_cannon": {"name": "Phlegm Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 6,  "rules": [{"id": "blast", "x": 3}]},
         "daemon_claw": {"name": "Daemon Claw", "attacks": 10, "short": "Melee", "ap": 6},
         "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 1, "short": "Melee", "ap": 3},
-        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 1,  "rules": ["rending"]},
+        "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 0,  "rules": ["rending"]},
         "tormenting_whips": {"name": "Tormenting Whips", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
         "reaper_axle": {"name": "Reaper Axle", "attacks": 5, "short": "Melee", "ap": 5},
         "enrapturing_lyre": {
@@ -772,7 +823,9 @@
         },
         "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2,  "rules": ["rending"]},
         "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2},
-        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 3, "rule": ["rending"]}
+        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 1, "rule": ["rending"]},
+        "throne_mouth": {"name": "War-Throne's Mashing Gnaw", "attacks": 1, "short": "Melee", "ap": 3},
+        "hounds_teeth": {"name": "Hound's Jaws", "attacks": 1, "short": "Melee", "ap": 1}
     },
     "rules": {
         "psychic_syphon": {
