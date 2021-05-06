@@ -76,10 +76,10 @@
             "version": "0.1",
             "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
             "subfactions": {
-                "change": {"name": "Magic", "id": "change", "color": "#90305d", "description": ""},
-                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "description": ""},
-                "war": {"name": "War", "id": "war", "color": "#547588", "description": ""},
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": ""}
+                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": ""},
+                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": ""},
+                "wrath": {"name": "Wrath", "id": "war", "color": "#547588", "restricted": true, "description": ""},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": ""}
             }
         },
         "undying_machines": {
