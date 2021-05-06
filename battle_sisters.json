@@ -9,25 +9,32 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint"],
             "models": [
                 {
-                    "name": "High Sister",
+                    "name": "Holy Saint",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
-                    "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 5}],
-                    "options": [
-                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
-                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}]}
-                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint", "ward", {"id": "saint_tactics", "x": 2}],
+                    "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 6}],
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "name": "Angel",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["fly"],
+                    "weapons": ["marine_pistol", {"id": "energy_sword", "count": 3}, "at_grenade"],
+                    "min": 0,
+                    "max": 2
                 }
             ]
         },
@@ -472,6 +479,12 @@
         }
     },
     "rules": {
+        "saint_tactics": {
+            "name": "Saint Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
+            "points": ["rule.x", {"multiply": 15}]
+        },
         "holy_saint": {
             "name": "Holy Saint",
             "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.",

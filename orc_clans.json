@@ -4,20 +4,29 @@
     "version": 0.1,
     "author": "guitarninja#5707",
     "background": "The Orc Clans are a band of roving orcs who scrap, fight and die for the glory of it. Their origin is still unknown, but they are spread across the galaxy in wide numbers. Orcs usually gather with a steady amount of goblins who act as the workers and some even pilot goblin mech creations.",
-    "hidden_units": {
+    "units": {
         "grand_warlord": {
             "name": "Grand Warlord",
-            "description": "A massive clan leader in very heavy armor.",
-            "min": 1,
-            "max": 1,
+            "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "damage_table_monster"],
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
+            "subfactions": ["none"],
             "models": [
-                {"name": "Grand Warlord", "courage": 6, "shoot": 4, "fight": 8, "defense": 12, "reflexes": 6, "movement": 4, "weapons": ["super_carbine", "frags", "super_claw"], "min": 1, "max": 1}
+                {
+                    "name": "Grand Warlord",
+                    "courage": 8,
+                    "shoot": 4,
+                    "fight": 8,
+                    "defense": 10,
+                    "reflexes": 7,
+                    "movement": 6,
+                    "weapons": [{"id": "grand_claw"}, {"id": "grand_carbine"}],
+                    "min": 1,
+                    "max": 1
+                }
             ]
-        }
-    },
-    "units": {
+        },
         "warlord": {
             "name": "Warlord",
             "description": "The clan leader and toughest orc boss.",
@@ -1449,6 +1458,11 @@
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
         "carbine": {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "twin_carbine": {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "grand_carbine": {"name": "Grand Carbine", "attacks": 12, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+        "grand_claw": {"name": "Grand Claw", "profiles": [
+            {"name": "Strike", "attacks": 5, "short": "Melee", "ap": 7},
+            {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 3}
+        ]},
         "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
         "super_carbine": {"name": "Super Carbine", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
@@ -1496,6 +1510,12 @@
         ]}
     },
     "rules": {
+        "grand_warlord_tactics": {
+            "name": "Grand Warlord Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
+            "points": ["rule.x", {"multiply": 20}]
+        },
         "speed_pole": {"name": "Big Boss Pole", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
         "goblin_tactics": {
             "name": "Goblin Tactics",
