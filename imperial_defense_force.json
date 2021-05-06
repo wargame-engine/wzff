@@ -1037,7 +1037,7 @@
                     "reflexes": 5,
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
-                        {"addRule": ["heavy_armor", "scout"]},
+                        {"addRule": ["extra_armor", "scout"], "limit": 1},
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
                     ],

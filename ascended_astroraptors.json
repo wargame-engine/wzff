@@ -34,25 +34,25 @@
             ]
         },
         "stormtrooper_commander": {
-            "name": "Stormtrooper Commander",
+            "name": "Ascendent Commander",
             "description": "Foot infantry commaner of the elite storm troopers.",
             "min": 5,
             "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Stormtrooper Commander",
+                    "name": "Ascendent Commander",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
-                        {"replaceRule": {"id": "stormtrooper_tactics", "x": 1}, "withRule": {"id": "stormtrooper_tactics", "x": 2}},
+                        {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
@@ -63,17 +63,15 @@
                 }
             ]
         },
-        "platoon_commander": {
-            "name": "Platoon Commander",
-            "description": "Foot infantry platoon leader of the Ascended Astro-Raptors.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
+        "raptor_assassin": {
+            "name": "Raptor Assassin",
+            "description": "A master of infiltration who swears by their easily concealable blade.",
+            "category": "strike",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}, "assassin"],
             "models": [
                 {
-                    "name": "Platoon Commander",
+                    "name": "Raptor Assassin",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
@@ -255,6 +253,7 @@
                 }
             ]
         },
+        
         "heavy_weapon_squad": {
             "name": "Heavy Weapons Squad",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
@@ -323,19 +322,19 @@
             "rules": ["stealth", "scout"],
             "models": [{"name": "Sniper", "courage": 5, "shoot": 7, "fight": 5, "defense": 5, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
-        "stormtroopers": {
-            "name": "Stormtroopers",
+        "ascendent_shocktroopers": {
+            "name": "Ascendent Shocktroopers",
             "description": "Heavily armed and armored raptors with the most advanced technology the Ascended Astroraptors have to offer.",
-            "category": "heavy",
-            "keywords": ["Storm Trooper", "Infantry"],
+            "category": "specialist",
+            "keywords": ["Shock Trooper", "Infantry"],
             "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {
-                    "name": "Stormtrooper Sergeant",
+                    "name": "Ascendent Shocktrooper Sergeant",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "frags", "ccw"],
@@ -348,11 +347,11 @@
                     "max": 1
                 },
                 {
-                    "name": "Stormtrooper",
-                    "courage": 5,
+                    "name": "Ascendent Shocktrooper",
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 9,
+                    "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "ccw"],
@@ -360,15 +359,15 @@
                         {"addRule": {"id": "field_radio"}, "modelLimit": 1},
                         {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
                     ],
-                    "min": 2,
-                    "max": 5
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
         "feral_raptors": {
             "name": "Feral Raptors",
             "description": "A loosely organized group of unarmed and unarmored raptors hopped up on a cocktail of stimulents who charge into their foes with biting maws and slashing claws.",
-            "category": "strike",
+            "category": "core",
             "min": 5,
             "max": 10,
             "models": [
@@ -377,7 +376,7 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "movement": 8,
+                    "movement": 7,
                     "defense": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "feral_gnashing", "count": 2}],
@@ -386,45 +385,62 @@
                 }
             ]
         },
-        "ogres": {
-            "name": "Ogres",
-            "description": "A squad of super-strong large human-like creatures.",
-            "category": "specialist",
+        "rangers": {
+            "name": "Rangers",
+            "description": "A squad of raptors trained in close-range infiltration.",
+            "category": "core",
             "min": 5,
             "max": 10,
-            "options": [
-                {"addRule": ["ogre_shield"]},
-                {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
-                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
-            ],
-            "rules": [{"id": "wounds", "x": 2}],
+            "rules": ["scout"],
             "models": [
                 {
-                    "name": "Ogre Leader",
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "movement": 6,
+                    "name": "Ranger Captain",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "movement": 7,
                     "reflexes": 5,
-                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["laser_pistol", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
                 {
-                    "name": "Ogre",
-                    "courage": 6,
+                    "name": "Ranger",
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 6,
-                    "movement": 6,
-                    "defense": 7,
+                    "movement": 7,
+                    "defense": 6,
                     "reflexes": 5,
-                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "min": 2,
-                    "max": 8
+                    "weapons": ["laser_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "min": 4,
+                    "max": 9
                 }
             ]
         },
+        "jump_troopers": {
+            "name": "Jump Troopers",
+            "description": "An elite squad of raptors equipped with light weapons and a jetpack.",
+            "category": "strike",
+            "rules": ["fly", "ambush"],
+            "models": [
+                {
+                "name": "Jump Trooper",
+                "courage": 6,
+                "shoot": 6,
+                "fight": 5,
+                "defense": 6,
+                "movement": 7,
+                "reflexes": 6,
+                "weapons": ["laser_pistol", {"id": "heavy_ccw", "count":2}],
+                "min": 5,
+                "max": 10
+                }
+            ]
+
+        },
+
         "command_battle_tank": {
             "name": "Command Battle Tank",
             "description": "A main line battle tank commander.",
@@ -794,23 +810,33 @@
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
         "laser_carbine": {"name": "Laser Carbine", "profiles": [
-            {"name:": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+            {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
             {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
         "shrapnel_shotgun": {"name": "Shrapnel Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", {"id": "blast", "x": 2}]},
         "heavy_laser_carbine": {"name": "Heavy Laser Carbine", "profiles": [
-            {"name:": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+            {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
             {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["sniper"]},
         "heavy_auto_laser":  {"name": "Heavy Auto-Laser", "profiles": [
-            {"name:": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
+            {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
             {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "feral_gnashing": {"name": "Feral Gnashing", "attacks": 1, "short": "Melee", "ap": 3
+        "feral_gnashing": {"name": "Feral Gnashing", "attacks": 1, "short": "Melee", "ap": 2
+        },
+        "laser_pistol": {"name": "Laser Pistol", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
+            {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 2, "rules": [{"id": "overheat"}, "pistol"]}
+            ]
+        },
+        "heavy_laser_pistol": {"name": "Heavy Laser Pistol", "profiles": [
+            {"name": "Standard", "attacks": 1, "short": 6, "ap": 2, "rules": ["pistol"]},
+            {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 3, "rules": [{"id": "overheat"}, "pistol"]}
+            ]
         }
     },
     "rules": {
