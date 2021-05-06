@@ -78,7 +78,7 @@
             "subfactions": {
                 "change": {"name": "Magic", "id": "change", "color": "#90305d", "description": ""},
                 "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "description": ""},
-                "wrath": {"name": "Wrath", "id": "wrath", "color": "#547588", "description": ""},
+                "war": {"name": "War", "id": "war", "color": "#547588", "description": ""},
                 "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": ""}
             }
         },

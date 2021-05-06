@@ -162,7 +162,7 @@
             ]
         },
         "exalted_flame_daemon": {
-            "name": "exalted Flame Daemon",
+            "name": "Exalted Flame Daemon",
             "description": "A daemon made of twisting, living flame held together by pure magic that acts as a leader for minor flame daemons.",
             "category": "specialist",
             "min": 1,
@@ -171,7 +171,7 @@
             "rules": [{"id": "tough", "x": 1}, "hover", "stealth"],
             "models": [
                 {
-                    "name": "exalted Flame Daemon",
+                    "name": "Exalted Flame Daemon",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 6,
@@ -344,7 +344,7 @@
             ]
         },
         "excess_champion_on_exalted_chariot": {
-            "name": "Excess Champion on exalted Chariot",
+            "name": "Excess Champion on Exalted Chariot",
             "decription": "A leader of the forces of excess on a contorted chariot.",
             "subfactions": ["excess"],
             "keywords": ["cavalry"],
@@ -354,7 +354,7 @@
             "max": 1,
             "models": [
                 {
-                    "name": "Excess Champion on exalted Chariot",
+                    "name": "Excess Champion on Exalted Chariot",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 7,
