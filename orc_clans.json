@@ -1428,6 +1428,7 @@
         "lightning_cannon": {"name": "Lightning Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 7},
         "cannon": {"name": "Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
         "heavy_cannon": {"name": "Heavy Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
+        "boom_cannon": {"name": "Boom Cannon", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "blast", "x": 6}]},
         "super_cannon": {"name": "Super Cannon", "attacks": 1, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "blast", "x": 3}]},
         "combi_gun": {"name": "Combi-Gun", "attacks": 9, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "deathstorm_minigun": {"name": "Deathstorm Minigun", "attacks": 12, "short": 18, "medium": 36, "ap": 3},
@@ -1550,18 +1551,25 @@
     },
     "relics": {
         "relic_killer_claw": {
-            "name": "Killer Claw",
+            "name": "The Killer Claw",
             "weapon": "relic_ultra_claw",
-            "description": "Replace one model's Ultra Claw with Killer Claw.",
+            "description": "Replace one model's Ultra Claw with The Killer Claw.",
             "flavor": "This Claw is the most killy claw you've ever seen.",
             "points": 10
         },
         "speed_pole": {
             "name": "Big Boss Pole",
             "rule": "speed_pole",
-            "description": "Upgrade one Warlord model with Big Boss Pole.",
+            "description": "Upgrade one Warlord model with The Big Boss Pole.",
             "flavor": "Nearby Orcs are filled with a zeal to charge forward and attack.",
             "points": 10
+        },
+        "boom_cannon": {
+            "name": "The Boom Cannon",
+            "weapon": "boom_cannon",
+            "description": "Replace one model's Heavy Cannon with The Boom Cannon.",
+            "flavor": "A very scary cannon for pure destruction.",
+            "points": 20
         }
     },
     "powers": {
