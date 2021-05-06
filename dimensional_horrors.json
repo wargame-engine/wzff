@@ -141,6 +141,7 @@
             "description": "Twisting warriors of change known for shifting forms before the very eyes of their victims.",
             "keywords": ["infantry"],
             "category": "core",
+            "subfactions": ["change"],
             "min": 10,
             "max": 30,
             "models": [
@@ -166,6 +167,7 @@
             "category": "specialist",
             "min": 1,
             "max": 1,
+            "subfactions": ["change"],
             "rules": [{"id": "tough", "x": 1}, "hover", "stealth"],
             "models": [
                 {
@@ -187,6 +189,7 @@
             "name": "Flame Daemon",
             "description": "A shifting daemon of living flames.",
             "category": "specialist",
+            "subfactions": ["change"],
             "min": 3,
             "max": 9,
             "rules": ["stealth", "hover"],
@@ -219,6 +222,7 @@
             "name": "Flame Chariot",
             "description": "An intimidating construction of flame and manta daemons summoned to provide heavy support on the battlefeild.",
             "keywords": ["cavalry"],
+            "subfactions": ["change"],
             "category": "heavy",
             "min": 1,
             "max": 1,
@@ -494,6 +498,7 @@
         "excess_warriors": {
             "name": "Excess Warriors",
             "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
+            "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "core",
             "min": 10,
@@ -530,6 +535,7 @@
             "name": "Excess Steed",
             "description": "A seductively mutated beast able to ferry forces fo slaanesh into battle or fight on their own.",
             "keywords": ["cavalry"],
+            "subfactions": ["excess"],
             "category": "specialist",
             "rules": ["agile"],
             "min": 1,
@@ -594,6 +600,7 @@
             "keywords": ["cavalry"],
             "category": "strike",
             "rules": ["agile"],
+            "subfactions": ["excess"],
             "min": 5,
             "max": 20,
             "models": [
@@ -623,6 +630,67 @@
                     "min": 4,
                     "max": 19,
                     "rules": []
+                }
+            ]
+        },
+        "warleader_champion": {
+            "name": "Warleader Champion",
+            "description": "The greatest of the war-god's tacticians, chosen to lead his forces to battle",
+            "keywords": ["infantry"],
+            "category": "command",
+            "rules": [],
+            "subfaction": ["war"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Warleader Champion",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "war_sword", "count": 4}],
+                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}],
+                    "options": [{"replaceRule": {"id": "warrior_tactics", "x": 1}, "withRule": {"id": "warrior_tactics", "x": 2}}]
+                }
+            ]
+        },
+        "blood_warriors": {
+            "name": "Wargod's Soldiers",
+            "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
+            "keywords": ["infantry"],
+            "category": "core",
+            "rules": [],
+            "subfactions": ["war"],
+            "min": 10,
+            "max": 30,
+            "models": [
+                {
+            "name": "Daemonic Sergeant",
+            "movement": 6,
+            "courage": 5,
+            "shoot": 6,
+            "fight": 7,
+            "defense": 5,
+            "reflexes": 5,
+            "weapons": [{"id": "war_sword", "count": 2}]
+                },
+                {
+                    "name": "Daemonic SOldier",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "war_sword", "count": 1}],
+                    "options": [
+                    {"modelLimit": 1, "addRule": ["banner_of_blood"]},
+                    {"modelLimit": 1, "addRule": ["instrument_of_blood"]},
+                    {"modelLimit": 1, "addRule": ["horrible_icon"]}
+                    ]
                 }
             ]
         }
@@ -703,7 +771,8 @@
             "profiles": [{"name": "Melee", "attacks": 8, "short": "Melee", "ap": 1, "rules": ["blast"]}, {"name": "Shooting", "attacks": 3, "short": 6, "ap": 2}]
         },
         "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2,  "rules": ["rending"]},
-        "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2}
+        "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2},
+        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 3, "rule": ["rending"]}
     },
     "rules": {
         "psychic_syphon": {
@@ -737,13 +806,20 @@
         "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
         "instrument_of_excess": {"name": "Instrument of Excess", "description": "Add 1 to this unit's movement characteristic.", "points": 10},
         "banner_of_excess": {"name": "Banner of Excess", "description": "This unit may re-roll failed Strength rolls of 1 or 2.", "points": 20},
+        "instrument_of_blood": {"name": "Instrument of War", "description": "This unit has +2 Courage while within 3\" of any enemy units", "points": 10},
+        "banner_of_blood": {"name": "Banner of Blood", "description": "This unit may add 2\" to its movement when Charging", "points": 20},
         "wings": {
             "name": "Daemon Wings",
             "hidden": true,
             "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
             "description_short": "Fly, Ambush, 8\" Move",
             "effects": [{"type": "alterStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
-        }
+        },
+        "warrior_tactics": {
+                    "name": "War-God Tactics",
+                    "inputs": ["x"],
+                    "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+                    "points": ["rule.x", {"multiply": 10}]}
     },
     "strategies": {},
     "powers": {}
