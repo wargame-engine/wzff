@@ -2411,6 +2411,8 @@
         }
     },
     "weapons": {
+        "legend_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["shielding", "warding_staff"]},
+        "the_black_blade": {"name": "The Black Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["sweeping"]},
         "artillery_missiles": {
             "name": "Artillery Missiles",
             "profiles": [
@@ -2435,6 +2437,7 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "sweeping": {"name": "Sweeping", "description": "Strength rolls of 1 or 2 with this weapon cause 2 hits instead of 1."},
         "legend_charge": {"name": "Charge Leader", "description": "This model and friendly _Infantry_ units within 3\" gain +3\" Movement on any Charge actions."},
         "legend_hammer": {"name": "Righteousness", "description": "On a turn where this model charges, all Melee attacks gain +1 AP."},
         "walker_transport": {"name": "Walker Transport", "description": "This model may carry X _Walker_ models inside of it.", "inputs": ["x"], "points": ["rule.x", {"multiply": 10}]},
@@ -2479,7 +2482,7 @@
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]},
         "legend_remembrance": {"name": "Armor of Remembrance", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "legend_shard": {"name": "Demonic Shard", "description": "This model increases all power charge values by 1.", "points": 1},
-        "legend_staff": {"name": "Warding Staff", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
+        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
     },
     "hidden_relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -2507,9 +2510,9 @@
         },
         "legend_staff": {
             "subfactions": ["psychic_marines"],
-            "name": "Warding Staff",
-            "rule": "legend_staff",
-            "description": "Upgrade one model's Psychic Staff with Warding Staff.",
+            "name": "The Warding Staff",
+            "weapon": "legend_staff",
+            "description": "Replace one Leader model's Psychic Staff with The Warding Staff.",
             "flavor": "This staff has the power to absorb and stop psychic energy.",
             "points": 5
         },
@@ -2527,6 +2530,14 @@
             "rule": "legend_charge",
             "description": "Upgrade one Leader model with Charge Leader.",
             "flavor": "This model is known to be on the front line leading the first charge against the enemy.",
+            "points": 10
+        },
+        "the_black_blade": {
+            "subfactions": ["psychic_marines"],
+            "name": "The Black Blade",
+            "weapon": "the_black_blade",
+            "description": "Replace one Leader model's Psychic Sword with The Black Blade.",
+            "flavor": "This blade is bound with the soul of a powerful demon, giving incredible strength.",
             "points": 10
         }
     },
