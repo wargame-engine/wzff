@@ -807,7 +807,7 @@
                             "replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"},
                             "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]
                         },
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank", "extra_armor"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
@@ -847,7 +847,7 @@
                     "reflexes": 5,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank", "extra_armor"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
@@ -1018,17 +1018,17 @@
                 }
             ]
         },
-        "light_walker": {
-            "name": "Light Walker",
+        "scout_walker": {
+            "name": "Scout Walker",
             "description": "A lightly equipped recon walker.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "rules": ["vulnerable_rear", "damage_table_vehicle", "scout"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "category": "strike",
             "models": [
                 {
-                    "name": "Light Walker",
+                    "name": "Scout Walker",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
@@ -1037,7 +1037,33 @@
                     "reflexes": 5,
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
-                        {"addRule": ["extra_armor", "scout"], "limit": 1},
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "armored_walker": {
+            "name": "Armored Walker",
+            "description": "An armored light combat walker.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Armored Walker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
+                    "options": [
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
                     ],
@@ -1147,6 +1173,7 @@
         }
     },
     "weapons": {
+        "hammer_cannon": {"name": "The Hammer", "attacks": 1, "ap": 7, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
         "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
         "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
@@ -1167,7 +1194,7 @@
             "description": "Once per round, when a friendly _Infantry_ unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
             "points": 5
         },
-        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
@@ -1231,6 +1258,13 @@
             "description": "Upgrade one Leader model with Brilliant Strategist.",
             "flavor": "This model has an adept strategic mind.",
             "points": 25
+        },
+        "hammer_cannon": {
+            "name": "The Hammer",
+            "weapon": "hammer_cannon",
+            "description": "Replace one model's Battle Cannon with The Hammer.",
+            "flavor": "A battle cannon with extra deadly force.",
+            "points": 20
         }
     }
 }

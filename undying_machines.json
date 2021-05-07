@@ -904,7 +904,7 @@
             "points": 50
         },
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},
-        "flare_shielding": {"name": "Flare Shields", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 5},
+        "flare_shielding": {"name": "Flare Shields", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {
             "name": "Regeneration Orb",
