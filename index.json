@@ -744,7 +744,7 @@
             "points": 1
         },
         "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 2},
-        "assault_ramp": {"name": "Assault Ramp", "description": "Units disembarking from this unit gain +3\" of Movement for that action.", "points": 5},
+        "assault_ramp": {"name": "Assault Ramp", "description": "Units may disembark from this model even after it has taken two Move actions.", "points": 5},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
         "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},
