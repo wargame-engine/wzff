@@ -1230,7 +1230,7 @@
         "high_command": {
             "name": "High Command",
             "phase": "activation",
-            "description": "Use after an _Infantry_ unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "description": "Use after an _Infantry_ unit with the Defense Force Tactics rule activates. One additional unit may benefit from Defense Force Tactics.",
             "cost": 1
         },
         "defensive_tactics": {
