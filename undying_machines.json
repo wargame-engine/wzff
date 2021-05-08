@@ -862,9 +862,32 @@
             "description": "Upgrade one Leader model with Relentless Advance.",
             "flavor": "With a steady marching pace, nearby infantry march towards impending doom.",
             "points": 10
+        },
+        "eternal_orb": {
+            "name": "The Eternal Orb",
+            "rule": "eternal_orb",
+            "description": "Replace one Leader Model's Regeneration Orb with The Eternal Orb.",
+            "flavor": "A significantly more powerful orb known to reanimate entire armies in masses.",
+            "points": 20
+        },
+        "nanorobot_cloak": {
+            "name": "Nanorobot Cloak",
+            "rule": "legend_nanobot_cloak",
+            "description": "Upgrade one Leader model with Nanorobot Cloak.",
+            "flavor": "A cloak filled with repair nanorobots which repairs the bearer of damage.",
+            "points": 10
+        },
+        "Prideful Leader": {
+            "name": "Prideful Leader",
+            "rule": "prideful_leader",
+            "description": "Upgrade one Leader model with Prideful Leader.",
+            "flavor": "A prideful machine inspiring others to continue to fight.",
+            "points": 15
         }
     },
     "rules": {
+        "prideful_leader": {"name": "Prideful Leader", "description": "When this model activates, friendly _Infantry_ units within 6\" may remove one Shock.", "points": 1},
+        "legend_nanobot_cloak": {"name": "Nanorobot Cloak", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "relentless_advance": {"name": "Relentless Advance", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
         "plasma_injector": {
             "name": "Plasma Injector",
@@ -911,6 +934,11 @@
             "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 15
         },
+        "eternal_orb": {
+            "name": "Eternal Orb",
+            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "points": 20
+        },
         "regeneration_pods": {
             "name": "Regeneration Pods",
             "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
@@ -924,6 +952,7 @@
             "description": "This model gains +3\" of Movement and the Fly special rule.",
             "points": 5
         },
+        "nanorobot_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
         "flight_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
         "void_shield": {"name": "Void Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "points": 5},
