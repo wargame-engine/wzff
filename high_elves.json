@@ -229,6 +229,195 @@
                 }
             ]
         },
+        "dragon_fire":{
+            "name": "Dragon Fire Squad",
+            "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models":[
+                {
+                    "name": "Dragon Fire Warrior",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["fusion_rifle", "fusion_bomb"],
+                    "options": [{"replaceModel": "dragon_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "banshees":{
+            "name": "Banshee Squad",
+            "description": "A group of swift and brutal melee warriors.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Banshee Warrior",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id":"energy_sword", "count": 2}, "shard_pistol"],
+                    "options": [{"replaceModel": "banshee_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "spectres":{
+            "name": "Spectre Warriors",
+            "description": "A squad of ghostly warriors adept at remaining unseen until they make their attack.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Spectre Squad",
+                    "courage": 6,
+                    "movement": 10,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["spectre_rifle", "frags"],
+                    "options": [{"replaceModel": "spectre_leader", "modelLimit": 1}],
+                    "min": 3,
+                    "max": 10
+                }
+            ]
+        },
+        "scorpions":{
+            "name": "Scorpion Squad",
+            "description": "A squad of warriors trained to weild chainswords and pistols to a deadly result.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": ["ambush", "stealth"],
+            "models": [
+                {
+                    "name": "Scorpion Warrior",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 7,
+                    "weapons": [{"id": "chainsword", "count": 2}, "shard_pistol", "frags"],
+                    "options":[{"replaceModel": "scorpion_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "glittering_spears":{
+            "name": "Glittering Spear Squad",
+            "description": "A squad of highly trained bikers that are adept at both melee and short range combat.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "models":[
+                {
+                    "name": "Glittering Spear Biker",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 12,
+                    "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 2}, "twin_shard_rifle"],
+                    "options":[{"replaceModel": "spear_leader", "modelLimit": 1}],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
+        "wind_rifles":{
+            "name": "Wind Rifle Squad",
+            "description": "A squad of highly trained bikers that are adept at long range, high-speed combat.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "models":[
+                {
+                    "name": "Wind Rifle Biker",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 12,
+                    "weapons": ["twin_shard_rifle"],
+                    "options":[
+                        {"replaceWeapon": "twin_shard_rifle", "withWeapon": ["twin_shard_cannon", "laser_machinegun"]}
+                    ],
+                    "min": 3,
+                    "max": 9
+                }
+            ]
+        },
+        "hawks":{
+            "name": "Hawk Squad",
+            "description": "A group of winged warriors trained to use the element of suprise and strike from above.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "keyowrds": ["Infantry"],
+            "rules":["ambush", "fly"],
+            "models": [
+                {
+                    "name": "Hawk Warrior",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "movement": 12,
+                    "reflexes": 6,
+                    "weapons": ["elven_blaster", "frags"],
+                    "options":[{"replaceModel": "hawk_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "spiders":{
+            "name": "Spider Squad",
+            "description": "A group of stealthy warriors able to harness the power of magic to transport themselves quickly across the battlefield.",
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "keywords": ["Infantry"],
+            "rules": ["stealth", "ambush"],
+            "models": [{
+                "name": "Spider Warrior",
+                "courage": 6,
+                "shoot": 6,
+                "fight": 6,
+                "defense": 7,
+                "movement": 7,
+                "reflexes": 6,
+                "weapons": ["spinnerette_rifle"],
+                "options": [{"replaceModel": "spider_leader", "modelLimit": 1}],
+                "min": 5,
+                "max": 10
+            }]
+        },
         "hover_tank": {
             "name": "Hover Tank",
             "description": "A heavy hover tank that can be outfitted with heavier weaponry to eliminate vehicle threats.",
@@ -362,6 +551,122 @@
             ],
             "min": 1,
             "max": 1
+        },
+        "dragon_leader":{
+            "name": "Dragon Leader",
+            "courage": 7,
+            "movement": 7,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 7,
+            "reflexes": 6,
+            "weapons": ["fusion_rifle", "fusion_bomb"],
+            "rules": ["dragon_leader_tactics"],
+            "options": [
+                {"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}
+            ],
+            "min": 1,
+            "max": 1
+        },
+        "banshee_leader":{
+            "name": "Banshee Leader",
+            "courage": 7,
+            "movement": 8,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 6,
+            "reflexes": 6,
+            "rules": ["banshee_leader_tactics"],
+            "weapons": [{"id":"energy_sword", "count": 3}, "shard_pistol"],
+            "options": [
+                {"replaceWeapon": {"id":"energy_sword", "count": 3}, "withWeapon": ["shuriken", {"id": "fusion_glaive", "count": 3}]},
+                {"replaceWeapon": [{"id":"energy_sword", "count": 3}, "shard_pistol"], "withWeapon": [{"id":"mirror_blades", "count": 3}]}
+            ],
+            "min": 1,
+            "max": 1
+        },
+        "spectre_leader": {
+            "name": "Spectre Leader",
+            "courage": 7,
+            "movement": 10,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 7,
+            "reflexes": 6,
+            "rules": ["spectre_leader_tactics"],
+            "weapons": ["spectre_rifle", "frags"],
+            "options": [
+                {"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}
+            ],
+            "min": 1,
+            "max":1
+        },
+        "scorpion_leader":{
+            "name": "Scorpion Leader",
+            "courage": 7,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 7,
+            "reflexes": 6,
+            "movement": 7,
+            "rules": ["scorpion_leader_tactics"],
+            "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
+            "options":[
+                {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]},
+                {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}
+            ],
+            "min": 1,
+            "max": 1
+        },
+        "spear_leader": {
+            "name": "Glittering Spear Leader",
+            "courage": 7,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 8,
+            "reflexes": 6,
+            "movement": 12,
+            "rules": ["spear_leader_tactics"],
+            "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
+            "options":[
+                {"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id":"exemplar_blade", "count": 3},"space_lance"]}
+            ],
+            "min": 3,
+            "max": 9
+        },
+        "hawk_leader":{
+            "name": "Hawk Leader",
+            "courage": 7,
+            "movement": 12,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 6,
+            "reflexes": 6,
+            "rules": ["hawk_leader_tactics"],
+            "weapons": ["elven_blaster", "frags"],
+            "options": [
+                {"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]},
+                {"addWeapon": ["energy_sword"], "limit": 1}
+            ],
+            "min": 1,
+            "max": 1
+        },
+        "spider_leader":{
+            "name": "Spider Leader",
+            "courage": 7,
+            "movement": 7,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 7,
+            "reflexes": 6,
+            "rules": ["spider_leader_tactics"],
+            "weapons": ["spinnerette_rifle"],
+            "options": [
+                {"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]},
+                {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}
+            ],
+            "min": 1,
+            "max": 1
         }
     },
     "rules": {
@@ -393,6 +698,46 @@
             "name": "Titan Shield",
             "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.",
             "points": 10
+        },
+        "dragon_leader_tactics":{
+            "name": "Dragon Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "banshee_leader_tactics":{
+            "name": "Banshee Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "spectre_leader_tactics":{
+            "name": "Spectre Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "scorpion_leader_tactics":{
+            "name": "Scorpion Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "accurate": {
+            "name": "Accurate",
+            "description": "You may re-roll rolls of 10 with this weapon.",
+            "points": 15
+        },
+        "spear_leader_tactics":{
+            "name": "Glittering Spear Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "hawk_leader_tactics":{
+            "name": "Hawk Leader Tactics",
+            "description": "?",
+            "points": 10
+        },
+        "spider_leader_tactics":{
+            "name": "Hawk Leader Tactics",
+            "description": "?",
+            "points": 10
         }
     },
     "weapons": {
@@ -402,16 +747,43 @@
         "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
         "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},
         "laser_lance_melee":{"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
-        "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 1, "rules":["rending"]},
+        "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules":["rending"]},
         "shreiking_spear_melee":{"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id":"critical", "x": 1}]},
-        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "long": 12, "ap": 6, "rules": ["fusion"]},
+        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
         "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
-        "shining_cannon":{"name": "Shining Cannon", "attacks": 2, "short": 24, "long": 48, "ap": 5, "rules": [{"id": "blast", "x":3}]},
-        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "long": 36, "ap": 10, "rules": ["fusion", "assault"]},
+        "shining_cannon":{"name": "Shining Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x":3}]},
+        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": ["fusion", "assault"]},
         "titan_glaive": {"name": "Titan Glaive", "profiles": [
             {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 9},
             {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}
-        ]}
+        ]},
+        "spectre_rifle": {"name": "Spectre Rifle", "profiles": [
+            {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["fusion"]},
+            {"name": "Dispersed", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame"]}
+        ]
+        },
+        "dragon_flamethrower":{"name": "Dragon Flamethrower", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame", "assault"]},
+        "shuriken": {"name": "Deadly Shuriken", "profiles":[
+            {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1},
+            {"name": "Shooting", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]}
+        ]},
+        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["fusion"]},
+        "mirror_blades": {"name": "Mirror Blades", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "blast", "count": 2}]},
+        "elven_blaster": {"name": "Elven Blaster", "attacks": 2, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
+        "slicing_sword": {"name": "Slicing Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "scorpion_claw": {"name": "Scorpion Claw", "profiles":[
+            {"name": "Shooting", "attacks": 2, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "rending"]},
+            {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 4}
+        ]},
+        "exemplar_blade":{"name": "Exemplar Blade", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["accurate"]},
+        "space_lance":{"name": "Space Lance", "profiles": [
+            {"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1, "rules": ["lance"]},
+            {"name": "Shooting", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules":["assault"]}
+        ]},
+        "hawk_talon": {"name": "Hawk Talon", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+        "sunlight_rifle": {"name": "Sunlight Rifle", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": ["assault"]},
+        "spinnerette_rifle": {"name": "Spinnerette Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": ["assault", "rending"]},
+        "web_rifle": {"name": "Web Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["rapid_fire"]}
     },
     "strategies": {
         "mobility_training": {
