@@ -212,7 +212,7 @@
             "description": "The losers of gang-wars get 'shanghaied' off to be in penal infantry squads. They have only the lessons they learned in gang warfare and not much else in the way of training.",
             "subfactions": ["neon_hive"],
             "category": "core",
-            "options": [{"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"] }],
+            "options": [{"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]}],
             "min": 5,
             "max": 10,
             "models": [
@@ -344,9 +344,7 @@
             "description": "Those who 'wash-out' of the more advanced units, along with general conscripts from the neon-lit streets of the mega cities, end up in the line infantry squads. They're properlly trained, but their equipment isn't that great, they're not really organized, and their leadership doesn't even bother to try organizing them. Some suspect they're just used as 'meat shields'.",
             "subfactions": ["neon_hive"],
             "category": "core",
-            "options": [
-                {"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]},
-                {"addWeapon": ["at_grenades"], "modelLimit": 3}],
+            "options": [{"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]}, {"addWeapon": ["at_grenades"], "modelLimit": 3}],
             "min": 5,
             "max": 10,
             "models": [
@@ -492,12 +490,13 @@
             "category": "core",
             "min": 5,
             "max": 10,
-            "options": [{"replaceWeapon": "defense_carbine", "withWeapon": "shotgun"},
+            "options": [
+                {"replaceWeapon": "defense_carbine", "withWeapon": "shotgun"},
                 {"replaceWeapon": "defense_carbine", "withWeapon": "defense_mac"},
-                 {"addRule": ["heavy_armor"], "modelLimit": "all"},
+                {"addRule": ["heavy_armor"], "modelLimit": "all"},
                 {"addWeapon": ["stun_grenades"], "modelLimit": 3},
                 {"addWeapon": ["at_grenades"], "modelLimit": 3}
-                ],
+            ],
             "models": [
                 {
                     "name": "Eliminator Sergeant",
@@ -1182,6 +1181,7 @@
         "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
     },
     "rules": {
+        "high_command": {"name": "High Command", "description": "This model may use Defense Force Tactics one additional time.", "points": 2},
         "defense_force_tactics": {
             "name": "Defense Force Tactics",
             "inputs": ["x"],
@@ -1221,18 +1221,21 @@
         "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 6}
     },
     "strategies": {
-        "focus_fire": {
-            "name": "Focus Fire",
+        "take_cover": {
+            "name": "Take Cover",
             "phase": "activation",
-            "description": "Use before Shooting with an _Infantry_ unit with Defense Rifles. Hits rolls of 1 or 2 with Defense Rifles cause 2 hits.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "flavor": "Imperial Defense force soldiers are trained to take the best advantage of cover they can to survive.",
+            "cost": 2
+        },
+        "bravery": {
+            "name": "Bravery",
+            "phase": "activation",
+            "description": "Use when activating a unit. That unit gets +1 Courage.",
+            "flavor": "These soldiers are particularly brave in the face of many horrors.",
             "cost": 1
         },
-        "high_command": {
-            "name": "High Command",
-            "phase": "activation",
-            "description": "Use after an _Infantry_ unit with the Defense Force Tactics rule activates. One additional unit may benefit from Defense Force Tactics.",
-            "cost": 1
-        },
+        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2},
         "defensive_tactics": {
             "phase": "activation",
             "subfactions": ["neon_hive"],
@@ -1248,8 +1251,7 @@
             "flavor": "Made from the ground up glands of the foul insectoid aliens, this stimulent is very powerful, and warps the user to hate their enemy.",
             "description": "Use when an Infantry is doing a charge or fight action. The unit is treated as having +1 strength, but at the end of the unit's activation, it gets +1 shock.",
             "cost": 1
-        },
-        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
+        }
     },
     "relics": {
         "strategist": {
@@ -1258,6 +1260,13 @@
             "description": "Upgrade one Leader model with Brilliant Strategist.",
             "flavor": "This model has an adept strategic mind.",
             "points": 25
+        },
+        "high_command": {
+            "name": "High Command",
+            "rule": "high_command",
+            "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
+            "flavor": "This model has been promoted to a higher position in the defense force ranks.",
+            "points": 10
         },
         "hammer_cannon": {
             "name": "The Hammer",
