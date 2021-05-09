@@ -550,6 +550,7 @@
         }, {
             "name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3
         }]},
+        "walker_talons": {"name": "Walker Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
         "crab_flail": {"name": "Crab Flail", "attacks": 1, "short": "Melee", "ap": 3},
@@ -610,6 +611,7 @@
         "prime_rifle": {"name": "Prime Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rapid_fire"]},
         "twin_prime_rifle": {"name": "Twin Prime Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 1, "rules": ["rapid_fire"]},
         "twin_grenade_launcher": {"name": "Twin Grenade Launcher", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_fragmentation_cannon": {"name": "Heavy Fragmentation Cannon", "attacks": 2, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "at_grenade_launcher": {"name": "AT Grenade Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 3},
         "missile_array": {
             "name": "Missile Array",

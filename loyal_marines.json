@@ -1797,7 +1797,7 @@
         },
         "prime_light_walker": {
             "name": "Prime Light Walker",
-            "description": "A lightly equipped recon walker.",
+            "description": "A lightly equipped prime recon walker.",
             "rules": ["vulnerable_rear", "scout", "damage_table_vehicle"],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "keywords": ["Vehicle"],
@@ -1825,7 +1825,7 @@
         },
         "prime_assault_walker": {
             "name": "Prime Assault Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "A heavily armed prime combat walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
@@ -1855,7 +1855,7 @@
         },
         "assault_walker": {
             "name": "Assault Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "A heavily armed combat walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
@@ -1884,9 +1884,52 @@
                 }
             ]
         },
+        "furious_assault_walker": {
+            "name": "Furious Assault Walker",
+            "description": "A heavily armed combat walker kitted for melee destruction.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "subfactions": ["assault_focus"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Furious Assault Walker",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": ["heavy_fragmentation_cannon", {"id": "heavy_walker_fist", "count": 4}, "twin_marine_rifle"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_walker_fist", "count": 4}, "twin_marine_rifle"],
+                            "withWeapon": [
+                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "heavy_flamethrower"}],
+                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "fusion_rifle"}]
+                            ]
+                        },
+                        {
+                            "replaceWeapon": ["heavy_fragmentation_cannon"],
+                            "withWeapon": [
+                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "storm_rifle"}],
+                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "heavy_flamethrower"}],
+                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "fusion_rifle"}]
+                            ]
+                        },
+                        {"replaceWeapon": ["heavy_fragmentation_cannon", {"id": "heavy_walker_fist", "count": 4}, "twin_marine_rifle"], "withWeapon": [{"id": "walker_talons", "count": 10}]},
+                        {"addRule": ["magnetic_grapple"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "veteran_assault_walker": {
             "name": "Veteran Assault Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "An elite and heavily armed combat walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters", "psychic_marines"],
@@ -1917,7 +1960,7 @@
         },
         "psychic_assault_walker": {
             "name": "Psychic Assault Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "A heavily armed combat walker with psychic powers.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["psychic_marines"],
@@ -1950,7 +1993,7 @@
         },
         "contemptor_assault_walker": {
             "name": "Contemptor Assault Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "A heavily armed ancient combat walker.",
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
@@ -2566,6 +2609,11 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "magnetic_grapple": {
+            "name": "Magnetic Grapple",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -2 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 5
+        },
         "blinding_light": {"name": "Blinding Light", "description": "Enemy models suffer -1 Strength when targeting this model with a Melee attack.", "points": 1},
         "sweeping": {"name": "Sweeping", "description": "Strength rolls of 1 or 2 with this weapon cause 2 hits instead of 1."},
         "legend_charge": {"name": "Charge Leader", "description": "This model and friendly _Infantry_ units within 3\" gain +3\" Movement on any Charge actions."},
