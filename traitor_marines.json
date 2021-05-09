@@ -9,23 +9,11 @@
         "terror_focus": {"name": "Terror", "id": "terror_focus", "color": "#18abcc"},
         "morale_focus": {"name": "Morale", "id": "morale_focus", "color": "#18abcc"}
     },
-    "subfactions": {
-        "rage_focus": {"name": "Rage", "id": "rage_focus", "color": "#6a0001", "background": "Traitor marines focused on anger and brutal close assault to defeat their foes."},
-        "stealth_focus": {"name": "Deception", "id": "stealth_focus", "color": "#6a0001", "background": "Traitor marines focused on stealth and deception to defeat their foes."},
-        "pestilence_focus": {
-            "name": "Pestilence",
-            "id": "pestilence_focus",
-            "color": "#6a0001",
-            "restricted": true,
-            "background": "Traitor marines focused on using disease and decay to defeat their foes."
-        },
-        "change_traitors": {"name": "Psychic", "id": "change_traitors", "color": "#18abcc", "restricted": true, "background": "Traitor marines focused on using powerful magic to defeat their foes."}
-    },
     "units": {
         "lord_on_infernal_stalker": {
             "name": "Traitor Lord on Infernal Stalker",
             "description": "An infernal creation that crawls on the ground, stalking its prey.",
-            "rules": ["fear", "strider", "vulnerable_rear", "damage_table_vehicle"],
+            "rules": ["fear", "walker", "vulnerable_rear", "damage_table_vehicle"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -71,6 +59,8 @@
                                 {"id": "energy_mace", "count": 4},
                                 {"id": "energy_axe", "count": 4},
                                 {"id": "energy_sword", "count": 4},
+                                {"id": "chainfist", "count": 4},
+                                {"id": "chainaxe", "count": 4},
                                 {"id": "energy_fist", "count": 4},
                                 {"id": "energy_hammer", "count": 4},
                                 {"id": "energy_claws", "count": 5}
@@ -240,7 +230,7 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 7,
                     "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
@@ -318,7 +308,7 @@
             "category": "core",
             "options": [
                 {
-                    "modelLimit": "1/10",
+                    "modelLimit": "1/5",
                     "limit": 1,
                     "replaceWeapon": "marine_rifle",
                     "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "autocannon", "minigun", "plasma_rifle", "flamethrower", "fusion_rifle"]
@@ -949,7 +939,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle"],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -976,7 +966,7 @@
                     "weapons": ["heavy_autocannon"],
                     "options": [
                         {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]},
-                        {"addWeapon": ["twin_marine_rifle", "havoc_missiles"]},
+                        {"addWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "havoc_missiles"]},
                         {
                             "addWeapon": [
                                 [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
@@ -1010,7 +1000,7 @@
                     "defense": 13,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
+                    "options": [{"addWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1035,25 +1025,24 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 6,
-                    "weapons": [{"id": "brute_fist", "count": 4}],
+                    "weapons": [{"id": "brute_fist", "count": 4}, "heavy_fusion_rifle"],
                     "options": [
                         {
-                            "replaceWeapon": {"id": "brute_fist", "count": 2},
+                            "replaceWeapon": "heavy_fusion_rifle",
                             "withWeapon": [
-                                [{"id": "brute_fist", "count": 2}, "twin_marine_rifle"],
-                                [{"id": "brute_fist", "count": 2}, "heavy_flamethrower"],
-                                {"id": "brute_flail", "count": 2},
-                                {"id": "brute_hammer", "count": 2},
+                                {"id": "brute_fist", "count": 4},
+                                [{"id": "brute_fist", "count": 4}, "twin_marine_rifle"],
+                                [{"id": "brute_fist", "count": 4}, "heavy_flamethrower"],
+                                {"id": "brute_flail", "count": 4},
+                                {"id": "brute_hammer", "count": 4},
                                 "plasma_cannon",
                                 "missile_launcher",
-                                "heavy_fusion_rifle",
                                 "reaper_cannon",
                                 "twin_heavy_machinegun",
                                 "twin_laser_cannon"
                             ]
                         }
                     ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 }
@@ -1117,7 +1106,7 @@
         "spider_walker": {
             "name": "Spider Walker",
             "description": "An infernal machine built to mimic a venomous spider.",
-            "rules": ["strider", "vulnerable_side_rear", "damage_table_vehicle"],
+            "rules": ["walker", "vulnerable_side_rear", "damage_table_vehicle"],
             "subfactions": ["none", "change_traitors", "rage_focus"],
             "min": 1,
             "max": 1,
@@ -1157,11 +1146,11 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": ["crab_cannon", {"id": "crab_claw", "count": 2}, "havoc_missiles", "reaper_cannon"],
+                    "weapons": ["crab_cannon", {"id": "crab_claw"}, "havoc_missiles", "twin_laser_cannon"],
                     "options": [
                         {"addRule": ["doom_siren"]},
-                        {"replaceWeapon": "havoc_missiles", "withWeapon": [{"id": "crab_flail", "count": 3}, "twin_heavy_flamethrower"]},
-                        {"replaceWeapon": "reaper_cannon", "withWeapon": ["twin_heavy_machinegun", "twin_laser_cannon"]}
+                        {"replaceWeapon": "havoc_missiles", "withWeapon": [{"id": "crab_flail", "count": 6}, "twin_heavy_flamethrower"]},
+                        {"replaceWeapon": "twin_laser_cannon", "withWeapon": ["reaper_cannon", "twin_heavy_machinegun"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -1464,9 +1453,9 @@
         "pestilence_mace": {"name": "Pestilence Mace", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
         "pestilence_claw": {"name": "Pestilence Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["pestilence", "cumbersome"]},
         "pestilence_ccw": {"name": "Pestilence CCW", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["pestilence"]},
-        "hexed_flamethrower_pistol": {"name": "Hexed Flamethrower Pistol", "attacks": 3, "short": 6, "ap": 1, "rules": ["rending"]},
-        "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2},
-        "hexed_flamethrower": {"name": "Hexed Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
+        "hexed_flamethrower_pistol": {"name": "Hexed Flamethrower Pistol", "attacks": 3, "short": 6, "ap": 1, "rules": ["rending", "flame"]},
+        "hexed_rifle": {"name": "Hexed Marine Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]},
+        "hexed_flamethrower": {"name": "Hexed Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["rending", "flame"]},
         "hexed_pistol": {"name": "Hexed Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2},
         "reaper_minigun": {"name": "Reaper Minigun", "attacks": 6, "short": 12, "medium": 24, "ap": 2},
         "missile_rack": {"name": "Missile Rack", "attacks": 2, "short": 12, "medium": 24, "ap": 6},
@@ -1493,18 +1482,12 @@
             "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": 10
         },
-        "disk_of_change": {"name": "Disk of Change", "description": "Gives the unit strider and impact(1). Also increases the units movement by 2\".", "points": 5},
         "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
         "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
         "war_chant": {
             "name": "War Chant",
             "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.",
             "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]
-        },
-        "mutations": {
-            "name": "Mutations",
-            "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
-            "points": 2
         },
         "invigorating_beam": {"effects": [{"type": "alterStat", "statName": "movement", "value": 6, "frequency": 5, "target": "friendly", "range": 12}]},
         "encroaching_mutations": {"effects": [{"type": "alterStat", "statName": "shoot", "value": 1, "target": "enemy", "range": 24}]},
@@ -1513,7 +1496,7 @@
     "strategies": {
         "hate": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Hate",
             "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
@@ -1521,7 +1504,7 @@
         },
         "daemonforge": {
             "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
             "description": "Use before a Vehicle unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
@@ -1555,8 +1538,8 @@
             "subfactions": ["stealth_focus"],
             "name": "Decoy",
             "phase": "activation",
-            "description": "Our commander has been defeated, probably?",
-            "flavor": "Once per game, when a unit with the Leader rule is defeated, swap its place with another Leader. Then defeat the unit that was swapped with instead.",
+            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "flavor": "Unsure of which is the real leader, enemies often get confused and shoot a different target.",
             "cost": 2
         },
         "psychic_channeling": {

@@ -3,8 +3,44 @@
     "name": "Undying Machines",
     "author": "guitarninja#5707",
     "background": "The Undying Machines are a race of soul-less machines who are fixated on conquering and intergalactic war. They rule their domain with an iron fist and often exterminate all non-machine life. Their use of ancient and powerful war-waging technology is noted by other races as highly fearsome.",
-    "subfactions": {"solar_fire": {"name": "Solar Fire", "id": "solar_fire", "background": "Undying Machines focused on overwhelming firepower."}, "combat_focus": {"name": "Close Combat", "id": "combat_focus", "background": "Undying Machines focused on deadly close assaults."}},
     "units": {
+        "command_barge": {
+            "name": "Command Barge",
+            "description": "A floating command vehicle.",
+            "min": 1,
+            "max": 1,
+            "category": "command",
+            "rules": ["hover", {"id": "leader_x", "x": "Infantry"}, "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}, {"id": "machine_tactics", "x": 1}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Doom Barge",
+                    "courage": 7,
+                    "movement": 8,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": [{"id": "void_sword", "count": 3}, {"id": "gauss_cannon", "mount": ["Front"]}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "void_sword", "count": 3},
+                            "withWeapon": [
+                                [{"id": "energy_staff_melee", "count": 3}, "energy_staff_shoot"],
+                                {"id": "phase_sword", "count": 3},
+                                {"id": "void_scythe", "count": 3},
+                                {"id": "war_scythe", "count": 3}
+                            ]
+                        },
+                        {"addRule": "regeneration_orb"},
+                        {"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}},
+                        {"replaceRule": {"id": "machine_tactics", "x": 1}, "withRule": {"id": "machine_tactics", "x": 2}}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "tri_scorpion_lord": {
             "name": "Tri-Scorpion Lord",
             "description": "A lord of the undying machines equipped with high tech tri-legs and a tough carapace.",
@@ -189,7 +225,7 @@
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": ["heavy_reaper_rifle", {"id": "warden_blade", "count": 3}],
+                    "weapons": ["heavy_gauss_blaster", {"id": "warden_blade", "count": 3}],
                     "min": 1,
                     "max": 1
                 }
@@ -304,7 +340,7 @@
             "description": "A group of machine guardians with special anti-gravity generators.",
             "min": 1,
             "max": 1,
-            "category": "specialist",
+            "category": "strike",
             "rules": ["fly"],
             "keywords": ["Infantry"],
             "options": [
@@ -361,8 +397,7 @@
             "keywords": ["Biker"],
             "options": [
                 {"replaceWeapon": {"id": "twin_tesla_rifle", "mount": ["Front"]}, "withWeapon": [{"id": "twin_heavy_gauss_rifle", "mount": ["Front"]}, {"id": "antimatter_rifle", "mount": ["Front"]}]},
-                {"addRule": "vision_scope", "modelLimit": "all"},
-                {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "limit": "all"}
+                {"addRule": "vision_scope", "modelLimit": "all"}
             ],
             "models": [
                 {"name": "Biker", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "twin_tesla_rifle", "mount": ["Front"]}], "min": 3, "max": 9}
@@ -424,7 +459,7 @@
             "category": "heavy",
             "rules": ["hover", {"id": "wounds", "x": 2}],
             "keywords": ["Heavy Infantry"],
-            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}, {"addRule": {"id": "resilient", "x": 4, "name": "Self-Repair Protocols"}, "modelLimit": "all"}],
+            "options": [{"replaceWeapon": "gauss_cannon", "withWeapon": ["heavy_gauss_cannon"]}],
             "models": [{"name": "Annihilator", "courage": 6, "movement": 8, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 5, "weapons": ["gauss_cannon"], "min": 3, "max": 6}]
         },
         "heavy_annihilators": {
@@ -457,6 +492,30 @@
                     "reflexes": 5,
                     "weapons": [{"id": "gauss_rifle_array", "mount": ["Left"]}, {"id": "gauss_rifle_array", "mount": ["Right"]}],
                     "options": [{"addRule": ["extra_space", "regeneration_pods"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "doom_barge": {
+            "name": "Doom Barge",
+            "description": "A floating vehicle with large tesla cannons.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "rules": ["hover", "flare_shielding", "damage_table_vehicle", {"id": "impact", "x": 3}],
+            "keywords": ["Vehicle"],
+            "models": [
+                {
+                    "name": "Doom Barge",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "twin_tesla_cannon", "mount": ["Front"]}, {"id": "gauss_cannon", "mount": ["Front"]}],
+                    "options": [{"replaceWeapon": {"id": "gauss_cannon", "mount": ["Front"]}, "withWeapon": {"id": "tesla_cannon", "mount": ["Front"]}}],
                     "min": 1,
                     "max": 1
                 }
@@ -737,7 +796,7 @@
     "weapons": {
         "heat_ray": {
             "name": "Heat Ray",
-            "profiles": [{"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": []}, {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": []}]
+            "profiles": [{"name": "Focused", "attacks": 2, "short": 12, "medium": 24, "ap": 6}, {"name": "Dispersed", "attacks": 6, "short": 6, "medium": 12, "ap": 2}]
         },
         "doom_cannon": {
             "name": "Doom Cannon",
@@ -765,37 +824,71 @@
         "reaper_glaive": {"name": "Reaper Glaive", "attacks": 1, "short": "Melee", "ap": 4},
         "dimensional_strikes": {"name": "Dimensional Strikes", "attacks": 1, "short": "Melee", "ap": 5},
         "metal_claws": {"name": "Metal Claws", "attacks": 1, "ap": 3, "short": "Melee"},
-        "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
-        "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
-        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["rending"]},
+        "gauss_rifle": {"name": "Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
+        "gauss_rifle_array": {"name": "Gauss Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "gauss_cannon": {"name": "Gauss Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4},
         "heavy_gauss_exterminator": {"name": "Heavy Gauss Exterminator", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
-        "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8, "rules": []},
-        "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": []},
-        "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7, "rules": []},
+        "heavy_gauss_destructor": {"name": "Heavy Gauss Destructor", "attacks": 1, "short": 18, "medium": 36, "ap": 8},
+        "heavy_gauss_cannon": {"name": "Heavy Gauss Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
+        "twin_heavy_gauss_cannon": {"name": "Twin Heavy Gauss Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 7},
         "gauss_sniper": {"name": "Gauss Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["sniper"]},
         "tesla_rifle": {"name": "Tesla Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
         "tesla_cannon": {"name": "Tesla Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
         "tesla_field": {"name": "Tesla Field", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla"]},
         "twin_tesla_cannon": {"name": "Twin Tesla Cannon", "attacks": 4, "short": 12, "medium": 24, "ap": 4, "rules": ["tesla", "assault"]},
         "twin_tesla_rifle": {"name": "Twin Tesla Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["tesla", "assault"]},
-        "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
-        "twin_heavy_gauss_rifle": {"name": "Twin Heavy Gauss Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["rending"]},
+        "heavy_gauss_rifle": {"name": "Heavy Gauss Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": ["rapid_fire"]},
+        "twin_heavy_gauss_rifle": {"name": "Twin Heavy Gauss Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["rapid_fire"]},
         "annihiliation_gun": {"name": "Annihilation Gun", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
-        "reaper_rifle": {"name": "Reaper Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["rending"]},
         "antimatter_pistol": {"name": "Antimatter Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["pistol"]},
         "dimensional_beam": {"name": "Dimensional Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 2},
         "antimatter_rifle": {"name": "Antimatter Rifle", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "antimatter_cannon": {"name": "Antimatter Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "heavy_antimatter_cannon": {"name": "Heavy Antimatter Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 3}]},
-        "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 3, "short": 9, "medium": 18, "rules": ["assault"]},
+        "energy_staff_shoot": {"name": "Energy Staff (Shoot)", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "energy_staff_melee": {"name": "Energy Staff (Melee)", "attacks": 1, "short": "Melee", "ap": 1},
         "guardian_rod_melee": {"name": "Guardian Rod (Melee)", "attacks": 1, "short": "Melee", "ap": 2},
         "guardian_rod_shoot": {"name": "Guardian Rod (Shoot)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
         "wrist_arrow": {"name": "Wrist Arrow", "attacks": 1, "short": 24, "medium": 48, "ap": 6},
-        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3},
+        "heavy_gauss_blaster": {"name": "Heavy Gauss Blaster", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["rapid_fire"]},
+        "heavy_reaper_rifle": {"name": "Heavy Reaper Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["assault"]},
         "gravity_pulse": {"name": "Gravity Pulse", "attacks": 6, "short": "Melee", "ap": 2}
     },
+    "relics": {
+        "relentless_advance": {
+            "name": "Relentless Advance",
+            "rule": "relentless_advance",
+            "description": "Upgrade one Leader model with Relentless Advance.",
+            "flavor": "With a steady marching pace, nearby infantry march towards impending doom.",
+            "points": 10
+        },
+        "eternal_orb": {
+            "name": "The Eternal Orb",
+            "rule": "eternal_orb",
+            "description": "Replace one Leader Model's Regeneration Orb with The Eternal Orb.",
+            "flavor": "A significantly more powerful orb known to reanimate entire armies in masses.",
+            "points": 20
+        },
+        "nanorobot_cloak": {
+            "name": "Nanorobot Cloak",
+            "rule": "legend_nanobot_cloak",
+            "description": "Upgrade one Leader model with Nanorobot Cloak.",
+            "flavor": "A cloak filled with repair nanorobots which repairs the bearer of damage.",
+            "points": 10
+        },
+        "Prideful Leader": {
+            "name": "Prideful Leader",
+            "rule": "prideful_leader",
+            "description": "Upgrade one Leader model with Prideful Leader.",
+            "flavor": "A prideful machine inspiring others to continue to fight.",
+            "points": 15
+        }
+    },
     "rules": {
+        "prideful_leader": {"name": "Prideful Leader", "description": "When this model activates, friendly _Infantry_ units within 6\" may remove one Shock.", "points": 1},
+        "legend_nanobot_cloak": {"name": "Nanorobot Cloak", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
+        "relentless_advance": {"name": "Relentless Advance", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
         "plasma_injector": {
             "name": "Plasma Injector",
             "description": "Once per round, this unit may re-roll a single failed Strength test.",
@@ -834,12 +927,17 @@
             "points": 50
         },
         "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},
-        "flare_shielding": {"name": "Flare Shields", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 5},
+        "flare_shielding": {"name": "Flare Shields", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "tesla": {"name": "Tesla", "description": "Each successful hit roll of 1 or 2 with this weapon causes 2 hits.", "points": ["weapon.attacks", {"multiply": 2}]},
         "regeneration_orb": {
             "name": "Regeneration Orb",
             "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 3 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
             "points": 15
+        },
+        "eternal_orb": {
+            "name": "Eternal Orb",
+            "description": "Once per round after taking Saves for an _Infantry_ unit. Roll a D10 for each model or Wound(x) lost. On a 5 or less, that model or Wound(x) is restored. Models must be restored to full Wounds(x) before restoring a new model.",
+            "points": 20
         },
         "regeneration_pods": {
             "name": "Regeneration Pods",
@@ -854,6 +952,7 @@
             "description": "This model gains +3\" of Movement and the Fly special rule.",
             "points": 5
         },
+        "nanorobot_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
         "flight_cloak": {"name": "Flight Cloak", "hidden": true, "description_short": "+3\" Move, Fly", "description": "This model gains +3\" of Movement and the Fly special rule.", "points": 5},
         "void_shield": {"name": "Void Shield", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
         "vision_scope": {"name": "Vision Scope", "description": "This unit's weapons ignore cover at Short range.", "points": 5},

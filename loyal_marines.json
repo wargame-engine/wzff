@@ -6,31 +6,29 @@
     "background": "The Loyal Marines are an arm of the Imperium's military, one of the best-equipped and best trained. They are genetically engineered for battle and created for the sole purpose of destroying the enemies of the Imperium.",
     "strengths": "The Loyal Marines have the tools for just about every situation, and can take on many types of foes. They are as flexible as you need them to be.",
     "weaknesses": "Loyal Marines tend to be quite tough and highly trained and as such, their units are often quite expensive and may find it difficult to field models to cover a large battlefield.",
-    "subfactions": {
-        "combined_arms_focus": {"name": "Combined Arms", "id": "combined_arms_focus", "color": "#ffffff", "background": "Loyal Marines who specialize in combined arms tactics."},
-        "zeal_focus": {"name": "Zeal", "id": "zeal_focus", "color": "#ffffff", "background": "Loyal Marines with a righteous zeal."},
-        "mobility_masters": {"name": "Mobility", "id": "mobility_masters", "color": "#ffffff", "background": "Loyal Marines focused on using mobility and speed to outflank their enemies."},
-        "siege_masters": {"name": "Siege", "id": "siege_masters", "color": "#f0c251", "background": "Loyal Marines focused on sieges and defeating entrenched enemies."},
-        "toughness_focus": {"name": "Toughness", "id": "toughness_focus", "color": "#f0c251", "background": "Loyal Marines that are tougher than the rest."},
-        "forge_focus": {"name": "Craftsmen", "id": "forge_focus", "color": "#f0c251", "background": "Loyal Marines that are expert craftsmen and tough in battle."},
-        "stealth_focus": {
-            "name": "Stealth",
-            "id": "stealth_focus",
-            "background": "Loyal Marines focused on stealth and ambush tactics."
-        },
-        "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "background": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
-        "wolf_marines": {
-            "name": "Counter-attack",
-            "id": "wolf_marines",
-            "color": "#547588",
-            "background": "Loyal Marines that specialize in brutal counter-assaults in close combat.",
-            "restricted": true
-        },
-        "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "background": "Loyal Marines focused on all-out assaults and aggression.", "restricted": true},
-        "psychic_marines": {"name": "Psychic", "id": "psychic_marines", "color": "#C0C0C0", "background": "Loyal Marines focused on psychic tactics and hunting demons.", "restricted": true},
-        "alien_hunters": {"name": "Alien Hunters", "id": "alien_hunters", "color": "#231f20", "background": "Loyal Marines focused on hunting aliens.", "restricted": true}
-    },
     "units": {
+        "arch_marine_tactics": {
+            "name": "Arch-Marine of Tactics",
+            "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "arch_tactics", "x": 2}],
+            "subfactions": ["none"],
+            "models": [
+                {
+                    "name": "Arch-Marine of Tactics",
+                    "courage": 8,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 11,
+                    "reflexes": 7,
+                    "movement": 6,
+                    "weapons": [{"id": "arch_fist_fight", "count": 2}, {"id": "empire_sword"}, {"id": "arch_fist_shoot"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "grav_captin": {
             "name": "Prime Captain (Grav Armor)",
             "description": "A fearless next-generation leader in heavy Grav armor.",
@@ -333,7 +331,7 @@
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "repair", "x": 5}],
-            "subfactions": ["none", "wolf_marines", "alien_hunters"],
+            "subfactions": ["none", "wolf_marines", "alien_hunters", "psychic_marines"],
             "models": [
                 {
                     "name": "Engineer",
@@ -345,15 +343,21 @@
                     "reflexes": 6,
                     "weapons": ["marine_pistol", "at_grenade", {"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "twin_marine_rifle", "gravity_pistol", "marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma"]},
-                        {"replaceWeapon": {"id": "axe_halberd", "count": 3}, "withWeapon": [
-                            {"id": "energy_mace", "count": 3},
-                            {"id": "energy_axe", "count": 3},
-                            {"id": "energy_sword", "count": 3},
-                            {"id": "energy_fist", "count": 3},
-                            {"id": "energy_hammer", "count": 3},
-                            {"id": "energy_claws", "count": 3}
-                        ]}
+                        {
+                            "replaceWeapon": "marine_pistol",
+                            "withWeapon": ["plasma_pistol", "flamethrower_pistol", "twin_marine_rifle", "gravity_pistol", "marine_rifle", "combi_flamer", "combi_fusion", "combi_plasma"]
+                        },
+                        {
+                            "replaceWeapon": {"id": "axe_halberd", "count": 3},
+                            "withWeapon": [
+                                {"id": "energy_mace", "count": 3},
+                                {"id": "energy_axe", "count": 3},
+                                {"id": "energy_sword", "count": 3},
+                                {"id": "energy_fist", "count": 3},
+                                {"id": "energy_hammer", "count": 3},
+                                {"id": "energy_claws", "count": 3}
+                            ]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -472,9 +476,7 @@
             "name": "Loyal Marines",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -559,7 +561,12 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "heavy_ccw", "at_grenade"],
                     "options": [
-                        {"modelLimit": 1, "limit": 1, "replaceWeapon": "marine_rifle", "withWeapon": ["heavy_machinegun", "missile_launcher", "plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]}
+                        {
+                            "modelLimit": 1,
+                            "limit": 1,
+                            "replaceWeapon": "marine_rifle",
+                            "withWeapon": ["heavy_machinegun", "missile_launcher", "plasma_rifle", "flamethrower", "fusion_rifle", "gravity_rifle"]
+                        }
                     ],
                     "min": 4,
                     "max": 9
@@ -606,7 +613,19 @@
                             "modelLimit": 2,
                             "limit": 1,
                             "replaceWeapon": "veteran_marine_rifle",
-                            "withWeapon": ["heavy_machinegun", "missile_launcher", "laser_cannon", "heavy_fusion_rifle", "plasma_cannon", "gravity_cannon", "plasma_rifle", "flamethrower", "heavy_flamethrower", "fusion_rifle", "gravity_rifle"]
+                            "withWeapon": [
+                                "heavy_machinegun",
+                                "missile_launcher",
+                                "laser_cannon",
+                                "heavy_fusion_rifle",
+                                "plasma_cannon",
+                                "gravity_cannon",
+                                "plasma_rifle",
+                                "flamethrower",
+                                "heavy_flamethrower",
+                                "fusion_rifle",
+                                "gravity_rifle"
+                            ]
                         }
                     ],
                     "min": 4,
@@ -700,9 +719,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["alien_hunters"],
             "rules": ["hunter_team"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Marine",
@@ -758,9 +775,7 @@
             "category": "core",
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Assault Marine Sergeant",
@@ -868,9 +883,7 @@
             "keywords": ["Infantry"],
             "subfactions": ["none", "wolf_marines", "alien_hunters"],
             "rules": ["scout", "stealth"],
-            "options": [
-                {"addWeapon": "fusion_bomb", "modelLimit": 3}
-            ],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
             "models": [
                 {
                     "name": "Prime Infiltration Sergeant",
@@ -1155,7 +1168,7 @@
                             "replaceWeapon": {"id": "fusion_rifle", "count": 2},
                             "withWeapon": [{"id": "heavy_machinegun", "count": 2}, {"id": "gravity_cannon"}, {"id": "laser_cannon", "count": 2}, {"id": "fist_flamethrower", "count": 2}]
                         },
-                        {"replaceWeapon": {"id": "heavy_fist", "count": 2}, "withWeapon": {"id": "assault_drill", "count": 3}}
+                        {"replaceWeapon": {"id": "heavy_fist", "count": 3}, "withWeapon": {"id": "assault_drill", "count": 3}}
                     ]
                 }
             ]
@@ -1310,13 +1323,7 @@
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}],
                     "options": [
-                        {
-                            "replaceWeapon": {"id": "energy_sword", "count": 2},
-                            "withWeapon": [
-                                {"id": "energy_fist", "count": 2},
-                                {"id": "energy_hammer", "count": 2}
-                            ]
-                        },
+                        {"replaceWeapon": {"id": "energy_sword", "count": 2}, "withWeapon": [{"id": "energy_fist", "count": 2}, {"id": "energy_hammer", "count": 2}]},
                         {"replaceWeapon": ["twin_marine_rifle", {"id": "energy_sword", "count": 2}], "withWeapon": [{"id": "energy_claws", "count": 4}]},
                         {"addRule": "shield"}
                     ],
@@ -1473,10 +1480,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["artillery_missiles"],
-                    "options": [
-                        {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]},
-                        {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}
-                    ],
+                    "options": [{"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}]}, {"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -1899,6 +1903,7 @@
             "rules": ["aircraft", "damage_table_aircraft", "hover_mode", {"id": "transport", "x": 12}, {"id": "walker_transport", "x": 1}],
             "category": "strike",
             "keywords": ["Vehicle", "Aircraft"],
+            "subfactions": ["none", "psychic_marines", "wolf_marines", "alien_hunters"],
             "min": 1,
             "max": 1,
             "models": [
@@ -1913,15 +1918,14 @@
                     "weapons": [{"id": "twin_heavy_fusion_rifle", "mount": ["Front"]}, {"id": "storm_missiles", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]}],
                     "options": [
                         [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
-                        {"replaceWeapon": {"id": "twin_heavy_fusion_rifle", "mount": ["Front"]},"withWeapon": [
-                            {"id": "twin_heavy_machinegun", "mount": ["Front"]},
-                            {"id": "twin_missile_launcher", "mount": ["Front"]},
-                            {"id": "twin_minigun", "mount": ["Front"]}
-                        ]},
-                        {"replaceWeapon": {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]},"withWeapon": [
-                            {"id": "twin_minigun", "mount": ["Front", "Left", "Right"]},
-                            {"id": "twin_heavy_plasma_cannon", "mount": ["Front", "Left", "Right"]}
-                        ]}
+                        {
+                            "replaceWeapon": {"id": "twin_heavy_fusion_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_missile_launcher", "mount": ["Front"]}, {"id": "twin_minigun", "mount": ["Front"]}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "twin_laser_cannon", "mount": ["Front", "Left", "Right"]},
+                            "withWeapon": [{"id": "twin_minigun", "mount": ["Front", "Left", "Right"]}, {"id": "twin_heavy_plasma_cannon", "mount": ["Front", "Left", "Right"]}]
+                        }
                     ],
                     "min": 1,
                     "max": 1
@@ -1934,7 +1938,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1950,7 +1954,7 @@
                         {"replaceRule": {"id": "melee_tactics", "x": 2}, "withRule": {"id": "rifle_tactics", "x": 2}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 5},
-                            "withWeapon": [{"id": "psychic_staff", "count": 5}, {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 5}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
@@ -1966,7 +1970,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -1982,7 +1986,7 @@
                         {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "rifle_tactics", "x": 1}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 4},
-                            "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 4}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
@@ -2015,7 +2019,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
@@ -2048,7 +2052,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
@@ -2068,7 +2072,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
             ],
@@ -2097,7 +2101,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2137,7 +2141,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2154,14 +2158,14 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
             "rules": ["teleport"],
             "models": [
                 {
                     "name": "Teleport Sergeant",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -2175,14 +2179,14 @@
                 },
                 {
                     "name": "Teleport Marine",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}], "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2199,7 +2203,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}], "modelLimit": "all", "limit": 1}
             ],
@@ -2227,7 +2231,7 @@
                     "movement": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": "1/5"}],
                     "rules": [],
                     "min": 4,
                     "max": 9
@@ -2241,8 +2245,8 @@
             "subfactions": ["psychic_marines"],
             "options": [
                 {
-                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "replaceWeapon": {"id": "psychic_sword", "count": 3},
+                    "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                 }
             ],
             "rules": ["ambush", {"id": "wounds", "x": 2}],
@@ -2255,7 +2259,7 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 3}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
                     "rules": ["ward"],
                     "min": 1,
@@ -2269,8 +2273,8 @@
                     "defense": 9,
                     "movement": 5,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 3}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": "2/5"}],
                     "rules": [],
                     "min": 2,
                     "max": 9
@@ -2295,11 +2299,10 @@
                     "fight": 7,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": [{"id": "dread_fist", "count": 4}],
+                    "weapons": [{"id": "dread_fist", "count": 8}],
                     "options": [
-                        {"replaceWeapon": {"id": "dread_fist", "count": 2}, "withWeapon": [{"id": "psychic_greathammer", "count": 3}, {"id": "psychic_greatsword", "count": 3}], "limit": 1},
+                        {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 1}]},
                         {"replaceRule": {"id": "dread_walker_tactics", "x": 1}, "withRule": [{"id": "dread_walker_tactics", "x": 2}]}
                     ],
@@ -2326,11 +2329,10 @@
                     "fight": 6,
                     "defense": 12,
                     "reflexes": 6,
-                    "weapons": [{"id": "dread_fist", "count": 4}],
+                    "weapons": [{"id": "dread_fist", "count": 8}],
                     "options": [
-                        {"replaceWeapon": {"id": "dread_fist", "count": 2}, "withWeapon": [{"id": "psychic_greathammer", "count": 3}, {"id": "psychic_greatsword", "count": 3}], "limit": 1},
+                        {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
                     ],
                     "min": 1,
@@ -2407,30 +2409,46 @@
         }
     },
     "weapons": {
+        "legend_staff": {"name": "Psychic Staff", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["shielding", "warding_staff"]},
+        "the_black_blade": {"name": "The Black Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["sweeping"]},
         "artillery_missiles": {
             "name": "Artillery Missiles",
-            "profiles": [{"name": "Frag", "attacks": 2, "short": 36, "medium": 72, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 3, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect"]}]
+            "profiles": [
+                {"name": "Frag", "attacks": 2, "short": 36, "medium": 72, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 3}]},
+                {"name": "AT", "attacks": 3, "short": 36, "medium": 72, "ap": 6, "rules": ["indirect"]}
+            ]
         },
         "wolf_grenade_launcher": {"name": "Wolf Grenade Launcher", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
         "wolf_shield": {"name": "Wolf Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "combat_shield": {"name": "Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "ancient_chainsword": {"name": "Ancient Chainsword", "attacks": 3, "ap": 2, "short": "Melee"},
+        "arch_fist_shoot": {"name": "Arch-Marine Fist (Ranged)", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["rapid_fire"]},
+        "arch_fist_fight": {"name": "Arch-Marine Fist (Melee)", "short": "Melee", "attacks": 1, "ap": 7, "rules": ["rending"]},
+        "empire_sword": {"name": "The Emperor's Sword", "profiles": [{
+            "name": "Strike", "short": "Melee", "attacks": 4, "ap": 6
+        }, {
+            "name": "Sweep", "short": "Melee", "attacks": 8, "ap": 3
+        }]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
         "power_purge": {"medium": 9, "ap": 1, "attacks": 10},
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
-        "walker_transport": {
-            "name": "Walker Transport",
-            "description": "This model may carry X _Walker_ models inside of it.",
-            "inputs": ["x"],
-            "points": ["rule.x", {"multiply": 10}]
-        },
+        "sweeping": {"name": "Sweeping", "description": "Strength rolls of 1 or 2 with this weapon cause 2 hits instead of 1."},
+        "legend_charge": {"name": "Charge Leader", "description": "This model and friendly _Infantry_ units within 3\" gain +3\" Movement on any Charge actions."},
+        "legend_hammer": {"name": "Righteousness", "description": "On a turn where this model charges, all Melee attacks gain +1 AP."},
+        "walker_transport": {"name": "Walker Transport", "description": "This model may carry X _Walker_ models inside of it.", "inputs": ["x"], "points": ["rule.x", {"multiply": 10}]},
         "hunter_team": {
             "name": "Hunter Team",
             "description": "At the start of the game, choose a unit category. Accuracy and Strength rolls of 1 or 2 gain +1 AP against units in that category.",
             "points": 1
+        },
+        "arch_tactics": {
+            "name": "Arch-Marine Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests \n * Re-roll all failed Initiative tests",
+            "points": ["rule.x", {"multiply": 20}]
         },
         "rifle_tactics": {
             "name": "Marine Ranged Tactics",
@@ -2462,7 +2480,7 @@
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]},
         "legend_remembrance": {"name": "Armor of Remembrance", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "legend_shard": {"name": "Demonic Shard", "description": "This model increases all power charge values by 1.", "points": 1},
-        "legend_staff": {"name": "Warding Staff", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
+        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
     },
     "hidden_relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -2490,11 +2508,35 @@
         },
         "legend_staff": {
             "subfactions": ["psychic_marines"],
-            "name": "Warding Staff",
-            "rule": "legend_staff",
-            "description": "Upgrade one model's Psychic Staff with Warding Staff.",
+            "name": "The Warding Staff",
+            "weapon": "legend_staff",
+            "description": "Replace one Leader model's Psychic Staff with The Warding Staff.",
             "flavor": "This staff has the power to absorb and stop psychic energy.",
             "points": 5
+        },
+        "legend_righteousness": {
+            "subfactions": ["psychic_marines"],
+            "name": "Righteousness",
+            "rule": "legend_hammer",
+            "description": "Upgrade one Leader model with Righteousness.",
+            "flavor": "This model's purpose is pure and aim is righteous.",
+            "points": 10
+        },
+        "legend_charge": {
+            "subfactions": ["psychic_marines"],
+            "name": "Charge Leader",
+            "rule": "legend_charge",
+            "description": "Upgrade one Leader model with Charge Leader.",
+            "flavor": "This model is known to be on the front line leading the first charge against the enemy.",
+            "points": 10
+        },
+        "the_black_blade": {
+            "subfactions": ["psychic_marines"],
+            "name": "The Black Blade",
+            "weapon": "the_black_blade",
+            "description": "Replace one Leader model's Psychic Sword with The Black Blade.",
+            "flavor": "This blade is bound with the soul of a powerful demon, giving incredible strength.",
+            "points": 10
         }
     },
     "strategies": [
@@ -2727,7 +2769,7 @@
             "name": "Courageous",
             "phase": "activation",
             "description": "Use when activating a unit. That unit gets +1 Courage.",
-            "flavor": "These marines are some of the most courage, fighting to the bitter end.",
+            "flavor": "These marines are some of the most courageous ever seen, fighting to the bitter end.",
             "cost": 1
         },
         {
@@ -2791,7 +2833,7 @@
         "storm": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
         "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 18\" gets -2\" of Movement until the end of the round.", "charge": 7},
-        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain.", "charge": 7},
+        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 6},
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6}
     }

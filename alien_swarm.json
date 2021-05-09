@@ -16,29 +16,20 @@
             "models": [
                 {
                     "name": "Hive Lord",
-                    "courage": 8,
-                    "reflexes": 7,
+                    "courage": 7,
+                    "reflexes": 6,
                     "shoot": 6,
                     "fight": 7,
-                    "defense": 11,
+                    "defense": 12,
                     "movement": 8,
                     "rules": [{"id": "psychic", "x": 1}],
-                    "weapons": [{"id": "large_razor_talons", "count": 4}, "grabbing_tail"],
+                    "weapons": [{"id": "large_razor_talons", "count": 6}, "grabbing_tail"],
                     "options": [
                         {
-                            "replaceWeapon": {"id": "large_razor_talons", "count": 4},
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 3},
                             "withWeapon": [
-                                {"id": "large_piercing_claws", "count": 4},
-                                {"id": "large_boneswords", "count": 5},
-                                {"id": "maggot_spitter", "count": 2},
-                                {"id": "brain_consumer", "count": 2}
-                            ]
-                        },
-                        {
-                            "addWeapon": [
-                                "large_razor_talons",
-                                "large_boneswords",
-                                "large_piercing_claws",
+                                {"id": "large_piercing_claws", "count": 3},
+                                {"id": "large_boneswords", "count": 4},
                                 "heavy_acid_cannon",
                                 "chokethorn_cannon",
                                 {"id": "maggot_spitter", "count": 2},
@@ -46,7 +37,16 @@
                             ],
                             "limit": 1
                         },
-                        {"addRule": "wings"},
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 3},
+                            "withWeapon": [
+                                {"id": "large_piercing_claws", "count": 3},
+                                {"id": "large_boneswords", "count": 4},
+                                {"id": "maggot_spitter", "count": 2},
+                                {"id": "brain_consumer", "count": 2}
+                            ]
+                        },
+                        {"addRule": ["wings", "adrenaline_glands_large", "toxic_sacks_large"]},
                         {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
                     ],
                     "min": 1,
@@ -65,11 +65,11 @@
             "models": [
                 {
                     "name": "Soul Stealer Lord",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 0,
                     "fight": 8,
                     "defense": 8,
-                    "reflexes": 8,
+                    "reflexes": 7,
                     "wounds": 6,
                     "movement": 8,
                     "weapons": [{"id": "large_piercing_claws", "count": 6}],
@@ -425,11 +425,50 @@
                 },
                 {"name": "Psychic Beast", "courage": 7, "reflexes": 6, "fight": 5, "shoot": 0, "defense": 8, "movement": 5, "weapons": ["ccw"], "min": 2, "max": 5}
             ]
+        },
+        "carnivorous_beast": {
+            "name": "Carnivorous Beast",
+            "description": "A huge alien beast with heavy scaled armor.",
+            "category": "heavy",
+            "rules": ["damage_table_monster", {"id": "impact", "x": 3}],
+            "models": [
+                {
+                    "name": "Carnivorous Beast",
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "shoot": 5,
+                    "defense": 10,
+                    "movement": 7,
+                    "weapons": [{"id": "large_razor_talons", "count": 4}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 2},
+                            "withWeapon": [{"id": "crushing_claws", "count": 2}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 2},
+                            "withWeapon": ["heavy_acid_cannon", "chokethorn_cannon", {"id": "maggot_spitter", "count": 2}, {"id": "brain_consumer", "count": 2}]
+                        },
+                        {
+                            "replaceWeapon": {"id": "large_razor_talons", "count": 2},
+                            "withWeapon": [{"id": "maggot_spitter", "count": 2}, {"id": "brain_consumer", "count": 2}]
+                        },
+                        {"addWeapon": ["bonemace", "thrashing_scythe"], "limit": 1},
+                        {"addWeapon": ["huge_acidic_jaws", "bio_plasma"], "limit": 1},
+                        {"addRule": ["enhanced_senses", "adrenaline_glands_large", "toxic_sacks_large", "tusks"]},
+                        {"addWeapon": "spine_banks"},
+                        {"addRule": "spore_cyst"}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
         }
     },
-    "models": {},
     "weapons": {
         "venom_spit": {"name": "Venom Spit", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]},
+        "bio_plasma": {"name": "Bio-Plasma", "attacks": 1, "short": 6, "medium": 12, "ap": 5, "rules": ["assault", {"id": "blast", "x": 2}]},
         "venom_lashes": {"name": "Venom Lashes", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol"]},
         "flame_spit": {"name": "Flame Spit", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["flame", {"id": "blast", "x": 4}, "assault"]},
         "grabbing_talons": {"name": "Grabbing Talons", "attacks": 1, "short": "Melee", "ap": 3},
@@ -444,8 +483,9 @@
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
         "medium_razor_talons": {"name": "Medium Razor Talons", "attacks": 1, "short": "Melee", "ap": 2},
-        "crushing_claws": {"name": "Crushing Claws", "attacks": 1, "short": "Melee", "ap": 8},
+        "crushing_claws": {"name": "Crushing Claws", "attacks": 1, "short": "Melee", "ap": 7},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
+        "huge_acidic_jaws": {"name": "Huge Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
         "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
@@ -457,23 +497,71 @@
         "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
         "grabbing_tail": {"name": "Grabbing Tail", "attacks": 1, "short": "Melee", "ap": 3, "rules": []},
         "large_boneswords": {"name": "Large Boneswords", "attacks": 1, "short": "Melee", "ap": 4, "rules": []},
+        "bonemace": {"name": "Bonemace", "attacks": 1, "short": "Melee", "ap": 5},
         "maggot_spitter": {"name": "Maggot Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
-        "brain_consumer": {"name": "Brain Consumer", "attacks": 5, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
+        "brain_consumer": {"name": "Brain Consumer", "attacks": 4, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]},
         "heavy_acid_cannon": {"name": "Heavy Acid Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "blast", "x": 2}]},
         "chokethorn_cannon": {"name": "Chokethorn Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 4}]},
-        "spinethrowers": {"name": "Spinethrowers", "attacks": 3, "short": 6, "rules": ["assault", "pistol"]}
+        "spinethrowers": {"name": "Spinethrowers", "attacks": 3, "short": 6, "rules": ["assault", "pistol"]},
+        "spine_banks": {"name": "Spine Banks", "attacks": 3, "short": 6, "ap": 2, "rules": ["assault", "pistol"]},
+        "thrashing_scythe": {"name": "Thrashing Scythe", "attacks": 2, "short": "Melee", "ap": 1}
     },
     "rules": {
+        "tusks": {"name": "Tusks", "hidden": true, "description_short": "Impact +3", "description": "This model gains +3 impact.", "points": 6},
+        "adrenaline_glands": {
+            "name": "Adrenaline Glands",
+            "hidden": true,
+            "description_short": "+1\" Movement",
+            "description": "This model gets +1\" Movement",
+            "points": 1
+        },
+        "adrenaline_glands_large": {
+            "name": "Adrenaline Glands",
+            "hidden": true,
+            "description_short": "+1\" Movement",
+            "description": "This model gets +1\" Movement",
+            "points": 5
+        },
+        "toxic_sacks": {
+            "name": "Toxic Sacks",
+            "description": "Hit rolls of 1 or 2 gain +1 AP.",
+            "points": 1
+        },
+        "toxic_sacks_large": {
+            "name": "Toxic Sacks",
+            "description": "Hit rolls of 1 or 2 gain +1 AP.",
+            "points": 5
+        },
+        "enhanced_senses": {
+            "name": "Enhanced Senses",
+            "hidden": true,
+            "description_short": "+1 Accuracy",
+            "description": "This model gets +1 Accuracy",
+            "points": 10
+        },
         "swarm_melee_tactics": {
             "name": "Swarm Melee Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
         },
-        "spore_cloud": {"name": "Spore Cloud", "description": "Once per round, models suffer -1 Accuracy when shooting at a friendly unit within 6\" of this model. This may be used one additional time per round for each model with this rule.", "points": 5}
+        "spore_cloud": {
+            "name": "Spore Cloud",
+            "description": "Once per round, models suffer -1 Accuracy when shooting at a friendly unit within 6\" of this model. This may be used one additional time per round for each model with this rule.",
+            "points": 5
+        },
+        "spore_cyst": {
+            "name": "Spore Cyst",
+            "description": "Once per round, models suffer -1 Accuracy when shooting at this model's unit. This may be used one additional time per round for each model in the unit with this rule.",
+            "points": 10
+        }
     },
     "powers": {
-        "direct_control": {"name": "Direct Control", "description": "Target friendly unit within 24\" may immediately activate, and use this model's Courage value until the end of the activation phase.", "charge": 7},
+        "direct_control": {
+            "name": "Direct Control",
+            "description": "Target friendly unit within 24\" may immediately activate, and use this model's Courage value until the end of the activation phase.",
+            "charge": 7
+        },
         "vitality": {
             "name": "Vitality",
             "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",

@@ -14,7 +14,7 @@
             "keywords": ["vehicle"],
             "models": [
                 {
-                    "name": "Mini Knight",
+                    "name": "Helverin Titan",
                     "movement": 10,
                     "courage": 6,
                     "shoot": 6,
@@ -320,7 +320,7 @@
         "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10},
         "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6,  "rules": ["fusion"]},
         "rapidfire_battle_cannon": {"name": "Rapid-fire Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5,  "rules": []},
+        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5, "rules": ["flame"]},
         "harpoon_cannon": {
             "notes": "This profile needs to be looked at. Seems really swingy- either it misses or it devestates.",
             "name": "Harpoon Cannon",

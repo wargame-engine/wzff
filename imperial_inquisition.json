@@ -80,7 +80,7 @@
             "description": "Specially equipped and elite trained stormtrooper infantry.",
             "category": "core",
             "keywords": ["Storm Trooper", "Infantry"],
-            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
+            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion"}, "modelLimit": "all"}],
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",

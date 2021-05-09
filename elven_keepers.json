@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -96,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "agile", {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -283,15 +283,15 @@
             "name": "Dance of War",
             "phase": "activation",
             "flavor": "The mesmerizing dance of the elven keepers allows them to overwhelm and overpower their enemies.",
-            "description": "Use this strategy when one of your units is given a Fight action. This unit may immediately make a 3\" move.",
+            "description": "Use this strategy when one of your units is given a Fight action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
             "cost": 1
         },
         "expedient_retreat": {
             "name": "Expedient Retreat",
             "phase": "activation",
             "flavor": "The elven keepers are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
-            "description": "Use after one of your units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
-            "cost": 2
+            "description": "Use after one of your _Infantry_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+            "cost": 1
         }
     },
     "powers": {

@@ -232,10 +232,6 @@
         "dragon_fire":{
             "name": "Dragon Fire Squad",
             "description": "A group of highly trained soldiers weilding powerful guns designed to melt through even the thickest of armor.",
-            "min": 1,
-            "max": 1,
-            "category": "specialist",
-            "keywords": ["Infantry"],
             "models":[
                 {
                     "name": "Dragon Fire Warrior",
@@ -247,6 +243,32 @@
                     "reflexes": 6,
                     "weapons": ["fusion_rifle", "fusion_bomb"],
                     "options": [{"replaceModel": "dragon_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 10
+                }
+            ]
+        },
+        "wraith_squad": {
+            "name": "Wraith Squad",
+            "description": "A group of heavily armored constructs.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "models":[
+                {
+                    "name": "Wraith",
+                    "courage": 6,
+                    "movement": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "wraith_sword", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "wraith_sword", "count": 2}], "withWeapon": [[{"id": "wraith_axe", "count": 2}, "forcefield_shield"], ["wraith_cannon", {"id": "wraith_fists", "count": 1}], ["distortion_rifle", {"id": "wraith_fists", "count": 1}]], "modelLimit": "all"}
+                    ],
                     "min": 5,
                     "max": 10
                 }
@@ -390,11 +412,9 @@
                     "movement": 12,
                     "reflexes": 6,
                     "weapons": ["elven_blaster", "frags"],
-                    "options":[{"replaceModel": "hawk_leader", "modelLimit": 1}],
-                    "min": 5,
-                    "max": 10
+                    "options":[{"replaceModel": "hawk_leader", "modelLimit": 1}]
                 }
-            ]
+              ]
         },
         "spiders":{
             "name": "Spider Squad",
@@ -741,10 +761,16 @@
         }
     },
     "weapons": {
+        "wraith_sword": {"name": "Wraith Sword", "attacks": 1, "short": "Melee", "ap": 4},
+        "wraith_axe": {"name": "Wraith Axe", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
+        "wraith_fists": {"name": "Wraith Fists", "attacks": 1, "short": "Melee", "ap": 2},
+        "wraith_cannon": {"name": "Wraith Cannon", "attacks": 1, "short": 6, "medium": 12, "ap": 8, "rules":["assault"]},
+        "distortion_rifle": {"name": "Distortion Rifle", "attacks": 1, "short": 6, "ap": 8, "rules":["assault", {"id": "critical", "x": 1}]},
         "doom_artillery_cannon": {"name": "Doom Artillery Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["indirect", {"id": "blast", "x": 3}]},
         "sky_cannon": {"name": "Sky Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4},
         "twin_sky_cannon": {"name": "Twin Sky Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4},
         "shining_shield": {"name": "Shining Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
+        "forcefield_shield": {"name": "Forcefield Shield", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
         "star_spear": {"name": "Star Spear", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome"]},
         "laser_lance_melee":{"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
         "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules":["rending"]},
@@ -797,8 +823,15 @@
             "name": "Expedient Retreat",
             "phase": "activation",
             "flavor": "The High Elves are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
-            "description": "Use after one of your _Infantry_ units finishes taking a Shooting action. You may immediately take a free move action. You may not charge with a unit in the same round that it has been affected by this strategy.",
-            "cost": 2
+            "description": "Use after one of your _Infantry_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+            "cost": 1
+        },
+        "vigilance": {
+            "name": "Vigilance",
+            "phase": "activation",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "Highly trained and expertly attentive, High Elf troops can react in an instant.",
+            "cost": 1
         }
     }
 }
