@@ -1954,7 +1954,7 @@
                         {"replaceRule": {"id": "melee_tactics", "x": 2}, "withRule": {"id": "rifle_tactics", "x": 2}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 5},
-                            "withWeapon": [{"id": "psychic_staff", "count": 5}, {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 5}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 5}, {"id": "psychic_falchion", "count": 6}, {"id": "psychic_hammer", "count": 5}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
@@ -1986,7 +1986,7 @@
                         {"replaceRule": {"id": "melee_tactics", "x": 1}, "withRule": {"id": "rifle_tactics", "x": 1}},
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 4},
-                            "withWeapon": [{"id": "psychic_staff", "count": 4}, {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 4}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 4}, {"id": "psychic_falchion", "count": 5}, {"id": "psychic_hammer", "count": 4}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
                     ],
@@ -2019,7 +2019,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
@@ -2052,7 +2052,7 @@
                     "options": [
                         {
                             "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                            "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                            "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                         },
                         {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
@@ -2072,7 +2072,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
             ],
@@ -2158,7 +2158,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 }
             ],
             "rules": ["teleport"],
@@ -2203,7 +2203,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
                 },
                 {"addRule": [{"id": "ambush", "name": "Strike"}], "modelLimit": "all", "limit": 1}
             ],
@@ -2246,7 +2246,7 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "psychic_sword", "count": 3},
-                    "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
+                    "withWeapon": [[{"id": "psychic_staff", "count": 3}, "psychic_staff_shielding"], {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                 }
             ],
             "rules": ["ambush", {"id": "wounds", "x": 2}],
