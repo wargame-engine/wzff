@@ -3075,7 +3075,7 @@
         "magic_shield": {
             "subfactions": ["none", "alien_hunters", "psychic_marines"],
             "name": "Shield",
-            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
             "charge": 7
         },
         "clouded": {
