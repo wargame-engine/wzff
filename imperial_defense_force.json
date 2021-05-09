@@ -1255,7 +1255,7 @@
             "cost": 1
         },
         "well_built": {
-            "subfactions": ["none", "goblin_army"],
+            "subfactions": ["mechanized_focus"],
             "phase": "activation",
             "name": "Well-Built",
             "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
