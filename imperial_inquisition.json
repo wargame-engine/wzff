@@ -198,6 +198,47 @@
                     "max": 1
                 }
             ]
+        },
+        "marine_heavy_tank": {
+            "name": "Heavy Assault APC",
+            "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle", "assault_ramp"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Assault APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "weapons": [
+                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Left", "Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Right", "Front"]}
+                    ],
+                    "options": [
+                        {"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
+                        {
+                            "replaceWeapon": [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
+                            "withWeapon": [
+                                [{"id": "flamethrower_cannon", "mount": ["Left", "Front"]}, {"id": "flamethrower_cannon", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        },
+                        {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_minigun", "mount": ["Front"]}},
+                        {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
     "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}},
