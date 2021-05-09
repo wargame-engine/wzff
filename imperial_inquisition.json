@@ -198,7 +198,7 @@
                     "max": 1
                 }
             ]
-        },
+        }
     },
     "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}},
     "powers": {
