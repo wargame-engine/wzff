@@ -575,7 +575,7 @@
         "psychic_staff_shielding": {"name": "Psychic Staff (Shield)", "attacks": 0, "short": "Melee", "rules": ["shielding"]},
         "psychic_halberd": {"name": "Psychic Halberd", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]},
         "psychic_falchion": {"name": "Psychic Falchions", "attacks": 1, "ap": 2, "short": "Melee"},
-        "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 5, "short": "Melee"},
+        "psychic_hammer": {"name": "Psychic Hammer", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["cumbersome"]},
         "psychic_greathammer": {"name": "Psychic Greathammer", "attacks": 1, "ap": 7, "short": "Melee"},
         "incinerator": {"name": "Incinerator", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
         "heavy_incinerator": {"name": "Heavy Incinerator", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},

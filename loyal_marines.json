@@ -1293,7 +1293,7 @@
             "models": [
                 {
                     "name": "Assault Marine Leader",
-                    "movement": 8,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -1319,7 +1319,7 @@
                 },
                 {
                     "name": "Assault Marine",
-                    "movement": 8,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -1331,6 +1331,43 @@
                     ],
                     "min": 4,
                     "max": 9
+                }
+            ]
+        },
+        "furious_assault_squad": {
+            "name": "Furious Marines",
+            "description": "A squad of especially angry assault marines.",
+            "category": "strike",
+            "subfactions": ["assault_focus"],
+            "options": [
+                {"addRule": "jetpack", "modelLimit": "all"},
+                {"addWeapon": "fusion_bomb", "modelLimit": 3},
+                {
+                    "replaceWeapon": {"id": "chainsword", "count": 2},
+                    "withWeapon": [
+                        {"id": "energy_mace", "count": 2},
+                        {"id": "energy_axe", "count": 2},
+                        {"id": "energy_sword", "count": 2},
+                        {"id": "energy_fist", "count": 2},
+                        {"id": "energy_hammer", "count": 2}
+                    ]
+                },
+                {"replaceWeapon": [{"id": "chainsword", "count": 2}, "marine_pistol"], "withWeapon": "marine_rifle"},
+                {"replaceWeapon": "marine_pistol", "withWeapon": ["flamethrower_pistol", "fusion_pistol", "plasma_pistol"]}
+            ],
+            "rules": [{"id": "resilient", "x": 2}, "furious"],
+            "models": [
+                {
+                    "name": "Furious Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": ["marine_pistol", "at_grenade", {"id": "chainsword", "count": 2}],
+                    "min": 5,
+                    "max": 10
                 }
             ]
         },
@@ -1358,7 +1395,7 @@
             "models": [
                 {
                     "name": "Veteran Assault Marine Leader",
-                    "movement": 8,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -1370,7 +1407,7 @@
                 },
                 {
                     "name": "Veteran Assault Marine",
-                    "movement": 8,
+                    "movement": 6,
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -1906,10 +1943,7 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "heavy_walker_fist", "count": 4}, "twin_marine_rifle"],
-                            "withWeapon": [
-                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "heavy_flamethrower"}],
-                                [{"id": "heavy_walker_fist", "count": 4}, {"id": "fusion_rifle"}]
-                            ]
+                            "withWeapon": [[{"id": "heavy_walker_fist", "count": 4}, {"id": "heavy_flamethrower"}], [{"id": "heavy_walker_fist", "count": 4}, {"id": "fusion_rifle"}]]
                         },
                         {
                             "replaceWeapon": ["heavy_fragmentation_cannon"],
