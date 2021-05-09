@@ -535,7 +535,7 @@
             "max": 1,
             "category": "super_heavy",
             "rules": ["damage_table_titan"],
-            "keywords": ["vehicle"],
+            "keywords": ["Vehicle"],
             "models": [
                 {
                     "name": "Wraith Titan",
