@@ -857,8 +857,6 @@
         "honor_guard": {
             "name": "Honor Guard",
             "description": "Marines clad in golden armor and wings with dangerous melee weapons.",
-            "min": 5,
-            "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
             "subfactions": ["assault_focus"],
@@ -876,8 +874,8 @@
                     "reflexes": 6,
                     "movement": 8,
                     "weapons": ["at_grenade", "storm_rifle", {"id": "energy_sword", "count": 3}],
-                    "rules": ["fly"],
-                    "min": 4,
+                    "rules": ["fly", "blinding_light"],
+                    "min": 5,
                     "max": 10
                 }
             ]
@@ -2568,6 +2566,7 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "blinding_light": {"name": "Blinding Light", "description": "Enemy models suffer -1 Strength when targeting this model with a Melee attack.", "points": 1},
         "sweeping": {"name": "Sweeping", "description": "Strength rolls of 1 or 2 with this weapon cause 2 hits instead of 1."},
         "legend_charge": {"name": "Charge Leader", "description": "This model and friendly _Infantry_ units within 3\" gain +3\" Movement on any Charge actions."},
         "legend_hammer": {"name": "Righteousness", "description": "On a turn where this model charges, all Melee attacks gain +1 AP."},
