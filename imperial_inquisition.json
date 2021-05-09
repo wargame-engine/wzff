@@ -80,7 +80,10 @@
             "description": "Specially equipped and elite trained stormtrooper infantry.",
             "category": "core",
             "keywords": ["Storm Trooper", "Infantry"],
-            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion"}, "modelLimit": "all"}],
+            "options": [
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}, "modelLimit": "all"},
+                {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+            ],
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",
@@ -109,8 +112,7 @@
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1}
                     ],
                     "min": 4,
                     "max": 9
