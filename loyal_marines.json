@@ -2350,7 +2350,8 @@
             "subfactions": ["psychic_marines"],
             "options": [{
                 "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
-                "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]]
+                "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
+                "modelLimit": 4
             }],
             "rules": [],
             "models": [
