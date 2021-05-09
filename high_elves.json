@@ -585,7 +585,7 @@
         },
         "dragon_leader": {
             "name": "Dragon Leader",
-            "courage": 7,
+            "courage": 6,
             "movement": 7,
             "shoot": 6,
             "fight": 6,
@@ -599,7 +599,7 @@
         },
         "banshee_leader": {
             "name": "Banshee Leader",
-            "courage": 7,
+            "courage": 6,
             "movement": 8,
             "shoot": 6,
             "fight": 6,
@@ -616,7 +616,7 @@
         },
         "spectre_leader": {
             "name": "Spectre Leader",
-            "courage": 7,
+            "courage": 6,
             "movement": 10,
             "shoot": 6,
             "fight": 6,
@@ -630,7 +630,7 @@
         },
         "scorpion_leader": {
             "name": "Scorpion Leader",
-            "courage": 7,
+            "courage": 6,
             "shoot": 6,
             "fight": 6,
             "defense": 7,
@@ -644,7 +644,7 @@
         },
         "spear_leader": {
             "name": "Glittering Spear Leader",
-            "courage": 7,
+            "courage": 6,
             "shoot": 6,
             "fight": 6,
             "defense": 8,
@@ -658,7 +658,7 @@
         },
         "hawk_leader": {
             "name": "Hawk Leader",
-            "courage": 7,
+            "courage": 6,
             "movement": 8,
             "shoot": 6,
             "fight": 6,
@@ -672,7 +672,7 @@
         },
         "spider_leader": {
             "name": "Spider Leader",
-            "courage": 7,
+            "courage": 6,
             "movement": 7,
             "shoot": 6,
             "fight": 6,
