@@ -236,7 +236,7 @@
                     "shoot": 4,
                     "defense": 4,
                     "movement": 6,
-                    "weapons": [{"id": "swarm_claws", "count": 4}],
+                    "weapons": [{"id": "swarm_claws", "count": 3}],
                     "options": [{"addWeapon": ["spinethrowers"]}],
                     "min": 3,
                     "max": 9
@@ -383,7 +383,7 @@
                 {
                     "name": "Hive Lord Guard",
                     "courage": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "fight": 6,
                     "shoot": 5,
                     "defense": 9,
