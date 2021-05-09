@@ -169,7 +169,36 @@
                     "max": 1
                 }
             ]
-        }
+        },
+        "armored_stormtrooper_truck": {
+            "name": "Armored Stormtrooper Truck",
+            "description": "An armored transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Stormtrooper Truck",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": ["light_battle_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
+                        {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
     },
     "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}},
     "powers": {

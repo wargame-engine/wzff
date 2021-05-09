@@ -936,7 +936,7 @@
             "max": 1,
             "models": [
                 {
-                    "name": "Armored Truck",
+                    "name": "Armored Stormtrooper Truck",
                     "movement": 10,
                     "courage": 5,
                     "shoot": 6,
