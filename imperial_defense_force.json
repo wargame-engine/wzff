@@ -1238,6 +1238,30 @@
             "cost": 1
         },
         "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2},
+        "firing_ports": {
+            "name": "Firing Ports",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating an _Infantry_ unit embarked in a Transport. That unit may make a single Shoot action.",
+            "flavor": "Mechanized forces usually have modified firing ports to allow infantry to fire their weapons while embarked.",
+            "cost": 1
+        },
+        "rapid_disembark": {
+            "name": "Rapid Disembark",
+            "subfactions": ["mechanized_focus"],
+            "phase": "activation",
+            "description": "Use when activating a transport _Vehicle_ unit. At any time during this unit's activation, all embarked units may make a free Move action to disembark. This may be used even after the transport has taken 2 Move actions.",
+            "flavor": "Rapidly disembarking is a difficult feat only for those expertly trained.",
+            "cost": 1
+        },
+        "well_built": {
+            "subfactions": ["none", "goblin_army"],
+            "phase": "activation",
+            "name": "Well-Built",
+            "flavor": "Expertly built and well-maintained, this vehicle is prepared for battle.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
+        },
         "defensive_tactics": {
             "phase": "activation",
             "subfactions": ["neon_hive"],

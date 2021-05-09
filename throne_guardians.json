@@ -571,7 +571,7 @@
         {
             "phase": "activation",
             "name": "Relic Deflectors",
-            "description": "Use before a Vehicle unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
+            "description": "Use before a _Vehicle_ unit makes a Save roll. Until the end of the round, roll a D10 for each hit and for each 3 or less, a hit is prevented.",
             "flavor": "With ancient defense fields, Throne Guardian vehicles can deflect even the heaviest attacks.",
             "cost": 2
         },

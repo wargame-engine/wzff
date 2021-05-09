@@ -1507,7 +1507,7 @@
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a Vehicle unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
+            "description": "Use before a _Vehicle_ unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
             "cost": 2
         },
         "fearless": {
