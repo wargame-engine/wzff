@@ -2252,7 +2252,12 @@
                         {"id": "psychic_hammer", "count": 2}
                     ]
                 },
-                {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "impact", "x": 1, "name": "Purifier"}], "modelLimit": "all", "limit": 1}
+                {
+                    "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
+                    "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
+                    "modelLimit": "1/5"
+                },
+                {"addRule": [{"id": "ambush", "name": "Strike"}], "modelLimit": "all", "limit": 1}
             ],
             "rules": [],
             "models": [
@@ -2279,14 +2284,58 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
-                            "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
-                            "modelLimit": "1/5"
-                        }
-                    ],
                     "rules": [],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "psychic_purifier_squad": {
+            "name": "Psychic Purifiers",
+            "description": "Psychic marines that are especially adept at casting powers.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "subfactions": ["psychic_marines"],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
+                    "withWeapon": [
+                        [{"id": "psychic_staff", "count": 2}, "psychic_staff_shielding"],
+                        {"id": "psychic_halberd", "count": 2},
+                        {"id": "psychic_falchion", "count": 3},
+                        {"id": "psychic_hammer", "count": 2}
+                    ]
+                },
+                {
+                    "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
+                    "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
+                    "modelLimit": "1/5"
+                }
+            ],
+            "models": [
+                {
+                    "name": "Purifier Sergeant",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "rules": [{"id": "psychic", "x": 1}, {"id": "psychic_prowess", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Purifier Marine",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
                     "min": 4,
                     "max": 9
                 }
@@ -2299,7 +2348,10 @@
             "max": 10,
             "category": "specialist",
             "subfactions": ["psychic_marines"],
-            "options": [{"replaceWeapon": "storm_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"]}],
+            "options": [{
+                "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
+                "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]]
+            }],
             "rules": [],
             "models": [
                 {
@@ -2325,13 +2377,6 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": ["storm_rifle", {"id": "psychic_sword", "count": 2}],
-                            "withWeapon": [["heavy_ccw", "incinerator"], ["heavy_ccw", "psychic_silencer"], ["heavy_ccw", "psychic_cannon"]],
-                            "modelLimit": "1/5"
-                        }
-                    ],
                     "rules": [],
                     "min": 4,
                     "max": 9
