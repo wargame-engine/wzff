@@ -2245,8 +2245,8 @@
             "subfactions": ["psychic_marines"],
             "options": [
                 {
-                    "replaceWeapon": {"id": "psychic_sword", "count": 2},
-                    "withWeapon": [{"id": "psychic_staff", "count": 2}, {"id": "psychic_halberd", "count": 2}, {"id": "psychic_falchion", "count": 3}, {"id": "psychic_hammer", "count": 2}]
+                    "replaceWeapon": {"id": "psychic_sword", "count": 3},
+                    "withWeapon": [{"id": "psychic_staff", "count": 3}, {"id": "psychic_halberd", "count": 3}, {"id": "psychic_falchion", "count": 4}, {"id": "psychic_hammer", "count": 3}]
                 }
             ],
             "rules": ["ambush", {"id": "wounds", "x": 2}],
@@ -2259,7 +2259,7 @@
                     "movement": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 3}],
                     "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
                     "rules": ["ward"],
                     "min": 1,
@@ -2273,7 +2273,7 @@
                     "defense": 9,
                     "movement": 5,
                     "reflexes": 6,
-                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
+                    "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 3}],
                     "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["incinerator", "psychic_silencer", "psychic_cannon"], "modelLimit": "2/5"}],
                     "rules": [],
                     "min": 2,
@@ -2303,7 +2303,6 @@
                     "options": [
                         {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 1}]},
                         {"replaceRule": {"id": "dread_walker_tactics", "x": 1}, "withRule": [{"id": "dread_walker_tactics", "x": 2}]}
                     ],
@@ -2334,7 +2333,6 @@
                     "options": [
                         {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"addRule": [{"id": "ambush", "name": "Strike"}, {"id": "teleport", "x": 6, "name": "Teleporter"}, {"id": "resilient", "x": 3, "name": "Greatshield"}]},
                         {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
                     ],
                     "min": 1,
@@ -2835,7 +2833,7 @@
         "storm": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
         "bolt": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
         "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 18\" gets -2\" of Movement until the end of the round.", "charge": 7},
-        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain.", "charge": 7},
+        "warp": {"subfactions": ["psychic_marines"], "name": "Warp", "description": "Target friendly unit within 12\" may move up to 24\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.", "charge": 7},
         "doom": {"subfactions": ["psychic_marines"], "name": "Doom", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(7).", "charge": 6},
         "purge": {"subfactions": ["psychic_marines"], "name": "Purge", "description": "Target enemy unit within 12\" take 8 automatic hits with AP 0.", "charge": 6}
     }
