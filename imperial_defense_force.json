@@ -1283,7 +1283,7 @@
             "cost": 2
         },
         "drilled_marksmen": {
-            "subfactions": ["shooting_focus"],
+            "subfactions": ["marksmanship_focus"],
             "phase": "activation",
             "name": "Drilled Marksmen",
             "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
@@ -1291,7 +1291,7 @@
             "cost": 1
         },
         "focused_attack": {
-            "subfactions": ["shooting_focus"],
+            "subfactions": ["marksmanship_focus"],
             "phase": "activation",
             "name": "Focused Attack",
             "description": "Use when a unit hits an enemy with a shooting attack. The next unit to shoot at that target gets +1 Accuracy.",
@@ -1299,7 +1299,7 @@
             "cost": 1
         },
         "ranked_fire": {
-            "subfactions": ["shooting_focus"],
+            "subfactions": ["marksmanship_focus"],
             "phase": "activation",
             "name": "Ranked Fire",
             "description": "Use when an _Infantry_ unit shoots. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
