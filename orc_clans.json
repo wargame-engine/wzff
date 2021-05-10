@@ -1638,7 +1638,7 @@
         },
         "counter_attack": {
             "subfactions": ["combat_focus"],
-            "name": "Counter Attack",
+            "name": "Counter-Attack",
             "phase": "activation",
             "flavor": "The toughest orcs never back down from a challenge.",
             "description": "Use when a unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
@@ -1680,7 +1680,7 @@
             "subfactions": ["shooting_focus"],
             "phase": "activation",
             "name": "Good Shots",
-            "description": "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
+            "description": "Use when an _Infantry_ unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
             "flavor": "Experienced with ranged weapons, these Orcs can hit targets accurately.",
             "cost": 1
         },
