@@ -890,7 +890,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},

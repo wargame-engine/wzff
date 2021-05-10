@@ -344,7 +344,7 @@
                     "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "energy_pick", "count": 3}],
                     "options": [
                         {"replaceModel": "abomination_hypermorph", "modelLimit": "1/5"},
-                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 2}]}
+                        {"replaceWeapon": {"id": "energy_pick", "count": 3}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}
                     ],
                     "min": 5,
                     "max": 10
@@ -498,7 +498,7 @@
         },
         "battle_tank": {
             "name": "Cult Battle Tank",
-            "description": "A main line battle tank.",
+            "description": "A main line battle tank stolen from the imperial defense force.",
             "min": 1,
             "max": 1,
             "category": "heavy",
@@ -536,9 +536,71 @@
                 }
             ]
         },
+        "support_vehicle": {
+            "name": "Cult Support Vehicle",
+            "description": "A support vehicle with multiple roles from artillery to anti-air.",
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Cult Support Vehicle",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_vehicle": {
+            "name": "Cult Assault Vehicle",
+            "description": "A light assault vehicle with multiple roles.",
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Cult Assault Vehicle",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_fusion_rifle", "mount": ["Front"]}, "fusion_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"replaceWeapon": "fusion_cannon", "withWeapon": ["acid_cannon", "flamestorm_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "heavy_fusion_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "light_apc": {
             "name": "Cult APC",
-            "description": "A corrupted light transport of the imperial defense force.",
+            "description": "A light transport stolen from the imperial defense force.",
             "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -555,7 +617,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "stealth", "name": "Camouflage Netting"}, "extra_armor"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
@@ -618,17 +680,17 @@
                 }
             ]
         },
-        "light_walker": {
-            "name": "Cult Light Walker",
-            "description": "A lightly equipped recon walker.",
-            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+        "scout_walker": {
+            "name": "Cult Scout Walker",
+            "description": "A lightly equipped recon walker stolen from the imperial defense force.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle", "scout"],
             "keywords": ["Vehicle"],
             "min": 1,
             "max": 1,
             "category": "strike",
             "models": [
                 {
-                    "name": "Cult Light Walker",
+                    "name": "Cult Scout Walker",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
@@ -637,8 +699,34 @@
                     "reflexes": 5,
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
-                        {"addRule": ["extra_armor", "scout"]},
-                        {"addWeapon": ["walker_chainsaw"]},
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "armored_walker": {
+            "name": "Cult Armored Walker",
+            "description": "An armored light combat walker stolen from the imperial defense force.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Cult Armored Walker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
                     ],
                     "min": 1,
@@ -648,7 +736,7 @@
         },
         "light_gunship": {
             "name": "Cult Light Transport Gunship",
-            "description": "A light gunship with sliding doors for troop transport.",
+            "description": "A light gunship with sliding doors for troop transport stolen from the imperial defense force.",
             "rules": [{"id": "transport", "x": 12}, "aircraft", "hover_mode", "damage_table_aircraft"],
             "category": "transport",
             "keywords": ["Vehicle"],
@@ -708,11 +796,11 @@
             "courage": 6,
             "shoot": 5,
             "fight": 6,
-            "defense": 6,
+            "defense": 7,
             "reflexes": 5,
             "movement": 6,
             "weapons": [{"id": "piercing_claws", "count": 1}, {"id": "hypermorph_tail", "count": 1}, {"id": "energy_pick", "count": 4}],
-            "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 3}]}],
+            "options": [{"replaceWeapon": {"id": "energy_pick", "count": 4}, "withWeapon": [{"id": "energy_hammer", "count": 4}]}],
             "min": 1,
             "max": 1
         },
@@ -795,7 +883,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
-        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "cult_tactics": {
             "name": "Cult Mind Tactics",
             "inputs": ["x"],
