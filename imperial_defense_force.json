@@ -1326,7 +1326,7 @@
             "name": "Counter-Attack",
             "phase": "activation",
             "flavor": "Not afraid of a fight, these soldiers will counter-attack upon their enemies.",
-            "description": "Use when a unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
             "cost": 1
         }
     },
