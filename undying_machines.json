@@ -446,7 +446,45 @@
                     "weapons": [{"id": "reaper_swords", "count": 4}],
                     "rules": [{"id": "wounds", "x": 2}],
                     "min": 2,
-                    "max": 2
+                    "max": 5
+                },
+                {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
+            ]
+        },
+        "tunneling_annihilators": {
+            "name": "Tunneling Annihilators",
+            "description": "A melee-focused annihilator which tunnels under the ground.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "keywords": ["Heavy Infantry"],
+            "rules": ["ambush", "coil_body"],
+            "models": [
+                {
+                    "name": "Tunneling Annihilator",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": [{"id": "reaper_glaive", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Tunneling Annihilator",
+                    "courage": 6,
+                    "movement": 8,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": [{"id": "reaper_swords", "count": 4}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 2,
+                    "max": 5
                 },
                 {"name": "Plasma-cell", "courage": "-", "movement": 8, "shoot": 5, "fight": 5, "defense": "-", "reflexes": "-", "weapons": ["plasma_spike"], "rules": ["plasma_injector"], "min": 0, "max": 1}
             ]
@@ -886,6 +924,7 @@
         }
     },
     "rules": {
+        "coil_body": {"name": "Coil Body", "description": "Enemy models suffer -1 Strength when targeting this model with a Melee attack.", "points": 1},
         "prideful_leader": {"name": "Prideful Leader", "description": "When this model activates, friendly _Infantry_ units within 6\" may remove one Shock.", "points": 1},
         "legend_nanobot_cloak": {"name": "Nanorobot Cloak", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "relentless_advance": {"name": "Relentless Advance", "description": "Friendly _Infantry_ units within 6\" add +1\" to their Movement characteristic.", "points": 5},
