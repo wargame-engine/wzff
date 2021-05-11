@@ -364,11 +364,11 @@
             "models": [
                 {
                     "name": "Dirt-bike Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 8,
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
@@ -380,11 +380,11 @@
                 },
                 {
                     "name": "Dirt-Bike",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 7,
-                    "reflexes": 6,
+                    "reflexes": 5,
                     "movement": 8,
                     "weapons": ["defense_rifle", "blasting_charges", {"id": "ccw"}],
                     "options": [
@@ -806,11 +806,11 @@
         },
         "quad_biker": {
             "name": "Quad-Biker",
-            "courage": 6,
+            "courage": 5,
             "shoot": 5,
             "fight": 5,
             "defense": 7,
-            "reflexes": 6,
+            "reflexes": 5,
             "movement": 8,
             "weapons": ["light_machinegun", "defense_rifle", "blasting_charges", {"id": "ccw"}],
             "options": [{"replaceWeapon": "light_machinegun", "withWeapon": ["mining_laser", "light_incinerator"]}],
