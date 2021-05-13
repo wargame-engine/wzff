@@ -163,10 +163,30 @@
             "name": "Berzerker Assassin",
             "description": "An assassin sent to uproot entire cults",
             "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
-                "category": "specialist",
-                "models": [
+            "category": "specialist",
+            "models": [
+                  {
+                      "name": "Berzerker Assassin",
+                      "movement": 7,
+                      "shoot": 7,
+                      "fight": 7,
+                      "defense": 6,
+                      "reflexes": 7,
+                      "courage": 7,
+                      "min": 1,
+                      "max": 1,
+                      "weapons": [{"id": "energy_sword", "count": 8}]
+                    }
+                ]
+        },
+        "stealth_assassin": {
+            "name": "Stealth Assassin",
+            "description": "An assassin sent to strike from the shadows",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "stealth", "ambush"],
+            "category": "specialist",
+            "models": [
                     {
-                        "name": "Berzerker Assassin",
+                        "name": "Stealth Assassin",
                         "movement": 7,
                         "shoot": 7,
                         "fight": 7,
@@ -175,7 +195,7 @@
                         "courage": 7,
                         "min": 1,
                         "max": 1,
-                        "weapons": [{"id": "energy_sword", "count": 8}]
+                        "weapons": [{"id": "mind_shredder", "count": 1}, {"id": "phase_sword", "count": 4}]
                     }
                 ]
         },
@@ -306,7 +326,9 @@
     "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24},
     "spectral_eye": {"name": "Spectral Eye", "attacks": 2, "ap": 4, "short": 9, "medium": 18},
     "assassin_unarmed": {"name": "Assassin Martial Arts", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
-    "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 18, "rules": [{"id": "deadly", "x": 3}]}
+    "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 18, "rules": [{"id": "deadly", "x": 3}]},
+    "mind_shredder": {"name": "Mind Shredder", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": [{"id": "shocking", "x": 3}]},
+    "phase_sword": {"name": "Phase Sword", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending", "phase"]}
 },
     "powers": {
         "fortify": {"name": "Fortify", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
@@ -317,7 +339,8 @@
         "retribution": {"name": "Retribution", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6}
     },
     "rules": {
-        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15}
+        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15},
+        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks", "points":10}
     },
     "strategies": [
         {
