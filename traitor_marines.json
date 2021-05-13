@@ -230,7 +230,7 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 7,
                     "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
@@ -939,7 +939,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle"],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
+                    "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -966,7 +966,7 @@
                     "weapons": ["heavy_autocannon"],
                     "options": [
                         {"addRule": [{"id": "spiked_ram"}, {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]},
-                        {"addWeapon": ["twin_marine_rifle", "havoc_missiles"]},
+                        {"addWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "havoc_missiles"]},
                         {
                             "addWeapon": [
                                 [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
@@ -1000,7 +1000,7 @@
                     "defense": 13,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_heavy_machinegun", "mount": ["Front"]}, {"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}],
-                    "options": [{"addWeapon": ["twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
+                    "options": [{"addWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle", "havoc_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}, "doom_siren"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1507,7 +1507,7 @@
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Daemonforge",
             "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a Vehicle unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
+            "description": "Use before a _Vehicle_ unit is targeted by an attack. Roll a D10 for each hit. On a 3 or less that hit is prevented.",
             "cost": 2
         },
         "fearless": {
@@ -1538,7 +1538,7 @@
             "subfactions": ["stealth_focus"],
             "name": "Decoy",
             "phase": "activation",
-            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit if there is a friendly _Infantry_ unit within 6\" of it. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
             "flavor": "Unsure of which is the real leader, enemies often get confused and shoot a different target.",
             "cost": 2
         },
@@ -1601,7 +1601,7 @@
         "magic_shield": {
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
             "name": "Shield",
-            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
             "charge": 7
         },
         "weakness": {

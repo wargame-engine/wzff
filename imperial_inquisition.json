@@ -80,7 +80,10 @@
             "description": "Specially equipped and elite trained stormtrooper infantry.",
             "category": "core",
             "keywords": ["Storm Trooper", "Infantry"],
-            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
+            "options": [
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}, "modelLimit": "all"},
+                {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+            ],
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",
@@ -94,7 +97,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_fist"]}
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -109,8 +112,7 @@
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1}
                     ],
                     "min": 4,
                     "max": 9
@@ -224,6 +226,76 @@
                     "reflexes": 6,
                     "weapons": ["twin_marine_rifle"],
                     "options": [{"addWeapon": ["twin_marine_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "armored_stormtrooper_truck": {
+            "name": "Armored Stormtrooper Truck",
+            "description": "An armored transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Stormtrooper Truck",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": ["light_battle_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
+                        {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_heavy_tank": {
+            "name": "Heavy Assault APC",
+            "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle", "assault_ramp"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Assault APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "weapons": [
+                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Left", "Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Right", "Front"]}
+                    ],
+                    "options": [
+                        {"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
+                        {
+                            "replaceWeapon": [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
+                            "withWeapon": [
+                                [{"id": "flamethrower_cannon", "mount": ["Left", "Front"]}, {"id": "flamethrower_cannon", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        },
+                        {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_minigun", "mount": ["Front"]}},
+                        {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}
+                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1

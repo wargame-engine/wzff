@@ -236,7 +236,7 @@
                     "shoot": 4,
                     "defense": 4,
                     "movement": 6,
-                    "weapons": [{"id": "swarm_claws", "count": 4}],
+                    "weapons": [{"id": "swarm_claws", "count": 3}],
                     "options": [{"addWeapon": ["spinethrowers"]}],
                     "min": 3,
                     "max": 9
@@ -245,7 +245,7 @@
         },
         "gargoyles": {
             "name": "Gargoyles",
-            "description": "Basic bugs with biological weapons",
+            "description": "Basic flying bugs with biological weapons",
             "category": "strike",
             "models": [
                 {
@@ -272,7 +272,7 @@
                 {
                     "name": "Transport Spore",
                     "courage": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "fight": 4,
                     "shoot": 4,
                     "defense": 9,
@@ -293,7 +293,7 @@
                 {
                     "name": "Consumption Beast",
                     "courage": 4,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "fight": 5,
                     "shoot": 5,
                     "defense": 12,
@@ -363,7 +363,7 @@
                 {
                     "name": "Flame Beast",
                     "courage": 4,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "fight": 5,
                     "shoot": 5,
                     "defense": 7,
@@ -383,7 +383,7 @@
                 {
                     "name": "Hive Lord Guard",
                     "courage": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "fight": 6,
                     "shoot": 5,
                     "defense": 9,
