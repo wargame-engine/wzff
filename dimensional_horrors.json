@@ -636,7 +636,7 @@
             "keywords": ["infantry"],
             "category": "command",
             "rules": [],
-            "subfaction": ["none", "war"],
+            "subfaction": ["war"],
             "min": 1,
             "max": 1,
             "models": [
@@ -660,7 +660,7 @@
             "keywords": ["cavalry"],
             "category": "command",
             "rules": [],
-            "subfaction": ["none", "war"],
+            "subfaction": ["war"],
             "min": 1,
             "max": 1,
             "models": [
@@ -682,7 +682,7 @@
             "keywords": ["cavalry"],
             "category": "strike",
             "rules": [],
-            "subfaction": ["none", "war"],
+            "subfaction": ["war"],
             "min": 5,
             "max": 10,
             "models": [
@@ -694,7 +694,7 @@
             "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
             "keywords": ["infantry"],
             "category": "core",
-            "subfactions": ["none", "war"],
+            "subfactions": ["war"],
             "min": 10,
             "max": 30,
             "models": [
@@ -713,6 +713,30 @@
                     "options": [{"modelLimit": 1, "addRule": ["banner_of_blood"]}, {"modelLimit": 1, "addRule": ["instrument_of_blood"]}, {"modelLimit": 1, "addRule": ["horrible_icon"]}]
                 }
             ]
+        },
+        "wrath_monger": {
+            "name": "Greater Daemon of War",
+            "description": "The war-god's most exalted warriors are granted the strongest bodies",
+            "keywords": ["monster"],
+            "category": "command",
+            "subfactions": "war",
+            "models": [
+                {
+                    "name": "Greater Daemon of War",
+                    "movement": 12,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 11,
+                    "reflexes": 7,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "blessed_axe", "count": 6}, {"id": "blessed_whip", "count": 1}],
+                    "rules": ["fly", {"id": "leader_x", "x": "Infantry"}, "ambush", {"id": "tough", "x": 2}, "damage_table_monster"],
+                    "options": [{"replaceWeapon": ["blessed_axe", "blessed_whip"], "withWeapon": {"id": "blessed_greataxe", "count": 6}}]
+                }
+            ]
+
         }
     },
     "models": {
@@ -792,9 +816,15 @@
         },
         "segmented_claws": {"name": "Segmented Claws", "attacks": 5, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "barbed_tail": {"name": "Barbed Tail", "attacks": 1, "short": "Melee", "ap": 2},
-        "war_sword": {"name": "Wargod-blessed Sword", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "war_sword": {"name": "War-Blessed Sword", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "throne_mouth": {"name": "War-Throne's Mashing Gnaw", "attacks": 1, "short": "Melee", "ap": 3},
-        "hounds_teeth": {"name": "Hound's Jaws", "attacks": 1, "short": "Melee", "ap": 1}
+        "hounds_teeth": {"name": "Hound's Jaws", "attacks": 1, "short": "Melee", "ap": 1},
+        "blessed_axe": {"name": "War-Blessed Axe", "attacks": 1, "short": "Melee", "ap": 8},
+        "blessed_whip": {"name": "War-Blessed Whip", "attacks": 1, "short": 6, "medium": 12, "ap": 5, "rules": ["pistol"]},
+        "blessed_greataxe": {"name": "War-Blessed Greataxe", 
+            "profiles": [{"name": "Sweeping Attack", "attacks": 2, "short": "Melee", "ap": 5},
+                        {"name": "Mighty Strike", "attacks": 1, "short": "Melee", "ap": "12"}]
+            }
     },
     "rules": {
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
