@@ -157,7 +157,27 @@
                 }
             ]
         },
-        "inquisition_light_gunship": {
+        "berserker_assassin": {
+            "name": "Berzerker Assassin",
+            "description": "An assassin sent to uproot entire cults",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
+                "category": "specialist",
+                "models": [
+                    {
+                        "name": "Berzerker Assassin",
+                        "movement": 7,
+                        "shoot": 7,
+                        "fight": 7,
+                        "defense": 6,
+                        "reflexes": 7,
+                        "courage": 7,
+                        "min": 1,
+                        "max": 1,
+                        "weapons": [{"id": "energy_sword", "count": 8}]
+                    }
+                ]
+        },
+            "inquisition_light_gunship": {
             "name": "Inquisition Light Gunship",
             "description": "A light gunship with sliding doors for troop transport.",
             "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
@@ -224,7 +244,9 @@
         "pursuit": {"name": "Pursuit", "description": "Target friendly unit within 12\" may target Character units even if they are protected by enemy units.", "charge": 6},
         "retribution": {"name": "Retribution", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6}
     },
-    "rules": {},
+    "rules": {
+        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15}
+    },
     "strategies": [
         {
             "name": "Vigilance",
@@ -248,4 +270,5 @@
             "cost": "1/per"
         }
     ]
+}
 }
