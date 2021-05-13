@@ -340,7 +340,7 @@
     },
     "rules": {
         "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15},
-        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks", "points":}
+        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks", "points":10}
     },
     "strategies": [
         {
