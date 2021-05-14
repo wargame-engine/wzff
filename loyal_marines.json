@@ -3067,31 +3067,27 @@
     ],
     "powers": {
         "fortify": {
-            "subfactions": ["none", "alien_hunters", "psychic_marines"],
             "name": "Courage",
             "description": "Target friendly unit within 12\" gets +1 Courage until the of the round.",
             "charge": 8
         },
         "magic_shield": {
-            "subfactions": ["none", "alien_hunters", "psychic_marines"],
             "name": "Shield",
             "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
             "charge": 7
         },
         "clouded": {
-            "subfactions": ["none", "alien_hunters", "psychic_marines"],
             "name": "Clouded",
             "description": "Target enemy unit within 18\" gets -1 Accuracy until the end of the round.",
             "charge": 6
         },
         "pacify": {
-            "subfactions": ["none", "alien_hunters", "psychic_marines"],
             "name": "Pacify",
             "description": "Target enemy unit within 18\" suffers -1 Strength with its next attack.",
             "charge": 6
         },
-        "storm": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
-        "bolt": {"subfactions": ["none", "alien_hunters", "psychic_marines"], "name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
+        "storm": {"name": "Storm", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
+        "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
         "snare": {"subfactions": ["alien_hunters"], "name": "Snare", "description": "Target enemy unit within 18\" gets -2\" of Movement until the end of the round.", "charge": 7},
         "warp": {
             "subfactions": ["psychic_marines"],
