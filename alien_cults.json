@@ -194,7 +194,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": [{"id": "piercing_claws", "count": 2}],
+                    "weapons": [{"id": "piercing_claws", "count": 3}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
                     "min": 5,
                     "max": 20
