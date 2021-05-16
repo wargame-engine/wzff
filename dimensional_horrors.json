@@ -8,7 +8,7 @@
             "name": "Greater Daemon of Change",
             "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
             "subfactions": ["change"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush", "fly", "stealth", {"id": "psychic", "x": 3}, "fear", {"id": "tough", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush", "fly", "stealth", {"id": "power", "x": 3}, "fear", {"id": "tough", "x": 2}],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -51,7 +51,7 @@
                     "reflexes": 7,
                     "weapons": ["daemon_sword"],
                     "options": [
-                        {"addRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
+                        {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}, {"id": "power", "x": 3}]},
                         {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
                         {"addRule": "wings"}
                     ],
@@ -66,7 +66,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "tough", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "tough", "x": 1}, {"id": "power", "x": 1}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -94,7 +94,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "tough", "x": 1}, {"id": "psychic", "x": 1}, "hover"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "tough", "x": 1}, {"id": "power", "x": 1}, "hover"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -121,7 +121,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, "hover", "psychic_syphon"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}, {"id": "tough", "x": 1}, "hover", "psychic_syphon"],
             "models": [
                 {"name": "Blue Scholars", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["quills", "disk_blades"], "min": 1, "max": 1, "rules": []}
             ]
@@ -134,7 +134,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["stealth", {"id": "tough", "x": 2}, {"id": "psychic", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
+            "rules": ["stealth", {"id": "tough", "x": 2}, {"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
             "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "chromatic_horrors": {
@@ -305,7 +305,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 2}, {"id": "resilient", "x": 1}, "no_escape"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 2}, {"id": "resilient", "x": 1}, "no_escape"],
             "min": 1,
             "max": 1,
             "models": [
@@ -330,7 +330,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -355,7 +355,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -381,7 +381,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -407,7 +407,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -458,7 +458,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, "stealth", {"id": "psychic", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, "stealth", {"id": "power", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -483,7 +483,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, {"id": "power", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -686,7 +686,7 @@
             "min": 5,
             "max": 10,
             "models": [
-                {"name": "Dogs of War", "movement": 8, "courage": 6, "shoot": 5, "fight": 8, "defense": 6, "min": 5, "max": 20, "rules": ["ward"], "weapons": [{"id": "hounds_teeth", "count": 4}]}
+                {"name": "Dogs of War", "movement": 8, "courage": 6, "shoot": 5, "fight": 8, "defense": 6, "min": 5, "max": 20, "rules": [{"id": "ward", "x": 1}], "weapons": [{"id": "hounds_teeth", "count": 4}]}
             ]
         },
         "wrath_warriors": {
@@ -753,7 +753,7 @@
                 {"modelLimit": 1, "addRule": ["banner_of_change"]},
                 {"modelLimit": 1, "addRule": ["instrument_of_change"]},
                 {"modelLimit": 1, "addRule": ["horrible_icon"]},
-                {"modelLimit": 1, "addRule": [{"id": "psychic", "x": 1}]}
+                {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
             ],
             "min": 10,
             "max": 30,

@@ -23,7 +23,7 @@
                     "reflexes": 7,
                     "weapons": [{"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"addRule": [{"id": "psychic", "x": 1, "name": "Machine Powers"}, {"id": "psychic", "x": "2", "name": "Master Machine Powers"}]},
+                        {"addRule": [{"id": "power", "x": 1, "name": "Machine Powers"}, {"id": "power", "x": "2", "name": "Master Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -55,8 +55,8 @@
                         {
                             "addRule": [
                                 {"id": "repair", "x": 5, "name": "Master Machinist"},
-                                {"id": "psychic", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "psychic", "x": 2, "name": "Enhanced Psychic Resonator"},
+                                {"id": "power", "x": 1, "name": "Psychic Resonator"},
+                                {"id": "power", "x": 2, "name": "Enhanced Psychic Resonator"},
                                 {"id": "canticles", "x": 1}
                             ],
                             "limit": 1
@@ -110,7 +110,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "psychic", "x": 1, "name": "Psychic Resonator"}]},
+                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "power", "x": 1, "name": "Psychic Resonator"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],

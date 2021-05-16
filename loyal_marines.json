@@ -144,7 +144,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "models": [
                 {
@@ -157,7 +157,7 @@
                     "movement": 6,
                     "weapons": [{"id": "marine_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
                     "options": [
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"replaceWeapon": ["marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1},
                         {"replaceWeapon": ["marine_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
                         {
@@ -221,7 +221,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "models": [
                 {
@@ -233,7 +233,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "prime_pistol"}, "at_grenade", {"id": "energy_sword", "count": 4}],
-                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}],
+                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}],
                     "min": 1,
                     "max": 1
                 }
@@ -2011,9 +2011,9 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["minigun", {"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
-                    "rules": ["ward"],
+                    "rules": [{"id": "ward", "x": 1}],
                     "options": [
-                        {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}},
+                        {"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}},
                         {
                             "replaceWeapon": [{"id": "walker_fist", "count": 4}, {"id": "twin_marine_rifle"}],
                             "withWeapon": [[{"id": "walker_fist", "count": 4}, {"id": "heavy_flamethrower"}], "missile_launcher", "twin_autocannon"]
@@ -2091,7 +2091,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 2}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -2114,7 +2114,7 @@
                                 {"id": "psychic_hammer", "count": 5}
                             ]
                         },
-                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -2128,7 +2128,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "wounds", "x": 3}, {"id": "melee_tactics", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -2151,7 +2151,7 @@
                                 {"id": "psychic_hammer", "count": 4}
                             ]
                         },
-                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 2}]}
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -2166,7 +2166,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["support", {"id": "wounds", "x": 3}, "ward"],
+            "rules": ["support", {"id": "wounds", "x": 3}, {"id": "ward", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -2189,7 +2189,7 @@
                                 {"id": "psychic_hammer", "count": 3}
                             ]
                         },
-                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": [{"id": "power", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
                     ],
                     "min": 1,
@@ -2204,7 +2204,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": ["support", {"id": "wounds", "x": 3}, "ward"],
+            "rules": ["support", {"id": "wounds", "x": 3}, {"id": "ward", "x": 1}],
             "subfactions": ["psychic_marines"],
             "models": [
                 {
@@ -2227,7 +2227,7 @@
                                 {"id": "psychic_hammer", "count": 3}
                             ]
                         },
-                        {"replaceRule": "ward", "withRule": [{"id": "psychic", "x": 1}]},
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": [{"id": "power", "x": 1}]},
                         {"replaceRule": "banner_of_wrath", "withRule": ["banner_of_justice", "banner_of_focus"]}
                     ],
                     "min": 1,
@@ -2270,8 +2270,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2323,7 +2323,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "rules": [{"id": "psychic", "x": 1}, {"id": "psychic_prowess", "x": 1}],
+                    "rules": [{"id": "power", "x": 1}, {"id": "psychic_prowess", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2364,8 +2364,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2413,8 +2413,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "storm_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2469,8 +2469,8 @@
                     "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 2}],
-                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2517,8 +2517,8 @@
                     "defense": 9,
                     "reflexes": 6,
                     "weapons": [{"id": "twin_marine_rifle"}, "psychic_grenade", {"id": "psychic_sword", "count": 3}],
-                    "options": [{"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -2541,7 +2541,7 @@
         "grand_master_dread_walker": {
             "name": "Grand Master in Dread Walker",
             "description": "A large psychic walker with heavy weapons and extreme combat prowess.",
-            "rules": ["vulnerable_rear", "ward", "damage_table_vehicle", {"id": "dread_walker_tactics", "x": 1}],
+            "rules": ["vulnerable_rear", {"id": "ward", "x": 1}, "damage_table_vehicle", {"id": "dread_walker_tactics", "x": 1}],
             "category": "command",
             "subfactions": ["psychic_marines"],
             "keywords": ["Vehicle"],
@@ -2560,7 +2560,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"replaceRule": ["ward"], "withRule": [{"id": "psychic", "x": 1}, {"id": "psychic", "x": 1}]},
+                        {"replaceRule": [{"id": "ward", "x": 1}], "withRule": [{"id": "power", "x": 1}, {"id": "power", "x": 1}]},
                         {"replaceRule": {"id": "dread_walker_tactics", "x": 1}, "withRule": [{"id": "dread_walker_tactics", "x": 2}]}
                     ],
                     "min": 1,
@@ -2571,7 +2571,7 @@
         "dread_walker": {
             "name": "Dread Walker",
             "description": "A large psychic walker with heavy weapons and extreme combat prowess.",
-            "rules": ["vulnerable_rear", "ward", "damage_table_vehicle"],
+            "rules": ["vulnerable_rear", {"id": "ward", "x": 1}, "damage_table_vehicle"],
             "category": "heavy",
             "subfactions": ["psychic_marines"],
             "keywords": ["Vehicle"],
@@ -2590,7 +2590,7 @@
                     "options": [
                         {"replaceWeapon": {"id": "dread_fist", "count": 4}, "withWeapon": [{"id": "psychic_greathammer", "count": 4}, {"id": "psychic_greatsword", "count": 4}], "limit": 1},
                         {"addWeapon": [{"id": "heavy_incinerator"}, "gatling_psychic_silencer", {"id": "heavy_psychic_cannon"}], "limit": 2},
-                        {"replaceRule": ["ward"], "withRule": {"id": "psychic", "x": 1}}
+                        {"replaceRule": [{"id": "ward", "x": 1}], "withRule": {"id": "power", "x": 1}}
                     ],
                     "min": 1,
                     "max": 1

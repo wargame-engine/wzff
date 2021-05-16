@@ -19,7 +19,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 3}],
-                    "rules": ["ward", {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "rules": [{"id": "ward", "x": 1}, {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}],
                     "options": [
                         {"replaceRule": {"id": "witch_hunter_tactics", "x": 1}, "withRule": {"id": "witch_hunter_tactics", "x": 2}},
                         {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 3}], {"id": "energy_greatblade", "count": 4}], "limit": 1}
@@ -143,7 +143,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 2}],
-                    "rules": ["ward"],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },

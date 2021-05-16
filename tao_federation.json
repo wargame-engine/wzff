@@ -103,7 +103,7 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "psychic", "x": 1}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
                     "weapons": [{"id": "energy_sword", "count": 3}],
                     "options": [{"addRule": "hover_drone"}, {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2}],
                     "min": 1,

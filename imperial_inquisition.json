@@ -11,7 +11,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -37,7 +37,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
                         {"addWeapon": "guardian_eagle"},
-                        {"replaceRule": "ward", "withRule": {"id": "psychic", "x": 1}}
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": {"id": "power", "x": 1}}
                     ],
                     "min": 1,
                     "max": 1
@@ -67,7 +67,7 @@
                         {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
+                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, {"id": "ward", "x": 1}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -122,7 +122,7 @@
         "psyker_hunter_assassin": {
             "name": "Psychic-Hunter Assassin",
             "description": "An assassin trained in subduing those who misuse psychic powers",
-            "rules": [{"id": "wounds", "x": 3}, "fear", {"id": "ward", "x": 4}, "assassin"],
+            "rules": [{"id": "wounds", "x": 3}, "fear", {"id": {"id": "ward", "x": 1}, "x": 4}, "assassin"],
             "category": "specialist",
             "models": [
                 {

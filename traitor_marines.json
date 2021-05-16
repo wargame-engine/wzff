@@ -175,10 +175,10 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]},
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"addRule": ["jetpack", "destroyer_armor"]}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -208,9 +208,9 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "twin_marine_rifle"]},
                         {"replaceWeapon": ["chainsword"], "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]},
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}, {"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "power", "x": 1}, {"id": "impact", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -221,7 +221,7 @@
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
             "subfactions": ["none", "pestilence_focus", "change_traitors"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "psychic", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -234,7 +234,7 @@
                     "reflexes": 7,
                     "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]},
                         {"replaceWeapon": {"id": "daemon_sword", "count": 4}, "withWeapon": [{"id": "daemon_axe", "count": 4}, {"id": "daemon_claws", "count": 6}]},
                         {"addRule": "wings"}
                     ],
@@ -402,8 +402,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["marine_pistol", "frags", {"id": "energy_staff", "count": 4}],
-                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}],
-                    "rules": [{"id": "psychic", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}],
+                    "rules": [{"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -1187,7 +1187,7 @@
         "sorcerer_lord": {
             "name": "Sorcerer Lord",
             "description": "A master of combat that leads the forces of change.",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1216,7 +1216,7 @@
         "sorcerer": {
             "name": "Sorcerer",
             "description": "A distinguished sorcerer who has managed to rise through the ranks of the change brothers.",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}, {"id": "tough", "x": 1}, {"id": "rifle_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}, {"id": "tough", "x": 1}, {"id": "rifle_tactics", "x": 1}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1245,7 +1245,7 @@
         "birdman_sorcerer": {
             "name": "Birdman Sorcerer",
             "description": "A mutated half bird half man sorcerer that leads demonic forces of change.",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "specialist",
@@ -1260,7 +1260,7 @@
                     "defense": 6,
                     "reflexes": 4,
                     "weapons": [{"id": "energy_staff", "count": 3}],
-                    "options": [{"changeRule": {"id": "psychic", "x": 2}}, {"addRule": "disk_of_change"}],
+                    "options": [{"changeRule": {"id": "power", "x": 2}}, {"addRule": "disk_of_change"}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -1285,8 +1285,8 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": ["hexed_pistol", {"id": "energy_staff", "count": 2}],
-                    "options": [{"replaceRule": "ward", "withRule": {"id": "psychic", "x": 1}}, {"replaceWeapon": "hexed_pistol", "withWeapon": ["hexed_flamethrower_pistol", "plasma_pistol"]}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": {"id": "ward", "x": 1}, "withRule": {"id": "power", "x": 1}}, {"replaceWeapon": "hexed_pistol", "withWeapon": ["hexed_flamethrower_pistol", "plasma_pistol"]}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -1325,8 +1325,8 @@
                     "defense": 9,
                     "reflexes": 6,
                     "weapons": ["twin_hexed_rifle", {"id": "energy_sword", "count": 2}],
-                    "options": [{"replaceRule": "ward", "withRule": {"id": "psychic", "x": 1}}, {"replaceWeapon": "twin_hexed_rifle", "withWeapon": [{"id": "energy_sword", "count": 2}]}],
-                    "rules": ["ward"],
+                    "options": [{"replaceRule": {"id": "ward", "x": 1}, "withRule": {"id": "power", "x": 1}}, {"replaceWeapon": "twin_hexed_rifle", "withWeapon": [{"id": "energy_sword", "count": 2}]}],
+                    "rules": [{"id": "ward", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -1372,7 +1372,7 @@
         "warp_beast": {
             "name": "Warp Beast",
             "description": "An amagamation of corupted flesh whose power is harnessed by a massive portal on it's back.",
-            "rules": [{"id": "psychic", "x": 1}, "damage_table_monster", "vulnerable_rear"],
+            "rules": [{"id": "power", "x": 1}, "damage_table_monster", "vulnerable_rear"],
             "subfactions": ["change_traitors"],
             "min": 1,
             "max": 1,
@@ -1483,7 +1483,7 @@
             "points": 10
         },
         "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
-        "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
+        "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "power", "x": 1}, "frequency": 5}]},
         "war_chant": {
             "name": "War Chant",
             "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.",

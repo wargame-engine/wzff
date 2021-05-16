@@ -18,7 +18,7 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint", "ward", {"id": "saint_tactics", "x": 2}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint", {"id": "ward", "x": 1}, {"id": "saint_tactics", "x": 2}],
                     "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 6}],
                     "min": 1,
                     "max": 1
@@ -112,7 +112,7 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "ward", "name": "Faith Shield"}]},
+                        {"addRule": [{"id": {"id": "ward", "x": 1}, "name": "Faith Shield"}]},
                         {"replaceRule": "banner_of_focus", "withRule": ["banner_of_justice", "banner_of_wrath"], "limit": 1}
                     ],
                     "min": 1,
