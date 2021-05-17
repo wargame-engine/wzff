@@ -476,7 +476,7 @@
             "name": "Loyal Marines",
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
-            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
+            "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}, {"addRule": "multi_scanner", "modelLimit": 1}],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -2689,6 +2689,11 @@
         "judge_blade": {"name": "Judge Blade", "attacks": 1, "short": "Melee", "ap": 5}
     },
     "rules": {
+        "multi_scanner": {
+            "name": "Multi-Scanner",
+            "description": "Once per round, this unit may re-roll an Initiative test. This may be used one additional time per round for each model with this rule.",
+            "points": 5
+        },
         "magnetic_grapple": {
             "name": "Magnetic Grapple",
             "description": "Units engaged in Melee with a model that has this weapon suffer -2 to Initiative tests when escaping combat for each weapon with this rule.",
