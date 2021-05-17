@@ -495,9 +495,38 @@
                 }
             ]
         },
+        "combat_walker": {
+            "name": "Guardian Combat Walker",
+            "description": "An agile walker with melee weapons.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Guardian Combat Walker",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 12,
+                    "reflexes": 7,
+                    "weapons": ["walker_sword_shoot", {"id": "walker_sword_blade", "count": 5}, {"id": "walker_combat_shield"}],
+                    "options": [
+                        {"replaceWeapon": ["walker_sword_shoot", {"id": "walker_sword_blade", "count": 5}, {"id": "walker_combat_shield"}], "withWeapon": [
+                            [{"id": "walker_spear_blade", "count": 5}, "walker_spear_rifle", {"id": "twin_guardian_rifle", "count": 2}]
+                        ]},
+                        {"replaceWeapon": {"id": "twin_guardian_rifle", "count": 2}, "withWeapon": [{"id": "twin_guardian_destructor", "count": 2}, {"id": "guardian_flamethrower", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "contemptor_assault_walker": {
             "name": "Relic Contemptor Walker",
-            "description": "A heavily armed prime walker.",
+            "description": "A heavily armed ancient walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "category": "heavy",
             "keywords": ["Vehicle"],
@@ -590,9 +619,13 @@
         },
         "guardian_flamethrower": {"name": "Guardian Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
         "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
-        "guardian_combat_shield": {"name": "Guardian Combat Shield", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["shielding"]},
+        "walker_combat_shield": {"name": "Walker Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
+        "walker_sword_shoot": {"name": "Walker Sword (Shoot)", "attacks": 2, "short": 6, "medium": 12, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+        "walker_sword_blade": {"name": "Walker Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
+        "walker_spear_blade": {"name": "Walker Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 8},
+        "walker_spear_rifle": {"name": "Walker Spear (Shoot)", "attacks": 2, "short": 12, "medium": 24, "ap": 5},
         "laser_spear": {
             "name": "Laser Spear",
             "profiles": [{"name": "Blade", "attacks": 1, "short": "Melee", "ap": 3}, {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
