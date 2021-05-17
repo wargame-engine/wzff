@@ -885,9 +885,9 @@
         "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
         "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "cult_tactics": {
-            "name": "Cult Mind Tactics",
+            "name": "Cult Mind Control Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 24\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+ \n * +1 Courage \n * +3\" of Movement",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 24\" to immediately activate and receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Initiative tests of 9+ \n * +1 Courage \n * +3\" of Movement",
             "points": ["rule.x", {"multiply": 20}]
         },
         "cult_melee_tactics": {
