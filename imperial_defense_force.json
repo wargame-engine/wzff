@@ -59,7 +59,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -120,7 +120,7 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -198,7 +198,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -404,7 +404,7 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -475,7 +475,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -546,7 +546,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -599,7 +599,7 @@
             "category": "specialist",
             "min": 3,
             "max": 6,
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Weapon Team",
