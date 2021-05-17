@@ -788,16 +788,16 @@
             ]
         },
         "command_battle_tank": {
-            "name": "Command Battle Tank",
+            "name": "Battle Tank Commander",
             "description": "A main line battle tank commander.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["vulnerable_side_rear", "field_orders_battle_tank", "damage_table_vehicle"],
+            "rules": ["vulnerable_side_rear", {"id": "battle_tank_tactics", "x": 1}, "damage_table_vehicle"],
             "models": [
                 {
-                    "name": "Battle Tank",
+                    "name": "Battle Tank Commander",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -807,8 +807,8 @@
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
                         {
-                            "replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"},
-                            "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]
+                            "replaceRule": {"id": "battle_tank_tactics", "x": 1},
+                            "withRule": {"id": "battle_tank_tactics", "x": 2}
                         },
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank", "extra_armor"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
@@ -1200,20 +1200,11 @@
         },
         "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
-        "commander_field_orders_battle_tank": {
-            "name": "Battle Tank Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
-            "points": 20
-        },
-        "field_orders_battle_tank": {
-            "name": "Battle Tank Orders",
-            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3). A unit may only benefit from one Battle Tank Order.",
-            "points": 15
-        },
-        "field_radio_battle_tank": {
-            "name": "Field Radio (Armored)",
-            "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
-            "points": 10
+        "battle_tank_tactics": {
+            "name": "Battle Tank Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Battle Tank_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement \n * Impact(+3).",
+            "points": ["rule.x", {"multiply": 15}]
         },
         "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10}
     },

@@ -810,13 +810,18 @@
         "disk_of_change": {"name": "Disk of Change", "description": "Gives the unit hover and Impact(1). Also increases the units movement by 2\".", "points": 5},
         "field_radio": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Defense Force Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Defense Force Tactics_ rule.",
+            "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
             "points": 5
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Storm Trooper Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Storm Trooper Tactics_ rule.",
+            "description": "If a friendly unit within 3\" uses the _Stormtrooper Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
             "points": 5
+        },
+        "field_radio_battle_tank": {
+            "name": "Battle Tank Radio",
+            "description": "If a friendly unit within 3\" uses the _Battle Tank Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Battle Tank Radio.",
+            "points": 10
         },
         "stormtrooper_tactics": {
             "name": "Storm Trooper Tactics",
