@@ -51,7 +51,7 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 5}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 5}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 5}, "guardian_axe_rifle"],
                                 ["guardian_rifle", {"id": "heavy_ccw", "count": 4}]
                             ]
                         },
@@ -85,7 +85,7 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 4}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 4}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 4}, "guardian_axe_rifle"],
                                 ["guardian_rifle", {"id": "heavy_ccw", "count": 3}]
                             ]
                         },
@@ -183,7 +183,7 @@
                             "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
                             "withWeapon": [
                                 [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                                [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
+                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
                                 ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                             ]
                         },
@@ -255,13 +255,12 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 2}, {"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
+                    "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
                     "withWeapon": [
-                        [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
-                        [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"],
+                        [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"],
                         ["guardian_rifle", {"id": "heavy_ccw", "count": 2}]
                     ]
                 },
@@ -276,7 +275,7 @@
                     "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "at_grenade"],
                     "min": 3,
                     "max": 5
                 }
@@ -303,6 +302,30 @@
                 }
             ]
         },
+        "guardian_destoyers": {
+            "name": "Guardian Destroyers",
+            "description": "Guardians clad in very heavy armor.",
+            "rules": ["ambush", {"id": "wounds", "x": 2}],
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Guardian Destroyer",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 7,
+                    "weapons": ["twin_guardian_rifle", {"id": "energy_claws", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": {"id": "energy_claws", "count": 3}, "withWeapon": [{"id": "energy_fist", "count": 3}]},
+                        {"replaceWeapon": "twin_guardian_rifle", "withWeapon": ["twin_guardian_destructor", "guardian_flamethrower"]}
+                    ],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
         "guardian_assault_destroyers": {
             "name": "Guardian Assault Destroyers",
             "description": "Guardians in extra heavy armor.",
@@ -314,15 +337,15 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 10,
+                    "defense": 9,
                     "movement": 6,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle", "at_grenade", "guardian_grenade_launcher"],
+                    "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"],
+                            "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
                             "withWeapon": [
-                                [{"id": "guardian_axe_blade", "count": 2}, "guardian_axe_rifle"]
+                                [{"id": "guardian_axe_blade", "count": 3}, "guardian_axe_rifle"]
                             ]
                         },
                         {"addWeapon": "guardian_dagger"}
@@ -496,7 +519,7 @@
         }
     },
     "weapons": {
-        "guardian_grenade_launcher": {"name": "Guardian Grenade Launcher", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
+        "guardian_grenade_launcher": {"name": "Guardian Grenade Launcher", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": [{"id": "blast", "x": 2}]},
         "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "guardian_missile_array": {"name": "Guardian Missile Array", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "guardian_missiles": {
@@ -514,7 +537,7 @@
         "guardian_twin_laser_cannon": {"name": "Guardian Twin Laser Cannon", "attacks": 4, "short": 30, "medium": 60, "ap": 6},
         "guardian_lance": {"name": "Guardian Lance", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["lance"]},
         "guardian_dagger": {"name": "Guardian Dagger", "attacks": 1, "short": "Melee", "ap": 1},
-        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5},
+        "guardian_axe_blade": {"name": "Guardian Axe (Blade)", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["cumbersome"]},
         "guardian_axe_rifle": {"name": "Guardian Axe (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "guardian_lance_blade": {"name": "Guardian Lance (Blade)", "attacks": 1, "short": "Melee", "ap": 4},
         "guardian_lance_rifle": {"name": "Guardian Lance (Rifle)", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
@@ -526,6 +549,15 @@
             "name": "Guardian Rifle",
             "profiles": [{"name": "Dispersed", "attacks": 2, "short": 15, "medium": 30, "ap": 1, "rules": ["assault"]}, {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["assault"]}]
         },
+        "twin_guardian_rifle": {
+            "name": "Twin Guardian Rifle",
+            "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]
+        },
+        "twin_guardian_destructor": {
+            "name": "Twin Guardian Destructor",
+            "attacks": 2, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]
+        },
+        "guardian_flamethrower": {"name": "Guardian Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
         "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
         "guardian_combat_shield": {"name": "Guardian Combat Shield", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["shielding"]},
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
