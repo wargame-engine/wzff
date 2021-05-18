@@ -958,6 +958,78 @@
             "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
             "flavor": "With unquestioning loyalty, cult members will throw themselves into the line of fire to protect their leaders.",
             "cost": 1
+        },
+        {
+            "subfactions": ["ambush_focus"],
+            "name": "Concealment",
+            "phase": "activation",
+            "flavor": "These cultists are so adept they can even in plain sight.",
+            "description": "Use this strategy when a unit is targeted by an enemy Shooting attack. That unit gets -1 Accuracy this attack.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["ambush_focus"],
+            "name": "Forward Scout",
+            "phase": "activation",
+            "description": "Use when a unit arrives on the table. That unit gets +6\" of Movement. This move may not be within 12\" of any enemy units.",
+            "flavor": "Forwards scouts ensure these cultists will arrive before the enemy.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["ambush_focus"],
+            "name": "Scramblers",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit declares it is arriving from reserves within 24\" of this unit. That unit automatically fails any Initiative tests for arriving on the table.",
+            "flavor": "Prepared for any enemies, these scramblers will ensure no one can find our units.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["survival_focus"],
+            "name": "Toughness",
+            "phase": "activation",
+            "flavor": "These cultists are particularly tough.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["survival_focus"],
+            "name": "Hit and Run",
+            "phase": "activation",
+            "description": "Use after one of your _Infantry_ or _Biker_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+            "flavor": "Hit and run tactics can sometimes be key to survival.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["survival_focus"],
+            "name": "At All Costs",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit takes a Break test. That test is automatically passed.",
+            "flavor": "These cultists are prepared to hold at all costs.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "name": "Zealous Assault",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. That unit gains +3\" of Movement for the charge action.",
+            "flavor": "With righteous fury, these marines charge into battle.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "name": "Strike Down",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "flavor": "These marines strike their foes down with a flurry of melee attacks.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["zeal_focus"],
+            "name": "Counter Attack",
+            "phase": "activation",
+            "flavor": "Not afraid of a fight, these cultists will Counter Attack upon their enemies.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
+            "cost": 1
         }
     ],
     "powers": {

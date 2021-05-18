@@ -1314,10 +1314,10 @@
         },
         "counter_attack": {
             "subfactions": ["combat_masters"],
-            "name": "Counter-Attack",
+            "name": "Counter Attack",
             "phase": "activation",
-            "flavor": "Not afraid of a fight, these soldiers will counter-attack upon their enemies.",
-            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
+            "flavor": "Not afraid of a fight, these soldiers will Counter Attack upon their enemies.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         }
     },

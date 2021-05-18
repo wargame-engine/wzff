@@ -1638,10 +1638,10 @@
         },
         "counter_attack": {
             "subfactions": ["combat_focus"],
-            "name": "Counter-Attack",
+            "name": "Counter Attack",
             "phase": "activation",
             "flavor": "The toughest orcs never back down from a challenge.",
-            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         },
         "quick_aim": {

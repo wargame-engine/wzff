@@ -38,7 +38,27 @@
             "secondary_color": "#7d0a15",
             "alliance": "alien_swarm",
             "version": "0.1",
-            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics."
+            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
+            "subfactions": {
+                "ambush_focus": {
+                    "name": "Ambush Focus",
+                    "id": "ambush_focus",
+                    "color": "#6a0001",
+                    "description": "An alien cult focused on ambushing and killing their foes."
+                },
+                "survival_focus": {
+                    "name": "Survival Focus",
+                    "id": "survival_focus",
+                    "color": "#6a0001",
+                    "description": "An alien cult focused on surviving at any cost."
+                },
+                "zeal_focus": {
+                    "name": "Zeal Focus",
+                    "id": "zeal_focus",
+                    "color": "#6a0001",
+                    "description": "An alien cult focused on zealous charges."
+                }
+            }
         },
         "traitor_marines": {
             "name": "Traitor Marines",
@@ -204,7 +224,7 @@
                 "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "Loyal Marines focused on stealth and ambush tactics."},
                 "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "description": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
                 "wolf_marines": {
-                    "name": "Counter-attack",
+                    "name": "Counter Attack",
                     "id": "wolf_marines",
                     "color": "#547588",
                     "description": "Loyal Marines that specialize in brutal counter-assaults in close combat.",
