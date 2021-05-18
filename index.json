@@ -143,7 +143,10 @@
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
             "version": "0.1",
-            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies."
+            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
+            "subfactions": {
+                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}
+            }
         },
         "machine_guilds": {
             "name": "Machine Guilds",

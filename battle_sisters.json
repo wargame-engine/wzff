@@ -279,7 +279,7 @@
             "max": 10,
             "category": "strike",
             "rules": ["ambush", "fly"],
-            "options": [{"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 1}, {"id": "chainsword", "count": 1}]}],
+            "options": [{"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "chainsword", "count": 2}]}],
             "models": [
                 {
                     "name": "Winged Sister Superior",
@@ -541,6 +541,30 @@
             "name": "Holy Protection",
             "description": "Use when a Psychic(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, Battle Sisters can protect themselves from psychic powers.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
+            "flavor": "Sometimes with disregard for their own life, these battle sisters will stop at nothing to defeat their enemies.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Fury",
+            "phase": "activation",
+            "flavor": "These battle sisters are furious in resolve and can rip through their enemies.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Assault",
+            "phase": "activation",
+            "flavor": "With a furious charge, these battle sisters move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
             "cost": 1
         }
     ]
