@@ -959,5 +959,25 @@
             "flavor": "With unquestioning loyalty, cult members will throw themselves into the line of fire to protect their leaders.",
             "cost": 1
         }
-    ]
+    ],
+    "powers": {
+        "direct_control": {
+            "name": "Direct Control",
+            "description": "Target friendly unit within 24\" may immediately activate, and use this model's Courage value until the end of the activation phase.",
+            "charge": 7
+        },
+        "vitality": {
+            "name": "Vitality",
+            "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
+            "charge": 7
+        },
+        "horror": {"name": "Horror", "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.", "charge": 6},
+        "onslaught": {
+            "name": "Onslaught",
+            "description": "Target friendly unit within 18\" gains one of the following effects until the end of the phase: \n * The unit may make a free shoot action after it moves \n * The unit may make a free Charge action after it moves",
+            "charge": 7
+        },
+        "blast": {"name": "Blast", "description": "Target enemy unit within 12\" take 5 hits with AP 1.", "charge": 6},
+        "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6}
+    }
 }
