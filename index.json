@@ -351,7 +351,7 @@
         }
     },
     "powers": {
-        "blast": {
+        "shock_wave": {
             "name": "Shock Wave",
             "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
             "flavor": "This enemy is hit by a single blast of shock.",
