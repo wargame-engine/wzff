@@ -326,7 +326,6 @@
     "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24},
     "spectral_eye": {"name": "Spectral Eye", "attacks": 2, "ap": 4, "short": 9, "medium": 18},
     "assassin_unarmed": {"name": "Assassin Martial Arts", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
-    "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 18, "rules": [{"id": "deadly", "x": 3}]},
     "mind_shredder": {"name": "Mind Shredder", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": [{"id": "shocking", "x": 3}]},
     "phase_sword": {"name": "Phase Sword", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending", "phase"]}
 },

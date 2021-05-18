@@ -500,6 +500,7 @@
             "name": "Combi-fusion",
             "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
         },
+        "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 18, "rules": ["sniper", {"id": "deadly", "x": 3}]},
         "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "ap": 6, "rules": ["pistol", "fusion"]},
         "fusion_bomb": {"name": "Fusion Bombs", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
         "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
