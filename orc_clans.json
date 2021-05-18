@@ -10,7 +10,7 @@
             "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
             "subfactions": ["none"],
             "models": [
                 {
@@ -206,7 +206,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Goblin", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Goblin Leader",

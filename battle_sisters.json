@@ -18,7 +18,7 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
-                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint", {"id": "ward", "x": 1}, {"id": "saint_tactics", "x": 2}],
+                    "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, "fly", "holy_saint", {"id": "ward", "x": 1}, {"id": "saint_tactics", "x": 2}],
                     "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 6}],
                     "min": 1,
                     "max": 1
@@ -44,7 +44,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
             "models": [
                 {
                     "name": "High Sister",
@@ -72,7 +72,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
             "models": [
                 {
                     "name": "High Sister",

@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}, {"id": "tough", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -40,7 +40,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Machine Master",

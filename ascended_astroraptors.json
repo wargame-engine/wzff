@@ -11,7 +11,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Raptor Commander",
@@ -40,7 +40,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Ascendent Commander",

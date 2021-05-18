@@ -12,7 +12,7 @@
             "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "arch_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 5}, {"id": "arch_tactics", "x": 2}],
             "subfactions": ["none"],
             "models": [
                 {
@@ -36,7 +36,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters", "siege_masters"],
             "models": [
                 {
@@ -102,7 +102,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "models": [
                 {
@@ -187,7 +187,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}],
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
             "models": [
                 {
@@ -431,7 +431,7 @@
             "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "tough", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}],
             "subfactions": ["none", "wolf_marines"],
             "models": [
                 {

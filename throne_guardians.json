@@ -69,7 +69,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 1}, {"id": "battle_tactics", "x": 1}],
+            "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Guardian Captain",
