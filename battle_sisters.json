@@ -316,7 +316,7 @@
             "description": "A group of sisters packed with heavy weapons to deal high damage.",
             "min": 5,
             "max": 10,
-            "category": "heavy",
+            "category": "specialist",
             "options": [{"addModel": "lucky_angel", "modelLimit": 1}],
             "models": [
                 {
