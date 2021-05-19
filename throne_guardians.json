@@ -619,6 +619,7 @@
         },
         "guardian_flamethrower": {"name": "Guardian Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["flame"]},
         "guardian_pistol": {"name": "Guardian Pistol", "attacks": 1, "short": 9, "ap": 4, "rules": ["pistol"]},
+        "guardian_combat_shield": {"name": "Guardian Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "walker_combat_shield": {"name": "Walker Combat Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "guardian_sword_pistol": {"name": "Guardian Sword (Pistol)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
         "guardian_sword_blade": {"name": "Guardian Sword (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
