@@ -207,8 +207,8 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 9,
-                    "movement": 6,
+                    "defense": 10,
+                    "movement": 5,
                     "reflexes": 7,
                     "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
                     "options": [
@@ -341,11 +341,11 @@
             "models": [
                 {
                     "name": "Guardian Destroyer",
-                    "movement": 6,
+                    "movement": 5,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 7,
                     "weapons": ["twin_guardian_rifle", {"id": "energy_claws", "count": 3}],
                     "options": [
@@ -368,8 +368,8 @@
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 9,
-                    "movement": 6,
+                    "defense": 10,
+                    "movement": 5,
                     "reflexes": 7,
                     "weapons": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle", "guardian_grenade_launcher"],
                     "options": [
