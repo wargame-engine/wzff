@@ -7,8 +7,6 @@
         "commander": {
             "name": "Raptor Commander",
             "description": "Foot infantry commander of the Ascended Astro-Raptors.",
-            "min": 5,
-            "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2},  {"id": "wounds", "x": 2}],
@@ -36,8 +34,6 @@
         "stormtrooper_commander": {
             "name": "Ascendent Commander",
             "description": "Foot infantry commaner of the elite storm troopers.",
-            "min": 5,
-            "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1},  {"id": "wounds", "x": 2}],
@@ -145,8 +141,6 @@
         "psychic": {
             "name": "Psychic",
             "description": "A trained psychic to support the fighters.",
-            "min": 5,
-            "max": 10,
             "category": "specialist",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
@@ -176,8 +170,6 @@
             "name": "Infantry Squad",
             "description": "The backbone of the Ascended Astro-Raptors.",
             "category": "core",
-            "min": 5,
-            "max": 10,
             "models": [
                 {
                     "name": "Sergeant",
@@ -202,7 +194,8 @@
                     "movement": 7,
                     "weapons": ["laser_carbine", "heavy_ccw"],
                     "options": [
-                        {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "light_laser_cannon", "seismic_cannon"
+                        {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "light_laser_cannon", "seismic_cannon", 
+                            "heavy_auto_laser", "light_machinegun"
                             ], "modelLimit": 1}
                     ],
                     "rules": [],
@@ -244,8 +237,6 @@
             "name": "Command Squad",
             "description": "A smaller infantry squad used to support a commanding officer.",
             "category": "specialist",
-            "min": 4,
-            "max": 4,
             "models": [
                 {
                     "name": "Veteran Trooper",
@@ -274,8 +265,6 @@
             "name": "Heavy Weapons Squad",
             "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
             "category": "specialist",
-            "min": 3,
-            "max": 6,
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
@@ -294,7 +283,9 @@
                                 {"id": "missile_launcher", "mount": ["Front"]},
                                 {"id": "autocannon", "mount": ["Front"]},
                                 {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
+                                {"id": "mortar", "mount": ["Front"]},
+                                {"id": "laser_machinegun", "mount": ["Front"]},
+                                {"id": "gatling_gun", "mount": ["Front"]}
                             ]
                         }
                     ],
@@ -307,8 +298,6 @@
             "name": "Specialist Squad",
             "description": "An infantry team kitted out with several special weapons to serve a specific purpose.",
             "category": "specialist",
-            "min": 5,
-            "max": 10,
             "models": [
                 {
                     "name": "Specialist Trooper",
@@ -320,9 +309,10 @@
                     "movement": 7,
                     "weapons": ["laser_carbine", "ccw"],
                     "options": [
-                        {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                        {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "light_laser_cannon", "seismic_cannon", 
+                            "heavy_auto_laser", "light_machinegun"]}
                     ],
-                    "rules": [],
+                    "rules": ["relentless"],
                     "min": 5,
                     "max": 5
                 }
