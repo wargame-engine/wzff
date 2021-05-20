@@ -96,10 +96,10 @@
             "version": "0.1",
             "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
             "subfactions": {
-                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": ""},
-                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": ""},
-                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": ""},
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": ""}
+                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
+                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": "Horrors so disgusting and diseased they refuse to die."},
+                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": "Horrors focused on war and all out deadly combat."},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": "Horrors focused on trickery and mind games."}
             }
         },
         "undying_machines": {
@@ -762,7 +762,7 @@
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
         "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
         "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
-        "wings": {"name": "Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
+        "wings": {"name": "Wings", "description": "Increases movement by 4\". This model may ignore models and terrain when moving.", "points": 10},
         "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
         "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
         "net": {

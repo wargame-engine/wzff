@@ -8,7 +8,7 @@
             "name": "Greater Daemon of Change",
             "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
             "subfactions": ["change"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush", "fly", {"id": "power", "x": 3}, "fear"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "power", "x": 3}, "fear", "damage_table_monster"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -20,7 +20,7 @@
                     "movement": 10,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 10,
+                    "defense": 12,
                     "reflexes": 7,
                     "weapons": ["exalted_staff_of_change"],
                     "options": [
@@ -33,26 +33,75 @@
                 }
             ]
         },
+        "greater_daemon_of_excess": {
+            "name": "Greater Daemon of Excess",
+            "description": "An enlightened daemon of excess equally capable of leading forces and devestating enemies.",
+            "subfactions": ["excess"],
+            "keywords": ["Monster"],
+            "category": "command",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, {"id": "power", "x": 2}],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Greater Daemon of Excess",
+                    "movement": 12,
+                    "courage": 7,
+                    "shoot": 8,
+                    "fight": 8,
+                    "defense": 12,
+                    "reflexes": 7,
+                    "weapons": ["splitting_claws", "souleating_sword"],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, "damage_table_monster"],
+                    "options": [{"addRule": ["ritual_dagger", "glittering_sheild", "menacing_hand"]}, {"addWeapon": ["living_whip"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "wrath_monger": {
+            "name": "Greater Daemon of War",
+            "description": "The war-god's most exalted warriors are granted the strongest bodies",
+            "keywords": ["Monster"],
+            "category": "command",
+            "subfactions": ["war"],
+            "models": [
+                {
+                    "name": "Greater Daemon of War",
+                    "movement": 12,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 12,
+                    "reflexes": 7,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "blessed_axe", "count": 6}, {"id": "blessed_whip", "count": 1}],
+                    "rules": ["fly", {"id": "leader_x", "x": "Infantry"}, "damage_table_monster"],
+                    "options": [{"replaceWeapon": ["blessed_axe", "blessed_whip"], "withWeapon": {"id": "blessed_greataxe", "count": 6}}]
+                }
+            ]
+        },
         "daemon_champion": {
             "name": "Daemon Champion",
-            "subfactions": ["none", "change", "war", "pestilence", "excess"],
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fear", {"id": "wounds", "x": 3}],
-            "keywords": ["monster"],
+            "subfactions": ["none", "pestilence_focus", "change_traitors"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}],
+            "keywords": ["Infantry"],
             "models": [
                 {
                     "name": "Daemon Champion",
-                    "movement": 6,
+                    "movement": 8,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 10,
                     "reflexes": 7,
-                    "weapons": ["daemon_sword"],
+                    "weapons": [{"id": "daemon_sword", "count": 4}, {"id": "daemon_claws", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}, {"id": "power", "x": 3}]},
-                        {"replaceWeapon": "daemon_sword", "withWeapon": ["daemon_axe", "daemon_claws"]},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]},
+                        {"replaceWeapon": {"id": "daemon_sword", "count": 4}, "withWeapon": [{"id": "daemon_axe", "count": 4}, {"id": "daemon_claws", "count": 6}]},
                         {"addRule": "wings"}
                     ],
                     "rules": [],
@@ -66,7 +115,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -94,7 +143,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "damage_table_vehicle"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -121,7 +170,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "psychic_syphon"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "psychic_syphon", {"id": "wounds", "x": 2}],
             "models": [
                 {"name": "Blue Scholars", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["quills", "disk_blades"], "min": 1, "max": 1, "rules": []}
             ]
@@ -134,7 +183,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
+            "rules": [{"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
             "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "chromatic_horrors": {
@@ -173,7 +222,7 @@
             "min": 1,
             "max": 1,
             "subfactions": ["none", "change"],
-            "rules": ["hover"],
+            "rules": ["hover", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Exalted Flame Daemon",
@@ -309,7 +358,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 2}, {"id": "resilient", "x": 1}, "no_escape"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 2}, "no_escape"],
             "min": 1,
             "max": 1,
             "models": [
@@ -334,7 +383,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -359,7 +408,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -385,7 +434,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -411,7 +460,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "resilient", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -437,7 +486,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, "psychic_syphon"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "psychic_syphon"],
             "min": 1,
             "max": 1,
             "models": [
@@ -456,38 +505,13 @@
                 }
             ]
         },
-        "greater_daemon_of_excess": {
-            "name": "Greater Daemon of Excess",
-            "description": "An enlightened daemon of excess equally capable of leading forces and devestating enemies.",
-            "subfactions": ["excess"],
-            "keywords": ["monster"],
-            "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, {"id": "power", "x": 2}],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Greater Daemon of Excess",
-                    "movement": 12,
-                    "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
-                    "defense": 9,
-                    "reflexes": 7,
-                    "weapons": ["splitting_claws", "souleating_sword"],
-                    "options": [{"addRule": ["ritual_dagger", "glittering_sheild", "menacing_hand"]}, {"addWeapon": ["living_whip"]}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "deadly_duo": {
             "name": "Deadly Duo",
             "description": "Two excess daemons fused in horribly beautiful synchrony.",
             "subfactions": ["none", "excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
             "min": 1,
             "max": 1,
             "models": [
@@ -500,7 +524,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, "agile"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile"],
             "min": 1,
             "max": 1,
             "models": [{"name": "Mask of Excess", "movement": 8, "courage": 6, "shoot": 7, "fight": 7, "defense": 5, "reflexes": 5, "weapons": ["segmented_claws"], "min": 1, "max": 1, "rules": []}]
@@ -728,29 +752,6 @@
                     "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}]
                 }
             ]
-        },
-        "wrath_monger": {
-            "name": "Greater Daemon of War",
-            "description": "The war-god's most exalted warriors are granted the strongest bodies",
-            "keywords": ["monster"],
-            "category": "command",
-            "subfactions": ["war"],
-            "models": [
-                {
-                    "name": "Greater Daemon of War",
-                    "movement": 12,
-                    "courage": 7,
-                    "shoot": 5,
-                    "fight": 8,
-                    "defense": 11,
-                    "reflexes": 7,
-                    "min": 1,
-                    "max": 1,
-                    "weapons": [{"id": "blessed_axe", "count": 6}, {"id": "blessed_whip", "count": 1}],
-                    "rules": ["fly", {"id": "leader_x", "x": "Infantry"}, "ambush", "damage_table_monster"],
-                    "options": [{"replaceWeapon": ["blessed_axe", "blessed_whip"], "withWeapon": {"id": "blessed_greataxe", "count": 6}}]
-                }
-            ]
         }
     },
     "models": {
@@ -844,13 +845,6 @@
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
         "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Resilient(+1).", "points": 2},
         "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
-        "wings": {
-            "name": "Daemon Wings",
-            "hidden": true,
-            "description": "Increases movement to 8 inches. Gives the model fly and ambush.",
-            "description_short": "Fly, Ambush, 8\" Move",
-            "effects": [{"type": "alterStat", "statName": "movement", "value": 8}, {"type": "grantRule", "rule": "fly"}, {"type": "grantRule", "rule": "ambush"}]
-        },
         "warrior_tactics": {
             "name": "War-God Tactics",
             "inputs": ["x"],
