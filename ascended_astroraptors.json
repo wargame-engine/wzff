@@ -50,7 +50,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
@@ -78,7 +78,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
@@ -90,27 +90,25 @@
                 }
             ]
         },
-        "commissar": {
-            "name": "Commissar",
+        "admiral": {
+            "name": "Admiral",
             "description": "A field officer assigned to keep soldiers motivated and in line.",
-            "min": 5,
-            "max": 10,
-            "category": "command",
+            "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Commissar",
+                    "name": "Admiral",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "movement": 6,
-                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "movement": 7,
+                    "weapons": ["laser_pistol", {"id": "ccw", "count": 3}, "strafing_run_fighter_plane"],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                        {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "strafing_run_fighter_plane" , "withWeapon": ["strafing_run_heavy_plane"]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -317,7 +315,7 @@
             "min": 3,
             "max": 3,
             "rules": ["stealth", "scout"],
-            "models": [{"name": "Sniper", "courage": 5, "shoot": 7, "fight": 5, "defense": 5, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "ccw"], "min": 3, "max": 3}]
+            "models": [{"name": "Sniper", "courage": 5, "shoot": 7, "fight": 5, "defense": 6, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle","ccw"], "min": 3, "max": 3}]
         },
         "ascendent_shocktroopers": {
             "name": "Ascendent Shocktroopers",
@@ -732,7 +730,9 @@
             ]
         },
         "sonic_boomer": {"name": "Sonic Boomer", "attacks": 4, "short": 9, "medium": 18, "ap": 1, "rules": ["rending"] },
-        "twin_gatling_aa": {"name": "Twin Gatling Anti-Air Gun", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "anti_air"}]}
+        "twin_gatling_aa": {"name": "Twin Gatling Anti-Air Gun", "attacks": 8, "short": 12, "medium": 24, "ap": 2, "rules": [{"id": "anti_air"}]},
+        "strafing_run_fighter_plane": {"name": "Fighter Plane (Strafing Run)", "attacks": 6, "short": 18, "medium": 36, "ap": 1, "rules": ["indirect"] },
+        "strafing_run_heavy_plane": {"name": "Heavy Fighter Plane (Strafing Run)", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["indirect"] }
     },
     "rules": {
         "raptor_tactics": {
