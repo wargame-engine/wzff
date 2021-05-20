@@ -665,7 +665,7 @@
             "models": [
                 {
                     "name": "Scout Buggy",
-                    "movement": 10,
+                    "movement": 12,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 4,
@@ -902,9 +902,6 @@
             "description": "When this unit activates, choose an enemy unit within 36\". The next friendly _Infantry_ unit to shoot that model may re-roll failed Accuracy tests of 9+.",
             "points": 10
         },
-        "marking_flares": {"name": "Marking Flares", "description": "Once per round, a friendly _Biker_ unit may gain +4\" of Movement.", "points": 5},
-        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
-        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5},
         "cult_speaker": {"name": "Cult Speaker", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
         "chosen_abomination": {"name": "Chosen Abomination", "description": "Once per round, a friendly _Abominations_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
         "swarm_melee_tactics": {

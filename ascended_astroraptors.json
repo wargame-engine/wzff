@@ -476,6 +476,41 @@
                 }
             ]
         },
+        "scout_buggy": {
+            "name": "Scout Buggy",
+            "description": "A fast moving scout vehicle.",
+            "rules": [{"id": "impact", "x": 3}, "scout", "vulnerable_side_rear", "damage_table_vehicle", "marking_flares"],
+            "category": "strike",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Scout Buggy",
+                    "movement": 12,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "light_machinegun", "count": 2, "mount": ["Front"]}, {"id": "heavy_flamethrower"}],
+                    "options": [
+                        {"replaceWeapon": {"id": "heavy_flamethrower"}, "withWeapon": [
+                            {"id": "heavy_mortar"},
+                            {"id": "heavy_fragmentation_cannon"},
+                            {"id": "laser_machinegun"},
+                            {"id": "twin_laser_cannon"},
+                            {"id": "twin_missile_launcher"},
+                            [{"id": "missile_launcher"}, {"id": "light_machinegun", "count": 2}]
+                        ]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 2}]},
+                        {"replaceRule": "marking_flares", "withRule": ["spotting_device", "surveying_device"]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "light_apc": {
             "name": "APC",
             "description": "A light transport of the Ascended Astro-Raptors.",

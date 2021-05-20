@@ -867,7 +867,10 @@
         "hover_mode": {
             "name": "Hover Mode",
             "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
-        }
+        },
+        "marking_flares": {"name": "Marking Flares", "description": "Once per round, a friendly _Biker_ unit may gain +4\" of Movement.", "points": 5},
+        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
+        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5}
     },
     "units": {
         "defense_line": {
