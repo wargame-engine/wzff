@@ -275,7 +275,7 @@
         },
         "daemon_machine": {
             "name": "Daemon Machine",
-            "decription": "An unholy melding of daemon and machine into a horrifying weapon.",
+            "description": "An unholy melding of daemon and machine into a horrifying weapon.",
             "keywords": ["Vehicle"],
             "subfactions": ["none", "change", "war", "pestilence", "excess"],
             "category": "heavy",
@@ -351,7 +351,7 @@
         },
         "excess_champion_on_exalted_chariot": {
             "name": "Excess Champion on Exalted Chariot",
-            "decription": "A leader of the forces of excess on a contorted chariot.",
+            "description": "A leader of the forces of excess on a contorted chariot.",
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
@@ -403,7 +403,7 @@
         },
         "excess_champion_on_chariot": {
             "name": "Excess Champion on Chariot",
-            "decription": "A leader of the forces of excess on a contorted chariot.",
+            "description": "A leader of the forces of excess on a contorted chariot.",
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
@@ -636,7 +636,7 @@
             "keywords": ["infantry"],
             "category": "command",
             "rules": [],
-            "subfaction": ["war"],
+            "subfaction": ["none", "war"],
             "min": 1,
             "max": 1,
             "models": [
@@ -660,7 +660,7 @@
             "keywords": ["cavalry"],
             "category": "command",
             "rules": [],
-            "subfaction": ["war"],
+            "subfaction": ["none", "war"],
             "min": 1,
             "max": 1,
             "models": [
@@ -682,7 +682,7 @@
             "keywords": ["cavalry"],
             "category": "strike",
             "rules": [],
-            "subfaction": ["war"],
+            "subfaction": ["none", "war"],
             "min": 5,
             "max": 10,
             "models": [
@@ -694,7 +694,7 @@
             "description": ["Minions of the war-god, these ferocious demons know no rest, only battle."],
             "keywords": ["infantry"],
             "category": "core",
-            "subfactions": ["war"],
+            "subfactions": ["none", "war"],
             "min": 10,
             "max": 30,
             "models": [
@@ -719,7 +719,7 @@
             "description": "The war-god's most exalted warriors are granted the strongest bodies",
             "keywords": ["monster"],
             "category": "command",
-            "subfactions": "war",
+            "subfactions": ["war"],
             "models": [
                 {
                     "name": "Greater Daemon of War",
