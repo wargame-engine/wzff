@@ -92,7 +92,7 @@
         },
         "admiral": {
             "name": "Admiral",
-            "description": "A field officer assigned to keep soldiers motivated and in line.",
+            "description": "A high ranking official with the authority to call in airstrikes.",
             "category": "specialist",
             "keywords": ["Infantry"],
             "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
@@ -109,6 +109,32 @@
                     "options": [
                         {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": "strafing_run_fighter_plane" , "withWeapon": ["strafing_run_heavy_plane"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "artillerist": {
+            "name": "Artillerist",
+            "description": "A trained trooper specializing in marking targets for orbital bombardment (Placeholder)",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": [ {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Artillerist",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 7,
+                    "weapons": ["laser_pistol", {"id": "ccw", "count": 3}, "orbital_bombardment_light"],
+                    "options": [
+                        {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "orbital_bombardment_light" , "withWeapon": ["orbital_bombardment_heavy"]}
                     ],
                     "rules": [],
                     "min": 1,
