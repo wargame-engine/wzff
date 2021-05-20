@@ -895,5 +895,16 @@
             "cost": 1
         }
     },
-    "powers": {}
+    "powers": {
+        "beam": {"name": "Invigorating Beam", "description": "Target friendly unit within 12\"may immediately make a free move action.", "charge": 7},
+        "magic_shield": {
+            "name": "Shield",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 2 or less, that hit is ignored.",
+            "charge": 7
+        },
+        "weakness": {"name": "Weakness", "description": "Target enemy unit within 18\" must re-roll one die of your choice on its next Save test.", "charge": 6},
+        "illusion": {"name": "Encroaching Mutations", "description": "Target enemy unit within 18\" gets -1 to hit the next time it shoots or fights.", "charge": 6},
+        "strike": {"name": "Strike", "description": "Target enemy unit within 18\" takes 2 hits with AP 5.", "charge": 6},
+        "terror": {"name": "Terror", "description": "Target enemy unit within 12\" immediately takes 3 Shock.", "charge": 7}
+    }
 }
