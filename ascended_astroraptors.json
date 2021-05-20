@@ -765,7 +765,7 @@
         "raptors_in_the_mists": {"name": "Raptors in the Mists", "description": "Target enemy unit within 12\" takes a morale test, if failed you may force it to shoot at another enemy unit.", 
                                     "charge": 8},
         "fangs_away": {"name": "Fangs Away", "description": "Target enemy model within 12\" take 1 hit each with AP 4.", "charge": 7},
-        "razor_vines": {"name": "Razor Vines", "description": "Target enemy unit within 12\" gets +1 takes an initiative check? (Placeholder).", "charge": 6},
+        "razor_vines": {"name": "Razor Vines", "description": "Target enemy unit within 12\" takes an initiative check? (Placeholder).", "charge": 6},
         "clever": {"name": "Clever", "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.", "charge": 6},
         "velocity": {"name": "Velocity", "description": "Target unit within 12\" gets +3\" bonus movement", "charge": 6},
         "velocirapture": {"name": "Velocirapture", "description": "Target two friendly units within 12\" take 3 hits with AP(4) each", "charge": 8}
