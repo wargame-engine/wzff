@@ -36,7 +36,7 @@
             "description": "Foot infantry commaner of the elite storm troopers.",
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1},  {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Ascendent Commander",
