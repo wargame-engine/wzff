@@ -23,7 +23,8 @@
                     "options": [
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"addRule": "tactical_holomap"}
                     ],
                     "rules": [],
                     "min": 1,
@@ -51,7 +52,8 @@
                         {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"addRule": "tactical_holomap"}
                     ],
                     "rules": [],
                     "min": 1,
@@ -759,7 +761,8 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         
-        "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10}
+        "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
+        "tactical_holomap": {"name": "Tactical Holomap", "description": "When activated choose one enemy unit within 24\", that unit is denied Cover bonuses until attacked, does not require line of sight.", "points": 20}
     },
     "powers": {
         "raptors_in_the_mists": {"name": "Raptors in the Mists", "description": "Target enemy unit within 12\" takes a morale test, if failed you may force it to shoot at another enemy unit.", 
