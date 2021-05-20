@@ -76,7 +76,7 @@
                     "shoot": 6,
                     "fight": 5,
                     "defense": 5,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": ["power_staff"],
                     "options": [
                         {"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"},
@@ -153,7 +153,7 @@
                     "shoot": 3,
                     "fight": 3,
                     "defense": 4,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": [{"id": "ccw", "count": 2}],
                     "options": [{"replaceModel": ["blue_warriors", "pink_warriors"]}],
                     "min": 10,
@@ -201,7 +201,7 @@
                     "shoot": 6,
                     "fight": 4,
                     "defense": 7,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": ["flickering_flames", {"id": "ccw", "count": 2}],
                     "min": 3,
                     "max": 9,
@@ -289,7 +289,7 @@
                     "shoot": 5,
                     "fight": 5,
                     "defense": 11,
-                    "reflexes": 4,
+                    "reflexes": 5,
                     "weapons": ["power_cannon", {"id": "power_claw", "count": 2}, {"id": "daemon_sword", "count": 3}, "phlegm_cannon"],
                     "options": [{"replaceWeapon": "daemon_sword", "withWeapon": "daemon_claw"}],
                     "min": 1,
@@ -561,7 +561,7 @@
             "min": 5,
             "max": 20,
             "models": [
-                {"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 4, "weapons": [{"id": "ccw", "count": 2}], "min": 5, "max": 20, "rules": []}
+                {"name": "Gargoyle", "movement": 10, "courage": 4, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "ccw", "count": 2}], "min": 5, "max": 20, "rules": []}
             ]
         },
         "reaper_chariot": {
@@ -756,7 +756,7 @@
             "shoot": 5,
             "fight": 5,
             "defense": 6,
-            "reflexes": 4,
+            "reflexes": 5,
             "weapons": ["twisting_flames", "ccw"],
             "options": [
                 {"modelLimit": 1, "addRule": ["banner"]},
@@ -767,7 +767,7 @@
             "max": 30,
             "rules": []
         },
-        "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 4, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
+        "blue_warriors": {"name": "Blue Warriors", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["ccw"], "min": 0, "max": 30, "rules": []}
     },
     "weapons": {
         "exalted_staff_of_change": {"name": "Exalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4},
