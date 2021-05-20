@@ -168,7 +168,7 @@
             "name": "Battle Sisters",
             "description": "A group of sisters with marine rifles to pack an extra punch.",
             "category": "core",
-            "options": [{"addRule": [{"id": "scout", "name": "Dominion"}], "modelLimit": "all"}],
+            "options": [{"addRule": [{"id": "scout", "name": "Dominion"}], "modelLimit": "all"}, {"addModel": "lucky_angel"}, {"modelLimit": 1, "addRule": ["banner"]}],
             "models": [
                 {
                     "name": "Sister Superior",
@@ -211,7 +211,8 @@
             "max": 10,
             "category": "core",
             "options": [
-                {"addModel": "lucky_angel"}
+                {"addModel": "lucky_angel"},
+                {"modelLimit": 1, "addRule": ["banner"]}
             ],
             "models": [
                 {
@@ -312,15 +313,15 @@
             ]
         },
         "devastator_sisters": {
-            "name": "Devastator Sisters",
+            "name": "Retribution Sisters",
             "description": "A group of sisters packed with heavy weapons to deal high damage.",
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "options": [{"addModel": "lucky_angel", "modelLimit": 1}],
+            "options": [{"addModel": "lucky_angel", "modelLimit": 2}, {"modelLimit": 1, "addRule": ["banner"]}],
             "models": [
                 {
-                    "name": "Devastator Sister Superior",
+                    "name": "Retribution Sister Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -332,7 +333,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Devastator Sister",
+                    "name": "Retribution Sister",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -453,12 +454,11 @@
         "lucky_angel": {
             "name": "Lucky Angel",
             "movement": 6,
-            "courage": 5,
-            "shoot": 5,
-            "fight": 5,
-            "defense": 5,
-            "reflexes": 5,
-            "weapons": [],
+            "courage": "-",
+            "shoot": "-",
+            "fight": "-",
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["lucky_angel"],
             "min": 1,
             "max": 1
@@ -503,7 +503,7 @@
         },
         "lucky_angel": {
             "name": "Lucky Angel",
-            "description": "Once per round, this unit may re-roll one Strength or Accuracy test.",
+            "description": "Once per round, this unit may re-roll one Strength or Accuracy test. This may be used one additional time per round for each model with this rule.",
             "points": 5
         },
         "celestial": {
