@@ -752,18 +752,26 @@
         "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 6}
     },
     "strategies": {
-        "focus_fire": {
-            "name": "Focus Fire",
+        "pulse_shielding": {
             "phase": "activation",
-            "description": "Use before Shooting with an _Infantry_ unit with Defense Rifles. Hits rolls of 1 or 2 with Defense Rifles cause 2 hits.",
+            "name": "Pulse Shielding",
+            "flavor": "Astro-raptors have equipped their vehicles with advanced pulsing shield technology which intercepts enemy attacks at just the right time.",
+            "description": "Use when a _Vehicle_ unit is targeted by an attack. For that attack, roll a D10 each time that unit is hit. On a 3 or less the hit is ignored.",
+            "cost": 2
+        },
+        "spectral_visors": {
+            "name": "Spectral Visors",
+            "phase": "activation",
+            "flavor": "Raptor unit leaders are typically equipped with a spectral visor which allows them to see enemies they may not normally be able to see.",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it cannot see.",
             "cost": 1
         },
-        "high_command": {
-            "name": "High Command",
+        "vigilance": {
+            "name": "Vigilance",
             "phase": "activation",
-            "description": "Use after an _Infantry_ unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "Highly trained and expertly attentive, Astro-raptor troops can react in an instant.",
             "cost": 1
-        },
-        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
+        }
     }
 }
