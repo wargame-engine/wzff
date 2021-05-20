@@ -8,7 +8,7 @@
             "name": "Greater Daemon of Change",
             "description": "A large winged creature enlightened with extreme knowlege and magical powers by the dark god of change.",
             "subfactions": ["change"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush", "fly", "stealth", {"id": "power", "x": 3}, "fear"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "ambush", "fly", {"id": "power", "x": 3}, "fear"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -66,7 +66,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -94,7 +94,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}, "hover"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -121,7 +121,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}, "hover", "psychic_syphon"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "psychic_syphon"],
             "models": [
                 {"name": "Blue Scholars", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["quills", "disk_blades"], "min": 1, "max": 1, "rules": []}
             ]
@@ -134,7 +134,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["stealth", {"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
+            "rules": [{"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
             "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "chromatic_horrors": {
@@ -148,7 +148,6 @@
             "models": [
                 {
                     "name": "Flame Warriors",
-                    "rules": ["stealth"],
                     "movement": 6,
                     "courage": 5,
                     "shoot": 3,
@@ -169,7 +168,7 @@
             "min": 1,
             "max": 1,
             "subfactions": ["none", "change"],
-            "rules": ["hover", "stealth"],
+            "rules": ["hover"],
             "models": [
                 {
                     "name": "Exalted Flame Daemon",
@@ -193,7 +192,7 @@
             "subfactions": ["none", "change"],
             "min": 3,
             "max": 9,
-            "rules": ["stealth", "hover"],
+            "rules": ["hover"],
             "models": [
                 {
                     "name": "Flame Daemon",
@@ -230,7 +229,7 @@
             "category": "heavy",
             "min": 1,
             "max": 1,
-            "rules": ["stealth", "fear", "hover"],
+            "rules": ["fear", "hover"],
             "models": [
                 {
                     "name": "Flame Chariot",
@@ -458,7 +457,7 @@
             "subfactions": ["excess"],
             "keywords": ["monster"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, "stealth", {"id": "power", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 2}, {"id": "power", "x": 2}],
             "min": 1,
             "max": 1,
             "models": [
@@ -496,7 +495,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, "agile", "stealth"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "resilient", "x": 1}, "agile"],
             "min": 1,
             "max": 1,
             "models": [{"name": "Mask of Excess", "movement": 8, "courage": 6, "shoot": 7, "fight": 7, "defense": 5, "reflexes": 5, "weapons": ["segmented_claws"], "min": 1, "max": 1, "rules": []}]
@@ -519,7 +518,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "sweeping_claws", "count": 2}],
-                    "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
+                    "options": [{"limit": 1, "addRule": ["musician", "banner"]}],
                     "min": 1,
                     "max": 1
                 },
@@ -610,7 +609,7 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "sweeping_claws", "count": 2}, {"id": "lashing_tentacles"}],
-                    "options": [{"limit": 1, "addRule": ["horrible_icon", "instrument_of_excess", "banner_of_excess"]}],
+                    "options": [{"limit": 1, "addRule": [ "musician", "banner"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -721,7 +720,7 @@
                     "min": 9,
                     "max": 29,
                     "weapons": [{"id": "war_sword", "count": 1}],
-                    "options": [{"modelLimit": 1, "addRule": ["banner_of_blood"]}, {"modelLimit": 1, "addRule": ["instrument_of_blood"]}, {"modelLimit": 1, "addRule": ["horrible_icon"]}]
+                    "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}]
                 }
             ]
         },
@@ -760,9 +759,8 @@
             "reflexes": 4,
             "weapons": ["twisting_flames", "ccw"],
             "options": [
-                {"modelLimit": 1, "addRule": ["banner_of_change"]},
-                {"modelLimit": 1, "addRule": ["instrument_of_change"]},
-                {"modelLimit": 1, "addRule": ["horrible_icon"]},
+                {"modelLimit": 1, "addRule": ["banner"]},
+                {"modelLimit": 1, "addRule": ["musician"]},
                 {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
             ],
             "min": 10,
@@ -838,13 +836,6 @@
     },
     "rules": {
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
-        "banner_of_change": {"name": "Banner of Change", "hidden": true, "description_short": "+1 Courage", "description": "+1 Courage.", "points": 20},
-        "horrible_icon": {
-            "name": "Horrible Icon",
-            "description": "At any point during this unit's activation, roll 9 dice. For each roll of 1 or 2 the closest enemy unit within 9\" takes one automatic hit with AP -2.",
-            "points": 20
-        },
-        "instrument_of_change": {"name": "Instrument of Change", "description": "Models in this unit get +1\" of Movement.", "points": 5},
         "chanting_warriors": {"name": "Chanting Warriors", "description": "Enemy units must subtract one from psychic tests within 9\" of this model.", "points": 5},
         "no_escape": {
             "name": "No Escape",
@@ -854,10 +845,6 @@
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
         "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Resilient(+1).", "points": 2},
         "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
-        "instrument_of_excess": {"name": "Instrument of Excess", "description": "Add 1 to this unit's movement characteristic.", "points": 10},
-        "banner_of_excess": {"name": "Banner of Excess", "description": "This unit may re-roll failed Strength rolls of 1 or 2.", "points": 20},
-        "instrument_of_blood": {"name": "Instrument of War", "description": "This unit has +2 Courage while within 3\" of any enemy units", "points": 10},
-        "banner_of_blood": {"name": "Banner of Blood", "description": "This unit may add 2\" to its movement when Charging", "points": 20},
         "wings": {
             "name": "Daemon Wings",
             "hidden": true,
