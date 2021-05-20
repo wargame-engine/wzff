@@ -361,7 +361,9 @@
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "ccw"],
                     "options": [
-                        {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                        {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "light_laser_cannon", "seismic_cannon", 
+                            "heavy_auto_laser", "light_machinegun"], 
+                            "modelLimit": "2/5"}
                     ],
                     "min": 4,
                     "max": 9
