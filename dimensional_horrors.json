@@ -38,7 +38,7 @@
             "subfactions": ["none", "change", "war", "pestilence", "excess"],
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fear",  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "fear", {"id": "wounds", "x": 3}],
             "keywords": ["monster"],
             "models": [
                 {
@@ -66,7 +66,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth",  {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -94,7 +94,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth",  {"id": "power", "x": 1}, "hover"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}, "hover"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -121,7 +121,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1},  "hover", "psychic_syphon"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "stealth", {"id": "power", "x": 1}, "hover", "psychic_syphon"],
             "models": [
                 {"name": "Blue Scholars", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["quills", "disk_blades"], "min": 1, "max": 1, "rules": []}
             ]
@@ -134,7 +134,7 @@
             "category": "command",
             "min": 1,
             "max": 1,
-            "rules": ["stealth",  {"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
+            "rules": ["stealth", {"id": "power", "x": 1}, "hover", {"id": "leader_x", "x": "Infantry"}],
             "models": [{"name": "The Shifter", "movement": 8, "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "weapons": ["tricksters_staff"], "min": 1, "max": 1, "rules": []}]
         },
         "chromatic_horrors": {
@@ -169,7 +169,7 @@
             "min": 1,
             "max": 1,
             "subfactions": ["none", "change"],
-            "rules": [ "hover", "stealth"],
+            "rules": ["hover", "stealth"],
             "models": [
                 {
                     "name": "Exalted Flame Daemon",
@@ -686,7 +686,18 @@
             "min": 5,
             "max": 10,
             "models": [
-                {"name": "Dogs of War", "movement": 8, "courage": 6, "shoot": 5, "fight": 8, "defense": 6, "min": 5, "max": 20, "rules": [{"id": "ward", "x": 1}], "weapons": [{"id": "hounds_teeth", "count": 4}]}
+                {
+                    "name": "Dogs of War",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 8,
+                    "defense": 6,
+                    "min": 5,
+                    "max": 20,
+                    "rules": [{"id": "ward", "x": 1}],
+                    "weapons": [{"id": "hounds_teeth", "count": 4}]
+                }
             ]
         },
         "wrath_warriors": {
@@ -732,11 +743,10 @@
                     "min": 1,
                     "max": 1,
                     "weapons": [{"id": "blessed_axe", "count": 6}, {"id": "blessed_whip", "count": 1}],
-                    "rules": ["fly", {"id": "leader_x", "x": "Infantry"}, "ambush",  "damage_table_monster"],
+                    "rules": ["fly", {"id": "leader_x", "x": "Infantry"}, "ambush", "damage_table_monster"],
                     "options": [{"replaceWeapon": ["blessed_axe", "blessed_whip"], "withWeapon": {"id": "blessed_greataxe", "count": 6}}]
                 }
             ]
-
         }
     },
     "models": {
@@ -821,10 +831,10 @@
         "hounds_teeth": {"name": "Hound's Jaws", "attacks": 1, "short": "Melee", "ap": 1},
         "blessed_axe": {"name": "War-Blessed Axe", "attacks": 1, "short": "Melee", "ap": 8},
         "blessed_whip": {"name": "War-Blessed Whip", "attacks": 1, "short": 6, "medium": 12, "ap": 5, "rules": ["pistol"]},
-        "blessed_greataxe": {"name": "War-Blessed Greataxe", 
-            "profiles": [{"name": "Sweeping Attack", "attacks": 2, "short": "Melee", "ap": 5},
-                        {"name": "Mighty Strike", "attacks": 1, "short": "Melee", "ap": "12"}]
-            }
+        "blessed_greataxe": {
+            "name": "War-Blessed Greataxe",
+            "profiles": [{"name": "Sweeping Attack", "attacks": 2, "short": "Melee", "ap": 5}, {"name": "Mighty Strike", "attacks": 1, "short": "Melee", "ap": "12"}]
+        }
     },
     "rules": {
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
@@ -862,6 +872,28 @@
             "points": ["rule.x", {"multiply": 10}]
         }
     },
-    "strategies": {},
+    "strategies": {
+        "summoning": {
+            "name": "Summoning",
+            "phase": "pre_game",
+            "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
+            "flavor": "Dimensional horrors can be summoned out of thin air and in huge masses.",
+            "cost": "1/per"
+        },
+        "terror": {
+            "name": "Terror",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+            "flavor": "Their nightmarish form can terrorize even the strongest of wills.",
+            "cost": 1
+        },
+        "teleportation": {
+            "name": "Teleportation",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
+            "flavor": "Dimensional horrors have a terrifying ability to move swiftly between enemies with very little to stop them.",
+            "cost": 1
+        }
+    },
     "powers": {}
 }
