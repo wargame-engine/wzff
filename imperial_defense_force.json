@@ -1041,7 +1041,7 @@
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
                     ],
                     "min": 1,
                     "max": 3
@@ -1068,7 +1068,7 @@
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
                     ],
                     "min": 1,
                     "max": 3

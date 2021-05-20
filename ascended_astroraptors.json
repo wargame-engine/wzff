@@ -187,7 +187,6 @@
                     "movement": 7,
                     "weapons": ["laser_carbine", "frags", "heavy_ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
                     ],
                     "rules": [],
@@ -240,7 +239,6 @@
                     "reflexes": 5,
                     "weapons": ["laser_carbine", "frags", "ccw"],
                     "options": [
-                        {"addRule": ["field_radio"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["medical_training"], "modelLimit": 1},
                         {"addWeapon": ["artillery_barrage"], "modelLimit": 1},
@@ -304,7 +302,6 @@
                     "movement": 7,
                     "weapons": ["laser_carbine", "frags", "ccw"],
                     "options": [
-                        {"addRule": "field_radio", "modelLimit": 1},
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
                     ],
                     "rules": [],
@@ -356,7 +353,6 @@
                     "movement": 7,
                     "weapons": ["heavy_laser_carbine", "ccw"],
                     "options": [
-                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
                         {"replaceWeapon": "heavy_laser_carbine", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
                     ],
                     "min": 4,
@@ -440,51 +436,6 @@
             ]
 
         },
-
-        "command_battle_tank": {
-            "name": "Command Battle Tank",
-            "description": "A main line battle tank commander.",
-            "min": 1,
-            "max": 1,
-            "category": "command",
-            "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["vulnerable_side_rear", "field_orders_battle_tank", "damage_table_vehicle"],
-            "models": [
-                {
-                    "name": "Battle Tank",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 12,
-                    "movement": 10,
-                    "reflexes": 6,
-                    "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
-                    "options": [
-                        {
-                            "replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"},
-                            "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]
-                        },
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
-                        {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
-                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": ["hunter_missiles"]},
-                        {
-                            "addWeapon": [
-                                [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
-                                [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}],
-                                [{"id": "heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}],
-                                [{"id": "plasma_cannon", "mount": ["Left", "Front"]}, {"id": "plasma_cannon", "mount": ["Right", "Front"]}]
-                            ],
-                            "limit": 1
-                        }
-                    ],
-                    "rules": [{"id": "impact", "x": 6}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
         "battle_tank": {
             "name": "Battle Tank",
             "description": "A main line battle tank.",
@@ -504,7 +455,7 @@
                     "reflexes": 5,
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
@@ -544,69 +495,12 @@
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
                     "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
                         {"addWeapon": ["hunter_missiles"]},
                         {"addWeapon": [[{"id": "laser_carbine_array", "mount": ["Left"]}, {"id": "laser_carbine_array", "mount": ["Right"]}]]},
                         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "armored_truck": {
-            "name": "Armored Truck",
-            "description": "An armored transport of the Ascended Astro-Raptors.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Armored Truck",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": [],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": [{"id": "autocannon", "count": 2, "mount": ["Front"]}]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "armored_stormtrooper_truck": {
-            "name": "Armored Stormtrooper Truck",
-            "description": "An armored transport of the Ascended Astro-Raptors.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
-            "category": "transport",
-            "keywords": ["Vehicle"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Armored Truck",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 10,
-                    "reflexes": 5,
-                    "weapons": ["light_battle_cannon"],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
-                        {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
                     ],
                     "min": 1,
                     "max": 1
@@ -675,9 +569,9 @@
                 }
             ]
         },
-        "light_walker": {
-            "name": "Light Walker",
-            "description": "A lightly equipped recon walker.",
+        "armored_walker": {
+            "name": "Armored Walker",
+            "description": "An armored light combat walker.",
             "rules": ["vulnerable_rear", "damage_table_vehicle"],
             "keywords": ["Vehicle"],
             "min": 1,
@@ -685,18 +579,18 @@
             "category": "strike",
             "models": [
                 {
-                    "name": "Light Walker",
+                    "name": "Armored Walker",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
-                    "defense": 8,
+                    "defense": 9,
                     "reflexes": 5,
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
-                        {"addRule": ["heavy_armor", "scout"]},
-                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"addWeapon": ["heavy_fusion_rifle", "heavy_machinegun", "heavy_flamethrower", "missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "walker_chainsaw", "plasma_cannon"]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["heavy_fusion_rifle", "heavy_machinegun", "missile_launcher", "laser_machinegun", "gatling_gun", "laser_cannon", "autocannon", "walker_chainsaw", "plasma_cannon"]}
                     ],
                     "min": 1,
                     "max": 3
@@ -760,42 +654,6 @@
                             ]
                         },
                         {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
-                    ],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "super_heavy_battle_tank": {
-            "name": "Super Heavy Battle Tank",
-            "description": "A titanic battle tank with a variety of weapon options.",
-            "rules": ["vulnerable_rear", "damage_table_titan", {"id": "heavy_impact", "x": 6}],
-            "category": "super_heavy",
-            "keywords": ["Vehicle", "Battle Tank"],
-            "min": 1,
-            "max": 1,
-            "models": [
-                {
-                    "name": "Super Heavy Battle Tank",
-                    "movement": 10,
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 13,
-                    "reflexes": 5,
-                    "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "titan_hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
-                    "options": [
-                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
-                        {"replaceWeapon": "titan_hell_cannon", "withWeapon": ["titan_battle_cannon"]},
-                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"addWeapon": ["hunter_missiles"]},
-                        {
-                            "addWeapon": [
-                                [{"id": "twin_heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
-                                [{"id": "twin_heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}]
-                            ],
-                            "limit": 2
-                        }
                     ],
                     "min": 1,
                     "max": 1
