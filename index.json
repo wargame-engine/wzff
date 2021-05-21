@@ -419,6 +419,7 @@
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24, "rules": ["rapid_fire"]},
         "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "servo_arm": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_staff": {"name": "Energy Staff", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},

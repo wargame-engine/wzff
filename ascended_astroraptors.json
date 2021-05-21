@@ -19,7 +19,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_carbine", {"id": "ccw", "count": 2}],
+                    "weapons": ["laser_carbine", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
@@ -47,7 +47,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["heavy_laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
@@ -76,7 +76,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": [{"id": "heavy_ccw", "count": 3}],
+                    "weapons": [{"id": "heavy_ccw", "count": 3}, "frags"],
                     "options": [
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
@@ -103,7 +103,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_pistol", {"id": "ccw", "count": 3}, "strafing_run_fighter_plane"],
+                    "weapons": ["laser_pistol", "frags", {"id": "ccw", "count": 3}, "strafing_run_fighter_plane"],
                     "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "strafing_run_fighter_plane", "withWeapon": ["strafing_run_heavy_plane"]}],
                     "rules": [],
                     "min": 1,
@@ -126,7 +126,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_pistol", {"id": "ccw", "count": 3}, "orbital_bombardment_light"],
+                    "weapons": ["laser_pistol", "frags", {"id": "ccw", "count": 3}, "orbital_bombardment_light"],
                     "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "orbital_bombardment_light", "withWeapon": ["orbital_bombardment_heavy"]}],
                     "rules": [],
                     "min": 1,
@@ -149,12 +149,35 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["pistol", "staff"],
+                    "weapons": ["pistol", "frags", "staff"],
                     "options": [
                         {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
                     ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "engineer": {
+            "name": "Engineer",
+            "description": "A highly trained mechanic able to fix most issues at a moment's notice.",
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "support_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "repair", "x": 3}],
+            "models": [
+                {
+                    "name": "Engineer",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "movement": 7,
+                    "weapons": ["laser_pistol", "frags", {"id": "servo_arm", "count": 3}],
+                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceRule": {"id": "repair", "x": 3}, "withRule":  {"id": "repair", "x": 5} }],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -175,7 +198,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "heavy_ccw"],
+                    "weapons": ["laser_carbine", "frags", "heavy_ccw"],
                     "options": [
                         {
                             "replaceWeapon": "laser_carbine",
@@ -195,7 +218,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
                     "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
@@ -228,7 +251,7 @@
                     "defense": 6,
                     "movement": 7,
                     "reflexes": 5,
-                    "weapons": ["laser_carbine", "ccw"],
+                    "weapons": ["laser_carbine", "frags", "ccw"],
                     "options": [
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["medical_training"], "modelLimit": 1},
@@ -288,7 +311,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "ccw"],
+                    "weapons": ["laser_carbine", "frags", "ccw"],
                     "options": [
                         {
                             "replaceWeapon": "laser_carbine",
@@ -308,7 +331,7 @@
             "min": 3,
             "max": 3,
             "rules": ["stealth", "scout"],
-            "models": [{"name": "Sniper", "courage": 6, "shoot": 7, "fight": 5, "defense": 6, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "ccw"], "min": 3, "max": 3}]
+            "models": [{"name": "Sniper", "courage": 6, "shoot": 7, "fight": 5, "defense": 6, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
         "ascendant_shocktroopers": {
             "name": "Ascendant Shocktroopers",
@@ -325,7 +348,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "ccw"],
+                    "weapons": ["heavy_laser_carbine", "frags", "ccw"],
                     "options": [
                         {"replaceWeapon": ["heavy_laser_carbine", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
@@ -342,7 +365,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "ccw"],
+                    "weapons": ["heavy_laser_carbine", "frags", "ccw"],
                     "options": [
                         {
                             "replaceWeapon": "heavy_laser_carbine",
@@ -381,11 +404,11 @@
                     "defense": 6,
                     "movement": 7,
                     "reflexes": 5,
-                    "weapons": ["laser_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Ranger", "courage": 6, "shoot": 6, "fight": 5, "movement": 7, "defense": 6, "reflexes": 5, "weapons": ["laser_pistol", {"id": "heavy_ccw", "count": 2}], "min": 4, "max": 9}
+                {"name": "Ranger", "courage": 6, "shoot": 6, "fight": 5, "movement": 7, "defense": 6, "reflexes": 5, "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}], "min": 4, "max": 9}
             ]
         },
         "jump_troopers": {
@@ -402,7 +425,7 @@
                     "defense": 6,
                     "movement": 8,
                     "reflexes": 6,
-                    "weapons": ["laser_pistol", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "min": 5,
                     "max": 10
                 }
