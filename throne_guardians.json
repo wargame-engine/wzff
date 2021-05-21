@@ -19,7 +19,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "psychic_grenade", {"id": "ccw", "count": 3}],
-                    "rules": [{"id": "ward", "x": 1}, {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}],
+                    "rules": [{"id": "ward", "x": 1}, {"id": "witch_hunter_tactics", "x": 1}, {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
                     "options": [
                         {"replaceRule": {"id": "witch_hunter_tactics", "x": 1}, "withRule": {"id": "witch_hunter_tactics", "x": 2}},
                         {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["flamethrower", {"id": "ccw", "count": 3}], {"id": "energy_greatblade", "count": 4}], "limit": 1}
@@ -35,11 +35,11 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}],
+            "rules": [{"id": "wounds", "x": 4}, {"id": "battle_tactics", "x": 2}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Guardian Commander",
-                    "courage": 7,
+                    "courage": 8,
                     "shoot": 8,
                     "fight": 8,
                     "movement": 6,
@@ -69,13 +69,13 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}],
+            "rules": [{"id": "wounds", "x": 3},  {"id": "battle_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
             "models": [
                 {
                     "name": "Guardian Captain",
                     "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
+                    "shoot": 7,
+                    "fight": 7,
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
@@ -101,7 +101,8 @@
             "name": "Guardian Captain on Jetbike",
             "description": "Throne guardians on high speed jet bikes.",
             "category": "command",
-            "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "battle_tactics", "x": 1}],
+            "keywords": ["Biker"],
+            "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "battle_tactics_biker", "x": 1}, {"id": "leader_x", "x": "Infantry, Biker"}],
             "models": [
                 {
                     "name": "Guardian Captain on Jetbike",
@@ -327,7 +328,7 @@
                     "defense": 9,
                     "movement": 8,
                     "reflexes": 7,
-                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 2}],
+                    "weapons": ["guardian_rifle_array", {"id": "guardian_lance", "count": 3}],
                     "min": 3,
                     "max": 9
                 }
@@ -580,7 +581,7 @@
     },
     "weapons": {
         "guardian_grenade_launcher": {"name": "Guardian Grenade Launcher", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": [{"id": "blast", "x": 2}]},
-        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 4, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
+        "guardian_rifle_array": {"name": "Guardian Rifle Array", "attacks": 3, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "guardian_missile_array": {"name": "Guardian Missile Array", "attacks": 4, "short": 12, "medium": 24, "ap": 2},
         "guardian_missiles": {
             "name": "Guardian Missiles",
@@ -642,11 +643,16 @@
             "description": "Once per round a when a friendly Infantry unit is targeted by a shooting attack, the attacker suffers -1 Accuracy.",
             "points": 10
         },
-        
         "battle_tactics": {
             "name": "Battle Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
+            "points": 20
+        },
+        "battle_tactics_biker": {
+            "name": "Biker Battle Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ or _Biker_ units within 6\". Those units may re-roll failed Accuracy tests of 9+ and failed Strength tests of 9+ until the end of the round.",
             "points": 20
         },
         "witch_hunter_tactics": {
@@ -661,7 +667,7 @@
         {
             "phase": "activation",
             "name": "Genetic Perfection",
-            "description": "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
+            "description": "Use before taking Save rolls for an _Infantry_ or _Biker_ unit. It gets +1 Save.",
             "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
             "cost": 2
         },
