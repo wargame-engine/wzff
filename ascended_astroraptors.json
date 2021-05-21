@@ -594,7 +594,7 @@
                     "options": [
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
                         {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
-                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
+                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile", "twin_gatling_aa"]},
                         {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
                     ],
                     "min": 1,
