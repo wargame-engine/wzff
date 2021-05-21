@@ -218,7 +218,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "heavy_ccw", "count": 2}],
                     "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
@@ -251,7 +251,7 @@
                     "defense": 6,
                     "movement": 7,
                     "reflexes": 5,
-                    "weapons": ["laser_carbine", "frags", "ccw"],
+                    "weapons": ["laser_carbine", "frags", "heavy_ccw"],
                     "options": [
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["medical_training"], "modelLimit": 1},
@@ -279,7 +279,7 @@
                     "defense": 6,
                     "movement": 7,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "ccw", "count": 2}],
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -311,7 +311,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "frags", "ccw"],
+                    "weapons": ["laser_carbine", "frags", "heavy_ccw"],
                     "options": [
                         {
                             "replaceWeapon": "laser_carbine",
@@ -331,7 +331,7 @@
             "min": 3,
             "max": 3,
             "rules": ["stealth", "scout"],
-            "models": [{"name": "Sniper", "courage": 6, "shoot": 7, "fight": 5, "defense": 6, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "ccw"], "min": 3, "max": 3}]
+            "models": [{"name": "Sniper", "courage": 6, "shoot": 7, "fight": 5, "defense": 6, "movement": 7, "reflexes": 5, "weapons": ["rail_rifle", "frags", "heavy_ccw"], "min": 3, "max": 3}]
         },
         "ascendant_shocktroopers": {
             "name": "Ascendant Shocktroopers",
@@ -348,11 +348,11 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "frags", "ccw"],
+                    "weapons": ["heavy_laser_carbine", "frags", "heavy_ccw"],
                     "options": [
-                        {"replaceWeapon": ["heavy_laser_carbine", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_fist"]}
+                        {"replaceWeapon": ["heavy_laser_carbine", "heavy_ccw"], "withWeapon": [["laser_pistol", {"id": "heavy_ccw", "count": 2}]]},
+                        {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]},
+                        {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": [{"id": "heavy_ccw", "count": 3}, {"id": "energy_sword", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -365,7 +365,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "frags", "ccw"],
+                    "weapons": ["heavy_laser_carbine", "frags", "heavy_ccw"],
                     "options": [
                         {
                             "replaceWeapon": "heavy_laser_carbine",
@@ -396,19 +396,27 @@
             "max": 10,
             "rules": ["scout"],
             "models": [
-                {
-                    "name": "Ranger Captain",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "movement": 7,
-                    "reflexes": 5,
+                {"name": "Ranger", 
+                    "courage": 6, 
+                    "shoot": 6, 
+                    "fight": 5, 
+                    "movement": 7, 
+                    "defense": 6, 
+                    "reflexes": 5, 
                     "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                },
-                {"name": "Ranger", "courage": 6, "shoot": 6, "fight": 5, "movement": 7, "defense": 6, "reflexes": 5, "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}], "min": 4, "max": 9}
+                    "options": [
+                       {
+                            "replaceWeapon": "laser_pistol",
+                            "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"],
+                            "modelLimit": "2/5"
+                       },
+                       {
+                           "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                           "withWeapon": ["energy_sword"]
+                       }
+                    ] ,
+                    "min": 5, 
+                    "max": 10}
             ]
         },
         "jump_troopers": {
@@ -426,6 +434,16 @@
                     "movement": 8,
                     "reflexes": 6,
                     "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                             "replaceWeapon": "laser_pistol",
+                             "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]
+                        },
+                        {
+                            "replaceWeapon": {"id": "heavy_ccw", "count": 2},
+                            "withWeapon": ["energy_sword"]
+                        }
+                     ] ,
                     "min": 5,
                     "max": 10
                 }
@@ -772,7 +790,9 @@
         "seismic_cannon": {
             "name": "Seismic Cannon",
             "profiles": [{"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24}, {"name": "Short Wave", "attacks": 2, "short": 6, "medium": 12, "ap": 3}]
-        }
+        },
+        "machine_pistol": {"name": "Machine Pistol", "attacks": 2, "short": 6, "rules": ["pistol"]}
+        
     },
     "rules": {
         "raptor_tactics": {
