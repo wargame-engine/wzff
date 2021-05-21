@@ -945,7 +945,7 @@
         {
             "name": "Swarm Reflexes",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Mutated by the alien swarm, these humans gain super-human reflexes.",
             "cost": 1
         },

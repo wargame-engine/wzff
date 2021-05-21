@@ -2809,7 +2809,7 @@
             "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters", "psychic_marines"],
             "name": "Vigilance",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
             "cost": 1
         },
