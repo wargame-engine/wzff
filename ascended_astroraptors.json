@@ -623,6 +623,7 @@
                     "options": [
                         {"addWeapon": ["hunter_missiles"]},
                         {
+                            "limit": 1,
                             "addWeapon": [
                                 "heavy_fusion_rifle",
                                 "heavy_machinegun",
