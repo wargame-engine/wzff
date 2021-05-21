@@ -437,7 +437,7 @@
                 {
                     "name": "Organ Tank",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
