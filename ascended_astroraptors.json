@@ -437,7 +437,7 @@
                     "options": [
                         {
                              "replaceWeapon": "laser_pistol",
-                             "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"],
+                             "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]
                         },
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 2},
