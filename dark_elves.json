@@ -346,7 +346,7 @@
                 {
                     "replaceWeapon": {"id": "barb_blade", "count": 2},
                     "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
-                    "modelLimit": "1/10"
+                    "modelLimit": "1/5"
                 }
             ],
             "models": [
@@ -394,7 +394,7 @@
                 {
                     "replaceWeapon": {"id": "barb_blade", "count": 2},
                     "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
-                    "modelLimit": "1/10"
+                    "modelLimit": "1/5"
                 }
             ],
             "models": [
