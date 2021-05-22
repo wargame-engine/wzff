@@ -133,7 +133,7 @@
                     "fight": 3,
                     "defense": 3,
                     "reflexes": 2,
-                    "weapons": ["heavy_ccw"],
+                    "weapons": ["ccw"],
                     "rules": ["goblin_assistant"],
                     "min": 0,
                     "max": 1
@@ -270,6 +270,56 @@
                     "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol", "teleport_pistol"]}, {"addRule": ["heavy_armor"]}, {"addRule": ["energy_field"]}],
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "name": "Goblin Assistant",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["ccw"],
+                    "rules": ["goblin_assistant"],
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
+        "goblin_repair_team": {
+            "name": "Goblin Repair Team",
+            "description": "A team of goblins who are good at fixing things.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none"],
+            "category": "specialist",
+            "keywords": ["Goblin", "Infantry"],
+            "models": [
+                {
+                    "name": "Goblin Mechanic",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": [{"id": "repair", "x": 2}],
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Goblin Assistant",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
+                    "rules": ["goblin_assistant"],
+                    "min": 4,
+                    "max": 4
                 }
             ]
         },
@@ -1531,7 +1581,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "tracks": {"name": "Tracks", "description": "This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
-        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
+        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls for each model with this rule.", "points": 2},
         "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},

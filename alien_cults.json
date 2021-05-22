@@ -873,7 +873,6 @@
         "shock_cannon": {"name": "Shock Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "ravenous_jaws": {"name": "Ravenous Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "pincer_claws": {"name": "Pincer Claws", "attacks": 1, "short": "Melee", "ap": 10},
-        "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "metamorph_claws": {"name": "Metamorph Claws", "attacks": 1, "short": "Melee", "ap": 3},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "hypermorph_tail": {"name": "Hypermorph Tail", "attacks": 1, "short": "Melee", "ap": 1},

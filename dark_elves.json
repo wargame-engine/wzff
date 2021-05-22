@@ -429,6 +429,32 @@
                 }
             ]
         },
+        "royal_court": {
+            "category": "specialist",
+            "name": "Royal Court",
+            "description": "A group of the lord's advisors and mercenaries.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Courtesans",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "toxic_blade", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "options": [
+                        {"replaceModel": ["psychic_being", "serpent", "ghoul"]}
+                    ],
+                    "min": 4,
+                    "max": 16
+                }
+            ]
+        },
         "jetbike_witches": {
             "category": "strike",
             "name": "Jetbike Witches",
@@ -703,7 +729,49 @@
             ]
         }
     },
+    "models": {
+        "psychic_being": {
+            "name": "Psychic Being",
+            "movement": 7,
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 6,
+            "rules": [{"id": "wounds", "x": 2}],
+            "weapons": ["soul_drain"],
+            "min": 1,
+            "max": 1
+        },
+        "serpent": {
+            "name": "Serpent",
+            "movement": 7,
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "rules": [{"id": "wounds", "x": 2}],
+            "weapons": [{"id": "serpent_blade", "count": 3}],
+            "min": 1,
+            "max": 1
+        },
+        "ghoul": {
+            "name": "Ghoul",
+            "movement": 7,
+            "courage": 4,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "rules": [{"id": "wounds", "x": 2}, "furious", {"id": "resilient", "x": 2}],
+            "weapons": [{"id": "piercing_claws", "count": 3}],
+            "min": 1,
+            "max": 1
+        }
+    },
     "weapons": {
+        "soul_drain": {"name": "Soul Drain", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "homing"]},
         "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper"]},
         "poison_dart_rifle": {"name": "Poison Dart Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["assault", "poison"]},
         "poison_sprayer": {"name": "Poison Sprayer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
@@ -716,6 +784,7 @@
         "soul_vortex": {"name": "Soul Vortex", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "soul_stealer": {"name": "Soul Stealer", "attacks": 3, "short": 8, "ap": 1},
         "leeching_tentacles": {"name": "Leeching Tentacles", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "serpent_blade": {"name": "Serpent Blade", "attacks": 1, "short": "Melee", "ap": 3},
         "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
         "dual_dark_blades": {"name": "Dual Dark Blades", "profiles": [
             {"name": "Whirl", "attacks": 6, "ap": 2, "short": "Melee"},
@@ -734,6 +803,7 @@
         "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
+        "toxic_blade": {"name": "Toxic Blade", "attacks": 1, "short": "Melee", "rules": ["deadly_poison"]},
         "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["fusion"]},
         "heavy_wave_cannon": {"name": "Heavy Wave Cannon", "profiles": [
             {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},
