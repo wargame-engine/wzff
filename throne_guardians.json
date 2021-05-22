@@ -287,7 +287,7 @@
             "min": 5,
             "max": 10,
             "category": "core",
-            "rules": [{"id": "resilient", "x": 2}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "resilient", "x": 3}, {"id": "wounds", "x": 2}],
             "options": [
                 {
                     "replaceWeapon": [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"],
