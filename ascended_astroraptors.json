@@ -34,10 +34,11 @@
         },
         "stormtrooper_commander": {
             "name": "Ascendant Commander",
-            "description": "Foot infantry commaner of the elite storm troopers.",
+            "description": "Foot infantry commander of the Ascendant Shocktroopers",
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
             "models": [
                 {
                     "name": "Ascendant Commander",
@@ -64,7 +65,7 @@
         "raptor_assassin": {
             "name": "Raptor Assassin",
             "description": "A master of infiltration who swears by their easily concealable blade.",
-            "category": "strike",
+            "category": "specialist",
             "keywords": ["Infantry"],
             "rules": [{"id": "wounds", "x": 2}, "assassin"],
                 "options": [
