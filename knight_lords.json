@@ -284,7 +284,7 @@
         }
     },
     "weapons": {
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["fusion"]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": [{"id": "critical", "x": 1}]},
         "mini_titan_sword": {"name": "Mini Titan Sword", "profiles": [
             {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 7},
             {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 3}
@@ -307,7 +307,7 @@
                 {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4}
             ]
         },
-        "titan_fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 8,  "rules": ["fusion"]},
+        "titan_fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 8,  "rules": [{"id": "critical", "x": 1}]},
         "plasma_battle_cannon": {
             "name": "Plasma Battle Cannon",
             "profiles": [
@@ -318,7 +318,7 @@
         "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4,  "rules": [{"id": "blast", "x": 2}]},
         "twin_shield_missiles": {"name": "Twin Shield Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": ["indirect"]},
         "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10},
-        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6,  "rules": ["fusion"]},
+        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6,  "rules": [{"id": "critical", "x": 1}]},
         "rapidfire_battle_cannon": {"name": "Rapid-fire Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5, "rules": ["flame"]},
         "harpoon_cannon": {

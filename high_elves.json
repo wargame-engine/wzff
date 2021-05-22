@@ -727,15 +727,15 @@
         "laser_lance_melee": {"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
         "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shreiking_spear_melee": {"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
+        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
         "shining_cannon": {"name": "Shining Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": ["fusion", "assault"]},
+        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "critical", "x": 1}, "assault"]},
         "titan_glaive": {"name": "Titan Glaive", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 9}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
         "spectre_rifle": {
             "name": "Spectre Rifle",
             "profiles": [
-                {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["fusion"]},
+                {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "critical", "x": 1}]},
                 {"name": "Dispersed", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame"]}
             ]
         },
@@ -744,7 +744,7 @@
             "name": "Deadly Shuriken",
             "profiles": [{"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1}, {"name": "Shooting", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]}]
         },
-        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["fusion"]},
+        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "critical", "x": 1}]},
         "mirror_blades": {"name": "Mirror Blades", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "blast", "count": 2}]},
         "elven_blaster": {"name": "Elven Blaster", "attacks": 2, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
         "slicing_sword": {"name": "Slicing Sword", "attacks": 1, "short": "Melee", "ap": 2},

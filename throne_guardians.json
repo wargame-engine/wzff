@@ -587,7 +587,7 @@
             "name": "Guardian Missiles",
             "profiles": [
                 {"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "anti_air"]},
-                {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", "fusion"]}
+                {"name": {"id": "critical", "x": 1}, "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]}
             ]
         },
         "guardian_twin_light_laser_cannon": {
@@ -605,7 +605,7 @@
         "guardian_spear_blade": {"name": "Guardian Spear (Blade)", "attacks": 1, "short": "Melee", "ap": 2},
         "guardian_spear_rifle": {"name": "Guardian Spear (Rifle)", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "guardian_spear_carbine": {"name": "Guardian Spear (Carbine)", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "guardian_spear_fusion": {"name": "Guardian Spear (Fusion)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
+        "guardian_spear_fusion": {"name": "Guardian Spear (Fusion)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "guardian_rifle": {
             "name": "Guardian Rifle",
             "profiles": [{"name": "Dispersed", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]}, {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]}]

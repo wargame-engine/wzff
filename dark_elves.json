@@ -852,12 +852,12 @@
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
         "toxic_blade": {"name": "Toxic Blade", "attacks": 1, "short": "Melee", "rules": ["deadly_poison"]},
-        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["fusion"]},
+        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "critical", "x": 1}]},
         "heavy_wave_cannon": {"name": "Heavy Wave Cannon", "profiles": [
-            {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},
+            {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": [{"id": "critical", "x": 1}, {"id": "blast", "x": 3}]},
             {"name": "Blast", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}
         ]},
-        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "fusion"]},
+        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", {"id": "critical", "x": 1}]},
         "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
         "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},
