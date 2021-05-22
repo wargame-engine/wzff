@@ -19,7 +19,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "frags", {"id": "ccw", "count": 2}],
+                    "weapons": ["laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
@@ -76,11 +76,10 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": [{"id": "heavy_ccw", "count": 3}, "frags"],
+                    "weapons": [{"id": "assassins_knife", "count": 5}],
                     "options": [
-                        {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "heavy_ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                        {"addrule": "stealth"},
+                        {"addrule": "ambush"}
                     ],
                     "rules": [],
                     "min": 1,
@@ -189,7 +188,6 @@
             "description": "The backbone of the Ascended Astro-Raptors.",
             "category": "core",
             "models": [
-                {"name": "Sergeant", "courage": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 5, "movement": 7, "weapons": ["laser_carbine", "heavy_ccw"], "min": 1, "max": 1},
                 {
                     "name": "Trooper",
                     "courage": 6,
@@ -203,12 +201,16 @@
                         {
                             "replaceWeapon": "laser_carbine",
                             "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "light_laser_cannon", "seismic_cannon", "heavy_auto_laser", "light_machinegun"],
-                            "modelLimit": 1
+                            "modelLimit": "2/5"
+                        },
+                        {
+                            "replaceWeapon": "laser_carbine",
+                            "withWeapon": ["shrapnel_shotgun"]
                         }
                     ],
                     "rules": [],
-                    "min": 4,
-                    "max": 9
+                    "min": 5,
+                    "max": 10
                 },
                 {
                     "name": "Weapon Team",
@@ -791,7 +793,8 @@
             "name": "Seismic Cannon",
             "profiles": [{"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24}, {"name": "Short Wave", "attacks": 2, "short": 6, "medium": 12, "ap": 3}]
         },
-        "machine_pistol": {"name": "Machine Pistol", "attacks": 2, "short": 6, "rules": ["pistol"]}
+        "machine_pistol": {"name": "Machine Pistol", "attacks": 2, "short": 6, "rules": ["pistol"]},
+        "assassins_knife": {"name": "Assassin's Knife", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]}
         
     },
     "rules": {
