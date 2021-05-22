@@ -755,16 +755,16 @@
         "heavy_laser_carbine": {
             "name": "Heavy Charge Carbine",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
+                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["sniper"]},
         "heavy_auto_laser": {
             "name": "Heavy Auto-Charge Rifle",
             "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
+                {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
+                {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
         "feral_gnashing": {"name": "Feral Gnashing", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
