@@ -61,13 +61,13 @@
             "max": 1,
             "keywords": ["Hive Mind"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "outflank", {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Soul Stealer Lord",
                     "courage": 7,
                     "shoot": 0,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 6,
