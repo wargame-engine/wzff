@@ -64,7 +64,7 @@
         "raptor_assassin": {
             "name": "Raptor Assassin",
             "description": "A master of infiltration who swears by their easily concealable blade.",
-            "category": "strike",
+            "category": "specialist",
             "keywords": ["Infantry"],
             "rules": [{"id": "wounds", "x": 2}, "assassin"],
                 "options": [
