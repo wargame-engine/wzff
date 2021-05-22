@@ -67,6 +67,10 @@
             "category": "strike",
             "keywords": ["Infantry"],
             "rules": [{"id": "wounds", "x": 2}, "assassin"],
+                "options": [
+                    {"addrule": {"id": "stealth", "name": "Camoflauge Cloak"}},
+                    {"addrule": {"id": "ambush", "name": "Personal Invisibility Field"}}
+                ],
             "models": [
                 {
                     "name": "Raptor Assassin",
@@ -77,10 +81,6 @@
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": [{"id": "assassins_knife", "count": 5}],
-                    "options": [
-                        {"addrule": "stealth"},
-                        {"addrule": "ambush"}
-                    ],
                     "rules": [],
                     "min": 1,
                     "max": 1
