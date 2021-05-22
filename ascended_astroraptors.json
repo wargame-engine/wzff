@@ -519,7 +519,8 @@
                                 {"id": "laser_machinegun"},
                                 {"id": "twin_laser_cannon"},
                                 {"id": "twin_missile_launcher"},
-                                [{"id": "missile_launcher"}, {"id": "light_machinegun", "count": 2}]
+                                [{"id": "missile_launcher"}, {"id": "light_machinegun", "count": 2}],
+                                {"id": "twin_laser_machinegun"}
                             ]
                         },
                         {"addWeapon": [{"id": "light_machinegun", "count": 2}]},
