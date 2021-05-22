@@ -1281,7 +1281,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "twin_prime_rifle", "mount": ["Front"]}, "at_grenade", {"id": "prime_chainsword", "count": 3}, "prime_pistol"],
                     "min": 2,
-                    "max": 2
+                    "max": 5
                 }
             ]
         },
