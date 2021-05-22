@@ -500,6 +500,52 @@
                 }
             ]
         },
+        "hoverboard_riders": {
+            "category": "strike",
+            "name": "Hoverboard Riders",
+            "description": "A group of Dark Elven warriors mounted on fast hover boards.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "options": [
+                {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Hoverboard Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "glaive", "count": 2}], "withWeapon": [
+                            ["barb_pistol", {"id": "barb_blade", "count": 3}],
+                            ["barb_pistol", {"id": "energy_sword", "count": 3}],
+                            ["barb_pistol", {"id": "barb_whip", "count": 3}]
+                        ]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Hoverboarder",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
         "leeching_beast": {
             "category": "specialist",
             "name": "Leeching Beast",
@@ -771,6 +817,7 @@
         }
     },
     "weapons": {
+        "glaive": {"name": "Glaive", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
         "soul_drain": {"name": "Soul Drain", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "homing"]},
         "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper"]},
         "poison_dart_rifle": {"name": "Poison Dart Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["assault", "poison"]},
@@ -797,6 +844,7 @@
         "razor_whips": {"name": "Razor Whips", "attacks": 1, "short": "Melee", "ap": 1},
         "net_and_spear": {"name": "Combat Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net"]},
         "barb_whip": {"name": "Poison Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
+        "barb_launcher": {"name": "Poison Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
         "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
         "twin_barb_rifle": {"name": "Twin Poison Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
         "barb_carbine": {"name": "Poison Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
