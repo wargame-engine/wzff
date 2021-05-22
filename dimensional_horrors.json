@@ -197,6 +197,7 @@
             "options": [
                 {"modelLimit": 1, "addRule": ["banner"]},
                 {"modelLimit": 1, "addRule": ["musician"]},
+                {"modelLimit": 1, "addRule": ["champion"]}
                 {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
             ],
             "models": [
@@ -537,20 +538,8 @@
             "category": "core",
             "min": 10,
             "max": 30,
-            "options": [{"modelLimit": 1, "addRule": ["musician", "banner"]}],
+            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
             "models": [
-                {
-                    "name": "Siren",
-                    "movement": 7,
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "sweeping_claws", "count": 2}],
-                    "min": 1,
-                    "max": 1
-                },
                 {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 9, "max": 29}
             ]
         },
@@ -736,10 +725,8 @@
             "subfactions": ["none", "war"],
             "min": 10,
             "max": 30,
-            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}],
-            "models": [
-                {"name": "Reaper", "movement": 6, "courage": 5, "shoot": 6, "fight": 7, "defense": 5, "reflexes": 5, "min": 1, "max": 1, "weapons": [{"id": "war_sword", "count": 2}]},
-                {
+            "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
+            "models": [                {
                     "name": "Warrior",
                     "movement": 6,
                     "courage": 5,
