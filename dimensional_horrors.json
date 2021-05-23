@@ -126,9 +126,9 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["power_staff"],
+                    "weapons": [{"id": "power_staff", "count": 2}],
                     "options": [
-                        {"replaceWeapon": "power_staff", "withWeapon": {"id": "ritual_dagger", "count": 2}},
+                        {"replaceWeapon": {"id": "power_staff", "count": 2}, "withWeapon": {"id": "ritual_dagger", "count": 2}},
                         {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]},
                         {"addRule": ["disk_of_change"]}
                     ],
@@ -154,8 +154,8 @@
                     "fight": 5,
                     "defense": 8,
                     "reflexes": 5,
-                    "weapons": ["power_staff", {"id": "parasitic_bite", "count": 6}],
-                    "options": [{"replaceWeapon": "power_staff", "withWeapon": "ritual_dagger"}, {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}],
+                    "weapons": [{"id": "power_staff", "count": 2}, {"id": "parasitic_bite", "count": 6}],
+                    "options": [{"replaceWeapon": {"id": "power_staff", "count": 2}, "withWeapon": {"id": "ritual_dagger", "count": 2}}, {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -763,7 +763,7 @@
         "exalted_magic_beam": {"name": "Exalted Magic Beam", "attacks": 6, "short": 6, "medium": 12, "ap": 2},
         "exalted_magic_bolt": {"name": "Exalted Magic Bolt", "attacks": 3, "short": 6, "medium": 12, "ap": 5},
         "change_blast": {"name": "Change Blast", "attacks": 1, "short": 9, "medium": 18, "ap": 7},
-        "power_staff": {"name": "Power Staff", "attacks": 2, "short": "Melee", "ap": 2},
+        "power_staff": {"name": "Power Staff", "attacks": 1, "short": "Melee", "ap": 2},
         "ritual_dagger": {"name": "Ritual Dagger", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["leeching"]},
         "magic_beam": {"name": "Magic Beam", "attacks": 2, "short": 6, "ap": 2},
         "magic_bolt": {"name": "Magic Bolt", "attacks": 2, "short": 6, "medium": 12, "ap": 4},
