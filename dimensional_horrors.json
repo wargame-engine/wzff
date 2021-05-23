@@ -115,7 +115,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}, "change_champion"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}, "herald"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -143,7 +143,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "damage_table_vehicle"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "damage_table_vehicle", "herald"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -384,7 +384,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["infantry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "herald"],
             "min": 1,
             "max": 1,
             "models": [
@@ -409,7 +409,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}, "herald"],
             "min": 1,
             "max": 1,
             "models": [
@@ -435,7 +435,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "herald"],
             "min": 1,
             "max": 1,
             "models": [
@@ -461,7 +461,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}, "herald"],
             "min": 1,
             "max": 1,
             "models": [
@@ -648,7 +648,7 @@
             ]
         },
         "warleader_champion": {
-            "name": "Warleader Champion",
+            "name": "Champion of War",
             "description": "The greatest of the war-god's tacticians, chosen to lead his forces to battle",
             "keywords": ["infantry"],
             "category": "command",
@@ -658,7 +658,7 @@
             "max": 1,
             "models": [
                 {
-                    "name": "Warleader Champion",
+                    "name": "Champion of War",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 5,
@@ -666,13 +666,13 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "war_sword", "count": 4}],
-                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 2}, "herald"],
                     "options": [{"replaceRule": {"id": "warrior_tactics", "x": 1}, "withRule": {"id": "warrior_tactics", "x": 2}}]
                 }
             ]
         },
         "warleader_throne": {
-            "name": "Warleader Champion on Skull Throne",
+            "name": "Champion of War on Skull Throne",
             "description": "A great general of the war-god, atop a throne befitting his status",
             "keywords": ["cavalry"],
             "category": "command",
@@ -682,13 +682,13 @@
             "max": 1,
             "models": [
                 {
-                    "name": "Warleader Champion on Skull Throne",
+                    "name": "Champion of War on Skull Throne",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 5,
                     "fight": 8,
                     "defense": 11,
-                    "rules": [{"id": "impact", "x": 2}, "damage_table_vehicle", {"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 2}],
+                    "rules": [{"id": "impact", "x": 2}, "damage_table_vehicle", {"id": "leader", "x": "Infantry"}, "herald"],
                     "weapons": [{"id": "war_sword", "count": 6}, {"id": "throne_mouth", "count": 2}]
                 }
             ]
@@ -822,7 +822,7 @@
         }
     },
     "rules": {
-        "change_champion": {"name": "Change Champion", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 5},
+        "herald": {"name": "Herald", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 5},
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
         "chanting_warriors": {"name": "Chanting Warriors", "description": "Enemy units must subtract one from psychic tests within 9\" of this model.", "points": 5},
         "no_escape": {
@@ -832,13 +832,7 @@
         },
         "ritual_dagger": {"name": "Ritual Dagger", "description": "After this model fights in Melee, one enemy unit in its engagement range takes 2 automatic hits."},
         "glittering_sheild": {"name": "Glittering Sheild", "description": "This model gains Resilient(+1).", "points": 2},
-        "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."},
-        "warrior_tactics": {
-            "name": "War-God Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        }
+        "menacing_hand": {"name": "Menacing Hand", "description": "After this model fights, if any non-vehicle model was slain by this model, this model regains 2 lost wounds."}
     },
     "strategies": {
         "summoning": {
