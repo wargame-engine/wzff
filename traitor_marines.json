@@ -14,6 +14,7 @@
             "name": "Traitor Lord on Infernal Stalker",
             "description": "An infernal creation that crawls on the ground, stalking its prey.",
             "rules": ["fear", "walker", "vulnerable_rear", "damage_table_vehicle"],
+            "subfactions": ["none"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -79,6 +80,7 @@
         "traitor_lord_on_bike": {
             "name": "Traitor Lord on Bike",
             "description": "A lord of the dark gods riding a bike.",
+            "subfactions": ["none"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -119,6 +121,7 @@
         "dark_engineer": {
             "name": "Dark Engineer",
             "description": "A human dedicated to fixing the corrupted machines of the dark gods.",
+            "subfactions": ["none"],
             "min": 1,
             "max": 1,
             "category": "command",
@@ -158,6 +161,7 @@
             "name": "Dark Psychic",
             "description": "A powerful human whose mental powers have been twisted by the dark side.",
             "category": "command",
+            "subfactions": ["none"],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -191,6 +195,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Biker"],
+            "subfactions": ["none"],
             "models": [
                 {
                     "name": "Dark Psychic",
@@ -303,6 +308,7 @@
         "traitor_marines": {
             "name": "Traitor Marines",
             "description": "Marines corrupted by the dark gods.",
+            "subfactions": ["none"],
             "min": 5,
             "max": 20,
             "category": "core",
@@ -641,6 +647,7 @@
             "description": "A squad of highly trained traitor marines armed to the teeth with advanced weaponry.",
             "min": 5,
             "max": 15,
+            "subfactions": ["none"],
             "category": "heavy",
             "models": [
                 {
@@ -696,6 +703,7 @@
             "description": "A squad of traitor marines that have been gifted with daemonic mutations to aid them in battle.",
             "min": 5,
             "max": 10,
+            "subfactions": ["none"],
             "category": "specialist",
             "rules": ["mutations"],
             "options": [{"addRule": "fly", "modelLimit": "all"}],
@@ -720,6 +728,7 @@
             "description": "A squad of traitor marines that have been gifted with significant daemonic mutations to aid them in battle.",
             "min": 1,
             "max": 2,
+            "subfactions": ["none"],
             "category": "specialist",
             "rules": ["mutations", {"id": "wounds", "x": 3}],
             "models": [
@@ -743,6 +752,7 @@
             "description": "A squad of elite traitor marines intent on achieving melee carnage.",
             "min": 5,
             "max": 20,
+            "subfactions": ["none"],
             "category": "strike",
             "rules": ["ambush", "fly"],
             "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}],
@@ -804,6 +814,7 @@
             "rules": ["ambush"],
             "min": 5,
             "max": 15,
+            "subfactions": ["none"],
             "category": "specialist",
             "options": [{"replaceWeapon": "twin_marine_rifle", "withWeapon": ["heavy_flamethrower", "reaper_cannon"], "modelLimit": "1/5"}],
             "models": [
@@ -841,6 +852,7 @@
             "description": "Destroyers that have been corrupted by the dark gods and have been gifted with extra mutations to aid them in battle.",
             "rules": ["ambush", {"id": "wounds", "x": 2}],
             "category": "specialist",
+            "subfactions": ["none"],
             "models": [
                 {
                     "name": "Mutated Destroyer",
@@ -863,6 +875,7 @@
             "rules": [{"id": "impact", "x": 1}],
             "min": 3,
             "max": 9,
+            "subfactions": ["none"],
             "category": "strike",
             "models": [
                 {
