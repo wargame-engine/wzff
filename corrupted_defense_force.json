@@ -60,22 +60,22 @@
                 }
             ]
         },
-        "psychic": {
+        "psychic_lord": {
             "name": "Psychic Lord",
             "description": "A power psychic turned corrupted leader.",
             "min": 5,
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
             "models": [
                 {
-                    "name": "Psychic",
-                    "courage": 5,
-                    "shoot": 6,
-                    "fight": 6,
+                    "name": "Psychic Lord",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
                     "defense": 6,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "movement": 6,
                     "weapons": ["pistol", "frags", "staff"],
                     "options": [
