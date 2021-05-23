@@ -525,7 +525,7 @@
         {
             "name": "Second Chance",
             "phase": "activation",
-            "description": "Use when taking a set of skill tests. Re-roll all skill test dice (including successful rolls).",
+            "description": "Use when taking a set of skill tests. Re-roll all failed skill tests.",
             "flavor": "Sometimes it is necessary ask for a second chance.",
             "cost": 2
         },
