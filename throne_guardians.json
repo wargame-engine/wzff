@@ -236,8 +236,8 @@
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
                 {
-                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol"],
-                    "withWeapon": [[{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_fusion"], [{"id": "guardian_spear_blade", "count": 3}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
+                    "replaceWeapon": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol"],
+                    "withWeapon": [[{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_rifle"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_fusion"], [{"id": "guardian_spear_blade", "count": 2}, "guardian_spear_carbine"], ["guardian_rifle", {"id": "heavy_ccw", "count": 1}]]
                 },
                 {"addWeapon": "guardian_dagger"},
                 {"addRule": "guardian_shield"}
@@ -251,7 +251,7 @@
                     "movement": 6,
                     "defense": 9,
                     "reflexes": 7,
-                    "weapons": [{"id": "guardian_sword_blade", "count": 3}, "guardian_sword_pistol", "at_grenade"],
+                    "weapons": [{"id": "guardian_sword_blade", "count": 2}, "guardian_sword_pistol", "at_grenade"],
                     "min": 3,
                     "max": 5
                 }
@@ -608,7 +608,7 @@
         "guardian_spear_fusion": {"name": "Guardian Spear (Fusion)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "guardian_rifle": {
             "name": "Guardian Rifle",
-            "profiles": [{"name": "Dispersed", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]}, {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["assault"]}]
+            "profiles": [{"name": "HE", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": ["rapid_fire"]}, {"name": "AP", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]}]
         },
         "twin_guardian_rifle": {
             "name": "Twin Guardian Rifle",
