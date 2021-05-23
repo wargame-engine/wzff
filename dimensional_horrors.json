@@ -241,7 +241,7 @@
             ]
         },
         "flame_daemon": {
-            "name": "Flame Daemon",
+            "name": "Flame Daemons",
             "description": "A shifting daemon of living flames.",
             "category": "specialist",
             "subfactions": ["none", "change"],
