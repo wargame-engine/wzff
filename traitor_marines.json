@@ -1270,7 +1270,7 @@
         "arch_mage": {
             "name": "Psychic Arch-Traitor",
             "description": "Built as a biological weapon against the Psychic God, this Arch-Marine defied his destiny and joined the deity's legions",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 3}, {"id": "archmage_tactics", "x": 3}, "damage_table_monster", "fly", "archmage"],
+            "rules": [{"id": "power", "x": 3}, {"id": "archmage_tactics", "x": 3}, "damage_table_titan", "fly", "archmage"],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "super_heavy",
@@ -1278,13 +1278,13 @@
             "models": [
                 {
                     "name": "Psychic Arch-Traitor",
-                    "movement": 14,
+                    "movement": 12,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
-                    "defense": 12,
+                    "defense": 13,
                     "reflexes": 6,
-                    "weapons": [{"id": "arch_staff", "count": 7}],
+                    "weapons": ["arch_staff"],
                     "min": 1,
                     "max": 1
                 }
@@ -1486,8 +1486,8 @@
         "hexed_spear": {"name": "Hexed Spear", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
         "arch_staff": {"name": "Arch-Psyker's Blessed Staff", "profiles": [
-            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8},
-            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}
+            {"name": "Strike", "attacks": 5, "short": "Melee", "ap": 8},
+            {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 4}
         ]},
         "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3},
         "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2},
