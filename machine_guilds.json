@@ -40,7 +40,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -56,8 +56,7 @@
                             "addRule": [
                                 {"id": "repair", "x": 5, "name": "Master Machinist"},
                                 {"id": "power", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "power", "x": 2, "name": "Enhanced Psychic Resonator"},
-                                {"id": "canticles", "x": 1}
+                                {"id": "power", "x": 2, "name": "Enhanced Psychic Resonator"}
                             ],
                             "limit": 1
                         },
@@ -98,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -668,7 +667,7 @@
         },
         "manipulator": {
             "name": "Manipulator",
-            "description": "At any point during this unit's activation, it may choose a friendly _Infantry_ unit within 3\" to receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range \n\n\n The bonus is in effect until a new one is chosen.",
+            "description": "Once per round, a friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range",
             "points": 10
         },
         "data_chips": {
@@ -680,7 +679,7 @@
             "name": "Canticles",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
-            "points": ["rule.x", {"multiply": 15}]
+            "points": ["rule.x", {"multiply": 10}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6\" max range when shooting.", "points": 5},
