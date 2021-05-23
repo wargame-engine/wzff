@@ -72,8 +72,8 @@
                 {
                     "name": "Psychic Lord",
                     "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
+                    "shoot": 6,
+                    "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 6,
