@@ -665,8 +665,9 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "war_sword", "count": 4}],
-                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "warrior_tactics", "x": 1}, {"id": "wounds", "x": 2}, "herald"],
-                    "options": [{"replaceRule": {"id": "warrior_tactics", "x": 1}, "withRule": {"id": "warrior_tactics", "x": 2}}]
+                    "rules": [{"id": "leader", "x": "Infantry"}, {"id": "wounds", "x": 2}, "herald"],
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
