@@ -523,10 +523,10 @@
     },
     "strategies": [
         {
-            "name": "Second Chance",
+            "name": "Miracle",
             "phase": "activation",
             "description": "Use when taking a set of skill tests. Re-roll all failed skill tests.",
-            "flavor": "Sometimes it is necessary ask for a second chance.",
+            "flavor": "In times of great need, sometimes a miracle can save the day.",
             "cost": 2
         },
         {
