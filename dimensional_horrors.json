@@ -47,8 +47,8 @@
                     "name": "Greater Daemon of Excess",
                     "movement": 12,
                     "courage": 7,
-                    "shoot": 8,
-                    "fight": 8,
+                    "shoot": 7,
+                    "fight": 7,
                     "defense": 12,
                     "reflexes": 7,
                     "weapons": ["splitting_claws", "souleating_sword"],
@@ -71,7 +71,7 @@
                     "movement": 12,
                     "courage": 7,
                     "shoot": 5,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 12,
                     "reflexes": 7,
                     "min": 1,
@@ -86,7 +86,6 @@
             "name": "Daemon Champion",
             "description": "A massive daemon gifted in the art of war.",
             "category": "command",
-            "subfactions": ["none", "pestilence_focus", "change_traitors"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "melee_tactics", "x": 1}, {"id": "power", "x": 1}],
             "keywords": ["Infantry"],
             "models": [
@@ -516,7 +515,7 @@
             "min": 1,
             "max": 1,
             "models": [
-                {"name": "Deadly Duo", "movement": 8, "courage": 7, "shoot": 8, "fight": 8, "defense": 9, "reflexes": 5, "weapons": ["daemon_axe", "tormenting_whip"], "min": 1, "max": 1, "rules": []}
+                {"name": "Deadly Duo", "movement": 8, "courage": 7, "shoot": 8, "fight": 7, "defense": 9, "reflexes": 5, "weapons": ["daemon_axe", "tormenting_whip"], "min": 1, "max": 1, "rules": []}
             ]
         },
         "mask_of_excess": {
@@ -662,7 +661,7 @@
                     "movement": 6,
                     "courage": 6,
                     "shoot": 5,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "war_sword", "count": 4}],
@@ -686,7 +685,7 @@
                     "movement": 8,
                     "courage": 6,
                     "shoot": 5,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 11,
                     "rules": [{"id": "impact", "x": 2}, "damage_table_vehicle", {"id": "leader", "x": "Infantry"}, "herald"],
                     "weapons": [{"id": "war_sword", "count": 6}, {"id": "throne_mouth", "count": 2}]
@@ -708,7 +707,7 @@
                     "movement": 8,
                     "courage": 6,
                     "shoot": 5,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 6,
                     "min": 5,
                     "max": 20,
