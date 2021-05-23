@@ -227,7 +227,7 @@
         },
         "neophytes": {
             "name": "Neophytes",
-            "description": "A corrupted defense force squad turned to the cult.",
+            "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
             "category": "core",
             "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": "banner", "modelLimit": 1}],
             "models": [
@@ -422,7 +422,7 @@
         },
         "defense_force_squad": {
             "name": "Cult Defense Force Squad",
-            "description": "A corrupted defense force squad turned to the cult.",
+            "description": "A defense force squad turned to the cult.",
             "category": "core",
             "min": 5,
             "max": 10,
@@ -490,7 +490,7 @@
         },
         "heavy_weapon_squad": {
             "name": "Cult Heavy Weapons Squad",
-            "description": "A corrupted squad of heavy weapons teams loaded out to deal with a variety of targets.",
+            "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
             "category": "specialist",
             "min": 3,
             "max": 6,

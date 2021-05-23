@@ -338,7 +338,7 @@
             "description": "A trained psychic to support the fighters.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
+            "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [

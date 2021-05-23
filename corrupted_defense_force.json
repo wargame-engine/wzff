@@ -34,10 +34,10 @@
         },
         "enforcer": {
             "name": "Enforcer",
-            "description": "A high ranking official assigned to keep soldiers motivated and in line through any means necessary.",
+            "description": "A particularly dangerous individual assigned to keep fighters in line through any means necessary.",
             "min": 5,
             "max": 10,
-            "category": "command",
+            "category": "specialist",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
             "models": [
@@ -61,11 +61,11 @@
             ]
         },
         "psychic": {
-            "name": "Psychic",
-            "description": "A trained psychic to support the fighters.",
+            "name": "Psychic Lord",
+            "description": "A power psychic turned corrupted leader.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
+            "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
@@ -117,72 +117,16 @@
         },
         "militia_squad": {
             "name": "Militia Squad",
-            "description": "An inexperienced squad of infantry sent to the front with little training.",
+            "description": "A rogue band of deserters and traitors.",
             "category": "core",
             "min": 5,
             "max": 10,
+            "options": [
+                {"addRule": "banner", "modelLimit": 1}
+            ],
             "models": [
                 {
-                    "name": "Militia Enforcer",
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}],
-                    "min": 1,
-                    "max": 1
-                },
-                {
-                    "name": "Militia Fighter",
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
-                    "min": 9,
-                    "max": 20
-                },
-                {
-                    "name": "Militia Weapon Team",
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
-                }
-            ]
-        },
-        "mutant_squad": {
-            "name": "Mutant Squad",
-            "description": "The backbone of the corrupted defense force.",
-            "category": "core",
-            "min": 5,
-            "max": 10,
-            "models": [
-                {
-                    "name": "Sergeant",
+                    "name": "Militia Champion",
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -203,7 +147,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Trooper",
+                    "name": "Militia Fighter",
                     "courage": 5,
                     "shoot": 5,
                     "fight": 5,
@@ -217,12 +161,131 @@
                     ],
                     "rules": [],
                     "min": 9,
-                    "max": 9
+                    "max": 19
                 },
                 {
-                    "name": "Weapon Team",
+                    "name": "Militia Weapon Team",
                     "courage": 5,
                     "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 2
+                }
+            ]
+        },
+        "mutant_squad": {
+            "name": "Mutant Squad",
+            "description": "A more experienced infantry squad that has seen combat and survived.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "rules": ["mutations"],
+            "models": [
+                {
+                    "name": "Mutant Sergeant",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Mutant Fighter",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 9,
+                    "max": 19
+                }
+            ]
+        },
+        "veteran_squad": {
+            "name": "Corrupted Veteran Squad",
+            "description": "A more experienced renegade squad that has seen combat and survived.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}, {"addRule": "banner", "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Corrupted Veteran Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Corrupted Veteran",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 9,
+                    "max": 14
+                },
+                {
+                    "name": "Corrupted Veteran Weapon Team",
+                    "courage": 6,
+                    "shoot": 6,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
@@ -245,6 +308,54 @@
                 }
             ]
         },
+        "maurauder_squad": {
+            "name": "Marauder Squad",
+            "description": "A group of highly aggressive renegade fighters who can handle some close quarters fighting.",
+            "category": "specialist",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "rules": ["stealth"],
+            "models": [
+                {
+                    "name": "Marauder Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Marauder",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "command_squad": {
             "name": "Corrupted Command Squad",
             "description": "A smaller infantry squad used to support a commanding officer.",
@@ -253,7 +364,7 @@
             "max": 4,
             "models": [
                 {
-                    "name": "Veteran Trooper",
+                    "name": "Corrupted Veteran",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
@@ -263,7 +374,7 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": ["field_radio"], "modelLimit": 1},
-                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["terrifying_banner"], "modelLimit": 1},
                         {"addRule": ["medical_training"], "modelLimit": 1},
                         {"addWeapon": ["artillery_barrage"], "modelLimit": 1},
                         {"replaceWeapon": "defense_rifle", "withWeapon": "heavy_flamethrower", "modelLimit": 1},
@@ -677,7 +788,7 @@
             "description": "When this unit is activated, choose up to X friendly _Battle Tank_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement \n * Impact(+3).",
             "points": ["rule.x", {"multiply": 15}]
         },
-        "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10}
+        "terrifying_banner": {"name": "Terrifying Banner", "description": "Enemy _Infantry_ units within 6\" suffer -1 Courage.", "points": 10}
     },
     "powers": {
         "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
