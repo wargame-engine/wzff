@@ -23,7 +23,7 @@
                     "reflexes": 7,
                     "weapons": [{"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"addRule": [{"id": "power", "x": 1, "name": "Machine Powers"}, {"id": "power", "x": "2", "name": "Master Machine Powers"}]},
+                        {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -55,8 +55,8 @@
                         {
                             "addRule": [
                                 {"id": "repair", "x": 5, "name": "Master Machinist"},
-                                {"id": "power", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "power", "x": 2, "name": "Enhanced Psychic Resonator"}
+                                {"id": "ward", "x": 1, "name": "Psychic Resonator"},
+                                {"id": "ward", "x": 2, "name": "Enhanced Psychic Resonator"}
                             ],
                             "limit": 1
                         },
@@ -109,7 +109,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "power", "x": 1, "name": "Psychic Resonator"}]},
+                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "ward", "x": 1, "name": "Psychic Resonator"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -709,15 +709,5 @@
             "cost": 1
         }
     ],
-    "powers": {
-        "machine_aim": {"name": "Guidance", "description": "Target friendly unit within 12\" gets +1 Accuracy with its next attack.", "charge": 6},
-        "machine_endurance": {
-            "name": "Endurance",
-            "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 2 or less that wound is not lost.",
-            "charge": 5
-        },
-        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 6\".", "charge": 7},
-        "solar_ray": {"name": "Solar Ray", "description": "Target enemy unit within 12\" takes 6 hits with AP 3.", "charge": 4},
-        "rust": {"name": "Rust", "description": "Target enemy unit within 18\" gets -1 Accuracy with its next attack.", "charge": 5}
-    }
+    "powers": {}
 }
