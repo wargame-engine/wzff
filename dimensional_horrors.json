@@ -420,7 +420,7 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 5,
-                    "weapons": [{"id": "lashing_tentacles", "count": 2}, {"id": "sweeping_claws", "count": 6}],
+                    "weapons": [{"id": "lashing_tentacles", "count": 2}, {"id": "sweeping_claws", "count": 5}],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
                     "max": 1,
@@ -430,7 +430,7 @@
         },
         "excess_champion_reaper_chariot": {
             "name": "Excess Champion on Reaper Chariot",
-            "description": "A leader of the forces of excess on a bladed chariot made to reap souls on the battlefeild.",
+            "description": "A leader of the forces of excess on a bladed chariot made to reap souls on the battlefield.",
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
@@ -446,7 +446,7 @@
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 5,
-                    "weapons": [{"id": "lashing_tentacles", "count": 2}, {"id": "sweeping_claws", "count": 6}, "reaper_axle"],
+                    "weapons": [{"id": "lashing_tentacles", "count": 2}, {"id": "sweeping_claws", "count": 5}, "reaper_axle"],
                     "options": [{"addWeapon": "tormenting_whips"}],
                     "min": 1,
                     "max": 1,
@@ -797,7 +797,7 @@
         "lashing_tentacles": {"name": "Lashing Tentacles", "attacks": 1, "short": "Melee", "ap": 3},
         "sweeping_claws": {"name": "Sweeping Claws", "attacks": 1, "short": "Melee", "ap": 0, "rules": ["rending"]},
         "tormenting_whips": {"name": "Tormenting Whips", "attacks": 3, "short": 6, "ap": 1, "rules": ["pistol"]},
-        "reaper_axle": {"name": "Reaper Axle", "attacks": 5, "short": "Melee", "ap": 5},
+        "reaper_axle": {"name": "Reaper Axle", "attacks": 3, "short": "Melee", "ap": 5},
         "enrapturing_lyre": {
             "name": "Enrapturing Lyre",
             "profiles": [{"name": "Raucous Melody", "attacks": 6, "short": 9, "medium": 18, "ap": 1}, {"name": "Melodious Blast", "attacks": 1, "short": 12, "medium": 24, "ap": 6}]
