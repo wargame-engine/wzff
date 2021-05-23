@@ -479,7 +479,7 @@
                     "weapons": ["twin_phosphor_cannon"],
                     "options": [
                         {"addWeapon": ["light_machinegun", "taser_arm"]},
-                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
+                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "twin_aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
                         {"addRule": [{"id": "data_link"}]}
                     ],
                     "min": 1,
@@ -655,7 +655,7 @@
         "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
         "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
         "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
-        "aa_missiles": {"name": "AA Missile System", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]}
+        "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
     },
     "rules": {
         "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
