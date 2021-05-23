@@ -32,9 +32,9 @@
                 }
             ]
         },
-        "commissar": {
-            "name": "Commissar",
-            "description": "A field officer assigned to keep soldiers motivated and in line.",
+        "enforcer": {
+            "name": "Enforcer",
+            "description": "A high ranking official assigned to keep soldiers motivated and in line through any means necessary.",
             "min": 5,
             "max": 10,
             "category": "command",
@@ -42,7 +42,7 @@
             "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Commissar",
+                    "name": "Enforcer",
                     "courage": 7,
                     "shoot": 6,
                     "fight": 6,
