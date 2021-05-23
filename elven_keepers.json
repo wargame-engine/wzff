@@ -219,7 +219,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
         },
@@ -229,7 +229,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -238,7 +238,7 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 9,
+                    "defense": 10,
                     "reflexes": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
                     "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
