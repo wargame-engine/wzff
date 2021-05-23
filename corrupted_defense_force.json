@@ -200,7 +200,7 @@
             "models": [
                 {
                     "name": "Mutant Sergeant",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
@@ -221,7 +221,7 @@
                 },
                 {
                     "name": "Mutant Fighter",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 5,
