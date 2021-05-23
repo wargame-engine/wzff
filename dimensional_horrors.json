@@ -197,7 +197,7 @@
             "options": [
                 {"modelLimit": 1, "addRule": ["banner"]},
                 {"modelLimit": 1, "addRule": ["musician"]},
-                {"modelLimit": 1, "addRule": ["champion"]}
+                {"modelLimit": 1, "addRule": ["champion"]},
                 {"modelLimit": 1, "addRule": [{"id": "power", "x": 1}]}
             ],
             "models": [
