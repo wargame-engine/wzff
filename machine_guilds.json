@@ -263,7 +263,7 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 4,
+                    "defense": 5,
                     "reflexes": 6,
                     "weapons": [{"id": "shock_staff", "count": 2}],
                     "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
@@ -287,13 +287,13 @@
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 5,
                     "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 4, "max": 9}
+                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 4, "max": 9}
             ]
         },
         "sky_stalkers": {
@@ -302,17 +302,17 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["ambush", "fly"],
+            "rules": ["fly"],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
-                {"name": "Sky Stalker Leader", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["taser_sword", "phosphor_pistol"], "min": 1, "max": 1},
+                {"name": "Sky Stalker Leader", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["taser_sword", "phosphor_pistol"], "min": 1, "max": 1},
                 {
                     "name": "Sky Stalker",
                     "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
                     "min": 4,
@@ -326,11 +326,11 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", "scout", "stealth"],
+            "rules": ["scout", "stealth"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
-                {"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1},
-                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 4, "max": 9}
+                {"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1},
+                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 4, "max": 9}
             ]
         },
         "raiders": {
