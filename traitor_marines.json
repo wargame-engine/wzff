@@ -1267,6 +1267,29 @@
                 }
             ]
         },
+        "arch_mage": {
+            "name": "Psychic Arch-Traitor",
+            "description": "Built as a biological weapon against the Psychic God, this Arch-Marine defied his destiny and joined the deity's legions",
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 3}, {"id": "archmage_tactics", "x": 3}, "damage_table_monster", "fly", "archmage"],
+            "subfactions": ["change_traitors"],
+            "min": 1,
+            "category": "super_heavy",
+            "max": 1,
+            "models": [
+                {
+                    "name": "Psychic Arch-Traitor",
+                    "movement": 14,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "arch_staff", "count": 7}],
+                    "min": 1,
+                    "max": 1
+                }
+            ] 
+        },
         "change_traitors": {
             "name": "Psychic Traitor Marines",
             "description": "Hexed traitor marines whose bodies have been turned to dust by a horrible curse, but fight on as mindless automatons in their remaining armor.",
@@ -1462,6 +1485,7 @@
         "hexed_blades": {"name": "Hexed Blades", "attacks": 1, "short": "Melee", "ap": 1},
         "hexed_spear": {"name": "Hexed Spear", "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}], "ap": 2},
         "hexed_bow": {"name": "Hexed Bow", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rending"]},
+        "arch_staff": {"name": "Arch-Psyker's Blessed Staff", "attacks": 1, "short": "Melee", "rules": [], "ap": 10},
         "claws": {"name": "Mutated Claws", "attacks": 1, "short": "Melee", "ap": 3},
         "twin_hexed_rifle": {"name": "Twin Hexed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2},
         "enormous_claws": {"name": "Enormous Claws", "attacks": 1, "short": "Melee", "ap": 6},
@@ -1481,6 +1505,17 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly Infantry units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": 10
+        },
+        "archmage_tactics": {
+            "name": "Arch-Psyker's Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly units with the Power special rule within 6\".  Those units may reroll dice rolls of 9+ while using the Power ability until the end of the round.",
+            "points": 5
+        },
+        "archmage": {
+            "name": "Blessings of the Psyker God",
+            "description": "When this unit deals hits with a Power, deal half-again as many hits, rounded up (1 becomes 2, 4 becomes 6, etc)",
+            "points": 15
         },
         "sniper": {"name": "Sniper", "description": "This weapon ignores cover and may choose the model that is hit."},
         "psychic_helmet": {"name": "Psychic Helmet", "description": "The bearer gets +1 to all Psychic tests.", "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]},
