@@ -115,7 +115,7 @@
             "description": "A frightening leader of the forces of change.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}, "change_champion"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -128,7 +128,7 @@
                     "reflexes": 5,
                     "weapons": ["power_staff"],
                     "options": [
-                        {"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"},
+                        {"replaceWeapon": "power_staff", "withWeapon": {"id": "ritual_dagger", "count": 2}},
                         {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]},
                         {"addRule": ["disk_of_change"]}
                     ],
@@ -155,7 +155,7 @@
                     "defense": 8,
                     "reflexes": 5,
                     "weapons": ["power_staff", {"id": "parasitic_bite", "count": 6}],
-                    "options": [{"replaceWeapon": "power_staff", "withWeapon": "ritual_daggers"}, {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}],
+                    "options": [{"replaceWeapon": "power_staff", "withWeapon": "ritual_dagger"}, {"limit": 1, "addWeapon": ["magic_beam", "magic_bolt", "change_blast"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -764,7 +764,7 @@
         "exalted_magic_bolt": {"name": "Exalted Magic Bolt", "attacks": 3, "short": 6, "medium": 12, "ap": 5},
         "change_blast": {"name": "Change Blast", "attacks": 1, "short": 9, "medium": 18, "ap": 7},
         "power_staff": {"name": "Power Staff", "attacks": 2, "short": "Melee", "ap": 2},
-        "ritual_daggers": {"name": "Ritual Daggers", "attacks": 2, "short": "Melee"},
+        "ritual_dagger": {"name": "Ritual Dagger", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["leeching"]},
         "magic_beam": {"name": "Magic Beam", "attacks": 2, "short": 6, "ap": 4},
         "magic_bolt": {"name": "Magic Beam", "attacks": 2, "short": 6, "medium": 12, "ap": 4},
         "parasitic_bite": {"name": "Parasitic Bite", "attacks": 1, "short": "Melee", "ap": 4},
@@ -822,6 +822,7 @@
         }
     },
     "rules": {
+        "change_champion": {"name": "Change Champion", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 5},
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
         "chanting_warriors": {"name": "Chanting Warriors", "description": "Enemy units must subtract one from psychic tests within 9\" of this model.", "points": 5},
         "no_escape": {
