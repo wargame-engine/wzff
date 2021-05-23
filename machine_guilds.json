@@ -414,7 +414,7 @@
         "landing_craft": {
             "name": "Landing Craft",
             "description": "A hovering landing craft for transporting troops.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", {"id": "open_topped", "x": 12}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -426,7 +426,7 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 3,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}],
                     "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": {"id": "data_link"}}],
@@ -450,7 +450,7 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 3,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}, "light_machinegun", "iron_cannon"],
                     "options": [{"replaceWeapon": "iron_cannon", "withWeapon": "energy_cannon"}, {"addWeapon": "disruption_missiles"}, {"addRule": {"id": "data_link"}}],
@@ -470,16 +470,16 @@
             "models": [
                 {
                     "name": "Crawler Tank",
-                    "movement": 11,
+                    "movement": 10,
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": ["twin_phosphor_cannon"],
                     "options": [
                         {"addWeapon": ["light_machinegun", "taser_arm"]},
-                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "twin_aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
+                        {"replaceWeapon": "twin_phosphor_cannon", "withWeapon": ["eradication_beam", ["aa_missiles", "aa_autocannon"], ["neutron_laser", "light_machinegun"]]},
                         {"addRule": [{"id": "data_link"}]}
                     ],
                     "min": 1,
@@ -642,7 +642,7 @@
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
         "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
         "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
-        "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 8},
+        "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}]},
         "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
@@ -652,10 +652,10 @@
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol", "emp"]},
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault", "phosphor"]},
         "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
-        "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["phosphor"]},
-        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 3, "rules": ["phosphor"]},
+        "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
+        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
         "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
-        "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
+        "aa_missiles": {"name": "AA Missile System", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]}
     },
     "rules": {
         "radiation": {"name": "Radiation", "description": "This weapon gains +1 AP while in short range.", "points": ["weapon.attacks"]},
