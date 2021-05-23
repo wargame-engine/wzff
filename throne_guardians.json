@@ -587,7 +587,7 @@
             "name": "Guardian Missiles",
             "profiles": [
                 {"name": "Flak", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", "anti_air"]},
-                {"name": {"id": "critical", "x": 1}, "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]}
+                {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault", {"id": "critical", "x": 1}]}
             ]
         },
         "guardian_twin_light_laser_cannon": {
