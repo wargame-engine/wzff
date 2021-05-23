@@ -1270,7 +1270,7 @@
         "arch_mage": {
             "name": "Psychic Arch-Traitor",
             "description": "Built as a biological weapon against the Psychic God, this Arch-Marine defied his destiny and joined the deity's legions",
-            "rules": [{"id": "power", "x": 3}, {"id": "archmage_tactics", "x": 3}, "damage_table_titan", "fly", "archmage"],
+            "rules": [{"id": "power", "x": 3}, {"id": "archmage_tactics", "x": 3}, "damage_table_titan", "fly", "archmage", {"id": "psychic_prowess", "x": 2}],
             "subfactions": ["change_traitors"],
             "min": 1,
             "category": "super_heavy",
