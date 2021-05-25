@@ -142,7 +142,7 @@
             "description": "A frightening leader of the forces of change riding a fearsome chariot pulled by magical lampries.",
             "subfactions": ["none", "change"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "damage_table_vehicle", "herald"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "hover", "damage_table_chariot", "herald"],
             "keywords": ["infantry"],
             "models": [
                 {
@@ -283,7 +283,7 @@
             "category": "heavy",
             "min": 1,
             "max": 1,
-            "rules": ["fear", "hover"],
+            "rules": ["fear", "hover", "damage_table_chariot"],
             "models": [
                 {
                     "name": "Flame Chariot",
@@ -408,7 +408,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}, "herald", "damage_table_vehicle"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "impact", "x": 2}, "herald", "damage_table_chariot"],
             "min": 1,
             "max": 1,
             "models": [
@@ -434,7 +434,7 @@
             "subfactions": ["none", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "herald", "damage_table_vehicle"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "herald", "damage_table_chariot"],
             "min": 1,
             "max": 1,
             "models": [
@@ -587,7 +587,7 @@
             "subfactions": ["none", "change", "war", "pestilence", "excess"],
             "keywords": ["cavalry"],
             "category": "command",
-            "rules": [],
+            "rules": ["damage_table_chariot"],
             "min": 1,
             "max": 1,
             "models": [
@@ -689,7 +689,7 @@
                     "fight": 7,
                     "reflexes": 5,
                     "defense": 9,
-                    "rules": [{"id": "impact", "x": 2}, "damage_table_vehicle", {"id": "leader", "x": "Infantry"}, "herald"],
+                    "rules": [{"id": "impact", "x": 2}, "damage_table_chariot", {"id": "leader", "x": "Infantry"}, "herald"],
                     "weapons": [{"id": "war_sword", "count": 6}, {"id": "throne_mouth", "count": 2}]
                 }
             ]
