@@ -83,7 +83,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "keywords": "infantry",
+            "keywords": ["Infantry"],
             "subfactions": ["none"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}, {"id": "melee_tactics", "x": 2}, {"id": "psychic", "x": 2}, "ambush"],
             "models": [
