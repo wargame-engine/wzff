@@ -89,7 +89,7 @@
             "models": [
             {
                 "name": "Traitor Warmaster",
-                "movement": 7,
+                "movement": 6,
                 "courage": 8,
                 "shoot": 7,
                 "fight": 7,
