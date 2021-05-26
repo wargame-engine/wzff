@@ -454,12 +454,12 @@
         },
         "raptor_gunslinger": {
             "name": "Raptor Gunslinger",
-            "description": "A rootin'-tootin' raptor with a penchant for tri-wielded pistols.",
+            "description": "A rootin'-tootin' raptor with a penchant for tri-wielded pistols. (Needs Work)",
             "category": "specialist",
-            "rules": ["crack_shot"],
+            "rules": ["crack_shot", {"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Raptor Gunslinger (Needs Work)",
+                    "name": "Raptor Gunslinger",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
