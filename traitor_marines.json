@@ -1532,7 +1532,7 @@
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "archtraitor_sword": {"name": "Sword of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 5},
         "archtraitor_claw": {"name": "Claw of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 8},
-        "archtraitor_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 12, "ap": 2, "rules": ["rapid_fire"]}
+        "archtraitor_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]}
     },
     "rules": {
         "arch_tactics": {
