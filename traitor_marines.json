@@ -78,24 +78,24 @@
             ]
         },
         "destroyer_lord": {
-            "name": "Arch-Marine of Destruction",
-            "description": "Once one of the Emperor's favoured, this Arch-Marine now seeks only to watch the galaxy burn.",
+            "name": "Traitor Warmaster",
+            "description": "Once one of the Emperor's favoured, this powerful Marine now seeks only to watch the galaxy burn.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Infantry"],
             "subfactions": ["none"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "rifle_tactics", "x": 2}, {"id": "melee_tactics", "x": 2}, {"id": "psychic", "x": 2}, "ambush"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "arch_tactics", "x": 3}, "ambush"],
             "models": [
             {
-                "name": "Arch-Marine of Destruction",
+                "name": "Traitor Warmaster",
                 "movement": 7,
                 "courage": 8,
                 "shoot": 7,
                 "fight": 7,
                 "defense": 10,
                 "reflexes": 7,
-                "weapons": [{"id": "archtraitor_sword", "count": 6}, {"id": "archtraitor_claw", "count": 3}, {"id": "archtraitor_ranged", "count": 1}],
+                "weapons": [{"id": "archtraitor_sword", "count": 6}, {"id": "archtraitor_claw", "count": 3}, {"id": "archtraitor_ranged"}],
                 "min": 1,
                 "max": 1
             }
@@ -1532,9 +1532,15 @@
         "tentacle_maw": {"name": "Tentacled Maw", "attacks": 1, "short": "Melee", "ap": 2, "rules": [{"id": "blast", "x": 3}]},
         "archtraitor_sword": {"name": "Sword of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 5},
         "archtraitor_claw": {"name": "Claw of the Arch-Traitor", "attacks": 1, "short": "Melee", "ap": 8},
-        "archtraitor_ranged": {"name": "Dark Gods' Blessed Bolts", "attacks": 4, "short": 12, "medium": 12, "ap": 2}
+        "archtraitor_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 12, "ap": 2, "rules": ["rapid_fire"]}
     },
     "rules": {
+        "arch_tactics": {
+            "name": "Arch-Traitor Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests \n * Re-roll all failed Initiative tests",
+            "points": ["rule.x", {"multiply": 20}]
+        },
         "doom_siren": {"name": "Doom Siren", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
         "pestilence": {"name": "Pestilence", "description": "Each successful hit roll of 2 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
         "rifle_tactics": {
