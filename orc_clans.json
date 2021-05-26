@@ -7,7 +7,7 @@
     "units": {
         "grand_warlord": {
             "name": "Grand Warlord",
-            "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
+            "description": "One of the strongest Orcs to ever live and a dreadfully scary opponent in a fight.",
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
