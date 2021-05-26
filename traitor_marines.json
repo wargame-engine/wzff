@@ -85,7 +85,7 @@
             "category": "command",
             "keywords": ["Infantry"],
             "subfactions": ["none"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "arch_tactics", "x": 3}, "ambush"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 4}, {"id": "warmaster_tactics", "x": 3}, "ambush"],
             "models": [
             {
                 "name": "Traitor Warmaster",
@@ -1535,10 +1535,10 @@
         "archtraitor_ranged": {"name": "Dark Gods' Blessed Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 2, "rules": ["rapid_fire"]}
     },
     "rules": {
-        "arch_tactics": {
-            "name": "Arch-Traitor Tactics",
+        "warmaster_tactics": {
+            "name": "Warmaster Tactics",
             "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests \n * Re-roll all failed Initiative tests",
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
             "points": ["rule.x", {"multiply": 20}]
         },
         "doom_siren": {"name": "Doom Siren", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
