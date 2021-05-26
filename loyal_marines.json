@@ -477,6 +477,7 @@
             "description": "Elite trained marines sworn to protect the Empire.",
             "category": "core",
             "options": [{"addWeapon": "fusion_bomb", "modelLimit": 3}, {"addRule": "multi_scanner", "modelLimit": 1}],
+            "subfactions": ["none"],
             "models": [
                 {
                     "name": "Marine Leader",
@@ -627,6 +628,7 @@
             "name": "Veteran Marines",
             "description": "Veteran marines with a variety of special weapons.",
             "category": "core",
+            "subfactions": ["none"],
             "options": [
                 {"addWeapon": "fusion_bomb", "modelLimit": 3},
                 {"replaceWeapon": ["veteran_marine_rifle"], "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"], "limit": 1}
