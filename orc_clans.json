@@ -146,12 +146,12 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Warbanner Boss",
                     "movement": 5,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -175,7 +175,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mad Doctor",
@@ -231,7 +231,7 @@
             "subfactions": ["goblin_army"],
             "category": "specialist",
             "keywords": ["Goblin", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Goblin Doctor",
@@ -395,11 +395,11 @@
             "models": [
                 {
                     "name": "Orc",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceModel": ["orc_boss"], "modelLimit": 1}, {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}],
@@ -497,11 +497,11 @@
             "models": [
                 {
                     "name": "Specialist Orc",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
@@ -557,7 +557,7 @@
             "models": [
                 {
                     "name": "Orc Boss Leader",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -569,7 +569,7 @@
                 },
                 {
                     "name": "Orc Boss",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -595,7 +595,7 @@
             "models": [
                 {
                     "name": "Ultra Boss Leader",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -607,7 +607,7 @@
                 },
                 {
                     "name": "Ultra Boss",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -635,7 +635,7 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
@@ -680,7 +680,7 @@
             "models": [
                 {
                     "name": "Boss Biker Leader",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -692,7 +692,7 @@
                 },
                 {
                     "name": "Boss Biker",
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
