@@ -123,7 +123,7 @@
                     "courage": 6,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 5,
+                    "defense": 6,
                     "reflexes": 5,
                     "weapons": [{"id": "power_staff", "count": 2}],
                     "options": [
