@@ -557,7 +557,7 @@
             "models": [
                 {
                     "name": "Orc Boss Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -569,7 +569,7 @@
                 },
                 {
                     "name": "Orc Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -595,7 +595,7 @@
             "models": [
                 {
                     "name": "Ultra Boss Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -607,7 +607,7 @@
                 },
                 {
                     "name": "Ultra Boss",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -680,7 +680,7 @@
             "models": [
                 {
                     "name": "Boss Biker Leader",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -692,7 +692,7 @@
                 },
                 {
                     "name": "Boss Biker",
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
