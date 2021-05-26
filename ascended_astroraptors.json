@@ -836,7 +836,7 @@
                 {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["sniper"]},
+        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": ["sniper"]},
         "heavy_auto_laser": {
             "name": "Heavy Auto-Charge Rifle",
             "profiles": [
