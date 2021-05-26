@@ -204,8 +204,8 @@
                     "name": "Flame Warrior",
                     "movement": 6,
                     "courage": 5,
-                    "shoot": 3,
-                    "fight": 3,
+                    "shoot": 4,
+                    "fight": 4,
                     "defense": 5,
                     "reflexes": 4,
                     "weapons": [{"id": "ccw", "count": 2}],
@@ -539,7 +539,7 @@
             "max": 30,
             "options": [{"modelLimit": 1, "addRule": ["banner"]}, {"modelLimit": 1, "addRule": ["musician"]}, {"modelLimit": 1, "addRule": ["champion"]}],
             "models": [
-                {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 9, "max": 29}
+                {"name": "Excess Warrior", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 5, "weapons": [{"id": "sweeping_claws", "count": 2}], "min": 10, "max": 30}
             ]
         },
         "excess_steed": {
@@ -730,13 +730,13 @@
             "models": [                {
                     "name": "Warrior",
                     "movement": 6,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
-                    "fight": 7,
+                    "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "min": 9,
-                    "max": 29,
+                    "min": 10,
+                    "max": 30,
                     "weapons": [{"id": "war_sword", "count": 1}]
                 }
             ]
@@ -747,15 +747,15 @@
             "name": "Pink Warrior",
             "movement": 6,
             "courage": 5,
-            "shoot": 5,
-            "fight": 5,
-            "defense": 5,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 6,
             "reflexes": 5,
             "weapons": ["twisting_flames", "ccw"],
             "min": 10,
             "max": 30
         },
-        "blue_warriors": {"name": "Blue Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["twisting_flames", "ccw"], "min": 0, "max": 30}
+        "blue_warriors": {"name": "Blue Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["twisting_flames", "ccw"], "min": 0, "max": 30}
     },
     "weapons": {
         "exalted_staff_of_change": {"name": "Exalted Staff of Change", "attacks": 5, "short": "Melee", "ap": 4},
@@ -780,7 +780,7 @@
             ]
         },
         "magical_ccw": {"name": "Magical CCW", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
-        "twisting_flames": {"name": "Twisting Flames", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault"]},
+        "twisting_flames": {"name": "Twisting Flames", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "changing_flames": {
             "name": "Changing Flames",
             "profiles": [
