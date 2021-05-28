@@ -783,7 +783,7 @@
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
             "points": 1
         },
-        "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 2},
+        "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 1},
         "assault_ramp": {"name": "Assault Ramp", "description": "Units may disembark from this model even after it has taken two Move actions.", "points": 5},
         "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
