@@ -666,10 +666,10 @@
     "strategies": [
         {
             "phase": "activation",
-            "name": "Genetic Perfection",
-            "description": "Use before taking Save rolls for an _Infantry_ or _Biker_ unit. It gets +1 Save.",
-            "flavor": "With the best implants and engineering that can be found, it's easy to take a hit and keep standing.",
-            "cost": 2
+            "name": "Combat Awareness",
+            "description": "Use when shooting with an _Infantry_ unit. That unit may target enemies it is engaged with.",
+            "flavor": "Throne Guardians are trained to be expertly aware of their surroundings including where their allies are.",
+            "cost": 1
         },
         {
             "phase": "activation",
