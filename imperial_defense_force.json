@@ -362,7 +362,7 @@
                 }
             ]
         },
-        "constript_squad": {
+        "conscript_squad": {
             "name": "Conscript Squad",
             "description": "An inexperienced squad of infantry sent to the front with little training.",
             "category": "core",
@@ -391,33 +391,12 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceModel": "conscript_weapon_team", "modelLimit": 1}
+                    ],
                     "min": 9,
                     "max": 29
-                },
-                {
-                    "name": "Conscripted Weapon Team",
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -460,35 +439,12 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1},
+                        {"replaceModel": "weapon_team", "modelLimit": 1}
                     ],
                     "rules": [],
                     "min": 9,
                     "max": 9
-                },
-                {
-                    "name": "Weapon Team",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 4,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -532,34 +488,11 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3},
+                        {"replaceModel": "veteran_weapon_team", "modelLimit": 1}
                     ],
                     "min": 9,
                     "max": 9
-                },
-                {
-                    "name": "Veteran Weapon Team",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -605,7 +538,7 @@
                     "name": "Weapon Team",
                     "courage": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 4,
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 5,
@@ -637,7 +570,7 @@
                     "name": "Specialist Trooper",
                     "courage": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
@@ -659,7 +592,7 @@
             "min": 3,
             "max": 3,
             "rules": ["stealth", "scout"],
-            "models": [{"name": "Trooper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 3, "max": 3}]
+            "models": [{"name": "Trooper", "courage": 5, "shoot": 5, "fight": 4, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
         "stormtroopers": {
             "name": "Stormtroopers",
@@ -1173,6 +1106,80 @@
                     "max": 1
                 }
             ]
+        }
+    },
+    "models": {
+        "conscript_weapon_team": {
+            "name": "Conscripted Weapon Team",
+            "courage": 4,
+            "shoot": 4,
+            "fight": 4,
+            "defense": 5,
+            "movement": 6,
+            "reflexes": 5,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "veteran_weapon_team": {
+            "name": "Veteran Weapon Team",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "weapon_team": {
+            "name": "Weapon Team",
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
         }
     },
     "weapons": {
