@@ -492,7 +492,7 @@
                     "weapons": ["laser_carbine", "blasting_charges", {"id": "heavy_ccw"}],
                     "options": [
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"],
-                        "addRule": [{"id": "impact", "x": 3}]}
+                        "addRule": [{"id": "impact", "x": 2}]}
                     ],
                     "min": 1,
                     "max": 1
