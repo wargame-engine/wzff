@@ -20,10 +20,6 @@
                     "reflexes": 5,
                     "movement": 8,
                     "weapons": [{"id": "heavy_sniper_rifle"}, {"id": "ccw", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
-                    ],
                     "min": 1,
                     "max": 1
                 }
