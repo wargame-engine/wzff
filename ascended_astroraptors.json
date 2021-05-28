@@ -471,7 +471,7 @@
         },
         "raptor_bikes": {
             "name": "Raptor Bikers",
-            "description": "Fast, agile motorbike fighters. (Needs a lot of work)",
+            "description": "Fast, agile motorbike fighters. (Still needs a lot of work)",
             "category": "strike",
             "keywords": ["Biker"],
             "rules": ["stealth"],
@@ -489,10 +489,9 @@
                     "movement": 8, 
                     "defense": 7, 
                     "reflexes": 5, 
-                    "weapons": ["laser_carbine", "blasting_charges", {"id": "ccw"}],
+                    "weapons": ["laser_carbine", "blasting_charges", {"id": "heavy_ccw"}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]}
                     ],
                     "min": 1,
                     "max": 1
@@ -505,9 +504,9 @@
                     "movement": 8, 
                     "defense": 7, 
                     "reflexes": 5, 
-                    "weapons": ["laser_carbine", "blasting_charges", {"id": "ccw"}],
+                    "weapons": ["laser_carbine", "blasting_charges", {"id": "heavy_ccw"}],
                     "options": [
-                        {"replaceModel": "quad_biker", "modelLimit": "1/3"}
+                        {"replaceModel": "sidecar_biker", "modelLimit": "1/3"}
                     ],
                     "min": 3,
                     "max": 11
@@ -803,6 +802,21 @@
                     "max": 1
                 }
             ]
+        }
+    },
+    "models": {
+        "sidecar_biker": {
+            "name": "Sidecar Biker",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 8,
+            "reflexes": 5,
+            "movement": 8,
+            "weapons": ["heavy_machinegun", "laser_carbine", {"id": "heavy_ccw"}],
+            "options": [{"replaceWeapon": "heavy_machinegun", "withWeapon": ["heavy_fusion_rifle"]}],
+            "min": 1,
+            "max": 1
         }
     },
     "weapons": {
