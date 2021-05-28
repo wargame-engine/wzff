@@ -162,6 +162,34 @@
                 }
             ]
         },
+        "warrior_squad_veteran": {
+            "name": "Veteran Warrior Team",
+            "description": "A squad of infantry who excell at ranged shooting.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "options": [
+                {"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]},
+                {"addModel": "support_turret"},
+                {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
+                {"addModel": "guardian_drone"}
+            ],
+            "models": [
+                {
+                    "name": "Veteran Warrior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "options": [{"replaceModel": "veteran_warrior_team_leader", "modelLimit": 1}],
+                    "min": 5,
+                    "max": 12
+                }
+            ]
+        },
         "pathfinder_squad": {
             "name": "Pathfinder Team",
             "description": "A squad of infantry who excell at forward scouting and spotting.",
@@ -649,6 +677,19 @@
             "reflexes": 6,
             "weapons": ["pulse_gatling", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addRule": "spotting_laser", "modelLimit": 1}, {"replaceWeapon": "pulse_gatling", "withWeapon": ["fusion_blaster"], "modelLimit": 1}],
+            "min": 1,
+            "max": 1
+        },
+        "veteran_warrior_team_leader": {
+            "name": "Veteran Team Leader",
+            "movement": 6,
+            "courage": 6,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 6,
+            "reflexes": 6,
+            "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+            "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
             "min": 1,
             "max": 1
         },
