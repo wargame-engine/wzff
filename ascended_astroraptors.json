@@ -19,11 +19,9 @@
                     "defense": 6,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
-                        {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]},
                         {"addRule": "tactical_holomap"}
                     ],
                     "rules": [],
@@ -48,12 +46,10 @@
                     "defense": 8,
                     "reflexes": 6,
                     "movement": 7,
-                    "weapons": ["heavy_laser_carbine", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
                         {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
-                        {"replaceWeapon": ["heavy_laser_carbine", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["heavy_pistol", {"id": "chainsword", "count": 3}]]},
-                        {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]},
+                        {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]},
                         {"addRule": "tactical_holomap"}
                     ],
                     "rules": [],
@@ -67,11 +63,7 @@
             "description": "A master of infiltration who swears by their easily concealable blade.",
             "category": "specialist",
             "keywords": ["Infantry"],
-            "rules": [{"id": "wounds", "x": 2}, "assassin"],
-                "options": [
-                    {"addrule": {"id": "stealth", "name": "Camoflauge Cloak"}},
-                    {"addrule": {"id": "ambush", "name": "Personal Invisibility Field"}}
-                ],
+            "rules": [{"id": "wounds", "x": 2}, "assassin", "stealth", "ambush"],
             "models": [
                 {
                     "name": "Raptor Assassin",
@@ -104,7 +96,7 @@
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["laser_pistol", "frags", {"id": "ccw", "count": 3}, "strafing_run_fighter_plane"],
-                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "strafing_run_fighter_plane", "withWeapon": ["strafing_run_heavy_plane"]}],
+                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]}, {"replaceWeapon": "strafing_run_fighter_plane", "withWeapon": ["strafing_run_heavy_plane"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -127,7 +119,7 @@
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["laser_pistol", "frags", {"id": "ccw", "count": 3}, "orbital_bombardment_light"],
-                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceWeapon": "orbital_bombardment_light", "withWeapon": ["orbital_bombardment_heavy"]}],
+                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]}, {"replaceWeapon": "orbital_bombardment_light", "withWeapon": ["orbital_bombardment_heavy"]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -177,7 +169,7 @@
                     "reflexes": 6,
                     "movement": 7,
                     "weapons": ["laser_pistol", "frags", {"id": "servo_arm", "count": 3}],
-                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol"]}, {"replaceRule": {"id": "repair", "x": 3}, "withRule":  {"id": "repair", "x": 5} }],
+                    "options": [{"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]}, {"replaceRule": {"id": "repair", "x": 3}, "withRule":  {"id": "repair", "x": 5} }],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -258,8 +250,6 @@
                     "options": [
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["medical_training"], "modelLimit": 1},
-                        {"addWeapon": ["artillery_barrage"], "modelLimit": 1},
-                        {"replaceWeapon": "laser_carbine", "withWeapon": "heavy_flamethrower", "modelLimit": 1},
                         {"replaceWeapon": "laser_carbine", "withWeapon": ["shotgun", "flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]},
                         {"addRule": ["heavy_armor"], "modelLimit": "all"}
                     ],
