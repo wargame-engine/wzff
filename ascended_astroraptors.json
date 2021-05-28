@@ -452,6 +452,79 @@
                 }
             ]
         },
+        "raptor_gunslinger": {
+            "name": "Raptor Gunslinger",
+            "description": "A rootin'-tootin' raptor with a penchant for tri-wielded pistols. (Needs Work)",
+            "category": "specialist",
+            "rules": ["crack_shot", {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Raptor Gunslinger",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "movement": 7,
+                    "reflexes": 7,
+                    "weapons": [{"id": "laser_pistol", "count": 3}, {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {
+                             "replaceWeapon": "laser_pistol",
+                             "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol", "railvolver"]
+                        }
+                        
+                     ] ,
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "raptor_bikes": {
+            "name": "Raptor Bikers",
+            "description": "Fast, agile motorbike fighters. (Needs a lot of work)",
+            "category": "strike",
+            "keywords": ["Biker"],
+            "rules": ["stealth"],
+            "options": [
+                {"replaceWeapon": "laser_carbine", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+                {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "laser_pistol"}, {"id": "ccw", "count": 2}]]},
+                {"replaceWeapon": "laser_carbine", "withWeapon": ["shotgun"]}
+            ],
+            "models": [
+                {
+                    "name": "Raptor Biker Leader",
+                    "courage": 6, 
+                    "shoot": 6, 
+                    "fight": 5, 
+                    "movement": 8, 
+                    "defense": 7, 
+                    "reflexes": 5, 
+                    "weapons": ["laser_carbine", "blasting_charges", {"id": "ccw"}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "marine_pistol", "plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "energy_pick", "count": 2}, {"id": "energy_mace", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Raptor Biker",
+                    "courage": 6, 
+                    "shoot": 6, 
+                    "fight": 5, 
+                    "movement": 8, 
+                    "defense": 7, 
+                    "reflexes": 5, 
+                    "weapons": ["laser_carbine", "blasting_charges", {"id": "ccw"}],
+                    "options": [
+                        {"replaceModel": "quad_biker", "modelLimit": "1/3"}
+                    ],
+                    "min": 3,
+                    "max": 11
+                }
+            ]
+        },
+
         "battle_tank": {
             "name": "Battle Tank",
             "description": "A main line battle tank.",
@@ -763,7 +836,7 @@
                 {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": [{"id": "overheat"}, "assault"]}
             ]
         },
-        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": ["sniper"]},
+        "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": ["sniper"]},
         "heavy_auto_laser": {
             "name": "Heavy Auto-Charge Rifle",
             "profiles": [
@@ -796,7 +869,8 @@
             "profiles": [{"name": "Long Wave", "attacks": 4, "short": 12, "medium": 24}, {"name": "Short Wave", "attacks": 2, "short": 6, "medium": 12, "ap": 3}]
         },
         "machine_pistol": {"name": "Machine Pistol", "attacks": 2, "short": 6, "rules": ["pistol"]},
-        "assassins_knife": {"name": "Assassin's Knife", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]}
+        "assassins_knife": {"name": "Assassin's Knife", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["rending"]},
+        "railvolver": {"name": "Railvolver", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": ["pistol"]}
         
     },
     "rules": {
