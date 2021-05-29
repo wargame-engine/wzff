@@ -9,7 +9,7 @@
             "description": "Foot infantry commander of the Ascended Astro-Raptors.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Raptor Commander",
@@ -21,6 +21,7 @@
                     "movement": 7,
                     "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]},
                         {"addRule": "tactical_holomap"}
                     ],
@@ -477,8 +478,8 @@
             "rules": ["stealth"],
             "options": [
                 {"replaceWeapon": "laser_carbine", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
-                {"replaceWeapon": ["laser_carbine", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "laser_pistol"}, {"id": "ccw", "count": 2}]]},
-                {"replaceWeapon": "laser_carbine", "withWeapon": ["shotgun"]}
+                {"replaceWeapon": ["laser_carbine", {"id": "heavy_ccw", "count": 1}], "withWeapon": [[{"id": "laser_pistol"}, {"id": "ccw", "count": 2}]]},
+                {"replaceWeapon": "laser_carbine", "withWeapon": ["shrapnel_shotgun"]}
             ],
             "models": [
                 {
@@ -491,7 +492,8 @@
                     "reflexes": 5, 
                     "weapons": ["laser_carbine", "blasting_charges", {"id": "heavy_ccw"}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]}
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"],
+                        "addRule": [{"id": "impact", "x": 2}]}
                     ],
                     "min": 1,
                     "max": 1
