@@ -269,7 +269,8 @@
             "options": [
                 {
                     "replaceWeapon": [{"id": "heavy_ccw", "count": 2}, {"id": "piercing_claws", "count": 1}],
-                    "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}]
+                    "withWeapon": [{"id": "rock_cutter", "count": 2}, {"id": "rock_drill", "count": 2}, {"id": "rock_saw", "count": 2}, {"id": "demolition_charges", "count": 1}],
+                    "modelLimit": "2/5"
                 },
                 {"replaceWeapon": "pistol", "withWeapon": "flamethrower_pistol"},
                 {"addRule": "banner", "modelLimit": 1}
