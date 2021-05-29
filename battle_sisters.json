@@ -305,7 +305,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
-                        {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 1}
+                        {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 2}
                     ],
                     "min": 4,
                     "max": 9
