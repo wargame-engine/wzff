@@ -948,9 +948,9 @@
         {
             "name": "Devotion",
             "phase": "activation",
-            "description": "Use after a _Leader_ unit has been targeted by a Shooting attack within 6\" of a friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the _Infantry_ unit instead of the original target.",
+            "description": "Use after an _Infantry_ unit has been targeted by a Shooting attack within 6\" of another friendly _Infantry_ unit. For this attack, you can roll a D10 each time an attack made with a ranged weapon hits that unit. On an 8 or less a hit is transferred to the other _Infantry_ unit instead of the original target.",
             "flavor": "With unquestioning loyalty, cult members will throw themselves into the line of fire to protect their leaders.",
-            "cost": 1
+            "cost": 2
         },
         {
             "subfactions": ["ambush_focus"],
