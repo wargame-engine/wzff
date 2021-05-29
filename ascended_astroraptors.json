@@ -9,7 +9,7 @@
             "description": "Foot infantry commander of the Ascended Astro-Raptors.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 2}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "raptor_tactics", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Raptor Commander",
@@ -21,6 +21,7 @@
                     "movement": 7,
                     "weapons": ["laser_pistol", "frags", {"id": "heavy_ccw", "count": 2}],
                     "options": [
+                        {"replaceRule": {"id": "raptor_tactics", "x": 1}, "withRule": {"id": "raptor_tactics", "x": 2}},
                         {"replaceWeapon": "laser_pistol", "withWeapon": ["plasma_pistol", "machine_pistol", "heavy_laser_pistol", "flamethrower_pistol", "heavy_pistol"]},
                         {"addRule": "tactical_holomap"}
                     ],
