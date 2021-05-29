@@ -197,13 +197,13 @@
             "max": 1,
             "category": "specialist",
             "options": [
-                {"addRule": "scout", "modelLimit": "all"},
                 {"replaceWeapon": "pulse_carbine", "withWeapon": ["ion_rifle", "rail_rifle"], "modelLimit": 3},
                 {"addRule": "spotting_laser"},
                 {"addModel": "recon_drone"},
                 {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
                 {"addModel": ["inhibitor_drone", "accelerator_drone"], "modelLimit": 2}
             ],
+            "rules": ["scout"],
             "models": [
                 {
                     "name": "Pathfinder",
