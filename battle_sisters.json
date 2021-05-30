@@ -333,7 +333,7 @@
             "min": 5,
             "max": 10,
             "category": "strike",
-            "rules": ["ambush", "fly"],
+            "rules": ["fly"],
             "options": [{"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "chainsword", "count": 2}]}],
             "models": [
                 {
