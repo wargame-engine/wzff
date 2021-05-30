@@ -798,7 +798,7 @@
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
         "dark_prism": {
             "name": "Dark Prism",
-            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "description": "Once per round, when a model with Power(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
             "points": 5
         },
         "medical_training": {

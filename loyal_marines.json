@@ -2747,7 +2747,7 @@
         "ancient_armor": {"name": "Ancient Armor", "description": "This model may re-roll 1 failed Save roll.", "points": ["model.defense"]},
         "legend_remembrance": {"name": "Armor of Remembrance", "description": "When this model is hit by an attack, roll a D10. On a 3 or less, that attack is prevented.", "points": 1},
         "legend_shard": {"name": "Demonic Shard", "description": "This model increases all power charge values by 1.", "points": 1},
-        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Psychic(x) test while within 12\" of this model.", "points": 1}
+        "warding_staff": {"name": "Warding", "description": "Enemy units suffer -1 to all Power(x) test while within 12\" of this model.", "points": 1}
     },
     "hidden_relics": [
         {"subfactions": ["none", "wolf_marines"], "rule": "ancient_armor", "flavor": "Ancient armour said to protect the wearer from significant harm."},
@@ -3074,7 +3074,7 @@
             "subfactions": ["zeal_focus"],
             "phase": "activation",
             "name": "Psychic Shield",
-            "description": "Use when a Psychic(x) test is taken within 24\" of an _Infantry_ unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "description": "Use when a Power(x) test is taken within 24\" of an _Infantry_ unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, the Inquisition can protect themselves from psychic powers.",
             "cost": 1
         }

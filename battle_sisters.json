@@ -593,7 +593,7 @@
         {
             "phase": "activation",
             "name": "Holy Protection",
-            "description": "Use when a Psychic(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, Battle Sisters can protect themselves from psychic powers.",
             "cost": 1
         },
