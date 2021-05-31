@@ -488,7 +488,7 @@
         "huge_acidic_jaws": {"name": "Huge Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
-        "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "consumer": {"name": "Consumer", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
         "acid_spitter": {"name": "Acid Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
