@@ -528,7 +528,7 @@
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": {"id": "critical", "x": 1}, "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [{"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
         },
         "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 18, "rules": ["sniper", {"id": "deadly", "x": 3}]},
         "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["pistol", {"id": "critical", "x": 1}]},
