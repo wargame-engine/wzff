@@ -1542,7 +1542,6 @@
             "points": ["rule.x", {"multiply": 20}]
         },
         "doom_siren": {"name": "Doom Siren", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
-        "pestilence": {"name": "Pestilence", "description": "Each successful hit roll of 2 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
         "rifle_tactics": {
             "name": "Rifle Tactics",
             "inputs": ["x"],
