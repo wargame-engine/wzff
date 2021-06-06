@@ -141,7 +141,7 @@
             "max": 1,
             "category": "core",
             "options": [
-                {"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]},
+                {"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]},
                 {"addModel": "support_turret"},
                 {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
                 {"addModel": "guardian_drone"}
@@ -155,7 +155,7 @@
                     "fight": 4,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "warrior_team_leader", "modelLimit": 1}],
                     "min": 5,
                     "max": 12
@@ -169,7 +169,7 @@
             "max": 1,
             "category": "core",
             "options": [
-                {"replaceWeapon": "pulse_shotgun", "withWeapon": ["pulse_carbine", "pulse_rifle"]},
+                {"replaceWeapon": "pulse_carbine", "withWeapon": ["pulse_shotgun", "pulse_rifle"]},
                 {"addModel": "support_turret"},
                 {"addModel": ["spotter_drone", "gunner_drone", "shield_drone"], "modelLimit": 2},
                 {"addModel": "guardian_drone"}
@@ -183,7 +183,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["pulse_shotgun", {"id": "ccw", "count": 1}, "stun_grenades"],
+                    "weapons": ["pulse_carbine", {"id": "ccw", "count": 1}, "stun_grenades"],
                     "options": [{"replaceModel": "veteran_warrior_team_leader", "modelLimit": 1}],
                     "min": 5,
                     "max": 12
@@ -688,7 +688,7 @@
             "fight": 5,
             "defense": 6,
             "reflexes": 6,
-            "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+            "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
             "min": 1,
             "max": 1
@@ -701,7 +701,7 @@
             "fight": 4,
             "defense": 6,
             "reflexes": 6,
-            "weapons": ["pulse_shotgun", {"id": "ccw", "count": 2}, "stun_grenades"],
+            "weapons": ["pulse_carbine", {"id": "ccw", "count": 2}, "stun_grenades"],
             "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
             "min": 1,
             "max": 1
