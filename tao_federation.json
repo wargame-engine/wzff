@@ -942,7 +942,7 @@
         "rail_rifle": {"name": "Rail Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 5, "rules": ["sniper"]},
         "heavy_rail_rifle": {"name": "Heavy Rail Rifle", "attacks": 1, "short": 30, "medium": 60, "ap": 7},
         "smart_missiles": {"name": "Smart missiles", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["indirect"]},
-        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 2, "rules": ["assault", "rending"]},
+        "pulse_shotgun": {"name": "Pulse Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["assault"]},
         "pulse_carbine": {"name": "Pulse Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "twin_pulse_carbine": {"name": "Twin Pulse Carbine", "attacks": 4, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "pulse_rifle": {"name": "Pulse Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 2, "rules": ["assault"]},
