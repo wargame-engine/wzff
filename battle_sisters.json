@@ -440,7 +440,42 @@
                     "max": 1
                 }
             ]
-        }
+        },
+        "militia_squad": {
+            "name": "Militia squad",
+            "description": "",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Militia Veteran",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Militia Volunteer",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 4,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                    {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
+                ],
+                    "min": 9,
+                    "max": 29
+        }]}
     },
     "models": {
         "lucky_angel": {

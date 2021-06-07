@@ -29,7 +29,7 @@
                     "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
                     "options": [
                         {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["sawed_off_shotgun"]},
                         {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
                     ],
                     "rules": [],
@@ -57,7 +57,7 @@
                     "movement": 6,
                     "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
                     "options": [
-                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["sawed_off_shotgun"]},
                         {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
                     ],
                     "rules": [],
@@ -71,7 +71,8 @@
             "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
             "category": "core",
             "subfactions": ["zealots"],
-            "options": [{"addRule": "fanatical"}],
+            "rules": ["light_melee_armor"],
+            "options": [{"addRule": "fanatical"}, {"replaceRule": "light_melee_armor", "withRule": ["light_armor"]}],
             "min": 5,
             "max": 10,
             "models": [
@@ -138,7 +139,8 @@
             "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
             "category": "core",
             "subfactions": ["guerrillas"],
-            "options": [{"addRule": "stealth"}],
+            "rules": ["light_melee_armor"],
+            "options": [{"addRule": "stealth"}, {"replaceRule": "light_melee_armor", "withRule": ["light_armor"]}],
             "min": 5,
             "max": 10,
             "models": [
@@ -562,7 +564,8 @@
     },
     "weapons": {
         "hunting_rifle": {"name": "Hunting Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload"]},
-        "hunting_rifle_softpoints": {"name": "Hunting Rifle with Softpoints", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload", "overheating", "rending"]}
+        "hunting_rifle_softpoints": {"name": "Hunting Rifle with Softpoints", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload", "overheating", "rending"]},
+        "sawed_off_shotgun": {"name": "Sawed-Off Shotgun", "attacks": 1, "short": 6, "rules": ["assault", "rending", "pistol"]}
     },
     "rules": {
         "defense_force_tactics": {
@@ -573,6 +576,7 @@
         },
         "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "light_armor": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
         "commander_field_orders_battle_tank": {
             "name": "Battle Tank Orders (Commander)",
             "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
@@ -602,7 +606,8 @@
             "description_short": "+4\" Movement",
             "description" : "Increase this model's Movement by 4\".",
             "points" : 4
-        }
+        },
+        "light_melee_armor": {"name": "Improvised Armor", "hidden": false, "description": "This model gets +1 Save, against melee attacks.", "description_short": "Save +1 against melee.", "points": 1}
     },
     "powers": {
         "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
