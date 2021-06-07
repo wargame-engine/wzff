@@ -986,7 +986,7 @@
         "attached": {"name": "Attached", "description": "This model is attached to its hosting unit and counts as being embarked but does not take up any transport space and may shoot while embarked."},
         "spotting_laser": {
             "name": "Spotting Laser",
-            "description": "Any time during this model's activation, pick an enemy unit within 36\" and roll a D10. On a 5 or less the enemy unit gains 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to do the following: \n * One Marker: Re-roll hit rolls of 9+ \n * Two Markers: +1 to hit \n\n\n These effects are cumulative and may be activated multiple times.",
+            "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to do the following: \n * One Marker: Re-roll hit rolls of 9+ \n * Two Markers: +1 to hit \n\n\n These effects are cumulative and may be activated multiple times.",
             "points": 5
         },
         "homing_beacon": {"name": "Homing Beacon", "description": "Friendly units deploying using Ambush deployment may ignore enemy units when deploying within 6\" of this model and automatically pass Initiative tests to Ambush.", "points": 5},
