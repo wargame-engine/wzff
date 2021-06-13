@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "support_x", "x": "Infantry"}, "agile",  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"},   {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -67,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, "agile",  {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1},   {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -96,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", {"id": "wounds", "x": 3}],
+            "rules": [ {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -120,7 +120,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["agile"],
+            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -158,7 +158,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["agile"],
+            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -283,7 +283,7 @@
             "name": "Dance of War",
             "phase": "activation",
             "flavor": "The mesmerizing dance of the elven keepers allows them to overwhelm and overpower their enemies.",
-            "description": "Use this strategy when an _Infantry_ unit is given a Fight action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+            "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
             "cost": 1
         },
         "expedient_retreat": {
