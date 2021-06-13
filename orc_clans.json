@@ -1506,28 +1506,27 @@
         "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
-        "carbine": {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "twin_carbine": {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+        "twin_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
         "grand_carbine": {"name": "Grand Carbine", "attacks": 12, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "grand_claw": {"name": "Grand Claw", "profiles": [
             {"name": "Strike", "attacks": 5, "short": "Melee", "ap": 7},
             {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 3}
         ]},
         "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
-        "super_carbine": {"name": "Super Carbine", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
         "combi_heavy_flamer": {
             "name": "Combi Heavy Flamer",
             "profiles": [
-                {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+                {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
                 {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]}
             ]
         },
         "combi_rocket_launcher": {
             "name": "Combi Rocket Launcher",
             "profiles": [
-                {"name": "Twin Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+                {"name": "Twin Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault", "rapid_fire"]},
                 {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
             ]
         },
