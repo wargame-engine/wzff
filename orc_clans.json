@@ -541,11 +541,9 @@
             ]
         },
         "boss_mob": {
-            "name": "Boss Mob",
+            "name": "Noble Mob",
             "description": "A group of orcs bosses ready to cause maximum havoc.",
             "category": "core",
-            "min": 1,
-            "max": 1,
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
@@ -556,8 +554,8 @@
             ],
             "models": [
                 {
-                    "name": "Orc Boss Leader",
-                    "courage": 5,
+                    "name": "Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -568,8 +566,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Orc Boss",
-                    "courage": 5,
+                    "name": "Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -582,7 +580,7 @@
             ]
         },
         "ultra_bosses": {
-            "name": "Ultra Bosses",
+            "name": "Ultra Nobles",
             "description": "A group of orcs bosses that are heavily armored and dangerous.",
             "min": 1,
             "max": 1,
@@ -594,8 +592,8 @@
             ],
             "models": [
                 {
-                    "name": "Ultra Boss Leader",
-                    "courage": 5,
+                    "name": "Ultra Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -606,8 +604,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Ultra Boss",
-                    "courage": 5,
+                    "name": "Ultra Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
@@ -663,7 +661,7 @@
             ]
         },
         "boss_bikers": {
-            "name": "Boss Bikers",
+            "name": "Noble Bikers",
             "description": "A group of orcs bosses mounted on bikes.",
             "min": 1,
             "max": 1,
@@ -679,8 +677,8 @@
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Boss Biker Leader",
-                    "courage": 5,
+                    "name": "Noble Biker Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -691,8 +689,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Boss Biker",
-                    "courage": 5,
+                    "name": "Noble Biker",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -705,7 +703,7 @@
             ]
         },
         "boss_trike": {
-            "name": "Boss Trike",
+            "name": "Warlord Trike",
             "description": "A tough warboss mounted on a battle war trike.",
             "min": 1,
             "max": 1,
@@ -714,7 +712,7 @@
             "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
-                    "name": "Boss Trike",
+                    "name": "Warlord Trike",
                     "courage": 7,
                     "shoot": 4,
                     "fight": 7,
@@ -1456,7 +1454,7 @@
         },
         "pirate_boss": {
             "name": "Pirate Orc Boss",
-            "courage": 6,
+            "courage": 5,
             "shoot": 5,
             "fight": 6,
             "defense": 7,
