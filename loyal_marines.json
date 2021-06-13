@@ -214,6 +214,70 @@
                 }
             ]
         },
+        "prime_infiltration_captain": {
+            "name": "Prime Infiltration Captain",
+            "description": "A fearless next-generation leader in stealth armor.",
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 2}, "scout", "stealth"],
+            "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
+            "models": [
+                {
+                    "name": "Prime Infiltration Captain",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 4}],
+                    "options": [
+                        {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
+                        {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 4}], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 5}]]},
+                        {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 5},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 5}, {"id": "energy_fist", "count": 5}, {"id": "energy_hammer", "count": 5}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "prime_infiltration_lieutenant": {
+            "name": "Prime Infiltration Lieutenant",
+            "description": "A fearless next-generation leader subordinate.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "rifle_tactics", "x": 1}, "scout", "stealth"],
+            "subfactions": ["none", "wolf_marines", "assault_focus", "alien_hunters"],
+            "models": [
+                {
+                    "name": "Prime Infiltration Lieutenant",
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "movement": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "prime_rifle"}, "at_grenade", {"id": "heavy_ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "prime_rifle", "withWeapon": ["prime_auto_rifle", "prime_precision_rifle", "prime_heavy_carbine"]},
+                        {"replaceWeapon": ["prime_rifle", {"id": "heavy_ccw", "count": 2}], "withWeapon": [["prime_pistol", {"id": "prime_chainsword", "count": 3}]]},
+                        {"replaceWeapon": "prime_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "prime_chainsword", "count": 3},
+                            "withWeapon": [{"id": "prime_energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}, {"id": "energy_hammer", "count": 3}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
         "prime_psychic": {
             "name": "Prime Psychic",
             "description": "A fearless next-generation psychic.",
