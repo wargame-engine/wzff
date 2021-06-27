@@ -40,24 +40,9 @@
             "version": "0.1",
             "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
             "subfactions": {
-                "ambush_focus": {
-                    "name": "Ambush Focus",
-                    "id": "ambush_focus",
-                    "color": "#6a0001",
-                    "description": "An alien cult focused on ambushing and killing their foes."
-                },
-                "survival_focus": {
-                    "name": "Survival Focus",
-                    "id": "survival_focus",
-                    "color": "#6a0001",
-                    "description": "An alien cult focused on surviving at any cost."
-                },
-                "zeal_focus": {
-                    "name": "Zeal Focus",
-                    "id": "zeal_focus",
-                    "color": "#6a0001",
-                    "description": "An alien cult focused on zealous charges."
-                }
+                "ambush_focus": {"name": "Ambush Focus", "id": "ambush_focus", "color": "#6a0001", "description": "An alien cult focused on ambushing and killing their foes."},
+                "survival_focus": {"name": "Survival Focus", "id": "survival_focus", "color": "#6a0001", "description": "An alien cult focused on surviving at any cost."},
+                "zeal_focus": {"name": "Zeal Focus", "id": "zeal_focus", "color": "#6a0001", "description": "An alien cult focused on zealous charges."}
             }
         },
         "traitor_marines": {
@@ -179,9 +164,7 @@
             "alliance": "imperial_alliance",
             "version": "0.1",
             "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
-            "subfactions": {
-                "assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}
-            }
+            "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         },
         "machine_guilds": {
             "name": "Machine Guilds",
@@ -285,7 +268,13 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "Federated Species"}},
+    "alliances": {
+        "alien_swarm": {"name": "Alien Swarm"},
+        "imperial_alliance": {"name": "Imperial Alliance"},
+        "elven_coaliation": {"name": "Elven Coalition"},
+        "traitors": {"name": "Traitor Pact"},
+        "federation": {"name": "Federated Species"}
+    },
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},
@@ -385,20 +374,14 @@
             "points": 10
         }
     },
-    "powers": {
-        "shock_wave": {
-            "name": "Shock Wave",
-            "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-            "charge": 8
-        }
-    },
+    "powers": {"shock_wave": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.", "charge": 8}},
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "plasma_grenade": {
             "name": "Plasma Grenades",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}
+                {"name": "HE", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AP", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}
             ]
         },
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
@@ -479,47 +462,18 @@
         "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["brutal", "assault"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
-        "plasma_pistol": {
-            "name": "Plasma Pistol",
-            "rules": ["pistol"],
-            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 5}, {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "overheat"}]}]
-        },
-        "plasma_rifle": {
-            "name": "Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]}
-            ]
-        },
+        "plasma_pistol": {"name": "Plasma Pistol", "rules": ["pistol", "overcharge"], "attacks": 1, "short": 6, "ap": 5},
+        "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
         "combi_plasma": {
             "name": "Combi-plasma",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]},
+                {"name": "Plasma", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
                 {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
             ]
         },
-        "twin_plasma_rifle": {
-            "name": "Twin Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]}
-            ]
-        },
-        "plasma_cannon": {
-            "name": "Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
-        "twin_plasma_cannon": {
-            "name": "Twin Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
+        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
+        "plasma_cannon": {"name": "Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
+        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "energy_axe": {"name": "Energy Axe", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_mace": {"name": "Energy Mace", "attacks": 1, "short": "Melee", "ap": 4},
@@ -529,11 +483,17 @@
         "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
         "combi_flamer": {
             "name": "Combi-flamer",
-            "profiles": [{"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [
+                {"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [
+                {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
         },
         "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": ["sniper", {"id": "deadly", "x": 3}]},
         "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["pistol", {"id": "critical", "x": 1}]},
@@ -586,11 +546,7 @@
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
         "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "crab_claw": {"name": "Crab Claw", "profiles": [{
-            "name": "Strike", "attacks": 3, "short": "Melee", "ap": 7
-        }, {
-            "name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3
-        }]},
+        "crab_claw": {"name": "Crab Claw", "profiles": [{"name": "Strike", "attacks": 3, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3}]},
         "walker_talons": {"name": "Walker Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
@@ -625,20 +581,8 @@
         "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
         "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 5, "short": 12, "medium": 24, "ap": 4},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48},
-        "heavy_plasma_cannon": {
-            "name": "Heavy Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
-        "twin_heavy_plasma_cannon": {
-            "name": "Twin Heavy Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
+        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 3}]},
+        "twin_heavy_plasma_cannon": {"name": "Twin Heavy Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 3}]},
         "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 3},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": []},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 6, "short": 15, "medium": 30, "ap": 2},
@@ -671,36 +615,12 @@
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
         "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["rapid_fire", {"id": "critical", "x": 1}]},
-        "heavy_plasma_rifle": {
-            "name": "Heavy Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "overheat"}]}
-            ]
-        },
-        "plasma_assault_rifle": {
-            "name": "Plasma Assault Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
-        "plasma_carbine": {
-            "name": "Plasma Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
+        "heavy_plasma_rifle": {"name": "Heavy Plasma Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["overcharge"]},
+        "plasma_assault_rifle": {"name": "Plasma Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
+        "plasma_carbine": {"name": "Plasma Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
         "assault_carbine": {"name": "Assault Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
         "twin_assault_carbine": {"name": "Twin Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
-        "twin_plasma_carbine": {
-            "name": "Twin Plasma Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
+        "twin_plasma_carbine": {"name": "Twin Plasma Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
         "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
         "fist_carbine": {"name": "Fist Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "flame"]},
@@ -847,7 +767,11 @@
             "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
             "points": 2
         },
-        "disk_of_change": {"name": "Disk of Change", "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
+        },
         "field_radio": {
             "name": "Field Radio",
             "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
