@@ -504,7 +504,7 @@
         "excess_warriors": {
             "name": "Excess Warriors",
             "description": "The main bulk of the forces of excess, these equally alluring and devastating warriors find pleasure in the pain they inflict on the battlefield.",
-            "subfactions": ["none", "excess"],
+            "subfactions": ["excess"],
             "keywords": ["infantry"],
             "category": "core",
             "min": 10,
@@ -693,7 +693,7 @@
             "description": "The war-god's most exalted warriors are granted the strongest bodies",
             "keywords": ["monster"],
             "category": "command",
-            "subfactions": "war",
+            "subfactions": ["war"],
             "models": [
                 {
                     "name": "Greater Daemon of War",
@@ -711,6 +711,28 @@
                 }
             ]
 
+        },
+        "war_cavalry": {
+            "name": "War Breakers",
+            "description": "Cavalry of the war-god, designed to overrun the hardest armies",
+            "keywords": ["cavalry"],
+            "category": "strike",
+            "subfactions": ["war"],
+            "models": [
+            {   
+                "name": "War Breaker",
+                "movement": 8,
+                "courage": 5,
+                "shoot": 4,
+                "fight": 7,
+                "defense": 7,
+                "reflexes": 6,
+                "min": 3,
+                "max": 12,
+                "weapons": [{"id": "war_cavalry_sword", "count": 3}, {"id": "warbeast_horns", "count": 3}] ,
+                "rules": [{"id": "impact", "x": 2}, {"id": "wounds", "x": 2}]
+            }
+            ]
         }
     },
     "models": {
@@ -798,7 +820,9 @@
         "blessed_greataxe": {"name": "War-Blessed Greataxe", 
             "profiles": [{"name": "Sweeping Attack", "attacks": 2, "short": "Melee", "ap": 5},
                         {"name": "Mighty Strike", "attacks": 1, "short": "Melee", "ap": "12"}]
-            }
+            },
+        "warbeast_horns": {"name": "Warbeast's Horns", "attacks": 1, "short": "Melee", "ap": 2},
+        "war_cavalry_sword": {"name": "Cavalry Blessed Sword", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["rending"]}
     },
     "rules": {
         "psychic_syphon": {"name": "Psychic Syphon", "description": "Enemy models within 12\" of this model suffer -1 to their psychic tests.", "points": 5},
