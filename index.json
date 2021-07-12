@@ -541,6 +541,7 @@
         "ecto_cannon": {"name": "Ecto Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
         "forge_cannon": {"name": "Forge Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5},
         "excruciating_cannons": {"name": "Excruciating Cannons", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+        "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "ap": 3},
         "claws_and_tendrils": {"name": "Claws and Tendrils", "attacks": 1, "short": "Melee", "ap": 6},
         "stomp": {"name": "Stomp", "attacks": 1, "short": "Melee", "ap": 1},
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},

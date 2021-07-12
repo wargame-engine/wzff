@@ -6,8 +6,6 @@
         "commander": {
             "name": "Corrupted Commander",
             "description": "Foot infantry commander of the corrupted defense force.",
-            "min": 5,
-            "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2},  {"id": "wounds", "x": 2}],
@@ -35,9 +33,7 @@
         "enforcer": {
             "name": "Enforcer",
             "description": "A particularly dangerous individual assigned to keep fighters in line through any means necessary.",
-            "min": 5,
-            "max": 10,
-            "category": "specialist",
+            "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
             "models": [
@@ -63,8 +59,6 @@
         "psychic_lord": {
             "name": "Psychic Lord",
             "description": "A power psychic turned corrupted leader.",
-            "min": 5,
-            "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
             "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
@@ -93,8 +87,6 @@
             "name": "Cultists",
             "description": "Humans who have sold their souls to the dark gods.",
             "subfactions": ["none", "change_traitors", "pestilence_focus"],
-            "min": 10,
-            "max": 30,
             "category": "core",
             "models": [
                 {
