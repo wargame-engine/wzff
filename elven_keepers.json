@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "agile", {"id": "keeper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "keeper_tactics", "x": 1},  {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -42,7 +42,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "support_x", "x": "Infantry"}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"},   {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -67,7 +67,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, "agile", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1},   {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -81,7 +81,7 @@
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol"]},
-                        {"replaceRule": [{"id": "psychic", "x": 1}], "withRule": [{"id": "psychic", "x": 2}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
                         {"addWeapon": "grenade_launcher_backpack"}
                     ],
                     "rules": [],
@@ -96,7 +96,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "support_x", "x": "Infantry"}, "agile", {"id": "wounds", "x": 3}],
+            "rules": [ {"id": "wounds", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -107,7 +107,7 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": ["sniper_cannon", {"id": "elven_blade", "count": 4}],
+                    "weapons": ["sniper_cannon", {"id": "ccw", "count": 3}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -120,7 +120,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["agile"],
+            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -158,7 +158,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
-            "rules": ["agile"],
+            "rules": [],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -168,7 +168,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": ["shard_pistol", {"id": "elven_blade", "count": 3}],
                     "options": [
                         {"replaceWeapon": "shard_pistol", "withWeapon": ["neuron_pistol", "fusion_pistol", "exploding_bola"]},
@@ -205,7 +205,7 @@
                     "shoot": 6,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 5,
+                    "reflexes": 6,
                     "weapons": ["shard_cannon", {"id": "energy_glaive", "count": 2}],
                     "options": [{"replaceWeapon": "shard_cannon", "withWeapon": ["emp_cannon"]}, {"replaceWeapon": "energy_glaive", "withWeapon": ["exploding_bola"]}],
                     "min": 2,
@@ -219,9 +219,9 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
-            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 8, "reflexes": 5, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
+            "models": [{"name": "Hover Tank", "courage": 6, "movement": 10, "shoot": 6, "fight": 6, "defense": 9, "reflexes": 6, "weapons": [{"id": "shard_cannon", "count": 2}], "min": 1, "max": 1}]
         },
         "hover_tank": {
             "name": "Hover Tank",
@@ -229,7 +229,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -238,8 +238,8 @@
                     "movement": 10,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 8,
-                    "reflexes": 5,
+                    "defense": 10,
+                    "reflexes": 6,
                     "weapons": [{"id": "shard_cannon", "count": 2}, "emp_cannon"],
                     "options": [{"replaceWeapon": "emp_cannon", "withWeapon": "irridescent_cannon"}],
                     "min": 1,
@@ -249,7 +249,7 @@
         }
     },
     "weapons": {
-        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "poison", "x": 2}], "ap": 2},
+        "neuron_pistol": {"name": "Neuron Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol", {"id": "shocking", "x": 1}], "ap": 2},
         "deathly_caress": {"name": "Deathly Caress", "attacks": 1, "short": "Melee", "ap": 4},
         "deathly_kiss": {"name": "Deathly Kiss", "attacks": 1, "short": "Melee", "ap": 1},
         "deathly_embrace": {"name": "Deathly Embrace", "attacks": 1, "ap": 3, "short": "Melee"},
@@ -257,8 +257,8 @@
         "sniper_cannon": {
             "name": "Sniper Cannon",
             "profiles": [
-                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "poison", "x": 2}, "rending"], "ap": 3},
-                {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": ["assault", "rending"], "ap": 3}
+                {"name": "Sniper Mode", "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper", {"id": "shocking", "x": 1}, "rending"], "ap": 3},
+                {"name": "Suppression Mode", "attacks": 3, "short": 12, "medium": 24, "rules": [{"id": "shocking", "x": 1}, "rending"], "ap": 3}
             ]
         },
         "exploding_bola": {"name": "Exploding Bola", "attacks": 1, "short": 6, "medium": 12, "ap": 4, "rules": [{"id": "blast", "x": 2}]}
@@ -276,21 +276,21 @@
             "name": "Blur Field",
             "phase": "activation",
             "flavor": "The speed of the elven keepers outshines any others in the galaxy allowing them to accomplish incredible feats and dodge even the best gunman's bullets.",
-            "description": "Use this strategy when an elven keeper unit is targeted by an enemy unit. That unit gets -1 Accuracy and -1 Strength for this attack.",
+            "description": "Use this strategy when a unit is targeted by an enemy unit. That unit gets -1 Accuracy and -1 Strength for this attack.",
             "cost": 2
         },
         "dance_of_war": {
             "name": "Dance of War",
             "phase": "activation",
             "flavor": "The mesmerizing dance of the elven keepers allows them to overwhelm and overpower their enemies.",
-            "description": "Use this strategy when one of your units is given a Fight action. Hit rolls of 1 or 2 cause 2 hits instead of 1.",
+            "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
             "cost": 1
         },
         "expedient_retreat": {
             "name": "Expedient Retreat",
             "phase": "activation",
             "flavor": "The elven keepers are not equipped for long, attrition-based battles. Instead, they employ hit and run tactics to wear down their enemy without taking may losses themselves.",
-            "description": "Use after one of your _Infantry_ units performs a Shoot or Fight action. You may immediately take a free move action.",
+            "description": "Use after an _Infantry_ unit performs a Shoot or Fight action. It immediately take a free move action.",
             "cost": 1
         }
     },

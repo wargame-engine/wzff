@@ -7,10 +7,10 @@
     "units": {
         "grand_warlord": {
             "name": "Grand Warlord",
-            "description": "One of the original founders of the loyal marines and an extremely powerful leader.",
+            "description": "One of the strongest Orcs to ever live and a dreadfully scary opponent in a fight.",
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 5}, {"id": "grand_warlord_tactics", "x": 2}],
             "subfactions": ["none"],
             "models": [
                 {
@@ -50,7 +50,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 5},
-                            "withWeapon": [{"id": "ultra_drill", "count": 5}, {"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 5}, {"id": "ultra_saw", "count": 5}, {"id": "ultra_claw", "count": 5}]
                         },
                         {"addRule": ["ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1}
                     ],
@@ -80,11 +80,11 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
                     ],
-                    "rules": [{"id": "psychic", "x": 1}],
+                    "rules": [{"id": "power", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -114,7 +114,7 @@
                         },
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         },
                         {"addRule": ["heavy_armor", "ultra_armor", {"id": "resilient", "x": 3, "name": "Cyborg Body"}], "limit": 1},
                         {"replaceRule": {"id": "repair", "x": 3}, "withRule": {"id": "repair", "x": 5}},
@@ -133,7 +133,7 @@
                     "fight": 3,
                     "defense": 3,
                     "reflexes": 2,
-                    "weapons": ["heavy_ccw"],
+                    "weapons": ["ccw"],
                     "rules": ["goblin_assistant"],
                     "min": 0,
                     "max": 1
@@ -146,12 +146,12 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "war_banner", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Warbanner Boss",
                     "movement": 5,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -161,7 +161,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -175,7 +175,7 @@
             "min": 5,
             "max": 10,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Mad Doctor",
@@ -190,7 +190,7 @@
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher", "plasma_pistol"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 1,
@@ -206,7 +206,7 @@
             "max": 1,
             "category": "command",
             "keywords": ["Goblin", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "goblin_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Goblin Leader",
@@ -231,7 +231,7 @@
             "subfactions": ["goblin_army"],
             "category": "specialist",
             "keywords": ["Goblin", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
+            "rules": [{"id": "support_x", "x": "Infantry"}, "mad_doctor", {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Goblin Doctor",
@@ -270,6 +270,56 @@
                     "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "plasma_pistol", "teleport_pistol"]}, {"addRule": ["heavy_armor"]}, {"addRule": ["energy_field"]}],
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "name": "Goblin Assistant",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["ccw"],
+                    "rules": ["goblin_assistant"],
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
+        "goblin_repair_team": {
+            "name": "Goblin Repair Team",
+            "description": "A team of goblins who are good at fixing things.",
+            "min": 1,
+            "max": 1,
+            "subfactions": ["none"],
+            "category": "specialist",
+            "keywords": ["Goblin", "Infantry"],
+            "models": [
+                {
+                    "name": "Goblin Mechanic",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "rules": [{"id": "repair", "x": 2}],
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Goblin Assistant",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["heavy_pistol", {"id": "ccw", "count": 2}],
+                    "rules": ["goblin_assistant"],
+                    "min": 4,
+                    "max": 4
                 }
             ]
         },
@@ -281,7 +331,7 @@
             "max": 1,
             "category": "core",
             "keywords": ["Goblin", "Infantry"],
-            "models": [{"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["carbine", "ccw"], "min": 10, "max": 20}]
+            "models": [{"name": "Goblin", "courage": 4, "shoot": 5, "fight": 5, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["carbine", "ccw"], "min": 10, "max": 20}]
         },
         "goblin_veterans": {
             "name": "Goblin Veterans",
@@ -328,7 +378,7 @@
                     "min": 0,
                     "max": 1
                 },
-                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 4, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["goblin_rifle", "ccw"], "min": 10, "max": 20}
+                {"name": "Goblin", "courage": 4, "shoot": 5, "fight": 5, "defense": 4, "reflexes": 5, "movement": 6, "weapons": ["goblin_rifle", "ccw"], "min": 10, "max": 20}
             ]
         },
         "orc_mob": {
@@ -345,11 +395,11 @@
             "models": [
                 {
                     "name": "Orc",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 5,
                     "weapons": ["heavy_pistol", {"id": "heavy_ccw", "count": 2}],
                     "options": [{"replaceModel": ["orc_boss"], "modelLimit": 1}, {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine"]}],
@@ -447,11 +497,11 @@
             "models": [
                 {
                     "name": "Specialist Orc",
-                    "courage": 4,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 5,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 5,
                     "weapons": ["orc_flamethrower", {"id": "heavy_ccw", "count": 2}, "frags"],
                     "options": [
@@ -491,23 +541,21 @@
             ]
         },
         "boss_mob": {
-            "name": "Boss Mob",
+            "name": "Noble Mob",
             "description": "A group of orcs bosses ready to cause maximum havoc.",
             "category": "core",
-            "min": 1,
-            "max": 1,
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                    "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
-                {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
+                {"replaceWeapon": "heavy_pistol", "withWeapon": [{"id": "heavy_ccw", "count": 1}, {"id": "ultra_axe", "count": 1}, {"id": "ultra_saw", "count": 1}, {"id": "ultra_claw", "count": 1}, "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                 {"addWeapon": "fusion_bomb", "modelLimit": 3}
             ],
             "models": [
                 {
-                    "name": "Orc Boss Leader",
-                    "courage": 5,
+                    "name": "Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -518,8 +566,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Orc Boss",
-                    "courage": 5,
+                    "name": "Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -532,39 +580,38 @@
             ]
         },
         "ultra_bosses": {
-            "name": "Ultra Bosses",
+            "name": "Ultra Nobles",
             "description": "A group of orcs bosses that are heavily armored and dangerous.",
             "min": 1,
             "max": 1,
             "category": "specialist",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
-                {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, {"id": "carbine", "count": 3}], "withWeapon": [{"id": "ultra_saw", "count": 6}]},
-                {"replaceWeapon": "carbine", "withWeapon": ["twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
-                {"addRule": {"id": "ambush", "name": "Teleporter"}}
+                {"replaceWeapon": [{"id": "ultra_claw", "count": 3}, "twin_carbine"], "withWeapon": [{"id": "ultra_saw", "count": 4}]},
+                {"replaceWeapon": "twin_carbine", "withWeapon": ["combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
             "models": [
                 {
-                    "name": "Ultra Boss Leader",
-                    "courage": 5,
+                    "name": "Ultra Noble Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
                     "movement": 4,
-                    "weapons": ["carbine", "frags", {"id": "ultra_claw", "count": 3}],
+                    "weapons": ["twin_carbine", "frags", {"id": "ultra_claw", "count": 3}],
                     "min": 1,
                     "max": 1
                 },
                 {
-                    "name": "Ultra Boss",
-                    "courage": 5,
+                    "name": "Ultra Noble",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 9,
                     "reflexes": 5,
                     "movement": 4,
-                    "weapons": ["carbine", {"id": "ultra_claw", "count": 3}, "frags"],
+                    "weapons": ["twin_carbine", {"id": "ultra_claw", "count": 3}, "frags"],
                     "min": 2,
                     "max": 10
                 }
@@ -586,14 +633,14 @@
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
-                    "reflexes": 5,
+                    "reflexes": 4,
                     "movement": 8,
                     "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
                     "options": [
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                         {
                             "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                            "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                            "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                         }
                     ],
                     "min": 0,
@@ -614,7 +661,7 @@
             ]
         },
         "boss_bikers": {
-            "name": "Boss Bikers",
+            "name": "Noble Bikers",
             "description": "A group of orcs bosses mounted on bikes.",
             "min": 1,
             "max": 1,
@@ -623,15 +670,15 @@
             "options": [
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                    "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 },
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]}
             ],
             "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
-                    "name": "Boss Biker Leader",
-                    "courage": 5,
+                    "name": "Noble Biker Boss",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -642,8 +689,8 @@
                     "max": 1
                 },
                 {
-                    "name": "Boss Biker",
-                    "courage": 5,
+                    "name": "Noble Biker",
+                    "courage": 6,
                     "shoot": 4,
                     "fight": 6,
                     "defense": 7,
@@ -656,7 +703,7 @@
             ]
         },
         "boss_trike": {
-            "name": "Boss Trike",
+            "name": "Warlord Trike",
             "description": "A tough warboss mounted on a battle war trike.",
             "min": 1,
             "max": 1,
@@ -665,7 +712,7 @@
             "rules": [{"id": "leader_x", "x": "Infantry, Vehicle, Biker"}, "relentless", "damage_table_vehicle"],
             "models": [
                 {
-                    "name": "Boss Trike",
+                    "name": "Warlord Trike",
                     "courage": 7,
                     "shoot": 4,
                     "fight": 7,
@@ -1337,7 +1384,7 @@
             "courage": 5,
             "shoot": 4,
             "fight": 6,
-            "defense": 5,
+            "defense": 7,
             "reflexes": 5,
             "movement": 5,
             "weapons": ["heavy_pistol", "frags", {"id": "heavy_ccw", "count": 3}],
@@ -1345,7 +1392,7 @@
                 {"replaceWeapon": ["heavy_pistol", {"id": "heavy_ccw", "count": 1}], "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                    "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 }
             ],
             "min": 0,
@@ -1356,7 +1403,7 @@
             "courage": 5,
             "shoot": 4,
             "fight": 6,
-            "defense": 5,
+            "defense": 7,
             "reflexes": 5,
             "movement": 5,
             "rules": [],
@@ -1370,7 +1417,7 @@
             "courage": 5,
             "shoot": 4,
             "fight": 6,
-            "defense": 5,
+            "defense": 7,
             "reflexes": 5,
             "movement": 5,
             "rules": [],
@@ -1379,7 +1426,7 @@
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["shotgun", "carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                    "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 }
             ],
             "min": 0,
@@ -1390,7 +1437,7 @@
             "courage": 5,
             "shoot": 4,
             "fight": 6,
-            "defense": 5,
+            "defense": 7,
             "reflexes": 5,
             "movement": 8,
             "rules": [],
@@ -1399,7 +1446,7 @@
                 {"replaceWeapon": "heavy_pistol", "withWeapon": ["carbine", "twin_carbine", "combi_heavy_flamer", "combi_rocket_launcher"]},
                 {
                     "replaceWeapon": {"id": "heavy_ccw", "count": 3},
-                    "withWeapon": [{"id": "ultra_drill", "count": 3}, {"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
+                    "withWeapon": [{"id": "ultra_axe", "count": 3}, {"id": "ultra_saw", "count": 3}, {"id": "ultra_claw", "count": 3}]
                 }
             ],
             "min": 0,
@@ -1407,7 +1454,7 @@
         },
         "pirate_boss": {
             "name": "Pirate Orc Boss",
-            "courage": 6,
+            "courage": 5,
             "shoot": 5,
             "fight": 6,
             "defense": 7,
@@ -1457,33 +1504,31 @@
         "shock_gun": {"name": "Shock Gun", "attacks": 1, "short": 24, "ap": 6, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "beast_cannon": {"name": "Beast Cannon", "attacks": 2, "short": 18, "ap": 3, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "beast_launcher": {"name": "Beast Launcher", "attacks": 1, "short": 9, "ap": 3, "medium": 18, "rules": [{"id": "blast", "x": 3}]},
-        "carbine": {"name": "Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "twin_carbine": {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "carbine": {"name": "Burst Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+        "twin_carbine": {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
         "grand_carbine": {"name": "Grand Carbine", "attacks": 12, "short": 9, "medium": 18, "ap": 2, "rules": ["assault"]},
         "grand_claw": {"name": "Grand Claw", "profiles": [
             {"name": "Strike", "attacks": 5, "short": "Melee", "ap": 7},
             {"name": "Sweep", "attacks": 10, "short": "Melee", "ap": 3}
         ]},
         "super_claw": {"name": "Super-Claw", "attacks": 3, "short": "Melee", "ap": 5},
-        "super_carbine": {"name": "Super Carbine", "attacks": 4, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "twin_mini_mg": {"name": "Twin Mini-MGs", "attacks": 6, "ap": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "twin_double_shotgun": {"name": "Twin Double Shotgun", "attacks": 4, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]},
         "combi_heavy_flamer": {
             "name": "Combi Heavy Flamer",
             "profiles": [
-                {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": []}
+                {"name": "Twin Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "rapid_fire"]},
+                {"name": "Heavy Flamer", "attacks": 3, "ap": 2, "short": 6, "medium": 12, "rules": ["flame"]}
             ]
         },
         "combi_rocket_launcher": {
             "name": "Combi Rocket Launcher",
             "profiles": [
-                {"name": "Twin Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+                {"name": "Twin Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["assault", "rapid_fire"]},
                 {"name": "Rocket Launcher", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["assault"]}
             ]
         },
         "cutlass": {"name": "Cutlass", "ap": 2, "attacks": 1, "short": "Melee"},
-        "ultra_drill": {"name": "Ultra Drill", "ap": 2, "attacks": 1, "short": "Melee"},
         "ultra_axe": {"name": "Ultra Axe", "attacks": 1, "ap": 3, "short": "Melee"},
         "ultra_saw": {"name": "Ultra Sawblade", "attacks": 1, "ap": 4, "short": "Melee"},
         "ultra_claw": {"name": "Ultra Claw", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]},
@@ -1531,7 +1576,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "tracks": {"name": "Tracks", "description": "This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.", "points": 5},
-        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls.", "points": 2},
+        "goblin_assistant": {"name": "Goblin Assistant", "description": "Models in this unit gain +1 to Repair rolls for each model with this rule.", "points": 2},
         "orc_idol": {"name": "Orc Idol", "description": "This model and friendly _Infantry_ units within 6\" gain +1 Courage.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": "true", "description": "This model gets +1 Save.", "description_short": "+1 Save", "points": [1, {"multiply": "constants.defenseCost"}]},
         "ultra_armor": {"name": "Ultra Armor", "hidden": "true", "description": "This model gets +1 Save and -1\" of movement.", "description_short": "+1 Save, -1\" Movement", "points": 10},
@@ -1638,10 +1683,10 @@
         },
         "counter_attack": {
             "subfactions": ["combat_focus"],
-            "name": "Counter-Attack",
+            "name": "Counter Attack",
             "phase": "activation",
             "flavor": "The toughest orcs never back down from a challenge.",
-            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         },
         "quick_aim": {

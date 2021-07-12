@@ -105,7 +105,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "machine_tactics", "x": 2}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -237,7 +237,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "psychic", "x": 1}, "damage_table_monster"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "power", "x": 1}, "damage_table_monster"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -249,7 +249,7 @@
                     "defense": 10,
                     "reflexes": 6,
                     "weapons": [{"id": "dimensional_strikes", "count": 5}],
-                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}],
+                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -784,7 +784,7 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "psychic", "x": 1}, "damage_table_monster"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "fly", {"id": "power", "x": 1}, "damage_table_monster"],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -796,7 +796,7 @@
                     "defense": 10,
                     "reflexes": 6,
                     "weapons": [{"id": "dimensional_strikes", "count": 5}],
-                    "options": [{"replaceRule": {"id": "psychic", "x": 1}, "withRule": [{"id": "psychic", "x": 2}, {"id": "psychic", "x": 3}]}],
+                    "options": [{"replaceRule": {"id": "power", "x": 1}, "withRule": [{"id": "power", "x": 2}, {"id": "power", "x": 3}]}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -807,7 +807,7 @@
             "name": "Dimensional Shard Vault",
             "description": "A large hovering vault containing a dimensional shard.",
             "category": "super_heavy",
-            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan", {"id": "psychic", "x": 3}, {"id": "psychic_prowess", "x": 2}],
+            "rules": ["hover", "flare_shielding", "vulnerable_rear", "damage_table_titan", {"id": "power", "x": 3}, {"id": "psychic_prowess", "x": 2}],
             "keywords": ["Vehicle"],
             "models": [
                 {

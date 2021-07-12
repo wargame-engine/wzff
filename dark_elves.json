@@ -22,7 +22,7 @@
                     "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 5}],
                     "min": 1,
                     "max": 1,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 2}, {"id": "lord_tactics", "x": 1}],
+                    "rules": [{"id": "wounds", "x": 3},  {"id": "lord_tactics", "x": 1}, {"id": "tough", "x": 1}],
                     "options": [
                         {"replaceRule": {"id": "lord_tactics", "x": 1}, "withRule": {"id": "lord_tactics", "x": 2}},
                         {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
@@ -107,7 +107,7 @@
                     "weapons": ["barb_pistol", "plasma_grenade", {"id": "energy_glaive", "count": 3}],
                     "min": 1,
                     "max": 1,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "tough", "x": 1}, "dodge", {"id": "succubus_tactics", "x": 1}],
+                    "rules": [{"id": "wounds", "x": 3},  "dodge", {"id": "succubus_tactics", "x": 1}],
                     "options": [
                         {"replaceRule": {"id": "succubus_tactics", "x": 1}, "withRule": {"id": "succubus_tactics", "x": 2}},
                         {"replaceWeapon": "barb_pistol", "withWeapon": ["blast_pistol"]},
@@ -346,7 +346,7 @@
                 {
                     "replaceWeapon": {"id": "barb_blade", "count": 2},
                     "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
-                    "modelLimit": "1/10"
+                    "modelLimit": "1/5"
                 }
             ],
             "models": [
@@ -394,7 +394,7 @@
                 {
                     "replaceWeapon": {"id": "barb_blade", "count": 2},
                     "withWeapon": [{"id": "razor_whips", "count": 4}, {"id": "net_and_spear", "count": 3}, {"id": "barb_gauntlets", "count": 3}],
-                    "modelLimit": "1/10"
+                    "modelLimit": "1/5"
                 }
             ],
             "models": [
@@ -426,6 +426,32 @@
                     "weapons": ["barb_pistol", "plasma_grenade", {"id": "barb_blade", "count": 2}],
                     "min": 4,
                     "max": 19
+                }
+            ]
+        },
+        "royal_court": {
+            "category": "specialist",
+            "name": "Royal Court",
+            "description": "A group of the lord's advisors and mercenaries.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Infantry"],
+            "models": [
+                {
+                    "name": "Courtesans",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "toxic_blade", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "options": [
+                        {"replaceModel": ["psychic_being", "serpent", "ghoul"]}
+                    ],
+                    "min": 4,
+                    "max": 16
                 }
             ]
         },
@@ -471,6 +497,52 @@
                     "weapons": ["barb_rifle", "plasma_grenade", "ccw", {"id": "cutting_blade", "count": 2}],
                     "min": 2,
                     "max": 11
+                }
+            ]
+        },
+        "hoverboard_riders": {
+            "category": "strike",
+            "name": "Hoverboard Riders",
+            "description": "A group of Dark Elven warriors mounted on fast hover boards.",
+            "min": 1,
+            "max": 1,
+            "keywords": ["Biker"],
+            "rules": ["hover"],
+            "options": [
+                {"addRule": ["combat_drugs"], "modelLimit": "all", "limit": 1}
+            ],
+            "models": [
+                {
+                    "name": "Hoverboard Leader",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "glaive", "count": 2}], "withWeapon": [
+                            ["barb_pistol", {"id": "barb_blade", "count": 3}],
+                            ["barb_pistol", {"id": "energy_sword", "count": 3}],
+                            ["barb_pistol", {"id": "barb_whip", "count": 3}]
+                        ]},
+                        {"addWeapon": "grenade_launcher_backpack"}
+                    ]
+                },
+                {
+                    "name": "Hoverboarder",
+                    "courage": 5,
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
+                    "min": 4,
+                    "max": 19
                 }
             ]
         },
@@ -535,7 +607,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "transport", "x": 6}, {"id": "open_topped", "x": 6}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -562,7 +634,7 @@
             "min": 1,
             "max": 1,
             "category": "transport",
-            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -590,7 +662,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -625,7 +697,7 @@
             "min": 1,
             "max": 1,
             "category": "heavy",
-            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle"],
+            "rules": ["hover", {"id": "impact", "x": 3}, "damage_table_vehicle", "vulnerable_side_rear"],
             "keywords": ["Vehicle"],
             "models": [
                 {
@@ -703,7 +775,50 @@
             ]
         }
     },
+    "models": {
+        "psychic_being": {
+            "name": "Psychic Being",
+            "movement": 7,
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 6,
+            "rules": [{"id": "wounds", "x": 2}],
+            "weapons": ["soul_drain"],
+            "min": 1,
+            "max": 1
+        },
+        "serpent": {
+            "name": "Serpent",
+            "movement": 7,
+            "courage": 6,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "rules": [{"id": "wounds", "x": 2}],
+            "weapons": [{"id": "serpent_blade", "count": 3}],
+            "min": 1,
+            "max": 1
+        },
+        "ghoul": {
+            "name": "Ghoul",
+            "movement": 7,
+            "courage": 4,
+            "shoot": 6,
+            "fight": 6,
+            "defense": 5,
+            "reflexes": 5,
+            "rules": [{"id": "wounds", "x": 2}, "furious", {"id": "resilient", "x": 2}],
+            "weapons": [{"id": "piercing_claws", "count": 3}],
+            "min": 1,
+            "max": 1
+        }
+    },
     "weapons": {
+        "glaive": {"name": "Glaive", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]},
+        "soul_drain": {"name": "Soul Drain", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol", "homing"]},
         "hexed_rifle": {"name": "Hexed Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["sniper"]},
         "poison_dart_rifle": {"name": "Poison Dart Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["assault", "poison"]},
         "poison_sprayer": {"name": "Poison Sprayer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["poison"]},
@@ -716,6 +831,7 @@
         "soul_vortex": {"name": "Soul Vortex", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": [{"id": "blast", "x": 3}]},
         "soul_stealer": {"name": "Soul Stealer", "attacks": 3, "short": 8, "ap": 1},
         "leeching_tentacles": {"name": "Leeching Tentacles", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
+        "serpent_blade": {"name": "Serpent Blade", "attacks": 1, "short": "Melee", "ap": 3},
         "dark_blade": {"name": "Dark Blade", "attacks": 1, "short": "Melee", "ap": 3},
         "dual_dark_blades": {"name": "Dual Dark Blades", "profiles": [
             {"name": "Whirl", "attacks": 6, "ap": 2, "short": "Melee"},
@@ -728,18 +844,20 @@
         "razor_whips": {"name": "Razor Whips", "attacks": 1, "short": "Melee", "ap": 1},
         "net_and_spear": {"name": "Combat Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net"]},
         "barb_whip": {"name": "Poison Whip", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["poison"]},
+        "barb_launcher": {"name": "Poison Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
         "barb_rifle": {"name": "Poison Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
         "twin_barb_rifle": {"name": "Twin Poison Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["rapid_fire", "poison"]},
         "barb_carbine": {"name": "Poison Carbine", "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
         "barb_pistol": {"name": "Poison Pistol", "attacks": 1, "short": 6, "medium": 12, "rules": ["poison"]},
         "barb_cannon": {"name": "Poison Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 1, "rules": ["poison"]},
         "barb_blade": {"name": "Poison Blade", "attacks": 1, "short": "Melee", "rules": ["poison"]},
-        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": ["fusion"]},
+        "toxic_blade": {"name": "Toxic Blade", "attacks": 1, "short": "Melee", "rules": ["deadly_poison"]},
+        "fusion_burst_cannon": {"name": "Fusion Burst Cannon", "ap": 7, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "critical", "x": 1}]},
         "heavy_wave_cannon": {"name": "Heavy Wave Cannon", "profiles": [
-            {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion", {"id": "blast", "x": 3}]},
+            {"name": "Beam", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": [{"id": "critical", "x": 1}, {"id": "blast", "x": 3}]},
             {"name": "Blast", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}
         ]},
-        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", "fusion"]},
+        "heat_cannon": {"name": "Heat Cannon", "ap": 5, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault", {"id": "critical", "x": 1}]},
         "destroyer_cannon": {"name": "Destroyer Cannon", "ap": 3, "attacks": 3, "short": 18, "medium": 36},
         "blast_rifle": {"name": "Blast Rifle", "ap": 6, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "blast_pistol": {"name": "Blast Pistol", "ap": 6, "attacks": 1, "short": 6, "medium": 12, "rules": ["pistol"]},

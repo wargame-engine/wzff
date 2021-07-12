@@ -59,7 +59,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -120,7 +120,7 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -198,7 +198,7 @@
                     "reflexes": 5,
                     "movement": 6,
                     "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "options": [
                         {
                             "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
@@ -224,7 +224,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Company Commander",
@@ -253,7 +253,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -338,9 +338,9 @@
             "description": "A trained psychic to support the fighters.",
             "min": 5,
             "max": 10,
-            "category": "specialist",
+            "category": "command",
             "keywords": ["Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "psychic", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Psychic",
@@ -352,7 +352,7 @@
                     "movement": 6,
                     "weapons": ["pistol", "frags", "staff"],
                     "options": [
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}},
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
                         {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
                     ],
@@ -362,7 +362,7 @@
                 }
             ]
         },
-        "constript_squad": {
+        "conscript_squad": {
             "name": "Conscript Squad",
             "description": "An inexperienced squad of infantry sent to the front with little training.",
             "category": "core",
@@ -391,33 +391,12 @@
                     "movement": 6,
                     "reflexes": 5,
                     "weapons": ["defense_rifle", "frags", "ccw"],
-                    "options": [{"addRule": "field_radio", "modelLimit": 1}],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceModel": "conscript_weapon_team", "modelLimit": 1}
+                    ],
                     "min": 9,
                     "max": 29
-                },
-                {
-                    "name": "Conscripted Weapon Team",
-                    "courage": 4,
-                    "shoot": 4,
-                    "fight": 4,
-                    "defense": 5,
-                    "movement": 6,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -460,35 +439,12 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1},
+                        {"replaceModel": "weapon_team", "modelLimit": 1}
                     ],
                     "rules": [],
                     "min": 9,
                     "max": 9
-                },
-                {
-                    "name": "Weapon Team",
-                    "courage": 5,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -532,34 +488,11 @@
                     "weapons": ["defense_rifle", "frags", "ccw"],
                     "options": [
                         {"addRule": "field_radio", "modelLimit": 1},
-                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3},
+                        {"replaceModel": "veteran_weapon_team", "modelLimit": 1}
                     ],
                     "min": 9,
                     "max": 9
-                },
-                {
-                    "name": "Veteran Weapon Team",
-                    "courage": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "movement": 6,
-                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
-                    "rules": [{"id": "crew", "x": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
-                            "withWeapon": [
-                                {"id": "missile_launcher", "mount": ["Front"]},
-                                {"id": "autocannon", "mount": ["Front"]},
-                                {"id": "laser_cannon", "mount": ["Front"]},
-                                {"id": "mortar", "mount": ["Front"]}
-                            ]
-                        }
-                    ],
-                    "min": 0,
-                    "max": 1
                 }
             ]
         },
@@ -599,13 +532,13 @@
             "category": "specialist",
             "min": 3,
             "max": 6,
-            "rules": [{"id": "crew", "x": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Weapon Team",
                     "courage": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 4,
                     "defense": 5,
                     "movement": 6,
                     "reflexes": 5,
@@ -637,7 +570,7 @@
                     "name": "Specialist Trooper",
                     "courage": 5,
                     "shoot": 5,
-                    "fight": 5,
+                    "fight": 4,
                     "defense": 5,
                     "reflexes": 5,
                     "movement": 6,
@@ -659,7 +592,7 @@
             "min": 3,
             "max": 3,
             "rules": ["stealth", "scout"],
-            "models": [{"name": "Trooper", "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 3, "max": 3}]
+            "models": [{"name": "Trooper", "courage": 5, "shoot": 5, "fight": 4, "defense": 5, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "frags", "ccw"], "min": 3, "max": 3}]
         },
         "stormtroopers": {
             "name": "Stormtroopers",
@@ -788,16 +721,16 @@
             ]
         },
         "command_battle_tank": {
-            "name": "Command Battle Tank",
+            "name": "Battle Tank Commander",
             "description": "A main line battle tank commander.",
             "min": 1,
             "max": 1,
             "category": "command",
             "keywords": ["Vehicle", "Battle Tank"],
-            "rules": ["vulnerable_side_rear", "field_orders_battle_tank", "damage_table_vehicle"],
+            "rules": ["vulnerable_side_rear", {"id": "battle_tank_tactics", "x": 1}, "damage_table_vehicle"],
             "models": [
                 {
-                    "name": "Battle Tank",
+                    "name": "Battle Tank Commander",
                     "courage": 6,
                     "shoot": 6,
                     "fight": 6,
@@ -807,8 +740,8 @@
                     "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
                     "options": [
                         {
-                            "replaceRule": {"id": "field_orders_battle_tank", "name": "Tank Platoon Commander"},
-                            "withRule": [{"id": "commander_field_orders_battle_tank", "name": "Tank Company Commander"}]
+                            "replaceRule": {"id": "battle_tank_tactics", "x": 1},
+                            "withRule": {"id": "battle_tank_tactics", "x": 2}
                         },
                         {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank", "extra_armor"]},
                         {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
@@ -1041,7 +974,7 @@
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
                     ],
                     "min": 1,
                     "max": 3
@@ -1068,7 +1001,7 @@
                     "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
                     "options": [
                         {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
-                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon"]}
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
                     ],
                     "min": 1,
                     "max": 3
@@ -1175,11 +1108,85 @@
             ]
         }
     },
+    "models": {
+        "conscript_weapon_team": {
+            "name": "Conscripted Weapon Team",
+            "courage": 4,
+            "shoot": 4,
+            "fight": 4,
+            "defense": 5,
+            "movement": 6,
+            "reflexes": 5,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "veteran_weapon_team": {
+            "name": "Veteran Weapon Team",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "weapon_team": {
+            "name": "Weapon Team",
+            "courage": 5,
+            "shoot": 5,
+            "fight": 5,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        }
+    },
     "weapons": {
         "hammer_cannon": {"name": "The Hammer", "attacks": 1, "ap": 7, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
         "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
         "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
-        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
+        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
         "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
         "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
@@ -1200,20 +1207,11 @@
         },
         "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
         "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
-        "commander_field_orders_battle_tank": {
-            "name": "Battle Tank Orders (Commander)",
-            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
-            "points": 20
-        },
-        "field_orders_battle_tank": {
-            "name": "Battle Tank Orders",
-            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3). A unit may only benefit from one Battle Tank Order.",
-            "points": 15
-        },
-        "field_radio_battle_tank": {
-            "name": "Field Radio (Armored)",
-            "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
-            "points": 10
+        "battle_tank_tactics": {
+            "name": "Battle Tank Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Battle Tank_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement \n * Impact(+3).",
+            "points": ["rule.x", {"multiply": 15}]
         },
         "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10}
     },
@@ -1323,10 +1321,10 @@
         },
         "counter_attack": {
             "subfactions": ["combat_masters"],
-            "name": "Counter-Attack",
+            "name": "Counter Attack",
             "phase": "activation",
-            "flavor": "Not afraid of a fight, these soldiers will counter-attack upon their enemies.",
-            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
+            "flavor": "Not afraid of a fight, these soldiers will Counter Attack upon their enemies.",
+            "description": "Use when an _Infantry_ unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Counter Attack reaction without testing Initiative.",
             "cost": 1
         }
     },

@@ -10,7 +10,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}, {"id": "tough", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "repair", "x": 3}],
             "keywords": ["Infantry"],
             "models": [
                 {
@@ -23,7 +23,7 @@
                     "reflexes": 7,
                     "weapons": [{"id": "axe_halberd", "count": 3}],
                     "options": [
-                        {"addRule": [{"id": "psychic", "x": 1, "name": "Machine Powers"}, {"id": "psychic", "x": "2", "name": "Master Machine Powers"}]},
+                        {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -40,7 +40,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "canticles", "x": 2}],
             "models": [
                 {
                     "name": "Machine Master",
@@ -55,9 +55,8 @@
                         {
                             "addRule": [
                                 {"id": "repair", "x": 5, "name": "Master Machinist"},
-                                {"id": "psychic", "x": 1, "name": "Psychic Resonator"},
-                                {"id": "psychic", "x": 2, "name": "Enhanced Psychic Resonator"},
-                                {"id": "canticles", "x": 1}
+                                {"id": "ward", "x": 1, "name": "Psychic Resonator"},
+                                {"id": "ward", "x": 2, "name": "Enhanced Psychic Resonator"}
                             ],
                             "limit": 1
                         },
@@ -98,7 +97,7 @@
             "min": 1,
             "max": 1,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 2}, {"id": "canticles", "x": 1}],
             "models": [
                 {
                     "name": "Machine Apprentice",
@@ -110,7 +109,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "axe_halberd", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "psychic", "x": 1, "name": "Psychic Resonator"}]},
+                        {"addRule": [{"id": "repair", "x": 3, "name": "Machinist"}, {"id": "ward", "x": 1, "name": "Psychic Resonator"}]},
                         {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
                         {"addWeapon": ["macro_pistol", "phosphor_carbine"], "limit": 1}
                     ],
@@ -175,6 +174,7 @@
             "min": 1,
             "max": 1,
             "category": "core",
+            "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
             "models": [
                 {
                     "name": "Vanguard Leader",
@@ -194,19 +194,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Vanguard",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["radiation_carbine", "ccw"],
-                    "options": [{"replaceWeapon": "radiation_carbine", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
-                    "min": 4,
-                    "max": 9
-                }
+                {"name": "Vanguard", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["radiation_carbine", "ccw"], "min": 4, "max": 9}
             ]
         },
         "rangers": {
@@ -216,6 +204,7 @@
             "max": 1,
             "category": "core",
             "rules": ["scout"],
+            "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
             "models": [
                 {
                     "name": "Ranger Leader",
@@ -235,19 +224,7 @@
                     "min": 1,
                     "max": 1
                 },
-                {
-                    "name": "Ranger",
-                    "courage": 5,
-                    "movement": 6,
-                    "shoot": 6,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 6,
-                    "weapons": ["ranger_rifle", "ccw"],
-                    "options": [{"replaceWeapon": "ranger_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_burst_carbine", "uranium_rifle"], "modelLimit": "1/5"}],
-                    "min": 4,
-                    "max": 9
-                }
+                {"name": "Ranger", "courage": 5, "movement": 6, "shoot": 6, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["ranger_rifle", "ccw"], "min": 4, "max": 9}
             ]
         },
         "shock_priests": {
@@ -264,10 +241,10 @@
                     "movement": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 4,
+                    "defense": 5,
                     "reflexes": 6,
-                    "weapons": ["shock_staff"],
-                    "options": [{"replaceWeapon": "shock_staff", "withWeapon": [["taser_gauntlets_zap", "taser_gauntlets_strike"]]}],
+                    "weapons": [{"id": "shock_staff", "count": 2}],
+                    "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", {"id": "taser_gauntlets_strike", "count": 2}]]}],
                     "min": 5,
                     "max": 20
                 }
@@ -288,13 +265,13 @@
                     "movement": 6,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 5,
                     "weapons": ["sonic_razor", {"id": "claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
-                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 4, "max": 9}
+                {"name": "Stalker", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["sonic_razor", {"id": "claws", "count": 2}], "min": 4, "max": 9}
             ]
         },
         "sky_stalkers": {
@@ -303,17 +280,17 @@
             "min": 1,
             "max": 1,
             "category": "strike",
-            "rules": ["ambush", "fly"],
+            "rules": ["fly"],
             "options": [{"replaceWeapon": "phosphor_pistol", "withWeapon": {"id": "blaster_smg"}}, {"addRule": {"id": "impact", "x": 1, "name": "Cluster Grenades"}, "modelLimit": "all"}],
             "models": [
-                {"name": "Sky Stalker Leader", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["taser_sword", "phosphor_pistol"], "min": 1, "max": 1},
+                {"name": "Sky Stalker Leader", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["taser_sword", "phosphor_pistol"], "min": 1, "max": 1},
                 {
                     "name": "Sky Stalker",
                     "courage": 5,
                     "movement": 8,
                     "shoot": 6,
                     "fight": 6,
-                    "defense": 6,
+                    "defense": 7,
                     "reflexes": 6,
                     "weapons": ["phosphor_carbine", {"id": "ccw", "count": 2}],
                     "min": 4,
@@ -327,11 +304,11 @@
             "min": 1,
             "max": 1,
             "category": "specialist",
-            "rules": ["agile", "scout", "stealth"],
+            "rules": ["scout", "stealth"],
             "options": [{"replaceWeapon": ["blaster_smg", "taser_sword"], "withWeapon": [["burst_carbine", {"id": "energy_sword"}]]}],
             "models": [
-                {"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1},
-                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 4, "max": 9}
+                {"name": "Infiltrator Leader", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 1, "max": 1},
+                {"name": "Infiltrator", "courage": 5, "movement": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": ["blaster_smg", "taser_sword"], "min": 4, "max": 9}
             ]
         },
         "raiders": {
@@ -415,7 +392,7 @@
         "landing_craft": {
             "name": "Landing Craft",
             "description": "A hovering landing craft for transporting troops.",
-            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", {"id": "open_topped", "x": 12}, "damage_table_vehicle"],
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "hover", "damage_table_vehicle"],
             "category": "transport",
             "keywords": ["Vehicle"],
             "min": 1,
@@ -427,7 +404,7 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 3,
-                    "defense": 10,
+                    "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}],
                     "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": {"id": "data_link"}}],
@@ -451,7 +428,7 @@
                     "courage": 5,
                     "shoot": 6,
                     "fight": 3,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": [{"id": "light_machinegun", "mount": ["Left"]}, {"id": "light_machinegun", "mount": ["Right"]}, "light_machinegun", "iron_cannon"],
                     "options": [{"replaceWeapon": "iron_cannon", "withWeapon": "energy_cannon"}, {"addWeapon": "disruption_missiles"}, {"addRule": {"id": "data_link"}}],
@@ -471,11 +448,11 @@
             "models": [
                 {
                     "name": "Crawler Tank",
-                    "movement": 11,
+                    "movement": 10,
                     "courage": 5,
                     "shoot": 6,
                     "fight": 5,
-                    "defense": 11,
+                    "defense": 12,
                     "reflexes": 6,
                     "weapons": ["twin_phosphor_cannon"],
                     "options": [
@@ -597,13 +574,7 @@
         }
     },
     "weapons": {
-        "mini_plasma_cannon": {
-            "name": "Mini Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
+        "mini_plasma_cannon": {"name": "Mini Plasma Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
         "energy_cannon": {"name": "Energy Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 2}, "indirect"]},
         "iron_cannon": {"name": "Iron Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 6},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["emp"]},
@@ -615,14 +586,14 @@
         "phosphor_breath": {"name": "Phosphor Breath", "attacks": 3, "short": 6, "ap": 1, "medium": 12, "rules": ["phosphor"]},
         "blaster_carbine": {"name": "Blaster Carbine", "attacks": 1, "short": 9, "ap": 1, "medium": 18, "rules": ["assault"]},
         "staff": {"name": "Machine Staff", "attacks": 3, "ap": 2, "short": "Melee"},
-        "shock_staff": {"name": "Shock Staff", "attacks": 2, "ap": 3, "short": "Melee"},
+        "shock_staff": {"name": "Shock Staff", "attacks": 1, "ap": 3, "short": "Melee"},
         "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "sonic_razor": {"name": "Sonic Razor", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
         "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
         "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
         "taser_gauntlets_zap": {"name": "Taser Gauntlets (Zap)", "ap": 1, "attacks": 1, "short": 6, "medium": 12, "rules": ["taser"]},
-        "taser_gauntlets_strike": {"name": "Taser Gauntlets (Strike)", "ap": 1, "attacks": 2, "short": "Melee", "rules": ["taser"]},
+        "taser_gauntlets_strike": {"name": "Taser Gauntlets (Strike)", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["taser"]},
         "taser_sword": {"name": "Taser Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["taser"]},
         "taser_lance": {"name": "Taser Lance", "attacks": 3, "ap": 2, "short": "Melee", "rules": ["taser"]},
         "taser_arm": {"name": "Taser Arm", "attacks": 2, "ap": 2, "short": "Melee", "rules": ["taser"]},
@@ -631,19 +602,13 @@
         "radiation_sniper": {"name": "Radiation Sniper", "attacks": 2, "short": 15, "medium": 30, "ap": 2, "rules": ["sniper"]},
         "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
         "ranger_rifle": {"name": "Ranger Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rending"]},
-        "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
+        "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp"]},
         "burst_carbine": {"name": "Burst Carbine", "attacks": 2, "ap": 1, "short": 9, "medium": 18, "rules": ["pistol"]},
-        "plasma_burst_carbine": {
-            "name": "Plasma Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["assault"]},
-                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "overheat"]}
-            ]
-        },
+        "plasma_burst_carbine": {"name": "Plasma Burst Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", "assault"]},
         "magnetic_lancer": {"name": "Magnetic Lancer", "attacks": 1, "short": 9, "medium": 18, "ap": 5},
         "sonic_cannon": {"name": "Sonic Cannon", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": []},
         "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 6}]},
-        "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 8},
+        "neutron_laser": {"name": "Neutron Laser", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}]},
         "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
         "combustion_blaster": {"name": "Combustion Blaster", "attacks": 3, "short": 12, "medium": 24, "ap": 3},
         "macro_pistol": {"name": "Macro Pistol", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["pistol"]},
@@ -653,8 +618,8 @@
         "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 3, "rules": ["pistol", "emp"]},
         "phosphor_carbine": {"name": "Phosphor Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": ["assault", "phosphor"]},
         "phosphor_rifle": {"name": "Phosphor Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 2, "rules": ["phosphor"]},
-        "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 3, "rules": ["phosphor"]},
-        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 3, "rules": ["phosphor"]},
+        "phosphor_cannon": {"name": "Phosphor Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
+        "twin_phosphor_cannon": {"name": "Twin Phosphor Cannon", "attacks": 4, "short": 18, "medium": 36, "ap": 4, "rules": ["phosphor"]},
         "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
         "aa_missiles": {"name": "AA Missile System", "attacks": 1, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]}
     },
@@ -668,7 +633,7 @@
         },
         "manipulator": {
             "name": "Manipulator",
-            "description": "At any point during this unit's activation, it may choose a friendly _Infantry_ unit within 3\" to receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range \n\n\n The bonus is in effect until a new one is chosen.",
+            "description": "Once per round, a friendly _Infantry_ unit within 3\" may receive one of the following bonuses: \n * +1 AP \n * +6\" Max Range",
             "points": 10
         },
         "data_chips": {
@@ -680,7 +645,7 @@
             "name": "Canticles",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +1 Save \n * +2\" Movement",
-            "points": ["rule.x", {"multiply": 15}]
+            "points": ["rule.x", {"multiply": 10}]
         },
         "data_link": {"name": "Data-Link", "hidden": true, "description": "This model gains +1 Courage.", "description_short": "+1 Courage", "points": 5},
         "heat_scanner": {"name": "Heat Scanner", "description": "This model and its unit gain +6\" max range when shooting.", "points": 5},
@@ -710,15 +675,5 @@
             "cost": 1
         }
     ],
-    "powers": {
-        "machine_aim": {"name": "Guidance", "description": "Target friendly unit within 12\" gets +1 Accuracy with its next attack.", "charge": 6},
-        "machine_endurance": {
-            "name": "Endurance",
-            "description": "Target one friendly unit within 12\". The next time it is hit by an attack, roll 1D10 for each wound. On a 2 or less that wound is not lost.",
-            "charge": 5
-        },
-        "speed": {"name": "Speed", "description": "Target one friendly unit within 12\" may immediately move up to 6\".", "charge": 7},
-        "solar_ray": {"name": "Solar Ray", "description": "Target enemy unit within 12\" takes 6 hits with AP 3.", "charge": 4},
-        "rust": {"name": "Rust", "description": "Target enemy unit within 18\" gets -1 Accuracy with its next attack.", "charge": 5}
-    }
+    "powers": {}
 }

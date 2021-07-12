@@ -38,7 +38,12 @@
             "secondary_color": "#7d0a15",
             "alliance": "alien_swarm",
             "version": "0.1",
-            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics."
+            "description": "The Alien Cults are a loose band of alien worshippers who have been infiltrated by an Alien Swarm. They form on unsuspecting planets and eventually grow strong enough to take control. Alien Cults use a mix of hybrid alien creatures and scavenged weapons along with guerilla tactics.",
+            "subfactions": {
+                "ambush_focus": {"name": "Ambush Focus", "id": "ambush_focus", "color": "#6a0001", "description": "An alien cult focused on ambushing and killing their foes."},
+                "survival_focus": {"name": "Survival Focus", "id": "survival_focus", "color": "#6a0001", "description": "An alien cult focused on surviving at any cost."},
+                "zeal_focus": {"name": "Zeal Focus", "id": "zeal_focus", "color": "#6a0001", "description": "An alien cult focused on zealous charges."}
+            }
         },
         "traitor_marines": {
             "name": "Traitor Marines",
@@ -67,6 +72,16 @@
                 }
             }
         },
+        "corrupted_defense_force": {
+            "name": "Corrupted Defense Force",
+            "id": "corrupted_defense_force",
+            "url": "corrupted_defense_force.json",
+            "color": "#ba7f00",
+            "secondary_color": "#231f20",
+            "alliance": "traitors",
+            "version": "0.1",
+            "description": "The corrupted defense force are a band of deserters and other folks out for their own interests. They have gathered much of what they can from the Imperial Defense Force and now fight with the traitors against those that stay loyal."
+        },
         "dimensional_horrors": {
             "name": "Dimensional Horrors",
             "id": "dimensional_horrors",
@@ -76,10 +91,10 @@
             "version": "0.1",
             "description": "The dimensional horrors are a species of demon entities from an unknown dimension controlled by several demon lords. Their existence is largely not understood. They focus on rapid and unpredictable entry and deadly waves of infantry and beasts to surprise and overwhelm their foes.",
             "subfactions": {
-                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": ""},
-                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": ""},
-                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": ""},
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": ""}
+                "change": {"name": "Magic", "id": "change", "color": "#90305d", "restricted": true, "description": "Horrors with an adept magical skill."},
+                "pestilence": {"name": "Pestilence", "id": "pestilence", "color": "#547588", "restricted": true, "description": "Horrors so disgusting and diseased they refuse to die."},
+                "war": {"name": "War", "id": "war", "color": "#547588", "restricted": true, "description": "Horrors focused on war and all out deadly combat."},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "restricted": true, "description": "Horrors focused on trickery and mind games."}
             }
         },
         "undying_machines": {
@@ -114,7 +129,7 @@
         },
         "ascended_astroraptors": {
             "alliance": "federation",
-            "name": "Ascended Astro-Raptors (Beta)",
+            "name": "Ascended Astro-Raptors",
             "id": "ascended_astroraptors",
             "url": "ascended_astroraptors.json",
             "color": "#4f9ae0",
@@ -123,6 +138,11 @@
             "hidden_subfactions": {
                 "combat_masters": {"name": "Close Combat", "id": "combat_masters", "color": "#00401f", "description": "An Ascended Astro-Raptors trained and drilled in deadly close combat fighting."},
                 "marksmanship_focus": {"name": "Marksmanship", "id": "marksmanship_focus", "description": "An Ascended Astro-Raptors with the best shooting skill in the galaxy."}
+            },
+            "subfactions": {
+                "claw_masters": {"name": "Close Combat", "id": "claw_masters", "color": "#00401f", "description": "Astro-Raptors who hold closer to the old ways of fighting with tooth and claw."},
+                "raygun_focus": {"name": "Rifle Focus", "id": "raygun_focus", "description": "An Ascended Astro-Raptors force trained especially well with their ranged weapons."},
+                "rayshield_focus": {"name": "Defense Focus", "id": "rayshield_focus", "description": "A force of Astro-Raptors equipped with highly advanced shielding technology."}
             }
         },
         "knight_lords": {
@@ -143,7 +163,8 @@
             "secondary_color": "#9a1115",
             "alliance": "imperial_alliance",
             "version": "0.1",
-            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies."
+            "description": "The Battle Sisters are a sect of the Human Empire which have a uniquely faithful and religious background. The Battle Sisters rely on prayer and faith in their holy symbols along with some good old fashioned holy fire to defeat their enemies.",
+            "subfactions": {"assault_focus": {"name": "Assault", "id": "assault_focus", "color": "#4272b8", "description": "Battle Sisters focused on all-out assaults and aggression."}}
         },
         "machine_guilds": {
             "name": "Machine Guilds",
@@ -201,7 +222,7 @@
                 "stealth_focus": {"name": "Stealth", "id": "stealth_focus", "description": "Loyal Marines focused on stealth and ambush tactics."},
                 "tactical_masters": {"name": "Tactical", "id": "tactical_masters", "color": "#4272b8", "description": "Loyal Marines focused on using tactics and cunning to outsmart their enemies."},
                 "wolf_marines": {
-                    "name": "Counter-attack",
+                    "name": "Counter Attack",
                     "id": "wolf_marines",
                     "color": "#547588",
                     "description": "Loyal Marines that specialize in brutal counter-assaults in close combat.",
@@ -247,7 +268,13 @@
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
         }
     },
-    "alliances": {"alien_swarm": {"name": "Alien Swarm"}, "imperial_alliance": {"name": "Imperial Alliance"}, "elven_coaliation": {"name": "Elven Coalition"}, "traitors": {"name": "Traitor Pact"}, "federation": {"name": "Federated Species"}},
+    "alliances": {
+        "alien_swarm": {"name": "Alien Swarm"},
+        "imperial_alliance": {"name": "Imperial Alliance"},
+        "elven_coaliation": {"name": "Elven Coalition"},
+        "traitors": {"name": "Traitor Pact"},
+        "federation": {"name": "Federated Species"}
+    },
     "categories": {
         "command": {"name": "Command"},
         "core": {"name": "Core"},
@@ -260,7 +287,7 @@
     },
     "organizations": {
         "skirmish": {
-            "name": "Generalist (Core)",
+            "name": "Generalist",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
             "categories": {
@@ -274,7 +301,7 @@
             }
         },
         "strike": {
-            "name": "Strike (Core)",
+            "name": "Strike",
             "cost": 1,
             "description": "A strike force for outflanking or shock assaulting.",
             "categories": {
@@ -288,7 +315,7 @@
             }
         },
         "specialist": {
-            "name": "Specialist (Core)",
+            "name": "Specialist",
             "cost": 1,
             "description": "An elite force to deal with specific targets.",
             "categories": {
@@ -302,7 +329,7 @@
             }
         },
         "heavy": {
-            "name": "Heavy (Core)",
+            "name": "Heavy",
             "cost": 1,
             "description": "A heavy force to pack a punch on the field.",
             "categories": {
@@ -316,13 +343,13 @@
             }
         },
         "support": {
-            "name": "Support (Core)",
+            "name": "Support",
             "cost": 1,
             "description": "A small supporting force.",
             "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 1}, "transport": {"max": 2}, "fortification": {"max": 4}}
         },
-        "super_heavy_support": {"name": "Super Heavy Support (Core)", "cost": 1, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
-        "super_heavy": {"name": "Super Heavy (Core)", "cost": 2, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
+        "super_heavy_support": {"name": "Super Heavy Support", "cost": 1, "description": "A supporting super-heavy unit.", "categories": {"super_heavy": {"min": 1, "max": 1}}},
+        "super_heavy": {"name": "Super Heavy", "cost": 2, "description": "A group of super-heavy units.", "categories": {"super_heavy": {"min": 2, "max": 4}}}
     },
     "relics": {
         "inspired": {
@@ -347,21 +374,14 @@
             "points": 10
         }
     },
-    "powers": {
-        "blast": {
-            "name": "Shock Wave",
-            "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-            "flavor": "This enemy is hit by a single blast of shock.",
-            "charge": 8
-        }
-    },
+    "powers": {"shock_wave": {"name": "Shock Wave", "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.", "charge": 8}},
     "weapons": {
         "power_blast": {"name": "Shock Wave", "medium": 24, "attacks": 3, "ap": 3},
         "plasma_grenade": {
             "name": "Plasma Grenades",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}
+                {"name": "HE", "attacks": 1, "short": 6, "ap": 1, "rules": ["grenade", {"id": "blast", "x": 3}]},
+                {"name": "AP", "attacks": 1, "short": 6, "ap": 5, "rules": ["grenade", "overheat"]}
             ]
         },
         "frags": {"name": "Frag Grenades", "attacks": 1, "short": 6, "rules": ["grenade", {"id": "blast", "x": 3}]},
@@ -379,7 +399,7 @@
         },
         "grenade_launcher": {
             "name": "Grenade Launcher",
-            "profiles": [{"name": "Frag", "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 6, "medium": 12, "ap": 3}]
+            "profiles": [{"name": "Frag", "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]}, {"name": "AT", "attacks": 1, "short": 12, "medium": 24, "ap": 3}]
         },
         "railgun": {"name": "Railgun", "attacks": 1, "short": 24, "ap": 4, "medium": 48, "rules": [{"id": "blast", "x": 2}]},
         "ccw": {"name": "Light CCW", "attacks": 1, "short": "Melee"},
@@ -397,6 +417,7 @@
         "twin_twin_marine_rifle": {"name": "Twin Storm Rifle", "attacks": 4, "short": 12, "ap": 1, "medium": 24, "rules": ["rapid_fire"]},
         "energy_pick": {"name": "Energy Pick", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "energy_sword": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 2},
+        "servo_arm": {"name": "Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_staff": {"name": "Energy Staff", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_lance": {"name": "Energy Lance", "attacks": 1, "short": "Melee", "ap": 3},
         "heavy_machinegun": {"name": "Heavy Machinegun", "attacks": 3, "short": 18, "medium": 36, "ap": 2},
@@ -438,50 +459,21 @@
             ]
         },
         "light_laser_cannon": {"name": "Light Laser Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 7},
-        "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
-        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "rending"]},
+        "marine_shotgun": {"name": "Marine Shotgun", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["brutal", "assault"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
         "energy_claws": {"name": "Energy Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
-        "plasma_pistol": {
-            "name": "Plasma Pistol",
-            "rules": ["pistol"],
-            "profiles": [{"name": "Standard", "attacks": 1, "short": 6, "ap": 5}, {"name": "Overcharge", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "overheat"}]}]
-        },
-        "plasma_rifle": {
-            "name": "Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]}
-            ]
-        },
+        "plasma_pistol": {"name": "Plasma Pistol", "rules": ["pistol", "overcharge"], "attacks": 1, "short": 6, "ap": 5},
+        "plasma_rifle": {"name": "Plasma Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
         "combi_plasma": {
             "name": "Combi-plasma",
             "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]},
+                {"name": "Plasma", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
                 {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
             ]
         },
-        "twin_plasma_rifle": {
-            "name": "Twin Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire"]},
-                {"name": "Overcharge", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, "rapid_fire"]}
-            ]
-        },
-        "plasma_cannon": {
-            "name": "Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
-        "twin_plasma_cannon": {
-            "name": "Twin Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 2}]},
-                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "blast", "x": 2}, {"id": "overheat"}]}
-            ]
-        },
+        "twin_plasma_rifle": {"name": "Twin Plasma Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 5, "rules": ["rapid_fire", "overcharge"]},
+        "plasma_cannon": {"name": "Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
+        "twin_plasma_cannon": {"name": "Twin Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 2}]},
         "twin_marine_rifle": {"name": "Twin Marine Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]},
         "energy_axe": {"name": "Energy Axe", "attacks": 1, "short": "Melee", "ap": 3},
         "energy_mace": {"name": "Energy Mace", "attacks": 1, "short": "Melee", "ap": 4},
@@ -491,18 +483,26 @@
         "energy_hammer": {"name": "Energy Hammer", "attacks": 1, "short": "Melee", "ap": 6, "rules": ["cumbersome"]},
         "combi_flamer": {
             "name": "Combi-flamer",
-            "profiles": [{"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [
+                {"name": "Flamer", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["flame"]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
         },
         "combi_fusion": {
             "name": "Combi-fusion",
-            "profiles": [{"name": "Fusion", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]}, {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}]
+            "profiles": [
+                {"name": "Fusion", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+                {"name": "Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rapid_fire"]}
+            ]
         },
-        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "ap": 6, "rules": ["pistol", "fusion"]},
+        "assassin_sniper": {"name": "Assassin's Sniper Rifle", "attacks": 1, "ap": 5, "short": 24, "medium": 48, "rules": ["sniper", {"id": "deadly", "x": 3}]},
+        "fusion_pistol": {"name": "Fusion Pistol", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["pistol", {"id": "critical", "x": 1}]},
         "fusion_bomb": {"name": "Fusion Bombs", "attacks": 1, "short": 6, "ap": 7, "rules": [{"id": "ammo", "x": 1}]},
-        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
+        "fusion_rifle": {"name": "Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "hunter_missiles": {"name": "Hunter Missile", "attacks": 1, "short": 24, "medium": 48, "ap": 6, "rules": [{"id": "ammo", "x": 1}]},
         "autocannon": {"name": "Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4},
         "twin_autocannon": {"name": "Twin Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
+        "aa_autocannon": {"name": "AA Autocannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
         "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
@@ -544,13 +544,9 @@
         "claws_and_tendrils": {"name": "Claws and Tendrils", "attacks": 1, "short": "Melee", "ap": 6},
         "stomp": {"name": "Stomp", "attacks": 1, "short": "Melee", "ap": 1},
         "heavy_stomp": {"name": "Heavy Stomp", "attacks": 1, "short": "Melee", "ap": 2},
-        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
-        "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": ["fusion"]},
-        "crab_claw": {"name": "Crab Claw", "profiles": [{
-            "name": "Strike", "attacks": 3, "short": "Melee", "ap": 7
-        }, {
-            "name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3
-        }]},
+        "heavy_fusion_rifle": {"name": "Heavy Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "twin_heavy_fusion_rifle": {"name": "Twin Heavy Fusion Rifle", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "crab_claw": {"name": "Crab Claw", "profiles": [{"name": "Strike", "attacks": 3, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 6, "short": "Melee", "ap": 3}]},
         "walker_talons": {"name": "Walker Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
         "walker_fist": {"name": "Walker Fist", "attacks": 1, "short": "Melee", "ap": 5},
         "heavy_walker_fist": {"name": "Heavy Walker Fist", "attacks": 1, "short": "Melee", "ap": 6},
@@ -558,8 +554,8 @@
         "twin_heavy_flamethrower": {"name": "Twin Heavy Flamethrower", "attacks": 6, "short": 6, "medium": 12, "ap": 2, "rules": ["flame"]},
         "forge_flamethrower": {"name": "Forge Flamethrower", "attacks": 3, "short": 9, "medium": 18, "ap": 4, "rules": ["flame"]},
         "gravity_pistol": {"name": "Gravity Pistol", "attacks": 1, "short": 6, "ap": 3, "rules": ["gravity"]},
-        "gravity_rifle": {"name": "Gravity Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["gravity"]},
-        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 3, "rules": ["gravity"]},
+        "gravity_rifle": {"name": "Gravity Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": ["gravity", "rapid_fire"]},
+        "gravity_cannon": {"name": "Gravity Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 3, "rules": [{"id": "blast", "x": 2}, "gravity"]},
         "heavy_gravity_cannon": {"name": "Heavy Gravity Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 3, "rules": ["gravity"]},
         "psychic_grenade": {
             "name": "Psychic Grenades",
@@ -585,20 +581,8 @@
         "psychic_cannon": {"name": "Psychic Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 4},
         "heavy_psychic_cannon": {"name": "Heavy Psychic Cannon", "attacks": 5, "short": 12, "medium": 24, "ap": 4},
         "twin_assault_light_machinegun": {"name": "Twin Assault Light Machingun", "attacks": 6, "short": 24, "medium": 48},
-        "heavy_plasma_cannon": {
-            "name": "Heavy Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
-        "twin_heavy_plasma_cannon": {
-            "name": "Twin Heavy Plasma Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 2, "short": 18, "medium": 36, "ap": 6, "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
+        "heavy_plasma_cannon": {"name": "Heavy Plasma Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 3}]},
+        "twin_heavy_plasma_cannon": {"name": "Twin Heavy Plasma Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 3}]},
         "holy_mace": {"name": "Holy Mace", "attacks": 1, "short": "Melee", "ap": 3},
         "incendiary_cannon": {"name": "Incendiary Cannon", "attacks": 6, "ap": 2, "short": 6, "medium": 12, "rules": []},
         "heavy_gatling_gun": {"name": "Heavy Gatling Gun", "attacks": 6, "short": 15, "medium": 30, "ap": 2},
@@ -624,43 +608,19 @@
         },
         "aa_rocket_pod": {"name": "AA Rocket Pod", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "artillery_relay": {"name": "Artillery Relay", "attacks": 1, "ap": 1, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 6}]},
-        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending"]},
+        "prime_heavy_carbine": {"name": "Heavy Carbine", "attacks": 1, "short": 12, "medium": 24, "ap": 1, "rules": ["rending", "assault"]},
         "prime_sniper_carbine": {"name": "Sniper Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "sniper", "rending"]},
         "prime_pistol": {"name": "Prime Pistol", "attacks": 1, "short": 9, "ap": 1, "rules": ["pistol"]},
         "prime_auto_rifle": {"name": "Prime Auto-Rifle", "attacks": 2, "short": 12, "medium": 24, "rules": ["assault"]},
         "prime_precision_rifle": {"name": "Prime Precision Rifle", "attacks": 1, "short": 24, "medium": 48, "ap": 2},
         "prime_chainsword": {"name": "Prime Chainsword", "attacks": 1, "ap": 1, "short": "Melee"},
-        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "profiles": [{"name": "Single", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["assault", "fusion"]}, {"name": "Rapid", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": ["assault", "fusion"]}]},
-        "heavy_plasma_rifle": {
-            "name": "Heavy Plasma Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 18, "medium": 36, "ap": 6},
-                {"name": "Overcharge", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": [{"id": "overheat"}]}
-            ]
-        },
-        "plasma_assault_rifle": {
-            "name": "Plasma Assault Rifle",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
-        "plasma_carbine": {
-            "name": "Plasma Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 1, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
+        "prime_fusion_rifle": {"name": "Prime Fusion Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["rapid_fire", {"id": "critical", "x": 1}]},
+        "heavy_plasma_rifle": {"name": "Heavy Plasma Rifle", "attacks": 1, "short": 18, "medium": 36, "ap": 6, "rules": ["overcharge"]},
+        "plasma_assault_rifle": {"name": "Plasma Assault Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
+        "plasma_carbine": {"name": "Plasma Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
         "assault_carbine": {"name": "Assault Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
         "twin_assault_carbine": {"name": "Twin Assault Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 2, "rules": [{"id": "assault"}]},
-        "twin_plasma_carbine": {
-            "name": "Twin Plasma Carbine",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": [{"id": "assault"}]},
-                {"name": "Overcharge", "attacks": 2, "short": 9, "medium": 18, "ap": 6, "rules": [{"id": "overheat"}, {"id": "assault"}]}
-            ]
-        },
+        "twin_plasma_carbine": {"name": "Twin Plasma Carbine", "attacks": 2, "short": 9, "medium": 18, "ap": 5, "rules": ["overcharge", {"id": "assault"}]},
         "prime_energy_sword": {"name": "Prime Energy Sword", "attacks": 1, "short": "Melee", "ap": 3},
         "fist_carbine": {"name": "Fist Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "fist_flamethrower": {"name": "Fist Flamethrower", "attacks": 3, "short": 6, "medium": 12, "ap": 1, "rules": ["assault", "flame"]},
@@ -670,7 +630,7 @@
         "heavy_fist": {"name": "Heavy Fist", "attacks": 1, "ap": 3, "short": "Melee"},
         "assault_drill": {"name": "Assault Drill", "attacks": 1, "ap": 6, "short": "Melee"},
         "axe_halberd": {"name": "Axe-Halberd", "attacks": 1, "ap": 3, "short": "Melee"},
-        "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "blast", "x": 2}], "ap": 2},
+        "grenade_launcher_backpack": {"name": "Fear Grenade Launcher", "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 1}, {"id": "blast", "x": 2}], "ap": 2},
         "energy_glaive": {"name": "Energy Glaive", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "emp_cannon": {"name": "EMP Cannon", "attacks": 3, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
         "emp_rifle": {"name": "EMP Rifle", "attacks": 2, "short": 12, "medium": 24, "ap": 3, "rules": ["emp", "assault"]},
@@ -679,17 +639,17 @@
         "irridescent_cannon": {
             "name": "Irridescent Cannon",
             "profiles": [
-                {"name": "Focus", "attacks": 2, "short": 12, "medium": 24, "ap": 4, "rules": ["assault", {"id": "blast", "x": 3}]},
-                {"name": "Lance", "attacks": 2, "short": 12, "medium": 24, "ap": 7, "rules": ["assault"]},
-                {"name": "Dispersed", "attacks": 6, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]}
+                {"name": "Focus", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": ["assault"]},
+                {"name": "Lance", "attacks": 1, "short": 18, "medium": 36, "ap": 7, "rules": ["assault", {"id": "critical", "x": 1}]},
+                {"name": "Dispersed", "attacks": 6, "short": 18, "medium": 36, "ap": 2, "rules": ["assault"]}
             ]
         },
         "shard_pistol": {"name": "Shard Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "rending"]},
         "shard_carbine": {"name": "Shard Carbine", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending", "assault"]},
         "shard_rifle": {"name": "Shard Rifle", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["rending", "assault"]},
         "twin_shard_rifle": {"name": "Twin Shard Rifle", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["rending", "assault"]},
-        "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
-        "twin_fusion_cannon": {"name": "Twin Fusion Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["fusion"]},
+        "fusion_cannon": {"name": "Fusion Cannon", "ap": 7, "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "critical", "x": 1}]},
+        "twin_fusion_cannon": {"name": "Twin Fusion Cannon", "ap": 7, "attacks": 1, "short": 24, "medium": 48, "rules": [{"id": "critical", "x": 1}]},
         "shard_sniper": {"name": "Shard Sniper", "attacks": 1, "short": 18, "medium": 36, "ap": 1, "rules": ["rending", "sniper"]},
         "elven_blade": {"name": "Elven Blade", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "elven_missile_launcher": {
@@ -704,13 +664,13 @@
             "name": "Heavy Fusion Cannon",
             "profiles": [
                 {"name": "Focus", "attacks": 2, "short": 30, "medium": 60, "ap": 7},
-                {"name": "Lance", "attacks": 1, "short": 30, "medium": 60, "ap": 9, "rules": ["fusion"]},
+                {"name": "Lance", "attacks": 1, "short": 30, "medium": 60, "ap": 9, "rules": [{"id": "critical", "x": 1}]},
                 {"name": "Dispersed", "attacks": 3, "short": 30, "medium": 60, "ap": 4}
             ]
         },
         "nova_cannon": {"name": "Nova Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": [{"id": "blast", "x": 3}]},
         "siege_cannon": {"name": "Siege Cannon", "attacks": 1, "short": 12, "medium": 24, "ap": 8, "rules": [{"id": "blast", "x": 3}]},
-        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": []},
+        "tank_hunter_cannon": {"name": "Tank Hunter Cannon", "attacks": 2, "short": 36, "medium": 72, "ap": 7, "rules": [{"id": "critical", "x": 1}]},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 8, "short": 12, "medium": 24, "ap": 2},
         "staff": {"name": "Staff", "attacks": 2, "ap": 5, "short": "Melee"},
         "walker_chainsaw": {"name": "Walker Chainsaw", "attacks": 2, "ap": 2, "short": "Melee"},
@@ -731,7 +691,8 @@
         "missile_rack": {
             "name": "Missile Rack",
             "profiles": [{"name": "Frag", "attacks": 1, "short": 24, "medium": 48, "ap": 1, "rules": [{"id": "blast", "x": 6}]}, {"name": "AT", "attacks": 1, "short": 24, "medium": 48, "ap": 6}]
-        }
+        },
+        "piercing_claws": {"name": "Piercing Claws", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["rending"]}
     },
     "rules": {
         "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
@@ -739,7 +700,7 @@
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
         "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
         "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
-        "wings": {"name": "Wings", "hidden": true, "description": "Increases movement by 2\". Gives the model fly and ambush.", "description_short": "Fly, Ambush, +2\" Move", "points": 10},
+        "wings": {"name": "Wings", "description": "Increases movement by 4\". This model may ignore models and terrain when moving.", "points": 10},
         "scrambler": {"name": "Scrambler", "description": "Enemy units arriving from reserves within 18\" of this model suffer -2 Initiative on reserve tests.", "points": 5},
         "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
         "net": {
@@ -747,13 +708,11 @@
             "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
             "points": 1
         },
-        "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 2},
+        "web": {"name": "Web", "description": "Units hit by this weapon lose 2\" from their next move.", "points": 1},
         "assault_ramp": {"name": "Assault Ramp", "description": "Units may disembark from this model even after it has taken two Move actions.", "points": 5},
-        "stun": {"name": "Stun", "description": "Instead of inflicting damage, if this weapon hits its target, that unit gets -1 Strength and -1 Accuracy for its next attack."},
         "banner_of_justice": {"name": "Banner of Justice", "description": "Enemy units within 6\" get -1 courage.", "points": 10},
-        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},
-        "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Shooting weapons.", "points": 10},
-        "poison": {"name": "Poison", "description": "Each successful hit roll of 4 or less with this weapon gets +1 AP.", "points": ["weapon.attacks", {"multiply": 0.5}]},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
+        "banner_of_focus": {"name": "Banner of Focus", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Shooting weapons.", "points": 10},
         "lance": {"name": "Lance", "description": "This weapon gets +1 AP when used during a Charge.", "points": ["weapon.attacks", {"multiply": 1}]},
         "dozer": {"name": "Dozer", "description": "This model may cross low obstacles without penalty.", "points": 5},
         "shielding": {"name": "Shielding", "description": "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.", "points": 5},
@@ -761,7 +720,7 @@
         "psych_out": {"name": "Dangerous(Psychic)", "description": "This weapon has +1 AP against units with the Psychic special rule."},
         "dark_prism": {
             "name": "Dark Prism",
-            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
+            "description": "Once per round, when a model with Power(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
             "points": 5
         },
         "medical_training": {
@@ -769,12 +728,6 @@
             "description": "Whenever this model, or a friendly _Infantry_ model within 6\" is killed or loses a Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
             "points": 15
         },
-        "ward": {
-            "name": "Ward",
-            "description": "Once per round, when a model with Psychic(x) casts a power within 24\", roll a D10. If the die roll is lower than or equal to the casting roll, the power is prevented.",
-            "points": 5
-        },
-        "gravity": {"name": "Gravity", "description": "This weapon gets +2 AP against targets with Save 10 or higher.", "points": ["weapon.attacks", {"multiply": 1}]},
         "homing": {"name": "Homing", "description": "This weapon hits at Accuracy +1.", "points": ["weapon.attacks"]},
         "titanic": {
             "name": "Titanic",
@@ -812,16 +765,25 @@
             "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * +1 AP to their attacks  \n * +1 attacks per model \n * +1 Save ",
             "points": 2
         },
-        "disk_of_change": {"name": "Disk of Change", "description": "Gives the unit hover and Impact(1). Also increases the units movement by 2\".", "points": 5},
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
+        },
         "field_radio": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Defense Force Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Defense Force Tactics_ rule.",
+            "description": "If a friendly unit within 3\" uses the _Defense Force Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
             "points": 5
         },
         "field_radio_stormtrooper": {
             "name": "Field Radio",
-            "description": "This unit may be targeted by the _Storm Trooper Tactics_ special rule if it is within 24\" of another unit with a _Field Radio_ that is in range of the _Storm Trooper Tactics_ rule.",
+            "description": "If a friendly unit within 3\" uses the _Stormtrooper Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Field Radio.",
             "points": 5
+        },
+        "field_radio_battle_tank": {
+            "name": "Battle Tank Radio",
+            "description": "If a friendly unit within 3\" uses the _Battle Tank Tactics_ special rule, you may extend the range of that ability to 24\" as long as the target unit also has a Battle Tank Radio.",
+            "points": 10
         },
         "stormtrooper_tactics": {
             "name": "Storm Trooper Tactics",
@@ -829,28 +791,20 @@
             "description": "When this unit is activated, choose up to X friendly _Storm Trooper_ _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
             "points": ["rule.x", {"multiply": 10}]
         },
-        "fusion": {
-            "name": "Fusion",
-            "description": "Enemy units add 1 to rolls on any _Damage Table(X)_ rules when hit by this weapon at Short range.",
-            "points": ["weapon.attacks", {"multiply": 2.5}]
-        },
         "bomb": {"name": "Bomb", "description": "This weapon may be fired at any time during this unit's move."},
-        "psychic": {
-            "name": "Psychic",
-            "inputs": ["x"],
-            "description": "This unit may cast X psychic powers at any point during its movement. To cast, roll a D10 and if the result is equal to or less than the psychic power's cast value it is successful. On a roll of 10, the user takes 2 Shock. A unit may only successfully cast each psychic power once per turn. Any other Psychic unit within 24\" may attempt to dispel the Psychic attack. Roll a D10. If the value is lower than the rolled value for the psychic test, the power is stopped. If the spell is not stopped, no further attempts may be made to stop the same power. If this model is locked in Melee, it may only target units in the combat. This ability may not be used against enemy units in melee with friendly units.",
-            "points": [15, {"multiply": "rule.x"}]
-        },
         "psychic_prowess": {
-            "name": "Psychic Prowess",
+            "name": "Prowess",
             "inputs": ["x"],
-            "description": "All Psychic power charge values are increased by X for this model. For example a power requiring a 6 or less now requires 6+X or less.",
+            "description": "All Power charge values are increased by X for this model. For example a power requiring a 6 or less now requires 6+X or less.",
             "points": [5]
         },
         "hover_mode": {
             "name": "Hover Mode",
             "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
-        }
+        },
+        "marking_flares": {"name": "Marking Flares", "description": "Once per round, a friendly _Biker_ unit may gain +4\" of Movement.", "points": 5},
+        "surveying_device": {"name": "Surveying Device", "description": "Once per round, a friendly _Infantry_ unit within 12\" may ignore the benefit of cover while shooting.", "points": 10},
+        "spotting_device": {"name": "Spotting Device", "description": "Increase the short and long range of all ranged weapons equipped by this unit by 6\".", "points": 5}
     },
     "units": {
         "defense_line": {

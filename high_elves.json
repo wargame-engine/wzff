@@ -592,7 +592,7 @@
             "defense": 7,
             "reflexes": 6,
             "weapons": ["fusion_rifle", "fusion_bomb"],
-            "rules": ["dragon_leader_tactics"],
+            "rules": ["champion"],
             "options": [{"replaceWeapon": "fusion_rifle", "withWeapon": ["dragon_flamethrower"]}],
             "min": 1,
             "max": 1
@@ -605,7 +605,7 @@
             "fight": 6,
             "defense": 6,
             "reflexes": 6,
-            "rules": ["banshee_leader_tactics"],
+            "rules": ["champion"],
             "weapons": [{"id": "energy_sword", "count": 3}, "shard_pistol"],
             "options": [
                 {"replaceWeapon": {"id": "energy_sword", "count": 3}, "withWeapon": ["shuriken", {"id": "fusion_glaive", "count": 3}]},
@@ -622,7 +622,7 @@
             "fight": 6,
             "defense": 7,
             "reflexes": 6,
-            "rules": ["spectre_leader_tactics"],
+            "rules": ["champion"],
             "weapons": ["spectre_rifle", "frags"],
             "options": [{"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}],
             "min": 1,
@@ -636,7 +636,7 @@
             "defense": 7,
             "reflexes": 6,
             "movement": 7,
-            "rules": ["scorpion_leader_tactics"],
+            "rules": ["champion"],
             "weapons": [{"id": "chainsword", "count": 3}, "shard_pistol", "frags"],
             "options": [{"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "slicing_sword", "count": 3}]}, {"replaceWeapon": "shard_pistol", "withWeapon": ["scorpion_claw"]}],
             "min": 1,
@@ -650,7 +650,7 @@
             "defense": 8,
             "reflexes": 6,
             "movement": 10,
-            "rules": ["spear_leader_tactics"],
+            "rules": ["champion"],
             "weapons": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}, "twin_shard_rifle"],
             "options": [{"replaceWeapon": ["laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}], "withWeapon": [{"id": "exemplar_blade", "count": 3}, "space_lance"]}],
             "min": 3,
@@ -664,7 +664,7 @@
             "fight": 6,
             "defense": 6,
             "reflexes": 6,
-            "rules": ["hawk_leader_tactics"],
+            "rules": ["champion"],
             "weapons": ["elven_blaster", "frags"],
             "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"addWeapon": ["energy_sword"], "limit": 1}],
             "min": 1,
@@ -678,7 +678,7 @@
             "fight": 6,
             "defense": 7,
             "reflexes": 6,
-            "rules": ["spider_leader_tactics"],
+            "rules": ["champion"],
             "weapons": ["spinnerette_rifle"],
             "options": [{"replaceWeapon": "spinnerette_rifle", "withWeapon": ["web_rifle", {"id": "spinnerette_rifle", "count": 2}]}, {"addWeapon": [{"id": "energy_sword", "count": 3}], "limit": 1}],
             "min": 1,
@@ -710,15 +710,7 @@
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": 10
         },
-        "titan_shield": {"name": "Titan Shield", "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.", "points": 10},
-        "dragon_leader_tactics": {"name": "Dragon Leader Tactics", "description": "?", "points": 10},
-        "banshee_leader_tactics": {"name": "Banshee Leader Tactics", "description": "?", "points": 10},
-        "spectre_leader_tactics": {"name": "Spectre Leader Tactics", "description": "?", "points": 10},
-        "scorpion_leader_tactics": {"name": "Scorpion Leader Tactics", "description": "?", "points": 10},
-        "accurate": {"name": "Accurate", "description": "You may re-roll rolls of 10 with this weapon.", "points": 15},
-        "spear_leader_tactics": {"name": "Glittering Spear Leader Tactics", "description": "?", "points": 10},
-        "hawk_leader_tactics": {"name": "Hawk Leader Tactics", "description": "?", "points": 10},
-        "spider_leader_tactics": {"name": "Hawk Leader Tactics", "description": "?", "points": 10}
+        "titan_shield": {"name": "Titan Shield", "description": "Roll a die for each hit this model takes. On a 3 or less that hit is prevented.", "points": 10}
     },
     "weapons": {
         "wraith_sword": {"name": "Wraith Sword", "attacks": 1, "short": "Melee", "ap": 4},
@@ -735,15 +727,15 @@
         "laser_lance_melee": {"name": "Laser Lance (Melee)", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["lance"]},
         "laser_lance_shoot": {"name": "Laser Lance (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["rending"]},
         "shreiking_spear_melee": {"name": "Shreiking Spear (Melee)", "attacks": 1, "short": "Melee", "ap": 6, "rules": [{"id": "critical", "x": 1}]},
-        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": ["fusion"]},
+        "shreiking_spear_shoot": {"name": "Shreiking Spear (Shooting)", "attacks": 1, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "titan_shield": {"name": "Titan Shield", "attacks": 0, "short": "Melee", "rules": ["titan_shield"]},
         "shining_cannon": {"name": "Shining Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": ["fusion", "assault"]},
+        "titan_fusion_cannon": {"name": "Titan Fusion Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "critical", "x": 1}, "assault"]},
         "titan_glaive": {"name": "Titan Glaive", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 9}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
         "spectre_rifle": {
             "name": "Spectre Rifle",
             "profiles": [
-                {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": ["fusion"]},
+                {"name": "Focused", "attacks": 1, "short": 9, "medium": 18, "ap": 4, "rules": [{"id": "critical", "x": 1}]},
                 {"name": "Dispersed", "attacks": 3, "short": 4, "medium": 8, "ap": 2, "rules": ["flame"]}
             ]
         },
@@ -752,7 +744,7 @@
             "name": "Deadly Shuriken",
             "profiles": [{"name": "Melee", "attacks": 3, "short": "Melee", "ap": 1}, {"name": "Shooting", "attacks": 3, "short": 6, "medium": 12, "ap": 2, "rules": ["assault"]}]
         },
-        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": ["fusion"]},
+        "fusion_glaive": {"name": "Energy Blade", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "critical", "x": 1}]},
         "mirror_blades": {"name": "Mirror Blades", "attacks": 1, "short": "Melee", "ap": 1, "rules": [{"id": "blast", "count": 2}]},
         "elven_blaster": {"name": "Elven Blaster", "attacks": 2, "short": 6, "medium": 12, "ap": 4, "rules": ["assault"]},
         "slicing_sword": {"name": "Slicing Sword", "attacks": 1, "short": "Melee", "ap": 2},
@@ -788,7 +780,7 @@
         "vigilance": {
             "name": "Vigilance",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Highly trained and expertly attentive, High Elf troops can react in an instant.",
             "cost": 1
         }

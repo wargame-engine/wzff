@@ -22,7 +22,7 @@
                     "fight": 7,
                     "defense": 12,
                     "movement": 8,
-                    "rules": [{"id": "psychic", "x": 1}],
+                    "rules": [{"id": "power", "x": 1}],
                     "weapons": [{"id": "large_razor_talons", "count": 6}, "grabbing_tail"],
                     "options": [
                         {
@@ -47,7 +47,7 @@
                             ]
                         },
                         {"addRule": ["wings", "adrenaline_glands_large", "toxic_sacks_large"]},
-                        {"replaceRule": {"id": "psychic", "x": 1}, "withRule": {"id": "psychic", "x": 2}}
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
                     ],
                     "min": 1,
                     "max": 1
@@ -61,13 +61,13 @@
             "max": 1,
             "keywords": ["Hive Mind"],
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "outflank", {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "swarm_melee_tactics", "x": 1}],
             "models": [
                 {
                     "name": "Soul Stealer Lord",
                     "courage": 7,
                     "shoot": 0,
-                    "fight": 8,
+                    "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
                     "wounds": 6,
@@ -96,7 +96,7 @@
                     "reflexes": 6,
                     "wounds": 1,
                     "movement": 8,
-                    "weapons": [{"id": "piercing_claws", "count": 2}],
+                    "weapons": [{"id": "piercing_claws", "count": 3}],
                     "options": [{"addWeapon": ["razor_talons"]}, {"addWeapon": ["meat_hooks", "acidic_jaws"], "limit": 1, "modelLimit": "1/4"}],
                     "min": 5,
                     "max": 20
@@ -419,7 +419,7 @@
                     "defense": 8,
                     "movement": 5,
                     "weapons": ["ccw"],
-                    "rules": [{"id": "psychic", "x": 1}],
+                    "rules": [{"id": "power", "x": 1}],
                     "min": 1,
                     "max": 1
                 },
@@ -488,7 +488,7 @@
         "huge_acidic_jaws": {"name": "Huge Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
-        "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
+        "consumer": {"name": "Consumer", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
         "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
         "acid_spitter": {"name": "Acid Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
@@ -585,7 +585,7 @@
         "1": {
             "name": "Swarm Reflexes",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Sometimes manual override by the swarm host is necessary to react efficiently.",
             "cost": 1
         },
