@@ -1,0 +1,643 @@
+{
+    "id": "rebels",
+    "name": "Rebels",
+    "author": "PlatoonFan",
+    "subfactions": {
+        "zealots": {"name": "Zealots", "id": "zealots", "color": "#00401f", "background": ""},
+        "guerrillas": {"name": "Guerrillas", "id": "guerrillas", "color": "#00401f", "background": ""},
+        "paramilities": {"name": "Paramilities", "id": "paramilitries", "color": "#00401f", "background": ""}
+
+    },
+    "units": {
+        "rebel_leader": {
+            "name": "Rebel Leader",
+            "description": "",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Company Commander",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["sawed_off_shotgun"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "commissar": {
+            "name": "Commissar",
+            "description": "A field officer assigned to keep soldiers motivated and in line.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Commissar",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["sawed_off_shotgun"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "revolutionaries_zealots": {
+            "name": "Revolutionary Zealots",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["zealots"],
+            "rules": ["light_melee_armor"],
+            "options": [{"addRule": "fanatical"}, {"replaceRule": "light_melee_armor", "withRule": ["light_armor"]}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29
+                },
+                {
+                    "name": "Weapon Team",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "flamethrower", "mount": ["Front"]},
+                                {"id": "grenade_launcher", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "revolutionaries": {
+            "name": "Revolutionary",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["guerrillas"],
+            "rules": ["light_melee_armor"],
+            "options": [{"addRule": "stealth"}, {"replaceRule": "light_melee_armor", "withRule": ["light_armor"]}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_carbine"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29
+                },
+                    {
+                        "name": "Weapon Team",
+                        "courage": 5,
+                        "shoot": 5,
+                        "fight": 5,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "movement": 6,
+                        "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                        "rules": [{"id": "crew", "x": 2}],
+                        "options": [
+                            {
+                                "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                                "withWeapon": [
+                                    {"id": "missile_launcher", "mount": ["Front"]},
+                                    {"id": "flamethrower", "mount": ["Front"]},
+                                    {"id": "grenade_launcher", "mount": ["Front"]},
+                                    {"id": "mortar", "mount": ["Front"]}
+                                ]
+                            }
+                        ],
+                        "min": 0,
+                        "max": 1
+                    }
+                
+            ]
+        },
+        "paramilitaies": {
+            "name": "Paramilities",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["paramilities"],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_carbine"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29},
+                    {
+                        "name": "Weapon Team",
+                        "courage": 5,
+                        "shoot": 5,
+                        "fight": 5,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "movement": 6,
+                        "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                        "rules": [{"id": "crew", "x": 2}],
+                        "options": [
+                            {
+                                "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                                "withWeapon": [
+                                    {"id": "missile_launcher", "mount": ["Front"]},
+                                    {"id": "flamethrower", "mount": ["Front"]},
+                                    {"id": "grenade_launcher", "mount": ["Front"]},
+                                    {"id": "mortar", "mount": ["Front"]}
+                                ]
+                            }
+                        ],
+                        "min": 0,
+                        "max": 1
+                    }
+                
+            ]
+        },
+        "Technical": {
+            "name": "Technical",
+            "description": "A large 'one ton' pickup truck with all wheel 4x drive and four wheels in the back.",
+            "rules": [{"id": "impact", "x": 1}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Truck",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": [],
+                    "options": [
+                        {"addRule": "field_radio"},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}]},
+                        {"addWeapon": [{"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                            {"addWeapon": [{"id": "missile_launcher", "mount": ["Front"]}]},
+                            {"addWeapon": [{"id": "flamethrower", "mount": ["Front"]}]},
+                            {"addWeapon": [{"id": "grenade_launcher", "mount": ["Front"]}]},
+                            {"addWeapon": [{"id": "mortar", "mount": ["Front"]}]},
+                        {"addWeapon": [{"id": "autocannon", "count": 2, "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "motorcycle_rebels": {
+            "name": "Motorcycle Rebels",
+            "description": "",
+            "category": "core",
+            "rules": [{"id":"motorcycle"}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]}
+                    ],
+                    "min": 9,
+                    "max": 29}
+            ]
+        },
+        "mounted_rebels": {
+            "name": "Mounted Rebels",
+            "description": "",
+            "category": "core",
+            "rules": [{"id":"mount_horse"}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["craft_defense_carbine", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "craft_defense_carbine", "withWeapon": ["defense_carbine"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]}
+                    ],
+                    "min": 9,
+                    "max": 29}
+            ]
+        },
+        "vet_revolutionaries_zealots": {
+            "name": "Veteran Revolutionary Zealots",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["zealots"],
+            "options": [{"addRule": "fanatical"}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29
+                },
+                {
+                    "name": "Weapon Team",
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "rules": [{"id": "crew", "x": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "flamethrower", "mount": ["Front"]},
+                                {"id": "grenade_launcher", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        },
+        "vet_revolutionaries": {
+            "name": "Veteran Revolutionaries",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["guerrillas"],
+            "options": [{"addRule": "stealth"}],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["craft_defense_carbine"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29
+                },
+                    {
+                        "name": "Weapon Team",
+                        "courage": 5,
+                        "shoot": 5,
+                        "fight": 5,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "movement": 6,
+                        "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                        "rules": [{"id": "crew", "x": 2}],
+                        "options": [
+                            {
+                                "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                                "withWeapon": [
+                                    {"id": "missile_launcher", "mount": ["Front"]},
+                                    {"id": "flamethrower", "mount": ["Front"]},
+                                    {"id": "grenade_launcher", "mount": ["Front"]},
+                                    {"id": "mortar", "mount": ["Front"]}
+                                ]
+                            }
+                        ],
+                        "min": 0,
+                        "max": 1
+                    }
+                
+            ]
+        },
+        "vet_paramilitaies": {
+            "name": "Veteran Paramilities",
+            "description": "These are the teeming masses of angry and violent people that are required for any successful revolution.",
+            "category": "core",
+            "subfactions": ["paramilities"],
+            "min": 5,
+            "max": 10,
+            "models": [
+                {
+                    "name": "Aggitator",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [{"replaceWeapon": "defense_rifle", "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]}
+                ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Revolutionary",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["hunting_rifle", "frags", "ccw"],
+                    "options": [{"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_rifle"]},
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["defense_carbine"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["shotgun"]}
+                        ,
+                        {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_rifle_softpoints"]}
+                    ],
+                    "min": 9,
+                    "max": 29},
+                    {
+                        "name": "Weapon Team",
+                        "courage": 5,
+                        "shoot": 5,
+                        "fight": 5,
+                        "defense": 5,
+                        "reflexes": 5,
+                        "movement": 6,
+                        "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                        "rules": [{"id": "crew", "x": 2}],
+                        "options": [
+                            {
+                                "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                                "withWeapon": [
+                                    {"id": "missile_launcher", "mount": ["Front"]},
+                                    {"id": "flamethrower", "mount": ["Front"]},
+                                    {"id": "grenade_launcher", "mount": ["Front"]},
+                                    {"id": "mortar", "mount": ["Front"]}
+                                ]
+                            }
+                        ],
+                        "min": 0,
+                        "max": 1
+                    }
+                
+            ]
+        }
+    },
+    "weapons": {
+        "hunting_rifle": {"name": "Hunting Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload"]},
+        "hunting_rifle_softpoints": {"name": "Hunting Rifle with Softpoints", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload", "overheating", "rending"]},
+        "sawed_off_shotgun": {"name": "Sawed-Off Shotgun", "attacks": 1, "short": 6, "rules": ["assault", "rending", "pistol"]}
+    },
+    "rules": {
+        "defense_force_tactics": {
+            "name": "Defense Force Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement \n * +1 AP",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "extra_armor": {"name": "Extra Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 10},
+        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "light_armor": {"name": "Light Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "commander_field_orders_battle_tank": {
+            "name": "Battle Tank Orders (Commander)",
+            "description": "When this unit is activated, choose two friendly Battle Tank units within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3).",
+            "points": 20
+        },
+        "field_orders_battle_tank": {
+            "name": "Battle Tank Orders",
+            "description": "When this unit is activated, choose a friendly Battle Tank unit within 6\" to receive one of the following bonuses: Re-roll failed Accuracy tests of 9+ or +1 AP or +3\" Movement or Impact(+3). A unit may only benefit from one Battle Tank Order.",
+            "points": 15
+        },
+        "field_radio_battle_tank": {
+            "name": "Field Radio (Armored)",
+            "description": "This unit may be targeted by the Battle Tank Orders special rule if it is within 24\" of another unit with a Field Radio (Armored) that is in range of the Battle Tank Orders rule. A unit may only benefit from one Battle Tank Order.",
+            "points": 10
+        },
+        "banner": {"name": "Inspiring Banner", "description": "Friendly _Infantry_ units within 6\" get +1 Courage.", "points": 10},
+        "mount_horse" : {
+            "name" : "Horse",
+            "hidden": false,
+            "description_short": "+2\" Movement",
+            "description" : "Increase this model's Movement by 2\".",
+            "points" : 2
+        },
+        "motorcycle" : {
+            "name" : "motorcyle",
+            "hidden": false,
+            "description_short": "+4\" Movement",
+            "description" : "Increase this model's Movement by 4\".",
+            "points" : 4
+        },
+        "light_melee_armor": {"name": "Improvised Armor", "hidden": false, "description": "This model gets +1 Save, against melee attacks.", "description_short": "Save +1 against melee.", "points": 1}
+    },
+    "powers": {
+        "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
+        "storm": {"name": "Strike", "description": "Target enemy unit within 12\" take 2 hits each with AP 4.", "charge": 7},
+        "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Save the next time it is attacked.", "charge": 6},
+        "shroud": {"name": "Shroud", "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.", "charge": 6},
+        "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 6}
+    },
+    "strategies": {
+        "focus_fire": {
+            "name": "Focus Fire",
+            "phase": "activation",
+            "description": "Use before Shooting with an _Infantry_ unit with Defense Rifles. Hits rolls of 1 or 2 with Defense Rifles cause 2 hits.",
+            "cost": 1
+        },
+        "high_command": {
+            "name": "High Command",
+            "phase": "activation",
+            "description": "Use after an _Infantry_ unit with the Field Orders rule activates. One additional unit may benefit from Field Orders.",
+            "cost": 1
+        },
+        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
+    },
+    "relics": {
+        "strategist": {
+            "name": "Brilliant Strategist",
+            "rule": "legend_strategist",
+            "description": "Upgrade one Leader model with Brilliant Strategist.",
+            "flavor": "This model has an adept strategic mind.",
+            "points": 25
+        }
+    }
+}

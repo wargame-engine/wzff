@@ -266,7 +266,8 @@
             "alliance": "imperial_alliance",
             "version": "0.1",
             "description": "The Imperial Inquisition is the order dedicated to hunting dangerous demons and other Psychic entities which cannot be trusted in the Human Empire. Their tactics rely on using skilled demon hunting individuals along with advanced assassins to hunt and destroy those who most dangerous."
-        }
+        },
+        "new_order": {"name": "New Order", "id": "new_order", "url": "new_order.json", "color": "#509ba9"}
     },
     "alliances": {
         "alien_swarm": {"name": "Alien Swarm"},
@@ -506,6 +507,7 @@
         "twin_aa_autocannon": {"name": "Twin AA Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4, "rules": ["anti_air"]},
         "heavy_autocannon": {"name": "Heavy Autocannon", "attacks": 4, "short": 24, "medium": 48, "ap": 4},
         "battle_cannon": {"name": "Battle Cannon", "attacks": 1, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "craft_defense_rifle": {"name": "Craft Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["unreliable"]},
         "crab_cannon": {"name": "Crab Cannon", "attacks": 1, "ap": 5, "short": 18, "medium": 36, "rules": [{"id": "blast", "x": 3}]},
         "defense_rifle": {"name": "Defense Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "defense_rifle_array": {"name": "Defense Rifle Array", "attacks": 3, "short": 12, "medium": 24, "rules": ["rapid_fire"]},

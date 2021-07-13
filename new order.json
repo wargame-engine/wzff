@@ -1,0 +1,470 @@
+{
+    "id": "new_order",
+    "name": "New Order",
+    "subfactions": {
+        "infantry_focus": {"name": "Infantry", "id": "infantry_focus", "background": "High quality infantry and anti-tank artillery.", "restricted": true},
+        "airborne_focus": {"name": "Airborne", "id": "airborne_focus", "background": "Airborne infantry and deceptive sabotage tactics.", "restricted": true},
+        "armored_focus": {"name": "Armored", "id": "armored_focus", "background": "Mechanized or motorized infantry and deadly armored vehicles.", "restricted": true}
+    },
+    "units": {
+        "allgemeine_ss": {
+            "name": "Allgemeine SS",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "keywords": ["Infantry"],
+            "rules": ["civilian_trained"],
+            "options": [
+                {"replaceWeapon": "hunting_rifle", "withWeapon": ["smg", "rifle"], "modelLimit": 6},
+                    {"replaceWeapon": "hunting_rifle", "withWeapon": ["hunting_shotgun", "hunting_rifle_softpoints"], "modelLimit": 19}],
+            "models": [
+                {
+                    "name": "Collaborator NCO",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["hunting_rifle", "ccw"],
+                    "options": [{"replaceWeapon": "hunting_rifle", "withWeapon": ["smg"]},
+                    {"replaceWeapon": "hunting_rifle", "withWeapon": ["mg_42"]},
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Collaborator",
+                    "courage": 5,
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "wounds": 1,
+                    "weapons": ["hunting_rifle", "ccw"],
+                    "options": [{"replaceWeapon": "hunting_rifle", "withWeapon": ["mg_62", "light_mortar", "mg_42"], "modelLimit": 3}],
+                    "min": 4,
+                    "max": 19
+                }
+            ]
+        },
+        "soldat": {
+            "name": "Soldat",
+            "description": "A group of hardened German Grenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["smg"], "modelLimit": 6}],
+            "models": [
+                {
+                    "name": "Soldat NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                    {"replaceWeapon": "rifle", "withWeapon": ["mg_42"]},
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Soldat",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mg_62", "light_mortar", "mg_42"], "modelLimit": 3}],
+                    "min": 4,
+                    "max": 11
+                }
+            ]
+        },
+        "ss_paranormal_grenadier": {
+            "name": "SS Paranormal Grenadiers",
+            "description": "A group of hardened German Grenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["stg_55"], "modelLimit": 6},
+                {"addRule": ["stubborn"], "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Grenadier NCO",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                    {"replaceWeapon": "rifle", "withWeapon": ["mg_42"]},
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Grenadier",
+                    "courage": 5,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mg_62", "light_mortar", "mg_42"], "modelLimit": 3}],
+                    "min": 4,
+                    "max": 11
+                }
+            ]
+        },
+        "ss_paranormal_schwarze_garde": {
+            "name": "SS Paranormal Schwarze Garde",
+            "description": "A group of hardened German Grenadiers.",
+            "min": 1,
+            "max": 1,
+            "category": "core",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["stg_55"], "modelLimit": 9},
+                {"addRule": ["aidrop", "stubborn"], "modelLimit": "all"},
+                    {"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Grenadier NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                    {"replaceWeapon": "rifle", "withWeapon": ["mg_42"]},
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Grenadier",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mg_62", "light_mortar", "mg_42"], "modelLimit": 4}],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "heavy_trooper": {
+            "name": "Heavy Trooper",
+            "description": "The SS Paranormal Division, has a wide range of different weapons research projects. Each of these weapons was normally issued out to 'crack' troops in heavy armor. Over the years, it was decided that it was best to have one kind of heavy weapons trooper, then to have completely different formations for each new heavy weapon.",
+            "min": 1,
+            "max": 1,
+            "category": "specialist",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn"],
+            "options": [
+                {"replaceWeapon": "rifle", "withWeapon": ["stg_55"], "modelLimit": 6},
+                {"addRule": ["aidrop"], "modelLimit": "all"}],
+            "models": [
+                {
+                    "name": "Heavy Tropper NCO",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["smg"]},
+                    {"replaceWeapon": "rifle", "withWeapon": ["mg_42"]},
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Heavy Trooper",
+                    "courage": 6,
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["rifle", "ccw"],
+                    "options": [{"replaceWeapon": "rifle", "withWeapon": ["mg_62", "light_mortar"], "modelLimit": 2},
+                                {"replaceWeapon": "rifle", "withWeapon": ["mg_42", "flammenwerfer", "particle_cannon", "venom_gun"], "modelLimit": 5}], 
+                    "min": 4,
+                    "max": 5
+                }
+            ]
+        },
+        "jägerin": {
+            "name": "Jägerin",
+            "description": "All female light infantry unit",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stealth"],
+            "options": [
+                {"replaceWeapon": "smg", "withWeapon": ["stg_55", "53m_smg"], "modelLimit": 8},
+                    {"replaceWeapon": "ccw", "withWeapon": ["whip"], "modelLimit": 8},
+                        {"addRule": ["soft_armor"], "modelLimit": "all"}
+                    ],
+            "models": [
+                {
+                    "name": "Jägerin NCO",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "ccw"],
+                    "options": [
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Jägerin",
+                    "courage": 7,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "ccw"],
+                    "min": 4,
+                    "max": 7
+                }
+            ]
+        },
+        "elite_garde": {
+            "name": "Elite Garde",
+            "description": "The Elite Garde (Elite Guard), also known as 'She-Wolves' or 'Wolfin', are an elite core of the Jägerin.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "subfactions": ["none", "armored_focus", "infantry_focus"],
+            "keywords": ["Infantry"],
+            "rules": ["stubborn", "fanatical", "stealth", "soft_armor"],
+            "options": [
+                {"replaceWeapon": "smg", "withWeapon": ["stg_55", "53m_smg"], "modelLimit": 8},
+                    {"replaceWeapon": "ccw", "withWeapon": ["whip"], "modelLimit": 8}
+                    ],
+            "models": [
+                {
+                    "name": "Jägerin NCO",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "ccw"],
+                    "options": [
+                    {"addWeapon": "frags"}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Jägerin",
+                    "courage": 6,
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "wounds": 1,
+                    "weapons": ["smg", "ccw"],
+                    "min": 4,
+                    "max": 7
+                }
+            ]
+        }
+},
+    "weapons": {
+        "88mm_flak": {
+            "name": "88mm (AA)/Medium Howitzer",
+            "profiles": [
+                {"name": "AT", "short": 42, "medium": 96, "attacks": 1, "ap": 9},
+                {"name": "HE", "short": 30, "medium": 60, "attacks": 1, "ap": 3, "rules": ["indirect", {"id": "blast", "x": 7}]},
+                {"name": "AA", "short": 48, "medium": 96, "attacks": 1, "ap": 2, "rules": [{"id": "blast", "x": 5}]}
+            ]},
+            "mg_42": {"name": "MG-42M", "short": 12, "medium": 24, "attacks": 3, "rules": ["heavy"]},
+            "mg_62": {"name": "MG-62", "short": 15, "medium": 30, "attacks": 4, "rules": [{"id": "team", "x": 2}]},
+            "smg": {"name": "SMG", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault"]},
+            "whip": {"name": "Whip", "short": "Melee", "medium": 3, "attacks": 1, "rules": ["assault"]},
+            "53m_smg": {"name": "53M SMG", "short": 12, "attacks": 2, "rules": ["assault", "rending"]}, 
+            "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1},
+            "stg_55": {"name": "STG-55", "attacks": 2, "short": 12, "medium": 18, "rules": ["assault"]},
+            "venom_gun": {"name": "Venom Gun", "short": 6, "medium": 12, "attacks": 4, "rules": ["assault", "scatter"]},
+            "particle_cannon": {"name": "Particle Cannon", "short": 6, "attacks": 4, "rules": ["assault", {"id": "blast", "x": 5}, "flame"]},
+            "flammenwerfer": {"name": "Flammenwerfer", "short": 6, "attacks": 4, "rules": ["assault", {"id": "blast", "x": 3}, "flame"]},
+            "hunting_shotgun": {"name": "Hunting Shotgun", "short": 6, "medium": 12, "attacks": 2, "rules": ["assault", "scatter", "rending", "reload"]},
+            "hunting_rifle": {"name": "Hunting Rifle", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload"]},
+            "hunting_rifle_softpoints": {"name": "Hunting Rifle with Softpoints", "attacks": 1, "short": 12, "medium": 24, "rules": ["reload", "overheating", "rending"]},
+            "light_mortar": {"name": "Light Mortar", "short": 12, "medium": 24, "attacks": 1, "ap": 1, "rules": [{"id": "blast", "x": 3}, {"id": "team", "x": 2}]}
+        },
+    "strategies": {
+        "sturm_assault": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Sturm Assault",
+            "flavor": "A swift and deadly end to a fight can come with a furious charge...",
+            "description": "Use when a German Infantry unit declares a Charge action. It gets +3\" of Movement for that action.",
+            "cost": 1
+        },
+        "suppressive_fire": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Suppressive Fire",
+            "flavor": "With high rate of fire and a terrifying noise, machineguns can be used to pin down enemy troops with ease.",
+            "description": "Use when a German Infantry unit that contains a Belt-Fed LMG or Medium MG fires. If the attack hits, it assigns 2 additional shock to all affected targets.",
+            "cost": 1
+        },
+        "panzer_blitz": {
+            "phase": "activation",
+            "subfactions": ["none", "airborne_focus", "armored_focus", "infantry_focus"],
+            "name": "Panzer Blitz",
+            "flavor": "A swift and deadly Panzer assault can sometimes route the enemy.",
+            "description": "Use when a German Tank unit is activated. It may make a free 6\" Move action.",
+            "cost": 1
+        },
+        "recrew": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Recrew (Infantry)",
+            "flavor": "It's highly important to keep artillery pieces manned and fighting.",
+            "description": "Use at the beginning of a round where an Infantry unit is within 2\" of an Artillery unit. Remove X models from the Infantry unit and add restore X crew to the Artillery unit.",
+            "cost": 1
+        },
+        "target_weak_point": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Target Weak Point (Infantry)",
+            "flavor": "Exploiting weak points an an enemy's armor is key to taking out hard targets.",
+            "description": "Use before shooting with an Infantry or Artillery unit's weapon with AP 3 or higher. That attack is treated as hitting the target's side.",
+            "cost": 1
+        },
+        "frag_out": {
+            "phase": "activation",
+            "subfactions": ["infantry_focus"],
+            "name": "Frag Out (Infantry)",
+            "flavor": "A volley of hand grenades can be quite effective at dealing with enemies in cover.",
+            "description": "Use before shooting with an Infantry unit that has Grenades (any type). That unit may throw 2 additional grenades.",
+            "cost": 1
+        },
+        "armored_assault": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Armored Assault (Armored)",
+            "flavor": "Occasionally armored units are used to push infantry and other units off a dug in position.",
+            "description": "Use when a Vehicle unit declares a Charge action. It is treated as having Shock(+3) for that action.",
+            "cost": 1
+        },
+        "improvised_tactics": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Improvised Tactics (Armored)",
+            "flavor": "Sometimes it is necessary to improvise in an armored engagement in order to gain the edge.",
+            "description": "Use when a Vehicle unit is attempting a reaction test. It is treated as having Initiative 9 for this test.",
+            "cost": 2
+        },
+        "crew_repairs": {
+            "phase": "activation",
+            "subfactions": ["armored_focus"],
+            "name": "Emergency Repairs (Armored)",
+            "flavor": "In moments of dire circumstance crews may need to repair their vehicle in combat.",
+            "description": "Use when a Vehicle unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+            "cost": 1
+        },
+        "combat_drop": {
+            "phase": "pre_game",
+            "subfactions": ["airborne_focus"],
+            "name": "Combat Drop (Airborne)",
+            "flavor": "A well-trained paratroop unit can drop as close as posssible to their intended target.",
+            "description": "Set one Infantry, Artillery or Airborne Vehicle unit aside in reserves before the match begins. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 12\" away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
+            "cost": 1
+        },
+        "tough_fighters": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "Tough Fighters (Airborne)",
+            "flavor": "Some of the toughest units to fight in a close combat brawl are trained Airborne units.",
+            "description": "Use before an Infantry unit uses a fight action. Its attacks gain AP1.",
+            "cost": 1
+        },
+        "stealth_tactics": {
+            "phase": "activation",
+            "subfactions": ["airborne_focus"],
+            "name": "Stealth Tactics (Airborne)",
+            "flavor": "Moving quickly and quietly is a key part of Airborne training.",
+            "description": "Use when activating an Infantry unit. It may make a free 6\" move action and may not be targetted by reaction fire when doing so.",
+            "cost": 2
+        }
+    },
+    "rules": {
+        "desert_fox": {"name": "Desert Fox", "description": "This unit and one other friendly unit may be set up in Outflanking Reserves. At the beginning of any round after the first, units may be set up within 6\" of a table edge that is not in the enemy deployment zone, and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.", "points": 20},
+        "crack_shot": {"name": "Ambush Master", "description": "This unit get +1 Accuracy and enemies hit by his attacks add one to rolls on damage tables.", "points": 30},
+        "ambush_master": {"name": "Ambush Master", "description": "This unit get +1 Accuracy when using an Ambush reaction.", "points": 20},
+        "move_move_move_infantry": {"name": "Move Move Move", "description": "This unit and friendly Infantry units within 6\" add 2\" to their Movement characteristic.", "points": 10},
+        "civilian_trained": {"name": "Civilian Trained", "description": "This unit is -1 shoot with any weapon that doesn't have 'hunting' in the name. Weapons that are not'hunting', have a max points cost of 5."},
+        "scatter": {"name": "Scatter", "description": "This unit is -1 shoot at medium range."},
+        "airdrop": {
+            "name": "Airdrop",
+            "description": "This unit may be set aside in reserves before the match begins if all models have airdrop. At the beginning of any round after the first you may attempt to place the unit anywhere on the table over 9” away from enemy units.\n\nTake a Courage test. If failed, use D10 scattering to determine the unit's new landing location. If the new location is off the table, place the unit at table edge as close as possible. If both players have units with Airdrop they must roll-off to see who deploys first, and then alternate in placing them.",
+            "points": 3
+        },
+        "heavy": {
+            "name": "Heavy",
+            "description": "This weapon has -1 to hit, unless it is aimed, in which case it is +0 to hit."
+    },
+    "stubborn": {"name": "Stubborn", "description": "This model requires 1 additional shock to become broken.", "points": ["model.wounds"]},
+"soft_armor": {"name": "Soft Armor", "hidden": false, "description": "This model gets +1 Save against weapons with a range less then 12 inches and 0 AP.", "description_short": "Save +1 against weapons with 0 ap and < 12''", "points": 1}
+},    
+"relics": {}
+    }
