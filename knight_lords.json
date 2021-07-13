@@ -22,9 +22,7 @@
                     "defense": 12,
                     "reflexes": 5,
                     "weapons": [{"id": "heavy_autocannon", "count": 2}, "light_machinegun", {"id": "stomp", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}
-                    ],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -49,9 +47,7 @@
                     "defense": 12,
                     "reflexes": 5,
                     "weapons": ["fusion_blaster", "mini_titan_sword", "light_machinegun", {"id": "stomp", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}
-                    ],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}],
                     "rules": [],
                     "min": 1,
                     "max": 1
@@ -76,10 +72,7 @@
                     "defense": 13,
                     "reflexes": 5,
                     "weapons": ["titan_fist", "light_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"},
-                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
-                    ],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}, {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -162,10 +155,7 @@
                     "defense": 13,
                     "reflexes": 5,
                     "weapons": ["titan_fusion_cannon", "light_machinegun", "titan_sword", {"id": "heavy_stomp", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"},
-                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
-                    ],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}, {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -189,10 +179,16 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 5,
-                    "weapons": ["plasma_battle_cannon", "light_machinegun", "volcano_cannon", {"id": "twin_siege_cannon", "count": 2}, "twin_shield_missiles", {"id": "twin_fusion_rifle", "count": 2}, {"id": "heavy_stomp", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_siege_cannon", "count": 1}, "withWeapon": "twin_shield_missiles"}
+                    "weapons": [
+                        "plasma_battle_cannon",
+                        "light_machinegun",
+                        "volcano_cannon",
+                        {"id": "twin_siege_cannon", "count": 2},
+                        "twin_shield_missiles",
+                        {"id": "twin_fusion_rifle", "count": 2},
+                        {"id": "heavy_stomp", "count": 3}
                     ],
+                    "options": [{"replaceWeapon": {"id": "twin_siege_cannon", "count": 1}, "withWeapon": "twin_shield_missiles"}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -217,10 +213,7 @@
                     "defense": 13,
                     "reflexes": 5,
                     "weapons": ["rapidfire_battle_cannon", {"id": "light_machinegun", "count": 2}, "titan_sword", {"id": "heavy_stomp", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"},
-                        {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}
-                    ],
+                    "options": [{"replaceWeapon": "light_machinegun", "withWeapon": "fusion_rifle"}, {"limit": 1, "addWeapon": ["titan_rocket_pod", "twin_aa_autocannon", "titan_missile_pod"]}],
                     "min": 1,
                     "max": 1,
                     "rules": []
@@ -244,10 +237,15 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 5,
-                    "weapons": ["harpoon_cannon", "triple_flamethrower_cannon", {"id": "twin_fusion_rifle", "count": 2}, {"id": "twin_siege_cannon", "count": 2}, "twin_shield_missiles", {"id": "heavy_stomp", "count": 3}],
-                    "options": [
-                        {"replaceWeapon": {"id": "twin_siege_cannon", "count": 1}, "withWeapon": "twin_shield_missiles"}
+                    "weapons": [
+                        "harpoon_cannon",
+                        "triple_flamethrower_cannon",
+                        {"id": "twin_fusion_rifle", "count": 2},
+                        {"id": "twin_siege_cannon", "count": 2},
+                        "twin_shield_missiles",
+                        {"id": "heavy_stomp", "count": 3}
                     ],
+                    "options": [{"replaceWeapon": {"id": "twin_siege_cannon", "count": 1}, "withWeapon": "twin_shield_missiles"}],
                     "min": 1,
                     "max": 1
                 }
@@ -284,43 +282,31 @@
         }
     },
     "weapons": {
-        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6,  "rules": ["fusion"]},
-        "mini_titan_sword": {"name": "Mini Titan Sword", "profiles": [
-            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 7},
-            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 3}
-        ]},
-        "titan_fist": {"name": "Titan Fist", "profiles": [
-            {"name": "Strike", "attacks": 3, "short": "Melee", "ap": 10, "rules": ["cumbersome", {"id": "critical", "x": 1}]},
-            {"name": "Smash", "attacks": 6, "short": "Melee", "ap": 4, "rules": ["cumbersome"]}
-        ]},
-        "titan_sword": {"name": "Titan Sword", "profiles": [
-            {"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8},
-            {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}
-        ]},
+        "fusion_blaster": {"name": "Fusion Blaster", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "mini_titan_sword": {"name": "Mini Titan Sword", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 7}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 3}]},
+        "titan_fist": {
+            "name": "Titan Fist",
+            "profiles": [
+                {"name": "Strike", "attacks": 3, "short": "Melee", "ap": 10, "rules": ["cumbersome", {"id": "critical", "x": 1}]},
+                {"name": "Smash", "attacks": 6, "short": "Melee", "ap": 4, "rules": ["cumbersome"]}
+            ]
+        },
+        "titan_sword": {"name": "Titan Sword", "profiles": [{"name": "Strike", "attacks": 4, "short": "Melee", "ap": 8}, {"name": "Sweep", "attacks": 8, "short": "Melee", "ap": 4}]},
         "titan_rocket_pod": {"name": "Titan Rocket Pod", "attacks": 3, "short": 24, "medium": 48, "ap": 6},
-        "titan_missile_pod": {"name": "Titan Missile Pod", "attacks": 3, "short": 36, "medium": 72, "ap": 2,  "rule": ["indirect"]},
+        "titan_missile_pod": {"name": "Titan Missile Pod", "attacks": 3, "short": 36, "medium": 72, "ap": 2, "rule": ["indirect"]},
         "gatling_cannon": {"name": "Gatling Cannon", "attacks": 12, "short": 18, "medium": 36, "ap": 4},
         "pulse_laser": {
             "name": "Pulse Laser",
-            "profiles": [
-                {"name": "High Intensity", "attacks": 3, "short": 9, "medium": 18, "ap": 10},
-                {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4}
-            ]
+            "profiles": [{"name": "High Intensity", "attacks": 3, "short": 9, "medium": 18, "ap": 10}, {"name": "Low Intensity", "attacks": 6, "short": 18, "medium": 36, "ap": 4}]
         },
-        "titan_fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 8,  "rules": ["fusion"]},
-        "plasma_battle_cannon": {
-            "name": "Plasma Battle Cannon",
-            "profiles": [
-                {"name": "Standard", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": [{"id": "blast", "x": 3}]},
-                {"name": "Overcharge", "attacks": 2, "short": 24, "medium": 48, "ap": 6,  "rules": [{"id": "overheat"}, {"id": "blast", "x": 3}]}
-            ]
-        },
-        "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4,  "rules": [{"id": "blast", "x": 2}]},
+        "titan_fusion_cannon": {"name": "Fusion Cannon", "attacks": 3, "short": 18, "medium": 36, "ap": 8, "rules": [{"id": "critical", "x": 1}]},
+        "plasma_battle_cannon": {"name": "Plasma Battle Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": ["overcharge", {"id": "blast", "x": 3}]},
+        "twin_siege_cannon": {"name": "Twin Siege Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 4, "rules": [{"id": "blast", "x": 2}]},
         "twin_shield_missiles": {"name": "Twin Shield Missiles", "attacks": 1, "short": 24, "medium": 48, "ap": 8, "rules": ["indirect"]},
         "volcano_cannon": {"name": "Volcano Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 10},
-        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6,  "rules": ["fusion"]},
+        "twin_fusion_rifle": {"name": "Twin Fusion Rifle", "attacks": 2, "short": 6, "medium": 12, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
         "rapidfire_battle_cannon": {"name": "Rapid-fire Battle Cannon", "attacks": 2, "ap": 6, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
-        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5,  "rules": []},
+        "triple_flamethrower_cannon": {"name": "Triple Flamethrower Cannon", "attacks": 9, "short": 9, "medium": 18, "ap": 5, "rules": ["flame"]},
         "harpoon_cannon": {
             "notes": "This profile needs to be looked at. Seems really swingy- either it misses or it devestates.",
             "name": "Harpoon Cannon",

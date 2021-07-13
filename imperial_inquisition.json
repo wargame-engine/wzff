@@ -11,7 +11,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, "ward", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "ward", "x": 1},  {"id": "wounds", "x": 3}],
             "models": [
                 {
                     "name": "Inquisitor",
@@ -37,7 +37,7 @@
                         },
                         {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol"]},
                         {"addWeapon": "guardian_eagle"},
-                        {"replaceRule": "ward", "withRule": {"id": "psychic", "x": 1}}
+                        {"replaceRule": {"id": "ward", "x": 1}, "withRule": {"id": "power", "x": 1}}
                     ],
                     "min": 1,
                     "max": 1
@@ -51,7 +51,7 @@
             "max": 10,
             "category": "command",
             "keywords": ["Storm Trooper", "Infantry"],
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "stormtrooper_tactics", "x": 1},  {"id": "wounds", "x": 2}],
             "models": [
                 {
                     "name": "Stormtrooper Commander",
@@ -67,7 +67,7 @@
                         {"replaceWeapon": ["heavy_defense_rifle", "heavy_ccw"], "withWeapon": [["heavy_pistol", {"id": "heavy_ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
                         {"replaceWeapon": "heavy_ccw", "withWeapon": ["energy_sword", "energy_fist"]},
-                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, "ward"]}
+                        {"addRule": [{"id": "ambush", "name": "Orbital Insertion"}, {"id": "ward", "x": 1}]}
                     ],
                     "rules": [],
                     "min": 1,
@@ -80,7 +80,10 @@
             "description": "Specially equipped and elite trained stormtrooper infantry.",
             "category": "core",
             "keywords": ["Storm Trooper", "Infantry"],
-            "options": [{"addRule": {"id": "ambush", "name": "Orbital Insertion", "modelLimit": "all"}}],
+            "options": [
+                {"addRule": {"id": "ambush", "name": "Orbital Insertion"}, "modelLimit": "all"},
+                {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+            ],
             "models": [
                 {
                     "name": "Stormtrooper Sergeant",
@@ -94,7 +97,7 @@
                     "options": [
                         {"replaceWeapon": ["heavy_defense_rifle", "ccw"], "withWeapon": [["heavy_pistol", {"id": "ccw", "count": 2}]]},
                         {"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol"]},
-                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["chainsword", "energy_sword", "energy_fist"]}
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": [{"id": "chainsword", "count": 2}, {"id": "energy_sword", "count": 2}, {"id": "energy_fist", "count": 2}]}
                     ],
                     "min": 1,
                     "max": 1
@@ -109,15 +112,94 @@
                     "movement": 6,
                     "weapons": ["heavy_defense_rifle", "frags", "ccw"],
                     "options": [
-                        {"addRule": {"id": "field_radio"}, "modelLimit": 1},
-                        {"replaceWeapon": "heavy_defense_rifle", "withWeapon": ["flamethrower", "volley_gun", "plasma_rifle", "grenade_launcher", "fusion_rifle", "sniper_rifle"], "modelLimit": "2/5"}
+                        {"addRule": {"id": "field_radio"}, "modelLimit": 1}
                     ],
                     "min": 4,
                     "max": 9
                 }
             ]
         },
-        "inquisition_light_gunship": {
+        "psyker_hunter_assassin": {
+            "name": "Psychic-Hunter Assassin",
+            "description": "An assassin trained in subduing those who misuse psychic powers",
+            "rules": [{"id": "wounds", "x": 3}, "fear", {"id": {"id": "ward", "x": 1}, "x": 4}, "assassin"],
+            "category": "specialist",
+            "models": [
+                {
+                "name": "Psychic-Hunter Assassin",
+                "movement": 7,
+                "shoot": 7,
+                "fight": 7,
+                "defense": 6,
+                "reflexes": 7,
+                "courage": 7,
+                "min": 1,
+                "max": 1,
+                "weapons": [{"id": "spectral_eye", "count": 1}, {"id": "assassin_unarmed", "count": 4}]
+                }
+            ]
+        },
+        "sniper_assassin": {
+            "name": "Sniper Assassin",
+            "description": "An assassin sent to remove enemy leadership",
+            "rules": [{"id": "wounds", "x": 3}, "assassin"],
+            "category": "specialist",
+            "models": [
+                {
+                    "name": "Sniper Assassin",
+                    "movement": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 7,
+                    "courage": 7,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "assassin_sniper", "count": 1}, {"id": "ccw", "count": 2}]
+                }
+            ]
+        },
+        "berserker_assassin": {
+            "name": "Berzerker Assassin",
+            "description": "An assassin sent to uproot entire cults",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
+            "category": "specialist",
+            "models": [
+                  {
+                      "name": "Berzerker Assassin",
+                      "movement": 7,
+                      "shoot": 7,
+                      "fight": 7,
+                      "defense": 6,
+                      "reflexes": 7,
+                      "courage": 7,
+                      "min": 1,
+                      "max": 1,
+                      "weapons": [{"id": "energy_sword", "count": 8}]
+                    }
+                ]
+        },
+        "stealth_assassin": {
+            "name": "Stealth Assassin",
+            "description": "An assassin sent to strike from the shadows",
+            "rules": [{"id": "wounds", "x": 3}, "assassin", "stealth", "ambush"],
+            "category": "specialist",
+            "models": [
+                    {
+                        "name": "Stealth Assassin",
+                        "movement": 7,
+                        "shoot": 7,
+                        "fight": 7,
+                        "defense": 6,
+                        "reflexes": 7,
+                        "courage": 7,
+                        "min": 1,
+                        "max": 1,
+                        "weapons": [{"id": "mind_shredder", "count": 1}, {"id": "phase_sword", "count": 4}]
+                    }
+                ]
+        },
+            "inquisition_light_gunship": {
             "name": "Inquisition Light Gunship",
             "description": "A light gunship with sliding doors for troop transport.",
             "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
@@ -169,9 +251,84 @@
                     "max": 1
                 }
             ]
+        },
+        "armored_stormtrooper_truck": {
+            "name": "Armored Stormtrooper Truck",
+            "description": "An armored transport of the imperial defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Armored Stormtrooper Truck",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 10,
+                    "reflexes": 6,
+                    "weapons": ["light_battle_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": "light_battle_cannon", "withWeapon": ["twin_minigun", "missile_rack"]},
+                        {"addWeapon": [{"id": "heavy_volley_gun", "count": 2, "mount": ["Front"]}, {"id": "autocannon", "count": 2, "mount": ["Front"]}], "limit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "marine_heavy_tank": {
+            "name": "Heavy Assault APC",
+            "description": "A heavily armored transport sporting an arsenal of weapons built by the loyal marines.",
+            "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 11}, "vulnerable_rear", "damage_table_vehicle", "assault_ramp"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "category": "heavy",
+            "max": 1,
+            "models": [
+                {
+                    "name": "Heavy Assault APC",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 13,
+                    "reflexes": 6,
+                    "weapons": [
+                        {"id": "twin_heavy_machinegun", "mount": ["Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Left", "Front"]},
+                        {"id": "assault_rifle_array", "mount": ["Right", "Front"]}
+                    ],
+                    "options": [
+                        {"addWeapon": ["twin_marine_rifle", "heavy_fusion_rifle", "hunter_missiles"]},
+                        {
+                            "replaceWeapon": [{"id": "assault_rifle_array", "mount": ["Left", "Front"]}, {"id": "assault_rifle_array", "mount": ["Right", "Front"]}],
+                            "withWeapon": [
+                                [{"id": "flamethrower_cannon", "mount": ["Left", "Front"]}, {"id": "flamethrower_cannon", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_laser_cannon", "mount": ["Left", "Front"]}, {"id": "twin_laser_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        },
+                        {"replaceWeapon": {"id": "twin_heavy_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "twin_minigun", "mount": ["Front"]}},
+                        {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         }
     },
-    "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24}},
+    "weapons": {"guardian_eagle": {"name": "Guardian Eagle", "attacks": 3, "ap": 1, "short": 12, "medium": 24},
+    "spectral_eye": {"name": "Spectral Eye", "attacks": 2, "ap": 4, "short": 9, "medium": 18},
+    "assassin_unarmed": {"name": "Assassin Martial Arts", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
+    "mind_shredder": {"name": "Mind Shredder", "attacks": 1, "ap": 4, "short": 6, "medium": 12, "rules": [{"id": "shocking", "x": 3}]},
+    "phase_sword": {"name": "Phase Sword", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending", "phase"]}
+},
     "powers": {
         "fortify": {"name": "Fortify", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
         "terror": {"name": "Terror", "description": "Target enemy model within 12\" gets -1 Courage until the end of the round.", "charge": 8},
@@ -180,19 +337,22 @@
         "pursuit": {"name": "Pursuit", "description": "Target friendly unit within 12\" may target Character units even if they are protected by enemy units.", "charge": 6},
         "retribution": {"name": "Retribution", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6}
     },
-    "rules": {},
+    "rules": {
+        "berzerk_overload": {"name": "Berzerk Overload", "description": "When this unit is destroyed, all units within 6\" gain 2 shock", "points": 15},
+        "phase": {"name": "Phase", "description": "Units with the Resilient and Tough rules cannot use them for saves against this weapon's attacks", "points":10}
+    },
     "strategies": [
         {
             "name": "Vigilance",
             "phase": "activation",
-            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
             "cost": 1
         },
         {
             "phase": "activation",
             "name": "Psychic Shield",
-            "description": "Use when a Psychic(x) test is taken within 24\" of an Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "description": "Use when a Power(x) test is taken within 24\" of an Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, the Inquisition can protect themselves from psychic powers.",
             "cost": 1
         },

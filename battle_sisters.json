@@ -9,25 +9,32 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 2}, {"id": "wounds", "x": 3}, "fly", "holy_saint"],
             "models": [
                 {
-                    "name": "High Sister",
+                    "name": "Holy Saint",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 7,
                     "fight": 7,
                     "defense": 8,
                     "reflexes": 7,
-                    "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 5}],
-                    "options": [
-                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
-                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 3}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 4}]]},
-                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
-                        {"replaceWeapon": {"id": "chainsword", "count": 4}, "withWeapon": [{"id": "energy_sword", "count": 4}, {"id": "energy_mace", "count": 4}, {"id": "energy_axe", "count": 4}]}
-                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, "fly", "holy_saint", {"id": "ward", "x": 1}, {"id": "saint_tactics", "x": 2}],
+                    "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 6}],
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "name": "Angel",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["fly"],
+                    "weapons": ["marine_pistol", {"id": "energy_sword", "count": 3}, "at_grenade"],
+                    "min": 0,
+                    "max": 2
                 }
             ]
         },
@@ -37,7 +44,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 3}, {"id": "sisters_tactics", "x": 2}],
             "models": [
                 {
                     "name": "High Sister",
@@ -65,7 +72,7 @@
             "min": 5,
             "max": 10,
             "category": "command",
-            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "tough", "x": 1}, {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
+            "rules": [{"id": "leader_x", "x": "Infantry"},  {"id": "wounds", "x": 2}, {"id": "sisters_tactics", "x": 1}],
             "models": [
                 {
                     "name": "High Sister",
@@ -105,7 +112,7 @@
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
                     "options": [
-                        {"addRule": [{"id": "ward", "name": "Faith Shield"}]},
+                        {"addRule": [{"id": {"id": "ward", "x": 1}, "name": "Faith Shield"}]},
                         {"replaceRule": "banner_of_focus", "withRule": ["banner_of_justice", "banner_of_wrath"], "limit": 1}
                     ],
                     "min": 1,
@@ -161,7 +168,7 @@
             "name": "Battle Sisters",
             "description": "A group of sisters with marine rifles to pack an extra punch.",
             "category": "core",
-            "options": [{"addRule": [{"id": "scout", "name": "Dominion"}], "modelLimit": "all"}],
+            "options": [{"addModel": "lucky_angel"}, {"modelLimit": 1, "addRule": ["banner"]}],
             "models": [
                 {
                     "name": "Sister Superior",
@@ -172,6 +179,12 @@
                     "defense": 7,
                     "reflexes": 5,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 1}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -197,6 +210,48 @@
                 }
             ]
         },
+        "dominion_sisters": {
+            "name": "Dominion Sisters",
+            "description": "A group of sisters with marine rifles to pack an extra punch.",
+            "category": "strike",
+            "options": [{"addModel": "lucky_angel"}, {"modelLimit": 1, "addRule": ["banner"]}],
+            "rules": ["scout"],
+            "models": [
+                {
+                    "name": "Dominion Superior",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 1}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 2}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 2}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_axe", "count": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Dominion Sister",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 1}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "twin_marine_rifle"], "modelLimit": 4}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
         "celestial_sisters": {
             "name": "Celestial Sisters",
             "description": "A group of elite sisters with marine rifles to pack an extra punch.",
@@ -204,7 +259,8 @@
             "max": 10,
             "category": "core",
             "options": [
-                {"addModel": "lucky_angel"}
+                {"addModel": "lucky_angel"},
+                {"modelLimit": 1, "addRule": ["banner"]}
             ],
             "models": [
                 {
@@ -216,6 +272,12 @@
                     "defense": 7,
                     "reflexes": 6,
                     "weapons": ["marine_rifle", "at_grenade", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": "marine_rifle", "withWeapon": ["combi_plasma", "combi_flamer", "combi_fusion", "twin_marine_rifle"]},
+                        {"replaceWeapon": ["marine_rifle", {"id": "ccw", "count": 1}], "withWeapon": [["marine_pistol", {"id": "chainsword", "count": 3}]]},
+                        {"replaceWeapon": "marine_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]},
+                        {"replaceWeapon": {"id": "chainsword", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_mace", "count": 3}, {"id": "energy_axe", "count": 3}]}
+                    ],
                     "min": 1,
                     "max": 1
                 },
@@ -271,8 +333,8 @@
             "min": 5,
             "max": 10,
             "category": "strike",
-            "rules": ["ambush", "fly"],
-            "options": [{"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 1}, {"id": "chainsword", "count": 1}]}],
+            "rules": ["fly"],
+            "options": [{"replaceWeapon": {"id": "marine_pistol", "count": 1}, "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "chainsword", "count": 2}]}],
             "models": [
                 {
                     "name": "Winged Sister Superior",
@@ -297,7 +359,7 @@
                     "reflexes": 5,
                     "weapons": [{"id": "marine_pistol", "count": 2}, "at_grenade", "ccw"],
                     "options": [
-                        {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 1}
+                        {"replaceWeapon": {"id": "marine_pistol", "count": 2}, "withWeapon": [{"id": "flamethrower_pistol", "count": 2}, {"id": "fusion_pistol", "count": 1}], "modelLimit": 2}
                     ],
                     "min": 4,
                     "max": 9
@@ -305,15 +367,15 @@
             ]
         },
         "devastator_sisters": {
-            "name": "Devastator Sisters",
+            "name": "Retribution Sisters",
             "description": "A group of sisters packed with heavy weapons to deal high damage.",
             "min": 5,
             "max": 10,
-            "category": "heavy",
-            "options": [{"addModel": "lucky_angel", "modelLimit": 1}],
+            "category": "specialist",
+            "options": [{"addModel": "lucky_angel", "modelLimit": 2}, {"modelLimit": 1, "addRule": ["banner"]}],
             "models": [
                 {
-                    "name": "Devastator Sister Superior",
+                    "name": "Retribution Sister Superior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -325,7 +387,7 @@
                     "max": 1
                 },
                 {
-                    "name": "Devastator Sister",
+                    "name": "Retribution Sister",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 6,
@@ -429,7 +491,7 @@
                 {
                     "name": "Organ Tank",
                     "movement": 10,
-                    "courage": 5,
+                    "courage": 6,
                     "shoot": 6,
                     "fight": 6,
                     "defense": 12,
@@ -481,12 +543,11 @@
         "lucky_angel": {
             "name": "Lucky Angel",
             "movement": 6,
-            "courage": 5,
-            "shoot": 5,
-            "fight": 5,
-            "defense": 5,
-            "reflexes": 5,
-            "weapons": [],
+            "courage": "-",
+            "shoot": "-",
+            "fight": "-",
+            "defense": "-",
+            "reflexes": "-",
             "rules": ["lucky_angel"],
             "min": 1,
             "max": 1
@@ -507,6 +568,12 @@
         }
     },
     "rules": {
+        "saint_tactics": {
+            "name": "Saint Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll all failed Accuracy tests \n * Re-roll all failed Strength tests",
+            "points": ["rule.x", {"multiply": 15}]
+        },
         "holy_saint": {
             "name": "Holy Saint",
             "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.",
@@ -525,7 +592,7 @@
         },
         "lucky_angel": {
             "name": "Lucky Angel",
-            "description": "Once per round, this unit may re-roll one Strength or Accuracy test.",
+            "description": "Once per round, this unit may re-roll one Strength or Accuracy test. This may be used one additional time per round for each model with this rule.",
             "points": 5
         },
         "celestial": {
@@ -545,10 +612,10 @@
     },
     "strategies": [
         {
-            "name": "Second Chance",
+            "name": "Miracle",
             "phase": "activation",
-            "description": "Use when taking a set of skill tests. Re-roll all skill test dice (including successful rolls).",
-            "flavor": "Sometimes it is necessary ask for a second chance.",
+            "description": "Use when taking a set of skill tests. Re-roll all failed skill tests.",
+            "flavor": "In times of great need, sometimes a miracle can save the day.",
             "cost": 2
         },
         {
@@ -561,8 +628,32 @@
         {
             "phase": "activation",
             "name": "Holy Protection",
-            "description": "Use when a Psychic(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
+            "description": "Use when a Power(x) test is taken within 24\" of any Infantry unit. Roll a D10. If the value is less than or equal to the test to cast the power, it is prevented.",
             "flavor": "Shielded by holy energy, Battle Sisters can protect themselves from psychic powers.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Ferocity",
+            "phase": "activation",
+            "description": "Use this strategy when an _Infantry_ unit charges. All models in that unit may make one additional attack.",
+            "flavor": "Sometimes with disregard for their own life, these battle sisters will stop at nothing to defeat their enemies.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Fury",
+            "phase": "activation",
+            "flavor": "These battle sisters are furious in resolve and can rip through their enemies.",
+            "description": "Use when an _Infantry_ unit makes a Fight action. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["assault_focus"],
+            "name": "Assault",
+            "phase": "activation",
+            "flavor": "With a furious charge, these battle sisters move into combat quickly.",
+            "description": "Use this strategy when an _Infantry_ unit makes a Move action. That unit gains +3\" of Movement for that action.",
             "cost": 1
         }
     ]

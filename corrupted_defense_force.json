@@ -1,0 +1,850 @@
+{
+    "id": "corrupted_defense_force",
+    "name": "Corrupted Defence Force",
+    "author": "guitarninja#5707",
+    "units": {
+        "commander": {
+            "name": "Corrupted Commander",
+            "description": "Foot infantry commander of the corrupted defense force.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "defense_force_tactics", "x": 2},  {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Company Commander",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 2}], "withWeapon": [["pistol", {"id": "ccw", "count": 3}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "enforcer": {
+            "name": "Enforcer",
+            "description": "A particularly dangerous individual assigned to keep fighters in line through any means necessary.",
+            "min": 5,
+            "max": 10,
+            "category": "specialist",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, "no_retreat", {"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Enforcer",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", {"id": "ccw", "count": 3}],
+                    "options": [
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 3}, "withWeapon": [{"id": "energy_sword", "count": 3}, {"id": "energy_fist", "count": 3}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "psychic_lord": {
+            "name": "Psychic Lord",
+            "description": "A power psychic turned corrupted leader.",
+            "min": 5,
+            "max": 10,
+            "category": "command",
+            "keywords": ["Infantry"],
+            "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+            "models": [
+                {
+                    "name": "Psychic Lord",
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "movement": 6,
+                    "weapons": ["pistol", "frags", "staff"],
+                    "options": [
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
+                        {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol"]},
+                        {"replaceWeapon": {"id": "ccw", "count": 2}, "withWeapon": ["energy_sword", "energy_fist"]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "cultists": {
+            "name": "Cultists",
+            "description": "Humans who have sold their souls to the dark gods.",
+            "subfactions": ["none", "change_traitors", "pestilence_focus"],
+            "min": 10,
+            "max": 30,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Cultist",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": [{"id": "defense_rifle", "count": 1}, "frags", "ccw"],
+                    "options": [
+                        {"modelLimit": 2, "replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "light_machinegun"]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
+                    ],
+                    "min": 10,
+                    "max": 30
+                }
+            ]
+        },
+        "militia_squad": {
+            "name": "Militia Squad",
+            "description": "A rogue band of deserters and traitors.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [
+                {"addRule": "banner", "modelLimit": 1},
+                {"replaceWeapon": "defense_rifle", "withWeapon": [["pistol", {"id": "ccw", "count": 2}]]},
+                {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun"]}
+            ],
+            "models": [
+                {
+                    "name": "Militia Champion",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Militia Fighter",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 1},
+                        {"replaceModel": "weapon_team", "modelLimit": 2}
+                    ],
+                    "rules": [],
+                    "min": 9,
+                    "max": 19
+                }
+            ]
+        },
+        "mutant_squad": {
+            "name": "Mutant Squad",
+            "description": "A more experienced infantry squad that has seen combat and survived.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "rules": ["mutations"],
+            "models": [
+                {
+                    "name": "Mutant Sergeant",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Mutant Fighter",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 9,
+                    "max": 19
+                }
+            ]
+        },
+        "veteran_squad": {
+            "name": "Corrupted Veteran Squad",
+            "description": "A more experienced renegade squad that has seen combat and survived.",
+            "category": "core",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}, {"addRule": "banner", "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Corrupted Veteran Sergeant",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Corrupted Veteran",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3},
+                        {"replaceModel": "veteran_weapon_team", "modelLimit": 2}
+                    ],
+                    "min": 9,
+                    "max": 14
+                }
+            ]
+        },
+        "maurauder_squad": {
+            "name": "Marauder Squad",
+            "description": "A group of highly aggressive renegade fighters who can handle some close quarters fighting.",
+            "category": "specialist",
+            "min": 5,
+            "max": 10,
+            "options": [{"replaceWeapon": "defense_rifle", "withWeapon": "shotgun"}, {"addRule": ["heavy_armor"], "modelLimit": "all"}],
+            "rules": ["stealth"],
+            "models": [
+                {
+                    "name": "Marauder Leader",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["marine_rifle"]},
+                        {"replaceWeapon": ["defense_rifle", {"id": "ccw", "count": 1}], "withWeapon": [[{"id": "pistol"}, {"id": "ccw", "count": 2}]]},
+                        {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
+                        {
+                            "replaceWeapon": {"id": "ccw", "count": 2},
+                            "withWeapon": [{"id": "energy_sword", "count": 2}, {"id": "energy_axe", "count": 2}, {"id": "energy_mace", "count": 2}, {"id": "energy_fist", "count": 2}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Marauder",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "movement": 6,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": "field_radio", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"], "modelLimit": 3}
+                    ],
+                    "min": 4,
+                    "max": 9
+                }
+            ]
+        },
+        "command_squad": {
+            "name": "Corrupted Command Squad",
+            "description": "A smaller infantry squad used to support a commanding officer.",
+            "category": "specialist",
+            "min": 4,
+            "max": 4,
+            "models": [
+                {
+                    "name": "Corrupted Veteran",
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["defense_rifle", "frags", "ccw"],
+                    "options": [
+                        {"addRule": ["field_radio"], "modelLimit": 1},
+                        {"addRule": ["terrifying_banner"], "modelLimit": 1},
+                        {"addRule": ["medical_training"], "modelLimit": 1},
+                        {"addWeapon": ["artillery_barrage"], "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": "heavy_flamethrower", "modelLimit": 1},
+                        {"replaceWeapon": "defense_rifle", "withWeapon": ["shotgun", "flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle"]},
+                        {"addRule": ["heavy_armor"], "modelLimit": "all"}
+                    ],
+                    "min": 4,
+                    "max": 4
+                }
+            ]
+        },
+        "daemon_spawn": {
+            "name": "Daemon Spawn",
+            "description": "Horribly mutated beings that run rampant on the battlefield.",
+            "rules": ["mutations", "agile", "fear", {"id": "wounds", "x": 2}],
+            "subfactions": ["none", "change_traitors", "rage_focus", "pestilence_focus"],
+            "min": 1,
+            "max": 5,
+            "category": "strike",
+            "models": [
+                {"name": "Daemon Spawn", "movement": 7, "courage": 7, "shoot": 0, "fight": 5, "defense": 7, "reflexes": 6, "weapons": [{"id": "claws", "count": 3}], "rules": [], "min": 1, "max": 5}
+            ]
+        },
+        "heavy_weapon_squad": {
+            "name": "Heavy Weapons Squad",
+            "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
+            "category": "specialist",
+            "min": 3,
+            "max": 6,
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Weapon Team",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_machinegun", "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "missile_launcher", "mount": ["Front"]},
+                                {"id": "autocannon", "mount": ["Front"]},
+                                {"id": "laser_cannon", "mount": ["Front"]},
+                                {"id": "mortar", "mount": ["Front"]}
+                            ]
+                        }
+                    ],
+                    "min": 3,
+                    "max": 6
+                }
+            ]
+        },
+        "ogres": {
+            "name": "Corrupted Ogres",
+            "description": "A squad of super-strong large human-like creatures.",
+            "category": "specialist",
+            "min": 5,
+            "max": 10,
+            "options": [
+                {"addRule": ["ogre_shield"]},
+                {"replaceWeapon": "heavy_shotgun", "withWeapon": ["wrist_grenades"]},
+                {"replaceWeapon": {"id": "heavy_ccw", "count": 2}, "withWeapon": ["ogre_maul"]}
+            ],
+            "rules": [{"id": "wounds", "x": 2}],
+            "models": [
+                {
+                    "name": "Corrupted Ogre Leader",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "movement": 6,
+                    "reflexes": 5,
+                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Corrupted Ogre",
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "movement": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["heavy_shotgun", "frags", {"id": "heavy_ccw", "count": 2}],
+                    "min": 2,
+                    "max": 8
+                }
+            ]
+        },
+        "battle_tank": {
+            "name": "Corrupted Battle Tank",
+            "description": "A main line battle tank.",
+            "min": 1,
+            "max": 1,
+            "category": "heavy",
+            "keywords": ["Vehicle", "Battle Tank"],
+            "rules": ["vulnerable_side_rear", "damage_table_vehicle"],
+            "models": [
+                {
+                    "name": "Corrupted Battle Tank",
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 12,
+                    "movement": 10,
+                    "reflexes": 5,
+                    "weapons": ["nova_cannon", {"id": "heavy_flamethrower", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank", "extra_armor"]},
+                        {"replaceWeapon": "nova_cannon", "withWeapon": ["battle_cannon", "siege_cannon", "twin_autocannon", "tank_hunter_cannon", "heavy_plasma_cannon", "gatling_cannon"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "laser_cannon", "mount": ["Front"]}]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
+                                [{"id": "heavy_fusion_rifle", "mount": ["Left", "Front"]}, {"id": "heavy_fusion_rifle", "mount": ["Right", "Front"]}],
+                                [{"id": "heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}],
+                                [{"id": "plasma_cannon", "mount": ["Left", "Front"]}, {"id": "plasma_cannon", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 1
+                        }
+                    ],
+                    "rules": [{"id": "impact", "x": 6}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "light_apc": {
+            "name": "Corrupted APC",
+            "description": "A light transport of the corrupted defense force.",
+            "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted APC",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, "heavy_flamethrower"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"addWeapon": [[{"id": "defense_rifle_array", "mount": ["Left"]}, {"id": "defense_rifle_array", "mount": ["Right"]}]]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_machinegun", "heavy_machinegun"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "assault_vehicle": {
+            "name": "Corrupted Assault Vehicle",
+            "description": "A light assault vehicle with multiple roles.",
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted Assault Vehicle",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_fusion_rifle", "mount": ["Front"]}, "fusion_cannon"],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {"replaceWeapon": "fusion_cannon", "withWeapon": ["acid_cannon", "flamestorm_cannon"]},
+                        {
+                            "replaceWeapon": {"id": "heavy_fusion_rifle", "mount": ["Front"]},
+                            "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}, {"id": "heavy_flamethrower", "mount": ["Front"]}]
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "support_vehicle": {
+            "name": "Corrupted Support Vehicle",
+            "description": "A support vehicle with multiple roles from artillery to anti-air.",
+            "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "damage_table_vehicle"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted Support Vehicle",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_flamethrower", "mount": ["Front"]}, {"id": "twin_shard_mortar", "count": 2}],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "extra_armor"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"replaceWeapon": {"id": "twin_shard_mortar", "count": 2}, "withWeapon": ["artillery_cannon", {"id": "twin_aa_autocannon", "count": 2}, "eagle_rockets", "death_missile"]},
+                        {"replaceWeapon": {"id": "heavy_flamethrower", "mount": ["Front"]}, "withWeapon": [{"id": "heavy_machinegun", "mount": ["Front"]}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "scout_walker": {
+            "name": "Corrupted Scout Walker",
+            "description": "A lightly equipped recon walker.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle", "scout"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Corrupted Scout Walker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 8,
+                    "reflexes": 5,
+                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "armored_walker": {
+            "name": "Corrupted Armored Walker",
+            "description": "An armored light combat walker.",
+            "rules": ["vulnerable_rear", "damage_table_vehicle"],
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "category": "strike",
+            "models": [
+                {
+                    "name": "Corrupted Armored Walker",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
+                    "options": [
+                        {"addWeapon": ["hunter_missiles", "walker_chainsaw"]},
+                        {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_machinegun", "laser_cannon", "autocannon", "plasma_cannon"]}
+                    ],
+                    "min": 1,
+                    "max": 3
+                }
+            ]
+        },
+        "light_gunship": {
+            "name": "Corrupted Transport Gunship",
+            "description": "A light gunship with sliding doors for troop transport.",
+            "rules": [{"id": "transport", "x": 11}, "aircraft", "hover_mode", "damage_table_aircraft"],
+            "category": "transport",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted Transport Gunship",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": {"id": "laser_cannon", "mount": ["Front"]}},
+                        {"addWeapon": [{"id": "strike_missiles", "mount": ["Front"]}, {"id": "rocket_pod", "count": 2, "mount": ["Front"]}]},
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "heavy_gunship": {
+            "name": "Corrupted Heavy Gunship",
+            "description": "A heavy gunship with a variety of weapon options.",
+            "rules": ["aircraft", "hover_mode", "damage_table_aircraft"],
+            "category": "heavy",
+            "keywords": ["Vehicle"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted Heavy Gunship",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "weapons": [{"id": "laser_machinegun", "mount": ["Front"]}, {"id": "strike_missiles", "mount": ["Front"]}],
+                    "options": [
+                        {"replaceWeapon": {"id": "laser_machinegun", "mount": ["Front"]}, "withWeapon": [{"id": "laser_cannon", "mount": ["Front"]}, {"id": "heavy_machinegun", "mount": ["Front"]}]},
+                        {
+                            "replaceWeapon": {"id": "strike_missiles", "mount": ["Front"]},
+                            "withWeapon": [
+                                {"id": "rocket_pod", "count": 2, "mount": ["Front"]},
+                                {"id": "twin_laser_cannon", "count": 2, "mount": ["Front"]},
+                                {"id": "gatling_gun", "count": 2, "mount": ["Front"]}
+                            ]
+                        },
+                        {"addWeapon": [[{"id": "heavy_machinegun", "mount": ["Left"]}, {"id": "heavy_machinegun", "mount": ["Right"]}]]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "super_heavy_battle_tank": {
+            "name": "Corrupted Super Heavy Battle Tank",
+            "description": "A titanic battle tank with a variety of weapon options.",
+            "rules": ["vulnerable_rear", "damage_table_titan", {"id": "heavy_impact", "x": 6}],
+            "category": "super_heavy",
+            "keywords": ["Vehicle", "Battle Tank"],
+            "min": 1,
+            "max": 1,
+            "models": [
+                {
+                    "name": "Corrupted Super Heavy Battle Tank",
+                    "movement": 10,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 13,
+                    "reflexes": 5,
+                    "weapons": [{"id": "siege_cannon", "mount": ["Front"]}, "titan_hell_cannon", "autocannon", {"id": "twin_heavy_machinegun", "mount": ["Front"]}],
+                    "options": [
+                        {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio_battle_tank"]},
+                        {"replaceWeapon": "titan_hell_cannon", "withWeapon": ["titan_battle_cannon"]},
+                        {"addWeapon": [{"id": "light_machinegun", "count": 1}, {"id": "twin_marine_rifle", "count": 1}], "limit": 1},
+                        {"addWeapon": ["hunter_missiles"]},
+                        {
+                            "addWeapon": [
+                                [{"id": "twin_heavy_machinegun", "mount": ["Left", "Front"]}, {"id": "heavy_machinegun", "mount": ["Right", "Front"]}],
+                                [{"id": "twin_heavy_flamethrower", "mount": ["Left", "Front"]}, {"id": "heavy_flamethrower", "mount": ["Right", "Front"]}]
+                            ],
+                            "limit": 2
+                        }
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        }
+    },
+    "models": {
+        "veteran_weapon_team": {
+            "name": "Veteran Weapon Team",
+            "courage": 6,
+            "shoot": 6,
+            "fight": 5,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        },
+        "weapon_team": {
+            "name": "Militia Weapon Team",
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 5,
+            "reflexes": 5,
+            "movement": 6,
+            "weapons": [{"id": "heavy_machinegun", "count": 1, "mount": ["Front"]}, "frags", {"id": "ccw", "count": 2}],
+            "rules": [{"id": "wounds", "x": 2}],
+            "options": [
+                {
+                    "replaceWeapon": {"id": "heavy_machinegun", "mount": ["Front"]},
+                    "withWeapon": [
+                        {"id": "missile_launcher", "mount": ["Front"]},
+                        {"id": "autocannon", "mount": ["Front"]},
+                        {"id": "laser_cannon", "mount": ["Front"]},
+                        {"id": "mortar", "mount": ["Front"]}
+                    ]
+                }
+            ],
+            "min": 0,
+            "max": 1
+        }
+    },
+    "weapons": {
+        "hammer_cannon": {"name": "The Hammer", "attacks": 1, "ap": 7, "short": 24, "medium": 48, "rules": [{"id": "blast", "x": 3}]},
+        "titan_hell_cannon": {"name": "Titan Hell Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 10, "rules": [{"id": "blast", "x": 3}]},
+        "titan_battle_cannon": {"name": "Titan Battle Cannon", "attacks": 2, "ap": 8, "short": 36, "medium": 72, "rules": [{"id": "blast", "x": 3}]},
+        "fusion_cannon": {"name": "Fusion Cannon", "attacks": 2, "short": 12, "medium": 24, "ap": 6, "rules": [{"id": "critical", "x": 1}]},
+        "power_bolt": {"medium": 18, "attacks": 1, "ap": 7},
+        "power_storm": {"medium": 9, "ap": 1, "attacks": 8},
+        "stun_grenades": {"name": "Stun Grenades", "attacks": 1, "short": 6, "rules": ["grenade", "stun"]}
+    },
+    "rules": {
+        "high_command": {"name": "High Command", "description": "This model may use Defense Force Tactics one additional time.", "points": 2},
+        "defense_force_tactics": {
+            "name": "Defense Force Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+ \n * +3\" of Movement",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "ogre_shield": {"name": "Ogre Shield", "description_short": "+1 Save", "description": "This model gets +1 Save.", "points": 2},
+        "no_retreat": {
+            "name": "No Retreat",
+            "description": "Once per round, when a friendly _Infantry_ unit within 3\" fails a Courage test, it may remove a model to re-roll that test. The second result must be used.",
+            "points": 5
+        },
+        "extra_armor": {"name": "Reinforced Hull", "description": "Subtract 1 from all Damage Table(X) rolls for this model.", "points": 10},
+        "heavy_armor": {"name": "Heavy Armor", "hidden": true, "description": "This model gets +1 Save.", "description_short": "Save +1", "points": 2},
+        "battle_tank_tactics": {
+            "name": "Battle Tank Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Battle Tank_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * +3\" Movement \n * Impact(+3).",
+            "points": ["rule.x", {"multiply": 15}]
+        },
+        "terrifying_banner": {"name": "Terrifying Banner", "description": "Enemy _Infantry_ units within 6\" suffer -1 Courage.", "points": 10}
+    },
+    "powers": {
+        "fortify": {"name": "Courage", "description": "Target friendly unit within 12\" gets +1 Courage until the end of the round.", "charge": 8},
+        "storm": {"name": "Strike", "description": "Target enemy unit within 12\" take 2 hits each with AP 4.", "charge": 7},
+        "barrier": {"name": "Barrier", "description": "Target friendly unit within 12\" gets +1 Save the next time it is attacked.", "charge": 6},
+        "shroud": {"name": "Shroud", "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.", "charge": 6},
+        "bolt": {"name": "Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP 7 and Damage 3.", "charge": 6}
+    },
+    "strategies": {
+        "take_cover": {
+            "name": "Take Cover",
+            "phase": "activation",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "flavor": "corrupted defense force soldiers are trained to take the best advantage of cover they can to survive.",
+            "cost": 2
+        },
+        "hate": {
+            "phase": "activation",
+            "name": "Hate",
+            "flavor": "Full with fury, corrupted defense force soldiers can launch devastating close combat assaults.",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
+        },
+        "field_repairs": {"name": "Field Repairs", "phase": "activation", "description": "Use when activating a _Vehicle_ unit. That unit may remove one critical damage.", "cost": 2}
+    },
+    "hidden_relics": {
+        "strategist": {
+            "name": "Brilliant Strategist",
+            "rule": "legend_strategist",
+            "description": "Upgrade one Leader model with Brilliant Strategist.",
+            "flavor": "This model has an adept strategic mind.",
+            "points": 25
+        },
+        "high_command": {
+            "name": "High Command",
+            "rule": "high_command",
+            "description": "Upgrade one Leader model with Defense Force Tactics with High Command.",
+            "flavor": "This model has been promoted to a higher position in the defense force ranks.",
+            "points": 10
+        },
+        "hammer_cannon": {
+            "name": "The Hammer",
+            "weapon": "hammer_cannon",
+            "description": "Replace one model's Battle Cannon with The Hammer.",
+            "flavor": "A battle cannon with extra deadly force.",
+            "points": 20
+        }
+    },
+    "relics": {
+
+    }
+}
