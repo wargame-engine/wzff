@@ -142,14 +142,14 @@
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
             "options": [
-                {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 1}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 1}, {"id": "boneswords", "count": 2}]},
+                {"replaceWeapon": "consumer", "withWeapon": [{"id": "razor_talons", "count": 2}, "spikefists", "acid_spitter", {"id": "piercing_claws", "count": 2}, {"id": "boneswords", "count": 2}]},
                 {"replaceWeapon": {"id": "razor_talons", "count": 3}, "withWeapon": [{"id": "piercing_claws", "count": 3}, {"id": "boneswords", "count": 4}]},
                 {"addWeapon": ["meat_hooks"]}
             ],
             "models": [
                 {
                     "name": "Hive Warrior Champion",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 7,
@@ -162,7 +162,7 @@
                 },
                 {
                     "name": "Hive Warrior",
-                    "courage": 7,
+                    "courage": 6,
                     "shoot": 5,
                     "fight": 6,
                     "defense": 7,
@@ -481,15 +481,15 @@
         "swarm_claws": {"name": "Swarm Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "medium_piercing_claws": {"name": "Medium Piercing Claws", "attacks": 1, "short": "Melee", "ap": 2, "rules": ["rending"]},
         "large_piercing_claws": {"name": "Large Piercing Claws", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
-        "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 0},
+        "razor_talons": {"name": "Razor Talons", "attacks": 1, "short": "Melee", "ap": 1},
         "medium_razor_talons": {"name": "Medium Razor Talons", "attacks": 1, "short": "Melee", "ap": 2},
         "crushing_claws": {"name": "Crushing Claws", "attacks": 1, "short": "Melee", "ap": 7},
         "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
         "huge_acidic_jaws": {"name": "Huge Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 4},
         "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
         "meat_borer": {"name": "Meat Borer", "attacks": 1, "short": 6, "medium": 12, "ap": 1, "rules": ["assault"]},
-        "consumer": {"name": "Consumer", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault"]},
-        "spikefists": {"name": "Spikefists", "attacks": 1, "short": 6, "medium": 12, "ap": 0, "rules": ["assault"]},
+        "consumer": {"name": "Consumer", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
+        "spikefists": {"name": "Spikefists", "attacks": 3, "short": 6, "ap": 0, "rules": ["pistol"]},
         "acid_spitter": {"name": "Acid Spitter", "attacks": 3, "short": 12, "medium": 24, "ap": 2, "rules": ["assault"]},
         "boneswords": {"name": "Boneswords", "attacks": 1, "short": "Melee", "ap": 2},
         "spiked_strangler": {"name": "Spiked Strangler", "attacks": 1, "short": 18, "medium": 36, "ap": 2, "rules": [{"id": "blast", "x": 4}]},
@@ -575,26 +575,26 @@
         }
     },
     "strategies": {
-        "0": {
+        "flesh_hunger": {
             "name": "Flesh Hunger",
             "phase": "activation",
             "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
             "flavor": "With a burst of speed, hive units attack like nothing before.",
             "cost": 1
         },
-        "1": {
+        "swarm_reflexes": {
             "name": "Swarm Reflexes",
             "phase": "activation",
             "description": "Use when taking an initiative test. That unit is treated as having +2 Initiative for that test.",
             "flavor": "Sometimes manual override by the swarm host is necessary to react efficiently.",
             "cost": 1
         },
-        "2": {
+        "hive_mind": {
             "name": "Hive Mind",
             "phase": "activation",
-            "description": "Use at the beginning of the activation phase on a _Hive Mind_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage value instead of their own.",
+            "description": "Use at the beginning of the activation phase on a _Monster_ or _Infantry_ unit. Until the end of the activation phase, units within 12\" of that unit may use its Courage and Initative value instead of their own.",
             "flavor": "The hive mind controls those who may be unwilling in order to maintain battle order.",
-            "cost": 2
+            "cost": 1
         }
     },
     "relics": {}
