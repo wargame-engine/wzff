@@ -114,7 +114,7 @@
             "models": [
                 {
                     "name": "Hive Warrior Prime",
-                    "courage": 8,
+                    "courage": 7,
                     "shoot": 6,
                     "fight": 7,
                     "defense": 9,
